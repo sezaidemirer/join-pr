@@ -24,7 +24,6 @@ export function HomeView() {
   const promo = translations.homepage.promo;
   const ecosystemDescription =
     typeof ecosystem.description === 'string' ? ecosystem.description.trim() : '';
-  const galleryItems = about.gallery as Array<{ title: string; caption: string; image: string }>;
   const caseItems = cases.cards as Array<{ title: string; category: string; description: string }>;
   const marqueeItems = [...caseItems, ...caseItems];
   const clients = translations.homepage.clients;
@@ -75,22 +74,18 @@ export function HomeView() {
               <p className="text-base text-slate-600 md:text-lg">{about.description}</p>
             </div>
           </div>
-          <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-lg shadow-slate-200/60 sm:p-8">
-            <div className="grid gap-4 sm:grid-cols-2">
-              {galleryItems.map((item) => (
-                <div key={item.title} className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-shadow hover:shadow-lg">
-                  <div
-                    className="h-36 w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                    style={{ backgroundImage: `url(${item.image})` }}
-                    role="img"
-                    aria-label={item.title}
-                  />
-                  <div className="space-y-1 p-4">
-                    <h3 className="text-sm font-semibold text-slate-900">{item.title}</h3>
-                    <p className="text-xs text-slate-500">{item.caption}</p>
-                  </div>
-                </div>
-              ))}
+          <div className="flex items-center justify-center">
+            <div className="w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-900/5 shadow-lg shadow-slate-200/60">
+              <div className="relative w-full pt-[56.25%]">
+                <iframe
+                  className="absolute inset-0 h-full w-full rounded-2xl"
+                  src="https://www.youtube.com/embed/jA57OToKvAg"
+                  title="Join PR video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </div>

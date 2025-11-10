@@ -98,23 +98,28 @@ export function HeroSlider() {
                     ›
                   </button>
                 </div>
-                <div className="flex items-center gap-2">
-                  {slides.map(([, { title }], dotIndex) => {
-                    const active = dotIndex === activeIndex;
-                    return (
-                      <button
-                        key={title}
-                        type="button"
-                        onClick={() => goToSlide(dotIndex)}
-                        className={`h-2.5 w-10 rounded-full transition-all ${
-                          active ? 'bg-gradient-to-r from-teal-400 via-sky-500 to-blue-500' : 'bg-zinc-600/60 hover:bg-zinc-400'
-                        }`}
-                        aria-label={`Go to ${title}`}
-                        aria-current={active}
-                      />
-                    );
-                  })}
+                <div className="flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-zinc-400">
+                  <span>{index + 1}</span>
+                  <div className="h-px w-12 bg-gradient-to-r from-zinc-500 via-zinc-300 to-transparent" />
+                  <span>{slides.length}</span>
                 </div>
+              </div>
+              <div className="flex items-center justify-center gap-2 text-xs uppercase tracking-[0.3em] text-zinc-400">
+                {slides.map(([, { title }], dotIndex) => {
+                  const active = dotIndex === activeIndex;
+                  return (
+                    <button
+                      key={title}
+                      type="button"
+                      onClick={() => goToSlide(dotIndex)}
+                      className={`h-2.5 w-10 rounded-full transition-all ${
+                        active ? 'bg-gradient-to-r from-teal-400 via-sky-500 to-blue-500' : 'bg-zinc-600/60 hover:bg-zinc-400'
+                      }`}
+                      aria-label={`Go to ${title}`}
+                      aria-current={active}
+                    />
+                  );
+                })}
               </div>
             </article>
           );

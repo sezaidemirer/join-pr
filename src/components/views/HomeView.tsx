@@ -70,7 +70,7 @@ export function HomeView() {
           <div className="space-y-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-lg shadow-slate-200/60 sm:p-8">
             <span className="text-xs font-semibold uppercase tracking-[0.4em] text-teal-500">{about.title}</span>
             <div className="space-y-4">
-              <h2 className="text-3xl font-semibold text-slate-900 md:text-4xl">{about.subtitle}</h2>
+              <h2 className="text-[2.4rem] font-semibold leading-tight text-slate-900 md:text-[3.2rem]">{about.subtitle}</h2>
               <p className="text-base text-slate-600 md:text-lg">{about.description}</p>
             </div>
           </div>
@@ -125,7 +125,7 @@ export function HomeView() {
         <section className="relative overflow-hidden bg-white px-4 py-12 text-slate-900 shadow-2xl shadow-black/40 sm:px-6 lg:left-1/2 lg:w-screen lg:-translate-x-1/2 lg:px-16 lg:py-14">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(14,165,233,0.12),_transparent_55%)]" />
           <div className="relative mx-auto max-w-6xl">
-            <div className="relative min-h-[500px] sm:min-h-[540px] lg:min-h-[580px]">
+            <div className="relative min-h-[620px] sm:min-h-[560px] lg:min-h-[600px]">
               {promoSlides.map((slide, index) => {
                 const isActive = index === activePromoIndex;
                 return (
@@ -154,24 +154,47 @@ export function HomeView() {
                           </li>
                         ))}
                       </ul>
-                      <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-                        <Link
-                          href="/contact"
-                          className="inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-white transition-transform hover:-translate-y-1"
-                        >
-                          {slide.primaryCta}
-                        </Link>
-                        <Link
-                          href="/contact"
-                          className="inline-flex items-center justify-center rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-slate-700 transition-transform hover:-translate-y-1 hover:border-slate-400"
-                        >
-                          {slide.secondaryCta}
-                        </Link>
-                      </div>
+                  <div className="flex flex-col gap-4">
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-white shadow-lg shadow-slate-900/40 transition-transform hover:-translate-y-1"
+                    >
+                      {slide.primaryCta}
+                    </Link>
+                    <div className="flex items-center gap-3">
+                      <Link
+                        href="/contact"
+                        className="inline-flex flex-1 items-center justify-center rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-slate-700 shadow-lg shadow-slate-200/40 transition-transform hover:-translate-y-1 hover:border-slate-400"
+                      >
+                        {slide.secondaryCta}
+                      </Link>
+                      {promoSlides.length > 1 && (
+                        <div className="flex items-center gap-2">
+                          {promoSlides.map((promoSlide, indicatorIndex) => {
+                            const indicatorActive = indicatorIndex === activePromoIndex;
+                            return (
+                              <button
+                                key={`${promoSlide.badge}-${indicatorIndex}`}
+                                type="button"
+                                onClick={() => setActivePromoIndex(indicatorIndex)}
+                                className={`h-2 w-8 rounded-full transition-all ${
+                                  indicatorActive
+                                    ? 'bg-gradient-to-r from-teal-500 via-sky-500 to-blue-600 shadow-[0_0_10px_rgba(56,189,248,0.45)]'
+                                    : 'bg-slate-200/70 hover:bg-slate-300'
+                                }`}
+                                aria-label={promoSlide.badge}
+                                aria-current={indicatorActive}
+                              />
+                            );
+                          })}
+                        </div>
+                      )}
+                    </div>
+                  </div>
                     </div>
                     <div className="relative z-10 mt-6 flex h-full max-w-lg flex-col justify-center rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-xl shadow-slate-300/50 backdrop-blur">
                       <div className="grid gap-4">
-                        <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-left">
+                    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-left">
                           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-teal-500">{slide.kpi.label}</p>
                           <h3 className="mt-2 text-3xl font-semibold text-slate-900">{slide.kpi.value}</h3>
                           <p className="text-xs text-slate-500">{slide.kpi.caption}</p>
@@ -198,27 +221,6 @@ export function HomeView() {
                 );
               })}
             </div>
-            {promoSlides.length > 1 && (
-              <div className="mt-10 flex items-center gap-2 sm:mt-12">
-                {promoSlides.map((slide, indicatorIndex) => {
-                  const indicatorActive = indicatorIndex === activePromoIndex;
-                  return (
-                    <button
-                      key={slide.title}
-                      type="button"
-                      onClick={() => setActivePromoIndex(indicatorIndex)}
-                      className={`h-2.5 w-10 rounded-full transition-all ${
-                        indicatorActive
-                          ? 'bg-gradient-to-r from-teal-500 via-sky-500 to-blue-600'
-                          : 'bg-slate-200 hover:bg-slate-300'
-                      }`}
-                      aria-label={slide.badge}
-                      aria-current={indicatorActive}
-                    />
-                  );
-                })}
-              </div>
-            )}
           </div>
         </section>
       )}
@@ -255,13 +257,13 @@ export function HomeView() {
         </div>
       </section>
 
-      <section className="mx-auto flex w-full max-w-6xl flex-col gap-8 rounded-3xl border border-white/10 bg-zinc-950/70 px-6 py-12 text-center shadow-xl shadow-black/30 sm:px-8">
+      <section className="mx-auto mt-0 flex w-full max-w-6xl flex-col gap-8 rounded-3xl border border-white/10 bg-zinc-950/70 px-6 py-12 text-center shadow-xl shadow-black/30 sm:mt-16 sm:px-8">
         <div className="space-y-3">
           <span className="text-xs font-semibold uppercase tracking-[0.4em] text-teal-300">{translations.common.brandName}</span>
           <h2 className="text-3xl font-semibold text-white md:text-4xl">{clients.title}</h2>
           <p className="mx-auto max-w-3xl text-sm text-zinc-400 md:text-base">{clients.description}</p>
         </div>
-        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+        <div className="grid gap-6 grid-cols-2 sm:grid-cols-3 xl:grid-cols-4">
           {clientLogos.map((name) => (
             <div
               key={name}

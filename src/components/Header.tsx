@@ -35,17 +35,13 @@ export function Header() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  useEffect(() => {
-    setIsMenuOpen(false);
-  }, [pathname]);
-
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         isScrolled ? 'bg-zinc-950/90 backdrop-blur-xl border-b border-white/10' : 'bg-transparent'
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-5 lg:px-10">
+      <div className="relative mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-5 lg:px-10">
         <Link href="/" className="group flex items-center gap-3 text-white">
           <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 via-sky-500 to-blue-600 shadow-lg shadow-blue-900/50 transition-transform group-hover:scale-105">
             <span className="text-lg font-semibold">J</span>
@@ -82,39 +78,33 @@ export function Header() {
           <LanguageSwitcher />
         </div>
 
-        <button
-          type="button"
-          onClick={() => setIsMenuOpen((prev) => !prev)}
-          className="flex h-11 w-11 items-center justify-center rounded-lg border border-zinc-800 bg-zinc-900/80 text-white transition-colors hover:border-zinc-700 lg:hidden"
-          aria-label="Toggle navigation"
-        >
-          <span className="sr-only">Toggle navigation</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            className="h-6 w-6"
+        <div className="flex items-center gap-2 lg:hidden">
+          <LanguageSwitcher />
+          <button
+            type="button"
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+            className="flex h-11 w-11 items-center justify-center rounded-lg border border-zinc-800 bg-zinc-900/80 text-white transition-colors hover:border-zinc-700"
+            aria-label="Toggle navigation"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4 7h16M4 12h16M4 17h16" />
-          </svg>
-        </button>
-      </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-6 w-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
 
-      <div
-        className={`lg:hidden ${isMenuOpen ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'} transition-all duration-300`}
-      >
-        <div className="mx-4 rounded-2xl border border-white/10 bg-zinc-950/95 px-6 py-6 shadow-xl shadow-black/40 backdrop-blur-xl">
+        <div
+          className={`absolute right-6 top-full mt-3 w-64 rounded-2xl border border-white/10 bg-zinc-950/95 px-6 py-6 shadow-xl shadow-black/40 backdrop-blur-xl transition-all duration-300 ${
+            isMenuOpen ? 'pointer-events-auto opacity-100 translate-y-0' : 'pointer-events-none -translate-y-2 opacity-0'
+          } lg:hidden`}
+        >
           <nav className="flex flex-col gap-4 text-base font-medium text-zinc-200">
             {NAV_LINKS.map(({ key, href }) => {
-              const isActive = href === '/'
-                ? pathname === '/'
-                : pathname.startsWith(href);
+              const isActive = href === '/' ? pathname === '/' : pathname.startsWith(href);
               return (
                 <Link
                   key={key}
                   href={href}
+                  onClick={() => setIsMenuOpen(false)}
                   className={`rounded-xl px-3 py-2 transition-colors ${
                     isActive ? 'bg-gradient-to-r from-teal-500/20 via-sky-500/20 to-blue-600/20 text-white' : 'hover:bg-white/5'
                   }`}
@@ -124,9 +114,6 @@ export function Header() {
               );
             })}
           </nav>
-          <div className="mt-6">
-            <LanguageSwitcher />
-          </div>
         </div>
       </div>
     </header>

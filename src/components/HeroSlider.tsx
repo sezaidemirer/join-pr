@@ -38,9 +38,8 @@ export function HeroSlider() {
   };
 
   return (
-    <section className="relative mt-6 overflow-hidden bg-zinc-950/80 shadow-2xl shadow-black/40 lg:mt-10">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.2),_transparent_55%)]" />
-      <div className="relative h-[440px] sm:h-[500px] lg:h-[620px]">
+    <section className="relative mt-6 overflow-hidden bg-zinc-950 shadow-2xl shadow-black/40 lg:mt-8" data-hero>
+      <div className="relative h-[360px] sm:h-[440px] lg:h-[620px]">
         {slides.map(([key, slide], index) => {
           const isActive = index === activeIndex;
           return (
@@ -52,11 +51,11 @@ export function HeroSlider() {
               aria-hidden={!isActive}
             >
               <div
-                className={`absolute inset-0 -z-10 bg-gradient-to-br ${GRADIENT_MAP[key] ?? 'from-slate-700/30 via-slate-900/60 to-black/80'} opacity-90`}
+                className={`absolute inset-0 -z-10 bg-gradient-to-br ${GRADIENT_MAP[key] ?? 'from-slate-700/30 via-slate-900/60 to-black/70'} opacity-85`}
               />
               <div className="absolute inset-0 -z-20 bg-[url('https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center mix-blend-overlay opacity-20" />
 
-              <div className="flex flex-1 flex-col justify-center gap-6 lg:gap-8">
+              <div className="flex flex-1 flex-col justify-start gap-6 pt-8 sm:pt-10 lg:justify-center lg:pt-0 lg:gap-8">
                 <span className="text-sm font-medium uppercase tracking-[0.4em] text-teal-300">
                   {translations.homepage.hero.intro}
                 </span>
@@ -64,7 +63,7 @@ export function HeroSlider() {
                   {slide.title}
                 </h1>
                 <p className="max-w-2xl text-lg text-zinc-200 md:text-xl">{slide.subtitle}</p>
-                <div className="flex flex-wrap items-center gap-4">
+                <div className="flex flex-wrap items-center gap-4 pb-3 lg:pb-0">
                   <Link
                     href={slide.link}
                     className="group inline-flex items-center gap-2 rounded-full bg-white/10 px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white transition-all hover:bg-white/20"
@@ -80,7 +79,7 @@ export function HeroSlider() {
                 </div>
               </div>
 
-              <div className="flex flex-wrap items-center justify-between gap-4 text-xs uppercase tracking-[0.3em] text-zinc-400">
+              <div className="flex flex-wrap items-center justify-between gap-4 pb-4 text-xs uppercase tracking-[0.3em] text-zinc-400 lg:pb-0">
                 <button
                   type="button"
                   onClick={() => goToSlide((activeIndex - 1 + slides.length) % slides.length)}

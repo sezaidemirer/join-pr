@@ -10,7 +10,7 @@ export function JoinPrView() {
 
   return (
     <div className="flex flex-col gap-16">
-      <section className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-sky-500/10 via-blue-900/50 to-black p-10 shadow-2xl shadow-blue-950/30 md:p-16">
+      <section className="relative mt-6 overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-sky-500/10 via-blue-900/50 to-black p-10 shadow-2xl shadow-blue-950/30 md:mt-10 md:p-16">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(14,165,233,0.2),_transparent_65%)]" />
         <div className="flex flex-col gap-6">
           <span className="text-xs font-semibold uppercase tracking-[0.38em] text-sky-200">Join PR</span>

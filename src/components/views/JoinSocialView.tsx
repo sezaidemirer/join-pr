@@ -12,7 +12,7 @@ export function JoinSocialView() {
 
   return (
     <div className="flex flex-col gap-16">
-      <section className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-teal-500/10 via-cyan-800/40 to-slate-950 p-10 shadow-2xl shadow-teal-900/40 md:p-16">
+      <section className="relative mt-6 overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-teal-500/10 via-cyan-800/40 to-slate-950 p-10 shadow-2xl shadow-teal-900/40 md:mt-10 md:p-16">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(20,184,166,0.18),_transparent_60%)]" />
         <div className="flex flex-col gap-6">
           <span className="text-xs font-semibold uppercase tracking-[0.38em] text-teal-200">Join Social</span>

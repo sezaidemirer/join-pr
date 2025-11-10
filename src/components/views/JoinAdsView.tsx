@@ -10,7 +10,7 @@ export function JoinAdsView() {
 
   return (
     <div className="flex flex-col gap-16">
-      <section className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-amber-500/10 via-orange-900/50 to-slate-950 p-10 shadow-2xl shadow-orange-950/40 md:p-16">
+      <section className="relative mt-6 overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-amber-500/10 via-orange-900/50 to-slate-950 p-10 shadow-2xl shadow-orange-950/40 md:mt-10 md:p-16">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(251,191,36,0.2),_transparent_60%)]" />
         <div className="flex flex-col gap-6">
           <span className="text-xs font-semibold uppercase tracking-[0.38em] text-amber-200">Join Ads</span>

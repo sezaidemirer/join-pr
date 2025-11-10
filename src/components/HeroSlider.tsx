@@ -55,7 +55,7 @@ export function HeroSlider() {
               />
               <div className="absolute inset-0 -z-20 bg-[url('https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center mix-blend-overlay opacity-20" />
 
-              <div className="flex flex-1 flex-col justify-start gap-6 pt-8 sm:pt-10 lg:justify-center lg:pt-0 lg:gap-8">
+              <div className="flex flex-1 flex-col justify-start gap-4 pt-2 sm:gap-6 sm:pt-6 lg:justify-center lg:pt-0 lg:gap-8">
                 <span className="text-sm font-medium uppercase tracking-[0.4em] text-teal-300">
                   {translations.homepage.hero.intro}
                 </span>

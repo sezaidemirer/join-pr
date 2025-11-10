@@ -39,7 +39,7 @@ export function HeroSlider() {
 
   return (
     <section className="relative mt-6 overflow-hidden bg-zinc-950 shadow-2xl shadow-black/40 lg:mt-8" data-hero>
-      <div className="relative h-[360px] sm:h-[440px] lg:h-[620px]">
+      <div className="relative h-[400px] sm:h-[440px] lg:h-[620px]">
         {slides.map(([key, slide], index) => {
           const isActive = index === activeIndex;
           return (

@@ -1,0 +1,665 @@
+{
+  "common": {
+    "brandName": "Join PR",
+    "tagline": "Yaratıcı ve stratejik ajanslardan oluşan Join ekosistemi",
+    "menu": {
+      "home": "Ana Sayfa",
+      "joinPr": "Join PR",
+      "joinCreative": "Join Creative",
+      "joinSocial": "Join Social",
+      "joinAds": "Join Ads",
+      "joinLabAi": "Join AI Lab",
+      "joinEscapes": "Join Escapes",
+      "contact": "İletişim"
+    },
+    "language": {
+      "tr": "TR",
+      "en": "EN",
+      "label": "Dil"
+    },
+    "footer": {
+      "title": "Birlikte cesur hikayeler yaratalım.",
+      "addressLabel": "Adres",
+      "address": "Maslak Mah. Ahi Evran Cad. No:6, Sarıyer / İstanbul",
+      "emailLabel": "E-posta",
+      "phoneLabel": "Telefon",
+      "newsletterTitle": "Bülten",
+      "newsletterDescription": "Join ekosisteminden seçilmiş içgörüler, projeler ve fırsatlar e-postanıza gelsin.",
+      "newsletterPlaceholder": "E-posta adresinizi girin",
+      "newsletterCta": "Abone ol",
+      "rights": "© {{year}} Join PR Group. Tüm hakları saklıdır.",
+      "socialTitle": "Bizi takip edin"
+    },
+    "cta": {
+      "discover": "Keşfet",
+      "learnMore": "Daha fazla bilgi",
+      "viewAll": "Hepsini gör",
+      "contactUs": "Bize ulaşın"
+    }
+  },
+  "loading": {
+    "label": "Join PR deneyimi yükleniyor",
+    "percentage": "%{{value}} tamamlandı"
+  },
+  "homepage": {
+    "seo": {
+      "title": "Join PR Group | İletişim, Yaratıcılık, Sosyal Medya, Reklam, AI ve Seyahat",
+      "description": "Join PR ekosistemini keşfedin: iletişim, kreatif prodüksiyon, sosyal medya, performans pazarlaması, AI çözümleri ve Türkiye’nin lider seyahat içerik platformu."
+    },
+    "hero": {
+      "intro": "Join Ekosistemi",
+      "slides": {
+        "joinPr": {
+          "title": "Join PR",
+          "subtitle": "Stratejik iletişim ve destinasyon PR’ı ile küresel algıyı şekillendiriyoruz.",
+          "cta": "Join PR’ı keşfet",
+          "link": "/join-pr"
+        },
+        "joinCreative": {
+          "title": "Join Creative",
+          "subtitle": "Markaları yükselten filmler, fotoğraf ve sinematik hikayeler.",
+          "cta": "Join Creative’i keşfet",
+          "link": "/join-creative"
+        },
+        "joinSocial": {
+          "title": "Join Social",
+          "subtitle": "Sosyal strateji, içerik ve topluluk yönetimi ile sohbetleri ateşliyoruz.",
+          "cta": "Join Social’ı incele",
+          "link": "/join-social"
+        },
+        "joinAds": {
+          "title": "Join Ads",
+          "subtitle": "Google, Meta ve yeni platformlarda performans odaklı medya stratejileri.",
+          "cta": "Join Ads ile büyü",
+          "link": "/join-ads"
+        },
+        "joinLabAi": {
+          "title": "Join AI Lab",
+          "subtitle": "Büyüme odaklı web deneyimleri, otomasyonlar ve AI ajanları.",
+          "cta": "Join AI Lab ile geliştir",
+          "link": "/join-lab-ai"
+        },
+        "joinEscapes": {
+          "title": "Join Escapes",
+          "subtitle": "Türkiye’nin en çok okunan yeni nesil seyahat içerik platformu.",
+          "cta": "Join Escapes’i ziyaret et",
+          "link": "/join-escapes"
+        }
+      }
+    },
+    "ecosystem": {
+      "title": "Join Ekosistemi",
+      "description": "",
+      "cards": {
+        "joinPr": {
+          "title": "Join PR",
+          "description": "Stratejik iletişim, influencer ilişkileri ve küresel destinasyon PR’ı.",
+          "cta": "PR’ı keşfet"
+        },
+        "joinCreative": {
+          "title": "Join Creative",
+          "description": "Dijital içerik, reklam filmi prodüksiyonu ve cesur kreatif konseptler.",
+          "cta": "Creative’i keşfet"
+        },
+        "joinSocial": {
+          "title": "Join Social",
+          "description": "Sosyal medya stratejisi, sürekli içerik ve topluluk yönetimi.",
+          "cta": "Social’ı keşfet"
+        },
+        "joinAds": {
+          "title": "Join Ads",
+          "description": "Performans pazarlaması ve çapraz platform kampanya optimizasyonu.",
+          "cta": "Ads’i keşfet"
+        },
+        "joinLabAi": {
+          "title": "Join AI Lab",
+          "description": "Geleceğe hazır markalar için web, AI ve otomasyon ürünleri.",
+          "cta": "AI Lab'i keşfet"
+        },
+        "joinEscapes": {
+          "title": "Join Escapes",
+          "description": "Destinasyonları, hikayeleri ve deneyimleri derleyen seyahat platformu.",
+          "cta": "Escapes’i keşfet"
+        }
+      }
+    },
+    "promo": {
+      "slides": [
+        {
+          "badge": "AI Sosyal",
+          "title": "Sosyal medyanızı AI yönetsin.",
+          "description": "AI odaklı sosyal ekibimiz; içerikleri tasarlar, üretir ve optimize ederken siz büyümeye odaklanın.",
+          "highlights": [
+            "%70’e varan iş gücü tasarrufu",
+            "Sürekli içerik takvimi, onay ve raporlama",
+            "İnsan kreatif yönetişimiyle otonom uygulama"
+          ],
+          "primaryCta": "Hemen teklif al",
+          "secondaryCta": "AI sosyal demo iste",
+          "kpi": {
+            "label": "Canlı KPI akışı",
+            "value": "+%182",
+            "caption": "AI destekli kreatör sprintleriyle organik etkileşim artışı."
+          },
+          "stats": [
+            {
+              "value": "24/7",
+              "caption": "Yayınlama ve topluluk moderasyonu."
+            },
+            {
+              "value": "5x",
+              "caption": "AI ortaklarıyla daha hızlı iterasyon döngüleri."
+            }
+          ],
+          "stack": {
+            "label": "Otomasyon paketi",
+            "items": [
+              "AI içerik taslağı ve yerelleştirme",
+              "Öngörüsel planlama ve bütçe yönetimi",
+              "Hızlı raporlama için içgörü asistanı"
+            ]
+          }
+        },
+        {
+          "badge": "AI Performans",
+          "title": "Google ve Meta kampanyalarınızı AI optimize etsin.",
+          "description": "AI performans ekibimiz teklifleri, kitleleri ve kreatifleri gerçek zamanlı kalibre eder; her medya bütçesi daha verimli çalışır.",
+          "highlights": [
+            "%40 daha hızlı optimizasyon döngüleri",
+            "Google ve Meta bütçelerini tek panelden yönetim",
+            "Öngörüsel ROAS modelleme ve uyarılar"
+          ],
+          "primaryCta": "AI ile medyayı büyüt",
+          "secondaryCta": "Performans denetimi iste",
+          "kpi": {
+            "label": "Medya performans nabzı",
+            "value": "+%126",
+            "caption": "AI yönetimli deneylerle Google ve Meta’da artan ROAS."
+          },
+          "stats": [
+            {
+              "value": "12 saat",
+              "caption": "Makine öğrenmesi rehberliğinde kampanya yenileme döngüleri."
+            },
+            {
+              "value": "30+",
+              "caption": "Script, kitle ve yerleşimlerde otomasyon."
+            }
+          ],
+          "stack": {
+            "label": "Zeka araç seti",
+            "items": [
+              "AI teklif orkestrasyonu",
+              "Kreatif ve kopya çok değişkenli testler",
+              "Bütçe pacing korumaları ve anomali uyarıları"
+            ]
+          }
+        },
+        {
+          "badge": "AI Deneyim",
+          "title": "AI chatbot destekli web sitesi ve WhatsApp asistanıyla 7/24 destek verin.",
+          "description": "AI ajanlarımız ürün sorularını yanıtlar, lead toplar ve siz uyurken satışa destek olur; web siteniz ve mesajlaşma kanallarınızla entegre çalışır.",
+          "highlights": [
+            "Web ve WhatsApp için kesintisiz AI concierge",
+            "Anında ürün, fiyat ve stok yanıtları",
+            "Otomatik lead toplama ve CRM aktarımı"
+          ],
+          "primaryCta": "AI asistanları aktive et",
+          "secondaryCta": "Chatbot demosunu keşfet",
+          "kpi": {
+            "label": "Dönüşüm artışı",
+            "value": "+%63",
+            "caption": "Gece boyunca tamamlanan nitelikli diyalog ve destekli satış artışı."
+          },
+          "stats": [
+            {
+              "value": "90 sn",
+              "caption": "Günün her saati korunan ortalama yanıt süresi."
+            },
+            {
+              "value": "12",
+              "caption": "Yerelleştirme hafızasıyla desteklenen dil sayısı."
+            }
+          ],
+          "stack": {
+            "label": "AI temsilci paketi",
+            "items": [
+              "Bilgi tabanı bağlantılı RAG mimarisi",
+              "Çok kanallı mesaj orkestrasyonu",
+              "İnsan ekibe eskalasyon iş akışları"
+            ]
+          }
+        }
+      ]
+    },
+    "cases": {
+      "title": "Öne çıkan projeler",
+      "description": "Join ekosisteminden seçilen partnerlikler, ödüllü lansmanlar ve deneyim tasarımları.",
+      "cards": [
+        {
+          "title": "Destination Reboot",
+          "category": "Küresel PR Kampanyası",
+          "description": "PR, influencer seyahatleri ve veri odaklı hikaye anlatımıyla çok pazarlı turizm lansmanı."
+        },
+        {
+          "title": "Nightfall Premiere",
+          "category": "Kreatif Prodüksiyon",
+          "description": "Üç şehirde çekilmiş sinematik reklam filmi ve kamera arkası içerikleri."
+        },
+        {
+          "title": "Pulse 360",
+          "category": "Sosyal & Ads",
+          "description": "Topluluğu harekete geçiren sosyal strateji, medya ve yaratıcı iş birlikleri."
+        },
+        {
+          "title": "Aurora Immersion",
+          "category": "Deneyimsel Pazarlama",
+          "description": "Mekansal hikaye anlatımı, canlı medya anları ve seçkin davetlilerle kurgulanan lansman haftası."
+        },
+        {
+          "title": "Signal Studio",
+          "category": "Veri & AI",
+          "description": "Pazarlama, satış ve deneyim ekiplerini bağlayan çok kanallı pano ve AI asistanı."
+        },
+        {
+          "title": "Voyage Stories",
+          "category": "Seyahat Platformu",
+          "description": "Destinasyon keşfini ve partner iş birliklerini öne çıkaran editoryal seyahat seçkisi."
+        },
+        {
+          "title": "Creators' Summit",
+          "category": "Influencer Programı",
+          "description": "Marka alanlarıyla hizalanmış, ölçülebilir KPI’lara sahip kreatör rezidansları."
+        },
+        {
+          "title": "Blueprint Commerce",
+          "category": "E-ticaret Otomasyonu",
+          "description": "Katalog, merchandising ve CRM yolculuklarını hızlandıran uçtan uca otomasyon."
+        }
+      ],
+      "cta": "Vaka portföyü iste"
+    },
+    "clients": {
+      "title": "Birlikte büyüdüğümüz markalar",
+      "description": "Küresel destinasyonlar, yaşam tarzı ikonları, iddialı girişimler ve köklü markalar Join ile entegre iletişim için çalışıyor.",
+      "logos": [
+        "Aurora Hotels",
+        "LuxeVoyage",
+        "Metropolitan Gallery",
+        "SkyPulse Airlines",
+        "Nova Cruises",
+        "UrbanBloom",
+        "Harbor Collective",
+        "Summit Residences"
+      ]
+    },
+    "about": {
+      "title": "Biz kimiz?",
+      "subtitle": "İkonik marka, destinasyon ve ürün hikayeleri inşa eden bağlantılı ajans kolektifi.",
+      "description": "Join PR Group; stratejistleri, hikaye anlatıcılarını, yaratıcıları, medya mimarlarını ve teknoloji uzmanlarını bir araya getirir. PR’dan AI’a kadar fikirleri pazarlar ve kültürler arasında dolaşan, ölçülebilir ivme kazandıran deneyimlere dönüştürüyoruz.",
+      "gallery": [
+        {
+          "title": "Strateji laboratuvarı",
+          "caption": "İçgörü, anlatı ve deneyim tasarımını hizalayan atölyeler.",
+          "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=80"
+        },
+        {
+          "title": "Kreatif prodüksiyon",
+          "caption": "Film, fotoğraf ve dijital zanaatı buluşturan set deneyimleri.",
+          "image": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80"
+        },
+        {
+          "title": "Veri ve AI",
+          "caption": "Büyüme odaklı otomasyonlar ve akıllı deneyimler geliştiriyoruz.",
+          "image": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80"
+        },
+        {
+          "title": "Destinasyon saha çalışması",
+          "caption": "Yaratıcılar ve partnerlerle birlikte sahada deneyimlenen seyahat hikayeleri.",
+          "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "joinPr": {
+      "seo": {
+        "title": "Join PR | Stratejik İletişim ve Destinasyon PR’ı",
+        "description": "Join PR; stratejik iletişim, influencer ilişkileri, küresel pazarlama ve etkinlik deneyimi yönetimi sunar."
+      },
+      "hero": {
+        "title": "Algıyı şekillendiren stratejik iletişim.",
+        "subtitle": "Marka konumlandırmadan global destinasyon PR’ına kadar hikayenizi dünyaya taşıyoruz.",
+        "description": "Destinasyonlar, yaşam tarzı ve lüks markalarla içgörü, kültür ve ölçümlenebilir etki üzerine kurulu hikayeler tasarlıyoruz."
+      },
+      "services": [
+        {
+          "title": "Stratejik iletişim ve marka konumlandırma",
+          "description": "İçgörü tabanlı stratejiler, mesaj mimarileri ve marka algısını güçlendiren iletişim planları."
+        },
+        {
+          "title": "Influencer ve celebrity iletişimi",
+          "description": "Seçilmiş yetenek ağları, birlikte yaratılan hikayeler ve çok kanallı itibarı yöneten süreçler."
+        },
+        {
+          "title": "Küresel pazarlama ve destinasyon PR’ı",
+          "description": "Ticari ilişkiler, basın, fam trip’ler ve dijital yayılım dahil uçtan uca destinasyon pazarlaması."
+        },
+        {
+          "title": "Etkinlik iletişimi ve deneyim yönetimi",
+          "description": "Fikirden uygulamaya entegre iletişim stratejisine sahip etkinlikler ve deneyimler."
+        }
+      ],
+      "cases": {
+        "title": "Vaka özetleri",
+        "items": [
+          "Uluslararası destinasyonun yeniden markalanması ve global basın ofisi.",
+          "Beş pazarda yankı bulan celebrity destekli hospitality lansmanı.",
+          "Yüksek etki yaratan lüks seyahat deneyimi serisi."
+        ]
+      },
+      "cta": {
+        "title": "Hikayeni güçlendirmeye hazır mısın?",
+        "description": "PR ve iletişim yol haritanızı birlikte oluşturalım.",
+        "button": "PR projesi başlat"
+      }
+    },
+    "joinCreative": {
+      "seo": {
+        "title": "Join Creative | Film, Fotoğraf ve İçerik Stüdyosu",
+        "description": "Join Creative; dijital içerik, reklam filmi, fotoğraf ve marka hikayeleri üretir."
+      },
+      "hero": {
+        "title": "Sinematik etki yaratan kreatif prodüksiyon.",
+        "subtitle": "İçgörü, zanaat ve görsel inovasyonu harmanlayan hikayeler.",
+        "description": "Konseptten final kurgusuna kadar, platformlar ve kültürler arasında yolculuk eden içerikler üretiyoruz."
+      },
+      "services": [
+        {
+          "title": "Dijital içerik üretimi ve prodüksiyon hizmetleri",
+          "description": "Çok kanallı içerikler, çevik çekim ekipleri ve ölçeklenebilir prodüksiyon akışları."
+        },
+        {
+          "title": "Reklam ve kampanya filmleri",
+          "description": "Sinematik görseller ve entegre hikaye anlatımıyla yüksek prodüksiyonlu filmler."
+        },
+        {
+          "title": "Fotoğraf prodüksiyonu",
+          "description": "Editoryal, yaşam tarzı ve ürün çekimlerinde uçtan uca prodüksiyon yönetimi."
+        },
+        {
+          "title": "Konsept geliştirme",
+          "description": "Briefe özel kreatif yönler, treatment dokümanları ve görsel diller."
+        },
+        {
+          "title": "Metin yazarlığı ve içerik üretimi",
+          "description": "Senaryo yazımı, anlatı geliştirme ve çok dilli içerik teslimi."
+        }
+      ],
+      "portfolio": {
+        "title": "Seçili prodüksiyonlar",
+        "items": [
+          "Lüks konaklama lansman filmi",
+          "Moda kapsül kampanyası",
+          "Destinasyon hikaye serisi",
+          "Kamera arkası sosyal kurgular",
+          "Marka marşı fotoğraf seti",
+          "Ürün mikrositesi görselleri"
+        ]
+      },
+      "cta": {
+        "title": "Bir sonraki kreatif deneyimini tasarla.",
+        "description": "Projeni anlat, sana özel bir prodüksiyon planı hazırlayalım.",
+        "button": "Kreatif teklif iste"
+      }
+    },
+    "joinSocial": {
+      "seo": {
+        "title": "Join Social | Sosyal Medya Stratejisi ve Topluluk Yönetimi",
+        "description": "Join Social; sosyal strateji, içerik takvimi, topluluk yönetimi ve optimizasyon sunar."
+      },
+      "hero": {
+        "title": "Markaları ve toplulukları büyüten sosyal ekosistemler.",
+        "subtitle": "Stratejiden topluluk yönetimine, ölçümlenebilir sosyal hikaye anlatımı kurguluyoruz.",
+        "description": "İçerik, yaratıcılar, medya ve veri içgörüsünü entegre eden sürekli sosyal programlar inşa ediyoruz."
+      },
+      "sections": {
+        "strategy": {
+          "title": "Strateji ve konumlandırma",
+          "description": "Hedef kitle içgörüleri, marka tonu, kanal karması ve sosyal alaka için kreatif alanlar."
+        },
+        "planning": {
+          "title": "İçerik planlama ve üretim",
+          "description": "Editoryal takvimler, üretim setupları ve kanala göre optimize modüler içerikler."
+        },
+        "community": {
+          "title": "Topluluk yönetimi",
+          "description": "Aktif moderasyon, yaratıcı iş birlikleri ve sohbet tasarımı."
+        },
+        "reporting": {
+          "title": "Raporlama ve optimizasyon",
+          "description": "Sürekli analizler, öğrenme döngüleri ve performans sprintleri."
+        }
+      },
+      "process": {
+        "title": "Süreç adımlarımız",
+        "steps": [
+          {
+            "title": "Analiz",
+            "description": "Mevcut performans incelemesi, rakip haritalaması ve fırsat puanlaması."
+          },
+          {
+            "title": "Strateji",
+            "description": "Kanal mimarisi, hikaye alanları ve ölçüm planı."
+          },
+          {
+            "title": "Uygulama",
+            "description": "Yayınlama, topluluk aktivasyonu ve ücretli medya."
+          },
+          {
+            "title": "Optimizasyon",
+            "description": "İçgörüler, test planları ve üç aylık inovasyon sprintleri."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Sosyal medya denetimine hazır mısın?",
+        "description": "Sosyal ekosisteminizi çıkaralım, hızlı kazanımları ortaya çıkaralım.",
+        "button": "Sosyal danışmanlık al"
+      }
+    },
+    "joinAds": {
+      "seo": {
+        "title": "Join Ads | Performans Pazarlaması ve Dijital Reklam",
+        "description": "Join Ads; medya planlama, kampanya optimizasyonu ve performans ölçümü sunar."
+      },
+      "hero": {
+        "title": "Büyüme için tasarlanmış performans pazarlaması.",
+        "subtitle": "Google, Meta ve yeni platformlarda entegre medya stratejileri.",
+        "description": "Satın alma, dönüşüm ve sadakat hedeflerinize uygun ölçülebilir programlar kuruyoruz."
+      },
+      "services": [
+        {
+          "title": "Google Ads yönetimi",
+          "description": "Arama, görüntülü, video ve keşif kampanyalarında sürekli optimizasyon."
+        },
+        {
+          "title": "Meta Ads yönetimi",
+          "description": "Yaratıcı varyasyonları, kitle tasarımları ve dönüşüm taktikleriyle Meta ekosistemleri."
+        },
+        {
+          "title": "Diğer platformlar",
+          "description": "YouTube, programatik, TikTok ve hedefe özel medya ortaklıkları."
+        },
+        {
+          "title": "Performans raporlama ve optimizasyon",
+          "description": "Panolar, atıf modelleri ve denemelerle çevik karar süreçleri."
+        }
+      ],
+      "metrics": {
+        "title": "Optimize ettiğimiz alanlar",
+        "items": [
+          {
+            "title": "Edinme maliyeti",
+            "description": "Veriye dayalı teklif ve yaratıcı testlerle CPA’i düşürme."
+          },
+          {
+            "title": "Dönüşüm hızı",
+            "description": "Medya ve kullanıcı yolculuğunu hizalayarak daha hızlı dönüşüm sağlama."
+          },
+          {
+            "title": "Yaşam boyu değer",
+            "description": "Kitle içgörüsüyle desteklenen elde tutma ve ek satış taktikleri."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Bir sonraki kampanyanı planla.",
+        "description": "Performans yol haritası ve medya karmasını birlikte tasarlayalım.",
+        "button": "Medya planı iste"
+      }
+    },
+    "joinLabAi": {
+      "seo": {
+        "title": "Join AI Lab | Web Geliştirme ve AI Çözümleri",
+        "description": "Join AI Lab; kurumsal web siteleri, e-ticaret otomasyonları, AI ajanları ve veri entegrasyonları geliştirir."
+      },
+      "hero": {
+        "title": "Tasarım, kod ve zekayı buluşturan dijital ürünler.",
+        "subtitle": "Kurumsal platformlardan AI otomasyonlarına geleceğe hazır deneyimler kurguluyoruz.",
+        "description": "Markalarla birlikte otomasyon ve yapay zeka ile güçlenen web ekosistemleri tasarlıyor, geliştiriyor ve sürekli iyileştiriyoruz."
+      },
+      "services": [
+        {
+          "title": "Web geliştirme",
+          "description": "Performans ve ölçeklenebilirlik odaklı kurumsal ve dinamik web siteleri."
+        },
+        {
+          "title": "E-ticaret otomasyonları",
+          "description": "İş akışlarını, ürün yönetimini ve müşteri yolculuğunu otomatikleştiren çözümler."
+        },
+        {
+          "title": "AI ajanları ve chatbot’lar",
+          "description": "Özelleştirilmiş ajan çatıları ve entegre sohbet deneyimleri."
+        },
+        {
+          "title": "Veri otomasyonları ve entegrasyonlar",
+          "description": "Takımlar arası veri akışını sağlayan ETL hatları, panolar ve veri ürünleri."
+        },
+        {
+          "title": "UI/UX tasarım ve optimizasyon",
+          "description": "Araştırma, prototipleme ve insan odaklı deneyimlerde iterasyon."
+        }
+      ],
+      "process": {
+        "title": "Nasıl çalışıyoruz",
+        "steps": [
+          {
+            "title": "Keşif",
+            "description": "Atölyeler, hedef tanımlama ve teknik yol haritası."
+          },
+          {
+            "title": "Tasarım",
+            "description": "Deneyim tasarımı, bileşen sistemleri ve mimari."
+          },
+          {
+            "title": "Geliştirme",
+            "description": "Şeffaf QA süreçleriyle çevik geliştirme sprintleri."
+          },
+          {
+            "title": "Entegrasyon",
+            "description": "Otomasyon, sistem bağlantıları ve veri akışları."
+          },
+          {
+            "title": "Optimizasyon",
+            "description": "Performans iyileştirme, deneysel testler ve yol haritası güncellemeleri."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Yeni dijital ürününü başlat.",
+        "description": "Brieften bahset, web veya AI çözümünü birlikte kurgulayalım.",
+        "button": "Web/AI projesi başlat"
+      }
+    },
+    "joinEscapes": {
+      "seo": {
+        "title": "Join Escapes | Türkiye’nin En Çok Okunan Seyahat İçerik Platformu",
+        "description": "Join Escapes; seyahat rehberleri, destinasyon hikayeleri, seçilmiş deneyimler ve influencer seyahatleri sunar."
+      },
+      "hero": {
+        "title": "Türkiye’nin en çok okunan yeni nesil seyahat içerik platformu.",
+        "subtitle": "Destinasyonları kapsayan rehberler, deneyimler ve editoryal yolculuklar.",
+        "description": "Seyahat severleri, içerik üreticilerini ve destinasyonları etkileyici hikayeler ve deneysel iş birlikleriyle buluşturuyoruz."
+      },
+      "sections": {
+        "destinations": {
+          "title": "Öne çıkan destinasyonlar",
+          "items": [
+            {
+              "title": "Ege kaçamakları",
+              "description": "Gizli koylar, butik konaklamalar ve gastronomi rotaları."
+            },
+            {
+              "title": "Kapadokya gökyüzü",
+              "description": "Balon yolculukları, mağara süitleri ve gün doğumu ritüelleri."
+            },
+            {
+              "title": "Klasiklerin ötesinde İstanbul",
+              "description": "Yaratıcı mahalleler, kültür rotaları ve gastronomi sırları."
+            }
+          ]
+        },
+        "editorial": {
+          "title": "Editoryal hikayeler",
+          "items": [
+            "Yeni nesil seyahat trendleri raporu",
+            "Butik otel iş birliği serisi",
+            "Influencer seyahat günlükleri"
+          ]
+        },
+        "influencers": {
+          "title": "Influencer seyahatleri ve iş birlikleri",
+          "description": "Seçkin hikaye anlatıcıları ve partner destinasyonlarla kurgulanan benzersiz deneyimler."
+        }
+      },
+      "cta": {
+        "title": "Join Escapes ile destinasyonları keşfet.",
+        "description": "Rehber koleksiyonlarını, editoryal hikayeleri ve iş birliği fırsatlarını incele.",
+        "button": "Join Escapes’i ziyaret et"
+      }
+    }
+  },
+  "contact": {
+    "seo": {
+      "title": "Join PR Group ile iletişime geç",
+      "description": "Join PR Group ile iletişim, kreatif, sosyal medya, reklam, AI veya seyahat projeleri için bağlantı kurun."
+    },
+    "hero": {
+      "title": "Birlikte fark yaratalım.",
+      "description": "Hedeflerini ve projeni paylaş, Join ekibi 24 saat içinde seninle iletişime geçsin."
+    },
+    "form": {
+      "name": "Ad Soyad",
+      "company": "Şirket",
+      "email": "E-posta",
+      "phone": "Telefon",
+      "topic": "Konu",
+      "message": "Mesaj",
+      "topicPlaceholder": "Hizmeti seçin",
+      "messagePlaceholder": "Projeni veya hedefini anlat...",
+      "submit": "Mesaj gönder",
+      "success": "Teşekkürler! En kısa sürede dönüş yapacağız."
+    },
+    "topics": [
+      "Join PR",
+      "Join Creative",
+      "Join Social",
+      "Join Ads",
+      "Join Lab AI",
+      "Join Escapes",
+      "Diğer"
+    ]
+  }
+}
+

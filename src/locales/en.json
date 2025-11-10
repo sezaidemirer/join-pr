@@ -1,0 +1,665 @@
+{
+  "common": {
+    "brandName": "Join PR",
+    "tagline": "Join Ecosystem of Creative and Strategic Agencies",
+    "menu": {
+      "home": "Home",
+      "joinPr": "Join PR",
+      "joinCreative": "Join Creative",
+      "joinSocial": "Join Social",
+      "joinAds": "Join Ads",
+      "joinLabAi": "Join AI Lab",
+      "joinEscapes": "Join Escapes",
+      "contact": "Contact"
+    },
+    "language": {
+      "tr": "TR",
+      "en": "EN",
+      "label": "Language"
+    },
+    "footer": {
+      "title": "Let’s build the next bold story together.",
+      "addressLabel": "Address",
+      "address": "Maslak Mah. Ahi Evran Cad. No:6, Sarıyer / İstanbul",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone",
+      "newsletterTitle": "Newsletter",
+      "newsletterDescription": "Receive curated insights, cases and opportunities from the Join ecosystem.",
+      "newsletterPlaceholder": "Enter your email",
+      "newsletterCta": "Subscribe",
+      "rights": "© {{year}} Join PR Group. All rights reserved.",
+      "socialTitle": "Follow us"
+    },
+    "cta": {
+      "discover": "Discover",
+      "learnMore": "Learn more",
+      "viewAll": "View all",
+      "contactUs": "Contact us"
+    }
+  },
+  "loading": {
+    "label": "Loading Join PR Experience",
+    "percentage": "{{value}}% complete"
+  },
+  "homepage": {
+    "seo": {
+      "title": "Join PR Group | Strategic Communication, Creative, Social, Ads, AI & Travel",
+      "description": "Discover the Join PR ecosystem: communication, creative production, social media, performance marketing, AI solutions and Turkey’s leading travel content platform."
+    },
+    "hero": {
+      "intro": "Join Ecosystem",
+      "slides": {
+        "joinPr": {
+          "title": "Join PR",
+          "subtitle": "Strategic communication and destination PR shaping global perception.",
+          "cta": "Discover Join PR",
+          "link": "/join-pr"
+        },
+        "joinCreative": {
+          "title": "Join Creative",
+          "subtitle": "Films, photography and content that elevate brands with cinematic storytelling.",
+          "cta": "Explore Join Creative",
+          "link": "/join-creative"
+        },
+        "joinSocial": {
+          "title": "Join Social",
+          "subtitle": "Social strategy, content and community management that sparks conversation.",
+          "cta": "See Join Social",
+          "link": "/join-social"
+        },
+        "joinAds": {
+          "title": "Join Ads",
+          "subtitle": "Performance-first media strategies across Google, Meta and emerging platforms.",
+          "cta": "Scale with Join Ads",
+          "link": "/join-ads"
+        },
+        "joinLabAi": {
+          "title": "Join AI Lab",
+          "subtitle": "Web experiences, automations and AI agents engineered for growth.",
+          "cta": "Build with Join AI Lab",
+          "link": "/join-lab-ai"
+        },
+        "joinEscapes": {
+          "title": "Join Escapes",
+          "subtitle": "Turkey’s most-read new generation travel content platform.",
+          "cta": "Visit Join Escapes",
+          "link": "/join-escapes"
+        }
+      }
+    },
+    "ecosystem": {
+      "title": "Join Ecosystem",
+      "description": "",
+      "cards": {
+        "joinPr": {
+          "title": "Join PR",
+          "description": "Strategic communication, influencer relations and global destination PR.",
+          "cta": "Discover PR"
+        },
+        "joinCreative": {
+          "title": "Join Creative",
+          "description": "Digital content, commercial film production and bold creative concepts.",
+          "cta": "Discover Creative"
+        },
+        "joinSocial": {
+          "title": "Join Social",
+          "description": "Social media strategy, always-on content and community management.",
+          "cta": "Discover Social"
+        },
+        "joinAds": {
+          "title": "Join Ads",
+          "description": "Performance marketing and cross-platform campaign optimization.",
+          "cta": "Discover Ads"
+        },
+        "joinLabAi": {
+          "title": "Join AI Lab",
+          "description": "Web, AI and automation products crafted for future-facing brands.",
+          "cta": "Discover AI Lab"
+        },
+        "joinEscapes": {
+          "title": "Join Escapes",
+          "description": "Travel platform curating destinations, stories and experiences.",
+          "cta": "Discover Escapes"
+        }
+      }
+    },
+    "promo": {
+      "slides": [
+        {
+          "badge": "AI Social",
+          "title": "Let AI run your social media.",
+          "description": "Our AI-native social team designs, produces and optimises your channels while you focus on growth.",
+          "highlights": [
+            "70% reduction in manual workload",
+            "Always-on calendar, approvals and reporting",
+            "Human creative direction with autonomous execution"
+          ],
+          "primaryCta": "Get an instant proposal",
+          "secondaryCta": "Request AI social demo",
+          "kpi": {
+            "label": "Live KPI feed",
+            "value": "+182%",
+            "caption": "Organic engagement lift with AI-assisted creator sprints."
+          },
+          "stats": [
+            {
+              "value": "24/7",
+              "caption": "Publishing & community moderation."
+            },
+            {
+              "value": "5x",
+              "caption": "Faster iteration cycles with AI co-pilots."
+            }
+          ],
+          "stack": {
+            "label": "Automation stack",
+            "items": [
+              "AI content drafting & localisation",
+              "Predictive scheduling & budget pacing",
+              "Insight co-pilot for rapid reporting"
+            ]
+          }
+        },
+        {
+          "badge": "AI Performance",
+          "title": "Let AI optimise your Google & Meta campaigns.",
+          "description": "Our AI performance squad calibrates bids, audiences and creatives in real time so every media dollar works smarter.",
+          "highlights": [
+            "40% faster optimisation cycles",
+            "Unified Google & Meta budget control",
+            "Predictive ROAS modelling & alerts"
+          ],
+          "primaryCta": "Scale paid media with AI",
+          "secondaryCta": "Book a performance audit",
+          "kpi": {
+            "label": "Media performance pulse",
+            "value": "+126%",
+            "caption": "Incremental ROAS lift across Google & Meta with AI-managed experiments."
+          },
+          "stats": [
+            {
+              "value": "12h",
+              "caption": "Campaign refresh cadence guided by machine learning."
+            },
+            {
+              "value": "30+",
+              "caption": "Automations across scripts, audiences and placements."
+            }
+          ],
+          "stack": {
+            "label": "Intelligence toolkit",
+            "items": [
+              "AI bidding orchestration",
+              "Creative & copy multivariate testing",
+              "Budget pacing guardrails & anomaly alerts"
+            ]
+          }
+        },
+        {
+          "badge": "AI Experience",
+          "title": "Launch AI chatbots on web & WhatsApp for 24/7 sales support.",
+          "description": "AI agents answer product questions, qualify leads and close sales while your team sleeps—seamlessly integrated with your site and messaging channels.",
+          "highlights": [
+            "Always-on AI concierge for web and WhatsApp",
+            "Instant product, pricing and availability responses",
+            "Automated lead capture and CRM handoff"
+          ],
+          "primaryCta": "Activate AI assistants",
+          "secondaryCta": "Explore chatbot demo",
+          "kpi": {
+            "label": "Conversion uplift",
+            "value": "+63%",
+            "caption": "Increase in qualified conversations and assisted sales completed overnight."
+          },
+          "stats": [
+            {
+              "value": "90s",
+              "caption": "Average response time maintained round-the-clock."
+            },
+            {
+              "value": "12",
+              "caption": "Languages supported with localisation memory."
+            }
+          ],
+          "stack": {
+            "label": "AI agent suite",
+            "items": [
+              "Retrieval-augmented knowledge base",
+              "Cross-channel messaging orchestration",
+              "Escalation workflows to human teams"
+            ]
+          }
+        }
+      ]
+    },
+    "cases": {
+      "title": "Featured Highlights",
+      "description": "Signature partnerships, award-winning launches and immersive experiences from across the Join ecosystem.",
+      "cards": [
+        {
+          "title": "Destination Reboot",
+          "category": "Global PR Campaign",
+          "description": "Multi-market tourism launch blending PR, influencer journeys and data-led storytelling."
+        },
+        {
+          "title": "Nightfall Premiere",
+          "category": "Creative Production",
+          "description": "Cinematic TVC and behind-the-scenes content produced in 4K across three cities."
+        },
+        {
+          "title": "Pulse 360",
+          "category": "Social & Ads",
+          "description": "Always-on social strategy activating community, paid media and creator collaborations."
+        },
+        {
+          "title": "Aurora Immersion",
+          "category": "Experiential Marketing",
+          "description": "Immersive launch week combining spatial storytelling, live media moments and curated guests."
+        },
+        {
+          "title": "Signal Studio",
+          "category": "Data & AI",
+          "description": "Cross-platform dashboard and AI assistant connecting marketing, sales and experience teams."
+        },
+        {
+          "title": "Voyage Stories",
+          "category": "Travel Platform",
+          "description": "Editorial travel anthology delivering destination discovery and partner collaborations."
+        },
+        {
+          "title": "Creators' Summit",
+          "category": "Influencer Program",
+          "description": "Bespoke creator residencies aligned with brand territories and measurable KPIs."
+        },
+        {
+          "title": "Blueprint Commerce",
+          "category": "E-commerce Automation",
+          "description": "Full-stack automation of catalog, merchandising and CRM journeys for growth acceleration."
+        }
+      ],
+      "cta": "Request case portfolio"
+    },
+    "clients": {
+      "title": "Brands that grow with us",
+      "description": "Global destinations, lifestyle icons, ambitious startups and legacy brands partnering with Join for integrated communication.",
+      "logos": [
+        "Aurora Hotels",
+        "LuxeVoyage",
+        "Metropolitan Gallery",
+        "SkyPulse Airlines",
+        "Nova Cruises",
+        "UrbanBloom",
+        "Harbor Collective",
+        "Summit Residences"
+      ]
+    },
+    "about": {
+      "title": "Who we are",
+      "subtitle": "A connected agency collective building iconic brand, destination and product stories.",
+      "description": "Join PR Group unites strategists, storytellers, creators, media architects and technologists. From PR to AI, we prototype ideas that travel across markets and cultures, creating measurable momentum for our partners.",
+      "gallery": [
+        {
+          "title": "Strategy lab",
+          "caption": "Workshops aligning insight, narrative and experience design.",
+          "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=80"
+        },
+        {
+          "title": "Creative production",
+          "caption": "On-set collaboration blending film, photography and digital craft.",
+          "image": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80"
+        },
+        {
+          "title": "Data & AI",
+          "caption": "Engineering automations and intelligent experiences for growth.",
+          "image": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80"
+        },
+        {
+          "title": "Destination fieldwork",
+          "caption": "Immersive travel storytelling on location with creators and partners.",
+          "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "joinPr": {
+      "seo": {
+        "title": "Join PR | Strategic Communication & Destination PR",
+        "description": "Join PR delivers strategic communication, influencer relations, global marketing and event experience management."
+      },
+      "hero": {
+        "title": "Strategic communication that shapes perception.",
+        "subtitle": "From brand positioning to global destination PR, we design narratives that travel the world.",
+        "description": "We partner with destinations, lifestyle and luxury brands to craft powerful stories anchored in insight, culture and measurable impact."
+      },
+      "services": [
+        {
+          "title": "Strategic communication & brand positioning",
+          "description": "Insight-driven strategies, message architectures and executive comms designed for consistent brand equity."
+        },
+        {
+          "title": "Influencer & celebrity communication",
+          "description": "Curated talent networks, co-created storytelling and reputation management across channels."
+        },
+        {
+          "title": "Global marketing & destination PR",
+          "description": "End-to-end destination marketing including trade relations, press, fam trips and digital amplification."
+        },
+        {
+          "title": "Event communication & brand experience management",
+          "description": "Concept-to-execution events, launches and experiences with integrated communication strategies."
+        }
+      ],
+      "cases": {
+        "title": "Case snapshots",
+        "items": [
+          "International destination rebrand and global press office.",
+          "Celebrity-fronted hospitality launch amplified across five markets.",
+          "Luxury travel experience series with high-impact media coverage."
+        ]
+      },
+      "cta": {
+        "title": "Ready to amplify your narrative?",
+        "description": "Let’s develop your PR and communication roadmap.",
+        "button": "Start a PR project"
+      }
+    },
+    "joinCreative": {
+      "seo": {
+        "title": "Join Creative | Film, Photography & Content Studio",
+        "description": "Join Creative produces digital content, commercial films, photography and brand storytelling."
+      },
+      "hero": {
+        "title": "Creative production built for cinematic impact.",
+        "subtitle": "Stories that blend insight, craft and visual innovation.",
+        "description": "From concept to final cut, we deliver multi-format creative that travels across platforms, audiences and cultures."
+      },
+      "services": [
+        {
+          "title": "Digital content production & production services",
+          "description": "Cross-platform content, agile production crews and scalable workflows."
+        },
+        {
+          "title": "Commercial & advertising films",
+          "description": "High-end film production with cinematic visuals and integrated storytelling."
+        },
+        {
+          "title": "Photography production",
+          "description": "Editorial, lifestyle and product shoots with end-to-end production management."
+        },
+        {
+          "title": "Concept development",
+          "description": "Creative territories, treatments and visual languages tailored to the brief."
+        },
+        {
+          "title": "Copywriting & content creation",
+          "description": "Scriptwriting, narrative development and multi-language content delivery."
+        }
+      ],
+      "portfolio": {
+        "title": "Selected productions",
+        "items": [
+          "Luxury hospitality launch film",
+          "Fashion capsule campaign",
+          "Destination storytelling series",
+          "Behind-the-scenes social edits",
+          "Brand anthem photography set",
+          "Immersive product microsite visuals"
+        ]
+      },
+      "cta": {
+        "title": "Design your next creative experience.",
+        "description": "Tell us about your project and we’ll craft a bespoke production plan.",
+        "button": "Request a creative proposal"
+      }
+    },
+    "joinSocial": {
+      "seo": {
+        "title": "Join Social | Social Media Strategy & Community Management",
+        "description": "Join Social designs social strategies, content calendars, community management and optimization."
+      },
+      "hero": {
+        "title": "Social ecosystems that grow brands and communities.",
+        "subtitle": "From strategy to community management, we orchestrate social storytelling with measurable impact.",
+        "description": "We build always-on social programs that integrate content, creators, paid media and data insight."
+      },
+      "sections": {
+        "strategy": {
+          "title": "Strategy & positioning",
+          "description": "Audience insights, brand voice, channel mix and creative territories for social relevance."
+        },
+        "planning": {
+          "title": "Content planning & production",
+          "description": "Editorial calendars, production toolkits and modular assets optimised per channel."
+        },
+        "community": {
+          "title": "Community management",
+          "description": "Active moderation, creator collaborations and conversation design."
+        },
+        "reporting": {
+          "title": "Reporting & optimization",
+          "description": "Always-on analytics, learning loops and performance sprints."
+        }
+      },
+      "process": {
+        "title": "Our process",
+        "steps": [
+          {
+            "title": "Audit",
+            "description": "Current performance review, competitor mapping and opportunity scoring."
+          },
+          {
+            "title": "Strategy",
+            "description": "Channel architecture, narrative territories and measurement framework."
+          },
+          {
+            "title": "Execution",
+            "description": "Publishing, community activation and paid amplification."
+          },
+          {
+            "title": "Optimization",
+            "description": "Insights, testing roadmaps and quarterly innovation sprints."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Need a social media audit?",
+        "description": "We’ll map your social ecosystem and unlock immediate actions.",
+        "button": "Book a social consultation"
+      }
+    },
+    "joinAds": {
+      "seo": {
+        "title": "Join Ads | Performance Marketing & Digital Advertising",
+        "description": "Join Ads delivers cross-platform media planning, campaign optimisation and performance measurement."
+      },
+      "hero": {
+        "title": "Performance marketing engineered for growth.",
+        "subtitle": "Integrated media strategies across Google, Meta and emerging platforms.",
+        "description": "We build measurable acquisition, conversion and retention programs aligned with your growth KPIs."
+      },
+      "services": [
+        {
+          "title": "Google Ads management",
+          "description": "Full-funnel search, display, video and discovery campaigns with continuous optimisation."
+        },
+        {
+          "title": "Meta Ads management",
+          "description": "Creative variations, audience design and conversion tactics for Meta ecosystems."
+        },
+        {
+          "title": "Other platforms",
+          "description": "YouTube, programmatic, TikTok and high-impact media partnerships tailored to objectives."
+        },
+        {
+          "title": "Performance reporting & optimisation",
+          "description": "Dashboards, attribution modelling and experimentation for agile decision-making."
+        }
+      ],
+      "metrics": {
+        "title": "What we optimise",
+        "items": [
+          {
+            "title": "Acquisition cost",
+            "description": "Reducing CPA with data-led bidding and creative testing."
+          },
+          {
+            "title": "Conversion velocity",
+            "description": "Aligning media and onsite journeys for faster conversion."
+          },
+          {
+            "title": "Lifetime value",
+            "description": "Retention and upsell tactics powered by audience insights."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Plan your next campaign.",
+        "description": "Let’s design a performance roadmap and media mix that delivers.",
+        "button": "Request a media plan"
+      }
+    },
+    "joinLabAi": {
+      "seo": {
+        "title": "Join AI Lab | Web Development & AI-Powered Solutions",
+        "description": "Join AI Lab builds corporate websites, ecommerce automations, AI agents and data integrations."
+      },
+      "hero": {
+        "title": "Digital products that merge design, code and intelligence.",
+        "subtitle": "From corporate platforms to AI automations, we architect future-ready experiences.",
+        "description": "We partner with brands to design, build and evolve web ecosystems powered by automation and AI."
+      },
+      "services": [
+        {
+          "title": "Web development",
+          "description": "Corporate and dynamic websites engineered with performance and scalability in mind."
+        },
+        {
+          "title": "E-commerce automations",
+          "description": "Workflow, merchandising and customer journey automations that drive growth."
+        },
+        {
+          "title": "AI agents & chatbots",
+          "description": "Custom agent frameworks and conversational experiences with integrations."
+        },
+        {
+          "title": "Data automations & integrations",
+          "description": "ETL pipelines, dashboards and data products stitched across teams."
+        },
+        {
+          "title": "UI/UX design & optimization",
+          "description": "Research, prototyping and iterative design focused on human-centred experiences."
+        }
+      ],
+      "process": {
+        "title": "How we work",
+        "steps": [
+          {
+            "title": "Discovery",
+            "description": "Workshops, goal definition and technical mapping."
+          },
+          {
+            "title": "Design",
+            "description": "Experience design, component systems and architecture."
+          },
+          {
+            "title": "Build",
+            "description": "Agile development sprints with transparent QA."
+          },
+          {
+            "title": "Integrate",
+            "description": "Automation, system connections and data flows."
+          },
+          {
+            "title": "Optimize",
+            "description": "Performance tuning, experimentation and roadmap evolution."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Launch your next digital product.",
+        "description": "Share your brief and we’ll architect a web or AI solution tailored to your vision.",
+        "button": "Start a web/AI project"
+      }
+    },
+    "joinEscapes": {
+      "seo": {
+        "title": "Join Escapes | Turkey’s Most-Read Travel Content Platform",
+        "description": "Join Escapes curates travel guides, destination storytelling, curated experiences and influencer trips."
+      },
+      "hero": {
+        "title": "Turkey’s most-read new generation travel content platform.",
+        "subtitle": "Curated guides, experiences and editorial journeys across destinations.",
+        "description": "We connect travellers, creators and destinations through immersive storytelling and experiential collaborations."
+      },
+      "sections": {
+        "destinations": {
+          "title": "Featured destinations",
+          "items": [
+            {
+              "title": "Aegean escapes",
+              "description": "Hidden bays, boutique stays and gastronomy trails."
+            },
+            {
+              "title": "Cappadocia skies",
+              "description": "Hot air journeys, cave suites and sunrise rituals."
+            },
+            {
+              "title": "Istanbul beyond the classics",
+              "description": "Creative districts, culture routes and culinary secrets."
+            }
+          ]
+        },
+        "editorial": {
+          "title": "Editorial stories",
+          "items": [
+            "Next-gen travel trends report",
+            "Boutique hotel collaboration series",
+            "Influencer travel diaries"
+          ]
+        },
+        "influencers": {
+          "title": "Influencer trips & collaborations",
+          "description": "Immersive journeys co-created with top-tier storytellers and partner destinations."
+        }
+      },
+      "cta": {
+        "title": "Discover destinations with Join Escapes.",
+        "description": "Explore guide collections, editorial stories and partnership opportunities.",
+        "button": "Visit Join Escapes"
+      }
+    }
+  },
+  "contact": {
+    "seo": {
+      "title": "Contact Join PR Group",
+      "description": "Get in touch with Join PR Group for communication, creative, social, ads, AI or travel collaborations."
+    },
+    "hero": {
+      "title": "Let’s make something remarkable.",
+      "description": "Share your challenge, ambitions or project needs and the Join team will connect with you within 24 hours."
+    },
+    "form": {
+      "name": "Name",
+      "company": "Company",
+      "email": "Email",
+      "phone": "Phone",
+      "topic": "Topic",
+      "message": "Message",
+      "topicPlaceholder": "Select a service",
+      "messagePlaceholder": "Tell us about your project or goals...",
+      "submit": "Send message",
+      "success": "Thank you! We’ll be in touch shortly."
+    },
+    "topics": [
+      "Join PR",
+      "Join Creative",
+      "Join Social",
+      "Join Ads",
+      "Join Lab AI",
+      "Join Escapes",
+      "Other"
+    ]
+  }
+}
+

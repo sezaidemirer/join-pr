@@ -71,11 +71,6 @@ export function HeroSlider() {
                     {slide.cta}
                     <ArrowIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Link>
-                  <div className="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-zinc-400">
-                    <span>{index + 1}</span>
-                    <div className="h-px w-16 bg-gradient-to-r from-zinc-500 via-zinc-300 to-transparent" />
-                    <span>{slides.length}</span>
-                  </div>
                 </div>
               </div>
 

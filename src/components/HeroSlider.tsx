@@ -79,15 +79,25 @@ export function HeroSlider() {
                 </div>
               </div>
 
-              <div className="flex flex-wrap items-center justify-between gap-4 pb-4 text-xs uppercase tracking-[0.3em] text-zinc-400 lg:pb-0">
-                <button
-                  type="button"
-                  onClick={() => goToSlide((activeIndex - 1 + slides.length) % slides.length)}
-                  className="flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-white transition-all hover:border-white/30 hover:bg-white/10"
-                  aria-label="Previous slide"
-                >
-                  ‹
-                </button>
+              <div className="flex items-center justify-between pb-4 text-xs uppercase tracking-[0.3em] text-zinc-400 lg:pb-0">
+                <div className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={() => goToSlide((activeIndex - 1 + slides.length) % slides.length)}
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white transition-all hover:border-white/30 hover:bg-white/10"
+                    aria-label="Previous slide"
+                  >
+                    ‹
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => goToSlide((activeIndex + 1) % slides.length)}
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white transition-all hover:border-white/30 hover:bg-white/10"
+                    aria-label="Next slide"
+                  >
+                    ›
+                  </button>
+                </div>
                 <div className="flex items-center gap-2">
                   {slides.map(([, { title }], dotIndex) => {
                     const active = dotIndex === activeIndex;
@@ -105,14 +115,6 @@ export function HeroSlider() {
                     );
                   })}
                 </div>
-                <button
-                  type="button"
-                  onClick={() => goToSlide((activeIndex + 1) % slides.length)}
-                  className="flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-white transition-all hover:border-white/30 hover:bg-white/10"
-                  aria-label="Next slide"
-                >
-                  ›
-                </button>
               </div>
             </article>
           );

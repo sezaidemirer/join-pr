@@ -366,9 +366,14 @@
         "description": "Join PR; stratejik iletişim, influencer ilişkileri, küresel pazarlama ve etkinlik deneyimi yönetimi sunar."
       },
       "hero": {
-        "title": "Algıyı şekillendiren stratejik iletişim.",
-        "subtitle": "Marka konumlandırmadan global destinasyon PR’ına kadar hikayenizi dünyaya taşıyoruz.",
+        "title": "Birlikte Cesur Hikayeler Yaratalım",
+        "subtitle": "Marka konumlandırmadan global destinasyon PR'ına kadar hikayenizi dünyaya taşıyoruz.",
         "description": "Destinasyonlar, yaşam tarzı ve lüks markalarla içgörü, kültür ve ölçümlenebilir etki üzerine kurulu hikayeler tasarlıyoruz."
+      },
+      "media": {
+        "title": "Deneyimi Stratejiye Dönüştürür!",
+        "description": "Join PR ekosisteminin markalar için nasıl ölçülebilir etki yarattığını anlatan kısa videoyu keşfedin.\n\nTurizmde başarı, doğru kurgulanmış bir hikâyeden geçer. Join PR, markaların hedef kitlesiyle duygusal bağ kurmasını sağlayan iletişim stratejilerini oluşturur.",
+        "videoId": "yKVqZNb5p-s"
       },
       "services": [
         {
@@ -389,17 +394,28 @@
         }
       ],
       "cases": {
-        "title": "Vaka özetleri",
+        "title": "Halkla İlişkiler & Medya İletişimi",
         "items": [
-          "Uluslararası destinasyonun yeniden markalanması ve global basın ofisi.",
-          "Beş pazarda yankı bulan celebrity destekli hospitality lansmanı.",
-          "Yüksek etki yaratan lüks seyahat deneyimi serisi."
+          "Basın bülteni, özel haber & röportaj",
+          "Yaratıcı dijital medya iş birlikleri",
+          "Basın davetleri",
+          "PR ölçümleme & medya yansıma raporları"
+        ]
+      },
+      "influencer": {
+        "title": "Influencer ve celebrity iletişimi",
+        "description": "Seçilmiş yetenek ağlarıyla markaların hedef kitleleriyle aynı dili konuşmasını sağlayan kreatif kampanyalar tasarlıyoruz.",
+        "items": [
+          "Influencer seçimi, sözleşme & proje yönetimi ve Meta Partner Raporlama",
+          "Barter, bütçeli iş birlikleri ve elde edilen medya değeri (EMV), ROI analizi",
+          "İçerik senaryosu, hashtag, etiket & görünürlük planlaması",
+          "Celebrity iletişimi"
         ]
       },
       "cta": {
         "title": "Hikayeni güçlendirmeye hazır mısın?",
         "description": "PR ve iletişim yol haritanızı birlikte oluşturalım.",
-        "button": "PR projesi başlat"
+        "button": "Yeni Projeni Başlat"
       }
     },
     "joinCreative": {
@@ -411,6 +427,11 @@
         "title": "Sinematik etki yaratan kreatif prodüksiyon.",
         "subtitle": "İçgörü, zanaat ve görsel inovasyonu harmanlayan hikayeler.",
         "description": "Konseptten final kurgusuna kadar, platformlar ve kültürler arasında yolculuk eden içerikler üretiyoruz."
+      },
+      "media": {
+        "title": "Join Creative Showreel",
+        "description": "Join Creative prodüksiyon ekibinin destinasyonlar, havayolu markaları ve yaşam tarzı hikayeleri için ürettiği kreatif çalışmalar.",
+        "videoId": "FLNg5aQb9rk"
       },
       "services": [
         {
@@ -426,27 +447,31 @@
           "description": "Editoryal, yaşam tarzı ve ürün çekimlerinde uçtan uca prodüksiyon yönetimi."
         },
         {
-          "title": "Konsept geliştirme",
+          "title": "Konsept & içerik geliştirme ve planlama",
           "description": "Briefe özel kreatif yönler, treatment dokümanları ve görsel diller."
         },
         {
-          "title": "Metin yazarlığı ve içerik üretimi",
+          "title": "AI görsel üretimi",
           "description": "Senaryo yazımı, anlatı geliştirme ve çok dilli içerik teslimi."
+        },
+        {
+          "title": "AI video prodüksiyonu",
+          "description": "Generatif video araçlarıyla hızlı iterasyon, storyboard ve prodüksiyon teslimleri."
         }
       ],
       "portfolio": {
         "title": "Seçili prodüksiyonlar",
         "items": [
-          "Lüks konaklama lansman filmi",
-          "Moda kapsül kampanyası",
-          "Destinasyon hikaye serisi",
-          "Kamera arkası sosyal kurgular",
-          "Marka marşı fotoğraf seti",
-          "Ürün mikrositesi görselleri"
+          { "title": "Rixos Premium Qetaifan Island North", "image": "/creative_page_galery1.jpg" },
+          { "title": "Four Seasons Hotel Bahrain Bay", "image": "/creative_page_galery2.jpg" },
+          { "title": "Rixos Radamis Sharm el Sheikh", "image": "/creative_page_galery3.jpg" },
+          { "title": "Rixos The Palm Dubai", "image": "/creative_page_galery4.jpg" },
+          { "title": "AJet Havayolları", "image": "/creative_page_galery5.jpg" },
+          { "title": "Jennifer Lopez Up All Night 2025 Egypt", "image": "/creative_page_galery6.jpg" }
         ]
       },
       "cta": {
-        "title": "Bir sonraki kreatif deneyimini tasarla.",
+        "title": "Bir sonraki kreatif prodüksiyon deneyimini Join\u00A0x\u00A0Creative ile yaşa.",
         "description": "Projeni anlat, sana özel bir prodüksiyon planı hazırlayalım.",
         "button": "Kreatif teklif iste"
       }
@@ -457,26 +482,26 @@
         "description": "Join Social; sosyal strateji, içerik takvimi, topluluk yönetimi ve optimizasyon sunar."
       },
       "hero": {
-        "title": "Markaları ve toplulukları büyüten sosyal ekosistemler.",
-        "subtitle": "Stratejiden topluluk yönetimine, ölçümlenebilir sosyal hikaye anlatımı kurguluyoruz.",
+        "title": "Sosyal Medya Yönetimi ve Strateji",
+        "subtitle": "Join Social, markaların dijital dünyadaki kimliğini güçlendiren stratejik sosyal medya yönetimi sağlar.",
         "description": "İçerik, yaratıcılar, medya ve veri içgörüsünü entegre eden sürekli sosyal programlar inşa ediyoruz."
       },
       "sections": {
         "strategy": {
-          "title": "Strateji ve konumlandırma",
-          "description": "Hedef kitle içgörüleri, marka tonu, kanal karması ve sosyal alaka için kreatif alanlar."
+          "title": "İçerik planlama & yayın takvimi",
+          "description": "Kampanyalara göre şekillenen yayın takvimleri, platform bazlı içerik sıraları ve onay süreçleri."
         },
         "planning": {
-          "title": "İçerik planlama ve üretim",
-          "description": "Editoryal takvimler, üretim setupları ve kanala göre optimize modüler içerikler."
+          "title": "Trend uyumlu kısa video ve görsel üretimi",
+          "description": "Reels, TikTok ve kısa formatlar için storyboard, çekim ve post prodüksiyon akışları."
         },
         "community": {
-          "title": "Topluluk yönetimi",
-          "description": "Aktif moderasyon, yaratıcı iş birlikleri ve sohbet tasarımı."
+          "title": "Topluluk etkileşimi ve moderasyon",
+          "description": "DM, yorum ve UGC moderasyonu ile yaratıcı topluluk aktivasyonları."
         },
         "reporting": {
-          "title": "Raporlama ve optimizasyon",
-          "description": "Sürekli analizler, öğrenme döngüleri ve performans sprintleri."
+          "title": "Aylık raporlama & içerik performans analizi",
+          "description": "Aylık dashboard’lar, içerik bazlı KPI raporları ve optimizasyon önerileri."
         }
       },
       "process": {
@@ -501,9 +526,20 @@
         ]
       },
       "cta": {
-        "title": "Sosyal medya denetimine hazır mısın?",
-        "description": "Sosyal ekosisteminizi çıkaralım, hızlı kazanımları ortaya çıkaralım.",
-        "button": "Sosyal danışmanlık al"
+        "title": "Yeni nesil sosyal medya yönetimine hazır mısın?",
+        "description": "Sosyal medya ekosisteminizi oluşturalım, hızlı dönüşümler ve kazanımlar yaratalım.",
+        "button": "Hemen Teklif Al"
+      },
+      "media": {
+        "title": "Join Social ile Markanızın Tüm Dijital Dünyasını Tek Merkezden Yönetin",
+        "description": "Sosyal medya stratejinizi yapay zekâ ile güçlendiren Join Social, içerik üretiminden trend takibine, görsel iletişim dilinden raporlamaya kadar tüm süreci otomatikleştirir ve profesyonelleştirir. Şifre paylaşımı olmadan, güvenlik açıklarına yer vermeden; tüm platformlarınızı tek bir akıllı panelden yönetmenizi sağlar.",
+        "items": [
+          "Merkezi dashboard yönetimi",
+          "Güvenli bağlantı – sıfır şifre paylaşımı",
+          "Gönderi performansları, trend içerikler, rakip analizi ve büyüme tahminleri",
+          "Tutarlı görsel ve metinsel iletişim dili"
+        ],
+        "image": "/social_page_media.png"
       }
     },
     "joinAds": {

@@ -366,9 +366,14 @@
         "description": "Join PR delivers strategic communication, influencer relations, global marketing and event experience management."
       },
       "hero": {
-        "title": "Strategic communication that shapes perception.",
+        "title": "Let’s Create Bold Stories Together",
         "subtitle": "From brand positioning to global destination PR, we design narratives that travel the world.",
         "description": "We partner with destinations, lifestyle and luxury brands to craft powerful stories anchored in insight, culture and measurable impact."
+      },
+      "media": {
+        "title": "Watch our strategic communications playbook",
+        "description": "Discover how the Join PR ecosystem creates measurable impact for destinations and lifestyle brands.",
+        "videoId": "yKVqZNb5p-s"
       },
       "services": [
         {
@@ -389,17 +394,28 @@
         }
       ],
       "cases": {
-        "title": "Case snapshots",
+        "title": "Public Relations & Media Communication",
         "items": [
-          "International destination rebrand and global press office.",
-          "Celebrity-fronted hospitality launch amplified across five markets.",
-          "Luxury travel experience series with high-impact media coverage."
+          "Press releases, exclusive stories & interviews",
+          "Creative digital media collaborations",
+          "Press trips & media invitations",
+          "PR measurement & media coverage reports"
+        ]
+      },
+      "influencer": {
+        "title": "Influencer & celebrity communications",
+        "description": "We activate curated talent networks to deliver culturally relevant storytelling for your audiences.",
+        "items": [
+          "Influencer sourcing, contracting & project management plus Meta Partner reporting",
+          "Barter and paid collaborations with EMV / ROI analysis",
+          "Content scripting, hashtags, tagging & visibility planning",
+          "Celebrity communication"
         ]
       },
       "cta": {
         "title": "Ready to amplify your narrative?",
         "description": "Let’s develop your PR and communication roadmap.",
-        "button": "Start a PR project"
+        "button": "Launch Your New Project"
       }
     },
     "joinCreative": {
@@ -411,6 +427,11 @@
         "title": "Creative production built for cinematic impact.",
         "subtitle": "Stories that blend insight, craft and visual innovation.",
         "description": "From concept to final cut, we deliver multi-format creative that travels across platforms, audiences and cultures."
+      },
+      "media": {
+        "title": "Join Creative Showreel",
+        "description": "A glimpse into the Join Creative production team’s multidisciplinary work for destinations, airlines and lifestyle brands.",
+        "videoId": "FLNg5aQb9rk"
       },
       "services": [
         {
@@ -426,27 +447,31 @@
           "description": "Editorial, lifestyle and product shoots with end-to-end production management."
         },
         {
-          "title": "Concept development",
+          "title": "Concept & content development and planning",
           "description": "Creative territories, treatments and visual languages tailored to the brief."
         },
         {
-          "title": "Copywriting & content creation",
+          "title": "AI visual production",
           "description": "Scriptwriting, narrative development and multi-language content delivery."
+        },
+        {
+          "title": "AI video production",
+          "description": "Generative video workflows for rapid iteration, storyboards and final deliverables."
         }
       ],
       "portfolio": {
         "title": "Selected productions",
         "items": [
-          "Luxury hospitality launch film",
-          "Fashion capsule campaign",
-          "Destination storytelling series",
-          "Behind-the-scenes social edits",
-          "Brand anthem photography set",
-          "Immersive product microsite visuals"
+          { "title": "Rixos Premium Qetaifan Island North", "image": "/creative_page_galery1.jpg" },
+          { "title": "Four Seasons Hotel Bahrain Bay", "image": "/creative_page_galery2.jpg" },
+          { "title": "Rixos Radamis Sharm el Sheikh", "image": "/creative_page_galery3.jpg" },
+          { "title": "Rixos The Palm Dubai", "image": "/creative_page_galery4.jpg" },
+          { "title": "AJet Airlines", "image": "/creative_page_galery5.jpg" },
+          { "title": "Jennifer Lopez Up All Night 2025 Egypt", "image": "/creative_page_galery6.jpg" }
         ]
       },
       "cta": {
-        "title": "Design your next creative experience.",
+        "title": "Live your next creative production experience with Join\u00A0x\u00A0Creative.",
         "description": "Tell us about your project and we’ll craft a bespoke production plan.",
         "button": "Request a creative proposal"
       }
@@ -463,20 +488,20 @@
       },
       "sections": {
         "strategy": {
-          "title": "Strategy & positioning",
-          "description": "Audience insights, brand voice, channel mix and creative territories for social relevance."
+          "title": "Content planning & publishing calendar",
+          "description": "Campaign-aligned publishing cadences, platform-specific content sequencing and approval workflows."
         },
         "planning": {
-          "title": "Content planning & production",
-          "description": "Editorial calendars, production toolkits and modular assets optimised per channel."
+          "title": "Trend-aligned short-form video and visual production",
+          "description": "Storyboards, shoots and agile post-production for Reels, TikTok and short-form visuals."
         },
         "community": {
-          "title": "Community management",
-          "description": "Active moderation, creator collaborations and conversation design."
+          "title": "Community engagement and moderation",
+          "description": "Responsive moderation for comments, DMs and UGC plus collaborative community activations."
         },
         "reporting": {
-          "title": "Reporting & optimization",
-          "description": "Always-on analytics, learning loops and performance sprints."
+          "title": "Monthly reporting & content performance analysis",
+          "description": "Monthly dashboards with content-level KPIs, insights and optimisation recommendations."
         }
       },
       "process": {
@@ -501,9 +526,20 @@
         ]
       },
       "cta": {
-        "title": "Need a social media audit?",
-        "description": "We’ll map your social ecosystem and unlock immediate actions.",
-        "button": "Book a social consultation"
+        "title": "Ready for next-gen social media management?",
+        "description": "Let’s build your social media ecosystem and create rapid wins.",
+        "button": "Get a proposal now"
+      },
+      "media": {
+        "title": "Manage your brand’s digital world from one hub with Join Social",
+        "description": "Join Social supercharges your social strategy with AI—automating everything from content production and trend tracking to visual language and reporting. Manage every platform from one secure, intelligent control center without sharing passwords or exposing vulnerabilities.",
+        "items": [
+          "Centralized dashboard management",
+          "Secure connection – zero password sharing",
+          "Post performance, trend content, competitor analysis and growth forecasts",
+          "Consistent visual and verbal communication language"
+        ],
+        "image": "/social_page_media.png"
       }
     },
     "joinAds": {

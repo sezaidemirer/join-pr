@@ -251,7 +251,7 @@ export function HomeView() {
                   {card.image && (
                     <div className="overflow-hidden rounded-2xl">
                       <Image
-                        src={card.image}
+                        src={`${BASE_PATH}${card.image}`}
                         alt={card.title}
                         width={320}
                         height={180}

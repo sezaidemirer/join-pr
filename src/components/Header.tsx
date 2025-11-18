@@ -8,6 +8,8 @@ import { useEffect, useState } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 
+const BASE_PATH = process.env.NODE_ENV === 'production' ? '/join-pr' : '';
+
 const NAV_LINKS = [
   { key: 'home', href: '/' },
   { key: 'joinPr', href: '/join-pr' },
@@ -45,7 +47,7 @@ export function Header() {
       <div className="relative mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-5 lg:px-10">
         <Link href="/" className="flex items-center gap-3 text-white -ml-1 sm:ml-0">
           <Image
-            src="/join_pr_logo_offical2.png"
+            src={`${BASE_PATH}/join_pr_logo_offical2.png`}
             alt={brandName}
             width={138}
             height={43}

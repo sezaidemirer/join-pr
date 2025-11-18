@@ -50,6 +50,7 @@ export function Header() {
             width={138}
             height={43}
             priority
+            unoptimized
             className="h-[53px] w-auto object-contain transition-transform duration-300 hover:scale-[1.02]"
           />
           <span className="sr-only">{brandName}</span>

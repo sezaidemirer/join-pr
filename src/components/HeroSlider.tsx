@@ -5,13 +5,15 @@ import { useEffect, useMemo, useState } from 'react';
 
 import { useLanguage } from '@/context/LanguageContext';
 
+const BASE_PATH = process.env.NODE_ENV === 'production' ? '/join-pr' : '';
+
 const BACKGROUND_MAP: Record<string, string> = {
-  joinPr: '/banner1.jpg',
-  joinCreative: '/banner2.jpg',
-  joinSocial: '/banner3_social_mediya.jpg',
-  joinAds: '/banner4_ads.jpg',
-  joinLabAi: '/banner5_ai_lab.jpg',
-  joinEscapes: '/banner6_joinescapes.png',
+  joinPr: `${BASE_PATH}/banner1.jpg`,
+  joinCreative: `${BASE_PATH}/banner2.jpg`,
+  joinSocial: `${BASE_PATH}/banner3_social_mediya.jpg`,
+  joinAds: `${BASE_PATH}/banner4_ads.jpg`,
+  joinLabAi: `${BASE_PATH}/banner5_ai_lab.jpg`,
+  joinEscapes: `${BASE_PATH}/banner6_joinescapes.png`,
 };
 
 const DEFAULT_HERO_BG = 'https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=1600&q=80';

@@ -8,6 +8,8 @@ import { useEffect, useMemo, useState } from 'react';
 import { HeroSlider } from '@/components/HeroSlider';
 import { useLanguage } from '@/context/LanguageContext';
 
+const BASE_PATH = process.env.NODE_ENV === 'production' ? '/join-pr' : '';
+
 const UNIT_ROUTES: Record<string, string> = {
   joinPr: '/join-pr',
   joinCreative: '/join-creative',
@@ -253,6 +255,7 @@ export function HomeView() {
                         alt={card.title}
                         width={320}
                         height={180}
+                        unoptimized
                         className="h-36 w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                     </div>
@@ -280,7 +283,7 @@ export function HomeView() {
               className="group relative flex h-28 w-28 items-center justify-center justify-self-center overflow-hidden rounded-full border-2 border-sky-400/80 bg-white text-xs font-semibold uppercase tracking-[0.3em] text-zinc-600 shadow-[0_0_25px_rgba(56,189,248,0.45)] transition-all hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(56,189,248,0.7)] sm:h-32 sm:w-32 sm:text-sm"
             >
               <img
-                src={logo.image}
+                src={`${BASE_PATH}${logo.image}`}
                 alt={logo.name}
                 className="h-20 w-20 object-contain transition-all duration-300 group-hover:scale-105 sm:h-24 sm:w-24"
                 loading="lazy"

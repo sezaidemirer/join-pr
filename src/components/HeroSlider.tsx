@@ -5,14 +5,16 @@ import { useEffect, useMemo, useState } from 'react';
 
 import { useLanguage } from '@/context/LanguageContext';
 
-const GRADIENT_MAP: Record<string, string> = {
-  joinPr: 'from-sky-500/30 via-blue-700/40 to-indigo-900/70',
-  joinCreative: 'from-fuchsia-500/30 via-purple-700/40 to-slate-900/70',
-  joinSocial: 'from-teal-400/30 via-cyan-600/40 to-blue-900/70',
-  joinAds: 'from-amber-500/30 via-orange-600/40 to-rose-900/70',
-  joinLabAi: 'from-emerald-500/30 via-teal-700/40 to-slate-950/70',
-  joinEscapes: 'from-blue-400/30 via-sky-600/40 to-teal-900/70',
+const BACKGROUND_MAP: Record<string, string> = {
+  joinPr: '/banner1.jpg',
+  joinCreative: '/banner2.jpg',
+  joinSocial: '/banner3_social_mediya.jpg',
+  joinAds: '/banner4_ads.jpg',
+  joinLabAi: '/banner5_ai_lab.jpg',
+  joinEscapes: '/banner6_joinescapes.png',
 };
+
+const DEFAULT_HERO_BG = 'https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=1600&q=80';
 
 const AUTO_PLAY_INTERVAL = 7000;
 
@@ -51,9 +53,9 @@ export function HeroSlider() {
               aria-hidden={!isActive}
             >
               <div
-                className={`absolute inset-0 -z-10 bg-gradient-to-br ${GRADIENT_MAP[key] ?? 'from-slate-700/30 via-slate-900/60 to-black/70'} opacity-85`}
+                className="absolute inset-0 -z-10 bg-cover bg-center"
+                style={{ backgroundImage: `url(${BACKGROUND_MAP[key] ?? DEFAULT_HERO_BG})` }}
               />
-              <div className="absolute inset-0 -z-20 bg-[url('https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center mix-blend-overlay opacity-20" />
 
               <div className="flex flex-1 flex-col justify-start gap-4 pt-2 sm:gap-6 sm:pt-6 lg:justify-center lg:pt-0 lg:gap-8">
                 <span className="text-sm font-medium uppercase tracking-[0.4em] text-teal-300">

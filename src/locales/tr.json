@@ -50,37 +50,37 @@
       "intro": "Join Ekosistemi",
       "slides": {
         "joinPr": {
-          "title": "Join PR",
+          "title": "Join x PR",
           "subtitle": "Stratejik iletişim ve destinasyon PR’ı ile küresel algıyı şekillendiriyoruz.",
           "cta": "Join PR’ı keşfet",
           "link": "/join-pr"
         },
         "joinCreative": {
-          "title": "Join Creative",
+          "title": "Join x Creative",
           "subtitle": "Markaları yükselten filmler, fotoğraf ve sinematik hikayeler.",
           "cta": "Join Creative’i keşfet",
           "link": "/join-creative"
         },
         "joinSocial": {
-          "title": "Join Social",
+          "title": "Join x Social",
           "subtitle": "Sosyal strateji, içerik ve topluluk yönetimi ile sohbetleri ateşliyoruz.",
           "cta": "Join Social’ı incele",
           "link": "/join-social"
         },
         "joinAds": {
-          "title": "Join Ads",
+          "title": "Join x Ads",
           "subtitle": "Google, Meta ve yeni platformlarda performans odaklı medya stratejileri.",
           "cta": "Join Ads ile büyü",
           "link": "/join-ads"
         },
         "joinLabAi": {
-          "title": "Join AI Lab",
+          "title": "Join x AI Lab",
           "subtitle": "Büyüme odaklı web deneyimleri, otomasyonlar ve AI ajanları.",
           "cta": "Join AI Lab ile geliştir",
           "link": "/join-lab-ai"
         },
         "joinEscapes": {
-          "title": "Join Escapes",
+          "title": "Join x Escapes",
           "subtitle": "Türkiye’nin en çok okunan yeni nesil seyahat içerik platformu.",
           "cta": "Join Escapes’i ziyaret et",
           "link": "/join-escapes"
@@ -92,32 +92,32 @@
       "description": "",
       "cards": {
         "joinPr": {
-          "title": "Join PR",
+          "title": "Join x PR",
           "description": "Stratejik iletişim, influencer ilişkileri ve küresel destinasyon PR’ı.",
           "cta": "PR’ı keşfet"
         },
         "joinCreative": {
-          "title": "Join Creative",
+          "title": "Join x Creative",
           "description": "Dijital içerik, reklam filmi prodüksiyonu ve cesur kreatif konseptler.",
           "cta": "Creative’i keşfet"
         },
         "joinSocial": {
-          "title": "Join Social",
+          "title": "Join x Social",
           "description": "Sosyal medya stratejisi, sürekli içerik ve topluluk yönetimi.",
           "cta": "Social’ı keşfet"
         },
         "joinAds": {
-          "title": "Join Ads",
+          "title": "Join x Ads",
           "description": "Performans pazarlaması ve çapraz platform kampanya optimizasyonu.",
           "cta": "Ads’i keşfet"
         },
         "joinLabAi": {
-          "title": "Join AI Lab",
+          "title": "Join x AI Lab",
           "description": "Geleceğe hazır markalar için web, AI ve otomasyon ürünleri.",
           "cta": "AI Lab'i keşfet"
         },
         "joinEscapes": {
-          "title": "Join Escapes",
+          "title": "Join x Escapes",
           "description": "Destinasyonları, hikayeleri ve deneyimleri derleyen seyahat platformu.",
           "cta": "Escapes’i keşfet"
         }
@@ -197,7 +197,7 @@
         },
         {
           "badge": "AI Deneyim",
-      "title": "Web Chatbot ve WhatsApp asistanıyla 7/24 destek verin.",
+          "title": "Web Chatbot ve WhatsApp asistanıyla 7/24 destek verin.",
           "description": "AI ajanlarımız ürün sorularını yanıtlar, lead toplar ve siz uyurken satışa destek olur; web siteniz ve mesajlaşma kanallarınızla entegre çalışır.",
           "highlights": [
             "Web ve WhatsApp için kesintisiz AI concierge",
@@ -233,70 +233,108 @@
       ]
     },
     "cases": {
-      "title": "Öne çıkan projeler",
-      "description": "Join ekosisteminden seçilen partnerlikler, ödüllü lansmanlar ve deneyim tasarımları.",
+      "title": "Basında Biz",
+      "description": "Müşterilerimizin başarı hikayelerini basında ön plana çıkararak marka değerlerini artırmak için çalışıyoruz. Güvenilir, etkili, yenilikçi iletişim çözümleri sunuyoruz.",
       "cards": [
         {
-          "title": "Destination Reboot",
-          "category": "Küresel PR Kampanyası",
-          "description": "PR, influencer seyahatleri ve veri odaklı hikaye anlatımıyla çok pazarlı turizm lansmanı."
+          "title": "Türk Oyuncular Mısır’da",
+          "category": "Medya & Influencer Kampanyası",
+          "description": "Mısır’ın tarihi, turistik ve kültürel yapısına ve Kızıldeniz’e hayran kalan Türk oyuncular, herkesi bu deneyimi yaşamaya davet etti.",
+          "image": "/turk-oyuncular-misirda.webp"
         },
         {
-          "title": "Nightfall Premiere",
+          "title": "Türk Oyunculardan Bahreyn Çıkarması",
           "category": "Kreatif Prodüksiyon",
-          "description": "Üç şehirde çekilmiş sinematik reklam filmi ve kamera arkası içerikleri."
+          "description": "Ünlü Türk oyuncular, Bahreyn’de üç gün süren bir dizi etkinliğe katıldı.",
+          "image": "/turk-oyunculardan-bahreyn-cikarmasi.webp"
         },
         {
-          "title": "Pulse 360",
-          "category": "Sosyal & Ads",
-          "description": "Topluluğu harekete geçiren sosyal strateji, medya ve yaratıcı iş birlikleri."
+          "title": "Prontotour 30. yaşını Marakeş’te kutladı.",
+          "category": "Stratejik PR & Deneyim",
+          "description": "Seyahat sektöründe trendler belirleyen tur operatörü Prontotour 30. yıl kutlamalarına Fas’ta başladı. Ünlü oyuncular Marakeş’i keşfetme fırsatı buldu.",
+          "image": "/prontotour-marakeste.jpeg"
         },
         {
-          "title": "Aurora Immersion",
-          "category": "Deneyimsel Pazarlama",
-          "description": "Mekansal hikaye anlatımı, canlı medya anları ve seçkin davetlilerle kurgulanan lansman haftası."
+          "title": "Prontotour Erken Rezervasyonun İlk Dönemini %70 Artışla Tamamladı",
+          "category": "Pazarlama & Satış",
+          "description": "Erken rezervasyonun ilk dönemini yüzde 70 artışla tamamlayan ve ikinci dönemi başlatan Prontotour, yurt içinde yüzde 50, yurt dışında yüzde 40 indirim fırsatları sunuyor.",
+          "image": "/prontotour-erken-rezervasyonun-ilk-donemini-70-artisla-tamamladi.jpg"
         },
         {
-          "title": "Signal Studio",
-          "category": "Veri & AI",
-          "description": "Pazarlama, satış ve deneyim ekiplerini bağlayan çok kanallı pano ve AI asistanı."
+          "title": "Leaders CXO 14. Buluşma Toplantısı",
+          "category": "Özel Davet",
+          "description": "Leaderscxo Kurucu Başkanı Cenk Dağcı ve Join Pr kurucusu Ali Saçlı ev sahipliğinde sınırlı sayıda katılımcı ve özel davet ile gerçekleştirilen 2022 yılının ilk buluşmasının konukları; Prof. Dr. İlber Ortaylı, Prof. Dr. Uğur Batı...",
+          "image": "/leaders-cxo-14-bulusma-toplantisi.jpg"
         },
         {
-          "title": "Voyage Stories",
-          "category": "Seyahat Platformu",
-          "description": "Destinasyon keşfini ve partner iş birliklerini öne çıkaran editoryal seyahat seçkisi."
+          "title": "Prontotour, Ünlü Oyuncu ve Influencer’lara Yönelik Bir Dünya Turu Programı Başlatıyor",
+          "category": "Küresel Tur Programı",
+          "description": "Tur şirketi Prontotour, Türkiye’den ünlü oyuncu ve influencer’lara yönelik bir yıl sürecek bir dünya turu programı hazırladığını duyurdu.",
+          "image": "/prontotour-unlu-oyuncu-ve-influencerlara-yonelik-bir-dunya-turu-programi-baslatiyor.jpg"
         },
         {
-          "title": "Creators' Summit",
-          "category": "Influencer Programı",
-          "description": "Marka alanlarıyla hizalanmış, ölçülebilir KPI’lara sahip kreatör rezidansları."
+          "title": "Türk Oyuncular Kızıldeniz’de Tatil Keyfi Yaptı",
+          "category": "Deneyimsel Kampanya",
+          "description": "Türk dizi ve film oyuncuları Kızıldeniz kıyısında tatil kenti Hurghada’da tatil keyfi yaptı. Baran Bölükbaşı, Pelin Uluksar, Gizem Güneş, Damlasu İkizoğlu, Ahmet Kayakesen, Oral Özer ve Berna Koraltürk Mısır’ın Hurghada kentini ziyaret etti.",
+          "image": "/turk-oyuncular-kizildenizde-tatil-keyfi-yapti-kpk.jpg"
         },
         {
-          "title": "Blueprint Commerce",
-          "category": "E-ticaret Otomasyonu",
-          "description": "Katalog, merchandising ve CRM yolculuklarını hızlandıran uçtan uca otomasyon."
+          "title": "Mısır’da Çöl Safarisi",
+          "category": "Deneyim Tasarımı",
+          "description": "Türk oyuncular Ayça Ayşin Turan, Salih Bademci, İmer Özgün, Erkan Kolçak Köstendil, Cansu Tosun, İlayda Ildır, İpek Filiz Yazıcı ve Alican Okumuş, Mısır’da bulunan Şarm El Şeyh kentini ziyaret etti.",
+          "image": "/misirda-col-safarisi-1.webp"
+        },
+        {
+          "title": "Türk Oyuncular Mısır’ın en ünlü tatil merkezinde buluştu",
+          "category": "Destinasyon Etkinliği",
+          "description": "Türkiye’nin önde gelen başarılı oyuncuları, ‘Mısır’ın İncisi’ Sina Yarımadası’nda bulunan Şarm El Şeyh’te dört gün süren bir etkinliğe katıldı. Şarm El Şeyh’in tarihi, kültürel yapısı ve Kızıldenizi’ne hayran kaldıklarını belirtti.",
+          "image": "/turk-oyuncular-misirin-en-unlu-tatil-merkezinde-bulustu.jpg"
+        },
+        {
+          "title": "Türk Oyuncular Ürdün’e Hayran Kaldı",
+          "category": "Destinasyon PR",
+          "description": "Ünlü dizi oyuncuları Gökçe Akyıldız, Mehmet Aykaç, Gizem Güneş ve Emin Günenç Ürdün’de ağırlandı. Ülkenin turistik ve kültürel yapısına hayran kalan Türk oyuncular, rol aldıkları dizi ve sinema projelerinin Ürdün’de beğeni görmesi ve davet edilmelerinden duydukları memnuniyeti dile getirdi.",
+          "image": "/turk-dizi-oyunculari-urdun-de.webp"
+        },
+        {
+          "title": "Türk Oyuncular Karadağ’a Çıkarma Yaptı",
+          "category": "Marka Deneyimi",
+          "description": "Join PR organizasyonu ile Regent Porto Montenegro Hotel, Air Montenegro Havayolları, Tivat Turizm Tanıtma Ofisi ve Porto Montenegro ev sahipliğinde gerçekleşen davete ünlü oyuncular Ali Yağcı, Mehmet Aykaç, Gökçe Akyıldız, Dilara Aksüyek, Emin Günenç ve Join PR kurucusu Ali Saçlı katıldı.",
+          "image": "/turk-oyuncular-karadag-039-a-cikarma-yapti-1.webp"
+        },
+        {
+          "title": "Ürdün Destinasyon Tanıtımı",
+          "category": "Hedef Pazar Programı",
+          "description": "Ünlü dizi oyuncuları Gökçe Akyıldız, Mehmet Aykaç, Gizem Güneş ve Emin Günenç Ürdün’de ağırlandı. Ülkenin turistik ve kültürel yapısına hayran kalan Türk oyuncular, rol aldıkları dizi ve sinema projelerinin Ürdün’de beğeni görmesi ve davet edilmelerinden duydukları memnuniyeti dile getirdi.",
+          "image": "/urdun-destinasyon-tanitimi.webp"
+        },
+        {
+          "title": "Prontotour’un 2024 Erken Rezervasyon Dönemi Başladı",
+          "category": "Kampanya Lansmanı",
+          "description": "Yazseverler, 2024 için tatil planlarını şimdiden yapmaya başladı. Türkiye’nin önde gelen tur operatörü markalarından Prontotour ise tatilciler için yurt dışı, yurt içi ve gemi turlarında ‘Uçak bileti fiyatına tur!’",
+          "image": "/prontotourun-erken-rezervasyon-donemi-basladi-1-1.jpg"
         }
       ],
-      "cta": "Vaka portföyü iste"
+      "cta": "Tüm Haberleri Görüntüle"
     },
     "clients": {
       "title": "Birlikte büyüdüğümüz markalar",
       "description": "Küresel destinasyonlar, yaşam tarzı ikonları, iddialı girişimler ve köklü markalar Join ile entegre iletişim için çalışıyor.",
       "logos": [
-        "Aurora Hotels",
-        "LuxeVoyage",
-        "Metropolitan Gallery",
-        "SkyPulse Airlines",
-        "Nova Cruises",
-        "UrbanBloom",
-        "Harbor Collective",
-        "Summit Residences"
+        { "name": "Swissotel Sharm El Sheikh", "image": "/swissotel-logo.jpg" },
+        { "name": "Marriott Dead Sea Resort", "image": "/marriott-dead-sea.jpg" },
+        { "name": "Hyatt Regency", "image": "/hyatt-regency-1.jpg" },
+        { "name": "Jordan Tourism Board", "image": "/jordan-tourism-board-1.jpg" },
+        { "name": "Royal Jordanian", "image": "/royal-jordanian-logo-1.jpg" },
+        { "name": "Novu Lab", "image": "/novu-lab-logo.jpg" },
+        { "name": "Rixos Premium Seagate", "image": "/rixos-logo.jpg" },
+        { "name": "Prontotour", "image": "/prontotour.jpg" }
       ]
     },
     "about": {
       "title": "Biz kimiz?",
-      "subtitle": "İkonik marka, destinasyon ve ürün hikayeleri inşa eden bağlantılı ajans kolektifi.",
-      "description": "Join PR Group; stratejistleri, hikaye anlatıcılarını, yaratıcıları, medya mimarlarını ve teknoloji uzmanlarını bir araya getirir. PR’dan AI’a kadar fikirleri pazarlar ve kültürler arasında dolaşan, ölçülebilir ivme kazandıran deneyimlere dönüştürüyoruz.",
+      "subtitle": "Join PR, yalnızca iletişimi yöneten değil, markaların hikâyelerini deneyime dönüştüren yeni nesil iletişim ajansıdır.",
+      "description": "Konaklama, Havacılık , Turizm tanıtma ofisleri ve yaşam markalarına odaklanan yapısıyla, turizm sektöründeki uzmanlığı ve global deneyimi bir araya getirir. Temelini strateji, yaratıcılık ve veri üzerine kurduğu 360° iletişim modeliyle markaların görünürlüğünü değil, algısını yönetir.",
       "gallery": [
         {
           "title": "Strateji laboratuvarı",
@@ -662,4 +700,3 @@
     ]
   }
 }
-

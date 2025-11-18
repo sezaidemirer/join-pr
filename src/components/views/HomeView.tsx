@@ -1,5 +1,7 @@
 'use client';
+/* eslint-disable @next/next/no-img-element */
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
 
@@ -24,10 +26,10 @@ export function HomeView() {
   const promo = translations.homepage.promo;
   const ecosystemDescription =
     typeof ecosystem.description === 'string' ? ecosystem.description.trim() : '';
-  const caseItems = cases.cards as Array<{ title: string; category: string; description: string }>;
+  const caseItems = cases.cards as Array<{ title: string; category: string; description: string; image?: string }>;
   const marqueeItems = [...caseItems, ...caseItems];
   const clients = translations.homepage.clients;
-  const clientLogos = clients.logos as string[];
+  const clientLogos = clients.logos as Array<{ name: string; image: string }>;
   const promoSlides = useMemo(
     () =>
       (promo.slides as Array<{
@@ -107,10 +109,7 @@ export function HomeView() {
               className="group relative overflow-hidden rounded-3xl border border-white/10 bg-zinc-950/70 p-8 shadow-xl transition-transform hover:-translate-y-1 hover:border-sky-500/40 hover:shadow-glow-sky"
             >
               <div className="absolute inset-0 -z-10 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-500 via-sky-500 to-blue-600 text-xl font-semibold text-white shadow-lg shadow-sky-500/30">
-                {value.title.charAt(0) || 'J'}
-              </div>
-              <h3 className="mt-6 text-2xl font-semibold text-white">{value.title}</h3>
+              <h3 className="mt-2 text-2xl font-semibold text-white">{value.title}</h3>
               <p className="mt-3 text-sm text-zinc-400">{value.description}</p>
               <div className="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-teal-200">
                 {value.cta}
@@ -247,6 +246,17 @@ export function HomeView() {
                 className="group flex w-[320px] flex-shrink-0 flex-col justify-between rounded-3xl border border-white/10 bg-zinc-950/70 p-6 shadow-lg shadow-black/40 transition-transform duration-300 hover:-translate-y-1 hover:border-teal-500/40"
               >
                 <div className="space-y-4">
+                  {card.image && (
+                    <div className="overflow-hidden rounded-2xl">
+                      <Image
+                        src={card.image}
+                        alt={card.title}
+                        width={320}
+                        height={180}
+                        className="h-36 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                  )}
                   <span className="text-xs font-semibold uppercase tracking-[0.3em] text-teal-200">{card.category}</span>
                   <h3 className="text-xl font-semibold text-white">{card.title}</h3>
                   <p className="text-sm text-zinc-400">{card.description}</p>
@@ -264,12 +274,17 @@ export function HomeView() {
           <p className="mx-auto max-w-3xl text-sm text-zinc-400 md:text-base">{clients.description}</p>
         </div>
         <div className="grid gap-6 grid-cols-2 sm:grid-cols-3 xl:grid-cols-4">
-          {clientLogos.map((name) => (
+          {clientLogos.map((logo) => (
             <div
-              key={name}
-              className="group relative flex h-24 w-24 items-center justify-center justify-self-center rounded-full border border-white/10 bg-white/5 text-xs font-semibold uppercase tracking-[0.3em] text-zinc-200 shadow-lg shadow-black/40 transition-all hover:-translate-y-1 hover:border-teal-400/40 hover:bg-gradient-to-br hover:from-teal-500/30 hover:to-blue-600/30 hover:text-white sm:h-28 sm:w-28 sm:text-sm"
+              key={logo.name}
+              className="group relative flex h-28 w-28 items-center justify-center justify-self-center overflow-hidden rounded-full border-2 border-sky-400/80 bg-white text-xs font-semibold uppercase tracking-[0.3em] text-zinc-600 shadow-[0_0_25px_rgba(56,189,248,0.45)] transition-all hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(56,189,248,0.7)] sm:h-32 sm:w-32 sm:text-sm"
             >
-              <span className="px-4 text-center leading-relaxed sm:px-6">{name}</span>
+              <img
+                src={logo.image}
+                alt={logo.name}
+                className="h-20 w-20 object-contain transition-all duration-300 group-hover:scale-105 sm:h-24 sm:w-24"
+                loading="lazy"
+              />
               <span className="pointer-events-none absolute inset-0 rounded-full border border-white/5 opacity-0 transition-opacity group-hover:opacity-100" />
             </div>
           ))}

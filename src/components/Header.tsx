@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
@@ -42,14 +43,16 @@ export function Header() {
       }`}
     >
       <div className="relative mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-5 lg:px-10">
-        <Link href="/" className="group flex items-center gap-3 text-white">
-          <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 via-sky-500 to-blue-600 shadow-lg shadow-blue-900/50 transition-transform group-hover:scale-105">
-            <span className="text-lg font-semibold">J</span>
-          </div>
-          <div className="flex flex-col leading-tight">
-            <span className="text-sm uppercase tracking-[0.28em] text-zinc-400">Join</span>
-            <span className="text-xl font-semibold text-white">{brandName}</span>
-          </div>
+        <Link href="/" className="flex items-center gap-3 text-white -ml-1 sm:ml-0">
+          <Image
+            src="/join_pr_logo_offical2.png"
+            alt={brandName}
+            width={138}
+            height={43}
+            priority
+            className="h-[53px] w-auto object-contain transition-transform duration-300 hover:scale-[1.02]"
+          />
+          <span className="sr-only">{brandName}</span>
         </Link>
 
         <nav className="hidden items-center gap-6 text-sm font-medium text-zinc-300 lg:flex">

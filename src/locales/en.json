@@ -50,37 +50,37 @@
       "intro": "Join Ecosystem",
       "slides": {
         "joinPr": {
-          "title": "Join PR",
+          "title": "Join x PR",
           "subtitle": "Strategic communication and destination PR shaping global perception.",
           "cta": "Discover Join PR",
           "link": "/join-pr"
         },
         "joinCreative": {
-          "title": "Join Creative",
+          "title": "Join x Creative",
           "subtitle": "Films, photography and content that elevate brands with cinematic storytelling.",
           "cta": "Explore Join Creative",
           "link": "/join-creative"
         },
         "joinSocial": {
-          "title": "Join Social",
+          "title": "Join x Social",
           "subtitle": "Social strategy, content and community management that sparks conversation.",
           "cta": "See Join Social",
           "link": "/join-social"
         },
         "joinAds": {
-          "title": "Join Ads",
+          "title": "Join x Ads",
           "subtitle": "Performance-first media strategies across Google, Meta and emerging platforms.",
           "cta": "Scale with Join Ads",
           "link": "/join-ads"
         },
         "joinLabAi": {
-          "title": "Join AI Lab",
+          "title": "Join x AI Lab",
           "subtitle": "Web experiences, automations and AI agents engineered for growth.",
           "cta": "Build with Join AI Lab",
           "link": "/join-lab-ai"
         },
         "joinEscapes": {
-          "title": "Join Escapes",
+          "title": "Join x Escapes",
           "subtitle": "Turkey’s most-read new generation travel content platform.",
           "cta": "Visit Join Escapes",
           "link": "/join-escapes"
@@ -92,32 +92,32 @@
       "description": "",
       "cards": {
         "joinPr": {
-          "title": "Join PR",
+          "title": "Join x PR",
           "description": "Strategic communication, influencer relations and global destination PR.",
           "cta": "Discover PR"
         },
         "joinCreative": {
-          "title": "Join Creative",
+          "title": "Join x Creative",
           "description": "Digital content, commercial film production and bold creative concepts.",
           "cta": "Discover Creative"
         },
         "joinSocial": {
-          "title": "Join Social",
+          "title": "Join x Social",
           "description": "Social media strategy, always-on content and community management.",
           "cta": "Discover Social"
         },
         "joinAds": {
-          "title": "Join Ads",
+          "title": "Join x Ads",
           "description": "Performance marketing and cross-platform campaign optimization.",
           "cta": "Discover Ads"
         },
         "joinLabAi": {
-          "title": "Join AI Lab",
+          "title": "Join x AI Lab",
           "description": "Web, AI and automation products crafted for future-facing brands.",
           "cta": "Discover AI Lab"
         },
         "joinEscapes": {
-          "title": "Join Escapes",
+          "title": "Join x Escapes",
           "description": "Travel platform curating destinations, stories and experiences.",
           "cta": "Discover Escapes"
         }
@@ -233,70 +233,108 @@
       ]
     },
     "cases": {
-      "title": "Featured Highlights",
-      "description": "Signature partnerships, award-winning launches and immersive experiences from across the Join ecosystem.",
+      "title": "In the Press",
+      "description": "We spotlight our clients’ success stories in the press to amplify brand value—delivering trusted, effective and innovative communication solutions.",
       "cards": [
         {
-          "title": "Destination Reboot",
-          "category": "Global PR Campaign",
-          "description": "Multi-market tourism launch blending PR, influencer journeys and data-led storytelling."
+          "title": "Turkish Actors in Egypt",
+          "category": "Media & Influencer Activation",
+          "description": "Turkish actors, captivated by Egypt’s history, culture and the Red Sea, invited everyone to live the same experience.",
+          "image": "/turk-oyuncular-misirda.webp"
         },
         {
-          "title": "Nightfall Premiere",
+          "title": "Turkish Stars Take Over Bahrain",
           "category": "Creative Production",
-          "description": "Cinematic TVC and behind-the-scenes content produced in 4K across three cities."
+          "description": "Famous Turkish actors headlined a three-day series of events across Bahrain.",
+          "image": "/turk-oyunculardan-bahreyn-cikarmasi.webp"
         },
         {
-          "title": "Pulse 360",
-          "category": "Social & Ads",
-          "description": "Always-on social strategy activating community, paid media and creator collaborations."
+          "title": "Prontotour Celebrates 30 Years in Marrakech",
+          "category": "Strategic PR & Experience",
+          "description": "Trend-setting tour operator Prontotour kicked off its 30th anniversary celebrations in Morocco, giving celebrity guests a chance to explore Marrakech.",
+          "image": "/prontotour-marakeste.jpeg"
         },
         {
-          "title": "Aurora Immersion",
-          "category": "Experiential Marketing",
-          "description": "Immersive launch week combining spatial storytelling, live media moments and curated guests."
+          "title": "Prontotour’s Early Booking Season Grows 70%",
+          "category": "Marketing & Sales",
+          "description": "Prontotour closed the first phase of early bookings with 70% growth and kicked off phase two with up to 50% domestic and 40% international savings.",
+          "image": "/prontotour-erken-rezervasyonun-ilk-donemini-70-artisla-tamamladi.jpg"
         },
         {
-          "title": "Signal Studio",
-          "category": "Data & AI",
-          "description": "Cross-platform dashboard and AI assistant connecting marketing, sales and experience teams."
+          "title": "Leaders CXO 14th Gathering",
+          "category": "Private Salon",
+          "description": "Hosted by LeadersCXO founder Cenk Dağcı and Join PR founder Ali Saçlı, the first 2022 gathering welcomed a select guest list including Prof. Dr. İlber Ortaylı and Prof. Dr. Uğur Batı.",
+          "image": "/leaders-cxo-14-bulusma-toplantisi.jpg"
         },
         {
-          "title": "Voyage Stories",
-          "category": "Travel Platform",
-          "description": "Editorial travel anthology delivering destination discovery and partner collaborations."
+          "title": "Prontotour Launches World Tour for Celebs & Creators",
+          "category": "Global Tour Program",
+          "description": "Prontotour announced a year-long world tour program designed for prominent Turkish actors and influencers.",
+          "image": "/prontotour-unlu-oyuncu-ve-influencerlara-yonelik-bir-dunya-turu-programi-baslatiyor.jpg"
         },
         {
-          "title": "Creators' Summit",
-          "category": "Influencer Program",
-          "description": "Bespoke creator residencies aligned with brand territories and measurable KPIs."
+          "title": "Turkish Actors Enjoyed the Red Sea",
+          "category": "Experiential Activation",
+          "description": "Beloved Turkish TV and film actors spent a getaway in Hurghada on the Red Sea—featuring Baran Bölükbaşı, Pelin Uluksar, Gizem Güneş, Damlasu İkizoğlu, Ahmet Kayakesen, Oral Özer and Berna Koraltürk.",
+          "image": "/turk-oyuncular-kizildenizde-tatil-keyfi-yapti-kpk.jpg"
         },
         {
-          "title": "Blueprint Commerce",
-          "category": "E-commerce Automation",
-          "description": "Full-stack automation of catalog, merchandising and CRM journeys for growth acceleration."
+          "title": "Desert Safari in Egypt",
+          "category": "Experience Design",
+          "description": "Turkish stars Ayça Ayşin Turan, Salih Bademci, İmer Özgün, Erkan Kolçak Köstendil, Cansu Tosun, İlayda Ildır, İpek Filiz Yazıcı and Alican Okumuş explored Sharm El Sheikh, Egypt.",
+          "image": "/misirda-col-safarisi-1.webp"
+        },
+        {
+          "title": "Turkish Actors Gathered in Egypt’s Iconic Resort",
+          "category": "Destination Activation",
+          "description": "Leading Turkish actors spent four days in Sharm El Sheikh, the ‘Jewel of Egypt’ on the Sinai Peninsula, immersing themselves in its history, culture and the Red Sea.",
+          "image": "/turk-oyuncular-misirin-en-unlu-tatil-merkezinde-bulustu.jpg"
+        },
+        {
+          "title": "Turkish Actors Fell in Love with Jordan",
+          "category": "Destination PR",
+          "description": "Beloved Turkish TV stars Gökçe Akyıldız, Mehmet Aykaç, Gizem Güneş and Emin Günenç were hosted in Jordan, praising its cultural heritage and the warm response to their shows.",
+          "image": "/turk-dizi-oyunculari-urdun-de.webp"
+        },
+        {
+          "title": "Turkish Actors Touched Down in Montenegro",
+          "category": "Brand Experience",
+          "description": "Hosted by Regent Porto Montenegro, Air Montenegro, Tivat Tourism Board and Porto Montenegro with Join PR, the trip featured stars Ali Yağcı, Mehmet Aykaç, Gökçe Akyıldız, Dilara Aksüyek, Emin Günenç and Join PR founder Ali Saçlı.",
+          "image": "/turk-oyuncular-karadag-039-a-cikarma-yapti-1.webp"
+        },
+        {
+          "title": "Jordan Destination Showcase",
+          "category": "Market Activation",
+          "description": "Turkish TV stars Gökçe Akyıldız, Mehmet Aykaç, Gizem Güneş and Emin Günenç were hosted in Jordan, praising its culture and the warm reception for their screen projects.",
+          "image": "/urdun-destinasyon-tanitimi.webp"
+        },
+        {
+          "title": "Prontotour Opens 2024 Early Booking Season",
+          "category": "Campaign Launch",
+          "description": "Holiday lovers are already planning 2024. Prontotour kicks off early booking with international, domestic and cruise packages that feel like ‘a trip for the price of a flight.’",
+          "image": "/prontotourun-erken-rezervasyon-donemi-basladi-1-1.jpg"
         }
       ],
-      "cta": "Request case portfolio"
+      "cta": "View all coverage"
     },
     "clients": {
       "title": "Brands that grow with us",
       "description": "Global destinations, lifestyle icons, ambitious startups and legacy brands partnering with Join for integrated communication.",
       "logos": [
-        "Aurora Hotels",
-        "LuxeVoyage",
-        "Metropolitan Gallery",
-        "SkyPulse Airlines",
-        "Nova Cruises",
-        "UrbanBloom",
-        "Harbor Collective",
-        "Summit Residences"
+        { "name": "Swissotel Sharm El Sheikh", "image": "/swissotel-logo.jpg" },
+        { "name": "Marriott Dead Sea Resort", "image": "/marriott-dead-sea.jpg" },
+        { "name": "Hyatt Regency", "image": "/hyatt-regency-1.jpg" },
+        { "name": "Jordan Tourism Board", "image": "/jordan-tourism-board-1.jpg" },
+        { "name": "Royal Jordanian", "image": "/royal-jordanian-logo-1.jpg" },
+        { "name": "Novu Lab", "image": "/novu-lab-logo.jpg" },
+        { "name": "Rixos Premium Seagate", "image": "/rixos-logo.jpg" },
+        { "name": "Prontotour", "image": "/prontotour.jpg" }
       ]
     },
     "about": {
       "title": "Who we are",
-      "subtitle": "A connected agency collective building iconic brand, destination and product stories.",
-      "description": "Join PR Group unites strategists, storytellers, creators, media architects and technologists. From PR to AI, we prototype ideas that travel across markets and cultures, creating measurable momentum for our partners.",
+      "subtitle": "Join PR isn’t just an agency managing communication; it’s a new-generation partner turning brand stories into experiences.",
+      "description": "Join PR brings together expertise across hospitality, aviation, tourism boards and lifestyle brands—combining deep travel knowledge with global experience. Built on a 360° model powered by strategy, creativity and data, we don’t just boost visibility—we manage perception.",
       "gallery": [
         {
           "title": "Strategy lab",
@@ -662,4 +700,3 @@
     ]
   }
 }
-

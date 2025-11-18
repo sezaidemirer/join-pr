@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+  <style>
+    .text { font-family: 'Helvetica Neue', Arial, sans-serif; fill: #111; font-size: 36px; font-weight: 300; }
+    .lab { font-size: 24px; }
+    .plus { fill: #e30613; }
+  </style>
+  <text x="0" y="40" class="text">novu</text>
+  <circle cx="135" cy="32" r="14" class="plus" />
+  <text x="126" y="38" font-family="Helvetica Neue, Arial, sans-serif" font-size="20" fill="#fff">+</text>
+  <text x="150" y="40" class="text lab">Lab</text>
+</svg>

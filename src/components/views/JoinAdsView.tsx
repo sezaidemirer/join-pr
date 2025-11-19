@@ -1,8 +1,12 @@
 'use client';
 
+import Image from 'next/image';
+
 import { CTASection } from '@/components/CTASection';
 import { ServiceCard } from '@/components/ServiceCard';
 import { useLanguage } from '@/context/LanguageContext';
+
+const BASE_PATH = process.env.NODE_ENV === 'production' ? '/join-pr' : '';
 
 export function JoinAdsView() {
   const { translations } = useLanguage();
@@ -10,13 +14,30 @@ export function JoinAdsView() {
 
   return (
     <div className="flex flex-col gap-16">
-      <section className="relative mt-6 overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-amber-500/10 via-orange-900/50 to-slate-950 p-10 shadow-2xl shadow-orange-950/40 md:mt-10 md:p-16">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(251,191,36,0.2),_transparent_60%)]" />
-        <div className="flex flex-col gap-6">
-          <span className="text-xs font-semibold uppercase tracking-[0.38em] text-amber-200">Join Ads</span>
-          <h1 className="max-w-3xl text-4xl font-semibold text-white md:text-5xl">{page.hero.title}</h1>
-          <p className="max-w-2xl text-lg text-zinc-200">{page.hero.subtitle}</p>
-          <p className="max-w-3xl text-base text-zinc-300">{page.hero.description}</p>
+      <section className="relative mt-6 overflow-hidden rounded-3xl bg-gradient-to-br from-blue-900 via-blue-700 to-sky-600 p-8 shadow-2xl shadow-blue-950/40 md:mt-10 md:p-16">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.15),_transparent_70%)]" />
+        <div className="relative flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+          <div className="flex-1 space-y-4">
+            <span className="text-xs font-semibold uppercase tracking-[0.38em] text-blue-100">Join Ads</span>
+            <h1 className="text-[24px] font-semibold leading-tight text-white sm:text-[28px] md:text-[32px] lg:text-[36px]">
+              {page.hero.title.split('&')[0]}
+              <br />& {page.hero.title.split('&')[1]}
+            </h1>
+            <p className="max-w-2xl text-base text-blue-50/90 sm:text-lg">{page.hero.subtitle}</p>
+            <p className="max-w-3xl text-sm text-blue-50/80 sm:text-base">{page.hero.description}</p>
+          </div>
+          <div className="flex-1 md:flex md:justify-end">
+            <div className="relative mx-auto mt-6 w-full max-w-[22rem] sm:max-w-[24rem] md:mt-0 md:ml-auto md:max-w-[26rem] lg:max-w-[28rem]">
+              <Image
+                src={`${BASE_PATH}/ads_page_banner.png`}
+                alt="Join Ads hero"
+                width={800}
+                height={500}
+                priority
+                className="h-full w-full rounded-[28px] object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
 

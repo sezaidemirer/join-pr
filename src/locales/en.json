@@ -548,49 +548,49 @@
         "description": "Join Ads delivers cross-platform media planning, campaign optimisation and performance measurement."
       },
       "hero": {
-        "title": "Performance marketing engineered for growth.",
+        "title": "Digital Advertising Management and Performance Marketing",
         "subtitle": "Integrated media strategies across Google, Meta and emerging platforms.",
         "description": "We build measurable acquisition, conversion and retention programs aligned with your growth KPIs."
       },
       "services": [
         {
-          "title": "Google Ads management",
-          "description": "Full-funnel search, display, video and discovery campaigns with continuous optimisation."
+          "title": "Google Ads Management",
+          "description": "Algorithm-led optimisation and continuous performance improvements across search, display, video and discovery campaigns."
         },
         {
-          "title": "Meta Ads management",
-          "description": "Creative variations, audience design and conversion tactics for Meta ecosystems."
+          "title": "Meta Ads Management",
+          "description": "Scalable results in the Meta ecosystem through creative variation testing, precise audience architecture and conversion-driven campaign builds."
         },
         {
-          "title": "Other platforms",
-          "description": "YouTube, programmatic, TikTok and high-impact media partnerships tailored to objectives."
+          "title": "Other Platforms",
+          "description": "Multi-channel growth strategies spanning YouTube, TikTok, programmatic and high-impact media partnerships."
         },
         {
-          "title": "Performance reporting & optimisation",
-          "description": "Dashboards, attribution modelling and experimentation for agile decision-making."
+          "title": "Performance Reporting & Optimisation",
+          "description": "Advanced dashboards, attribution models and constant experimentation for agile decision-making and sustainable performance lifts."
         }
       ],
       "metrics": {
-        "title": "What we optimise",
+        "title": "Three Optimisation Pillars Shaping Growth",
         "items": [
           {
-            "title": "Acquisition cost",
-            "description": "Reducing CPA with data-led bidding and creative testing."
+            "title": "Acquisition Cost (CPA)",
+            "description": "Lowering acquisition costs through data-led optimisation, creative variation testing and AI-powered targeting."
           },
           {
-            "title": "Conversion velocity",
-            "description": "Aligning media and onsite journeys for faster conversion."
+            "title": "Conversion Speed",
+            "description": "Aligning the user journey with media strategy to accelerate the path from first interaction to purchase."
           },
           {
-            "title": "Lifetime value",
-            "description": "Retention and upsell tactics powered by audience insights."
+            "title": "Lifetime Value (LTV)",
+            "description": "Audience insight-led segmentation, retargeting and revenue-driving touchpoints to grow customer value long term."
           }
         ]
       },
       "cta": {
-        "title": "Plan your next campaign.",
-        "description": "Let’s design a performance roadmap and media mix that delivers.",
-        "button": "Request a media plan"
+        "title": "Plan your next campaign with Join x Ads.",
+        "description": "Let's strengthen your digital advertising strategy and create measurable results to achieve your growth goals.",
+        "button": "Get a proposal now"
       }
     },
     "joinLabAi": {
@@ -599,13 +599,13 @@
         "description": "Join AI Lab builds corporate websites, ecommerce automations, AI agents and data integrations."
       },
       "hero": {
-        "title": "Digital products that merge design, code and intelligence.",
+        "title": "Design, code and artificial intelligence",
         "subtitle": "From corporate platforms to AI automations, we architect future-ready experiences.",
         "description": "We partner with brands to design, build and evolve web ecosystems powered by automation and AI."
       },
       "services": [
         {
-          "title": "Web development",
+          "title": "Web Development UI/UX Design and Optimization",
           "description": "Corporate and dynamic websites engineered with performance and scalability in mind."
         },
         {
@@ -619,10 +619,6 @@
         {
           "title": "Data automations & integrations",
           "description": "ETL pipelines, dashboards and data products stitched across teams."
-        },
-        {
-          "title": "UI/UX design & optimization",
-          "description": "Research, prototyping and iterative design focused on human-centred experiences."
         }
       ],
       "process": {
@@ -630,30 +626,34 @@
         "steps": [
           {
             "title": "Discovery",
-            "description": "Workshops, goal definition and technical mapping."
+            "description": "We clarify business goals, user scenarios and areas where AI will add real value together."
           },
           {
             "title": "Design",
-            "description": "Experience design, component systems and architecture."
+            "description": "We architect end-to-end web/mobile experiences, user flows and AI interactions (chatbots, agents, recommendation systems, etc.)."
           },
           {
             "title": "Build",
-            "description": "Agile development sprints with transparent QA."
+            "description": "We code the application with modern tech stack, securely implementing LLM/API integrations and the data layer."
           },
           {
-            "title": "Integrate",
-            "description": "Automation, system connections and data flows."
+            "title": "Automation & Integration",
+            "description": "We build intelligent workflows running in the background with CRM, payment systems, third-party services and automation platforms (n8n, etc.)."
           },
           {
             "title": "Optimize",
-            "description": "Performance tuning, experimentation and roadmap evolution."
+            "description": "We continuously improve models, flows and interfaces by tracking usage data; we evolve the system by adding new AI scenarios."
           }
         ]
       },
+      "mobile": {
+        "title": "Mobile Application Experiences",
+        "description": "We bring your mobile applications to life with user-centered design and advanced technology. We deliver performant, secure and user-friendly solutions on iOS and Android platforms."
+      },
       "cta": {
-        "title": "Launch your next digital product.",
-        "description": "Share your brief and we’ll architect a web or AI solution tailored to your vision.",
-        "button": "Start a web/AI project"
+        "title": "Let's build your next digital product together.",
+        "description": "Share your brief and we'll architect a web or AI solution tailored to your vision.",
+        "button": "Get a Web/iOS Project Proposal"
       }
     },
     "joinEscapes": {

@@ -548,49 +548,49 @@
         "description": "Join Ads; medya planlama, kampanya optimizasyonu ve performans ölçümü sunar."
       },
       "hero": {
-        "title": "Büyüme için tasarlanmış performans pazarlaması.",
+        "title": "Dijital Reklam Yönetimi & Performans Pazarlaması",
         "subtitle": "Google, Meta ve yeni platformlarda entegre medya stratejileri.",
         "description": "Satın alma, dönüşüm ve sadakat hedeflerinize uygun ölçülebilir programlar kuruyoruz."
       },
       "services": [
         {
-          "title": "Google Ads yönetimi",
-          "description": "Arama, görüntülü, video ve keşif kampanyalarında sürekli optimizasyon."
+          "title": "Google Ads Yönetimi",
+          "description": "Arama, görüntülü, video ve keşif kampanyalarında algoritma odaklı optimizasyon ve sürekli performans iyileştirmesi."
         },
         {
-          "title": "Meta Ads yönetimi",
-          "description": "Yaratıcı varyasyonları, kitle tasarımları ve dönüşüm taktikleriyle Meta ekosistemleri."
+          "title": "Meta Ads Yönetimi",
+          "description": "Yaratıcı varyasyon testleri, doğru kitle mimarisi ve dönüşüm odaklı kampanya kurgularıyla Meta ekosisteminde ölçeklenebilir sonuçlar."
         },
         {
-          "title": "Diğer platformlar",
-          "description": "YouTube, programatik, TikTok ve hedefe özel medya ortaklıkları."
+          "title": "Diğer Platformlar",
+          "description": "YouTube, TikTok, programatik ve hedefe özel medya ortaklıklarında çok kanallı büyüme stratejileri."
         },
         {
-          "title": "Performans raporlama ve optimizasyon",
-          "description": "Panolar, atıf modelleri ve denemelerle çevik karar süreçleri."
+          "title": "Performans Raporlama ve Optimizasyon",
+          "description": "Gelişmiş paneller, atıf modelleri ve sürekli denemelerle çevik karar verme süreçleri ve sürdürülebilir performans artırımı."
         }
       ],
       "metrics": {
-        "title": "Optimize ettiğimiz alanlar",
+        "title": "Büyümeyi Şekillendiren Üç Optimizasyon Alanı",
         "items": [
           {
-            "title": "Edinme maliyeti",
-            "description": "Veriye dayalı teklif ve yaratıcı testlerle CPA’i düşürme."
+            "title": "Edinme Maliyeti (CPA)",
+            "description": "Veriye dayalı optimizasyon, yaratıcı varyasyon testleri ve yapay zekâ destekli hedefleme ile edinme maliyetlerini sürdürülebilir şekilde aşağı çekiyoruz."
           },
           {
-            "title": "Dönüşüm hızı",
-            "description": "Medya ve kullanıcı yolculuğunu hizalayarak daha hızlı dönüşüm sağlama."
+            "title": "Dönüşüm Hızı",
+            "description": "Kullanıcı yolculuğunu medya stratejisiyle hizalayarak, ilk temas anından satın alma anına kadar dönüşüm akışını hızlandırıyoruz."
           },
           {
-            "title": "Yaşam boyu değer",
-            "description": "Kitle içgörüsüyle desteklenen elde tutma ve ek satış taktikleri."
+            "title": "Yaşam Boyu Değer (LTV)",
+            "description": "Kitle içgörüsüne dayalı segmentasyon, yeniden hedefleme ve satış arttırıcı dokunuşlarla müşteri değerini uzun vadede artırıyoruz."
           }
         ]
       },
       "cta": {
-        "title": "Bir sonraki kampanyanı planla.",
-        "description": "Performans yol haritası ve medya karmasını birlikte tasarlayalım.",
-        "button": "Medya planı iste"
+        "title": "Bir sonraki kampanyanı Join x Ads ile planla.",
+        "description": "Dijital reklam stratejinizi güçlendirelim, büyüme hedeflerinize ulaşmanız için ölçülebilir sonuçlar yaratalım.",
+        "button": "Hemen Teklif Al"
       }
     },
     "joinLabAi": {
@@ -599,13 +599,13 @@
         "description": "Join AI Lab; kurumsal web siteleri, e-ticaret otomasyonları, AI ajanları ve veri entegrasyonları geliştirir."
       },
       "hero": {
-        "title": "Tasarım, kod ve zekayı buluşturan dijital ürünler.",
+        "title": "Tasarım, kod ve yapay zeka",
         "subtitle": "Kurumsal platformlardan AI otomasyonlarına geleceğe hazır deneyimler kurguluyoruz.",
         "description": "Markalarla birlikte otomasyon ve yapay zeka ile güçlenen web ekosistemleri tasarlıyor, geliştiriyor ve sürekli iyileştiriyoruz."
       },
       "services": [
         {
-          "title": "Web geliştirme",
+          "title": "Web Geliştirme UI/UX Tasarım ve optimizasyon",
           "description": "Performans ve ölçeklenebilirlik odaklı kurumsal ve dinamik web siteleri."
         },
         {
@@ -619,10 +619,6 @@
         {
           "title": "Veri otomasyonları ve entegrasyonlar",
           "description": "Takımlar arası veri akışını sağlayan ETL hatları, panolar ve veri ürünleri."
-        },
-        {
-          "title": "UI/UX tasarım ve optimizasyon",
-          "description": "Araştırma, prototipleme ve insan odaklı deneyimlerde iterasyon."
         }
       ],
       "process": {
@@ -630,30 +626,34 @@
         "steps": [
           {
             "title": "Keşif",
-            "description": "Atölyeler, hedef tanımlama ve teknik yol haritası."
+            "description": "İş hedeflerini, kullanıcı senaryolarını ve yapay zekânın gerçek değer katacağı alanları birlikte netleştiriyoruz."
           },
           {
             "title": "Tasarım",
-            "description": "Deneyim tasarımı, bileşen sistemleri ve mimari."
+            "description": "Web/mobil deneyimi, kullanıcı akışlarını ve AI etkileşimlerini (chatbotlar, ajanlar, öneri sistemleri vb.) uçtan uca kurguluyoruz."
           },
           {
             "title": "Geliştirme",
-            "description": "Şeffaf QA süreçleriyle çevik geliştirme sprintleri."
+            "description": "Modern teknoloji stack'iyle uygulamayı kodluyor, LLM/API entegrasyonlarını ve veri katmanını güvenli şekilde hayata geçiriyoruz."
           },
           {
-            "title": "Entegrasyon",
-            "description": "Otomasyon, sistem bağlantıları ve veri akışları."
+            "title": "Otomasyon & Entegrasyon",
+            "description": "CRM, ödeme sistemleri, üçüncü parti servisler ve otomasyon platformlarıyla (n8n vb.) arka planda çalışan akıllı iş akışları kuruyoruz."
           },
           {
             "title": "Optimizasyon",
-            "description": "Performans iyileştirme, deneysel testler ve yol haritası güncellemeleri."
+            "description": "Kullanım verilerini takip ederek modelleri, akışları ve arayüzü düzenli olarak iyileştiriyor; yeni AI senaryoları ekleyerek sistemi sürekli geliştiriyoruz."
           }
         ]
       },
+      "mobile": {
+        "title": "Mobil Uygulama Deneyimleri",
+        "description": "Kullanıcı odaklı tasarım ve gelişmiş teknoloji ile mobil uygulamalarınızı hayata geçiriyoruz. iOS ve Android platformlarında performanslı, güvenli ve kullanıcı dostu çözümler sunuyoruz."
+      },
       "cta": {
-        "title": "Yeni dijital ürününü başlat.",
+        "title": "Yeni dijital ürününü birlikte inşa edelim.",
         "description": "Brieften bahset, web veya AI çözümünü birlikte kurgulayalım.",
-        "button": "Web/AI projesi başlat"
+        "button": "Web/iOS Proje Teklifi Al"
       }
     },
     "joinEscapes": {

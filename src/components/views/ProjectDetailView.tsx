@@ -3,6 +3,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
 import { useLanguage } from '@/context/LanguageContext';
@@ -11,17 +12,19 @@ const BASE_PATH = process.env.NODE_ENV === 'production' ? '/join-pr' : '';
 
 interface ProjectDetailViewProps {
   projectSlug: string;
+  subProjectIndex?: number;
 }
 
-export function ProjectDetailView({ projectSlug }: ProjectDetailViewProps) {
+export function ProjectDetailView({ projectSlug, subProjectIndex = 0 }: ProjectDetailViewProps) {
   const { translations } = useLanguage();
-  const [activeSubProjectIndex, setActiveSubProjectIndex] = useState(0);
+  const router = useRouter();
+  const [activeSubProjectIndex] = useState(subProjectIndex);
   const [activeGalleryIndex, setActiveGalleryIndex] = useState(0);
   const [activeReportIndex, setActiveReportIndex] = useState(0);
 
   const projects = translations.homepage.projects;
   const casesData = translations.homepage.cases;
-  const pressArticles = (casesData.cards as Array<{ title: string; category: string; description: string; image?: string }>).slice(0, 3);
+  const defaultPressArticles = (casesData.cards as Array<{ title: string; category: string; description: string; image?: string }>).slice(0, 3);
 
   // Projeyi bul
   const projectData = Object.values(projects.items).find((item: any) => item.slug === projectSlug) as any;
@@ -42,19 +45,20 @@ export function ProjectDetailView({ projectSlug }: ProjectDetailViewProps) {
   // Alt projeler varsa onları kullan, yoksa default veriyi kullan
   const subProjects = projectData.subProjects || [];
   const hasMultipleProjects = subProjects.length > 1;
-  const currentProject = subProjects[activeSubProjectIndex] || projectData;
+  const currentProject = subProjects.length > 0 ? subProjects[activeSubProjectIndex] : projectData;
+  
+  // Her alt projenin kendi basın yansımaları varsa kullan, yoksa default kullan
+  const pressArticles = currentProject.press || defaultPressArticles;
 
   const handlePrevProject = () => {
-    setActiveSubProjectIndex((prev) => (prev === 0 ? subProjects.length - 1 : prev - 1));
-    setActiveGalleryIndex(0);
-    setActiveReportIndex(0);
+    const newIndex = activeSubProjectIndex === 0 ? subProjects.length - 1 : activeSubProjectIndex - 1;
+    router.push(`/projects/${projectSlug}/${newIndex + 1}`);
   };
 
   const handleNextProject = () => {
-    setActiveSubProjectIndex((prev) => (prev === subProjects.length - 1 ? 0 : prev + 1));
-    setActiveGalleryIndex(0);
-    setActiveReportIndex(0);
-  }
+    const newIndex = activeSubProjectIndex === subProjects.length - 1 ? 0 : activeSubProjectIndex + 1;
+    router.push(`/projects/${projectSlug}/${newIndex + 1}`);
+  };
 
   return (
     <div className="flex flex-col gap-16 lg:gap-20">
@@ -106,28 +110,28 @@ export function ProjectDetailView({ projectSlug }: ProjectDetailViewProps) {
           </div>
 
           {/* Navigation Arrows */}
-          {hasMultipleProjects && (
-            <>
-              <button
-                onClick={handlePrevProject}
-                className="absolute left-4 top-1/2 -translate-y-1/2 flex h-14 w-14 items-center justify-center rounded-full bg-black/70 text-white backdrop-blur-sm transition-all hover:bg-black/90 hover:scale-110 z-10"
-                aria-label="Önceki proje"
-              >
-                <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <button
-                onClick={handleNextProject}
-                className="absolute right-4 top-1/2 -translate-y-1/2 flex h-14 w-14 items-center justify-center rounded-full bg-black/70 text-white backdrop-blur-sm transition-all hover:bg-black/90 hover:scale-110 z-10"
-                aria-label="Sonraki proje"
-              >
-                <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </>
-          )}
+          <>
+            <button
+              onClick={handlePrevProject}
+              className="absolute left-4 top-1/2 -translate-y-1/2 flex h-16 w-16 items-center justify-center rounded-full bg-teal-500 text-white shadow-2xl shadow-teal-500/50 transition-all hover:bg-teal-600 hover:scale-110"
+              style={{ zIndex: 9999 }}
+              aria-label="Önceki proje"
+            >
+              <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button
+              onClick={handleNextProject}
+              className="absolute right-4 top-1/2 -translate-y-1/2 flex h-16 w-16 items-center justify-center rounded-full bg-teal-500 text-white shadow-2xl shadow-teal-500/50 transition-all hover:bg-teal-600 hover:scale-110"
+              style={{ zIndex: 9999 }}
+              aria-label="Sonraki proje"
+            >
+              <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </>
         </div>
       </section>
 

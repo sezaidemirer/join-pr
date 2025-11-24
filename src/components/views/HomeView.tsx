@@ -142,7 +142,7 @@ export function HomeView() {
             return (
               <Link
                 key={key}
-                href={`/projects/${value.slug}`}
+                href={`/projects/${value.slug}/1`}
                 className="group relative overflow-hidden rounded-2xl border border-white/10 bg-zinc-950/70 shadow-xl transition-transform hover:-translate-y-1 hover:border-teal-500/40 hover:shadow-glow-teal"
               >
                 <div className="absolute inset-0 -z-10 bg-gradient-to-br from-teal-500/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />

@@ -240,12 +240,29 @@
                   "/projects/sharm/report3.jpg",
                   "/projects/sharm/report4.jpg"
                 ]
-              }
+              },
+              "press": [
+                {
+                  "title": "Sharm El Sheikh'te Türk İçerik Üreticileri",
+                  "category": "Turizm Haberleri",
+                  "description": "Join PR'ın organize ettiği Sharm El Sheikh kampanyasında Türk influencer'lar Kızıldeniz'in güzelliklerini tanıttı."
+                },
+                {
+                  "title": "Dijital Medyada Mısır Turizmi",
+                  "category": "Sosyal Medya",
+                  "description": "Sharm El Sheikh sualtı deneyimi kampanyası sosyal medyada 18 milyon kişiye ulaştı."
+                },
+                {
+                  "title": "Influencer Marketing'te Yeni Trend",
+                  "category": "PR & İletişim",
+                  "description": "Destinasyon tanıtımında influencer iş birlikleri artık turizm sektörünün en etkili araçlarından biri."
+                }
+              ]
             },
             {
               "title": "Sharm El Sheikh - Proje 2",
-              "videoUrl": "https://www.youtube.com/embed/A_8z2fGlgKY",
-              "videoId": "A_8z2fGlgKY",
+              "videoUrl": "https://www.youtube.com/embed/IvKE_WSd4Ec",
+              "videoId": "IvKE_WSd4Ec",
               "participants": [
                 {
                   "name": "Ayşe Kaya",
@@ -279,7 +296,24 @@
                   "/projects/sharm/report3.jpg",
                   "/projects/sharm/report4.jpg"
                 ]
-              }
+              },
+              "press": [
+                {
+                  "title": "Lüks Turizm Kampanyası Mısır'da",
+                  "category": "Turizm",
+                  "description": "Sharm El Sheikh'in 5 yıldızlı otelleri Türk influencer'larla tanıtıldı, 12 milyon kişiye ulaşıldı."
+                },
+                {
+                  "title": "Premium Tatil Deneyimi Sosyal Medyada",
+                  "category": "Lifestyle",
+                  "description": "Join PR'ın organize ettiği lüks tatil kampanyasında wellness ve spa deneyimleri öne çıktı."
+                },
+                {
+                  "title": "Influencer Turizm İş Birlikleri",
+                  "category": "Dijital Pazarlama",
+                  "description": "Lüks otel zincirleri influencer pazarlamasıyla hedef kitleye ulaşmanın yollarını keşfediyor."
+                }
+              ]
             },
             {
               "title": "Sharm El Sheikh - Proje 3",
@@ -317,7 +351,24 @@
                   "/projects/sharm/report3.jpg",
                   "/projects/sharm/report4.jpg"
                 ]
-              }
+              },
+              "press": [
+                {
+                  "title": "Wellness Turizmi Sharm El Sheikh'te",
+                  "category": "Sağlık & Wellness",
+                  "description": "Yoga ve meditasyon odaklı wellness kampanyası 10 milyon kişiye ulaştı."
+                },
+                {
+                  "title": "Dijital Çağda Wellness Trendi",
+                  "category": "Lifestyle",
+                  "description": "Wellness influencer'lar ile yapılan iş birlikleri sağlıklı yaşam trendini destekliyor."
+                },
+                {
+                  "title": "Mısır'da Wellness Turizmi Atağa Geçti",
+                  "category": "Turizm",
+                  "description": "Sharm El Sheikh spa ve wellness merkezleri influencer pazarlamasıyla öne çıkıyor."
+                }
+              ]
             },
             {
               "title": "Sharm El Sheikh - Proje 4",
@@ -356,7 +407,24 @@
                   "/projects/sharm/report3.jpg",
                   "/projects/sharm/report4.jpg"
                 ]
-              }
+              },
+              "press": [
+                {
+                  "title": "Adrenalin Dolu Su Sporları Kampanyası",
+                  "category": "Spor & Macera",
+                  "description": "Kitesurf ve jet ski aktiviteleri sosyal medyada 14 milyon kişiye ulaştı."
+                },
+                {
+                  "title": "Macera Turizmi Dijitalleşiyor",
+                  "category": "Turizm",
+                  "description": "Su sporları influencer'ları ile yapılan kampanyalar genç nesle hitap ediyor."
+                },
+                {
+                  "title": "Kızıldeniz'de Adrenalin",
+                  "category": "Lifestyle",
+                  "description": "Sharm El Sheikh su sporları merkezi olarak öne çıkıyor, influencer iş birlikleriyle tanıtım yapılıyor."
+                }
+              ]
             },
             {
               "title": "Sharm El Sheikh - Proje 5",
@@ -394,7 +462,24 @@
                   "/projects/sharm/report3.jpg",
                   "/projects/sharm/report4.jpg"
                 ]
-              }
+              },
+              "press": [
+                {
+                  "title": "Mısır Mutfağı Sosyal Medyada",
+                  "category": "Gastronomi",
+                  "description": "Sharm El Sheikh'in lezzet durağı food blogger'lar ile tanıtıldı, 11 milyon kişiye ulaşıldı."
+                },
+                {
+                  "title": "Gastronomi Turizmi Yükselişte",
+                  "category": "Turizm",
+                  "description": "Food influencer'lar ile yapılan iş birlikleri destinasyon tanıtımında yeni bir boyut açıyor."
+                },
+                {
+                  "title": "Dijital Çağda Lezzet Keşfi",
+                  "category": "Lifestyle",
+                  "description": "Instagram ve TikTok'ta viral olan gastronomi içerikleri turizm sektörünü besliyor."
+                }
+              ]
             }
           ]
         },

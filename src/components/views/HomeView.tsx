@@ -23,6 +23,7 @@ export function HomeView() {
   const { translations } = useLanguage();
 
   const ecosystem = translations.homepage.ecosystem;
+  const projects = translations.homepage.projects;
   const cases = translations.homepage.cases;
   const about = translations.homepage.about;
   const promo = translations.homepage.promo;
@@ -119,6 +120,73 @@ export function HomeView() {
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 via-zinc-900/30 to-zinc-950/50 p-8 shadow-2xl md:p-12">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,_rgba(20,184,166,0.08),_transparent_60%)]" />
+        <div className="space-y-10 sm:space-y-12">
+          <div className="flex flex-col gap-4">
+            <h2 className="text-3xl font-semibold text-white md:text-4xl">{projects.title}</h2>
+            <p className="max-w-2xl text-base text-zinc-400 md:text-lg">{projects.description}</p>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+          {Object.entries(projects.items).map(([key, value]: [string, any]) => {
+            // İlk alt projeyi al (varsa), yoksa ana projeyi kullan
+            const firstSubProject = value.subProjects?.[0] || value;
+            const totalParticipants = value.subProjects
+              ? value.subProjects.reduce((sum: number, sp: any) => sum + (sp.participants?.length || 0), 0)
+              : value.participants?.length || 0;
+            
+            return (
+              <Link
+                key={key}
+                href={`/projects/${value.slug}`}
+                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-zinc-950/70 shadow-xl transition-transform hover:-translate-y-1 hover:border-teal-500/40 hover:shadow-glow-teal"
+              >
+                <div className="absolute inset-0 -z-10 bg-gradient-to-br from-teal-500/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="aspect-video w-full overflow-hidden bg-zinc-900 relative">
+                  {firstSubProject.videoId ? (
+                    <img
+                      src={`https://img.youtube.com/vi/${firstSubProject.videoId}/maxresdefault.jpg`}
+                      alt={value.title}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="flex h-full items-center justify-center">
+                      <span className="text-3xl">🎬</span>
+                    </div>
+                  )}
+                </div>
+                <div className="p-3 space-y-2">
+                  <h3 className="text-base font-semibold text-white line-clamp-1">{value.title}</h3>
+                  <p className="text-xs text-zinc-400 line-clamp-2">{value.description}</p>
+                  <div className="flex items-center gap-2 pt-1">
+                    <div className="flex -space-x-1">
+                      {firstSubProject.participants?.slice(0, 2).map((participant: any, idx: number) => (
+                        <div
+                          key={idx}
+                          className="h-6 w-6 rounded-full border-2 border-zinc-950 bg-gradient-to-br from-teal-400 to-blue-500 flex items-center justify-center text-[10px] font-semibold text-white"
+                        >
+                          {participant.name.charAt(0)}
+                        </div>
+                      ))}
+                    </div>
+                    <span className="text-[10px] text-zinc-500">
+                      {totalParticipants} {translations.common.project.participants}
+                    </span>
+                  </div>
+                  <div className="mt-2 inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-[0.25em] text-teal-200">
+                    {translations.common.cta.viewDetails}
+                    <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
         </div>
       </section>
 

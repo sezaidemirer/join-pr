@@ -34,7 +34,21 @@
       "discover": "Discover",
       "learnMore": "Learn more",
       "viewAll": "View all",
-      "contactUs": "Contact us"
+      "contactUs": "Contact us",
+      "viewDetails": "View Details"
+    },
+    "project": {
+      "participants": "participants",
+      "participantsTitle": "Participants",
+      "backToHome": "Back to Home",
+      "photoGallery": "Photo Gallery",
+      "pressReflections": "Press Coverage",
+      "projectReport": "Project Report",
+      "projectCta": "Planning a similar project?",
+      "projectCtaDescription": "Contact us for destination PR, influencer campaigns and content production.",
+      "contactButton": "Get in Touch",
+      "videoComingSoon": "Video coming soon",
+      "photosComingSoon": "Photos coming soon"
     }
   },
   "loading": {
@@ -120,6 +134,213 @@
           "title": "Join x Escapes",
           "description": "Travel platform curating destinations, stories and experiences.",
           "cta": "Discover Escapes"
+        }
+      }
+    },
+    "projects": {
+      "title": "Our Projects",
+      "description": "Discover our influencer and media projects around the world.",
+      "cta": "View All Projects",
+      "items": {
+        "bahrain": {
+          "title": "Bahrain",
+          "slug": "bahrain",
+          "description": "An impressive media project introducing Bahrain's rich cultural heritage and modern life to the world.",
+          "videoUrl": "https://www.youtube.com/embed/v6WBSvXz8cQ",
+          "videoId": "v6WBSvXz8cQ",
+          "participants": [
+            {
+              "name": "Ayşe Yılmaz",
+              "role": "Content Creator",
+              "image": "/participants/ayseyilmaz.jpg",
+              "social": {
+                "instagram": "https://instagram.com/ayseyilmaz",
+                "youtube": "https://youtube.com/@ayseyilmaz"
+              }
+            },
+            {
+              "name": "Mehmet Demir",
+              "role": "Photographer",
+              "image": "/participants/mehmetdemir.jpg",
+              "social": {
+                "instagram": "https://instagram.com/mehmetdemir",
+                "twitter": "https://twitter.com/mehmetdemir"
+              }
+            },
+            {
+              "name": "Zeynep Kaya",
+              "role": "Video Producer",
+              "image": "/participants/zeynepkaya.jpg",
+              "social": {
+                "instagram": "https://instagram.com/zeynepkaya"
+              }
+            }
+          ],
+          "gallery": [
+            "/projects/bahrain/1.jpg",
+            "/projects/bahrain/2.jpg",
+            "/projects/bahrain/3.jpg",
+            "/projects/bahrain/4.jpg"
+          ]
+        },
+        "sharm": {
+          "title": "Sharm El Sheikh",
+          "slug": "sharm-el-sheikh",
+          "description": "Unforgettable moments with the turquoise waters and colorful coral reefs of Egypt's pearl, Sharm El Sheikh.",
+          "videoUrl": "https://www.youtube.com/embed/A_8z2fGlgKY",
+          "videoId": "A_8z2fGlgKY",
+          "participants": [
+            {
+              "name": "Cem Özkan",
+              "role": "Travel Blogger",
+              "image": "/participants/cemozkan.jpg",
+              "social": {
+                "instagram": "https://instagram.com/cemozkan",
+                "youtube": "https://youtube.com/@cemozkan"
+              }
+            },
+            {
+              "name": "Selin Arslan",
+              "role": "Content Creator",
+              "image": "/participants/selinarslan.jpg",
+              "social": {
+                "instagram": "https://instagram.com/selinarslan"
+              }
+            }
+          ],
+          "gallery": [
+            "/projects/sharm/1.jpg",
+            "/projects/sharm/2.jpg",
+            "/projects/sharm/3.jpg"
+          ]
+        },
+        "hurghada": {
+          "title": "Hurghada",
+          "slug": "hurghada",
+          "description": "An adventure exploring the unique beauty of the Red Sea and water sports paradise.",
+          "videoUrl": "https://www.youtube.com/embed/Ec2gB_FgtSk",
+          "videoId": "Ec2gB_FgtSk",
+          "participants": [
+            {
+              "name": "Burak Yıldız",
+              "role": "Adventure Athlete",
+              "image": "/participants/burakyildiz.jpg",
+              "social": {
+                "instagram": "https://instagram.com/burakyildiz",
+                "youtube": "https://youtube.com/@burakyildiz"
+              }
+            },
+            {
+              "name": "Deniz Avcı",
+              "role": "Underwater Photographer",
+              "image": "/participants/denizavci.jpg",
+              "social": {
+                "instagram": "https://instagram.com/denizavci"
+              }
+            }
+          ],
+          "gallery": [
+            "/projects/hurghada/1.jpg",
+            "/projects/hurghada/2.jpg",
+            "/projects/hurghada/3.jpg",
+            "/projects/hurghada/4.jpg"
+          ]
+        },
+        "morocco": {
+          "title": "Morocco",
+          "slug": "morocco",
+          "description": "A cultural journey experiencing Morocco's magical cities, desert, and rich cuisine.",
+          "videoUrl": "https://www.youtube.com/embed/FLNg5aQb9rk",
+          "videoId": "FLNg5aQb9rk",
+          "participants": [
+            {
+              "name": "Elif Şahin",
+              "role": "Culture Writer",
+              "image": "/participants/elifsahin.jpg",
+              "social": {
+                "instagram": "https://instagram.com/elifsahin",
+                "twitter": "https://twitter.com/elifsahin"
+              }
+            },
+            {
+              "name": "Can Aydın",
+              "role": "Documentary Director",
+              "image": "/participants/canaydin.jpg",
+              "social": {
+                "instagram": "https://instagram.com/canaydin",
+                "youtube": "https://youtube.com/@canaydin"
+              }
+            }
+          ],
+          "gallery": [
+            "/projects/morocco/1.jpg",
+            "/projects/morocco/2.jpg",
+            "/projects/morocco/3.jpg"
+          ]
+        },
+        "jordan": {
+          "title": "Jordan",
+          "slug": "jordan",
+          "description": "Jordan's treasures from the ancient beauty of Petra to the desert landscapes of Wadi Rum.",
+          "videoUrl": "https://www.youtube.com/embed/pJy_mcZRxDY",
+          "videoId": "pJy_mcZRxDY",
+          "participants": [
+            {
+              "name": "Murat Aksoy",
+              "role": "History Writer",
+              "image": "/participants/murataksoy.jpg",
+              "social": {
+                "instagram": "https://instagram.com/murataksoy",
+                "twitter": "https://twitter.com/murataksoy"
+              }
+            },
+            {
+              "name": "Gamze Eren",
+              "role": "Photography Artist",
+              "image": "/participants/gamzeeren.jpg",
+              "social": {
+                "instagram": "https://instagram.com/gamzeeren"
+              }
+            }
+          ],
+          "gallery": [
+            "/projects/jordan/1.jpg",
+            "/projects/jordan/2.jpg",
+            "/projects/jordan/3.jpg",
+            "/projects/jordan/4.jpg"
+          ]
+        },
+        "montenegro": {
+          "title": "Montenegro",
+          "slug": "montenegro",
+          "description": "The magnificent bays and mountain views of Montenegro, the Adriatic's hidden paradise.",
+          "videoUrl": "https://www.youtube.com/embed/E7dhalAN0zo",
+          "videoId": "E7dhalAN0zo",
+          "participants": [
+            {
+              "name": "Tolga Çelik",
+              "role": "Nature Photographer",
+              "image": "/participants/tolgacelik.jpg",
+              "social": {
+                "instagram": "https://instagram.com/tolgacelik",
+                "youtube": "https://youtube.com/@tolgacelik"
+              }
+            },
+            {
+              "name": "Pınar Koç",
+              "role": "Travel Writer",
+              "image": "/participants/pinarkoc.jpg",
+              "social": {
+                "instagram": "https://instagram.com/pinarkoc",
+                "twitter": "https://twitter.com/pinarkoc"
+              }
+            }
+          ],
+          "gallery": [
+            "/projects/montenegro/1.jpg",
+            "/projects/montenegro/2.jpg",
+            "/projects/montenegro/3.jpg"
+          ]
         }
       }
     },

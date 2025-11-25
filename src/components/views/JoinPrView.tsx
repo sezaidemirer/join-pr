@@ -21,7 +21,7 @@ export function JoinPrView() {
         <div className="relative flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
           <div className="flex-1 space-y-4">
             <span className="text-xs font-semibold uppercase tracking-[0.38em] text-sky-200">Join PR</span>
-            <h1 className="text-[25px] font-semibold leading-tight text-white sm:text-[27px] md:text-[33px] lg:text-[37px]">
+            <h1 className="text-[20px] font-semibold leading-tight text-white sm:text-[22px] md:text-[26px] lg:text-[30px]">
               {page.hero.title}
             </h1>
             <p className="text-base text-zinc-200 sm:text-lg">{page.hero.subtitle}</p>

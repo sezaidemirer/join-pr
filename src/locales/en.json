@@ -1,41 +1,41 @@
 {
   "common": {
     "brandName": "Join PR",
-    "tagline": "Yaratıcı ve stratejik ajanslardan oluşan Join ekosistemi",
+    "tagline": "Join ecosystem of creative and strategic agencies",
     "menu": {
-      "home": "Ana Sayfa",
+      "home": "Home",
       "joinPr": "Join PR",
       "joinCreative": "Join Creative",
       "joinSocial": "Join Social",
       "joinAds": "Join Ads",
       "joinLabAi": "Join AI Lab",
       "joinEscapes": "Join Escapes",
-      "contact": "İletişim"
+      "contact": "Contact"
     },
     "language": {
       "tr": "TR",
       "en": "EN",
-      "label": "Dil"
+      "label": "Language"
     },
     "footer": {
-      "title": "Birlikte cesur hikayeler yaratalım.",
-      "addressLabel": "Adres",
-      "address": "Maslak Mah. Ahi Evran Cad. No:6, Sarıyer / İstanbul",
-      "emailLabel": "E-posta",
-      "phoneLabel": "Telefon",
-      "newsletterTitle": "Bülten",
-      "newsletterDescription": "Join ekosisteminden seçilmiş içgörüler, projeler ve fırsatlar e-postanıza gelsin.",
-      "newsletterPlaceholder": "E-posta adresinizi girin",
-      "newsletterCta": "Abone ol",
-      "rights": "© {{year}} Join PR Group. Tüm hakları saklıdır.",
-      "socialTitle": "Bizi takip edin"
+      "title": "Let's create bold stories together.",
+      "addressLabel": "Address",
+      "address": "Maslak Mah. Ahi Evran Cad. No:6, Sarıyer / Istanbul",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone",
+      "newsletterTitle": "Newsletter",
+      "newsletterDescription": "Get curated insights, projects and opportunities from the Join ecosystem delivered to your inbox.",
+      "newsletterPlaceholder": "Enter your email address",
+      "newsletterCta": "Subscribe",
+      "rights": "© {{year}} Join PR Group. All rights reserved.",
+      "socialTitle": "Follow us"
     },
     "cta": {
-      "discover": "Keşfet",
-      "learnMore": "Daha fazla bilgi",
-      "viewAll": "Hepsini gör",
-      "contactUs": "Bize ulaşın",
-      "viewDetails": "Detayları Gör"
+      "discover": "Discover",
+      "learnMore": "Learn more",
+      "viewAll": "View all",
+      "contactUs": "Contact us",
+      "viewDetails": "View Details"
     },
     "project": {
       "participants": "participants",
@@ -52,95 +52,95 @@
     }
   },
   "loading": {
-    "label": "Join PR deneyimi yükleniyor",
-    "percentage": "%{{value}} tamamlandı"
+    "label": "Loading Join PR experience",
+    "percentage": "%{{value}} completed"
   },
   "homepage": {
     "seo": {
-      "title": "Join PR Group | İletişim, Yaratıcılık, Sosyal Medya, Reklam, AI ve Seyahat",
-      "description": "Join PR ekosistemini keşfedin: iletişim, kreatif prodüksiyon, sosyal medya, performans pazarlaması, AI çözümleri ve Türkiye’nin lider seyahat içerik platformu."
+      "title": "Join PR Group | Communication, Creativity, Social Media, Advertising, AI and Travel",
+      "description": "Discover the Join PR ecosystem: communication, creative production, social media, performance marketing, AI solutions and Turkey's leading travel content platform."
     },
     "hero": {
-      "intro": "Join Ekosistemi",
+      "intro": "Join Ecosystem",
       "slides": {
         "joinPr": {
           "title": "Join x PR",
-          "subtitle": "Stratejik iletişim ve destinasyon PR’ı ile küresel algıyı şekillendiriyoruz.",
-          "cta": "Join PR’ı keşfet",
+          "subtitle": "Shaping global perception through strategic communication and destination PR.",
+          "cta": "Explore Join PR",
           "link": "/join-pr"
         },
         "joinCreative": {
           "title": "Join x Creative",
-          "subtitle": "Markaları yükselten filmler, fotoğraf ve sinematik hikayeler.",
-          "cta": "Join Creative’i keşfet",
+          "subtitle": "Films, photography and cinematic stories that elevate brands.",
+          "cta": "Discover Join Creative",
           "link": "/join-creative"
         },
         "joinSocial": {
           "title": "Join x Social",
-          "subtitle": "Sosyal strateji, içerik ve topluluk yönetimi ile sohbetleri ateşliyoruz.",
-          "cta": "Join Social’ı incele",
+          "subtitle": "Igniting conversations through social strategy, content and community management.",
+          "cta": "Explore Join Social",
           "link": "/join-social"
         },
         "joinAds": {
           "title": "Join x Ads",
-          "subtitle": "Google, Meta ve yeni platformlarda performans odaklı medya stratejileri.",
-          "cta": "Join Ads ile büyü",
+          "subtitle": "Performance-driven media strategies on Google, Meta and emerging platforms.",
+          "cta": "Grow with Join Ads",
           "link": "/join-ads"
         },
         "joinLabAi": {
           "title": "Join x AI Lab",
-          "subtitle": "Büyüme odaklı web deneyimleri, otomasyonlar ve AI ajanları.",
-          "cta": "Join AI Lab ile geliştir",
+          "subtitle": "Growth-focused web experiences, automations and AI agents.",
+          "cta": "Build with Join AI Lab",
           "link": "/join-lab-ai"
         },
         "joinEscapes": {
           "title": "Join x Escapes",
-          "subtitle": "Türkiye’nin en çok okunan yeni nesil seyahat içerik platformu.",
-          "cta": "Join Escapes’i ziyaret et",
+          "subtitle": "Turkey's most-read next-generation travel content platform.",
+          "cta": "Visit Join Escapes",
           "link": "/join-escapes"
         }
       }
     },
     "ecosystem": {
-      "title": "Join Ekosistemi",
+      "title": "Join Ecosystem",
       "description": "",
       "cards": {
         "joinPr": {
           "title": "Join x PR",
-          "description": "Stratejik iletişim, influencer ilişkileri ve küresel destinasyon PR'ı.",
-          "cta": "PR'ı keşfet"
+          "description": "Strategic communication, influencer relations and global destination PR.",
+          "cta": "Explore PR"
         },
         "joinCreative": {
           "title": "Join x Creative",
-          "description": "Dijital içerik, reklam filmi prodüksiyonu ve cesur kreatif konseptler.",
-          "cta": "Creative'i keşfet"
+          "description": "Digital content, commercial film production and bold creative concepts.",
+          "cta": "Explore Creative"
         },
         "joinSocial": {
           "title": "Join x Social",
-          "description": "Sosyal medya stratejisi, sürekli içerik ve topluluk yönetimi.",
-          "cta": "Social'ı keşfet"
+          "description": "Social media strategy, continuous content and community management.",
+          "cta": "Explore Social"
         },
         "joinAds": {
           "title": "Join x Ads",
-          "description": "Performans pazarlaması ve çapraz platform kampanya optimizasyonu.",
-          "cta": "Ads'i keşfet"
+          "description": "Performance marketing and cross-platform campaign optimization.",
+          "cta": "Explore Ads"
         },
         "joinLabAi": {
           "title": "Join x AI Lab",
-          "description": "Geleceğe hazır markalar için web, AI ve otomasyon ürünleri.",
-          "cta": "AI Lab'i keşfet"
+          "description": "Web, AI and automation products for future-ready brands.",
+          "cta": "Explore AI Lab"
         },
         "joinEscapes": {
           "title": "Join x Escapes",
-          "description": "Destinasyonları, hikayeleri ve deneyimleri derleyen seyahat platformu.",
-          "cta": "Escapes'i keşfet"
+          "description": "Travel platform curating destinations, stories and experiences.",
+          "cta": "Explore Escapes"
         }
       }
     },
     "projects": {
-      "title": "Projelerimiz",
-      "description": "Dünya çapında gerçekleştirdiğimiz influencer ve medya projelerini keşfedin.",
-      "cta": "Tüm Projeleri Gör",
+      "title": "Our Projects",
+      "description": "Discover our influencer and media projects realized worldwide.",
+      "cta": "View All Projects",
       "items": {
         "bahrain": {
           "title": "Bahrain",
@@ -240,7 +240,24 @@
                   "/projects/sharm/report3.jpg",
                   "/projects/sharm/report4.jpg"
                 ]
-              }
+              },
+              "press": [
+                {
+                  "title": "Turkish Content Creators in Sharm El Sheikh",
+                  "category": "Tourism News",
+                  "description": "Turkish influencers showcased the beauties of the Red Sea in Join PR's organized Sharm El Sheikh campaign."
+                },
+                {
+                  "title": "Egyptian Tourism in Digital Media",
+                  "category": "Social Media",
+                  "description": "Sharm El Sheikh underwater experience campaign reached 18 million people on social media."
+                },
+                {
+                  "title": "New Trend in Influencer Marketing",
+                  "category": "PR & Communication",
+                  "description": "Influencer collaborations are now one of the most effective tools in the tourism sector for destination promotion."
+                }
+              ]
             },
             {
               "title": "Sharm El Sheikh - Project 2",
@@ -279,16 +296,33 @@
                   "/projects/sharm/report3.jpg",
                   "/projects/sharm/report4.jpg"
                 ]
-              }
+              },
+              "press": [
+                {
+                  "title": "Luxury Tourism Campaign in Egypt",
+                  "category": "Tourism",
+                  "description": "Sharm El Sheikh's 5-star hotels were promoted with Turkish influencers, reaching 12 million people."
+                },
+                {
+                  "title": "Premium Holiday Experience on Social Media",
+                  "category": "Lifestyle",
+                  "description": "Wellness and spa experiences were highlighted in Join PR's organized luxury vacation campaign."
+                },
+                {
+                  "title": "Influencer Tourism Collaborations",
+                  "category": "Digital Marketing",
+                  "description": "Luxury hotel chains are discovering ways to reach their target audience with influencer marketing."
+                }
+              ]
             },
             {
-              "title": "Sharm El Sheikh - Proje 3",
+              "title": "Sharm El Sheikh - Project 3",
               "videoUrl": "https://www.youtube.com/embed/A_8z2fGlgKY",
               "videoId": "A_8z2fGlgKY",
               "participants": [
                 {
                   "name": "Zeynep Yılmaz",
-                  "role": "Wellness Uzmanı",
+                  "role": "Wellness Expert",
                   "image": "/participants/zeynepyilmaz.jpg",
                   "social": {
                     "instagram": "https://instagram.com/zeynepyilmaz"
@@ -296,7 +330,7 @@
                 },
                 {
                   "name": "Burak Öztürk",
-                  "role": "Yoga Eğitmeni",
+                  "role": "Yoga Instructor",
                   "image": "/participants/burakozturk.jpg",
                   "social": {
                     "instagram": "https://instagram.com/burakozturk"
@@ -309,24 +343,41 @@
                 "/projects/sharm/3.jpg"
               ],
               "report": {
-                "title": "Sharm El Sheikh Wellness ve Spa - Proje 3",
-                "description": "Destinasyonun wellness turizmi potansiyelini öne çıkaran bu projede, spa, yoga ve meditasyon deneyimlerini konu aldık. 7 wellness influencer ile 10M+ erişim elde ettik.",
+                "title": "Sharm El Sheikh Wellness & Spa - Project 3",
+                "description": "In this project highlighting the destination's wellness tourism potential, we covered spa, yoga and meditation experiences. We reached 10M+ with 7 wellness influencers.",
                 "images": [
                   "/projects/sharm/report1.jpg",
                   "/projects/sharm/report2.jpg",
                   "/projects/sharm/report3.jpg",
                   "/projects/sharm/report4.jpg"
                 ]
-              }
+              },
+              "press": [
+                {
+                  "title": "Wellness Tourism in Sharm El Sheikh",
+                  "category": "Health & Wellness",
+                  "description": "Yoga and meditation-focused wellness campaign reached 10 million people."
+                },
+                {
+                  "title": "Wellness Trend in the Digital Age",
+                  "category": "Lifestyle",
+                  "description": "Collaborations with wellness influencers support the healthy living trend."
+                },
+                {
+                  "title": "Wellness Tourism Takes Off in Egypt",
+                  "category": "Tourism",
+                  "description": "Sharm El Sheikh spa and wellness centers are standing out with influencer marketing."
+                }
+              ]
             },
             {
-              "title": "Sharm El Sheikh - Proje 4",
+              "title": "Sharm El Sheikh - Project 4",
               "videoUrl": "https://www.youtube.com/embed/A_8z2fGlgKY",
               "videoId": "A_8z2fGlgKY",
               "participants": [
                 {
                   "name": "Emre Çelik",
-                  "role": "Macera Sporcusu",
+                  "role": "Adventure Athlete",
                   "image": "/participants/emrecelik.jpg",
                   "social": {
                     "instagram": "https://instagram.com/emrecelik"
@@ -334,7 +385,7 @@
                 },
                 {
                   "name": "Deniz Kara",
-                  "role": "Kitesurf Eğitmeni",
+                  "role": "Kitesurf Instructor",
                   "image": "/participants/denizkara.jpg",
                   "social": {
                     "instagram": "https://instagram.com/denizkara",
@@ -348,24 +399,41 @@
                 "/projects/sharm/3.jpg"
               ],
               "report": {
-                "title": "Sharm El Sheikh Su Sporları - Proje 4",
-                "description": "Kitesurf, jet ski ve parasailing gibi adrenalin dolu aktiviteleri içeren kampanyamızda, Sharm El Sheikh'in su sporları cennetini tanıttık. 9 macera influencer ile 14M+ erişim.",
+                "title": "Sharm El Sheikh Water Sports - Project 4",
+                "description": "In our campaign featuring adrenaline-filled activities such as kitesurfing, jet ski and parasailing, we showcased Sharm El Sheikh's water sports paradise. We reached 14M+ with 9 adventure influencers.",
                 "images": [
                   "/projects/sharm/report1.jpg",
                   "/projects/sharm/report2.jpg",
                   "/projects/sharm/report3.jpg",
                   "/projects/sharm/report4.jpg"
                 ]
-              }
+              },
+              "press": [
+                {
+                  "title": "Adrenaline-Filled Water Sports Campaign",
+                  "category": "Sports & Adventure",
+                  "description": "Kitesurf and jet ski activities reached 14 million people on social media."
+                },
+                {
+                  "title": "Adventure Tourism Goes Digital",
+                  "category": "Tourism",
+                  "description": "Campaigns with water sports influencers appeal to the young generation."
+                },
+                {
+                  "title": "Adrenaline in the Red Sea",
+                  "category": "Lifestyle",
+                  "description": "Sharm El Sheikh stands out as a water sports center, promoted with influencer collaborations."
+                }
+              ]
             },
             {
-              "title": "Sharm El Sheikh - Proje 5",
+              "title": "Sharm El Sheikh - Project 5",
               "videoUrl": "https://www.youtube.com/embed/A_8z2fGlgKY",
               "videoId": "A_8z2fGlgKY",
               "participants": [
                 {
                   "name": "Fatma Aksoy",
-                  "role": "Gastronomi Yazarı",
+                  "role": "Gastronomy Writer",
                   "image": "/participants/fatmaaksoy.jpg",
                   "social": {
                     "instagram": "https://instagram.com/fatmaaksoy"
@@ -373,7 +441,7 @@
                 },
                 {
                   "name": "Ali Yıldırım",
-                  "role": "Şef",
+                  "role": "Chef",
                   "image": "/participants/aliyildirim.jpg",
                   "social": {
                     "instagram": "https://instagram.com/aliyildirim"
@@ -386,31 +454,48 @@
                 "/projects/sharm/3.jpg"
               ],
               "report": {
-                "title": "Sharm El Sheikh Gastronomi Keşfi - Proje 5",
-                "description": "Mısır mutfağı ve uluslararası restoranları kapsayan gastronomi turuyla, Sharm El Sheikh'in yemek kültürünü öne çıkardık. 6 food blogger ile 11M+ erişim sağlandı.",
+                "title": "Sharm El Sheikh Gastronomy Discovery - Project 5",
+                "description": "With a gastronomy tour covering Egyptian cuisine and international restaurants, we highlighted Sharm El Sheikh's culinary culture. We reached 11M+ with 6 food bloggers.",
                 "images": [
                   "/projects/sharm/report1.jpg",
                   "/projects/sharm/report2.jpg",
                   "/projects/sharm/report3.jpg",
                   "/projects/sharm/report4.jpg"
                 ]
-              }
+              },
+              "press": [
+                {
+                  "title": "Egyptian Cuisine on Social Media",
+                  "category": "Gastronomy",
+                  "description": "Sharm El Sheikh's culinary destination was promoted with food bloggers, reaching 11 million people."
+                },
+                {
+                  "title": "Gastronomy Tourism on the Rise",
+                  "category": "Tourism",
+                  "description": "Collaborations with food influencers are opening a new dimension in destination promotion."
+                },
+                {
+                  "title": "Flavor Discovery in the Digital Age",
+                  "category": "Lifestyle",
+                  "description": "Viral gastronomy content on Instagram and TikTok is fueling the tourism sector."
+                }
+              ]
             }
           ]
         },
         "hurghada": {
           "title": "Hurghada",
           "slug": "hurghada",
-          "description": "Kızıldeniz'in eşsiz güzelliğini ve su sporları cennetini keşfeden bir macera.",
+          "description": "An adventure discovering the unique beauty of the Red Sea and a water sports paradise.",
           "subProjects": [
             {
-              "title": "Hurghada - Proje 1",
+              "title": "Hurghada - Project 1",
               "videoUrl": "https://www.youtube.com/embed/Ec2gB_FgtSk",
               "videoId": "Ec2gB_FgtSk",
               "participants": [
                 {
                   "name": "Burak Yıldız",
-                  "role": "Macera Sporcusu",
+                  "role": "Adventure Athlete",
                   "image": "/participants/burakyildiz.jpg",
                   "social": {
                     "instagram": "https://instagram.com/burakyildiz",
@@ -419,7 +504,7 @@
                 },
                 {
                   "name": "Deniz Avcı",
-                  "role": "Sualtı Fotoğrafçısı",
+                  "role": "Underwater Photographer",
                   "image": "/participants/denizavci.jpg",
                   "social": {
                     "instagram": "https://instagram.com/denizavci"
@@ -433,8 +518,8 @@
                 "/projects/hurghada/4.jpg"
               ],
               "report": {
-                "title": "Hurghada Macera ve Su Sporları - Proje 1",
-                "description": "Hurghada'nın dinamik su sporları ve macera turizmi potansiyelini öne çıkaran kampanyamızda, adrenalin dolu aktiviteler ve lüks tatil deneyimini birleştirdik. 12 influencer ile yapılan iş birliği 20M+ kişiye ulaştı.",
+                "title": "Hurghada Adventure & Water Sports - Project 1",
+                "description": "In our campaign highlighting Hurghada's dynamic water sports and adventure tourism potential, we combined adrenaline-filled activities with luxury vacation experiences. Collaboration with 12 influencers reached 20M+ people.",
                 "images": [
                   "/projects/hurghada/report1.jpg",
                   "/projects/hurghada/report2.jpg",
@@ -444,13 +529,13 @@
               }
             },
             {
-              "title": "Hurghada - Proje 2",
+              "title": "Hurghada - Project 2",
               "videoUrl": "https://www.youtube.com/embed/Ec2gB_FgtSk",
               "videoId": "Ec2gB_FgtSk",
               "participants": [
                 {
                   "name": "Canan Yıldız",
-                  "role": "Dalış Uzmanı",
+                  "role": "Diving Expert",
                   "image": "/participants/cananyildiz.jpg",
                   "social": {
                     "instagram": "https://instagram.com/cananyildiz"
@@ -458,7 +543,7 @@
                 },
                 {
                   "name": "Kerem Tunç",
-                  "role": "Mercan Rehberi",
+                  "role": "Coral Reef Guide",
                   "image": "/participants/keremtunc.jpg",
                   "social": {
                     "instagram": "https://instagram.com/keremtunc"
@@ -472,8 +557,8 @@
                 "/projects/hurghada/4.jpg"
               ],
               "report": {
-                "title": "Hurghada Mercan Resifleri Keşfi - Proje 2",
-                "description": "Kızıldeniz'in renkli mercan resiflerini ve sualtı canlılarını konu alan bu projede, dalış ve snorkeling deneyimlerini öne çıkardık. 10 influencer ile 16M+ erişim sağlandı.",
+                "title": "Hurghada Coral Reefs Discovery - Project 2",
+                "description": "In this project featuring the Red Sea's colorful coral reefs and marine life, we highlighted diving and snorkeling experiences. We reached 16M+ with 10 influencers.",
                 "images": [
                   "/projects/hurghada/report1.jpg",
                   "/projects/hurghada/report2.jpg",
@@ -483,13 +568,13 @@
               }
             },
             {
-              "title": "Hurghada - Proje 3",
+              "title": "Hurghada - Project 3",
               "videoUrl": "https://www.youtube.com/embed/Ec2gB_FgtSk",
               "videoId": "Ec2gB_FgtSk",
               "participants": [
                 {
                   "name": "Elif Güneş",
-                  "role": "Çöl Safari Rehberi",
+                  "role": "Desert Safari Guide",
                   "image": "/participants/elifgunes.jpg",
                   "social": {
                     "instagram": "https://instagram.com/elifgunes"
@@ -497,7 +582,7 @@
                 },
                 {
                   "name": "Okan Polat",
-                  "role": "Kültür Blogger",
+                  "role": "Culture Blogger",
                   "image": "/participants/okanpolat.jpg",
                   "social": {
                     "instagram": "https://instagram.com/okanpolat",
@@ -512,8 +597,8 @@
                 "/projects/hurghada/4.jpg"
               ],
               "report": {
-                "title": "Hurghada Çöl Safari Deneyimi - Proje 3",
-                "description": "Hurghada'nın çöl turlarını, quad safari ve Bedevî kültürünü tanıtan bu kampanyada, destinasyonun farklı yüzünü gösterdik. 8 macera influencer ile 13M+ erişim.",
+                "title": "Hurghada Desert Safari Experience - Project 3",
+                "description": "In this campaign showcasing Hurghada's desert tours, quad safari and Bedouin culture, we revealed a different side of the destination. We reached 13M+ with 8 adventure influencers.",
                 "images": [
                   "/projects/hurghada/report1.jpg",
                   "/projects/hurghada/report2.jpg",
@@ -523,13 +608,13 @@
               }
             },
             {
-              "title": "Hurghada - Proje 4",
+              "title": "Hurghada - Project 4",
               "videoUrl": "https://www.youtube.com/embed/Ec2gB_FgtSk",
               "videoId": "Ec2gB_FgtSk",
               "participants": [
                 {
                   "name": "Seda Aydın",
-                  "role": "Lüks Seyahat Blogger",
+                  "role": "Luxury Travel Blogger",
                   "image": "/participants/sedaaydin.jpg",
                   "social": {
                     "instagram": "https://instagram.com/sedaaydin"
@@ -551,8 +636,8 @@
                 "/projects/hurghada/4.jpg"
               ],
               "report": {
-                "title": "Hurghada Lüks Resort Deneyimi - Proje 4",
-                "description": "Hurghada'nın 5 yıldızlı resort otelleri, spa ve premium plajlarını tanıtan lüks tatil kampanyası. 7 luxury influencer ile 12M+ erişim elde ettik.",
+                "title": "Hurghada Luxury Resort Experience - Project 4",
+                "description": "Luxury vacation campaign showcasing Hurghada's 5-star resort hotels, spas and premium beaches. We reached 12M+ with 7 luxury influencers.",
                 "images": [
                   "/projects/hurghada/report1.jpg",
                   "/projects/hurghada/report2.jpg",
@@ -564,18 +649,18 @@
           ]
         },
         "morocco": {
-          "title": "Fas",
+          "title": "Morocco",
           "slug": "fas",
-          "description": "Fas'ın büyülü şehirleri, çölü ve zengin mutfağını deneyimleyen kültürel bir yolculuk.",
+          "description": "A cultural journey experiencing Morocco's magical cities, desert and rich cuisine.",
           "subProjects": [
             {
-              "title": "Fas",
+              "title": "Morocco",
               "videoUrl": "https://www.youtube.com/embed/FLNg5aQb9rk",
               "videoId": "FLNg5aQb9rk",
               "participants": [
                 {
                   "name": "Elif Şahin",
-                  "role": "Kültür Yazarı",
+                  "role": "Culture Writer",
                   "image": "/participants/elifsahin.jpg",
                   "social": {
                     "instagram": "https://instagram.com/elifsahin",
@@ -584,7 +669,7 @@
                 },
                 {
                   "name": "Can Aydın",
-                  "role": "Belgesel Yönetmeni",
+                  "role": "Documentary Director",
                   "image": "/participants/canaydin.jpg",
                   "social": {
                     "instagram": "https://instagram.com/canaydin",
@@ -598,8 +683,8 @@
                 "/projects/morocco/3.jpg"
               ],
               "report": {
-                "title": "Fas Kültür ve Gastronomi Keşfi",
-                "description": "Fas'ın büyülü şehirleri, zengin mutfak kültürü ve çöl manzaralarını kapsayan bu projede, destinasyonun otantik güzelliklerini dünyaya sunduk. 8 influencer ile gerçekleştirilen kampanya 15M+ erişim sağladı. Marakeş, Fes ve Sahara Çölü deneyimleriyle Fas'ın turistik potansiyelini öne çıkardık.",
+                "title": "Morocco Culture & Gastronomy Discovery",
+                "description": "In this project covering Morocco's magical cities, rich culinary culture and desert landscapes, we presented the destination's authentic beauties to the world. The campaign with 8 influencers reached 15M+. We highlighted Morocco's tourism potential through Marrakech, Fes and Sahara Desert experiences.",
                 "images": [
                   "/projects/morocco/report1.jpg",
                   "/projects/morocco/report2.jpg",
@@ -611,18 +696,18 @@
           ]
         },
         "jordan": {
-          "title": "Ürdün",
+          "title": "Jordan",
           "slug": "urdun",
-          "description": "Petra'nın antik güzelliğinden Wadi Rum'un çöl manzaralarına kadar Ürdün'ün hazineleri.",
+          "description": "Jordan's treasures from the ancient beauty of Petra to the desert landscapes of Wadi Rum.",
           "subProjects": [
             {
-              "title": "Ürdün",
+              "title": "Jordan",
               "videoUrl": "https://www.youtube.com/embed/pJy_mcZRxDY",
               "videoId": "pJy_mcZRxDY",
               "participants": [
                 {
                   "name": "Murat Aksoy",
-                  "role": "Tarih Yazarı",
+                  "role": "History Writer",
                   "image": "/participants/murataksoy.jpg",
                   "social": {
                     "instagram": "https://instagram.com/murataksoy",
@@ -631,7 +716,7 @@
                 },
                 {
                   "name": "Gamze Eren",
-                  "role": "Fotoğraf Sanatçısı",
+                  "role": "Photography Artist",
                   "image": "/participants/gamzeeren.jpg",
                   "social": {
                     "instagram": "https://instagram.com/gamzeeren"
@@ -645,8 +730,8 @@
                 "/projects/jordan/4.jpg"
               ],
               "report": {
-                "title": "Ürdün Tarih ve Doğa Yolculuğu",
-                "description": "Petra'nın antik güzelliği ve Wadi Rum'un büyüleyici çöl manzaralarını konu alan bu projede, Ürdün'ün tarihi ve doğal zenginliklerini öne çıkardık. 11 influencer ile gerçekleştirilen kampanya 22M+ erişim elde etti. Ölü Deniz, Petra ve çöl kampları ile destinasyonun çeşitliliğini gösterdik.",
+                "title": "Jordan History & Nature Journey",
+                "description": "In this project featuring the ancient beauty of Petra and the mesmerizing desert landscapes of Wadi Rum, we highlighted Jordan's historical and natural wealth. The campaign with 11 influencers reached 22M+. We showcased the destination's diversity through the Dead Sea, Petra and desert camps.",
                 "images": [
                   "/projects/jordan/report1.jpg",
                   "/projects/jordan/report2.jpg",
@@ -658,18 +743,18 @@
           ]
         },
         "montenegro": {
-          "title": "Karadağ",
+          "title": "Montenegro",
           "slug": "karadag",
-          "description": "Adriyatik'in saklı cenneti Karadağ'ın muhteşem koyları ve dağ manzaraları.",
+          "description": "The magnificent bays and mountain views of Montenegro, the hidden paradise of the Adriatic.",
           "subProjects": [
             {
-              "title": "Karadağ",
+              "title": "Montenegro",
               "videoUrl": "https://www.youtube.com/embed/E7dhalAN0zo",
               "videoId": "E7dhalAN0zo",
               "participants": [
                 {
                   "name": "Tolga Çelik",
-                  "role": "Doğa Fotoğrafçısı",
+                  "role": "Nature Photographer",
                   "image": "/participants/tolgacelik.jpg",
                   "social": {
                     "instagram": "https://instagram.com/tolgacelik",
@@ -678,7 +763,7 @@
                 },
                 {
                   "name": "Pınar Koç",
-                  "role": "Seyahat Yazarı",
+                  "role": "Travel Writer",
                   "image": "/participants/pinarkoc.jpg",
                   "social": {
                     "instagram": "https://instagram.com/pinarkoc",
@@ -692,8 +777,8 @@
                 "/projects/montenegro/3.jpg"
               ],
               "report": {
-                "title": "Karadağ Adriyatik Kıyıları Keşfi",
-                "description": "Adriyatik'in saklı cenneti Karadağ'ın muhteşem koyları, dağ manzaraları ve tarihi kasabalarını tanıtan bu projede, destinasyonun eşsiz güzelliklerini paylaştık. 9 influencer ile yapılan çalışma 16M+ erişim sağladı. Kotor, Budva ve Durmitor manzaralarıyla Karadağ'ı keşfettik.",
+                "title": "Montenegro Adriatic Coast Discovery",
+                "description": "In this project showcasing the magnificent bays, mountain views and historic towns of Montenegro, the hidden paradise of the Adriatic, we shared the destination's unique beauties. Our work with 9 influencers reached 16M+. We discovered Montenegro through the views of Kotor, Budva and Durmitor.",
                 "images": [
                   "/projects/montenegro/report1.jpg",
                   "/projects/montenegro/report2.jpg",
@@ -709,132 +794,132 @@
     "promo": {
       "slides": [
         {
-          "badge": "AI Sosyal",
-          "title": "Sosyal medyanızı AI yönetsin. Organik büyümeyi takip edin.",
-          "description": "AI ajanlarınız; içerikleri tasarlar, üretir ve optimize ederken siz büyümeye odaklanırsınız. Tek panelden tüm sosyal medya hesaplarınızı yönetin!",
+          "badge": "AI Social",
+          "title": "Let AI manage your social media. Track organic growth.",
+          "description": "Your AI agents design, produce and optimize content while you focus on growth. Manage all your social media accounts from a single panel!",
           "highlights": [
-            "%70’e varan iş gücü tasarrufu",
-            "Sürekli içerik takvimi, onay ve raporlama",
-            "İnsan kreatif yönetişimiyle otonom uygulama"
+            "Up to 70% workforce savings",
+            "Continuous content calendar, approval and reporting",
+            "Autonomous execution with human creative oversight"
           ],
-          "primaryCta": "Hemen teklif al",
-          "secondaryCta": "AI sosyal demo iste",
+          "primaryCta": "Get a quote now",
+          "secondaryCta": "Request AI social demo",
           "kpi": {
-            "label": "Canlı KPI akışı",
-            "value": "+%182",
-            "caption": "AI destekli kreatör sprintleriyle organik etkileşim artışı."
+            "label": "Live KPI stream",
+            "value": "+182%",
+            "caption": "Organic engagement increase through AI-powered creator sprints."
           },
           "stats": [
             {
               "value": "24/7",
-              "caption": "Yayınlama ve topluluk moderasyonu."
+              "caption": "Publishing and community moderation."
             },
             {
               "value": "5x",
-              "caption": "AI ortaklarıyla daha hızlı iterasyon döngüleri."
+              "caption": "Faster iteration cycles with AI partners."
             }
           ],
           "stack": {
-            "label": "Otomasyon paketi",
+            "label": "Automation suite",
             "items": [
-              "AI içerik taslağı ve yerelleştirme",
-              "Öngörüsel planlama ve bütçe yönetimi",
-              "Hızlı raporlama için içgörü asistanı"
+              "AI content drafting and localization",
+              "Predictive planning and budget management",
+              "Insight assistant for rapid reporting"
             ]
           }
         },
         {
-          "badge": "AI Performans",
-          "title": "Google ve Meta kampanyalarınızı AI optimize etsin.",
-          "description": "AI performans ekibimiz teklifleri, kitleleri ve kreatifleri gerçek zamanlı kalibre eder; her medya bütçesi daha verimli çalışır.",
+          "badge": "AI Performance",
+          "title": "Let AI optimize your Google and Meta campaigns.",
+          "description": "Our AI performance team calibrates bids, audiences and creatives in real-time; every media budget works more efficiently.",
           "highlights": [
-            "%40 daha hızlı optimizasyon döngüleri",
-            "Google ve Meta bütçelerini tek panelden yönetim",
-            "Öngörüsel ROAS modelleme ve uyarılar"
+            "40% faster optimization cycles",
+            "Manage Google and Meta budgets from a single panel",
+            "Predictive ROAS modeling and alerts"
           ],
-          "primaryCta": "AI ile medyayı büyüt",
-          "secondaryCta": "Performans denetimi iste",
+          "primaryCta": "Grow media with AI",
+          "secondaryCta": "Request performance audit",
           "kpi": {
-            "label": "Medya performans nabzı",
-            "value": "+%126",
-            "caption": "AI yönetimli deneylerle Google ve Meta’da artan ROAS."
+            "label": "Media performance pulse",
+            "value": "+126%",
+            "caption": "Increasing ROAS on Google and Meta with AI-managed experiments."
           },
           "stats": [
             {
-              "value": "12 saat",
-              "caption": "Makine öğrenmesi rehberliğinde kampanya yenileme döngüleri."
+              "value": "12 hrs",
+              "caption": "Machine learning-guided campaign refresh cycles."
             },
             {
               "value": "30+",
-              "caption": "Script, kitle ve yerleşimlerde otomasyon."
+              "caption": "Automation in scripts, audiences and placements."
             }
           ],
           "stack": {
-            "label": "Zeka araç seti",
+            "label": "Intelligence toolkit",
             "items": [
-              "AI teklif orkestrasyonu",
-              "Kreatif ve kopya çok değişkenli testler",
-              "Bütçe pacing korumaları ve anomali uyarıları"
+              "AI bid orchestration",
+              "Creative and copy multivariate tests",
+              "Budget pacing guards and anomaly alerts"
             ]
           }
         },
         {
-          "badge": "AI Deneyim",
-          "title": "Web Chatbot ve WhatsApp asistanıyla 7/24 destek verin.",
-          "description": "AI ajanlarımız ürün sorularını yanıtlar, lead toplar ve siz uyurken satışa destek olur; web siteniz ve mesajlaşma kanallarınızla entegre çalışır.",
+          "badge": "AI Experience",
+          "title": "Provide 24/7 support with Web Chatbot and WhatsApp assistant.",
+          "description": "Our AI agents answer product questions, collect leads and support sales while you sleep; integrated with your website and messaging channels.",
           "highlights": [
-            "Web ve WhatsApp için kesintisiz AI concierge",
-            "Anında ürün, fiyat ve stok yanıtları",
-            "Otomatik lead toplama ve CRM aktarımı"
+            "Seamless AI concierge for web and WhatsApp",
+            "Instant product, price and stock responses",
+            "Automatic lead collection and CRM transfer"
           ],
-          "primaryCta": "AI asistanları aktive et",
-          "secondaryCta": "Chatbot demosunu keşfet",
+          "primaryCta": "Activate AI assistants",
+          "secondaryCta": "Explore chatbot demo",
           "kpi": {
-            "label": "Dönüşüm artışı",
-            "value": "+%63",
-            "caption": "Gece boyunca tamamlanan nitelikli diyalog ve destekli satış artışı."
+            "label": "Conversion increase",
+            "value": "+63%",
+            "caption": "Increase in qualified dialogues and assisted sales completed overnight."
           },
           "stats": [
             {
-              "value": "90 sn",
-              "caption": "Günün her saati korunan ortalama yanıt süresi."
+              "value": "90 sec",
+              "caption": "Average response time maintained at all hours."
             },
             {
               "value": "12",
-              "caption": "Yerelleştirme hafızasıyla desteklenen dil sayısı."
+              "caption": "Number of languages supported with localization memory."
             }
           ],
           "stack": {
-            "label": "AI temsilci paketi",
+            "label": "AI agent suite",
             "items": [
-              "Bilgi tabanı bağlantılı RAG mimarisi",
-              "Çok kanallı mesaj orkestrasyonu",
-              "İnsan ekibe eskalasyon iş akışları"
+              "Knowledge base connected RAG architecture",
+              "Multi-channel message orchestration",
+              "Human team escalation workflows"
             ]
           }
         }
       ]
     },
     "cases": {
-      "title": "Basında Biz",
-      "description": "Müşterilerimizin başarı hikayelerini basında ön plana çıkararak marka değerlerini artırmak için çalışıyoruz. Güvenilir, etkili, yenilikçi iletişim çözümleri sunuyoruz.",
+      "title": "In the Press",
+      "description": "We work to increase brand value by highlighting our clients' success stories in the press. We provide reliable, effective, innovative communication solutions.",
       "cards": [
         {
-          "title": "Türk Oyuncular Mısır’da",
-          "category": "Medya & Influencer Kampanyası",
-          "description": "Mısır’ın tarihi, turistik ve kültürel yapısına ve Kızıldeniz’e hayran kalan Türk oyuncular, herkesi bu deneyimi yaşamaya davet etti.",
+          "title": "Turkish Actors in Egypt",
+          "category": "Media & Influencer Campaign",
+          "description": "Turkish actors, fascinated by Egypt's historical, touristic and cultural structure and the Red Sea, invited everyone to experience this.",
           "image": "/turk-oyuncular-misirda.webp"
         },
         {
-          "title": "Türk Oyunculardan Bahreyn Çıkarması",
-          "category": "Kreatif Prodüksiyon",
-          "description": "Ünlü Türk oyuncular, Bahreyn’de üç gün süren bir dizi etkinliğe katıldı.",
+          "title": "Turkish Actors' Bahrain Landing",
+          "category": "Creative Production",
+          "description": "Famous Turkish actors participated in a series of events lasting three days in Bahrain.",
           "image": "/turk-oyunculardan-bahreyn-cikarmasi.webp"
         },
         {
-          "title": "Prontotour 30. yaşını Marakeş’te kutladı.",
-          "category": "Stratejik PR & Deneyim",
-          "description": "Seyahat sektöründe trendler belirleyen tur operatörü Prontotour 30. yıl kutlamalarına Fas’ta başladı. Ünlü oyuncular Marakeş’i keşfetme fırsatı buldu.",
+          "title": "Prontotour celebrated its 30th anniversary in Marrakech.",
+          "category": "Strategic PR & Experience",
+          "description": "Prontotour, a tour operator that sets trends in the travel industry, started its 30th anniversary celebrations in Morocco. Famous actors had the opportunity to explore Marrakech.",
           "image": "/prontotour-marakeste.jpeg"
         },
         {
@@ -945,146 +1030,146 @@
   "pages": {
     "joinPr": {
       "seo": {
-        "title": "Join PR | Stratejik İletişim ve Destinasyon PR’ı",
-        "description": "Join PR; stratejik iletişim, influencer ilişkileri, küresel pazarlama ve etkinlik deneyimi yönetimi sunar."
+        "title": "Join PR | Strategic Communication and Destination PR",
+        "description": "Join PR offers strategic communication, influencer relations, global marketing and event experience management."
       },
       "hero": {
-        "title": "Birlikte Cesur Hikayeler Yaratalım",
-        "subtitle": "Marka konumlandırmadan global destinasyon PR'ına kadar hikayenizi dünyaya taşıyoruz.",
-        "description": "Destinasyonlar, yaşam tarzı ve lüks markalarla içgörü, kültür ve ölçümlenebilir etki üzerine kurulu hikayeler tasarlıyoruz."
+        "title": "Let's Create Bold Stories Together",
+        "subtitle": "From brand positioning to global destination PR, we take your story to the world.",
+        "description": "We design stories built on insight, culture and measurable impact with destinations, lifestyle and luxury brands."
       },
       "media": {
-        "title": "Deneyimi Stratejiye Dönüştürür!",
-        "description": "Join PR ekosisteminin markalar için nasıl ölçülebilir etki yarattığını anlatan kısa videoyu keşfedin.\n\nTurizmde başarı, doğru kurgulanmış bir hikâyeden geçer. Join PR, markaların hedef kitlesiyle duygusal bağ kurmasını sağlayan iletişim stratejilerini oluşturur.",
+        "title": "Turning Experience into Strategy!",
+        "description": "Discover the short video about how the Join PR ecosystem creates measurable impact for brands.\n\nSuccess in tourism comes from a well-crafted story. Join PR creates communication strategies that enable brands to establish emotional connections with their target audience.",
         "videoId": "yKVqZNb5p-s"
       },
       "services": [
         {
-          "title": "Stratejik iletişim ve marka konumlandırma",
-          "description": "İçgörü tabanlı stratejiler, mesaj mimarileri ve marka algısını güçlendiren iletişim planları."
+          "title": "Strategic communication and brand positioning",
+          "description": "Insight-based strategies, message architectures and communication plans that strengthen brand perception."
         },
         {
-          "title": "Influencer ve celebrity iletişimi",
-          "description": "Seçilmiş yetenek ağları, birlikte yaratılan hikayeler ve çok kanallı itibarı yöneten süreçler."
+          "title": "Influencer and celebrity communication",
+          "description": "Selected talent networks, co-created stories and multi-channel reputation management processes."
         },
         {
-          "title": "Küresel pazarlama ve destinasyon PR’ı",
-          "description": "Ticari ilişkiler, basın, fam trip’ler ve dijital yayılım dahil uçtan uca destinasyon pazarlaması."
+          "title": "Global marketing and destination PR",
+          "description": "End-to-end destination marketing including trade relations, press, fam trips and digital amplification."
         },
         {
-          "title": "Etkinlik iletişimi ve deneyim yönetimi",
-          "description": "Fikirden uygulamaya entegre iletişim stratejisine sahip etkinlikler ve deneyimler."
+          "title": "Event communication and experience management",
+          "description": "Events and experiences with integrated communication strategy from concept to execution."
         }
       ],
       "cases": {
-        "title": "Halkla İlişkiler & Medya İletişimi",
+        "title": "Public Relations & Media Communication",
         "items": [
-          "Basın bülteni, özel haber & röportaj",
-          "Yaratıcı dijital medya iş birlikleri",
-          "Basın davetleri",
-          "PR ölçümleme & medya yansıma raporları"
+          "Press releases, exclusive news & interviews",
+          "Creative digital media collaborations",
+          "Press invitations",
+          "PR measurement & media reflection reports"
         ]
       },
       "influencer": {
-        "title": "Influencer ve celebrity iletişimi",
-        "description": "Seçilmiş yetenek ağlarıyla markaların hedef kitleleriyle aynı dili konuşmasını sağlayan kreatif kampanyalar tasarlıyoruz.",
+        "title": "Influencer and celebrity communication",
+        "description": "We design creative campaigns that enable brands to speak the same language with their target audiences through selected talent networks.",
         "items": [
-          "Influencer seçimi, sözleşme & proje yönetimi ve Meta Partner Raporlama",
-          "Barter, bütçeli iş birlikleri ve elde edilen medya değeri (EMV), ROI analizi",
-          "İçerik senaryosu, hashtag, etiket & görünürlük planlaması",
-          "Celebrity iletişimi"
+          "Influencer selection, contracting & project management and Meta Partner Reporting",
+          "Barter, budgeted collaborations and earned media value (EMV), ROI analysis",
+          "Content scenario, hashtag, tagging & visibility planning",
+          "Celebrity communication"
         ]
       },
       "cta": {
-        "title": "Hikayeni güçlendirmeye hazır mısın?",
-        "description": "PR ve iletişim yol haritanızı birlikte oluşturalım.",
-        "button": "Yeni Projeni Başlat"
+        "title": "Ready to strengthen your story?",
+        "description": "Let's create your PR and communication roadmap together.",
+        "button": "Start Your New Project"
       }
     },
     "joinCreative": {
       "seo": {
-        "title": "Join Creative | Film, Fotoğraf ve İçerik Stüdyosu",
-        "description": "Join Creative; dijital içerik, reklam filmi, fotoğraf ve marka hikayeleri üretir."
+        "title": "Join Creative | Film, Photography and Content Studio",
+        "description": "Join Creative produces digital content, commercial films, photography and brand stories."
       },
       "hero": {
-        "title": "Sinematik etki yaratan kreatif prodüksiyon.",
-        "subtitle": "İçgörü, zanaat ve görsel inovasyonu harmanlayan hikayeler.",
-        "description": "Konseptten final kurgusuna kadar, platformlar ve kültürler arasında yolculuk eden içerikler üretiyoruz."
+        "title": "Creative production that creates cinematic impact.",
+        "subtitle": "Stories blending insight, craft and visual innovation.",
+        "description": "From concept to final edit, we produce content that travels across platforms and cultures."
       },
       "media": {
         "title": "Join Creative Showreel",
-        "description": "Join Creative prodüksiyon ekibinin destinasyonlar, havayolu markaları ve yaşam tarzı hikayeleri için ürettiği kreatif çalışmalar.",
+        "description": "Creative works produced by the Join Creative production team for destinations, airline brands and lifestyle stories.",
         "videoId": "FLNg5aQb9rk"
       },
       "services": [
         {
-          "title": "Dijital içerik üretimi ve prodüksiyon hizmetleri",
-          "description": "Çok kanallı içerikler, çevik çekim ekipleri ve ölçeklenebilir prodüksiyon akışları."
+          "title": "Digital content production and production services",
+          "description": "Multi-channel content, agile shooting teams and scalable production workflows."
         },
         {
-          "title": "Reklam ve kampanya filmleri",
-          "description": "Sinematik görseller ve entegre hikaye anlatımıyla yüksek prodüksiyonlu filmler."
+          "title": "Commercial and campaign films",
+          "description": "High-production films with cinematic visuals and integrated storytelling."
         },
         {
-          "title": "Fotoğraf prodüksiyonu",
-          "description": "Editoryal, yaşam tarzı ve ürün çekimlerinde uçtan uca prodüksiyon yönetimi."
+          "title": "Photography production",
+          "description": "End-to-end production management in editorial, lifestyle and product shoots."
         },
         {
-          "title": "Konsept & içerik geliştirme ve planlama",
-          "description": "Briefe özel kreatif yönler, treatment dokümanları ve görsel diller."
+          "title": "Concept & content development and planning",
+          "description": "Brief-specific creative directions, treatment documents and visual languages."
         },
         {
-          "title": "AI görsel üretimi",
-          "description": "Senaryo yazımı, anlatı geliştirme ve çok dilli içerik teslimi."
+          "title": "AI visual production",
+          "description": "Scriptwriting, narrative development and multilingual content delivery."
         },
         {
-          "title": "AI video prodüksiyonu",
-          "description": "Generatif video araçlarıyla hızlı iterasyon, storyboard ve prodüksiyon teslimleri."
+          "title": "AI video production",
+          "description": "Rapid iteration, storyboard and production deliveries with generative video tools."
         }
       ],
       "portfolio": {
-        "title": "Seçili prodüksiyonlar",
+        "title": "Selected productions",
         "items": [
           { "title": "Rixos Premium Qetaifan Island North", "image": "/creative_page_galery1.jpg" },
           { "title": "Four Seasons Hotel Bahrain Bay", "image": "/creative_page_galery2.jpg" },
           { "title": "Rixos Radamis Sharm el Sheikh", "image": "/creative_page_galery3.jpg" },
           { "title": "Rixos The Palm Dubai", "image": "/creative_page_galery4.jpg" },
-          { "title": "AJet Havayolları", "image": "/creative_page_galery5.jpg" },
+          { "title": "AJet Airlines", "image": "/creative_page_galery5.jpg" },
           { "title": "Jennifer Lopez Up All Night 2025 Egypt", "image": "/creative_page_galery6.jpg" }
         ]
       },
       "cta": {
-        "title": "Bir sonraki kreatif prodüksiyon deneyimini Join\u00A0x\u00A0Creative ile yaşa.",
-        "description": "Projeni anlat, sana özel bir prodüksiyon planı hazırlayalım.",
-        "button": "Kreatif teklif iste"
+        "title": "Live your next creative production experience with Join\u00A0x\u00A0Creative.",
+        "description": "Tell us about your project, let's prepare a custom production plan for you.",
+        "button": "Request Creative Quote"
       }
     },
     "joinSocial": {
       "seo": {
-        "title": "Join Social | Sosyal Medya Stratejisi ve Topluluk Yönetimi",
-        "description": "Join Social; sosyal strateji, içerik takvimi, topluluk yönetimi ve optimizasyon sunar."
+        "title": "Join Social | Social Media Strategy and Community Management",
+        "description": "Join Social offers social strategy, content calendar, community management and optimization."
       },
       "hero": {
-        "title": "Sosyal Medya Yönetimi ve Strateji",
-        "subtitle": "Join Social, markaların dijital dünyadaki kimliğini güçlendiren stratejik sosyal medya yönetimi sağlar.",
-        "description": "İçerik, yaratıcılar, medya ve veri içgörüsünü entegre eden sürekli sosyal programlar inşa ediyoruz."
+        "title": "Social Media Management and Strategy",
+        "subtitle": "Join Social provides strategic social media management that strengthens brands' identity in the digital world.",
+        "description": "We build continuous social programs that integrate content, creators, media and data insight."
       },
       "sections": {
         "strategy": {
-          "title": "İçerik planlama & yayın takvimi",
-          "description": "Kampanyalara göre şekillenen yayın takvimleri, platform bazlı içerik sıraları ve onay süreçleri."
+          "title": "Content planning & publishing calendar",
+          "description": "Publishing calendars shaped by campaigns, platform-based content queues and approval processes."
         },
         "planning": {
-          "title": "Trend uyumlu kısa video ve görsel üretimi",
-          "description": "Reels, TikTok ve kısa formatlar için storyboard, çekim ve post prodüksiyon akışları."
+          "title": "Trend-aligned short video and visual production",
+          "description": "Storyboard, shooting and post-production workflows for Reels, TikTok and short formats."
         },
         "community": {
-          "title": "Topluluk etkileşimi ve moderasyon",
-          "description": "DM, yorum ve UGC moderasyonu ile yaratıcı topluluk aktivasyonları."
+          "title": "Community engagement and moderation",
+          "description": "Creative community activations with DM, comment and UGC moderation."
         },
         "reporting": {
-          "title": "Aylık raporlama & içerik performans analizi",
-          "description": "Aylık dashboard’lar, içerik bazlı KPI raporları ve optimizasyon önerileri."
+          "title": "Monthly reporting & content performance analysis",
+          "description": "Monthly dashboards, content-based KPI reports and optimization recommendations."
         }
       },
       "process": {
@@ -1103,140 +1188,140 @@
             "description": "Yayınlama, topluluk aktivasyonu ve ücretli medya."
           },
           {
-            "title": "Optimizasyon",
-            "description": "İçgörüler, test planları ve üç aylık inovasyon sprintleri."
+            "title": "Optimization",
+            "description": "Insights, test plans and quarterly innovation sprints."
           }
         ]
       },
       "cta": {
-        "title": "Yeni nesil sosyal medya yönetimine hazır mısın?",
-        "description": "Sosyal medya ekosisteminizi oluşturalım, hızlı dönüşümler ve kazanımlar yaratalım.",
-        "button": "Hemen Teklif Al"
+        "title": "Ready for next-generation social media management?",
+        "description": "Let's build your social media ecosystem, create fast transformations and gains.",
+        "button": "Get a Quote Now"
       },
       "media": {
-        "title": "Join Social ile Markanızın Tüm Dijital Dünyasını Tek Merkezden Yönetin",
-        "description": "Sosyal medya stratejinizi yapay zekâ ile güçlendiren Join Social, içerik üretiminden trend takibine, görsel iletişim dilinden raporlamaya kadar tüm süreci otomatikleştirir ve profesyonelleştirir. Şifre paylaşımı olmadan, güvenlik açıklarına yer vermeden; tüm platformlarınızı tek bir akıllı panelden yönetmenizi sağlar.",
+        "title": "Manage Your Brand's Entire Digital World from One Center with Join Social",
+        "description": "Join Social, which strengthens your social media strategy with artificial intelligence, automates and professionalizes the entire process from content production to trend tracking, from visual communication language to reporting. It allows you to manage all your platforms from a single smart panel without password sharing and without security vulnerabilities.",
         "items": [
-          "Merkezi dashboard yönetimi",
-          "Güvenli bağlantı – sıfır şifre paylaşımı",
-          "Gönderi performansları, trend içerikler, rakip analizi ve büyüme tahminleri",
-          "Tutarlı görsel ve metinsel iletişim dili"
+          "Centralized dashboard management",
+          "Secure connection – zero password sharing",
+          "Post performance, trend content, competitor analysis and growth forecasts",
+          "Consistent visual and textual communication language"
         ],
         "image": "/social_page_media.png"
       }
     },
     "joinAds": {
       "seo": {
-        "title": "Join Ads | Performans Pazarlaması ve Dijital Reklam",
-        "description": "Join Ads; medya planlama, kampanya optimizasyonu ve performans ölçümü sunar."
+        "title": "Join Ads | Performance Marketing and Digital Advertising",
+        "description": "Join Ads offers media planning, campaign optimization and performance measurement."
       },
       "hero": {
-        "title": "Dijital Reklam Yönetimi & Performans Pazarlaması",
-        "subtitle": "Google, Meta ve yeni platformlarda entegre medya stratejileri.",
-        "description": "Satın alma, dönüşüm ve sadakat hedeflerinize uygun ölçülebilir programlar kuruyoruz."
+        "title": "Digital Advertising Management & Performance Marketing",
+        "subtitle": "Integrated media strategies on Google, Meta and emerging platforms.",
+        "description": "We build measurable programs tailored to your acquisition, conversion and loyalty goals."
       },
       "services": [
         {
-          "title": "Google Ads Yönetimi",
-          "description": "Arama, görüntülü, video ve keşif kampanyalarında algoritma odaklı optimizasyon ve sürekli performans iyileştirmesi."
+          "title": "Google Ads Management",
+          "description": "Algorithm-focused optimization and continuous performance improvement in search, display, video and discovery campaigns."
         },
         {
-          "title": "Meta Ads Yönetimi",
-          "description": "Yaratıcı varyasyon testleri, doğru kitle mimarisi ve dönüşüm odaklı kampanya kurgularıyla Meta ekosisteminde ölçeklenebilir sonuçlar."
+          "title": "Meta Ads Management",
+          "description": "Scalable results in the Meta ecosystem with creative variation tests, right audience architecture and conversion-focused campaign setups."
         },
         {
-          "title": "Diğer Platformlar",
-          "description": "YouTube, TikTok, programatik ve hedefe özel medya ortaklıklarında çok kanallı büyüme stratejileri."
+          "title": "Other Platforms",
+          "description": "Multi-channel growth strategies in YouTube, TikTok, programmatic and target-specific media partnerships."
         },
         {
-          "title": "Performans Raporlama ve Optimizasyon",
-          "description": "Gelişmiş paneller, atıf modelleri ve sürekli denemelerle çevik karar verme süreçleri ve sürdürülebilir performans artırımı."
+          "title": "Performance Reporting and Optimization",
+          "description": "Agile decision-making processes and sustainable performance improvement with advanced dashboards, attribution models and continuous experiments."
         }
       ],
       "metrics": {
-        "title": "Büyümeyi Şekillendiren Üç Optimizasyon Alanı",
+        "title": "Three Optimization Areas That Shape Growth",
         "items": [
           {
-            "title": "Edinme Maliyeti (CPA)",
-            "description": "Veriye dayalı optimizasyon, yaratıcı varyasyon testleri ve yapay zekâ destekli hedefleme ile edinme maliyetlerini sürdürülebilir şekilde aşağı çekiyoruz."
+            "title": "Cost Per Acquisition (CPA)",
+            "description": "We sustainably reduce acquisition costs with data-driven optimization, creative variation tests and AI-powered targeting."
           },
           {
-            "title": "Dönüşüm Hızı",
-            "description": "Kullanıcı yolculuğunu medya stratejisiyle hizalayarak, ilk temas anından satın alma anına kadar dönüşüm akışını hızlandırıyoruz."
+            "title": "Conversion Rate",
+            "description": "By aligning the user journey with media strategy, we accelerate the conversion flow from first touch to purchase."
           },
           {
-            "title": "Yaşam Boyu Değer (LTV)",
-            "description": "Kitle içgörüsüne dayalı segmentasyon, yeniden hedefleme ve satış arttırıcı dokunuşlarla müşteri değerini uzun vadede artırıyoruz."
+            "title": "Lifetime Value (LTV)",
+            "description": "We increase customer value in the long term with audience insight-based segmentation, retargeting and upselling touches."
           }
         ]
       },
       "cta": {
-        "title": "Bir sonraki kampanyanı Join x Ads ile planla.",
-        "description": "Dijital reklam stratejinizi güçlendirelim, büyüme hedeflerinize ulaşmanız için ölçülebilir sonuçlar yaratalım.",
-        "button": "Hemen Teklif Al"
+        "title": "Plan your next campaign with Join x Ads.",
+        "description": "Let's strengthen your digital advertising strategy, create measurable results to reach your growth goals.",
+        "button": "Get a Quote Now"
       }
     },
     "joinLabAi": {
       "seo": {
-        "title": "Join AI Lab | Web Geliştirme ve AI Çözümleri",
-        "description": "Join AI Lab; kurumsal web siteleri, e-ticaret otomasyonları, AI ajanları ve veri entegrasyonları geliştirir."
+        "title": "Join AI Lab | Web Development and AI Solutions",
+        "description": "Join AI Lab develops corporate websites, e-commerce automations, AI agents and data integrations."
       },
       "hero": {
-        "title": "Tasarım, kod ve yapay zeka",
-        "subtitle": "Kurumsal platformlardan AI otomasyonlarına geleceğe hazır deneyimler kurguluyoruz.",
-        "description": "Markalarla birlikte otomasyon ve yapay zeka ile güçlenen web ekosistemleri tasarlıyor, geliştiriyor ve sürekli iyileştiriyoruz."
+        "title": "Design, code and artificial intelligence",
+        "subtitle": "We design future-ready experiences from corporate platforms to AI automations.",
+        "description": "We design, develop and continuously improve web ecosystems powered by automation and artificial intelligence together with brands."
       },
       "services": [
         {
-          "title": "Web Geliştirme UI/UX Tasarım ve optimizasyon",
-          "description": "Performans ve ölçeklenebilirlik odaklı kurumsal ve dinamik web siteleri."
+          "title": "Web Development UI/UX Design and optimization",
+          "description": "Performance and scalability focused corporate and dynamic websites."
         },
         {
-          "title": "E-ticaret otomasyonları",
-          "description": "İş akışlarını, ürün yönetimini ve müşteri yolculuğunu otomatikleştiren çözümler."
+          "title": "E-commerce automations",
+          "description": "Solutions that automate workflows, product management and customer journey."
         },
         {
-          "title": "AI ajanları ve chatbot’lar",
-          "description": "Özelleştirilmiş ajan çatıları ve entegre sohbet deneyimleri."
+          "title": "AI agents and chatbots",
+          "description": "Customized agent frameworks and integrated chat experiences."
         },
         {
-          "title": "Veri otomasyonları ve entegrasyonlar",
-          "description": "Takımlar arası veri akışını sağlayan ETL hatları, panolar ve veri ürünleri."
+          "title": "Data automations and integrations",
+          "description": "ETL pipelines, dashboards and data products that enable cross-team data flow."
         }
       ],
       "process": {
-        "title": "Nasıl çalışıyoruz",
+        "title": "How we work",
         "steps": [
           {
-            "title": "Keşif",
-            "description": "İş hedeflerini, kullanıcı senaryolarını ve yapay zekânın gerçek değer katacağı alanları birlikte netleştiriyoruz."
+            "title": "Discovery",
+            "description": "We clarify business goals, user scenarios and areas where artificial intelligence will add real value together."
           },
           {
-            "title": "Tasarım",
-            "description": "Web/mobil deneyimi, kullanıcı akışlarını ve AI etkileşimlerini (chatbotlar, ajanlar, öneri sistemleri vb.) uçtan uca kurguluyoruz."
+            "title": "Design",
+            "description": "We design end-to-end web/mobile experience, user flows and AI interactions (chatbots, agents, recommendation systems, etc.)."
           },
           {
-            "title": "Geliştirme",
-            "description": "Modern teknoloji stack'iyle uygulamayı kodluyor, LLM/API entegrasyonlarını ve veri katmanını güvenli şekilde hayata geçiriyoruz."
+            "title": "Development",
+            "description": "We code the application with modern technology stack, safely implement LLM/API integrations and data layer."
           },
           {
-            "title": "Otomasyon & Entegrasyon",
-            "description": "CRM, ödeme sistemleri, üçüncü parti servisler ve otomasyon platformlarıyla (n8n vb.) arka planda çalışan akıllı iş akışları kuruyoruz."
+            "title": "Automation & Integration",
+            "description": "We set up intelligent workflows working in the background with CRM, payment systems, third-party services and automation platforms (n8n, etc.)."
           },
           {
-            "title": "Optimizasyon",
-            "description": "Kullanım verilerini takip ederek modelleri, akışları ve arayüzü düzenli olarak iyileştiriyor; yeni AI senaryoları ekleyerek sistemi sürekli geliştiriyoruz."
+            "title": "Optimization",
+            "description": "We regularly improve models, flows and interface by tracking usage data; continuously develop the system by adding new AI scenarios."
           }
         ]
       },
       "mobile": {
-        "title": "Mobil Uygulama Deneyimleri",
-        "description": "Kullanıcı odaklı tasarım ve gelişmiş teknoloji ile mobil uygulamalarınızı hayata geçiriyoruz. iOS ve Android platformlarında performanslı, güvenli ve kullanıcı dostu çözümler sunuyoruz."
+        "title": "Mobile Application Experiences",
+        "description": "We bring your mobile applications to life with user-centric design and advanced technology. We offer performant, secure and user-friendly solutions on iOS and Android platforms."
       },
       "cta": {
-        "title": "Yeni dijital ürününü birlikte inşa edelim.",
-        "description": "Brieften bahset, web veya AI çözümünü birlikte kurgulayalım.",
-        "button": "Web/iOS Proje Teklifi Al"
+        "title": "Let's build your new digital product together.",
+        "description": "Talk about your brief, let's design your web or AI solution together.",
+        "button": "Get Web/iOS Project Quote"
       }
     },
     "joinEscapes": {
@@ -1281,32 +1366,32 @@
         }
       },
       "cta": {
-        "title": "Join Escapes ile destinasyonları keşfet.",
-        "description": "Rehber koleksiyonlarını, editoryal hikayeleri ve iş birliği fırsatlarını incele.",
-        "button": "Join Escapes’i ziyaret et"
+        "title": "Discover destinations with Join Escapes.",
+        "description": "Explore guide collections, editorial stories and collaboration opportunities.",
+        "button": "Visit Join Escapes"
       }
     }
   },
   "contact": {
     "seo": {
-      "title": "Join PR Group ile iletişime geç",
-      "description": "Join PR Group ile iletişim, kreatif, sosyal medya, reklam, AI veya seyahat projeleri için bağlantı kurun."
+      "title": "Get in touch with Join PR Group",
+      "description": "Connect with Join PR Group for communication, creative, social media, advertising, AI or travel projects."
     },
     "hero": {
-      "title": "Birlikte fark yaratalım.",
-      "description": "Hedeflerini ve projeni paylaş, Join ekibi 24 saat içinde seninle iletişime geçsin."
+      "title": "Let's make a difference together.",
+      "description": "Share your goals and project, Join team will contact you within 24 hours."
     },
     "form": {
-      "name": "Ad Soyad",
-      "company": "Şirket",
-      "email": "E-posta",
-      "phone": "Telefon",
-      "topic": "Konu",
-      "message": "Mesaj",
-      "topicPlaceholder": "Hizmeti seçin",
-      "messagePlaceholder": "Projeni veya hedefini anlat...",
-      "submit": "Mesaj gönder",
-      "success": "Teşekkürler! En kısa sürede dönüş yapacağız."
+      "name": "Full Name",
+      "company": "Company",
+      "email": "Email",
+      "phone": "Phone",
+      "topic": "Topic",
+      "message": "Message",
+      "topicPlaceholder": "Select service",
+      "messagePlaceholder": "Describe your project or goal...",
+      "submit": "Send message",
+      "success": "Thank you! We will get back to you as soon as possible."
     },
     "topics": [
       "Join PR",
@@ -1315,7 +1400,7 @@
       "Join Ads",
       "Join Lab AI",
       "Join Escapes",
-      "Diğer"
+      "Other"
     ]
   }
 }

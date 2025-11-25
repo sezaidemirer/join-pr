@@ -75,7 +75,7 @@ export function HomeView() {
           <div className="space-y-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-lg shadow-slate-200/60 sm:p-8">
             <span className="text-xs font-semibold uppercase tracking-[0.4em] text-teal-500">{about.title}</span>
             <div className="space-y-4">
-              <h2 className="text-[2.4rem] font-semibold leading-tight text-slate-900 md:text-[3.2rem]">{about.subtitle}</h2>
+              <h2 className="text-[1.9rem] font-semibold leading-tight text-slate-900 md:text-[2.6rem]">{about.subtitle}</h2>
               <p className="text-base text-slate-600 md:text-lg">{about.description}</p>
             </div>
           </div>

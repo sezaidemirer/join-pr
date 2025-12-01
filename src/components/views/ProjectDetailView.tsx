@@ -203,7 +203,7 @@ export function ProjectDetailView({ projectSlug, subProjectIndex = 0 }: ProjectD
         <div className="rounded-3xl border border-white/10 bg-zinc-950/70 p-8 shadow-xl">
           <h2 className="mb-6 text-2xl font-semibold text-white">{translations.common.project.pressReflections}</h2>
           <div className="space-y-4">
-            {pressArticles.map((article, idx) => (
+            {pressArticles.map((article: { title: string; category: string; description: string; image?: string }, idx: number) => (
               <div
                 key={idx}
                 className="group rounded-2xl border border-white/5 bg-zinc-900/50 p-4 transition-all hover:border-teal-500/30 hover:bg-zinc-900"

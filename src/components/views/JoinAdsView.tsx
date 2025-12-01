@@ -41,6 +41,33 @@ export function JoinAdsView() {
         </div>
       </section>
 
+      <section className="space-y-6 rounded-3xl border border-white/10 bg-zinc-950/70 p-8 md:p-10">
+        <h2 className="text-3xl font-semibold text-white md:text-4xl">{page.about.title}</h2>
+        <div className="grid gap-8 md:grid-cols-2 md:items-start">
+          <div className="prose prose-invert max-w-none">
+            <p className="whitespace-pre-line text-base leading-relaxed text-zinc-300 sm:text-lg">
+              {page.about.description}
+            </p>
+          </div>
+          <div className="relative aspect-video w-full overflow-hidden rounded-2xl">
+            {page.about.videoUrl ? (
+              <iframe
+                className="absolute inset-0 h-full w-full"
+                src={page.about.videoUrl}
+                title={page.about.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                loading="lazy"
+              />
+            ) : (
+              <div className="flex h-full w-full items-center justify-center bg-zinc-800/50">
+                <p className="text-zinc-400">Video eklenecek</p>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
       <section className="space-y-8">
         <h2 className="text-3xl font-semibold text-white md:text-4xl">{translations.common.menu.joinAds}</h2>
         <div className="grid gap-6 md:grid-cols-2">

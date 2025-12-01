@@ -20,9 +20,10 @@
     "footer": {
       "title": "Let's create bold stories together.",
       "addressLabel": "Address",
-      "address": "Maslak Mah. Ahi Evran Cad. No:6, Sarıyer / Istanbul",
+      "address": "Dikilitaş Mah, Hakkı Yekten Caddesi Selenium Plaza No:10/N Kat:6, 34351 Beşiktaş/İstanbul",
       "emailLabel": "Email",
       "phoneLabel": "Phone",
+      "phone": "0 (212) 381 86 56",
       "newsletterTitle": "Newsletter",
       "newsletterDescription": "Get curated insights, projects and opportunities from the Join ecosystem delivered to your inbox.",
       "newsletterPlaceholder": "Enter your email address",
@@ -205,8 +206,8 @@
           "subProjects": [
             {
               "title": "Sharm El Sheikh - Project 1",
-              "videoUrl": "https://www.youtube.com/embed/A_8z2fGlgKY",
-              "videoId": "A_8z2fGlgKY",
+              "videoUrl": "https://www.youtube.com/embed/yKVqZNb5p-s",
+              "videoId": "yKVqZNb5p-s",
               "participants": [
                 {
                   "name": "Cem Özkan",
@@ -317,8 +318,8 @@
             },
             {
               "title": "Sharm El Sheikh - Project 3",
-              "videoUrl": "https://www.youtube.com/embed/A_8z2fGlgKY",
-              "videoId": "A_8z2fGlgKY",
+              "videoUrl": "https://www.youtube.com/embed/BjvRTrv_35w",
+              "videoId": "BjvRTrv_35w",
               "participants": [
                 {
                   "name": "Zeynep Yılmaz",
@@ -428,8 +429,8 @@
             },
             {
               "title": "Sharm El Sheikh - Project 5",
-              "videoUrl": "https://www.youtube.com/embed/A_8z2fGlgKY",
-              "videoId": "A_8z2fGlgKY",
+              "videoUrl": "https://www.youtube.com/embed/jA57OToKvAg",
+              "videoId": "jA57OToKvAg",
               "participants": [
                 {
                   "name": "Fatma Aksoy",
@@ -1128,7 +1129,7 @@
         }
       ],
       "portfolio": {
-        "title": "Selected productions",
+        "title": "Photo Gallery",
         "items": [
           { "title": "Rixos Premium Qetaifan Island North", "image": "/creative_page_galery1.jpg" },
           { "title": "Four Seasons Hotel Bahrain Bay", "image": "/creative_page_galery2.jpg" },
@@ -1137,6 +1138,44 @@
           { "title": "AJet Airlines", "image": "/creative_page_galery5.jpg" },
           { "title": "Jennifer Lopez Up All Night 2025 Egypt", "image": "/creative_page_galery6.jpg" }
         ]
+      },
+      "shorts": {
+        "title": "Shorts Videos",
+        "description": "We embrace the vertical format that the digital world has adopted, producing effective vertical video content designed in the most screen-appropriate format for brands. From production to creativity, from editing to broadcasting, we offer innovative solutions that master the dynamics of the vertical world throughout all processes.",
+        "items": [
+          { "videoId": "4ev7EgpMA80", "title": "Video 1" },
+          { "videoId": "Ndl6uBv5-R0", "title": "Video 2" },
+          { "videoId": "WAy4EBBaAu0", "title": "Video 3" },
+          { "videoId": "YSK4kWuAslQ", "title": "Video 4" },
+          { "videoId": "hPuHEpYYyTU", "title": "Video 5" },
+          { "videoId": "Mc1he2_Yebk", "title": "Video 6" },
+          { "videoId": "bXMsKFtzq6Q", "title": "Video 7" },
+          { "videoId": "Hnx4FnPuduA", "title": "Video 8" },
+          { "videoId": "N0NBaj0o-qc", "title": "Video 9" }
+        ]
+      },
+      "videoPortfolio": {
+        "title": "Video Portfolio",
+        "description": "We transform brands' stories into compelling visual experiences through our wide range of creative production work, from destination promotions to hotel advertising films, from fashion and lifestyle productions to restaurant concept videos.",
+        "items": [
+          { "videoId": "yKVqZNb5p-s", "title": "Video 1" },
+          { "videoId": "BjvRTrv_35w", "title": "Video 2" },
+          { "videoId": "pJy_mcZRxDY", "title": "Video 3" },
+          { "videoId": "6qv5e5n5mCg", "title": "Video 4" },
+          { "videoId": "FLNg5aQb9rk", "title": "Video 5" },
+          { "videoId": "Gi6HNtO6ofY", "title": "Video 6" },
+          { "videoId": "0lST4vj-Ja8", "title": "Video 7" },
+          { "videoId": "Ec2gB_FgtSk", "title": "Video 8" },
+          { "videoId": "4cquC9a4B_E", "title": "Video 9" },
+          { "videoId": "IvKE_WSd4Ec", "title": "Video 10" },
+          { "videoId": "v6WBSvXz8cQ", "title": "Video 11" },
+          { "videoId": "A_8z2fGlgKY", "title": "Video 12" },
+          { "videoId": "jA57OToKvAg", "title": "Video 13" }
+        ]
+      },
+      "about": {
+        "title": "Join Creative – Creative Strategy, Production and Content Ecosystem",
+        "description": "Join Creative is a creative production and content studio that transforms brands' stories into a modern, striking, and compelling visual language. We offer high-standard creative solutions to brands across a wide range, from commercial films to social media content, from fashion & lifestyle productions to hotel and destination promotions.\n\nOur creative team creates a holistic experience that increases brands' communication power by managing end-to-end processes including concept development, scriptwriting, art direction, photography & video production, post-production, and digital content design."
       },
       "cta": {
         "title": "Live your next creative production experience with Join\u00A0x\u00A0Creative.",
@@ -1173,23 +1212,23 @@
         }
       },
       "process": {
-        "title": "Süreç adımlarımız",
+        "title": "Our Process Steps",
         "steps": [
           {
-            "title": "Analiz",
-            "description": "Mevcut performans incelemesi, rakip haritalaması ve fırsat puanlaması."
+            "title": "Analysis",
+            "description": "We listen to you, clearly identify your brand's needs, and lay the foundation for your roadmap."
           },
           {
-            "title": "Strateji",
-            "description": "Kanal mimarisi, hikaye alanları ve ölçüm planı."
+            "title": "Strategy",
+            "description": "Based on identified needs, we create your social media strategy, establish channel architecture, and prepare the measurement framework."
           },
           {
-            "title": "Uygulama",
-            "description": "Yayınlama, topluluk aktivasyonu ve ücretli medya."
+            "title": "Implementation",
+            "description": "We prepare a custom dashboard where you can monitor and manage all your social media channels from one place. Then we activate content and publishing processes."
           },
           {
             "title": "Optimization",
-            "description": "Insights, test plans and quarterly innovation sprints."
+            "description": "We operate a continuous improvement cycle with performance insights, test plans, and innovation sprints, advancing results every quarter."
           }
         ]
       },
@@ -1219,6 +1258,11 @@
         "title": "Digital Advertising Management & Performance Marketing",
         "subtitle": "Integrated media strategies on Google, Meta and emerging platforms.",
         "description": "We build measurable programs tailored to your acquisition, conversion and loyalty goals."
+      },
+      "about": {
+        "title": "Join Ads – Digital Advertising Management and Performance Marketing",
+        "description": "Join Ads is a performance-focused advertising management subsidiary that designs integrated media strategies on Google, Meta, TikTok, YouTube, and programmatic platforms to accelerate brands' digital growth. With our data-driven approach, we build scalable campaign models tailored to your acquisition, conversion, and loyalty goals.\n\nWe achieve sustainable results in search, display, video, discovery, and social media campaigns through advanced algorithms, proper audience architecture, and creative variation tests; managing brands' advertising investments with maximum efficiency.",
+        "videoUrl": ""
       },
       "services": [
         {
@@ -1270,6 +1314,10 @@
         "title": "Design, code and artificial intelligence",
         "subtitle": "We design future-ready experiences from corporate platforms to AI automations.",
         "description": "We design, develop and continuously improve web ecosystems powered by automation and artificial intelligence together with brands."
+      },
+      "about": {
+        "title": "Join AI Lab – AI-Powered Web, Mobile and Automation Solutions",
+        "description": "Join AI Lab is an innovative technology subsidiary that brings together artificial intelligence, modern software technologies, and automation platforms to accelerate brands' digital transformation. We offer end-to-end solutions in web development, UI/UX design, mobile application development, AI agents, chatbots, data integrations, and workflow automations.\n\nFrom corporate companies to e-commerce brands, from travel agencies to the insurance sector, we design, develop, and continuously improve high-performance websites, user-friendly mobile experiences, and LLM-based automation systems across a wide spectrum.\n\nWe accelerate businesses' processes and prepare their digital operations for the future with holistic solutions such as modern technology stack, LLM/API integrations, n8n automations, data products, CRM integrations, AI-powered content management, secure infrastructure, and scalable system design."
       },
       "services": [
         {
@@ -1330,25 +1378,35 @@
         "description": "Join Escapes; seyahat rehberleri, destinasyon hikayeleri, seçilmiş deneyimler ve influencer seyahatleri sunar."
       },
       "hero": {
-        "title": "Türkiye’nin en çok okunan yeni nesil seyahat içerik platformu.",
+        "title": "Türkiye'nin en çok okunan yeni nesil seyahat içerik platformu.",
         "subtitle": "Destinasyonları kapsayan rehberler, deneyimler ve editoryal yolculuklar.",
         "description": "Seyahat severleri, içerik üreticilerini ve destinasyonları etkileyici hikayeler ve deneysel iş birlikleriyle buluşturuyoruz."
+      },
+      "about": {
+        "title": "Join Escapes",
+        "description": "Join Escapes is a strategic subsidiary that expands Join PR's expertise in tourism, destination communication, and global travel experiences. It promotes destinations, hotels, and gastronomic experiences around the world through a modern editorial approach and strong visual storytelling.\n\nThrough influencer collaborations, celebrity activations, video productions, and content-focused campaigns, it aims to increase destination awareness, strengthen travel motivation, and elevate brands' global visibility.\n\nJoin Escapes specializes in travel journalism, creative content production, destination PR, brand experiences, and concept campaigns tailored for tourism brands, offering holistic communication support to the industry.\n\nIn short:\n\nJoin PR's strategic communication power combines with Join Escapes' discovery vision — creating an impressive travel communication ecosystem for brands."
       },
       "sections": {
         "destinations": {
           "title": "Öne çıkan destinasyonlar",
           "items": [
             {
-              "title": "Ege kaçamakları",
-              "description": "Gizli koylar, butik konaklamalar ve gastronomi rotaları."
+              "title": "Laucala Island, Fiji – Celebrities' Tropical Paradise",
+              "description": "Laucala Island, one of Fiji's most special islands, is an ultra-luxury vacation destination owned by the founder of Red Bull...",
+              "image": "/öne çıkan 1.webp",
+              "link": "https://www.joinescapes.com/sanat-ve-cemiyet/destinasyon/celebrity/laucala-island-fiji-unlulerin-tropik-cenneti"
             },
             {
-              "title": "Kapadokya gökyüzü",
-              "description": "Balon yolculukları, mağara süitleri ve gün doğumu ritüelleri."
+              "title": "Havana, Cuba Cultural Tour – The Colorful Heart of the Caribbean",
+              "description": "With its colonial architecture, colorful streets, and salsa rhythms, Havana is one of the most attractive cities in the Caribbean in 2025. Here's a detailed Havana travel guide...",
+              "image": "/öne_çıkan_2.webp",
+              "link": "https://www.joinescapes.com/sehir-molalari/kultur-ve-miras/sehirmolalari/havana-kuba-kultur-turu-karayiplerin-renkli-kalbi-"
             },
             {
-              "title": "Klasiklerin ötesinde İstanbul",
-              "description": "Yaratıcı mahalleler, kültür rotaları ve gastronomi sırları."
+              "title": "Affordable International Routes from Turkey: Economic Escapes to New Adventures",
+              "description": "Even when plane tickets are at sky-high prices, you don't have to give up on your international travel dreams...",
+              "image": "/öne_çıkan_3.png",
+              "link": "https://www.joinescapes.com/seyahat-rehberi/turkiyeden-ucuza-uculabilecek-yurt-disi-rotalar-yeni-maceralara-ekonomik-kacislar"
             }
           ]
         },

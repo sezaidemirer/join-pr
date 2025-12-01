@@ -20,9 +20,10 @@
     "footer": {
       "title": "Birlikte cesur hikayeler yaratalım.",
       "addressLabel": "Adres",
-      "address": "Maslak Mah. Ahi Evran Cad. No:6, Sarıyer / İstanbul",
+      "address": "Dikilitaş Mah, Hakkı Yekten Caddesi Selenium Plaza No:10/N Kat:6, 34351 Beşiktaş/İstanbul",
       "emailLabel": "E-posta",
       "phoneLabel": "Telefon",
+      "phone": "0 (212) 381 86 56",
       "newsletterTitle": "Bülten",
       "newsletterDescription": "Join ekosisteminden seçilmiş içgörüler, projeler ve fırsatlar e-postanıza gelsin.",
       "newsletterPlaceholder": "E-posta adresinizi girin",
@@ -205,8 +206,8 @@
           "subProjects": [
             {
               "title": "Sharm El Sheikh - Proje 1",
-              "videoUrl": "https://www.youtube.com/embed/A_8z2fGlgKY",
-              "videoId": "A_8z2fGlgKY",
+              "videoUrl": "https://www.youtube.com/embed/yKVqZNb5p-s",
+              "videoId": "yKVqZNb5p-s",
               "participants": [
                 {
                   "name": "Cem Özkan",
@@ -317,8 +318,8 @@
             },
             {
               "title": "Sharm El Sheikh - Proje 3",
-              "videoUrl": "https://www.youtube.com/embed/A_8z2fGlgKY",
-              "videoId": "A_8z2fGlgKY",
+              "videoUrl": "https://www.youtube.com/embed/BjvRTrv_35w",
+              "videoId": "BjvRTrv_35w",
               "participants": [
                 {
                   "name": "Zeynep Yılmaz",
@@ -428,8 +429,8 @@
             },
             {
               "title": "Sharm El Sheikh - Proje 5",
-              "videoUrl": "https://www.youtube.com/embed/A_8z2fGlgKY",
-              "videoId": "A_8z2fGlgKY",
+              "videoUrl": "https://www.youtube.com/embed/jA57OToKvAg",
+              "videoId": "jA57OToKvAg",
               "participants": [
                 {
                   "name": "Fatma Aksoy",
@@ -1128,7 +1129,7 @@
         }
       ],
       "portfolio": {
-        "title": "Seçili prodüksiyonlar",
+        "title": "Foto Galeri",
         "items": [
           { "title": "Rixos Premium Qetaifan Island North", "image": "/creative_page_galery1.jpg" },
           { "title": "Four Seasons Hotel Bahrain Bay", "image": "/creative_page_galery2.jpg" },
@@ -1137,6 +1138,44 @@
           { "title": "AJet Havayolları", "image": "/creative_page_galery5.jpg" },
           { "title": "Jennifer Lopez Up All Night 2025 Egypt", "image": "/creative_page_galery6.jpg" }
         ]
+      },
+      "shorts": {
+        "title": "Shorts Videolar",
+        "description": "Dijital dünyanın benimsediği dikey formatı merkezimize alıyor, markalar için ekrana en uygun biçimde tasarlanmış etkili dikey video içerikleri üretiyoruz. Üretimden kreatife, kurgudan yayına kadar tüm süreçlerde dikey dünyanın dinamiklerine hâkim, yenilikçi çözümler sunuyoruz.",
+        "items": [
+          { "videoId": "4ev7EgpMA80", "title": "Video 1" },
+          { "videoId": "Ndl6uBv5-R0", "title": "Video 2" },
+          { "videoId": "WAy4EBBaAu0", "title": "Video 3" },
+          { "videoId": "YSK4kWuAslQ", "title": "Video 4" },
+          { "videoId": "hPuHEpYYyTU", "title": "Video 5" },
+          { "videoId": "Mc1he2_Yebk", "title": "Video 6" },
+          { "videoId": "bXMsKFtzq6Q", "title": "Video 7" },
+          { "videoId": "Hnx4FnPuduA", "title": "Video 8" },
+          { "videoId": "N0NBaj0o-qc", "title": "Video 9" }
+        ]
+      },
+      "videoPortfolio": {
+        "title": "Video Portfolio",
+        "description": "Destinasyon tanıtımlarından otel reklam filmlerine, moda ve lifestyle prodüksiyonlarından restoran konsept videolarına uzanan geniş yelpazedeki yaratıcı prodüksiyon çalışmalarımızla markaların hikâyelerini etkileyici bir görsel deneyime dönüştürüyoruz.",
+        "items": [
+          { "videoId": "yKVqZNb5p-s", "title": "Video 1" },
+          { "videoId": "BjvRTrv_35w", "title": "Video 2" },
+          { "videoId": "pJy_mcZRxDY", "title": "Video 3" },
+          { "videoId": "6qv5e5n5mCg", "title": "Video 4" },
+          { "videoId": "FLNg5aQb9rk", "title": "Video 5" },
+          { "videoId": "Gi6HNtO6ofY", "title": "Video 6" },
+          { "videoId": "0lST4vj-Ja8", "title": "Video 7" },
+          { "videoId": "Ec2gB_FgtSk", "title": "Video 8" },
+          { "videoId": "4cquC9a4B_E", "title": "Video 9" },
+          { "videoId": "IvKE_WSd4Ec", "title": "Video 10" },
+          { "videoId": "v6WBSvXz8cQ", "title": "Video 11" },
+          { "videoId": "A_8z2fGlgKY", "title": "Video 12" },
+          { "videoId": "jA57OToKvAg", "title": "Video 13" }
+        ]
+      },
+      "about": {
+        "title": "Join Creative – Yaratıcı Strateji, Prodüksiyon ve İçerik Ekosistemi",
+        "description": "Join Creative, markaların hikâyelerini modern, çarpıcı ve etkileyici bir görsel dile dönüştüren yaratıcı prodüksiyon ve içerik stüdyosudur. Reklam filmlerinden sosyal medya içeriklerine, moda & lifestyle prodüksiyonlarından otel ve destinasyon tanıtımlarına kadar geniş bir alanda markalara yüksek standartlarda kreatif çözümler sunuyoruz.\n\nKreatif ekibimiz; konsept geliştirme, senaryo yazımı, sanat yönetimi, fotoğraf & video prodüksiyonu, post prodüksiyon ve dijital içerik tasarımı süreçlerini uçtan uca yöneterek markaların iletişim gücünü artıran bütünsel bir deneyim yaratır."
       },
       "cta": {
         "title": "Bir sonraki kreatif prodüksiyon deneyimini Join\u00A0x\u00A0Creative ile yaşa.",
@@ -1177,19 +1216,19 @@
         "steps": [
           {
             "title": "Analiz",
-            "description": "Mevcut performans incelemesi, rakip haritalaması ve fırsat puanlaması."
+            "description": "Sizi dinliyor, markanızın ihtiyaçlarını net şekilde tespit ediyor ve yol haritasının temelini oluşturuyoruz."
           },
           {
             "title": "Strateji",
-            "description": "Kanal mimarisi, hikaye alanları ve ölçüm planı."
+            "description": "Belirlenen ihtiyaçlar doğrultusunda sosyal medya stratejinizi oluşturuyor, kanal mimarisini kuruyor ve ölçümleme çerçevesini hazırlıyoruz."
           },
           {
             "title": "Uygulama",
-            "description": "Yayınlama, topluluk aktivasyonu ve ücretli medya."
+            "description": "Tüm sosyal medya kanallarınızı tek bir yerden izleyip yönetebileceğiniz özel bir dashboard hazırlıyoruz. Ardından içerik ve yayın süreçlerini devreye alıyoruz."
           },
           {
             "title": "Optimizasyon",
-            "description": "İçgörüler, test planları ve üç aylık inovasyon sprintleri."
+            "description": "Performans içgörüleri, test planları ve inovasyon sprintleriyle sürekli gelişim döngüsünü işletiyor, sonuçları her çeyrekte ileri taşıyoruz."
           }
         ]
       },
@@ -1219,6 +1258,11 @@
         "title": "Dijital Reklam Yönetimi & Performans Pazarlaması",
         "subtitle": "Google, Meta ve yeni platformlarda entegre medya stratejileri.",
         "description": "Satın alma, dönüşüm ve sadakat hedeflerinize uygun ölçülebilir programlar kuruyoruz."
+      },
+      "about": {
+        "title": "Join Ads – Dijital Reklam Yönetimi ve Performans Pazarlaması",
+        "description": "Join Ads, markaların dijital büyümesini hızlandırmak için Google, Meta, TikTok, YouTube ve programatik platformlarda entegre medya stratejileri tasarlayan performans odaklı bir reklam yönetim iştirakidir. Veri analizine dayalı yaklaşımımızla satın alma, dönüşüm ve sadakat hedeflerinize uygun ölçeklenebilir kampanya modelleri kurguluyoruz.\n\nArama, görüntülü, video, keşif ve sosyal medya kampanyalarında gelişmiş algoritmalar, doğru kitle mimarisi ve yaratıcı varyasyon testleriyle sürdürülebilir sonuçlar elde ediyor; markaların reklam yatırımlarını maksimum verimle yönetiyoruz.",
+        "videoUrl": ""
       },
       "services": [
         {
@@ -1270,6 +1314,10 @@
         "title": "Tasarım, kod ve yapay zeka",
         "subtitle": "Kurumsal platformlardan AI otomasyonlarına geleceğe hazır deneyimler kurguluyoruz.",
         "description": "Markalarla birlikte otomasyon ve yapay zeka ile güçlenen web ekosistemleri tasarlıyor, geliştiriyor ve sürekli iyileştiriyoruz."
+      },
+      "about": {
+        "title": "Join AI Lab – Yapay Zeka Destekli Web, Mobil ve Otomasyon Çözümleri",
+        "description": "Join AI Lab, markaların dijital dönüşümünü hızlandırmak için yapay zekâ, modern yazılım teknolojileri ve otomasyon platformlarını bir araya getiren yenilikçi bir teknoloji iştirakidir. Web geliştirme, UI/UX tasarım, mobil uygulama geliştirme, AI ajanları, chatbot'lar, veri entegrasyonları ve iş akışı otomasyonlarında uçtan uca çözümler sunuyoruz.\n\nKurumsal şirketlerden e-ticaret markalarına, seyahat acentelerinden sigorta sektörüne kadar geniş bir yelpazede; yüksek performanslı web siteleri, kullanıcı dostu mobil deneyimler ve LLM tabanlı otomasyon sistemleri tasarlıyor, geliştiriyor ve sürekli iyileştiriyoruz.\n\nModern teknoloji stack'i, LLM/API entegrasyonları, n8n otomasyonları, veri ürünleri, CRM entegrasyonları, AI destekli içerik yönetimi, güvenli altyapı ve ölçeklenebilir sistem tasarımı gibi bütünsel çözümlerle işletmelerin iş süreçlerini hızlandırıyor ve dijital operasyonlarını geleceğe hazırlıyoruz."
       },
       "services": [
         {
@@ -1330,25 +1378,35 @@
         "description": "Join Escapes; seyahat rehberleri, destinasyon hikayeleri, seçilmiş deneyimler ve influencer seyahatleri sunar."
       },
       "hero": {
-        "title": "Türkiye’nin en çok okunan yeni nesil seyahat içerik platformu.",
+        "title": "Türkiye'nin en çok okunan yeni nesil seyahat içerik platformu.",
         "subtitle": "Destinasyonları kapsayan rehberler, deneyimler ve editoryal yolculuklar.",
         "description": "Seyahat severleri, içerik üreticilerini ve destinasyonları etkileyici hikayeler ve deneysel iş birlikleriyle buluşturuyoruz."
+      },
+      "about": {
+        "title": "Join Escapes",
+        "description": "Join Escapes, Join PR'ın turizm, destinasyon iletişimi ve küresel seyahat deneyimi alanındaki uzmanlığını genişleten stratejik bir iştirakidir. Dünyanın dört bir yanındaki destinasyonları, otelleri ve gastronomi deneyimlerini modern bir editoryal yaklaşım ve güçlü bir görsel hikâye anlatımıyla tanıtır.\n\nInfluencer iş birlikleri, celebrity aktivasyonları, video prodüksiyonları ve içerik odaklı kampanyalarla destinasyonların bilinirliğini artırmayı, seyahat motivasyonunu güçlendirmeyi ve markaların global görünürlüğünü yükseltmeyi hedefler.\n\nJoin Escapes; seyahat haberciliği, yaratıcı içerik üretimi, destinasyon PR'ı, marka deneyimleri ve turizm markalarına özel konsept kampanyalar alanlarında uzmanlaşarak sektöre bütünsel bir iletişim desteği sunar.\n\nKısacası:\n\nJoin PR'ın stratejik iletişim gücü, Join Escapes'in keşif vizyonu ile birleşiyor — markalar için etkileyici bir seyahat iletişimi ekosistemi yaratıyoruz."
       },
       "sections": {
         "destinations": {
           "title": "Öne çıkan destinasyonlar",
           "items": [
             {
-              "title": "Ege kaçamakları",
-              "description": "Gizli koylar, butik konaklamalar ve gastronomi rotaları."
+              "title": "Laucala Island, Fiji – Ünlülerin Tropik Cenneti",
+              "description": "Fiji'nin en özel adalarından Laucala Island, Red Bull'un kurucusuna ait ultra lüks bir tatil destinasyonu...",
+              "image": "/öne çıkan 1.webp",
+              "link": "https://www.joinescapes.com/sanat-ve-cemiyet/destinasyon/celebrity/laucala-island-fiji-unlulerin-tropik-cenneti"
             },
             {
-              "title": "Kapadokya gökyüzü",
-              "description": "Balon yolculukları, mağara süitleri ve gün doğumu ritüelleri."
+              "title": "Havana, Küba Kültür Turu – Karayiplerin Renkli Kalbi",
+              "description": "Kolonyal mimarisi, renkli sokakları ve salsa ritimleriyle Havana, 2025'te Karayiplerin en cazip şehirlerinden biri. İşte detaylı Havana gezi rehberi...",
+              "image": "/öne_çıkan_2.webp",
+              "link": "https://www.joinescapes.com/sehir-molalari/kultur-ve-miras/sehirmolalari/havana-kuba-kultur-turu-karayiplerin-renkli-kalbi-"
             },
             {
-              "title": "Klasiklerin ötesinde İstanbul",
-              "description": "Yaratıcı mahalleler, kültür rotaları ve gastronomi sırları."
+              "title": "Türkiye'den Ucuza Uçulabilecek Yurt Dışı Rotalar: Yeni Maceralara Ekonomik Kaçışlar",
+              "description": "Uçak biletlerinin ateş pahası olduğu dönemlerde bile yurt dışı hayallerinden vazgeçmek zorunda değilsin...",
+              "image": "/öne_çıkan_3.png",
+              "link": "https://www.joinescapes.com/seyahat-rehberi/turkiyeden-ucuza-uculabilecek-yurt-disi-rotalar-yeni-maceralara-ekonomik-kacislar"
             }
           ]
         },

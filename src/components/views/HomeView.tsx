@@ -84,8 +84,8 @@ export function HomeView() {
               <div className="relative w-full pt-[56.25%]">
                 <iframe
                   className="absolute inset-0 h-full w-full rounded-2xl"
-                  src="https://www.youtube.com/embed/jA57OToKvAg"
-                  title="Join PR video"
+                  src="https://www.youtube.com/embed/yKVqZNb5p-s"
+                  title="Jennifer Lopez - Join PR video"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                   loading="lazy"

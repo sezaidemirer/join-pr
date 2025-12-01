@@ -37,10 +37,10 @@ export function Footer() {
                 {footer.addressLabel}: <span className="text-white">{footer.address}</span>
               </div>
               <div className="rounded-full border border-white/10 px-4 py-2 backdrop-blur">
-                {footer.emailLabel}: <a href="mailto:hello@joinpr.co" className="text-white hover:underline">hello@joinpr.co</a>
+                {footer.emailLabel}: <a href="mailto:info@joinpr.com.tr" className="text-white hover:underline">info@joinpr.com.tr</a>
               </div>
               <div className="rounded-full border border-white/10 px-4 py-2 backdrop-blur">
-                {footer.phoneLabel}: <a href="tel:+902125554433" className="text-white hover:underline">+90 212 555 44 33</a>
+                {footer.phoneLabel}: <a href="tel:+902123818656" className="text-white hover:underline">{footer.phone || "0 (212) 381 86 56"}</a>
               </div>
             </div>
           </div>

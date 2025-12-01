@@ -115,14 +115,14 @@ export function ContactView() {
             </p>
             <p>
               <span className="font-medium text-white">{translations.common.footer.emailLabel}:</span>{' '}
-              <a href="mailto:hello@joinpr.co" className="text-sky-300 hover:underline">
-                hello@joinpr.co
+              <a href="mailto:info@joinpr.com.tr" className="text-sky-300 hover:underline">
+                info@joinpr.com.tr
               </a>
             </p>
             <p>
               <span className="font-medium text-white">{translations.common.footer.phoneLabel}:</span>{' '}
-              <a href="tel:+902125554433" className="text-sky-300 hover:underline">
-                +90 212 555 44 33
+              <a href="tel:+902123818656" className="text-sky-300 hover:underline">
+                {translations.common.footer.phone || "0 (212) 381 86 56"}
               </a>
             </p>
           </div>

@@ -2,8 +2,8 @@
 const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig = {
-  output: 'export', // GitHub Pages için static export gerekli
-  basePath: '/join-pr', // GitHub Pages için basePath
+  output: isProd ? 'export' : undefined, // Sadece production'da static export
+  basePath: isProd ? '/join-pr' : '', // Development'ta basePath yok
   images: {
     unoptimized: true,
   },

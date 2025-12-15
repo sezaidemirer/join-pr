@@ -1,17 +1,28 @@
 import type { Metadata } from 'next';
 
-import en from '@/locales/en.json';
 import { JoinLabAiView } from '@/components/views/JoinLabAiView';
+import { getLocale, getMetadataForLocale } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: en.pages.joinLabAi.seo.title,
-  description: en.pages.joinLabAi.seo.description,
-  openGraph: {
-    title: en.pages.joinLabAi.seo.title,
-    description: en.pages.joinLabAi.seo.description,
-    url: 'https://www.joinpr.com/join-lab-ai',
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  
+  return getMetadataForLocale(
+    locale,
+    '/join-lab-ai',
+    'pages.joinLabAi.seo',
+    [
+      'web development',
+      'AI solutions',
+      'e-commerce automation',
+      'AI agents',
+      'chatbots',
+      'mobile app development',
+      'UI/UX design',
+      'data integration',
+      'Join AI Lab',
+    ]
+  );
+}
 
 export default function JoinLabAiPage() {
   return <JoinLabAiView />;

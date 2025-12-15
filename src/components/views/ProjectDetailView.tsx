@@ -4,11 +4,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { useLanguage } from '@/context/LanguageContext';
 
 const BASE_PATH = process.env.NODE_ENV === 'production' ? '/join-pr' : '';
+
+const slugify = (text: string) =>
+  text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
 
 interface ProjectDetailViewProps {
   projectSlug: string;
@@ -21,6 +29,7 @@ export function ProjectDetailView({ projectSlug, subProjectIndex = 0 }: ProjectD
   const [activeSubProjectIndex] = useState(subProjectIndex);
   const [activeGalleryIndex, setActiveGalleryIndex] = useState(0);
   const [activeReportIndex, setActiveReportIndex] = useState(0);
+  const [isReportModalOpen, setIsReportModalOpen] = useState(false);
 
   const projects = translations.homepage.projects;
   const casesData = translations.homepage.cases;
@@ -29,13 +38,30 @@ export function ProjectDetailView({ projectSlug, subProjectIndex = 0 }: ProjectD
   // Projeyi bul
   const projectData = Object.values(projects.items).find((item: any) => item.slug === projectSlug) as any;
 
+  // Proje değiştiğinde slider indekslerini sıfırla
+  useEffect(() => {
+    setActiveGalleryIndex(0);
+    setActiveReportIndex(0);
+  }, [activeSubProjectIndex]);
+
+  // ESC tuşu ile modal kapatma
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isReportModalOpen) {
+        setIsReportModalOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, [isReportModalOpen]);
+
   if (!projectData) {
     return (
       <div className="flex min-h-screen items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white">Proje bulunamadı</h1>
+          <h1 className="text-4xl font-bold text-white">{translations.common.project.projectNotFound}</h1>
           <Link href="/" className="mt-4 inline-block text-teal-400 hover:text-teal-300">
-            Ana sayfaya dön
+            {translations.common.project.returnToHome}
           </Link>
         </div>
       </div>
@@ -46,9 +72,14 @@ export function ProjectDetailView({ projectSlug, subProjectIndex = 0 }: ProjectD
   const subProjects = projectData.subProjects || [];
   const hasMultipleProjects = subProjects.length > 1;
   const currentProject = subProjects.length > 0 ? subProjects[activeSubProjectIndex] : projectData;
+  // Rapor görselleri tek sayfa: sadece ilk görseli göster
+  const rawReportImages = currentProject.report?.images || [];
+  const reportImages = rawReportImages.length ? [rawReportImages[0]] : [];
   
   // Her alt projenin kendi basın yansımaları varsa kullan, yoksa default kullan
   const pressArticles = currentProject.press || defaultPressArticles;
+  // Foto galeri geçici olarak gizli (ileride açılacak)
+  const showGallery = false;
 
   const handlePrevProject = () => {
     const newIndex = activeSubProjectIndex === 0 ? subProjects.length - 1 : activeSubProjectIndex - 1;
@@ -115,7 +146,7 @@ export function ProjectDetailView({ projectSlug, subProjectIndex = 0 }: ProjectD
               onClick={handlePrevProject}
               className="absolute left-4 top-1/2 -translate-y-1/2 flex h-16 w-16 items-center justify-center rounded-full bg-teal-500 text-white shadow-2xl shadow-teal-500/50 transition-all hover:bg-teal-600 hover:scale-110"
               style={{ zIndex: 9999 }}
-              aria-label="Önceki proje"
+              aria-label={translations.common.project.previousProject}
             >
               <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M15 19l-7-7 7-7" />
@@ -125,7 +156,7 @@ export function ProjectDetailView({ projectSlug, subProjectIndex = 0 }: ProjectD
               onClick={handleNextProject}
               className="absolute right-4 top-1/2 -translate-y-1/2 flex h-16 w-16 items-center justify-center rounded-full bg-teal-500 text-white shadow-2xl shadow-teal-500/50 transition-all hover:bg-teal-600 hover:scale-110"
               style={{ zIndex: 9999 }}
-              aria-label="Sonraki proje"
+              aria-label={translations.common.project.nextProject}
             >
               <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
@@ -146,8 +177,21 @@ export function ProjectDetailView({ projectSlug, subProjectIndex = 0 }: ProjectD
                 key={idx}
                 className="flex items-center gap-4 rounded-2xl border border-white/5 bg-zinc-900/50 p-4 transition-all hover:border-teal-500/30 hover:bg-zinc-900"
               >
-                <div className="h-16 w-16 flex-shrink-0 rounded-full border-2 border-teal-500/50 bg-gradient-to-br from-teal-400 to-blue-500 flex items-center justify-center text-2xl font-bold text-white shadow-lg shadow-teal-500/20">
+                <div className="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-full border-2 border-teal-500/50 shadow-lg shadow-teal-500/20">
+                  {participant.image ? (
+                    <Image
+                      src={`${BASE_PATH}${participant.image}`}
+                      alt={participant.name}
+                      fill
+                      className="object-cover"
+                      sizes="64px"
+                      unoptimized
+                    />
+                  ) : (
+                    <div className="h-full w-full bg-gradient-to-br from-teal-400 to-blue-500 flex items-center justify-center text-2xl font-bold text-white">
                   {participant.name.charAt(0)}
+                    </div>
+                  )}
                 </div>
                 <div className="flex-1">
                   <h3 className="font-semibold text-white">{participant.name}</h3>
@@ -203,34 +247,38 @@ export function ProjectDetailView({ projectSlug, subProjectIndex = 0 }: ProjectD
         <div className="rounded-3xl border border-white/10 bg-zinc-950/70 p-8 shadow-xl">
           <h2 className="mb-6 text-2xl font-semibold text-white">{translations.common.project.pressReflections}</h2>
           <div className="space-y-4">
-            {pressArticles.map((article: { title: string; category: string; description: string; image?: string }, idx: number) => (
-              <div
-                key={idx}
-                className="group rounded-2xl border border-white/5 bg-zinc-900/50 p-4 transition-all hover:border-teal-500/30 hover:bg-zinc-900"
-              >
-                <div className="flex gap-4">
-                  {article.image && (
-                    <div className="h-20 w-20 flex-shrink-0 overflow-hidden rounded-lg">
-                      <Image
-                        src={`${BASE_PATH}${article.image}`}
-                        alt={article.title}
-                        width={80}
-                        height={80}
-                        unoptimized
-                        className="h-full w-full object-cover transition-transform group-hover:scale-110"
-                      />
+            {pressArticles.map((article: { title: string; category: string; description: string; image?: string }, idx: number) => {
+              const articleSlug = slugify(article.title);
+              return (
+                <Link
+                  key={idx}
+                  href={`/haber/${articleSlug}`}
+                  className="group block rounded-2xl border border-white/5 bg-zinc-900/50 p-4 transition-all hover:border-teal-500/30 hover:bg-zinc-900"
+                >
+                  <div className="flex gap-4">
+                    {article.image && (
+                      <div className="h-20 w-20 flex-shrink-0 overflow-hidden rounded-lg">
+                        <Image
+                          src={`${BASE_PATH}${article.image}`}
+                          alt={article.title}
+                          width={80}
+                          height={80}
+                          unoptimized
+                          className="h-full w-full object-cover transition-transform group-hover:scale-110"
+                        />
+                      </div>
+                    )}
+                    <div className="flex-1">
+                      <span className="mb-1 inline-block text-xs font-semibold uppercase tracking-wider text-teal-400">
+                        {article.category}
+                      </span>
+                      <h3 className="font-semibold text-white line-clamp-2">{article.title}</h3>
+                      <p className="mt-1 text-sm text-zinc-400 line-clamp-2">{article.description}</p>
                     </div>
-                  )}
-                  <div className="flex-1">
-                    <span className="mb-1 inline-block text-xs font-semibold uppercase tracking-wider text-teal-400">
-                      {article.category}
-                    </span>
-                    <h3 className="font-semibold text-white line-clamp-2">{article.title}</h3>
-                    <p className="mt-1 text-sm text-zinc-400 line-clamp-2">{article.description}</p>
                   </div>
-                </div>
-              </div>
-            ))}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -243,32 +291,55 @@ export function ProjectDetailView({ projectSlug, subProjectIndex = 0 }: ProjectD
             <div className="absolute inset-0 -z-10 rounded-[32px] bg-gradient-to-r from-teal-500/20 via-sky-500/20 to-blue-600/20 blur-3xl" />
             
             {/* Main Image */}
-            <div className="relative w-full overflow-hidden rounded-3xl border border-white/5">
-              <div className="relative aspect-[4/3] w-full bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center space-y-4">
-                    <span className="text-8xl">📊</span>
-                    <p className="text-zinc-400">Rapor görselleri yakında</p>
-                  </div>
+            <div className="relative w-full">
+              <button
+                onClick={() => setIsReportModalOpen(true)}
+                className="relative w-full overflow-hidden rounded-3xl border border-white/5 transition-all hover:border-teal-500/50 hover:scale-[1.02] cursor-pointer"
+              >
+                <div className="relative aspect-[4/3] w-full bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
+                  {reportImages.length > 0 ? (
+                    <Image
+                      key={`${currentProject.title}-${activeReportIndex}`}
+                      src={`${BASE_PATH}${reportImages[activeReportIndex]}`}
+                      alt={`${currentProject.title || projectData.title} rapor görseli`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      priority={false}
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="text-center space-y-4">
+                        <span className="text-8xl">📊</span>
+                        <p className="text-zinc-400">Rapor görselleri yakında</p>
+                      </div>
+                    </div>
+                  )}
                 </div>
-              </div>
+              </button>
 
               {/* Navigation Arrows */}
               {currentProject.report.images && currentProject.report.images.length > 1 && (
                 <>
                   <button
-                    onClick={() => setActiveReportIndex((prev) => (prev === 0 ? currentProject.report.images.length - 1 : prev - 1))}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition-all hover:bg-black/70 hover:scale-110"
-                    aria-label="Önceki rapor görseli"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setActiveReportIndex((prev) => (prev === 0 ? currentProject.report.images.length - 1 : prev - 1));
+                    }}
+                    className="absolute left-4 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition-all hover:bg-black/70 hover:scale-110 z-10"
+                    aria-label={translations.common.project.previousImage}
                   >
                     <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                     </svg>
                   </button>
                   <button
-                    onClick={() => setActiveReportIndex((prev) => (prev === currentProject.report.images.length - 1 ? 0 : prev + 1))}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition-all hover:bg-black/70 hover:scale-110"
-                    aria-label="Sonraki rapor görseli"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setActiveReportIndex((prev) => (prev === currentProject.report.images.length - 1 ? 0 : prev + 1));
+                    }}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition-all hover:bg-black/70 hover:scale-110 z-10"
+                    aria-label={translations.common.project.nextImage}
                   >
                     <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -279,7 +350,7 @@ export function ProjectDetailView({ projectSlug, subProjectIndex = 0 }: ProjectD
 
               {/* Image Counter */}
               {currentProject.report.images && currentProject.report.images.length > 1 && (
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-black/60 px-3 py-1 text-xs text-white backdrop-blur-sm">
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-black/60 px-3 py-1 text-xs text-white backdrop-blur-sm z-10">
                   {activeReportIndex + 1} / {currentProject.report.images.length}
                 </div>
               )}
@@ -297,7 +368,8 @@ export function ProjectDetailView({ projectSlug, subProjectIndex = 0 }: ProjectD
         </section>
       )}
 
-      {/* Gallery */}
+      {/* Gallery (geçici olarak gizli) */}
+      {showGallery && (
       <section className="space-y-6">
         <h2 className="text-3xl font-semibold text-white">{translations.common.project.photoGallery}</h2>
         
@@ -318,7 +390,7 @@ export function ProjectDetailView({ projectSlug, subProjectIndex = 0 }: ProjectD
               <button
                 onClick={() => setActiveGalleryIndex((prev) => (prev === 0 ? currentProject.gallery.length - 1 : prev - 1))}
                 className="absolute left-4 top-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition-all hover:bg-black/70 hover:scale-110"
-                aria-label="Önceki fotoğraf"
+                aria-label={translations.common.project.previousPhoto}
               >
                 <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -327,7 +399,7 @@ export function ProjectDetailView({ projectSlug, subProjectIndex = 0 }: ProjectD
               <button
                 onClick={() => setActiveGalleryIndex((prev) => (prev === currentProject.gallery.length - 1 ? 0 : prev + 1))}
                 className="absolute right-4 top-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition-all hover:bg-black/70 hover:scale-110"
-                aria-label="Sonraki fotoğraf"
+                aria-label={translations.common.project.nextPhoto}
               >
                 <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -358,6 +430,7 @@ export function ProjectDetailView({ projectSlug, subProjectIndex = 0 }: ProjectD
           </div>
         )}
       </section>
+      )}
 
       {/* CTA */}
       <section className="mx-auto w-full max-w-4xl rounded-3xl border border-white/10 bg-zinc-950/70 px-8 py-12 text-center shadow-xl">
@@ -372,6 +445,53 @@ export function ProjectDetailView({ projectSlug, subProjectIndex = 0 }: ProjectD
           {translations.common.project.contactButton}
         </Link>
       </section>
+
+      {/* Report Image Modal */}
+      {isReportModalOpen && reportImages.length > 0 && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm"
+          onClick={() => setIsReportModalOpen(false)}
+        >
+          <div
+            className="relative max-h-[90vh] max-w-[90vw]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setIsReportModalOpen(false)}
+              className="absolute -right-4 -top-4 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white text-black transition-all hover:bg-zinc-200 hover:scale-110 shadow-lg"
+              aria-label={translations.common.project.close}
+            >
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+
+            {/* Modal Image */}
+            <div className="relative max-h-[90vh] max-w-[90vw] overflow-hidden rounded-2xl">
+              <Image
+                src={`${BASE_PATH}${reportImages[activeReportIndex]}`}
+                alt={`${currentProject.title || projectData.title} rapor görseli`}
+                width={1200}
+                height={900}
+                className="h-auto w-auto max-h-[90vh] max-w-[90vw] object-contain"
+                unoptimized
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

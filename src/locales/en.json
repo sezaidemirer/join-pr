@@ -49,7 +49,16 @@
       "projectCtaDescription": "Contact us for destination PR, influencer campaigns and content production.",
       "contactButton": "Get in Touch",
       "videoComingSoon": "Video coming soon",
-      "photosComingSoon": "Photos coming soon"
+      "photosComingSoon": "Photos coming soon",
+      "projectNotFound": "Project not found",
+      "returnToHome": "Return to home",
+      "previousProject": "Previous project",
+      "nextProject": "Next project",
+      "previousImage": "Previous image",
+      "nextImage": "Next image",
+      "previousPhoto": "Previous photo",
+      "nextPhoto": "Next photo",
+      "close": "Close"
     }
   },
   "loading": {
@@ -146,7 +155,7 @@
         "bahrain": {
           "title": "Bahrain",
           "slug": "bahrain",
-          "description": "Bahreyn'in zengin kültürel mirasını ve modern yaşamını dünyaya tanıtan etkileyici bir medya projesi.",
+          "description": "An impressive media project showcasing Bahrain's rich cultural heritage and modern lifestyle to the world.",
           "subProjects": [
             {
               "title": "Bahrain",
@@ -154,29 +163,35 @@
               "videoId": "v6WBSvXz8cQ",
               "participants": [
                 {
-                  "name": "Ayşe Yılmaz",
-                  "role": "İçerik Üreticisi",
-                  "image": "/participants/ayseyilmaz.jpg",
+                  "name": "Gökçe Akyıldız",
+                  "role": "Actor",
+                  "image": "/gokce_akyıldız.jpeg",
                   "social": {
-                    "instagram": "https://instagram.com/ayseyilmaz",
-                    "youtube": "https://youtube.com/@ayseyilmaz"
+                    "instagram": "https://instagram.com/gokceakyildiz"
                   }
                 },
                 {
-                  "name": "Mehmet Demir",
-                  "role": "Fotoğrafçı",
-                  "image": "/participants/mehmetdemir.jpg",
+                  "name": "Elif Doğan",
+                  "role": "Actor",
+                  "image": "/elif_dogan.jpg",
                   "social": {
-                    "instagram": "https://instagram.com/mehmetdemir",
-                    "twitter": "https://twitter.com/mehmetdemir"
+                    "instagram": "https://instagram.com/elifdogan"
                   }
                 },
                 {
-                  "name": "Zeynep Kaya",
-                  "role": "Video Prodüktör",
-                  "image": "/participants/zeynepkaya.jpg",
+                  "name": "Mehmet Aykaç",
+                  "role": "Actor",
+                  "image": "/mehmet aykac.jpg",
                   "social": {
-                    "instagram": "https://instagram.com/zeynepkaya"
+                    "instagram": "https://instagram.com/mehmetaykac"
+                  }
+                },
+                {
+                  "name": "Emin Günenç",
+                  "role": "Actor",
+                  "image": "/emin_gunenc.jpg",
+                  "social": {
+                    "instagram": "https://instagram.com/emingunenc"
                   }
                 }
               ],
@@ -187,22 +202,27 @@
                 "/projects/bahrain/4.jpg"
               ],
               "report": {
-                "title": "Bahrain Destinasyon PR Kampanyası",
-                "description": "Bahreyn Turizm Otoritesi ile gerçekleştirdiğimiz bu kapsamlı PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını dünyaya tanıttık. 15 influencer ile yapılan iş birliği sonucunda 25M+ organik erişim elde ettik. Proje süresince yerel kültür, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
+                "title": "Bahrain Destination PR Campaign",
+                "description": "In this comprehensive PR campaign with Bahrain Tourism Authority, we showcased the destination's rich cultural heritage and modern lifestyle to the world. Through collaboration with 15 influencers, we achieved 25M+ organic reach. Throughout the project, we created content highlighting local culture, gastronomy and tourism experiences.",
                 "images": [
-                  "/projects/bahrain/report1.jpg",
-                  "/projects/bahrain/report2.jpg",
-                  "/projects/bahrain/report3.jpg",
-                  "/projects/bahrain/report4.jpg"
+                  "/meta_bahrain.jpg"
                 ]
-              }
+              },
+              "press": [
+                {
+                  "title": "Turkish Actors' Bahrain Landing",
+                  "category": "Tourism News",
+                  "description": "Turkish actors participated in events held in Bahrain.",
+                  "image": "/turk-oyunculardan-bahreyn-cikarmasi.webp"
+                }
+              ]
             }
           ]
         },
         "sharm": {
           "title": "Sharm El Sheikh",
           "slug": "sharm-el-sheikh",
-          "description": "Mısır'ın incisi Sharm El Sheikh'in turkuaz suları ve renkli mercan resifleriyle unutulmaz anlar.",
+          "description": "Unforgettable moments with the turquoise waters and colorful coral reefs of Sharm El Sheikh, Egypt's pearl.",
           "subProjects": [
             {
               "title": "Sharm El Sheikh - Project 1",
@@ -210,21 +230,40 @@
               "videoId": "yKVqZNb5p-s",
               "participants": [
                 {
-                  "name": "Cem Özkan",
-                  "role": "Travel Blogger",
-                  "image": "/participants/cemozkan.jpg",
-                  "social": {
-                    "instagram": "https://instagram.com/cemozkan",
-                    "youtube": "https://youtube.com/@cemozkan"
-                  }
+                  "name": "Nesrin Cavadzade",
+                  "role": "Actor",
+                  "image": "/nesrin_cavatzade.jpeg",
+                  "social": {}
                 },
                 {
-                  "name": "Selin Arslan",
-                  "role": "Content Creator",
-                  "image": "/participants/selinarslan.jpg",
-                  "social": {
-                    "instagram": "https://instagram.com/selinarslan"
-                  }
+                  "name": "Burcu Özberk",
+                  "role": "Actor",
+                  "image": "/burcu_ozberk.jpeg",
+                  "social": {}
+                },
+                {
+                  "name": "Müjde Uzman",
+                  "role": "Actor",
+                  "image": "/mujde_uzman.jpeg",
+                  "social": {}
+                },
+                {
+                  "name": "Erdem Kaynarca",
+                  "role": "Actor",
+                  "image": "/erdem_kaynarca.jpeg",
+                  "social": {}
+                },
+                {
+                  "name": "Barış Baktaş",
+                  "role": "Actor",
+                  "image": "/barıs_baktas.jpg",
+                  "social": {}
+                },
+                {
+                  "name": "Gökhan Gürdeyiş",
+                  "role": "Actor",
+                  "image": "/gokhan_gurdeyis.jpeg",
+                  "social": {}
                 }
               ],
               "gallery": [
@@ -236,27 +275,15 @@
                 "title": "Sharm El Sheikh Underwater Experience - Project 1",
                 "description": "In our project at Sharm El Sheikh, Egypt's touristic pearl, we highlighted the unique underwater beauties of the Red Sea and luxury vacation opportunities. We reached 18M+ with 10 content creators.",
                 "images": [
-                  "/projects/sharm/report1.jpg",
-                  "/projects/sharm/report2.jpg",
-                  "/projects/sharm/report3.jpg",
-                  "/projects/sharm/report4.jpg"
+                  "/meta_sharm.jpg"
                 ]
               },
               "press": [
                 {
-                  "title": "Turkish Content Creators in Sharm El Sheikh",
-                  "category": "Tourism News",
-                  "description": "Turkish influencers showcased the beauties of the Red Sea in Join PR's organized Sharm El Sheikh campaign."
-                },
-                {
-                  "title": "Egyptian Tourism in Digital Media",
-                  "category": "Social Media",
-                  "description": "Sharm El Sheikh underwater experience campaign reached 18 million people on social media."
-                },
-                {
-                  "title": "New Trend in Influencer Marketing",
-                  "category": "PR & Communication",
-                  "description": "Influencer collaborations are now one of the most effective tools in the tourism sector for destination promotion."
+                  "title": "Jennifer Lopez Live in Sharm El Sheikh",
+                  "category": "World Tour",
+                  "description": "Jennifer Lopez performed at Rixos Radamis Sharm El Sheikh as part of her 2025 world tour. The concert was organized exclusively for hotel guests to celebrate Rixos' 25th anniversary.",
+                  "image": "/Jennifer_lopez_haber.webp"
                 }
               ]
             },
@@ -266,21 +293,52 @@
               "videoId": "IvKE_WSd4Ec",
               "participants": [
                 {
-                  "name": "Ayşe Kaya",
-                  "role": "Diving Instructor",
-                  "image": "/participants/aysekaya.jpg",
-                  "social": {
-                    "instagram": "https://instagram.com/aysekaya"
-                  }
+                  "name": "İpek Yazıcı",
+                  "role": "Actor",
+                  "image": "/ipek_yazici_.jpg",
+                  "social": {}
                 },
                 {
-                  "name": "Mehmet Demir",
-                  "role": "Underwater Photographer",
-                  "image": "/participants/mehmetdemir.jpg",
-                  "social": {
-                    "instagram": "https://instagram.com/mehmetdemir",
-                    "youtube": "https://youtube.com/@mehmetdemir"
-                  }
+                  "name": "Ufuk Beydemir",
+                  "role": "Actor",
+                  "image": "/ufuk_beydemir.jpg",
+                  "social": {}
+                },
+                {
+                  "name": "Salih Bademci",
+                  "role": "Actor",
+                  "image": "/salih_bademci.jpg",
+                  "social": {}
+                },
+                {
+                  "name": "Alican Okumuş",
+                  "role": "Actor",
+                  "image": "/alican_okumus.jpg",
+                  "social": {}
+                },
+                {
+                  "name": "İlayda Ildır",
+                  "role": "Actor",
+                  "image": "/ilayda_ildir.jpg",
+                  "social": {}
+                },
+                {
+                  "name": "Ayça Ayşin Turan",
+                  "role": "Actor",
+                  "image": "/ayca_Asyin_turan.jpg",
+                  "social": {}
+                },
+                {
+                  "name": "Cansu Tosun",
+                  "role": "Actor",
+                  "image": "/cansu_tosun.jpeg",
+                  "social": {}
+                },
+                {
+                  "name": "Erkan Kolçak Köstendil",
+                  "role": "Actor",
+                  "image": "/erkan_kolcak_kostendil.jpeg",
+                  "social": {}
                 }
               ],
               "gallery": [
@@ -292,27 +350,15 @@
                 "title": "Sharm El Sheikh Luxury Holiday Experience - Project 2",
                 "description": "With our luxury vacation campaign at Sharm El Sheikh's 5-star hotels and premium beaches, we showcased the destination's comfort and entertainment opportunities. We reached 12M+ with 8 influencers.",
                 "images": [
-                  "/projects/sharm/report1.jpg",
-                  "/projects/sharm/report2.jpg",
-                  "/projects/sharm/report3.jpg",
-                  "/projects/sharm/report4.jpg"
+                  "/meta_sharm.jpg"
                 ]
               },
               "press": [
                 {
-                  "title": "Luxury Tourism Campaign in Egypt",
-                  "category": "Tourism",
-                  "description": "Sharm El Sheikh's 5-star hotels were promoted with Turkish influencers, reaching 12 million people."
-                },
-                {
-                  "title": "Premium Holiday Experience on Social Media",
-                  "category": "Lifestyle",
-                  "description": "Wellness and spa experiences were highlighted in Join PR's organized luxury vacation campaign."
-                },
-                {
-                  "title": "Influencer Tourism Collaborations",
-                  "category": "Digital Marketing",
-                  "description": "Luxury hotel chains are discovering ways to reach their target audience with influencer marketing."
+                  "title": "Turkish Actors Gathered at Egypt's Most Famous Resort",
+                  "category": "Experience Campaign",
+                  "description": "Turkish actors gathered at Egypt's most famous holiday resort.",
+                  "image": "/turk-oyuncular-misirin-en-unlu-tatil-merkezinde-bulustu.jpg"
                 }
               ]
             },
@@ -322,20 +368,40 @@
               "videoId": "BjvRTrv_35w",
               "participants": [
                 {
-                  "name": "Zeynep Yılmaz",
-                  "role": "Wellness Expert",
-                  "image": "/participants/zeynepyilmaz.jpg",
-                  "social": {
-                    "instagram": "https://instagram.com/zeynepyilmaz"
-                  }
+                  "name": "Gizem Karaca",
+                  "role": "Actor",
+                  "image": "/gizem_karaca.jpeg",
+                  "social": {}
                 },
                 {
-                  "name": "Burak Öztürk",
-                  "role": "Yoga Instructor",
-                  "image": "/participants/burakozturk.jpg",
-                  "social": {
-                    "instagram": "https://instagram.com/burakozturk"
-                  }
+                  "name": "Cemre Baysel",
+                  "role": "Actor",
+                  "image": "/cemre_baysel.jpg",
+                  "social": {}
+                },
+                {
+                  "name": "Gülper Özdemir",
+                  "role": "Actor",
+                  "image": "/gulper_ozdemir.jpeg",
+                  "social": {}
+                },
+                {
+                  "name": "Gökhan Alkan",
+                  "role": "Actor",
+                  "image": "/gokhan_alkan.jpeg",
+                  "social": {}
+                },
+                {
+                  "name": "Serkay Tütüncü",
+                  "role": "Actor",
+                  "image": "/serkay_turuncu.jpeg",
+                  "social": {}
+                },
+                {
+                  "name": "Mehmet Aykaç",
+                  "role": "Actor",
+                  "image": "/mehmet aykac.jpg",
+                  "social": {}
                 }
               ],
               "gallery": [
@@ -347,27 +413,15 @@
                 "title": "Sharm El Sheikh Wellness & Spa - Project 3",
                 "description": "In this project highlighting the destination's wellness tourism potential, we covered spa, yoga and meditation experiences. We reached 10M+ with 7 wellness influencers.",
                 "images": [
-                  "/projects/sharm/report1.jpg",
-                  "/projects/sharm/report2.jpg",
-                  "/projects/sharm/report3.jpg",
-                  "/projects/sharm/report4.jpg"
+                  "/meta_sharm.jpg"
                 ]
               },
               "press": [
                 {
-                  "title": "Wellness Tourism in Sharm El Sheikh",
-                  "category": "Health & Wellness",
-                  "description": "Yoga and meditation-focused wellness campaign reached 10 million people."
-                },
-                {
-                  "title": "Wellness Trend in the Digital Age",
-                  "category": "Lifestyle",
-                  "description": "Collaborations with wellness influencers support the healthy living trend."
-                },
-                {
-                  "title": "Wellness Tourism Takes Off in Egypt",
-                  "category": "Tourism",
-                  "description": "Sharm El Sheikh spa and wellness centers are standing out with influencer marketing."
+                  "title": "Turkish Actors Enjoyed a Red Sea Vacation",
+                  "category": "Experience Campaign",
+                  "description": "Famous Turkish actors enjoyed a holiday on the shores of the Red Sea.",
+                  "image": "/turk-oyuncular-kizildenizde-tatil-keyfi-yapti-kpk.jpg"
                 }
               ]
             },
@@ -377,21 +431,40 @@
               "videoId": "A_8z2fGlgKY",
               "participants": [
                 {
-                  "name": "Emre Çelik",
-                  "role": "Adventure Athlete",
-                  "image": "/participants/emrecelik.jpg",
-                  "social": {
-                    "instagram": "https://instagram.com/emrecelik"
-                  }
+                  "name": "Feyza Sevil Güngör",
+                  "role": "Actor",
+                  "image": "/feyza_gungor.jpeg",
+                  "social": {}
                 },
                 {
-                  "name": "Deniz Kara",
-                  "role": "Kitesurf Instructor",
-                  "image": "/participants/denizkara.jpg",
-                  "social": {
-                    "instagram": "https://instagram.com/denizkara",
-                    "youtube": "https://youtube.com/@denizkara"
-                  }
+                  "name": "Nilsu Yılmaz",
+                  "role": "Actor",
+                  "image": "/Nilsu_yilmaz.jpeg",
+                  "social": {}
+                },
+                {
+                  "name": "Lilya İrem",
+                  "role": "Actor",
+                  "image": "/lilya_irem.jpeg",
+                  "social": {}
+                },
+                {
+                  "name": "Feyza Güngör",
+                  "role": "Actor",
+                  "image": "/feyza_gungor.jpeg",
+                  "social": {}
+                },
+                {
+                  "name": "Berk Ali Çatal",
+                  "role": "Actor",
+                  "image": "/berk_ali_catgal.jpeg",
+                  "social": {}
+                },
+                {
+                  "name": "Hilmi Cem İntepe",
+                  "role": "Actor",
+                  "image": "/hilmicem_intepe.jpeg",
+                  "social": {}
                 }
               ],
               "gallery": [
@@ -403,50 +476,45 @@
                 "title": "Sharm El Sheikh Water Sports - Project 4",
                 "description": "In our campaign featuring adrenaline-filled activities such as kitesurfing, jet ski and parasailing, we showcased Sharm El Sheikh's water sports paradise. We reached 14M+ with 9 adventure influencers.",
                 "images": [
-                  "/projects/sharm/report1.jpg",
-                  "/projects/sharm/report2.jpg",
-                  "/projects/sharm/report3.jpg",
-                  "/projects/sharm/report4.jpg"
+                  "/meta_sharm.jpg"
                 ]
               },
-              "press": [
-                {
-                  "title": "Adrenaline-Filled Water Sports Campaign",
-                  "category": "Sports & Adventure",
-                  "description": "Kitesurf and jet ski activities reached 14 million people on social media."
-                },
-                {
-                  "title": "Adventure Tourism Goes Digital",
-                  "category": "Tourism",
-                  "description": "Campaigns with water sports influencers appeal to the young generation."
-                },
-                {
-                  "title": "Adrenaline in the Red Sea",
-                  "category": "Lifestyle",
-                  "description": "Sharm El Sheikh stands out as a water sports center, promoted with influencer collaborations."
-                }
-              ]
+              "press": []
             },
-            {
+                {
               "title": "Sharm El Sheikh - Project 5",
-              "videoUrl": "https://www.youtube.com/embed/jA57OToKvAg",
-              "videoId": "jA57OToKvAg",
+              "videoUrl": "https://www.youtube.com/embed/6qv5e5n5mCg",
+              "videoId": "6qv5e5n5mCg",
               "participants": [
                 {
-                  "name": "Fatma Aksoy",
-                  "role": "Gastronomy Writer",
-                  "image": "/participants/fatmaaksoy.jpg",
-                  "social": {
-                    "instagram": "https://instagram.com/fatmaaksoy"
-                  }
+                  "name": "İpek Kayapınar",
+                  "role": "Actor",
+                  "image": "/ipek_kayapinar.jpg",
+                  "social": {}
                 },
                 {
-                  "name": "Ali Yıldırım",
-                  "role": "Chef",
-                  "image": "/participants/aliyildirim.jpg",
-                  "social": {
-                    "instagram": "https://instagram.com/aliyildirim"
-                  }
+                  "name": "Ezgi Şenler",
+                  "role": "Actor",
+                  "image": "/ezgin_senler.jpeg",
+                  "social": {}
+            },
+            {
+                  "name": "Damlacan",
+                  "role": "Actor",
+                  "image": "/damlacan.jpg",
+                  "social": {}
+                },
+                {
+                  "name": "Tolga Mendi",
+                  "role": "Actor",
+                  "image": "/tolga_mendi.jpeg",
+                  "social": {}
+                },
+                {
+                  "name": "Mert Altınışık",
+                  "role": "Actor",
+                  "image": "/mert_altinisik.jpg",
+                  "social": {}
                 }
               ],
               "gallery": [
@@ -458,27 +526,15 @@
                 "title": "Sharm El Sheikh Gastronomy Discovery - Project 5",
                 "description": "With a gastronomy tour covering Egyptian cuisine and international restaurants, we highlighted Sharm El Sheikh's culinary culture. We reached 11M+ with 6 food bloggers.",
                 "images": [
-                  "/projects/sharm/report1.jpg",
-                  "/projects/sharm/report2.jpg",
-                  "/projects/sharm/report3.jpg",
-                  "/projects/sharm/report4.jpg"
+                  "/meta_sharm.jpg"
                 ]
               },
               "press": [
                 {
-                  "title": "Egyptian Cuisine on Social Media",
-                  "category": "Gastronomy",
-                  "description": "Sharm El Sheikh's culinary destination was promoted with food bloggers, reaching 11 million people."
-                },
-                {
-                  "title": "Gastronomy Tourism on the Rise",
-                  "category": "Tourism",
-                  "description": "Collaborations with food influencers are opening a new dimension in destination promotion."
-                },
-                {
-                  "title": "Flavor Discovery in the Digital Age",
-                  "category": "Lifestyle",
-                  "description": "Viral gastronomy content on Instagram and TikTok is fueling the tourism sector."
+                  "title": "Desert Safari in Egypt",
+                  "category": "Experience Design",
+                  "description": "Turkish actors Ayça Ayşin Turan, Salih Bademci, İmer Özgün, Erkan Kolçak Köstendil, Cansu Tosun, İlayda Ildır, İpek Filiz Yazıcı, and Alican Okumuş visited Sharm El Sheikh, Egypt.",
+                  "image": "/misirda-col-safarisi-1.webp"
                 }
               ]
             }
@@ -495,21 +551,34 @@
               "videoId": "Ec2gB_FgtSk",
               "participants": [
                 {
-                  "name": "Burak Yıldız",
-                  "role": "Adventure Athlete",
-                  "image": "/participants/burakyildiz.jpg",
-                  "social": {
-                    "instagram": "https://instagram.com/burakyildiz",
-                    "youtube": "https://youtube.com/@burakyildiz"
-                  }
+                  "name": "Gülper Özdemir",
+                  "role": "Actor",
+                  "image": "/gulper_ozdemir.jpeg",
+                  "social": {}
                 },
                 {
-                  "name": "Deniz Avcı",
-                  "role": "Underwater Photographer",
-                  "image": "/participants/denizavci.jpg",
-                  "social": {
-                    "instagram": "https://instagram.com/denizavci"
-                  }
+                  "name": "Zehra Yılmaz",
+                  "role": "Actor",
+                  "image": "/zehra_yilmaz.jpg",
+                  "social": {}
+                },
+                {
+                  "name": "Ali Yağcı",
+                  "role": "Actor",
+                  "image": "/ali_yagci.jpeg",
+                  "social": {}
+                },
+                {
+                  "name": "Erdem Kaynarca",
+                  "role": "Actor",
+                  "image": "/erdem_kaynarca.jpeg",
+                  "social": {}
+                },
+                {
+                  "name": "Oğuzhan Karbi",
+                  "role": "Actor",
+                  "image": "/oguzhan_karbi.jpg",
+                  "social": {}
                 }
               ],
               "gallery": [
@@ -522,130 +591,17 @@
                 "title": "Hurghada Adventure & Water Sports - Project 1",
                 "description": "In our campaign highlighting Hurghada's dynamic water sports and adventure tourism potential, we combined adrenaline-filled activities with luxury vacation experiences. Collaboration with 12 influencers reached 20M+ people.",
                 "images": [
-                  "/projects/hurghada/report1.jpg",
-                  "/projects/hurghada/report2.jpg",
-                  "/projects/hurghada/report3.jpg",
-                  "/projects/hurghada/report4.jpg"
+                  "/meta_hurghada.jpg"
                 ]
-              }
-            },
-            {
-              "title": "Hurghada - Project 2",
-              "videoUrl": "https://www.youtube.com/embed/Ec2gB_FgtSk",
-              "videoId": "Ec2gB_FgtSk",
-              "participants": [
+              },
+              "press": [
                 {
-                  "name": "Canan Yıldız",
-                  "role": "Diving Expert",
-                  "image": "/participants/cananyildiz.jpg",
-                  "social": {
-                    "instagram": "https://instagram.com/cananyildiz"
-                  }
-                },
-                {
-                  "name": "Kerem Tunç",
-                  "role": "Coral Reef Guide",
-                  "image": "/participants/keremtunc.jpg",
-                  "social": {
-                    "instagram": "https://instagram.com/keremtunc"
-                  }
+                  "title": "Turkish Actors Gathered at Egypt's Most Famous Resort",
+                  "category": "Destination Event",
+                  "description": "Turkey's leading successful actors participated in a four-day event in Sharm El Sheikh, located on the Sinai Peninsula, known as 'Egypt's Pearl'. They expressed their admiration for Sharm El Sheikh's historical and cultural structure, as well as the Red Sea.",
+                  "image": "/turk-oyuncular-misirin-en-unlu-tatil-merkezinde-bulustu.jpg"
                 }
-              ],
-              "gallery": [
-                "/projects/hurghada/1.jpg",
-                "/projects/hurghada/2.jpg",
-                "/projects/hurghada/3.jpg",
-                "/projects/hurghada/4.jpg"
-              ],
-              "report": {
-                "title": "Hurghada Coral Reefs Discovery - Project 2",
-                "description": "In this project featuring the Red Sea's colorful coral reefs and marine life, we highlighted diving and snorkeling experiences. We reached 16M+ with 10 influencers.",
-                "images": [
-                  "/projects/hurghada/report1.jpg",
-                  "/projects/hurghada/report2.jpg",
-                  "/projects/hurghada/report3.jpg",
-                  "/projects/hurghada/report4.jpg"
-                ]
-              }
-            },
-            {
-              "title": "Hurghada - Project 3",
-              "videoUrl": "https://www.youtube.com/embed/Ec2gB_FgtSk",
-              "videoId": "Ec2gB_FgtSk",
-              "participants": [
-                {
-                  "name": "Elif Güneş",
-                  "role": "Desert Safari Guide",
-                  "image": "/participants/elifgunes.jpg",
-                  "social": {
-                    "instagram": "https://instagram.com/elifgunes"
-                  }
-                },
-                {
-                  "name": "Okan Polat",
-                  "role": "Culture Blogger",
-                  "image": "/participants/okanpolat.jpg",
-                  "social": {
-                    "instagram": "https://instagram.com/okanpolat",
-                    "youtube": "https://youtube.com/@okanpolat"
-                  }
-                }
-              ],
-              "gallery": [
-                "/projects/hurghada/1.jpg",
-                "/projects/hurghada/2.jpg",
-                "/projects/hurghada/3.jpg",
-                "/projects/hurghada/4.jpg"
-              ],
-              "report": {
-                "title": "Hurghada Desert Safari Experience - Project 3",
-                "description": "In this campaign showcasing Hurghada's desert tours, quad safari and Bedouin culture, we revealed a different side of the destination. We reached 13M+ with 8 adventure influencers.",
-                "images": [
-                  "/projects/hurghada/report1.jpg",
-                  "/projects/hurghada/report2.jpg",
-                  "/projects/hurghada/report3.jpg",
-                  "/projects/hurghada/report4.jpg"
-                ]
-              }
-            },
-            {
-              "title": "Hurghada - Project 4",
-              "videoUrl": "https://www.youtube.com/embed/Ec2gB_FgtSk",
-              "videoId": "Ec2gB_FgtSk",
-              "participants": [
-                {
-                  "name": "Seda Aydın",
-                  "role": "Luxury Travel Blogger",
-                  "image": "/participants/sedaaydin.jpg",
-                  "social": {
-                    "instagram": "https://instagram.com/sedaaydin"
-                  }
-                },
-                {
-                  "name": "Arda Kılıç",
-                  "role": "Lifestyle Influencer",
-                  "image": "/participants/ardakilic.jpg",
-                  "social": {
-                    "instagram": "https://instagram.com/ardakilic"
-                  }
-                }
-              ],
-              "gallery": [
-                "/projects/hurghada/1.jpg",
-                "/projects/hurghada/2.jpg",
-                "/projects/hurghada/3.jpg",
-                "/projects/hurghada/4.jpg"
-              ],
-              "report": {
-                "title": "Hurghada Luxury Resort Experience - Project 4",
-                "description": "Luxury vacation campaign showcasing Hurghada's 5-star resort hotels, spas and premium beaches. We reached 12M+ with 7 luxury influencers.",
-                "images": [
-                  "/projects/hurghada/report1.jpg",
-                  "/projects/hurghada/report2.jpg",
-                  "/projects/hurghada/report3.jpg",
-                  "/projects/hurghada/report4.jpg"
-                ]
-              }
+              ]
             }
           ]
         },
@@ -660,22 +616,34 @@
               "videoId": "FLNg5aQb9rk",
               "participants": [
                 {
-                  "name": "Elif Şahin",
-                  "role": "Culture Writer",
-                  "image": "/participants/elifsahin.jpg",
-                  "social": {
-                    "instagram": "https://instagram.com/elifsahin",
-                    "twitter": "https://twitter.com/elifsahin"
-                  }
+                  "name": "Seray Kaya",
+                  "role": "Actor",
+                  "image": "/seray_kaya.jpg",
+                  "social": {}
                 },
                 {
-                  "name": "Can Aydın",
-                  "role": "Documentary Director",
-                  "image": "/participants/canaydin.jpg",
-                  "social": {
-                    "instagram": "https://instagram.com/canaydin",
-                    "youtube": "https://youtube.com/@canaydin"
-                  }
+                  "name": "İlayda Ildır",
+                  "role": "Actor",
+                  "image": "/ilayda_ildir.jpg",
+                  "social": {}
+                },
+                {
+                  "name": "Sera Kutlubey",
+                  "role": "Actor",
+                  "image": "/sera_kutlubey_.jpeg",
+                  "social": {}
+                },
+                {
+                  "name": "Alican Okumuş",
+                  "role": "Actor",
+                  "image": "/alican_okumus.jpg",
+                  "social": {}
+                },
+                {
+                  "name": "Ümit Katarcılar",
+                  "role": "Actor",
+                  "image": "/ümit_kantarcilar_.jpeg",
+                  "social": {}
                 }
               ],
               "gallery": [
@@ -687,12 +655,17 @@
                 "title": "Morocco Culture & Gastronomy Discovery",
                 "description": "In this project covering Morocco's magical cities, rich culinary culture and desert landscapes, we presented the destination's authentic beauties to the world. The campaign with 8 influencers reached 15M+. We highlighted Morocco's tourism potential through Marrakech, Fes and Sahara Desert experiences.",
                 "images": [
-                  "/projects/morocco/report1.jpg",
-                  "/projects/morocco/report2.jpg",
-                  "/projects/morocco/report3.jpg",
-                  "/projects/morocco/report4.jpg"
+                  "/meta_morocco.jpg"
                 ]
-              }
+              },
+              "press": [
+                {
+                  "title": "Prontotour celebrated its 30th anniversary in Marrakech.",
+                  "category": "Strategic PR & Experience",
+                  "description": "Prontotour, a trend-setting tour operator in the travel industry, started its 30th anniversary celebrations in Morocco. Famous actors had the opportunity to explore Marrakech.",
+                  "image": "/prontotour-marakeste.jpeg"
+                }
+              ]
             }
           ]
         },
@@ -707,21 +680,28 @@
               "videoId": "pJy_mcZRxDY",
               "participants": [
                 {
-                  "name": "Murat Aksoy",
-                  "role": "History Writer",
-                  "image": "/participants/murataksoy.jpg",
-                  "social": {
-                    "instagram": "https://instagram.com/murataksoy",
-                    "twitter": "https://twitter.com/murataksoy"
-                  }
+                  "name": "Gökçe Akyıldız",
+                  "role": "Actor",
+                  "image": "/gokce_akyıldız.jpeg",
+                  "social": {}
                 },
                 {
-                  "name": "Gamze Eren",
-                  "role": "Photography Artist",
-                  "image": "/participants/gamzeeren.jpg",
-                  "social": {
-                    "instagram": "https://instagram.com/gamzeeren"
-                  }
+                  "name": "Gizem Güneş",
+                  "role": "Actor",
+                  "image": "/gizem_gunes.jpg",
+                  "social": {}
+                },
+                {
+                  "name": "Mehmet Aykaç",
+                  "role": "Actor",
+                  "image": "/mehmet aykac.jpg",
+                  "social": {}
+                },
+                {
+                  "name": "Emin Günenç",
+                  "role": "Actor",
+                  "image": "/emin_gunenc.jpg",
+                  "social": {}
                 }
               ],
               "gallery": [
@@ -734,12 +714,23 @@
                 "title": "Jordan History & Nature Journey",
                 "description": "In this project featuring the ancient beauty of Petra and the mesmerizing desert landscapes of Wadi Rum, we highlighted Jordan's historical and natural wealth. The campaign with 11 influencers reached 22M+. We showcased the destination's diversity through the Dead Sea, Petra and desert camps.",
                 "images": [
-                  "/projects/jordan/report1.jpg",
-                  "/projects/jordan/report2.jpg",
-                  "/projects/jordan/report3.jpg",
-                  "/projects/jordan/report4.jpg"
+                  "/meta_ürdün.jpg"
                 ]
-              }
+              },
+              "press": [
+                {
+                  "title": "Turkish Actors Were Amazed by Jordan",
+                  "category": "Experience Design",
+                  "description": "Turkish actors were fascinated by Petra and Wadi Rum experiences, sharing Jordan's cultural heritage.",
+                  "image": "/turk-dizi-oyunculari-urdun-de.webp"
+                },
+                {
+                  "title": "Jordan Destination Promotion",
+                  "category": "Tourism",
+                  "description": "Jordan's historical and natural richness was introduced to new audiences via a digital campaign.",
+                  "image": "/urdun-destinasyon-tanitimi.webp"
+                }
+              ]
             }
           ]
         },
@@ -754,22 +745,42 @@
               "videoId": "E7dhalAN0zo",
               "participants": [
                 {
-                  "name": "Tolga Çelik",
-                  "role": "Nature Photographer",
-                  "image": "/participants/tolgacelik.jpg",
-                  "social": {
-                    "instagram": "https://instagram.com/tolgacelik",
-                    "youtube": "https://youtube.com/@tolgacelik"
-                  }
+                  "name": "Ali Yağcı",
+                  "role": "Actor",
+                  "image": "/ali_yagci.jpeg",
+                  "social": {}
                 },
                 {
-                  "name": "Pınar Koç",
-                  "role": "Travel Writer",
-                  "image": "/participants/pinarkoc.jpg",
-                  "social": {
-                    "instagram": "https://instagram.com/pinarkoc",
-                    "twitter": "https://twitter.com/pinarkoc"
-                  }
+                  "name": "Mehmet Aykaç",
+                  "role": "Actor",
+                  "image": "/mehmet aykac.jpg",
+                  "social": {}
+                },
+                {
+                  "name": "Gökçe Akyıldız",
+                  "role": "Actor",
+                  "image": "/gokce_akyıldız.jpeg",
+                  "social": {}
+                },
+                {
+                  "name": "Dilara Aksüyek",
+                  "role": "Actor",
+                  "image": "/dilara_aksüyek.jpeg",
+                  "social": {}
+                },
+                {
+                  "name": "Emin Günenç",
+                  "role": "Actor",
+                  "image": "/emin_gunenc.jpg",
+                  "social": {}
+                }
+              ],
+              "press": [
+                {
+                  "title": "Turkish Actors Made a Splash in Montenegro",
+                  "category": "Brand Experience",
+                  "description": "At an event hosted by Regent Porto Montenegro Hotel, Air Montenegro Airlines, Tivat Tourism Promotion Office, and Porto Montenegro, Turkish actors Ali Yağcı, Mehmet Aykaç, Gökçe Akyıldız, Dilara Aksüyek, Emin Günenç, and Join PR founder Ali Saçlı participated.",
+                  "image": "/turk-oyuncular-karadag-039-a-cikarma-yapti-1.webp"
                 }
               ],
               "gallery": [
@@ -781,10 +792,7 @@
                 "title": "Montenegro Adriatic Coast Discovery",
                 "description": "In this project showcasing the magnificent bays, mountain views and historic towns of Montenegro, the hidden paradise of the Adriatic, we shared the destination's unique beauties. Our work with 9 influencers reached 16M+. We discovered Montenegro through the views of Kotor, Budva and Durmitor.",
                 "images": [
-                  "/projects/montenegro/report1.jpg",
-                  "/projects/montenegro/report2.jpg",
-                  "/projects/montenegro/report3.jpg",
-                  "/projects/montenegro/report4.jpg"
+                  "/meta_montenegro.jpg"
                 ]
               }
             }
@@ -906,6 +914,54 @@
       "description": "We work to increase brand value by highlighting our clients' success stories in the press. We provide reliable, effective, innovative communication solutions.",
       "cards": [
         {
+          "title": "Africa Tourism Forum to Take Place at Sharm El Sheikh International Congress Center on May 20-21, 2024",
+          "category": "Tourism & Convention",
+          "description": "Designed by GMT Fuarcılık, the creator of Antalya Tourism Fair, to create added value for the tourism sector and discover and develop new markets, the Africa Tourism Forum will take place at Sharm El Sheikh International Congress Center on May 20-21, 2024.",
+          "image": "/afrika_turizm_forumu_2024_joinpr.jpg"
+        },
+        {
+          "title": "Rixos Radamis Sharm El Sheikh Hosted Enrique Iglesias' Spectacular Performance!",
+          "category": "Concert & Event",
+          "description": "Rixos Egypt Hotels CEO Erkan Yıldırım said the following about the concert: \"Having a world-renowned artist like Iglesias perform on our stage is an indication of how ambitious Rixos Radamis is not only in the hospitality sector but also in the global entertainment industry. This night, where we hosted 6000 people, became a historic milestone for Egyptian tourism and Sharm El Sheikh.\"",
+          "image": "/Enrique_Iglesias_join_pr_rixos_radamis.webp"
+        },
+        {
+          "title": "Hadise Performed for 4 Thousand People in Sharm El Sheikh",
+          "category": "Concert & Event",
+          "description": "Famous artist Hadise met with her fans on the 2nd day of the holiday at Rixos Radamis hotel in Sharm El Sheikh, Egypt's popular vacation destination, during Eid al-Adha. She gave her fans who came from all over the world for the concert an unforgettable night.",
+          "image": "/hadise_konser_sharm_join_pr.jpg"
+        },
+        {
+          "title": "Prontotour Early Reservation Period Begins: Target 60 Thousand Tourists for 2025!",
+          "category": "Tourism & Marketing",
+          "description": "Prontotour, the leading tour operator in tourism, launched its 2025 early reservation campaign with the motto \"Come early and save!\" The first period of the campaign offers a 50% discount opportunity. Travelers benefiting from early reservation can take advantage of installment payment benefits and Prontotour's P Installment options applied in international tours.",
+          "image": "/Prontotour_sezai_demirer_join_pr_erken_rezervasyon.png"
+        },
+        {
+          "title": "Rixos Radamis Convention Center Opens",
+          "category": "Tourism & Convention",
+          "description": "Sharm El Sheikh, which has attracted intense interest from Turkish guests in recent years with its proximity to Turkey, visa-free travel advantage, and mild four-season climate, will now be not only a vacation destination but also a new meeting center for the business world thanks to the convention center opened by Rixos.",
+          "image": "/Rixos_radamis_kongre_merkezi_join_pr.jpg"
+        },
+        {
+          "title": "Dr. Yücel Sarıaltın: \"We Work to Create Works of Art in the Face and Neck Area\"",
+          "category": "Health & Aesthetics",
+          "description": "With the help of technology, aesthetic operations that help maintain a youthful appearance are becoming more accessible. Face and neck lifting procedures have become popular choices in recent times.",
+          "image": "/dr_yucel_sarialtin_.webp"
+        },
+        {
+          "title": "Rixos Radamis Sharm El Sheikh to Host Michelin-Starred Chefs for 4 Months",
+          "category": "Gastronomy",
+          "description": "The gastronomy world is counting the days to come together in Egypt. Rixos Sharm El Sheikh is preparing to host chefs with Michelin stars, the world's iconic culinary guide.",
+          "image": "/Michelin_Yildizli_Chefs_radamis_join_pr.webp"
+        },
+        {
+          "title": "Jennifer Lopez Live in Sharm El Sheikh",
+          "category": "World Tour",
+          "description": "Jennifer Lopez performed at Rixos Radamis Sharm El Sheikh as part of her 2025 world tour. The concert was organized exclusively for hotel guests to celebrate Rixos' 25th anniversary.",
+          "image": "/Jennifer_lopez_haber.webp"
+        },
+        {
           "title": "Turkish Actors in Egypt",
           "category": "Media & Influencer Campaign",
           "description": "Turkish actors, fascinated by Egypt's historical, touristic and cultural structure and the Red Sea, invited everyone to experience this.",
@@ -924,71 +980,74 @@
           "image": "/prontotour-marakeste.jpeg"
         },
         {
-          "title": "Prontotour Erken Rezervasyonun İlk Dönemini %70 Artışla Tamamladı",
-          "category": "Pazarlama & Satış",
-          "description": "Erken rezervasyonun ilk dönemini yüzde 70 artışla tamamlayan ve ikinci dönemi başlatan Prontotour, yurt içinde yüzde 50, yurt dışında yüzde 40 indirim fırsatları sunuyor.",
+          "title": "Prontotour Completes First Period of Early Reservations with 70% Increase",
+          "category": "Marketing & Sales",
+          "description": "Prontotour, which completed the first period of early reservations with a 70% increase and started the second period, offers 50% discounts for domestic tours and 40% discounts for international tours.",
           "image": "/prontotour-erken-rezervasyonun-ilk-donemini-70-artisla-tamamladi.jpg"
         },
         {
-          "title": "Leaders CXO 14. Buluşma Toplantısı",
-          "category": "Özel Davet",
-          "description": "Leaderscxo Kurucu Başkanı Cenk Dağcı ve Join Pr kurucusu Ali Saçlı ev sahipliğinde sınırlı sayıda katılımcı ve özel davet ile gerçekleştirilen 2022 yılının ilk buluşmasının konukları; Prof. Dr. İlber Ortaylı, Prof. Dr. Uğur Batı...",
+          "title": "Leaders CXO 14th Meeting",
+          "category": "Exclusive Invitation",
+          "description": "The first meeting of 2022, hosted by Leaderscxo Founding President Cenk Dağcı and Join PR founder Ali Saçlı with a limited number of participants and special invitation, featured guests including Prof. Dr. İlber Ortaylı, Prof. Dr. Uğur Batı...",
           "image": "/leaders-cxo-14-bulusma-toplantisi.jpg"
         },
         {
-          "title": "Prontotour, Ünlü Oyuncu ve Influencer’lara Yönelik Bir Dünya Turu Programı Başlatıyor",
-          "category": "Küresel Tur Programı",
-          "description": "Tur şirketi Prontotour, Türkiye’den ünlü oyuncu ve influencer’lara yönelik bir yıl sürecek bir dünya turu programı hazırladığını duyurdu.",
+          "title": "Prontotour Launches World Tour Program for Famous Actors and Influencers",
+          "category": "Global Tour Program",
+          "description": "Tour operator Prontotour announced that it has prepared a year-long world tour program for famous actors and influencers from Turkey.",
           "image": "/prontotour-unlu-oyuncu-ve-influencerlara-yonelik-bir-dunya-turu-programi-baslatiyor.jpg"
         },
         {
-          "title": "Türk Oyuncular Kızıldeniz’de Tatil Keyfi Yaptı",
-          "category": "Deneyimsel Kampanya",
-          "description": "Türk dizi ve film oyuncuları Kızıldeniz kıyısında tatil kenti Hurghada’da tatil keyfi yaptı. Baran Bölükbaşı, Pelin Uluksar, Gizem Güneş, Damlasu İkizoğlu, Ahmet Kayakesen, Oral Özer ve Berna Koraltürk Mısır’ın Hurghada kentini ziyaret etti.",
+          "title": "Turkish Actors Enjoyed Vacation on the Red Sea",
+          "category": "Experiential Campaign",
+          "description": "Turkish TV series and film actors enjoyed a vacation in Hurghada, a resort city on the Red Sea coast. Baran Bölükbaşı, Pelin Uluksar, Gizem Güneş, Damlasu İkizoğlu, Ahmet Kayakesen, Oral Özer and Berna Koraltürk visited Hurghada, Egypt.",
           "image": "/turk-oyuncular-kizildenizde-tatil-keyfi-yapti-kpk.jpg"
         },
         {
-          "title": "Mısır’da Çöl Safarisi",
-          "category": "Deneyim Tasarımı",
-          "description": "Türk oyuncular Ayça Ayşin Turan, Salih Bademci, İmer Özgün, Erkan Kolçak Köstendil, Cansu Tosun, İlayda Ildır, İpek Filiz Yazıcı ve Alican Okumuş, Mısır’da bulunan Şarm El Şeyh kentini ziyaret etti.",
+          "title": "Desert Safari in Egypt",
+          "category": "Experience Design",
+          "description": "Turkish actors Ayça Ayşin Turan, Salih Bademci, İmer Özgün, Erkan Kolçak Köstendil, Cansu Tosun, İlayda Ildır, İpek Filiz Yazıcı and Alican Okumuş visited Sharm El Sheikh, Egypt.",
           "image": "/misirda-col-safarisi-1.webp"
         },
         {
-          "title": "Türk Oyuncular Mısır’ın en ünlü tatil merkezinde buluştu",
-          "category": "Destinasyon Etkinliği",
-          "description": "Türkiye’nin önde gelen başarılı oyuncuları, ‘Mısır’ın İncisi’ Sina Yarımadası’nda bulunan Şarm El Şeyh’te dört gün süren bir etkinliğe katıldı. Şarm El Şeyh’in tarihi, kültürel yapısı ve Kızıldenizi’ne hayran kaldıklarını belirtti.",
+          "title": "Turkish Actors Gathered at Egypt's Most Famous Resort",
+          "category": "Destination Event",
+          "description": "Turkey's leading successful actors participated in a four-day event in Sharm El Sheikh, located on the Sinai Peninsula, known as 'Egypt's Pearl'. They expressed their admiration for Sharm El Sheikh's historical and cultural structure, as well as the Red Sea.",
           "image": "/turk-oyuncular-misirin-en-unlu-tatil-merkezinde-bulustu.jpg"
         },
         {
-          "title": "Türk Oyuncular Ürdün’e Hayran Kaldı",
-          "category": "Destinasyon PR",
-          "description": "Ünlü dizi oyuncuları Gökçe Akyıldız, Mehmet Aykaç, Gizem Güneş ve Emin Günenç Ürdün’de ağırlandı. Ülkenin turistik ve kültürel yapısına hayran kalan Türk oyuncular, rol aldıkları dizi ve sinema projelerinin Ürdün’de beğeni görmesi ve davet edilmelerinden duydukları memnuniyeti dile getirdi.",
+          "title": "Turkish Actors Admired Jordan",
+          "category": "Destination PR",
+          "description": "Famous TV series actors Gökçe Akyıldız, Mehmet Aykaç, Gizem Güneş and Emin Günenç were hosted in Jordan. Turkish actors, who were impressed by the country's tourism and cultural structure, expressed their satisfaction that their TV series and film projects were well-received in Jordan and that they were invited.",
           "image": "/turk-dizi-oyunculari-urdun-de.webp"
         },
         {
-          "title": "Türk Oyuncular Karadağ’a Çıkarma Yaptı",
-          "category": "Marka Deneyimi",
-          "description": "Join PR organizasyonu ile Regent Porto Montenegro Hotel, Air Montenegro Havayolları, Tivat Turizm Tanıtma Ofisi ve Porto Montenegro ev sahipliğinde gerçekleşen davete ünlü oyuncular Ali Yağcı, Mehmet Aykaç, Gökçe Akyıldız, Dilara Aksüyek, Emin Günenç ve Join PR kurucusu Ali Saçlı katıldı.",
+          "title": "Turkish Actors Landed in Montenegro",
+          "category": "Brand Experience",
+          "description": "Famous actors Ali Yağcı, Mehmet Aykaç, Gökçe Akyıldız, Dilara Aksüyek, Emin Günenç and Join PR founder Ali Saçlı attended the invitation hosted by Regent Porto Montenegro Hotel, Air Montenegro Airlines, Tivat Tourism Promotion Office and Porto Montenegro, organized by Join PR.",
           "image": "/turk-oyuncular-karadag-039-a-cikarma-yapti-1.webp"
         },
         {
-          "title": "Ürdün Destinasyon Tanıtımı",
-          "category": "Hedef Pazar Programı",
-          "description": "Ünlü dizi oyuncuları Gökçe Akyıldız, Mehmet Aykaç, Gizem Güneş ve Emin Günenç Ürdün’de ağırlandı. Ülkenin turistik ve kültürel yapısına hayran kalan Türk oyuncular, rol aldıkları dizi ve sinema projelerinin Ürdün’de beğeni görmesi ve davet edilmelerinden duydukları memnuniyeti dile getirdi.",
+          "title": "Jordan Destination Promotion",
+          "category": "Target Market Program",
+          "description": "Famous TV series actors Gökçe Akyıldız, Mehmet Aykaç, Gizem Güneş and Emin Günenç were hosted in Jordan. Turkish actors, who were impressed by the country's tourism and cultural structure, expressed their satisfaction that their TV series and film projects were well-received in Jordan and that they were invited.",
           "image": "/urdun-destinasyon-tanitimi.webp"
         },
         {
-          "title": "Prontotour’un 2024 Erken Rezervasyon Dönemi Başladı",
-          "category": "Kampanya Lansmanı",
-          "description": "Yazseverler, 2024 için tatil planlarını şimdiden yapmaya başladı. Türkiye’nin önde gelen tur operatörü markalarından Prontotour ise tatilciler için yurt dışı, yurt içi ve gemi turlarında ‘Uçak bileti fiyatına tur!’",
+          "title": "Prontotour's 2024 Early Reservation Period Begins",
+          "category": "Campaign Launch",
+          "description": "Travel enthusiasts have already started making vacation plans for 2024. Prontotour, one of Turkey's leading tour operator brands, offers 'Tours at flight ticket prices' for international, domestic and cruise tours.",
           "image": "/prontotourun-erken-rezervasyon-donemi-basladi-1-1.jpg"
         }
       ],
-      "cta": "Tüm Haberleri Görüntüle"
+      "cta": "View All News"
     },
     "clients": {
-      "title": "Birlikte büyüdüğümüz markalar",
-      "description": "Küresel destinasyonlar, yaşam tarzı ikonları, iddialı girişimler ve köklü markalar Join ile entegre iletişim için çalışıyor.",
+      "title": "Brands We Grow With",
+      "description": "Global destinations, lifestyle icons, ambitious ventures and established brands work with Join for integrated communication.",
+      "showMore": "Show More",
+      "showLess": "Show Less",
+      "viewAll": "View All",
       "logos": [
         { "name": "Swissotel Sharm El Sheikh", "image": "/swissotel-logo.jpg" },
         { "name": "Marriott Dead Sea Resort", "image": "/marriott-dead-sea.jpg" },
@@ -997,7 +1056,37 @@
         { "name": "Royal Jordanian", "image": "/royal-jordanian-logo-1.jpg" },
         { "name": "Novu Lab", "image": "/novu-lab-logo.jpg" },
         { "name": "Rixos Premium Seagate", "image": "/rixos-logo.jpg" },
-        { "name": "Prontotour", "image": "/prontotour.jpg" }
+        { "name": "Prontotour", "image": "/prontotour.jpg" },
+        { "name": "Rixos Premium Magawish", "image": "/rixos-logo-1.jpg" },
+        { "name": "Rixos Golf Villas & Suites Sharm El Sheikh", "image": "/rixos-logo-2.jpg" },
+        { "name": "Rixos Sharm El Sheikh", "image": "/rixos-logo-3.jpg" },
+        { "name": "Rixos Premium Alamein", "image": "/rixos-logo-4.jpg" },
+        { "name": "Rixos Radamis Sharm El Sheikh", "image": "/rixos-logo-5.jpg" },
+        { "name": "Rixos Alamein", "image": "/rixos-logo-4.jpg" },
+        { "name": "Club Privé by Rixos Sharm El Sheikh", "image": "/club-prive-logo2.jpg" },
+        { "name": "Vida Beach Resort Marassi Al Bahrain", "image": "/vida-beach-resort.jpg" },
+        { "name": "Nikki Beach", "image": "/nikki-beach-logo-1.jpg" }
+      ]
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "We share insights, trends and experiences about communication, marketing, creative production and digital strategies.",
+      "cta": "View All Blog Posts",
+      "cards": [
+        {
+          "title": "Destination PR Strategies in Europe's Historic Cities",
+          "category": "Destination PR",
+          "description": "Discover how destination PR strategies are shaped in Europe's historic cities with rich cultural heritage and how these cities increase their tourism potential.",
+          "image": "/ucak-bileti-fiyatina-avrupa-turlari.jpg",
+          "link": "/ucak-bileti-fiyatina-avrupa-turlari"
+        },
+        {
+          "title": "Brand Communication in Aesthetics and Wellness Industry",
+          "category": "Brand Communication",
+          "description": "Explore ways to build trust and increase brand value in the aesthetics and wellness industry, examining communication strategies that prioritize customer experience.",
+          "image": "/genclik-mucizesi-yuz-ve-boyun-germe-ameliyatlari.jpg",
+          "link": "/genclik-mucizesi-yuz-ve-boyun-germe-ameliyatlarini-kesfedin"
+        }
       ]
     },
     "about": {
@@ -1157,6 +1246,8 @@
       "videoPortfolio": {
         "title": "Video Portfolio",
         "description": "We transform brands' stories into compelling visual experiences through our wide range of creative production work, from destination promotions to hotel advertising films, from fashion and lifestyle productions to restaurant concept videos.",
+        "showMore": "Show More",
+        "showLess": "Show Less",
         "items": [
           { "videoId": "yKVqZNb5p-s", "title": "Video 1" },
           { "videoId": "BjvRTrv_35w", "title": "Video 2" },
@@ -1238,7 +1329,7 @@
         "button": "Get a Quote Now"
       },
       "media": {
-        "title": "Manage Your Brand's Entire Digital World from One Center with Join Social",
+        "title": "Join Social Enables You to Monitor Your Brand's Entire Digital World from One Center",
         "description": "Join Social, which strengthens your social media strategy with artificial intelligence, automates and professionalizes the entire process from content production to trend tracking, from visual communication language to reporting. It allows you to manage all your platforms from a single smart panel without password sharing and without security vulnerabilities.",
         "items": [
           "Centralized dashboard management",
@@ -1374,13 +1465,13 @@
     },
     "joinEscapes": {
       "seo": {
-        "title": "Join Escapes | Türkiye’nin En Çok Okunan Seyahat İçerik Platformu",
-        "description": "Join Escapes; seyahat rehberleri, destinasyon hikayeleri, seçilmiş deneyimler ve influencer seyahatleri sunar."
+        "title": "Join Escapes | Turkey's Most Read Travel Content Platform",
+        "description": "Join Escapes offers travel guides, destination stories, curated experiences and influencer travels."
       },
       "hero": {
-        "title": "Türkiye'nin en çok okunan yeni nesil seyahat içerik platformu.",
-        "subtitle": "Destinasyonları kapsayan rehberler, deneyimler ve editoryal yolculuklar.",
-        "description": "Seyahat severleri, içerik üreticilerini ve destinasyonları etkileyici hikayeler ve deneysel iş birlikleriyle buluşturuyoruz."
+        "title": "Turkey's most-read next-generation travel content platform.",
+        "subtitle": "Guides covering destinations, experiences and editorial journeys.",
+        "description": "We bring together travel enthusiasts, content creators and destinations through compelling stories and experimental collaborations."
       },
       "about": {
         "title": "Join Escapes",
@@ -1388,7 +1479,7 @@
       },
       "sections": {
         "destinations": {
-          "title": "Öne çıkan destinasyonlar",
+          "title": "Featured Destinations",
           "items": [
             {
               "title": "Laucala Island, Fiji – Celebrities' Tropical Paradise",
@@ -1411,16 +1502,17 @@
           ]
         },
         "editorial": {
-          "title": "Editoryal hikayeler",
+          "title": "Join Escapes Special",
           "items": [
-            "Yeni nesil seyahat trendleri raporu",
-            "Butik otel iş birliği serisi",
-            "Influencer seyahat günlükleri"
+            "Next Generation Travel Trends",
+            "Undiscovered Destinations",
+            "Influencer Travel Diaries",
+            "Select Hotels"
           ]
         },
         "influencers": {
-          "title": "Influencer seyahatleri ve iş birlikleri",
-          "description": "Seçkin hikaye anlatıcıları ve partner destinasyonlarla kurgulanan benzersiz deneyimler."
+          "title": "Influencer Travels and Collaborations",
+          "description": "Through these brand, destination and story-focused collaborations, you can offer inspiring discoveries and lasting impact experiences for your target audience"
         }
       },
       "cta": {

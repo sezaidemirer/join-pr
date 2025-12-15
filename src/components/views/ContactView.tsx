@@ -134,6 +134,40 @@ export function ContactView() {
           </div>
         </aside>
       </section>
+
+      {/* Harita Bölümü */}
+      <section className="rounded-3xl border border-white/10 bg-zinc-950/70 overflow-hidden shadow-lg shadow-black/30">
+        <div className="p-6 border-b border-white/10">
+          <h3 className="text-xl font-semibold text-white mb-2">Konumumuz</h3>
+          <p className="text-sm text-zinc-300">{translations.common.footer.address}</p>
+        </div>
+        <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
+          <iframe
+            src={`https://www.google.com/maps?q=${encodeURIComponent(translations.common.footer.address)}&output=embed&markers=color:red|label:J|${encodeURIComponent(translations.common.footer.address)}`}
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="w-full h-full"
+            title="Join PR Group Konum"
+          />
+          <div className="absolute bottom-4 right-4 z-10">
+            <a
+              href="https://maps.app.goo.gl/G4tLpinm7LXTqRBQ6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-zinc-900 shadow-lg transition-all hover:bg-zinc-100 hover:scale-105"
+            >
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+              {translations.common.cta.viewDetails || 'Haritada Aç'}
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

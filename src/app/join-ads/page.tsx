@@ -1,17 +1,28 @@
 import type { Metadata } from 'next';
 
-import en from '@/locales/en.json';
 import { JoinAdsView } from '@/components/views/JoinAdsView';
+import { getLocale, getMetadataForLocale } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: en.pages.joinAds.seo.title,
-  description: en.pages.joinAds.seo.description,
-  openGraph: {
-    title: en.pages.joinAds.seo.title,
-    description: en.pages.joinAds.seo.description,
-    url: 'https://www.joinpr.com/join-ads',
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  
+  return getMetadataForLocale(
+    locale,
+    '/join-ads',
+    'pages.joinAds.seo',
+    [
+      'performance marketing',
+      'digital advertising',
+      'Google Ads',
+      'Meta Ads',
+      'campaign optimization',
+      'ROAS',
+      'conversion optimization',
+      'media planning',
+      'Join Ads',
+    ]
+  );
+}
 
 export default function JoinAdsPage() {
   return <JoinAdsView />;

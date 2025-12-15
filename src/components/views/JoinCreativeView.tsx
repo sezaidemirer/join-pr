@@ -298,7 +298,7 @@ export function JoinCreativeView() {
                 onClick={() => setShowAllVideos(!showAllVideos)}
                 className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-teal-500 to-blue-600 px-8 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-white shadow-lg shadow-teal-500/30 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-teal-500/50"
               >
-                {showAllVideos ? 'Daha Az Göster' : 'Devamını Gör'}
+                {showAllVideos ? page.videoPortfolio.showLess : page.videoPortfolio.showMore}
               </button>
             </div>
           )}
@@ -328,14 +328,14 @@ export function JoinCreativeView() {
               closeModal();
             }}
             className="absolute right-6 top-6 rounded-full border border-white/20 bg-black/60 px-3 py-1 text-white transition hover:bg-white/20"
-            aria-label="Kapat"
+            aria-label={translations.common.project.close}
           >
             ×
           </button>
           <button
             onClick={showPrev}
             className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full border border-white/20 bg-black/60 px-3 py-2 text-white transition hover:bg-white/20"
-            aria-label="Önceki"
+            aria-label={translations.common.project.previousImage}
           >
             ‹
           </button>
@@ -357,7 +357,7 @@ export function JoinCreativeView() {
           <button
             onClick={showNext}
             className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full border border-white/20 bg-black/60 px-3 py-2 text-white transition hover:bg-white/20"
-            aria-label="Sonraki"
+            aria-label={translations.common.project.nextImage}
           >
             ›
           </button>

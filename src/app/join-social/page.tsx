@@ -1,17 +1,27 @@
 import type { Metadata } from 'next';
 
-import en from '@/locales/en.json';
 import { JoinSocialView } from '@/components/views/JoinSocialView';
+import { getLocale, getMetadataForLocale } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: en.pages.joinSocial.seo.title,
-  description: en.pages.joinSocial.seo.description,
-  openGraph: {
-    title: en.pages.joinSocial.seo.title,
-    description: en.pages.joinSocial.seo.description,
-    url: 'https://www.joinpr.com/join-social',
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  
+  return getMetadataForLocale(
+    locale,
+    '/join-social',
+    'pages.joinSocial.seo',
+    [
+      'social media strategy',
+      'community management',
+      'content calendar',
+      'social media optimization',
+      'social media management',
+      'AI social media',
+      'social media agency',
+      'Join Social',
+    ]
+  );
+}
 
 export default function JoinSocialPage() {
   return <JoinSocialView />;

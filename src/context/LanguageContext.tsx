@@ -65,6 +65,8 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     if (typeof window !== 'undefined') {
       document.documentElement.lang = locale;
       window.localStorage.setItem(STORAGE_KEY, locale);
+      // Cookie'ye de kaydet (metadata için server-side erişim)
+      document.cookie = `${STORAGE_KEY}=${locale}; path=/; max-age=31536000; SameSite=Lax`;
     }
   }, [locale]);
 

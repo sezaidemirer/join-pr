@@ -3,7 +3,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
 import { HeroSlider } from '@/components/HeroSlider';
 import { useLanguage } from '@/context/LanguageContext';
@@ -25,6 +25,7 @@ export function HomeView() {
   const ecosystem = translations.homepage.ecosystem;
   const projects = translations.homepage.projects;
   const cases = translations.homepage.cases;
+  const blog = translations.homepage.blog;
   const about = translations.homepage.about;
   const promo = translations.homepage.promo;
   const ecosystemDescription =
@@ -49,6 +50,16 @@ export function HomeView() {
     [promo],
   );
   const [activePromoIndex, setActivePromoIndex] = useState(0);
+  
+  // Marquee drag/swipe state
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [currentTranslate, setCurrentTranslate] = useState(0);
+  const [prevTranslate, setPrevTranslate] = useState(0);
+  const marqueeRef = useRef<HTMLDivElement>(null);
+  const [isPaused, setIsPaused] = useState(false);
+  const animationId = useRef<number | null>(null);
+  const [showAllLogos, setShowAllLogos] = useState(false);
 
   useEffect(() => {
     if (promoSlides.length <= 1) {
@@ -63,6 +74,106 @@ export function HomeView() {
   useEffect(() => {
     setActivePromoIndex(0);
   }, [promoSlides.length]);
+
+  const slugify = (text: string) =>
+    text
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/ı/g, 'i')
+      .replace(/ğ/g, 'g')
+      .replace(/ü/g, 'u')
+      .replace(/ş/g, 's')
+      .replace(/ö/g, 'o')
+      .replace(/ç/g, 'c')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+
+  // Marquee drag handlers
+  const setPositionFromEvent = (clientX: number) => {
+    const currentPosition = clientX - startX;
+    setCurrentTranslate(prevTranslate + currentPosition);
+  };
+
+  const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!marqueeRef.current) return;
+    setIsDragging(true);
+    setIsPaused(true);
+    setStartX(e.clientX);
+    setPrevTranslate(currentTranslate);
+    if (animationId.current) {
+      cancelAnimationFrame(animationId.current);
+    }
+  };
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!isDragging || !marqueeRef.current) return;
+    e.preventDefault();
+    setPositionFromEvent(e.clientX);
+  };
+
+  const handleMouseUp = () => {
+    if (!isDragging) return;
+    setIsDragging(false);
+    setStartX(0);
+    setPrevTranslate(currentTranslate);
+    // Kullanıcı bıraktıktan 2 saniye sonra animasyona devam et
+    setTimeout(() => {
+      setIsPaused(false);
+      setCurrentTranslate(0);
+      setPrevTranslate(0);
+      if (marqueeRef.current) {
+        marqueeRef.current.style.transform = '';
+      }
+    }, 2000);
+  };
+
+  const handleMouseLeave = () => {
+    if (!isDragging) return;
+    setIsDragging(false);
+    setStartX(0);
+    setPrevTranslate(currentTranslate);
+    setTimeout(() => {
+      setIsPaused(false);
+      setCurrentTranslate(0);
+      setPrevTranslate(0);
+      if (marqueeRef.current) {
+        marqueeRef.current.style.transform = '';
+      }
+    }, 2000);
+  };
+
+  // Touch handlers
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (!marqueeRef.current) return;
+    setIsDragging(true);
+    setIsPaused(true);
+    setStartX(e.touches[0].clientX);
+    setPrevTranslate(currentTranslate);
+    if (animationId.current) {
+      cancelAnimationFrame(animationId.current);
+    }
+  };
+
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (!isDragging || !marqueeRef.current) return;
+    setPositionFromEvent(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!isDragging) return;
+    setIsDragging(false);
+    setStartX(0);
+    setPrevTranslate(currentTranslate);
+    setTimeout(() => {
+      setIsPaused(false);
+      setCurrentTranslate(0);
+      setPrevTranslate(0);
+      if (marqueeRef.current) {
+        marqueeRef.current.style.transform = '';
+      }
+    }, 2000);
+  };
 
   return (
     <div className="flex flex-col gap-16 lg:gap-20">
@@ -299,7 +410,7 @@ export function HomeView() {
           <h2 className="text-3xl font-semibold text-white md:text-4xl">{cases.title}</h2>
           <p className="max-w-2xl text-base text-zinc-400 md:text-lg">{cases.description}</p>
           <Link
-            href="/contact"
+            href="/kategori/haberler"
             className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-teal-200 transition-colors hover:text-white"
           >
             {cases.cta}
@@ -307,12 +418,37 @@ export function HomeView() {
           </Link>
         </div>
         <div className="relative overflow-hidden">
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-zinc-950 via-zinc-950/70 to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-zinc-950 via-zinc-950/70 to-transparent" />
-          <div className="marquee flex min-w-max gap-6 animate-marquee">
-            {marqueeItems.map((card, index) => (
-              <div
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-zinc-950 via-zinc-950/70 to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-zinc-950 via-zinc-950/70 to-transparent z-10" />
+          <div
+            ref={marqueeRef}
+            className={`marquee flex min-w-max gap-6 cursor-grab active:cursor-grabbing select-none ${isPaused ? '' : 'animate-marquee'}`}
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUp}
+            onMouseLeave={handleMouseLeave}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+            style={{
+              transition: isDragging ? 'none' : 'transform 0.3s ease-out',
+              animationPlayState: isPaused ? 'paused' : 'running',
+              ...(isPaused && currentTranslate !== 0 ? { transform: `translateX(${currentTranslate}px)` } : {}),
+            }}
+          >
+            {marqueeItems.map((card, index) => {
+              const slug = slugify(card.title);
+              // "Türk Oyuncular Mısır'ın en ünlü tatil merkezinde buluştu" haberi için direkt external link
+              const isSpecialNews = slug === 'turk-oyuncular-misirin-en-unlu-tatil-merkezinde-bulustu';
+              const href = isSpecialNews 
+                ? 'https://www.iha.com.tr/haber-turk-oyuncular-misirin-en-unlu-tatil-merkezinde-bulustu-1141810'
+                : `/haber/${slug}`;
+              
+              return (
+                <Link
                 key={`${card.title}-${index}`}
+                  href={href}
+                  {...(isSpecialNews ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                 className="group flex w-[320px] flex-shrink-0 flex-col justify-between rounded-3xl border border-white/10 bg-zinc-950/70 p-6 shadow-lg shadow-black/40 transition-transform duration-300 hover:-translate-y-1 hover:border-teal-500/40"
               >
                 <div className="space-y-4">
@@ -332,8 +468,9 @@ export function HomeView() {
                   <h3 className="text-xl font-semibold text-white">{card.title}</h3>
                   <p className="text-sm text-zinc-400">{card.description}</p>
                 </div>
-              </div>
-            ))}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -345,20 +482,91 @@ export function HomeView() {
           <p className="mx-auto max-w-3xl text-sm text-zinc-400 md:text-base">{clients.description}</p>
         </div>
         <div className="grid gap-6 grid-cols-2 sm:grid-cols-3 xl:grid-cols-4">
-          {clientLogos.map((logo) => (
+          {(showAllLogos ? clientLogos : clientLogos.slice(0, 8)).map((logo) => {
+            const isDarkLogo =
+              logo.name.toLowerCase().includes('club privé') || logo.name.toLowerCase().includes('club prive');
+            return (
             <div
               key={logo.name}
-              className="group relative flex h-28 w-28 items-center justify-center justify-self-center overflow-hidden rounded-full border-2 border-sky-400/80 bg-white text-xs font-semibold uppercase tracking-[0.3em] text-zinc-600 shadow-[0_0_25px_rgba(56,189,248,0.45)] transition-all hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(56,189,248,0.7)] sm:h-32 sm:w-32 sm:text-sm"
+                className={`group relative flex h-28 w-28 items-center justify-center justify-self-center overflow-hidden rounded-full border-2 border-sky-400/80 text-xs font-semibold uppercase tracking-[0.3em] shadow-[0_0_25px_rgba(56,189,248,0.45)] transition-all hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(56,189,248,0.7)] sm:h-32 sm:w-32 sm:text-sm ${
+                  isDarkLogo ? 'bg-black text-white' : 'bg-white text-zinc-600'
+                }`}
             >
               <img
                 src={`${BASE_PATH}${logo.image}`}
                 alt={logo.name}
-                className="h-20 w-20 object-contain transition-all duration-300 group-hover:scale-105 sm:h-24 sm:w-24"
+                  className={`object-contain transition-all duration-300 group-hover:scale-105 ${
+                    isDarkLogo ? 'h-24 w-24 sm:h-28 sm:w-28' : 'h-20 w-20 sm:h-24 sm:w-24'
+                  }`}
                 loading="lazy"
               />
               <span className="pointer-events-none absolute inset-0 rounded-full border border-white/5 opacity-0 transition-opacity group-hover:opacity-100" />
             </div>
-          ))}
+            );
+          })}
+        </div>
+        <div className="flex justify-center gap-4">
+          {clientLogos.length > 8 && (
+            <button
+              onClick={() => setShowAllLogos(!showAllLogos)}
+              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-teal-500 to-blue-600 px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-white shadow-lg shadow-teal-500/30 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-teal-500/50"
+            >
+              {showAllLogos ? clients.showLess : clients.showMore}
+            </button>
+          )}
+          <Link
+            href="/isortaklarimiz"
+            className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-white transition-all hover:border-white/40 hover:bg-white/5"
+          >
+            {clients.viewAll}
+          </Link>
+        </div>
+      </section>
+
+      {/* Blog Bölümü */}
+      <section className="relative space-y-10 py-12">
+        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 sm:px-6">
+          <h2 className="text-3xl font-semibold text-white md:text-4xl">{blog.title}</h2>
+          <p className="max-w-2xl text-base text-zinc-400 md:text-lg">{blog.description}</p>
+          <Link
+            href="/kategori/blog"
+            className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-teal-200 transition-colors hover:text-white"
+          >
+            {blog.cta}
+            <span aria-hidden>↗</span>
+          </Link>
+        </div>
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-4 sm:px-6 md:grid-cols-2">
+          {(blog.cards as Array<{ title: string; category: string; description: string; image?: string; link?: string }>).slice(0, 2).map((card, index) => {
+            const href = card.link || '#';
+            
+            return (
+              <Link
+                key={`${card.title}-${index}`}
+                href={href}
+                className="group flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-zinc-950/70 shadow-lg shadow-black/40 transition-all duration-300 hover:-translate-y-1 hover:border-teal-500/40 hover:shadow-glow-teal"
+              >
+                {card.image && (
+                  <div className="relative h-48 w-full overflow-hidden bg-zinc-900">
+                    <Image
+                      src={`${BASE_PATH}${card.image}`}
+                      alt={card.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      unoptimized
+                    />
+                  </div>
+                )}
+                <div className="flex flex-1 flex-col gap-4 p-6">
+                  <span className="text-xs font-semibold uppercase tracking-[0.3em] text-teal-200">{card.category}</span>
+                  <h3 className="text-xl font-semibold text-white line-clamp-2 group-hover:text-teal-100 transition-colors">
+                    {card.title}
+                  </h3>
+                  <p className="flex-1 text-sm text-zinc-400 line-clamp-4">{card.description}</p>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </section>
     </div>

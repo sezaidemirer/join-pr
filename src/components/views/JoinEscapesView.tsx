@@ -18,7 +18,7 @@ export function JoinEscapesView() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(14,165,233,0.2),_transparent_60%)]" />
         <div className="relative flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
           <div className="flex-1 space-y-4">
-            <span className="text-xs font-semibold uppercase tracking-[0.38em] text-sky-200">Join Escapes</span>
+          <span className="text-xs font-semibold uppercase tracking-[0.38em] text-sky-200">Join Escapes</span>
             <h1 className="text-[20px] font-semibold leading-tight text-white sm:text-[22px] md:text-[26px] lg:text-[30px]">
               {page.hero.title}
             </h1>
@@ -88,12 +88,12 @@ export function JoinEscapesView() {
             }
 
             return (
-              <div
-                key={item.title}
-                className="group overflow-hidden rounded-3xl border border-white/10 bg-zinc-900/70 p-6 shadow-lg shadow-black/30 transition-transform hover:-translate-y-1"
-              >
+            <div
+              key={item.title}
+              className="group overflow-hidden rounded-3xl border border-white/10 bg-zinc-900/70 p-6 shadow-lg shadow-black/30 transition-transform hover:-translate-y-1"
+            >
                 {CardContent}
-              </div>
+            </div>
             );
           })}
         </div>
@@ -103,12 +103,53 @@ export function JoinEscapesView() {
         <div className="space-y-6 rounded-3xl border border-white/10 bg-zinc-950/70 p-8">
           <h3 className="text-2xl font-semibold text-white">{page.sections.editorial.title}</h3>
           <ul className="space-y-4 text-sm text-zinc-300">
-            {page.sections.editorial.items.map((item) => (
-              <li key={item} className="flex items-start gap-3">
-                <span className="mt-1 h-2 w-2 rounded-full bg-gradient-to-br from-teal-400 via-sky-500 to-blue-600" />
-                <span>{item}</span>
-              </li>
-            ))}
+            {page.sections.editorial.items.map((item) => {
+              const getLink = (title: string) => {
+                if (title === 'Yeni Nesil Seyahat Trendleri') {
+                  return 'https://joinescapes.com/destinasyonlar';
+                }
+                if (title === 'Keşfedilmemiş Destinasyonlar') {
+                  return 'https://joinescapes.com/sanat-ve-cemiyet';
+                }
+                if (title === 'Influencer Seyahat Günlükleri') {
+                  return 'https://joinescapes.com/yazarlar';
+                }
+                if (title === 'Seçkin Oteller') {
+                  return 'https://joinescapes.com/oteller';
+                }
+                return null;
+              };
+
+              const link = getLink(item);
+              const isClickable = link !== null;
+              const content = (
+                <>
+                  <span className="mt-1 h-2 w-2 rounded-full bg-gradient-to-br from-teal-400 via-sky-500 to-blue-600" />
+                  <span className={isClickable ? 'cursor-pointer transition-colors hover:text-sky-200' : ''}>{item}</span>
+                </>
+              );
+
+              if (isClickable && link) {
+                return (
+                  <li key={item} className="flex items-start gap-3">
+                    <Link
+                      href={link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-start gap-3"
+                    >
+                      {content}
+                    </Link>
+                  </li>
+                );
+              }
+
+              return (
+                <li key={item} className="flex items-start gap-3">
+                  {content}
+                </li>
+              );
+            })}
           </ul>
         </div>
         <div className="rounded-3xl border border-white/10 bg-zinc-950/70 p-8">

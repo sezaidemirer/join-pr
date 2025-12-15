@@ -1,9 +1,9 @@
 import { redirect } from 'next/navigation';
 
 interface ProjectPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -17,8 +17,9 @@ export async function generateStaticParams() {
   ];
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
+export default async function ProjectPage({ params }: ProjectPageProps) {
+  const { slug } = await params;
   // Otomatik olarak ilk alt projeye yönlendir
-  redirect(`/projects/${params.slug}/1`);
+  redirect(`/projects/${slug}/1`);
 }
 

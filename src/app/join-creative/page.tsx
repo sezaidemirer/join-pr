@@ -1,17 +1,28 @@
 import type { Metadata } from 'next';
 
-import en from '@/locales/en.json';
 import { JoinCreativeView } from '@/components/views/JoinCreativeView';
+import { getLocale, getMetadataForLocale } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: en.pages.joinCreative.seo.title,
-  description: en.pages.joinCreative.seo.description,
-  openGraph: {
-    title: en.pages.joinCreative.seo.title,
-    description: en.pages.joinCreative.seo.description,
-    url: 'https://www.joinpr.com/join-creative',
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  
+  return getMetadataForLocale(
+    locale,
+    '/join-creative',
+    'pages.joinCreative.seo',
+    [
+      'digital content production',
+      'commercial films',
+      'photography',
+      'brand stories',
+      'video production',
+      'creative studio',
+      'content creation',
+      'AI visual production',
+      'Join Creative',
+    ]
+  );
+}
 
 export default function JoinCreativePage() {
   return <JoinCreativeView />;

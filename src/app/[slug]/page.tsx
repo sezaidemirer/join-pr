@@ -24,55 +24,69 @@ const slugify = (text: string) =>
 export default function BlogDetailPage() {
   const params = useParams<{ slug: string }>();
   const router = useRouter();
-  const { translations } = useLanguage();
+  const { translations, locale } = useLanguage();
 
   const blog = translations.homepage.blog;
-  const blogItems = blog.cards as Array<{ title: string; category: string; description: string; image?: string }>;
+  const blogItems = blog.cards as Array<{ title: string; category: string; description: string; image?: string; link?: string }>;
   const slug = typeof params.slug === 'string' ? params.slug : '';
 
-  // Blog içerikleri - slug'a göre
-  const blogContent: Record<string, { title: string; content: string; category?: string }> = {
+  // Blog içerikleri - slug'a göre (dil desteği ile)
+  const blogContent: Record<string, Record<string, { title: string; content: string; category: string }>> = {
     'genclik-mucizesi-yuz-ve-boyun-germe-ameliyatlarini-kesfedin': {
-      title: "Gençlik Mucizesi: Yüz ve Boyun Germe Ameliyatlarını Keşfedin!",
-      content: "Yüz ve boyun germe ameliyatlarının son dönemde sıklıkla tercih edildiğini ve bütünsel genç bir görünüme zemin hazırladığını söyleyen Dr. Yücel Sarıaltın, \"Yüz ve boyun bölgesinin bir arada ele alınmasıyla bütünsel genç bir görünüm elde ediliyor. Geçiş bölgelerindeki sarkma ve gevşemeleri düzelterek daha harmonik bir görünüm elde edilebiliyor\" dedi.",
-      category: "Marka İletişimi"
+      tr: {
+        title: "Gençlik Mucizesi: Yüz ve Boyun Germe Ameliyatlarını Keşfedin!",
+        content: "Yüz ve boyun germe ameliyatlarının son dönemde sıklıkla tercih edildiğini ve bütünsel genç bir görünüme zemin hazırladığını söyleyen Dr. Yücel Sarıaltın, \"Yüz ve boyun bölgesinin bir arada ele alınmasıyla bütünsel genç bir görünüm elde ediliyor. Geçiş bölgelerindeki sarkma ve gevşemeleri düzelterek daha harmonik bir görünüm elde edilebiliyor\" dedi.",
+        category: "Marka İletişimi"
+      },
+      en: {
+        title: "The Miracle of Youth: Discover Face and Neck Lift Surgeries!",
+        content: "Dr. Yücel Sarıaltın, who stated that face and neck lift surgeries have been frequently preferred recently and pave the way for a holistic youthful appearance, said, \"A holistic youthful appearance is achieved by addressing the face and neck area together. A more harmonious appearance can be achieved by correcting sagging and looseness in transition areas.\"",
+        category: "Brand Communication"
+      }
     },
     'ucak-bileti-fiyatina-avrupa-turlari': {
-      title: "Uçak Bileti Fiyatına Avrupa Turları",
-      content: "Mevcut ekonomik koşullarda tatil yapılabilmesi için daha çok çalıştıklarını ve erken rezervasyon döneminde olduğu gibi uygun fiyatlı paket turların sayısını artırdıklarını ifade eden Prontotour Yönetim Kurulu Başkanı Ali Onaran, vizesiz tur alternatiflerini de artırdıklarını belirtti.",
-      category: "Destinasyon PR"
+      tr: {
+        title: "Uçak Bileti Fiyatına Avrupa Turları",
+        content: "Mevcut ekonomik koşullarda tatil yapılabilmesi için daha çok çalıştıklarını ve erken rezervasyon döneminde olduğu gibi uygun fiyatlı paket turların sayısını artırdıklarını ifade eden Prontotour Yönetim Kurulu Başkanı Ali Onaran, vizesiz tur alternatiflerini de artırdıklarını belirtti.",
+        category: "Destinasyon PR"
+      },
+      en: {
+        title: "European Tours at Airline Ticket Prices",
+        content: "Prontotour Chairman Ali Onaran stated that they have been working harder to enable vacations under current economic conditions and increased the number of affordable package tours as in the early reservation period, and also increased visa-free tour alternatives.",
+        category: "Destination PR"
+      }
     }
   };
 
   const currentSlug = slug || '';
-  const content = blogContent[currentSlug];
+  const content = blogContent[currentSlug]?.[locale];
   
-  // Özel slug için current'ı bul veya content'ten oluştur
-  const current = blogItems.find((item) => slugify(item.title) === slug) || 
-    (content ? {
-      title: content.title,
-      category: content.category || 'Blog',
-      description: content.content.substring(0, 150) + '...',
-      image: slug === 'ucak-bileti-fiyatina-avrupa-turlari' ? '/ucak-bileti-fiyatina-avrupa-turlari.jpg' : '/genclik-mucizesi-yuz-ve-boyun-germe-ameliyatlari.jpg'
-    } : null);
+  // Link ile eşleştirme yap (önce link, sonra slugify ile title)
+  const current = blogItems.find((item) => {
+    if (item.link) {
+      const linkSlug = item.link.replace(/^\//, '');
+      return linkSlug === slug;
+    }
+    return slugify(item.title) === slug;
+  });
 
   // Eğer blog yazısı değilse 404
   if (!current && !content) {
     return (
       <div className="mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center gap-6 px-6 py-16">
-        <h1 className="text-4xl font-semibold text-white">Sayfa bulunamadı</h1>
+        <h1 className="text-4xl font-semibold text-white">{locale === 'tr' ? 'Sayfa bulunamadı' : 'Page not found'}</h1>
         <div className="flex gap-3">
           <button
             onClick={() => router.back()}
             className="rounded-full border border-white/20 px-4 py-2 text-sm text-white hover:border-white/40"
           >
-            Geri dön
+            {locale === 'tr' ? 'Geri dön' : 'Go back'}
           </button>
           <Link
             href="/"
             className="rounded-full bg-gradient-to-r from-teal-500 to-blue-600 px-4 py-2 text-sm font-semibold text-white"
           >
-            Ana sayfa
+            {locale === 'tr' ? 'Ana sayfa' : 'Home'}
           </Link>
         </div>
       </div>
@@ -80,8 +94,8 @@ export default function BlogDetailPage() {
   }
 
   // current veya content olmalı, ama yine de kontrol edelim
-  const category = content?.category || current?.category || 'Blog';
-  const title = content?.title || current?.title || 'Blog Yazısı';
+  const category = content?.category || current?.category || (locale === 'tr' ? 'Blog' : 'Blog');
+  const title = content?.title || current?.title || (locale === 'tr' ? 'Blog Yazısı' : 'Blog Post');
   const image = current?.image || (content ? (slug === 'ucak-bileti-fiyatina-avrupa-turlari' ? '/ucak-bileti-fiyatina-avrupa-turlari.jpg' : '/genclik-mucizesi-yuz-ve-boyun-germe-ameliyatlari.jpg') : null);
   const description = content?.content || current?.description || '';
 
@@ -126,13 +140,13 @@ export default function BlogDetailPage() {
           href="/kategori/blog"
           className="rounded-full border border-white/20 px-4 py-2 text-sm text-white hover:border-white/40"
         >
-          Bloglara dön
+          {locale === 'tr' ? 'Bloglara dön' : 'Back to blog'}
         </Link>
         <Link
           href="/"
           className="rounded-full bg-gradient-to-r from-teal-500 to-blue-600 px-4 py-2 text-sm font-semibold text-white"
         >
-          Ana sayfa
+          {locale === 'tr' ? 'Ana sayfa' : 'Home'}
         </Link>
       </div>
     </div>

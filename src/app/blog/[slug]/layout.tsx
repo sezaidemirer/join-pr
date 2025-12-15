@@ -11,6 +11,41 @@ interface BlogDetailLayoutProps {
   params: Promise<{ slug: string }>;
 }
 
+export async function generateStaticParams() {
+  const blogItemsTr = tr.homepage.blog.cards as Array<{ title: string; category: string; description: string; image?: string; link?: string }>;
+  const blogItemsEn = en.homepage.blog.cards as Array<{ title: string; category: string; description: string; image?: string; link?: string }>;
+  
+  // Tüm blog slug'larını oluştur (link'lerden veya title'lardan)
+  const slugs = new Set<string>();
+  
+  // Özel blog slug'ları
+  slugs.add('genclik-mucizesi-yuz-ve-boyun-germe-ameliyatlarini-kesfedin');
+  slugs.add('ucak-bileti-fiyatina-avrupa-turlari');
+  
+  // Link'lerden slug oluştur
+  blogItemsTr.forEach((item) => {
+    if (item.link) {
+      const linkSlug = item.link.replace(/^\//, '');
+      slugs.add(linkSlug);
+    } else {
+      slugs.add(slugify(item.title));
+    }
+  });
+  
+  blogItemsEn.forEach((item) => {
+    if (item.link) {
+      const linkSlug = item.link.replace(/^\//, '');
+      slugs.add(linkSlug);
+    } else {
+      slugs.add(slugify(item.title));
+    }
+  });
+  
+  return Array.from(slugs).map((slug) => ({
+    slug,
+  }));
+}
+
 export async function generateMetadata({ params }: BlogDetailLayoutProps): Promise<Metadata> {
   const { slug } = await params;
   const locale = await getLocale();

@@ -10,31 +10,43 @@ const STORAGE_KEY = 'joinpr_locale';
 
 /**
  * Server-side dil tercihini cookie'den alır, yoksa Accept-Language header'ına bakar
+ * Static export için uyumlu: build zamanında cookie/header yoksa varsayılan 'tr' döndürür
  */
 export async function getLocale(): Promise<Locale> {
-  const cookieStore = await cookies();
-  const localeCookie = cookieStore.get(STORAGE_KEY);
-  
-  if (localeCookie?.value === 'tr' || localeCookie?.value === 'en') {
-    return localeCookie.value;
+  try {
+    const cookieStore = await cookies();
+    const localeCookie = cookieStore.get(STORAGE_KEY);
+    
+    if (localeCookie?.value === 'tr' || localeCookie?.value === 'en') {
+      return localeCookie.value;
+    }
+  } catch (error) {
+    // Cookie okuma hatası (örneğin, static export sırasında)
+    // Bu durumda varsayılan olarak 'tr' döndür
+    return 'tr';
   }
   
   // Cookie yoksa Accept-Language header'ını kontrol et
-  const headersList = await headers();
-  const acceptLanguage = headersList.get('accept-language');
-  
-  if (acceptLanguage) {
-    // Accept-Language: en-US,en;q=0.9,tr;q=0.8 formatında gelir
-    const languages = acceptLanguage.split(',').map(lang => lang.split(';')[0].trim().toLowerCase());
+  try {
+    const headersList = await headers();
+    const acceptLanguage = headersList.get('accept-language');
     
-    // İngilizce öncelikli mi kontrol et
-    if (languages.some(lang => lang.startsWith('en'))) {
-      return 'en';
+    if (acceptLanguage) {
+      // Accept-Language: en-US,en;q=0.9,tr;q=0.8 formatında gelir
+      const languages = acceptLanguage.split(',').map(lang => lang.split(';')[0].trim().toLowerCase());
+      
+      // İngilizce öncelikli mi kontrol et
+      if (languages.some(lang => lang.startsWith('en'))) {
+        return 'en';
+      }
+      // Türkçe öncelikli mi kontrol et
+      if (languages.some(lang => lang.startsWith('tr'))) {
+        return 'tr';
+      }
     }
-    // Türkçe öncelikli mi kontrol et
-    if (languages.some(lang => lang.startsWith('tr'))) {
-      return 'tr';
-    }
+  } catch (error) {
+    // Header okuma hatası (örneğin, static export sırasında)
+    // Bu durumda varsayılan olarak 'tr' döndür
   }
   
   // Varsayılan olarak Türkçe

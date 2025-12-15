@@ -79,23 +79,29 @@ export default function BlogDetailPage() {
   }
 
 
+  // current veya content olmalı, ama yine de kontrol edelim
+  const category = content?.category || current?.category || 'Blog';
+  const title = content?.title || current?.title || 'Blog Yazısı';
+  const image = current?.image || (content ? (slug === 'ucak-bileti-fiyatina-avrupa-turlari' ? '/ucak-bileti-fiyatina-avrupa-turlari.jpg' : '/genclik-mucizesi-yuz-ve-boyun-germe-ameliyatlari.jpg') : null);
+  const description = content?.content || current?.description || '';
+
   return (
     <div className="mx-auto flex min-h-screen max-w-6xl flex-col gap-10 px-6 pb-16 pt-12 sm:px-8 lg:px-10">
       <div className="space-y-4">
         <div className="inline-flex items-center gap-2 rounded-full bg-teal-500/10 border border-teal-500/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-teal-300">
-          {current.category}
+          {category}
         </div>
         <h1 className="text-4xl font-semibold text-white md:text-5xl">
-          {content?.title || current.title}
+          {title}
         </h1>
       </div>
 
-      {current.image && (
+      {image && (
         <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-zinc-900 shadow-2xl">
           <div className="relative aspect-[16/9] w-full">
             <Image
-              src={`${BASE_PATH}${current.image}`}
-              alt={content?.title || current.title}
+              src={`${BASE_PATH}${image}`}
+              alt={title}
               fill
               className="object-cover"
               unoptimized
@@ -105,11 +111,11 @@ export default function BlogDetailPage() {
         </div>
       )}
 
-      {(content || current.description) && (
+      {description && (
         <div className="prose prose-invert max-w-none">
           <div className="rounded-2xl border border-white/10 bg-zinc-950/70 p-8">
             <p className="text-base leading-relaxed text-zinc-300 md:text-lg">
-              {content?.content || current.description}
+              {description}
             </p>
           </div>
         </div>

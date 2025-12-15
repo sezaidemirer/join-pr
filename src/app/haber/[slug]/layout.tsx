@@ -3,25 +3,29 @@ import { notFound } from 'next/navigation';
 
 import en from '@/locales/en.json';
 import tr from '@/locales/tr.json';
-import { getLocale } from '@/lib/metadata';
-
-const slugify = (text: string) =>
-  text
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/ı/g, 'i')
-    .replace(/ğ/g, 'g')
-    .replace(/ü/g, 'u')
-    .replace(/ş/g, 's')
-    .replace(/ö/g, 'o')
-    .replace(/ç/g, 'c')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '');
+import { getLocale, slugify } from '@/lib/metadata';
 
 interface NewsLayoutProps {
   children: React.ReactNode;
   params: Promise<{ slug: string }>;
+}
+
+export async function generateStaticParams() {
+  const caseItemsTr = tr.homepage.cases.cards as Array<{ title: string; category: string; description: string; image?: string }>;
+  const caseItemsEn = en.homepage.cases.cards as Array<{ title: string; category: string; description: string; image?: string }>;
+  
+  // Tüm haber slug'larını oluştur
+  const slugs = new Set<string>();
+  caseItemsTr.forEach((item) => {
+    slugs.add(slugify(item.title));
+  });
+  caseItemsEn.forEach((item) => {
+    slugs.add(slugify(item.title));
+  });
+  
+  return Array.from(slugs).map((slug) => ({
+    slug,
+  }));
 }
 
 export async function generateMetadata({ params }: NewsLayoutProps): Promise<Metadata> {

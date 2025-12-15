@@ -69,6 +69,7 @@ export function JoinPrView() {
               title={service.title}
               description={service.description}
               accent={index % 2 === 0 ? 'sky' : 'teal'}
+              href={index === 0 ? '/hizmetlerimiz/kurumsal-iletisim' : undefined}
             />
           ))}
         </div>

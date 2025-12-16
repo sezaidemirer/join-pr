@@ -1300,20 +1300,20 @@
       },
       "sections": {
         "strategy": {
-          "title": "Content planning & publishing calendar",
-          "description": "Publishing calendars shaped by campaigns, platform-based content queues and approval processes."
+          "title": "Content Planning & Publishing Management",
+          "description": "We structure the entire content flow according to the brand’s audience, platform dynamics, and communication strategy—managing every publishing step through a consistent, strategic, and well-organized calendar."
         },
         "planning": {
-          "title": "Trend-aligned short video and visual production",
-          "description": "Storyboard, shooting and post-production workflows for Reels, TikTok and short formats."
+          "title": "Trend-Driven Short Video & Visual Creation",
+          "description": "We analyze platform trends and produce short videos and visuals tailored to the brand, creating high-engagement content that increases visibility and aligns with the pulse of social media."
         },
         "community": {
-          "title": "Community engagement and moderation",
-          "description": "Creative community activations with DM, comment and UGC moderation."
+          "title": "Community Engagement & Moderation",
+          "description": "We manage comments, messages, and interactions with a professional approach—strengthening the brand's digital community and ensuring an active, healthy communication environment."
         },
         "reporting": {
-          "title": "Monthly reporting & content performance analysis",
-          "description": "Monthly dashboards, content-based KPI reports and optimization recommendations."
+          "title": "Monthly Reporting & Content Performance Analysis",
+          "description": "We deliver detailed reports on content performance, analyzing reach, engagement, and growth metrics to continuously optimize the strategy and provide measurable results for the brand."
         }
       },
       "process": {
@@ -1336,6 +1336,10 @@
             "description": "We operate a continuous improvement cycle with performance insights, test plans, and innovation sprints, advancing results every quarter."
           }
         ]
+      },
+      "about": {
+        "title": "Join Social",
+        "description": "Join Social is our next-generation social media powerhouse, managing every channel end-to-end while elevating brand communication with AI-enhanced strategy. By unifying content creation, social media management, trend analysis, visual communication, and performance reporting under one intelligent ecosystem, it accelerates and professionalizes every step of the process. Without password sharing or security risks, Join Social enables brands to control all platforms through a single, secure smart panel—delivering a faster, smarter, and more impactful social media experience."
       },
       "cta": {
         "title": "Ready for next-generation social media management?",
@@ -1366,25 +1370,25 @@
       },
       "about": {
         "title": "Join Ads – Digital Advertising Management and Performance Marketing",
-        "description": "Join Ads is a performance-focused advertising management subsidiary that designs integrated media strategies on Google, Meta, TikTok, YouTube, and programmatic platforms to accelerate brands' digital growth. With our data-driven approach, we build scalable campaign models tailored to your acquisition, conversion, and loyalty goals.\n\nWe achieve sustainable results in search, display, video, discovery, and social media campaigns through advanced algorithms, proper audience architecture, and creative variation tests; managing brands' advertising investments with maximum efficiency.",
+        "description": "Join Ads is our next-generation performance marketing engine—built to accelerate brand growth and turn digital visibility into measurable, scalable business results. By unifying the full power of Google, Meta, YouTube, Yandex, and SEO under one strategic ecosystem, it delivers not just reach, but high-impact performance that outpaces competition. With data-driven decisioning, AI-enhanced optimization, and creative advertising models, Join Ads maximizes the value of every budget and transforms digital advertising into a true growth machine. This is where brands don’t just compete—they lead.",
         "videoUrl": ""
       },
       "services": [
         {
           "title": "Google Ads Management",
-          "description": "Algorithm-focused optimization and continuous performance improvement in search, display, video and discovery campaigns."
+          "description": "We build conversion-focused campaigns across the entire Google ecosystem—including Search, Display, Shopping, and YouTube—designed to deliver measurable, sustainable growth. By combining precise keyword strategies, smart audience segmentation, and continuously optimized ad structures, we generate high-ROAS results that elevate brand visibility and drive qualified traffic exactly where it's needed."
         },
         {
           "title": "Meta Ads Management",
-          "description": "Scalable results in the Meta ecosystem with creative variation tests, right audience architecture and conversion-focused campaign setups."
+          "description": "We create high-impact campaigns across Instagram and Facebook using advanced targeting models, platform-specific creative sets, and continuous optimization. By aligning audience insights with compelling ad narratives, we maximize reach, engagement, and conversions—delivering a powerful balance of brand visibility and performance across the entire Meta ecosystem."
         },
         {
-          "title": "Other Platforms",
-          "description": "Multi-channel growth strategies in YouTube, TikTok, programmatic and target-specific media partnerships."
+          "title": "SEO (Search Engine Optimization)",
+          "description": "We enhance organic visibility through a strategic blend of technical optimization, content refinement, and data-driven keyword planning. By strengthening website authority, improving search performance, and driving high-quality traffic, we create long-term, sustainable growth that positions the brand at the top of relevant search journeys."
         },
         {
-          "title": "Performance Reporting and Optimization",
-          "description": "Agile decision-making processes and sustainable performance improvement with advanced dashboards, attribution models and continuous experiments."
+          "title": "Ad Optimization & Performance Management",
+          "description": "We monitor every digital advertising channel in real time, continuously refining budgets, targeting, creatives, and audience segments to maximize results. With a fully data-driven approach, we reduce costs while increasing conversions—ensuring each campaign reaches peak performance and delivers measurable, scalable impact for the brand."
         }
       ],
       "metrics": {
@@ -1488,8 +1492,8 @@
         "description": "We bring together travel enthusiasts, content creators and destinations through compelling stories and experimental collaborations."
       },
       "about": {
-        "title": "Join Escapes",
-        "description": "Join Escapes is a strategic subsidiary that expands Join PR's expertise in tourism, destination communication, and global travel experiences. It promotes destinations, hotels, and gastronomic experiences around the world through a modern editorial approach and strong visual storytelling.\n\nThrough influencer collaborations, celebrity activations, video productions, and content-focused campaigns, it aims to increase destination awareness, strengthen travel motivation, and elevate brands' global visibility.\n\nJoin Escapes specializes in travel journalism, creative content production, destination PR, brand experiences, and concept campaigns tailored for tourism brands, offering holistic communication support to the industry.\n\nIn short:\n\nJoin PR's strategic communication power combines with Join Escapes' discovery vision — creating an impressive travel communication ecosystem for brands."
+        "title": "Go Beyond The Map",
+        "description": "Join Escapes is a social content and discovery platform designed for those who love exploring and seek inspiration for experience-driven travel. It presents destinations from around the world through stories, recommendations, editorial features, travel insights, and creative narratives—offering a more inspiring, accessible, and experience-focused perspective.\n\nShaped by the creative vision of Join PR, Join Escapes is more than a travel guide; it is a comprehensive source of inspiration enriched with local and international tourism news, industry trends, and market insights. The platform also features Join PR's globally executed experience-driven destination marketing activities, developed in collaboration with renowned influencers, global content creators, TV personalities, and actors—highlighting the true potential of destinations through authentic storytelling.\n\nEvery piece of content delivers a holistic discovery experience that helps readers explore new routes, imagine unique experiences, and find inspiration for their own journeys."
       },
       "sections": {
         "destinations": {

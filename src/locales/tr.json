@@ -1300,20 +1300,20 @@
       },
       "sections": {
         "strategy": {
-          "title": "İçerik planlama & yayın takvimi",
-          "description": "Kampanyalara göre şekillenen yayın takvimleri, platform bazlı içerik sıraları ve onay süreçleri."
+          "title": "İçerik Planlama ve Yayın Takibi",
+          "description": "Markanın hedef kitlesi, platform dinamikleri ve iletişim stratejisine göre içerik akışını planlar; tüm yayın süreçlerini düzenli, tutarlı ve stratejik bir takvim üzerinden yönetiriz."
         },
         "planning": {
-          "title": "Trend uyumlu kısa video ve görsel üretimi",
-          "description": "Reels, TikTok ve kısa formatlar için storyboard, çekim ve post prodüksiyon akışları."
+          "title": "Trend Uyumlu Kısa Video ve Görsel Üretimi",
+          "description": "Platformlarda öne çıkan trendleri analiz ederek markaya uygun kısa video ve görsel içerikler üretir; yüksek etkileşim potansiyeli taşıyan yaratıcı içeriklerle markanın görünürlüğünü artırır."
         },
         "community": {
-          "title": "Topluluk etkileşimi ve moderasyon",
-          "description": "DM, yorum ve UGC moderasyonu ile yaratıcı topluluk aktivasyonları."
+          "title": "Topluluk Etkileşimi ve Moderasyon",
+          "description": "Yorum yönetimi, mesaj yanıtları ve etkileşim süreçlerini profesyonelce yürütür; markanın dijital topluluğunu güçlendirir ve sağlıklı, aktif bir iletişim ortamı yaratırız."
         },
         "reporting": {
-          "title": "Aylık raporlama & içerik performans analizi",
-          "description": "Aylık dashboard’lar, içerik bazlı KPI raporları ve optimizasyon önerileri."
+          "title": "Aylık Raporlama ve İçerik Performans Analizi",
+          "description": "Tüm içeriklerin performansını detaylı raporlarla sunar; erişim, etkileşim ve büyüme metriklerini analiz ederek stratejiyi sürekli geliştirir ve markaya ölçümlenebilir sonuçlar sağlarız."
         }
       },
       "process": {
@@ -1336,6 +1336,10 @@
             "description": "Performans içgörüleri, test planları ve inovasyon sprintleriyle sürekli gelişim döngüsünü işletiyor, sonuçları her çeyrekte ileri taşıyoruz."
           }
         ]
+      },
+      "about": {
+        "title": "Join Social",
+        "description": "Join Social, markaların tüm sosyal medya kanallarını uçtan uca yöneten ve bu süreci yapay zekâ destekli bir stratejiyle güçlendiren yeni nesil iletişim alanımızdır. İçerik üretimi, sosyal medya yönetimi, trend analizi, görsel iletişim dili ve performans raporlamasını tek bir akıllı yapı altında toplar; tüm süreci hızlandırır ve profesyonelleştirir. Şifre paylaşımı veya güvenlik riski olmadan, tüm platformları tek bir güvenli panelden yönetme imkânı sunarak markalara daha akıllı, daha hızlı ve daha etkili bir sosyal medya deneyimi sağlar."
       },
       "cta": {
         "title": "Yeni nesil sosyal medya yönetimine hazır mısın?",
@@ -1366,25 +1370,25 @@
       },
       "about": {
         "title": "Join Ads – Dijital Reklam Yönetimi ve Performans Pazarlaması",
-        "description": "Join Ads, markaların dijital büyümesini hızlandırmak için Google, Meta, TikTok, YouTube ve programatik platformlarda entegre medya stratejileri tasarlayan performans odaklı bir reklam yönetim iştirakidir. Veri analizine dayalı yaklaşımımızla satın alma, dönüşüm ve sadakat hedeflerinize uygun ölçeklenebilir kampanya modelleri kurguluyoruz.\n\nArama, görüntülü, video, keşif ve sosyal medya kampanyalarında gelişmiş algoritmalar, doğru kitle mimarisi ve yaratıcı varyasyon testleriyle sürdürülebilir sonuçlar elde ediyor; markaların reklam yatırımlarını maksimum verimle yönetiyoruz.",
+        "description": "Join Ads, markaların dijitalde büyüme hızını katlayan, performans pazarlaması ve reklam teknolojilerini en üst seviyede kullanan yeni nesil reklam yönetim alanımızdır. Google, Meta, Yandex ve SEO’nun tüm gücünü stratejik bir çatı altında birleştirerek markalara sadece görünürlük değil, ölçümlenebilir ve sürdürülebilir iş sonuçları kazandırırız. Veri odaklı karar mekanizmaları, yapay zekâ destekli optimizasyonlar ve yaratıcı reklam modelleriyle bütçenin her adımını en yüksek verime taşırız. Join Ads, markaların dijitalde rekabet ettiği değil; rakiplerini geride bıraktığı, ölçeklenebilir bir büyüme makinesi olarak konumlandırırız.",
         "videoUrl": ""
       },
       "services": [
         {
           "title": "Google Ads Yönetimi",
-          "description": "Arama, görüntülü, video ve keşif kampanyalarında algoritma odaklı optimizasyon ve sürekli performans iyileştirmesi."
+          "description": "Arama, görüntülü reklam ağı, alışveriş reklamları ve YouTube dahil tüm Google ekosisteminde dönüşüm odaklı kampanyalar oluştururuz. Doğru anahtar kelimeler, kitle segmentleri ve optimize edilmiş reklam setleriyle yüksek ROAS sağlayan sürdürülebilir performans kurgularız."
         },
         {
-          "title": "Meta Ads Yönetimi",
-          "description": "Yaratıcı varyasyon testleri, doğru kitle mimarisi ve dönüşüm odaklı kampanya kurgularıyla Meta ekosisteminde ölçeklenebilir sonuçlar."
+          "title": "Meta Ads (Instagram & Facebook) Yönetimi",
+          "description": "Markanın hedef kitlesine uygun gelişmiş hedefleme modelleri, yaratıcı reklam setleri ve sürekli optimizasyon süreçleriyle Meta platformlarında maksimum erişim ve dönüşüm elde ederiz. Hem marka bilinirliği hem performans odaklı tüm kampanya yapılarını profesyonelce yönetiriz."
         },
         {
-          "title": "Diğer Platformlar",
-          "description": "YouTube, TikTok, programatik ve hedefe özel medya ortaklıklarında çok kanallı büyüme stratejileri."
+          "title": "SEO (Arama Motoru Optimizasyonu)",
+          "description": "Arama motorlarında organik görünürlüğü artırmak için teknik SEO, içerik optimizasyonu ve anahtar kelime stratejilerini kurgularız. Web sitelerinin otoritesini güçlendirir, trafik kalitesini artırır ve uzun vadeli sürdürülebilir büyüme sağlarız."
         },
         {
-          "title": "Performans Raporlama ve Optimizasyon",
-          "description": "Gelişmiş paneller, atıf modelleri ve sürekli denemelerle çevik karar verme süreçleri ve sürdürülebilir performans artırımı."
+          "title": "Reklam Optimizasyonları & Performans Yönetimi",
+          "description": "Tüm dijital reklam kanallarını gerçek zamanlı analizlerle takip eder; bütçe, hedefleme, kreatif ve kitle segmentasyonlarını sürekli optimize ederek kampanyanın maksimum performansa ulaşmasını sağlar. Veri odaklı karar alma modelleriyle reklam maliyetlerini düşürürken dönüşüm oranlarını artırır."
         }
       ],
       "metrics": {
@@ -1488,8 +1492,8 @@
         "description": "Seyahat severleri, içerik üreticilerini ve destinasyonları etkileyici hikayeler ve deneysel iş birlikleriyle buluşturuyoruz."
       },
       "about": {
-        "title": "Join Escapes",
-        "description": "Join Escapes, Join PR'ın turizm, destinasyon iletişimi ve küresel seyahat deneyimi alanındaki uzmanlığını genişleten stratejik bir iştirakidir. Dünyanın dört bir yanındaki destinasyonları, otelleri ve gastronomi deneyimlerini modern bir editoryal yaklaşım ve güçlü bir görsel hikâye anlatımıyla tanıtır.\n\nInfluencer iş birlikleri, celebrity aktivasyonları, video prodüksiyonları ve içerik odaklı kampanyalarla destinasyonların bilinirliğini artırmayı, seyahat motivasyonunu güçlendirmeyi ve markaların global görünürlüğünü yükseltmeyi hedefler.\n\nJoin Escapes; seyahat haberciliği, yaratıcı içerik üretimi, destinasyon PR'ı, marka deneyimleri ve turizm markalarına özel konsept kampanyalar alanlarında uzmanlaşarak sektöre bütünsel bir iletişim desteği sunar.\n\nKısacası:\n\nJoin PR'ın stratejik iletişim gücü, Join Escapes'in keşif vizyonu ile birleşiyor — markalar için etkileyici bir seyahat iletişimi ekosistemi yaratıyoruz."
+        "title": "Haritanın Ötesine Geç",
+        "description": "Join Escapes, keşfetmeyi seven ve deneyim odaklı seyahat kültürüne ilham arayan herkes için tasarlanmış bir sosyal içerik ve keşif platformudur. Dünyanın dört bir yanındaki destinasyonları; hikâyeler, öneriler, editoryal içerikler, seyahat ipuçları ve yaratıcı anlatılarla daha ilham verici, daha ulaşılabilir ve daha \"deneyim odaklı\" bir bakış açısıyla sunar.\n\nJoin PR'ın yaratıcı gücüyle şekillenen Join Escapes, yalnızca bir seyahat rehberi değil; yerel ve uluslararası turizm dünyasından güncel sektör haberleri, trendler ve içgörüler sunan bütünsel bir ilham kaynağıdır. Platform aynı zamanda Join PR'ın global ölçekte gerçekleştirdiği deneyim odaklı destinasyon projelerini de kapsar. Bu projeler;  fenomenler, dünya genelinde içerik üreticileri, TV yüzleri ve oyuncularla hayata geçirilen, destinasyonların gerçek potansiyelini deneyim odaklı içeriklerle ortaya koyan seçkin iş birliklerini içerir.\n\nHer içerik, okuyucunun yeni rotalar keşfetmesine, farklı deneyimler hayal etmesine ve kendi yolculuklarına ilham bulmasına yardımcı olan bütünsel bir keşif deneyimi sunar."
       },
       "sections": {
         "destinations": {

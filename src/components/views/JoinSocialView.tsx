@@ -97,6 +97,17 @@ export function JoinSocialView() {
         </ol>
       </section>
 
+      {page.about && (
+        <section className="space-y-6 rounded-3xl border border-white/10 bg-zinc-950/70 p-8 md:p-10">
+          <h2 className="text-3xl font-semibold text-white md:text-4xl">{page.about.title}</h2>
+          <div className="prose prose-invert max-w-none">
+            <p className="whitespace-pre-line text-base leading-relaxed text-zinc-300 sm:text-lg">
+              {page.about.description}
+            </p>
+          </div>
+        </section>
+      )}
+
       <CTASection title={page.cta.title} description={page.cta.description} buttonLabel={page.cta.button} />
     </div>
   );

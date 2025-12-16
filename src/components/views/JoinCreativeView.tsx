@@ -317,6 +317,15 @@ export function JoinCreativeView() {
         </section>
       )}
 
+      {/* CTA Section after About */}
+      {page.about && (
+        <CTASection 
+          title={page.cta.title} 
+          description={page.cta.description} 
+          buttonLabel={page.cta.button} 
+        />
+      )}
+
       {selectedIndex !== null && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"

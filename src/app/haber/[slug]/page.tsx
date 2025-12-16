@@ -4,6 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useParams, useRouter } from 'next/navigation';
 import { useLanguage } from '@/context/LanguageContext';
+import tr from '@/locales/tr.json';
+import en from '@/locales/en.json';
 
 const BASE_PATH = process.env.NODE_ENV === 'production' ? '/join-pr' : '';
 
@@ -24,13 +26,31 @@ const slugify = (text: string) =>
 export default function NewsDetailPage() {
   const params = useParams<{ slug: string }>();
   const router = useRouter();
-  const { translations } = useLanguage();
+  const { translations, locale } = useLanguage();
 
   const cases = translations.homepage.cases;
   const caseItems = cases.cards as Array<{ title: string; category: string; description: string; image?: string }>;
 
-  // Sadece normalize edilmiş slug'ı kullan
-  const current = caseItems.find((item) => slugify(item.title) === params.slug);
+  // Hem TR hem EN dosyalarından haberleri al
+  const trCases = tr.homepage.cases.cards as Array<{ title: string; category: string; description: string; image?: string }>;
+  const enCases = en.homepage.cases.cards as Array<{ title: string; category: string; description: string; image?: string }>;
+
+  // Slug eşleşmesi: Her zaman TR başlığından slug oluşturup eşleştir
+  const trMatch = trCases.find((item) => slugify(item.title) === params.slug);
+  
+  let current: typeof caseItems[0] | undefined;
+  
+  if (trMatch) {
+    // TR'deki index'i bul
+    const trIndex = trCases.indexOf(trMatch);
+    // Mevcut dildeki aynı index'teki haberi al
+    if (trIndex !== -1 && caseItems[trIndex]) {
+      current = caseItems[trIndex];
+    } else {
+      // Fallback: TR haberini göster
+      current = trMatch;
+    }
+  }
   
   // External links kontrolü - slug'a göre direkt kontrol
   const externalLinks: Array<{ href: string; image: string; label: string }> = [];
@@ -344,19 +364,21 @@ export default function NewsDetailPage() {
   if (!current) {
     return (
       <div className="flex min-h-screen flex-col items-center justify-center gap-4 px-4 text-center">
-        <h1 className="text-2xl font-semibold text-white">Haber bulunamadı</h1>
+        <h1 className="text-2xl font-semibold text-white">
+          {locale === 'tr' ? 'Haber bulunamadı' : 'News not found'}
+        </h1>
         <div className="flex gap-3">
           <button
             onClick={() => router.back()}
             className="rounded-full border border-white/20 px-4 py-2 text-sm text-white hover:border-white/40"
           >
-            Geri dön
+            {locale === 'tr' ? 'Geri dön' : 'Go back'}
           </button>
           <Link
             href="/"
             className="rounded-full bg-gradient-to-r from-teal-500 to-blue-600 px-4 py-2 text-sm font-semibold text-white"
           >
-            Ana sayfa
+            {locale === 'tr' ? 'Ana sayfa' : 'Home'}
           </Link>
         </div>
       </div>
@@ -390,7 +412,9 @@ export default function NewsDetailPage() {
 
       {externalLinks.length > 0 && (
         <div className="space-y-3 rounded-2xl border border-white/10 bg-white/5 p-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-zinc-200">Yayınlanan platformlar</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-zinc-200">
+            {locale === 'tr' ? 'Yayınlanan platformlar' : 'Published Platforms'}
+          </p>
           <div className="flex flex-wrap gap-3">
             {externalLinks.map((link) => (
               <a
@@ -420,13 +444,13 @@ export default function NewsDetailPage() {
           href="/kategori/haberler"
           className="rounded-full border border-white/20 px-4 py-2 text-sm text-white hover:border-white/40"
         >
-          Haberlere dön
+          {locale === 'tr' ? 'Haberlere dön' : 'Back to News'}
         </Link>
         <Link
           href="/"
           className="rounded-full bg-gradient-to-r from-teal-500 to-blue-600 px-4 py-2 text-sm font-semibold text-white"
         >
-          Ana sayfa
+          {locale === 'tr' ? 'Ana sayfa' : 'Home'}
         </Link>
       </div>
     </div>

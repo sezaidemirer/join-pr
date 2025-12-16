@@ -3,27 +3,31 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useLanguage } from '@/context/LanguageContext';
+import tr from '@/locales/tr.json';
 
 const BASE_PATH = process.env.NODE_ENV === 'production' ? '/join-pr' : '';
+
+const slugify = (text: string) =>
+  text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/ı/g, 'i')
+    .replace(/ğ/g, 'g')
+    .replace(/ü/g, 'u')
+    .replace(/ş/g, 's')
+    .replace(/ö/g, 'o')
+    .replace(/ç/g, 'c')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
 
 export function NewsCategoryView() {
   const { translations } = useLanguage();
   const cases = translations.homepage.cases;
   const caseItems = cases.cards as Array<{ title: string; category: string; description: string; image?: string }>;
-
-  const slugify = (text: string) =>
-    text
-      .toLowerCase()
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .replace(/ı/g, 'i')
-      .replace(/ğ/g, 'g')
-      .replace(/ü/g, 'u')
-      .replace(/ş/g, 's')
-      .replace(/ö/g, 'o')
-      .replace(/ç/g, 'c')
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-+|-+$/g, '');
+  
+  // TR dosyasından haberleri al (slug oluşturmak için)
+  const trCases = tr.homepage.cases.cards as Array<{ title: string; category: string; description: string; image?: string }>;
 
   return (
     <div className="flex flex-col gap-16 lg:gap-20">
@@ -35,7 +39,9 @@ export function NewsCategoryView() {
 
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-4 sm:px-6 md:grid-cols-2 lg:grid-cols-3">
           {caseItems.map((card, index) => {
-            const slug = slugify(card.title);
+            // Her zaman TR başlığından slug oluştur (aynı index'teki TR haberini kullan)
+            const trCard = trCases[index];
+            const slug = trCard ? slugify(trCard.title) : slugify(card.title);
             // "Türk Oyuncular Mısır'ın en ünlü tatil merkezinde buluştu" haberi için direkt external link
             const isSpecialNews = slug === 'turk-oyuncular-misirin-en-unlu-tatil-merkezinde-bulustu';
             const href = isSpecialNews 

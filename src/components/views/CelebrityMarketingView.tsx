@@ -50,10 +50,10 @@ export function CelebrityMarketingView() {
         ) : (
           <>
             <p className="text-base leading-relaxed md:text-lg">
-              Markaların hedef kitleleriyle güçlü, güvenilir ve yüksek etkileşim yaratan bağlar kurmasını sağlayan kapsamlı celebrity marketing stratejileri geliştiririz. Dizi ve sinema oyuncuları, müzisyenler, sporcular ve kültürel figürlerden oluşan geniş network'ümüzle markaları en doğru yüzlerle bir araya getirir; iletişim gücünü etkili bir hikâyeye dönüştürürüz.
+              Markaların hedef kitleleriyle güçlü, güvenilir ve yüksek etkileşim yaratan bağlar kurmasını sağlayan kapsamlı celebrity marketing stratejileri geliştiririz. Dizi ve sinema oyuncuları, müzisyenler, sporcular ve kültürel figürlerden oluşan geniş network’ümüzle markaları en doğru yüzlerle bir araya getirir; iletişim gücünü etkili bir hikâyeye dönüştürürüz.
             </p>
             <p className="text-base leading-relaxed md:text-lg">
-              Çalıştığımız oyuncular ve tanınmış isimler, yalnızca yerel pazarda değil; Orta Doğu'dan Avrupa'ya, Balkanlardan Asya'ya uzanan geniş bir coğrafyada güçlü bir etki alanına sahiptir. Bu global görünürlük, markaların hedefledikleri pazarların ötesinde uluslararası bir algı ve prestij kazanmasını sağlar.
+              Çalıştığımız oyuncular ve tanınmış isimler, yalnızca yerel pazarda değil; Orta Doğu’dan Avrupa’ya, Balkanlardan Asya’ya uzanan geniş bir coğrafyada güçlü bir etki alanına sahiptir. Bu global görünürlük, markaların hedefledikleri pazarların ötesinde uluslararası bir algı ve prestij kazanmasını sağlar.
             </p>
             <p className="text-base leading-relaxed md:text-lg">
               Celebrity iş birliklerini kreatif içerik kurguları, medya entegrasyonları, global sosyal medya görünürlüğü ve PR stratejileriyle destekleyerek markalara yerel kampanyaların çok ötesinde, uluslararası bilinirlik ve yüksek marka değeri kazandırırız.

@@ -38,7 +38,7 @@ export function InfluencerCelebrityMarketingView() {
               We build influencer marketing strategies that create authentic, high-impact connections between brands and their audiences. By aligning the right creators with the right campaign objectives, we ensure a strong and sustainable presence across the digital ecosystem.
             </p>
             <p className="text-base leading-relaxed md:text-lg">
-              As a Meta Business with direct API integrations across platforms such as TikTok and YouTube, we deliver performance analytics that are accurate, real, and fully measurable. This advanced data infrastructure stands as one of Join PR's key differentiators in the influencer marketing landscape.
+              As a Meta Business with direct API integrations across platforms such as TikTok and YouTube, we deliver performance analytics that are accurate, real, and fully measurable. This advanced data infrastructure stands as one of Join PR’s key differentiators in the influencer marketing landscape.
             </p>
             <p className="text-base leading-relaxed md:text-lg">
               Our custom-built live performance dashboards allow brands to monitor campaigns in real time—providing transparent access to reach, engagement, views, CPM/CPE metrics, and every critical performance indicator.
@@ -53,7 +53,7 @@ export function InfluencerCelebrityMarketingView() {
               Markaların hedef kitleleriyle otantik, etkileyici ve dönüşüm odaklı ilişkiler kurmasını sağlayan kapsamlı influencer marketing stratejileri geliştiririz. Doğru içerik üreticilerini doğru kampanya hedefleriyle eşleştirir; markaların dijital ekosistemde güçlü ve sürdürülebilir bir görünürlük elde etmesini sağlarız.
             </p>
             <p className="text-base leading-relaxed md:text-lg">
-              Meta Business, TikTok, YouTube gibi platformlarla sahip olduğumuz API bağlantıları sayesinde tüm içeriklerin performansını doğru, gerçek ve tamamen ölçümlenebilir verilerle raporlarız. Bu altyapı, Join PR'ın influencer marketing alanındaki en büyük ayrıştırıcı gücüdür.
+              Meta Business, TikTok, YouTube gibi platformlarla sahip olduğumuz API bağlantıları sayesinde tüm içeriklerin performansını doğru, gerçek ve tamamen ölçümlenebilir verilerle raporlarız. Bu altyapı, Join PR’ın influencer marketing alanındaki en büyük ayrıştırıcı gücüdür.
             </p>
             <p className="text-base leading-relaxed md:text-lg">
               Markalar için özel olarak tasarladığımız canlı dashboard sistemleri, kampanya performansının anlık olarak takip edilmesini sağlar; erişim, etkileşim, görüntülenme, CPM/CPE/CPV/CPC gibi tüm kritik metrikleri şeffaf ve detaylı şekilde sunar.

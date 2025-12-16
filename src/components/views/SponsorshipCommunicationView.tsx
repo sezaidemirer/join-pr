@@ -38,7 +38,7 @@ export function SponsorshipCommunicationView() {
               We develop sponsorship communication strategies that connect brands with their audiences at the most impactful touchpoints. Across sports, gastronomy, music, culture, and live experiences, we design partnerships that elevate brand positioning, enhance visibility, and build long-term value.
             </p>
             <p className="text-base leading-relaxed md:text-lg">
-              Every opportunity is evaluated through the lens of the brand's strategic goals. Through creative activations, experiential concepts, compelling content, and integrated media visibility, we transform sponsorships into powerful communication and engagement platforms.
+              Every opportunity is evaluated through the lens of the brand’s strategic goals. Through creative activations, experiential concepts, compelling content, and integrated media visibility, we transform sponsorships into powerful communication and engagement platforms.
             </p>
           </>
         ) : (

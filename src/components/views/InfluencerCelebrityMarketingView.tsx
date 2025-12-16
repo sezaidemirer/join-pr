@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useLanguage } from '@/context/LanguageContext';
 
 export function InfluencerCelebrityMarketingView() {
+  const BASE_PATH = process.env.NODE_ENV === 'production' ? '/join-pr' : '';
   const { locale } = useLanguage();
   const isEn = locale === 'en';
 
@@ -21,7 +22,7 @@ export function InfluencerCelebrityMarketingView() {
         </div>
         <div className="relative h-48 w-full overflow-hidden rounded-3xl border border-white/10 bg-zinc-900 shadow-xl shadow-black/40 md:h-56">
           <Image
-            src="/join_pr_influencer_marketing.jpg"
+            src={`${BASE_PATH}/join_pr_influencer_marketing.jpg`}
             alt={isEn ? 'Influencer and celebrity marketing - brand partnerships' : 'Influencer ve celebrity marketing - marka ortaklıkları'}
             fill
             className="object-cover"

@@ -4,6 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useLanguage } from '@/context/LanguageContext';
 
+const BASE_PATH = process.env.NODE_ENV === 'production' ? '/join-pr' : '';
+
 export function CelebrityMarketingView() {
   const { locale } = useLanguage();
   const isEn = locale === 'en';
@@ -21,7 +23,7 @@ export function CelebrityMarketingView() {
         </div>
         <div className="relative h-48 w-full overflow-hidden rounded-3xl border border-white/10 bg-zinc-900 shadow-xl shadow-black/40 md:h-56">
           <Image
-            src="/join_pr_celebrity_marketing.jpg"
+            src={`${BASE_PATH}/join_pr_celebrity_marketing.jpg`}
             alt={isEn ? 'Celebrity marketing - brand partnership' : 'Celebrity marketing - marka ortaklığı'}
             fill
             className="object-cover"

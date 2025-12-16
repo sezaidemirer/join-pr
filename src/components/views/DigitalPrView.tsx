@@ -4,6 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useLanguage } from '@/context/LanguageContext';
 
+const BASE_PATH = process.env.NODE_ENV === 'production' ? '/join-pr' : '';
+
 export function DigitalPrView() {
   const { locale } = useLanguage();
   const isEn = locale === 'en';
@@ -21,7 +23,7 @@ export function DigitalPrView() {
         </div>
         <div className="relative h-48 w-full overflow-hidden rounded-3xl border border-white/10 bg-zinc-900 shadow-xl shadow-black/40 md:h-56">
           <Image
-            src="/join_pr_digital_pr.jpg"
+            src={`${BASE_PATH}/join_pr_digital_pr.jpg`}
             alt={isEn ? 'Digital PR - online media and social platforms' : 'Dijital PR - online medya ve sosyal platformlar'}
             fill
             className="object-cover"

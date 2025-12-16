@@ -61,7 +61,6 @@ export function NewsCategoryView() {
                   </div>
                 )}
                 <div className="flex flex-1 flex-col gap-4 p-6">
-                  <span className="text-xs font-semibold uppercase tracking-[0.3em] text-teal-200">{card.category}</span>
                   <h3 className="text-xl font-semibold text-white line-clamp-2 group-hover:text-teal-100 transition-colors">
                     {card.title}
                   </h3>

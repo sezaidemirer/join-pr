@@ -71,7 +71,7 @@
       "description": "Join PR ekosistemini keşfedin: iletişim, kreatif prodüksiyon, sosyal medya, performans pazarlaması, AI çözümleri ve Türkiye’nin lider seyahat içerik platformu."
     },
     "hero": {
-      "intro": "Join Ekosistemi",
+      "intro": "Hizmetlerimiz",
       "slides": {
         "joinPr": {
           "title": "Join x PR",
@@ -112,7 +112,7 @@
       }
     },
     "ecosystem": {
-      "title": "Join Ekosistemi",
+      "title": "Hizmetlerimiz",
       "description": "",
       "cards": {
         "joinPr": {
@@ -257,12 +257,6 @@
                   "name": "Barış Baktaş",
                   "role": "Oyuncu",
                   "image": "/barıs_baktas.jpg",
-                  "social": {}
-                },
-                {
-                  "name": "Gökhan Gürdeyiş",
-                  "role": "Oyuncu",
-                  "image": "/gokhan_gurdeyis.jpeg",
                   "social": {}
                 }
               ],
@@ -1135,20 +1129,36 @@
       },
       "services": [
         {
-          "title": "Stratejik iletişim ve marka konumlandırma",
-          "description": "İçgörü tabanlı stratejiler, mesaj mimarileri ve marka algısını güçlendiren iletişim planları."
+          "title": "Kurumsal İletişim",
+          "description": "Markaların iç ve dış paydaşlarıyla kurduğu tüm iletişim süreçlerini stratejik bir bütünlük içinde yönetiyor, kurumsal kimliği güçlendiren, marka itibarını yükselten uzun vadeli iletişim modelleri geliştiriyoruz."
         },
         {
-          "title": "Influencer ve celebrity iletişimi",
-          "description": "Seçilmiş yetenek ağları, birlikte yaratılan hikayeler ve çok kanallı itibarı yöneten süreçler."
+          "title": "Marka İletişimi",
+          "description": "Markaların kimliğini, değerlerini ve vaadini doğru kitlelerle buluşturan kapsamlı iletişim modelleri tasarlarız. Her temas noktasında tutarlı, güçlü ve akılda kalıcı bir marka algısı oluşturur."
         },
         {
-          "title": "Küresel pazarlama ve destinasyon PR’ı",
-          "description": "Ticari ilişkiler, basın, fam trip’ler ve dijital yayılım dahil uçtan uca destinasyon pazarlaması."
+          "title": "Medya İlişkileri Yönetimi",
+          "description": "Markaların medya dünyasındaki görünürlüğünü, konumunu ve itibarını güçlendirmek için kapsamlı bir medya ilişkileri stratejisi oluşturur ve yönetiriz."
         },
         {
-          "title": "Etkinlik iletişimi ve deneyim yönetimi",
-          "description": "Fikirden uygulamaya entegre iletişim stratejisine sahip etkinlikler ve deneyimler."
+          "title": "Pazarlama İletişimi",
+          "description": "Markaların değer önerisini, konumlandırmasını ve mesajlarını doğru kitlelerle en etkili şekilde buluşturan bütünleşik pazarlama iletişimi stratejileri geliştiririz."
+        },
+        {
+          "title": "Sponsorluk Yönetimi",
+          "description": "Markaların hedef kitleleriyle en doğru temas noktalarında buluşmasını sağlayan kapsamlı sponsorluk iletişimi stratejileri geliştiririz."
+        },
+        {
+          "title": "Etkinlik ve Proje Yönetimi",
+          "description": "Markaların hedeflerine, konumlandırmasına ve iletişim stratejisine uygun kapsamlı etkinlik ve proje yönetimi çözümleri sunarız."
+        },
+        {
+          "title": "Influencer Marketing",
+          "description": "Markaların hedef kitleleriyle otantik, etkileyici ve dönüşüm odaklı ilişkiler kurmasını sağlayan kapsamlı influencer marketing stratejileri geliştiririz."
+        },
+        {
+          "title": "Celebrity Marketing",
+          "description": "Celebrity iş birlikleriyle markaların değerini artıran, geniş kitlelere ulaşan stratejik pazarlama çözümleri sunuyoruz. Oyuncu, müzisyen, sporcu ve kültürel figürlerden oluşan güçlü bir network'e sahibiz."
         }
       ],
       "cases": {
@@ -1159,6 +1169,10 @@
           "Basın davetleri",
           "PR ölçümleme & medya yansıma raporları"
         ]
+      },
+      "digitalPr": {
+        "title": "Dijital PR",
+        "description": "Markaların dijital dünyadaki görünürlüğünü, itibarını ve etkileşim gücünü artıran stratejik dijital PR çözümleri sunarız. Online medya, sosyal platformlar, içerik üretimi, influencer iş birlikleri ve dijital yayınlar üzerinden markaların hedef kitlesiyle güçlü bağlar kurmasını sağlar; dijitalde konuşulan, paylaşılan ve etki yaratan bir iletişim modeli oluştururuz."
       },
       "influencer": {
         "title": "Influencer ve celebrity iletişimi",
@@ -1193,28 +1207,28 @@
       },
       "services": [
         {
-          "title": "Dijital içerik üretimi ve prodüksiyon hizmetleri",
-          "description": "Çok kanallı içerikler, çevik çekim ekipleri ve ölçeklenebilir prodüksiyon akışları."
+          "title": "Dijital İçerik Üretimi ve Prodüksiyon",
+          "description": "Markaların dijital dünyada ihtiyaç duyduğu tüm kreatif içerikleri; strateji, estetik ve teknolojiyi harmanlayarak üretir. Sosyal medya videolarından marka hikâyelerine, ürün tanıtımlarından kısa format içeriklere kadar geniş bir yelpazede hızlı, modern ve platform odaklı üretim sağlar."
         },
         {
-          "title": "Reklam ve kampanya filmleri",
-          "description": "Sinematik görseller ve entegre hikaye anlatımıyla yüksek prodüksiyonlu filmler."
+          "title": "Reklam ve Kampanya Filmleri",
+          "description": "Markanın ana mesajını yüksek etkiyle yansıtan, sinematografik dokunuşlarla kurgulanmış reklam ve kampanya filmleri geliştirir. Kreatif fikir üretimi, senaryo yazımı, çekim, post prodüksiyon ve yayın stratejisi dahil tüm süreçleri uçtan uca yöneterek markalara güçlü bir iletişim dili sunar."
         },
         {
-          "title": "Fotoğraf prodüksiyonu",
-          "description": "Editoryal, yaşam tarzı ve ürün çekimlerinde uçtan uca prodüksiyon yönetimi."
+          "title": "Görsel Prodüksiyon",
+          "description": "Markaların görsel dünyasını güçlendiren fotoğraf, ürün çekimi, lifestyle görseller, mekan & destinasyon fotoğrafçılığı gibi tüm görsel üretimleri profesyonel kreatif ekiplerle gerçekleştirir. Estetik, marka dili ve kullanım alanlarına göre özel çekim konseptleri tasarlar."
         },
         {
-          "title": "Konsept & içerik geliştirme ve planlama",
-          "description": "Briefe özel kreatif yönler, treatment dokümanları ve görsel diller."
+          "title": "İçerik Geliştirme ve Planlama",
+          "description": "Markanın hedef kitlesi, iletişim stratejisi ve platform dinamiklerine göre yaratıcı içerik kurguları oluşturur. Aylık içerik planlaması, kampanya içerik setleri, sosyal medya senaryoları ve marka hikâye akışlarını stratejik bir çerçevede geliştirir ve yönetir."
         },
         {
-          "title": "AI görsel üretimi",
-          "description": "Senaryo yazımı, anlatı geliştirme ve çok dilli içerik teslimi."
+          "title": "AI Görsel Prodüksiyon",
+          "description": "Markalara sınırsız kreatif seçenek sunan yapay zekâ tabanlı görsel üretim çözümleri sağlarız. Ürün görselleri, konsept fotoğraflar, mekan tasarımları ve kampanya görsellerini hızlı, ölçeklenebilir ve özgün şekilde üretir. Geleneksel prodüksiyon maliyetlerini optimize ederek markalara rekabet avantajı yaratırız."
         },
         {
-          "title": "AI video prodüksiyonu",
-          "description": "Generatif video araçlarıyla hızlı iterasyon, storyboard ve prodüksiyon teslimleri."
+          "title": "AI Video Prodüksiyon",
+          "description": "Gerçek çekim hissi veren, yüksek çözünürlüklü ve hikâye odaklı yapay zekâ video üretimleriyle markaların iletişim gücünü yeni nesil içerik formatlarına taşır. Karakter yaratımı, sahne üretimi, voice-over destekleri ve kısa–uzun format video kurgularıyla kampanyalara hız ve yaratıcılık kazandırır."
         }
       ],
       "portfolio": {
@@ -1266,7 +1280,7 @@
       },
       "about": {
         "title": "Join Creative – Yaratıcı Strateji, Prodüksiyon ve İçerik Ekosistemi",
-        "description": "Join Creative, markaların hikâyelerini modern, çarpıcı ve etkileyici bir görsel dile dönüştüren yaratıcı prodüksiyon ve içerik stüdyosudur. Reklam filmlerinden sosyal medya içeriklerine, moda & lifestyle prodüksiyonlarından otel ve destinasyon tanıtımlarına kadar geniş bir alanda markalara yüksek standartlarda kreatif çözümler sunuyoruz.\n\nKreatif ekibimiz; konsept geliştirme, senaryo yazımı, sanat yönetimi, fotoğraf & video prodüksiyonu, post prodüksiyon ve dijital içerik tasarımı süreçlerini uçtan uca yöneterek markaların iletişim gücünü artıran bütünsel bir deneyim yaratır."
+        "description": "Join Creative, markaların hikâyesini güçlü bir yaratıcı omurga üzerine inşa eden, dijital çağın hızına uygun üretim gücünü ileri teknolojilerle birleştiren yaratıcı üretim alanımızdır. Strateji, estetik ve teknoloji üçlüsünü aynı noktada buluşturarak markaların ihtiyaç duyduğu bütünsel içerik üretimi ve prodüksiyon süreçlerini tek bir yaratıcı çatı altında toplarız. Dijital içerik üretimi, reklam ve kampanya filmleri, görsel prodüksiyon ve içerik geliştirme, planlama alanlarında; markanın hedef kitlesine doğrudan temas eden, yüksek algı değeri yaratan ve platformlara özel kurgulanmış içerikler sunarız.\n\nYeni dönemde yaratıcı üretimin merkezine yapay zekâyı konumlandıran Join Creative, AI tabanlı görsel ve video prodüksiyon çözümleriyle markalara hız, verimlilik ve sınırsız yaratıcılık sunar. İleri seviye görsel çalışma tekniklerinden hikâye odaklı video kurgularına kadar tüm süreçlerde, markaların iletişim gücünü artıran yenilikçi bir yaklaşım benimseriz. Bu yapı sayesinde hem kampanyaların üretim hızını maksimize eder hem de markalar için özgün, dikkat çekici ve ölçeklenebilir içerik dünyaları yaratırız."
       },
       "cta": {
         "title": "Bir sonraki kreatif prodüksiyon deneyimini Join\u00A0x\u00A0Creative ile yaşa.",
@@ -1282,7 +1296,7 @@
       "hero": {
         "title": "Sosyal Medya Yönetimi ve Strateji",
         "subtitle": "Join Social, markaların dijital dünyadaki kimliğini güçlendiren stratejik sosyal medya yönetimi sağlar.",
-        "description": "İçerik, yaratıcılar, medya ve veri içgörüsünü entegre eden sürekli sosyal programlar inşa ediyoruz."
+        "description": "İçerik üretimi, sosyal medya yönetimi, trend analizi, görsel iletişim dili ve performans raporlamasını tek bir akıllı yapı altında toplar."
       },
       "sections": {
         "strategy": {

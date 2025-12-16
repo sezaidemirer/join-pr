@@ -251,31 +251,31 @@ export function ProjectDetailView({ projectSlug, subProjectIndex = 0 }: ProjectD
               const articleSlug = slugify(article.title);
               return (
                 <Link
-                  key={idx}
+                key={idx}
                   href={`/haber/${articleSlug}`}
                   className="group block rounded-2xl border border-white/5 bg-zinc-900/50 p-4 transition-all hover:border-teal-500/30 hover:bg-zinc-900"
-                >
-                  <div className="flex gap-4">
-                    {article.image && (
-                      <div className="h-20 w-20 flex-shrink-0 overflow-hidden rounded-lg">
-                        <Image
-                          src={`${BASE_PATH}${article.image}`}
-                          alt={article.title}
-                          width={80}
-                          height={80}
-                          unoptimized
-                          className="h-full w-full object-cover transition-transform group-hover:scale-110"
-                        />
-                      </div>
-                    )}
-                    <div className="flex-1">
-                      <span className="mb-1 inline-block text-xs font-semibold uppercase tracking-wider text-teal-400">
-                        {article.category}
-                      </span>
-                      <h3 className="font-semibold text-white line-clamp-2">{article.title}</h3>
-                      <p className="mt-1 text-sm text-zinc-400 line-clamp-2">{article.description}</p>
+              >
+                <div className="flex gap-4">
+                  {article.image && (
+                    <div className="h-20 w-20 flex-shrink-0 overflow-hidden rounded-lg">
+                      <Image
+                        src={`${BASE_PATH}${article.image}`}
+                        alt={article.title}
+                        width={80}
+                        height={80}
+                        unoptimized
+                        className="h-full w-full object-cover transition-transform group-hover:scale-110"
+                      />
                     </div>
+                  )}
+                  <div className="flex-1">
+                    <span className="mb-1 inline-block text-xs font-semibold uppercase tracking-wider text-teal-400">
+                      {article.category}
+                    </span>
+                    <h3 className="font-semibold text-white line-clamp-2">{article.title}</h3>
+                    <p className="mt-1 text-sm text-zinc-400 line-clamp-2">{article.description}</p>
                   </div>
+                </div>
                 </Link>
               );
             })}
@@ -296,7 +296,7 @@ export function ProjectDetailView({ projectSlug, subProjectIndex = 0 }: ProjectD
                 onClick={() => setIsReportModalOpen(true)}
                 className="relative w-full overflow-hidden rounded-3xl border border-white/5 transition-all hover:border-teal-500/50 hover:scale-[1.02] cursor-pointer"
               >
-                <div className="relative aspect-[4/3] w-full bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
+              <div className="relative aspect-[4/3] w-full bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
                   {reportImages.length > 0 ? (
                     <Image
                       key={`${currentProject.title}-${activeReportIndex}`}
@@ -308,14 +308,14 @@ export function ProjectDetailView({ projectSlug, subProjectIndex = 0 }: ProjectD
                       priority={false}
                     />
                   ) : (
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-center space-y-4">
-                        <span className="text-8xl">📊</span>
-                        <p className="text-zinc-400">Rapor görselleri yakında</p>
-                      </div>
-                    </div>
-                  )}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center space-y-4">
+                    <span className="text-8xl">📊</span>
+                    <p className="text-zinc-400">Rapor görselleri yakında</p>
+                  </div>
                 </div>
+                  )}
+              </div>
               </button>
 
               {/* Navigation Arrows */}

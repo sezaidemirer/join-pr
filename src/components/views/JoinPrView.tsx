@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { CTASection } from '@/components/CTASection';
 import { ServiceCard } from '@/components/ServiceCard';
@@ -63,16 +64,76 @@ export function JoinPrView() {
       <section className="space-y-8">
         <h2 className="text-3xl font-semibold text-white md:text-4xl">{translations.common.menu.joinPr}</h2>
         <div className="grid gap-6 md:grid-cols-2">
-          {page.services.map((service, index) => (
-            <ServiceCard
-              key={service.title}
-              title={service.title}
-              description={service.description}
-              accent={index % 2 === 0 ? 'sky' : 'teal'}
-              href={index === 0 ? '/hizmetlerimiz/kurumsal-iletisim' : undefined}
-            />
-          ))}
+          {page.services.map((service, index) => {
+            let href: string | undefined;
+            let image: string | undefined;
+
+            if (index === 0) {
+              href = '/hizmetlerimiz/kurumsal-iletisim';
+              image = '/join_pr_kurumsal_iletisim.jpg';
+            } else if (index === 1) {
+              href = '/hizmetlerimiz/marka-iletisimi';
+              image = '/join_pr_marka_iletisimi.jpg';
+            } else if (index === 2) {
+              href = '/hizmetlerimiz/medya-iliskileri-yonetimi';
+              image = '/join_pr_medya_iliskileri.jpg';
+            } else if (index === 3) {
+              href = '/hizmetlerimiz/pazarlama-iletisimi';
+              image = '/join_pr_pazarlama_iletisimi.jpg';
+            } else if (index === 4) {
+              href = '/hizmetlerimiz/sponsorluk-iletisimi';
+              image = '/join_pr_sponsorluk_iletisimi.jpg';
+            } else if (index === 5) {
+              href = '/hizmetlerimiz/etkinlik-ve-proje-yonetimi';
+              image = '/join_pr_etkinlik_ve_proje_yonetimi.jpg';
+            } else if (index === 6) {
+              href = '/hizmetlerimiz/influencer-celebrity-marketing';
+              image = '/join_pr_influencer_marketing.jpg';
+            } else if (index === 7) {
+              href = '/hizmetlerimiz/celebrity-marketing';
+              image = '/join_pr_celebrity_marketing.jpg';
+            }
+
+            return (
+              <ServiceCard
+                key={service.title}
+                title={service.title}
+                description={service.description}
+                accent={index % 2 === 0 ? 'sky' : 'teal'}
+                href={href}
+                image={image}
+              />
+            );
+          })}
         </div>
+      </section>
+
+      <section className="w-full">
+        <Link
+          href="/hizmetlerimiz/digital-pr"
+          className="block rounded-3xl focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+        >
+          <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-zinc-950/70 p-8 shadow-lg shadow-black/30 transition-transform hover:-translate-y-1 md:p-10">
+            <div className="absolute inset-0 -z-10 bg-gradient-to-br from-purple-500/20 via-pink-500/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+            <div className="flex items-center gap-6">
+              <div className="relative flex-shrink-0">
+                <div className="relative h-20 w-20 overflow-hidden rounded-full border-2 border-white/20 ring-2 ring-purple-500/30 shadow-lg shadow-purple-500/20">
+                  <Image
+                    src="/join_pr_digital_pr.jpg"
+                    alt="Dijital PR"
+                    fill
+                    className="object-cover"
+                    sizes="80px"
+                  />
+                </div>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-2xl font-semibold text-white md:text-3xl">{page.digitalPr.title}</h3>
+                <p className="mt-3 text-base text-zinc-400">{page.digitalPr.description}</p>
+              </div>
+            </div>
+          </div>
+        </Link>
       </section>
 
       <section className="grid gap-8 rounded-3xl border border-white/10 bg-zinc-950/70 p-8 shadow-xl shadow-black/30 md:grid-cols-[1.1fr_0.9fr] md:p-10">

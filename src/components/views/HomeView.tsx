@@ -464,7 +464,6 @@ export function HomeView() {
                       />
                     </div>
                   )}
-                  <span className="text-xs font-semibold uppercase tracking-[0.3em] text-teal-200">{card.category}</span>
                   <h3 className="text-xl font-semibold text-white">{card.title}</h3>
                   <p className="text-sm text-zinc-400">{card.description}</p>
                 </div>

@@ -71,7 +71,7 @@
       "description": "Discover the Join PR ecosystem: communication, creative production, social media, performance marketing, AI solutions and Turkey's leading travel content platform."
     },
     "hero": {
-      "intro": "Join Ecosystem",
+      "intro": "Our Services",
       "slides": {
         "joinPr": {
           "title": "Join x PR",
@@ -112,7 +112,7 @@
       }
     },
     "ecosystem": {
-      "title": "Join Ecosystem",
+      "title": "Our Services",
       "description": "",
       "cards": {
         "joinPr": {
@@ -257,12 +257,6 @@
                   "name": "Barış Baktaş",
                   "role": "Actor",
                   "image": "/barıs_baktas.jpg",
-                  "social": {}
-                },
-                {
-                  "name": "Gökhan Gürdeyiş",
-                  "role": "Actor",
-                  "image": "/gokhan_gurdeyis.jpeg",
                   "social": {}
                 }
               ],
@@ -1135,20 +1129,36 @@
       },
       "services": [
         {
-          "title": "Strategic communication and brand positioning",
-          "description": "Insight-based strategies, message architectures and communication plans that strengthen brand perception."
+          "title": "Corporate Communications",
+          "description": "We manage all internal and external communication processes that brands build with their stakeholders as a unified strategy, and develop long-term corporate communication models that strengthen identity, elevate reputation and sustain trust."
         },
         {
-          "title": "Influencer and celebrity communication",
-          "description": "Selected talent networks, co-created stories and multi-channel reputation management processes."
+          "title": "Brand Communication",
+          "description": "We design brand communication frameworks that define identity, amplify value, and create lasting relevance. Every narrative, touchpoint, and expression is crafted to strengthen recognition, build emotional connection, and establish a distinct position in the market."
         },
         {
-          "title": "Global marketing and destination PR",
-          "description": "End-to-end destination marketing including trade relations, press, fam trips and digital amplification."
+          "title": "Media Relations",
+          "description": "We develop and manage comprehensive media relations strategies that reinforce brand visibility, strengthen positioning, and build lasting credibility across the media landscape."
         },
         {
-          "title": "Event communication and experience management",
-          "description": "Events and experiences with integrated communication strategy from concept to execution."
+          "title": "Marketing Communications",
+          "description": "We create integrated marketing communication strategies that articulate a brand's value, define its positioning, and connect its message with the right audiences."
+        },
+        {
+          "title": "Sponsorship Management",
+          "description": "We develop comprehensive sponsorship communication strategies that enable brands to connect with their target audiences at the most relevant touchpoints."
+        },
+        {
+          "title": "Event and Project Management",
+          "description": "We provide comprehensive event and project management solutions aligned with brands' goals, positioning, and communication strategies."
+        },
+        {
+          "title": "Influencer Marketing",
+          "description": "We develop comprehensive influencer marketing strategies that enable brands to build authentic, impactful, and conversion-focused relationships with their target audiences."
+        },
+        {
+          "title": "Celebrity Marketing",
+          "description": "We provide strategic marketing solutions that increase brand value through celebrity partnerships and reach wide audiences. We have a strong network of actors, musicians, athletes, and cultural figures."
         }
       ],
       "cases": {
@@ -1159,6 +1169,10 @@
           "Press invitations",
           "PR measurement & media reflection reports"
         ]
+      },
+      "digitalPr": {
+        "title": "Digital PR",
+        "description": "We provide strategic digital PR solutions that enhance brands' visibility, reputation, and engagement power in the digital world. Through online media, social platforms, content production, influencer partnerships, and digital publications, we help brands build strong connections with their target audiences, creating a communication model that is talked about, shared, and impactful in the digital space."
       },
       "influencer": {
         "title": "Influencer and celebrity communication",
@@ -1193,28 +1207,28 @@
       },
       "services": [
         {
-          "title": "Digital content production and production services",
-          "description": "Multi-channel content, agile shooting teams and scalable production workflows."
+          "title": "Digital Content Production & Creative Execution",
+          "description": "We produce all the digital-first creative assets brands need by blending strategy, aesthetics, and technology into a seamless production flow. From social-first videos to brand stories, product showcases, and short-form content, we deliver fast, modern, and platform-optimized productions that strengthen brand presence and generate measurable impact across all digital touchpoints."
         },
         {
-          "title": "Commercial and campaign films",
-          "description": "High-production films with cinematic visuals and integrated storytelling."
+          "title": "Advertising & Campaign Films",
+          "description": "We craft high-impact advertising and campaign films that translate a brand's core message into visually striking, emotionally resonant storytelling. From creative concepting and script development to full-scale production and post-production, we manage every stage end-to-end. The result is cinematic, insight-driven films that amplify brand visibility, strengthen positioning, and deliver standout communication across all platforms."
         },
         {
-          "title": "Photography production",
-          "description": "End-to-end production management in editorial, lifestyle and product shoots."
+          "title": "Visual Production",
+          "description": "We elevate a brand's visual universe through meticulously crafted photography and creative imagery. From product shoots to lifestyle visuals, destination photography, and tailored concept shoots, we design and produce visuals that reflect the brand's aesthetic, purpose, and tone. Every image is created with intention—enhancing perception, strengthening storytelling, and delivering a cohesive visual identity across all communication channels."
         },
         {
-          "title": "Concept & content development and planning",
-          "description": "Brief-specific creative directions, treatment documents and visual languages."
+          "title": "Content Development & Strategic Planning",
+          "description": "We design creative content frameworks tailored to a brand's audience, communication goals, and platform dynamics. From monthly content calendars to campaign-specific storytelling, social media concepts, and narrative flow, we develop strategic, insight-driven content structures that ensure consistency, relevance, and meaningful engagement across every touchpoint."
         },
         {
-          "title": "AI visual production",
-          "description": "Scriptwriting, narrative development and multilingual content delivery."
+          "title": "AI Visual Production",
+          "description": "We provide next-generation, AI-driven visual creation that gives brands limitless creative possibilities. From product visuals and concept imagery to scene design and campaign assets, we generate high-quality, scalable outputs with exceptional speed and precision. By blending creativity with advanced AI technology, we help brands reduce traditional production costs, accelerate delivery timelines, and create truly distinctive visual worlds that stand out in any market."
         },
         {
-          "title": "AI video production",
-          "description": "Rapid iteration, storyboard and production deliveries with generative video tools."
+          "title": "AI Video Production",
+          "description": "We produce high-quality, story-driven AI videos that bring brand narratives to life with remarkable speed and creativity. From character generation and scene creation to voice-over support and full-format video compositions, we deliver visually compelling, hyper-realistic outputs that rival traditional production. This next-gen approach empowers brands with faster workflows, lower production costs, and limitless possibilities for creating standout video content across all platforms."
         }
       ],
       "portfolio": {
@@ -1266,7 +1280,7 @@
       },
       "about": {
         "title": "Join Creative – Creative Strategy, Production and Content Ecosystem",
-        "description": "Join Creative is a creative production and content studio that transforms brands' stories into a modern, striking, and compelling visual language. We offer high-standard creative solutions to brands across a wide range, from commercial films to social media content, from fashion & lifestyle productions to hotel and destination promotions.\n\nOur creative team creates a holistic experience that increases brands' communication power by managing end-to-end processes including concept development, scriptwriting, art direction, photography & video production, post-production, and digital content design."
+        "description": "Join Creative is the powerhouse where brand stories are built on a bold creative foundation and crafted for the pace of the digital age. By uniting strategy, aesthetics, and technology under one visionary approach, we deliver end-to-end content production that meets every modern brand's communication need. From digital content production to campaign films, visual production, and content planning, we create platform-specific, high-impact work that connects brands directly with their audiences and elevates their perceived value.\n\nEmbracing the future of creative production, Join Creative places AI at the core of its workflow—unlocking unprecedented speed, efficiency, and limitless imagination for brands. With advanced AI-driven visual and video production capabilities, we enhance every stage of the creative process, from striking visual design to narrative-driven video storytelling. This new-generation structure accelerates campaign delivery while empowering brands with original, distinctive, and scalable content worlds."
       },
       "cta": {
         "title": "Live your next creative production experience with Join\u00A0x\u00A0Creative.",

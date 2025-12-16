@@ -111,17 +111,16 @@ export default function BlogDetailPage() {
       </div>
 
       {image && (
-        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-zinc-900 shadow-2xl">
-          <div className="relative aspect-[16/9] w-full">
-            <Image
-              src={`${BASE_PATH}${image}`}
-              alt={title}
-              fill
-              className="object-cover"
-              unoptimized
-              sizes="(max-width: 1024px) 100vw, 1024px"
-            />
-          </div>
+        <div className="overflow-hidden rounded-3xl border border-white/10 bg-zinc-900 shadow-2xl">
+          <Image
+            src={`${BASE_PATH}${image}`}
+            alt={title}
+            width={1200}
+            height={675}
+            className="h-auto w-full max-h-[70vh] object-cover"
+            priority
+            unoptimized
+          />
         </div>
       )}
 

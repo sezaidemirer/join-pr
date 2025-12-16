@@ -22,7 +22,7 @@ export function MarketingCommunicationsView() {
         </div>
         <div className="relative h-48 w-full overflow-hidden rounded-3xl border border-white/10 bg-zinc-900 shadow-xl shadow-black/40 md:h-56">
           <Image
-            src="/join_pr_pazarlama_iletişimi.jpg"
+            src="/join_pr_pazarlama_iletisimi.jpg"
             alt={isEn ? 'Marketing communications - strategy presentation' : 'Pazarlama iletişimi - strateji sunumu görseli'}
             fill
             className="object-cover"

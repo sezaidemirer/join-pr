@@ -18,7 +18,7 @@
       "label": "Language"
     },
     "footer": {
-      "title": "Let's create bold stories together.",
+      "title": "\"We Create Influence That Lasts\"",
       "addressLabel": "Address",
       "address": "Dikilitaş Mah, Hakkı Yekten Caddesi Selenium Plaza No:10/N Kat:6, 34351 Beşiktaş/İstanbul",
       "emailLabel": "Email",
@@ -155,7 +155,7 @@
         "bahrain": {
           "title": "Bahrain",
           "slug": "bahrain",
-          "description": "An impressive media project showcasing Bahrain's rich cultural heritage and modern lifestyle to the world.",
+          "description": "In this comprehensive Celebrity PR campaign in Bahrain, we showcased the destination's rich cultural heritage, modern lifestyle, and our partner brands to the world. Through collaboration with famous Turkish actors, we achieved millions of organic reach. Throughout the project, we created content highlighting local culture, accommodation, gastronomy and tourism experiences.",
           "subProjects": [
             {
               "title": "Bahrain",
@@ -167,7 +167,7 @@
                   "role": "Actor",
                   "image": "/gokce_akyıldız.jpeg",
                   "social": {
-                    "instagram": "https://instagram.com/gokceakyildiz"
+                    "instagram": "https://www.instagram.com/akyldzgkce/?hl=tr"
                   }
                 },
                 {
@@ -175,7 +175,7 @@
                   "role": "Actor",
                   "image": "/elif_dogan.jpg",
                   "social": {
-                    "instagram": "https://instagram.com/elifdogan"
+                    "instagram": "https://www.instagram.com/mselifdogan/"
                   }
                 },
                 {
@@ -183,7 +183,7 @@
                   "role": "Actor",
                   "image": "/mehmet aykac.jpg",
                   "social": {
-                    "instagram": "https://instagram.com/mehmetaykac"
+                    "instagram": "https://www.instagram.com/mehmetaykac/"
                   }
                 },
                 {
@@ -191,7 +191,7 @@
                   "role": "Actor",
                   "image": "/emin_gunenc.jpg",
                   "social": {
-                    "instagram": "https://instagram.com/emingunenc"
+                    "instagram": "https://www.instagram.com/emingunenc/?hl=tr"
                   }
                 }
               ],
@@ -203,7 +203,7 @@
               ],
               "report": {
                 "title": "Bahrain Destination PR Campaign",
-                "description": "In this comprehensive PR campaign with Bahrain Tourism Authority, we showcased the destination's rich cultural heritage and modern lifestyle to the world. Through collaboration with 15 influencers, we achieved 25M+ organic reach. Throughout the project, we created content highlighting local culture, gastronomy and tourism experiences.",
+                "description": "In this comprehensive Celebrity PR campaign in Bahrain, we showcased the destination's rich cultural heritage, modern lifestyle, and our partner brands to the world. Through collaboration with famous Turkish actors, we achieved millions of organic reach. Throughout the project, we created content highlighting local culture, accommodation, gastronomy and tourism experiences.",
                 "images": [
                   "/meta_bahrain.jpg"
                 ]
@@ -222,7 +222,7 @@
         "sharm": {
           "title": "Sharm El Sheikh",
           "slug": "sharm-el-sheikh",
-          "description": "Unforgettable moments with the turquoise waters and colorful coral reefs of Sharm El Sheikh, Egypt's pearl.",
+          "description": "In this comprehensive Celebrity PR campaign in Egypt, we showcased the destination's rich cultural heritage, modern lifestyle, and our partner brands to the world. Through collaboration with famous Turkish actors, we achieved millions of organic reach. Throughout the project, we created content highlighting local culture, accommodation, gastronomy and tourism experiences.",
           "subProjects": [
             {
               "title": "Sharm El Sheikh - Project 1",
@@ -233,31 +233,41 @@
                   "name": "Nesrin Cavadzade",
                   "role": "Actor",
                   "image": "/nesrin_cavatzade.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/nesrin.cavadzade/?hl=tr"
+                  }
                 },
                 {
                   "name": "Burcu Özberk",
                   "role": "Actor",
                   "image": "/burcu_ozberk.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/burcuozberk/?hl=tr"
+                  }
                 },
                 {
                   "name": "Müjde Uzman",
                   "role": "Actor",
                   "image": "/mujde_uzman.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/mujdeuzman/?hl=tr"
+                  }
                 },
                 {
                   "name": "Erdem Kaynarca",
                   "role": "Actor",
                   "image": "/erdem_kaynarca.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/erdemkaynarca/"
+                  }
                 },
                 {
                   "name": "Barış Baktaş",
                   "role": "Actor",
                   "image": "/barıs_baktas.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/barisbaktas/?hl=tr"
+                  }
                 }
               ],
               "gallery": [
@@ -266,8 +276,8 @@
                 "/projects/sharm/3.jpg"
               ],
               "report": {
-                "title": "Sharm El Sheikh Underwater Experience - Project 1",
-                "description": "In our project at Sharm El Sheikh, Egypt's touristic pearl, we highlighted the unique underwater beauties of the Red Sea and luxury vacation opportunities. We reached 18M+ with 10 content creators.",
+                "title": "Egypt - Sharm El Sheikh Underwater Experience - Project 1",
+                "description": "In this comprehensive Celebrity PR campaign in Egypt, we showcased the destination's rich cultural heritage, modern lifestyle, and our partner brands to the world. Through collaboration with famous Turkish actors, we achieved millions of organic reach. Throughout the project, we created content highlighting local culture, accommodation, gastronomy and tourism experiences.",
                 "images": [
                   "/meta_sharm.jpg"
                 ]
@@ -290,49 +300,65 @@
                   "name": "İpek Yazıcı",
                   "role": "Actor",
                   "image": "/ipek_yazici_.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/ipekkyazici/?hl=tr"
+                  }
                 },
                 {
                   "name": "Ufuk Beydemir",
                   "role": "Actor",
                   "image": "/ufuk_beydemir.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/beydemirufuk/"
+                  }
                 },
                 {
                   "name": "Salih Bademci",
                   "role": "Actor",
                   "image": "/salih_bademci.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/bademcisalih/?hl=tr"
+                  }
                 },
                 {
                   "name": "Alican Okumuş",
                   "role": "Actor",
                   "image": "/alican_okumus.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/alicanokumus/"
+                  }
                 },
                 {
                   "name": "İlayda Ildır",
                   "role": "Actor",
                   "image": "/ilayda_ildir.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/ilaydaildir/"
+                  }
                 },
                 {
                   "name": "Ayça Ayşin Turan",
                   "role": "Actor",
                   "image": "/ayca_Asyin_turan.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/aycaaysinturan/?hl=tr"
+                  }
                 },
                 {
                   "name": "Cansu Tosun",
                   "role": "Actor",
                   "image": "/cansu_tosun.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/cansutosun/"
+                  }
                 },
                 {
                   "name": "Erkan Kolçak Köstendil",
                   "role": "Actor",
                   "image": "/erkan_kolcak_kostendil.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/erkankeka/?hl=tr"
+                  }
                 }
               ],
               "gallery": [
@@ -341,8 +367,8 @@
                 "/projects/sharm/3.jpg"
               ],
               "report": {
-                "title": "Sharm El Sheikh Luxury Holiday Experience - Project 2",
-                "description": "With our luxury vacation campaign at Sharm El Sheikh's 5-star hotels and premium beaches, we showcased the destination's comfort and entertainment opportunities. We reached 12M+ with 8 influencers.",
+                "title": "Egypt - Sharm El Sheikh Luxury Holiday Experience - Project 2",
+                "description": "In this comprehensive Celebrity PR campaign in Egypt, we showcased the destination's rich cultural heritage, modern lifestyle, and our partner brands to the world. Through collaboration with famous Turkish actors, we achieved millions of organic reach. Throughout the project, we created content highlighting local culture, accommodation, gastronomy and tourism experiences.",
                 "images": [
                   "/meta_sharm.jpg"
                 ]
@@ -365,37 +391,49 @@
                   "name": "Gizem Karaca",
                   "role": "Actor",
                   "image": "/gizem_karaca.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/gizemkaraca/?hl=tr"
+                  }
                 },
                 {
                   "name": "Cemre Baysel",
                   "role": "Actor",
                   "image": "/cemre_baysel.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/cemrebaysel/?hl=tr"
+                  }
                 },
                 {
                   "name": "Gülper Özdemir",
                   "role": "Actor",
                   "image": "/gulper_ozdemir.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/gulperr/?hl=tr"
+                  }
                 },
                 {
                   "name": "Gökhan Alkan",
                   "role": "Actor",
                   "image": "/gokhan_alkan.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/gokhan_alkan/?hl=tr"
+                  }
                 },
                 {
                   "name": "Serkay Tütüncü",
                   "role": "Actor",
                   "image": "/serkay_turuncu.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/serkaytutuncu/?hl=tr"
+                  }
                 },
                 {
                   "name": "Mehmet Aykaç",
                   "role": "Actor",
                   "image": "/mehmet aykac.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/mehmetaykac/"
+                  }
                 }
               ],
               "gallery": [
@@ -404,8 +442,8 @@
                 "/projects/sharm/3.jpg"
               ],
               "report": {
-                "title": "Sharm El Sheikh Wellness & Spa - Project 3",
-                "description": "In this project highlighting the destination's wellness tourism potential, we covered spa, yoga and meditation experiences. We reached 10M+ with 7 wellness influencers.",
+                "title": "Egypt - Sharm El Sheikh Wellness & Spa - Project 3",
+                "description": "In this comprehensive Celebrity PR campaign in Egypt, we showcased the destination's rich cultural heritage, modern lifestyle, and our partner brands to the world. Through collaboration with famous Turkish actors, we achieved millions of organic reach. Throughout the project, we created content highlighting local culture, accommodation, gastronomy and tourism experiences.",
                 "images": [
                   "/meta_sharm.jpg"
                 ]
@@ -428,37 +466,49 @@
                   "name": "Feyza Sevil Güngör",
                   "role": "Actor",
                   "image": "/feyza_gungor.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/feyzasevilgungor/"
+                  }
                 },
                 {
                   "name": "Nilsu Yılmaz",
                   "role": "Actor",
                   "image": "/Nilsu_yilmaz.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/nilsuyillmaz/?hl=tr"
+                  }
                 },
                 {
                   "name": "Lilya İrem",
                   "role": "Actor",
                   "image": "/lilya_irem.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/lilya_irem_fcx/"
+                  }
                 },
                 {
                   "name": "Feyza Güngör",
                   "role": "Actor",
                   "image": "/feyza_gungor.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/feyzasevilgungor/"
+                  }
                 },
                 {
                   "name": "Berk Ali Çatal",
                   "role": "Actor",
                   "image": "/berk_ali_catgal.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/berkalicatal/?hl=tr"
+                  }
                 },
                 {
                   "name": "Hilmi Cem İntepe",
                   "role": "Actor",
                   "image": "/hilmicem_intepe.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/hilmicemintepeofficial/"
+                  }
                 }
               ],
               "gallery": [
@@ -467,8 +517,8 @@
                 "/projects/sharm/3.jpg"
               ],
               "report": {
-                "title": "Sharm El Sheikh Water Sports - Project 4",
-                "description": "In our campaign featuring adrenaline-filled activities such as kitesurfing, jet ski and parasailing, we showcased Sharm El Sheikh's water sports paradise. We reached 14M+ with 9 adventure influencers.",
+                "title": "Egypt - Sharm El Sheikh Water Sports - Project 4",
+                "description": "In this comprehensive Celebrity PR campaign in Egypt, we showcased the destination's rich cultural heritage, modern lifestyle, and our partner brands to the world. Through collaboration with famous Turkish actors, we achieved millions of organic reach. Throughout the project, we created content highlighting local culture, accommodation, gastronomy and tourism experiences.",
                 "images": [
                   "/meta_sharm.jpg"
                 ]
@@ -484,31 +534,41 @@
                   "name": "İpek Kayapınar",
                   "role": "Actor",
                   "image": "/ipek_kayapinar.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/ipekkarapinar/"
+                  }
                 },
                 {
                   "name": "Ezgi Şenler",
                   "role": "Actor",
                   "image": "/ezgin_senler.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/ezgisenler/"
+                  }
             },
             {
                   "name": "Damlacan",
                   "role": "Actor",
                   "image": "/damlacan.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/damlacan/"
+                  }
                 },
                 {
                   "name": "Tolga Mendi",
                   "role": "Actor",
                   "image": "/tolga_mendi.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/tolgamendi/"
+                  }
                 },
                 {
                   "name": "Mert Altınışık",
                   "role": "Actor",
                   "image": "/mert_altinisik.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/mertaltinisik_/"
+                  }
                 }
               ],
               "gallery": [
@@ -517,8 +577,8 @@
                 "/projects/sharm/3.jpg"
               ],
               "report": {
-                "title": "Sharm El Sheikh Gastronomy Discovery - Project 5",
-                "description": "With a gastronomy tour covering Egyptian cuisine and international restaurants, we highlighted Sharm El Sheikh's culinary culture. We reached 11M+ with 6 food bloggers.",
+                "title": "Egypt - Sharm El Sheikh Gastronomy Discovery - Project 5",
+                "description": "In this comprehensive Celebrity PR campaign in Egypt, we showcased the destination's rich cultural heritage, modern lifestyle, and our partner brands to the world. Through collaboration with famous Turkish actors, we achieved millions of organic reach. Throughout the project, we created content highlighting local culture, accommodation, gastronomy and tourism experiences.",
                 "images": [
                   "/meta_sharm.jpg"
                 ]
@@ -537,7 +597,7 @@
         "hurghada": {
           "title": "Hurghada",
           "slug": "hurghada",
-          "description": "An adventure discovering the unique beauty of the Red Sea and a water sports paradise.",
+          "description": "In this comprehensive Celebrity PR campaign in Egypt, we showcased the destination's rich cultural heritage, modern lifestyle, and our partner brands to the world. Through collaboration with famous Turkish actors, we achieved millions of organic reach. Throughout the project, we created content highlighting local culture, accommodation, gastronomy and tourism experiences.",
           "subProjects": [
             {
               "title": "Hurghada - Project 1",
@@ -548,31 +608,41 @@
                   "name": "Gülper Özdemir",
                   "role": "Actor",
                   "image": "/gulper_ozdemir.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/gulperr/?hl=tr"
+                  }
                 },
                 {
                   "name": "Zehra Yılmaz",
                   "role": "Actor",
                   "image": "/zehra_yilmaz.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/zehraylmz/?hl=tr"
+                  }
                 },
                 {
                   "name": "Ali Yağcı",
                   "role": "Actor",
                   "image": "/ali_yagci.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/aliyagciii/"
+                  }
                 },
                 {
                   "name": "Erdem Kaynarca",
                   "role": "Actor",
                   "image": "/erdem_kaynarca.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/erdemkaynarca/"
+                  }
                 },
                 {
                   "name": "Oğuzhan Karbi",
                   "role": "Actor",
                   "image": "/oguzhan_karbi.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/oguzhankarbi/"
+                  }
                 }
               ],
               "gallery": [
@@ -582,8 +652,8 @@
                 "/projects/hurghada/4.jpg"
               ],
               "report": {
-                "title": "Hurghada Adventure & Water Sports - Project 1",
-                "description": "In our campaign highlighting Hurghada's dynamic water sports and adventure tourism potential, we combined adrenaline-filled activities with luxury vacation experiences. Collaboration with 12 influencers reached 20M+ people.",
+                "title": "Egypt - Hurghada Adventure & Water Sports - Project 1",
+                "description": "In this comprehensive Celebrity PR campaign in Egypt, we showcased the destination's rich cultural heritage, modern lifestyle, and our partner brands to the world. Through collaboration with famous Turkish actors, we achieved millions of organic reach. Throughout the project, we created content highlighting local culture, accommodation, gastronomy and tourism experiences.",
                 "images": [
                   "/meta_hurghada.jpg"
                 ]
@@ -602,7 +672,7 @@
         "morocco": {
           "title": "Morocco",
           "slug": "fas",
-          "description": "A cultural journey experiencing Morocco's magical cities, desert and rich cuisine.",
+          "description": "In this comprehensive Celebrity PR campaign in Morocco, we showcased the destination's rich cultural heritage, modern lifestyle, and our partner brands to the world. Through collaboration with famous Turkish actors, we achieved millions of organic reach. Throughout the project, we created content highlighting local culture, accommodation, gastronomy and tourism experiences.",
           "subProjects": [
             {
               "title": "Morocco",
@@ -613,31 +683,41 @@
                   "name": "Seray Kaya",
                   "role": "Actor",
                   "image": "/seray_kaya.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/seraykaya/"
+                  }
                 },
                 {
                   "name": "İlayda Ildır",
                   "role": "Actor",
                   "image": "/ilayda_ildir.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/ilaydaildir/"
+                  }
                 },
                 {
                   "name": "Sera Kutlubey",
                   "role": "Actor",
                   "image": "/sera_kutlubey_.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/skutlubey/"
+                  }
                 },
                 {
                   "name": "Alican Okumuş",
                   "role": "Actor",
                   "image": "/alican_okumus.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/alicanokumus/"
+                  }
                 },
                 {
                   "name": "Ümit Katarcılar",
                   "role": "Actor",
                   "image": "/ümit_kantarcilar_.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/umitkantarcilar/"
+                  }
                 }
               ],
               "gallery": [
@@ -646,8 +726,8 @@
                 "/projects/morocco/3.jpg"
               ],
               "report": {
-                "title": "Morocco Culture & Gastronomy Discovery",
-                "description": "In this project covering Morocco's magical cities, rich culinary culture and desert landscapes, we presented the destination's authentic beauties to the world. The campaign with 8 influencers reached 15M+. We highlighted Morocco's tourism potential through Marrakech, Fes and Sahara Desert experiences.",
+                "title": "Morocco - Culture & Gastronomy Discovery",
+                "description": "In this comprehensive Celebrity PR campaign in Morocco, we showcased the destination's rich cultural heritage, modern lifestyle, and our partner brands to the world. Through collaboration with famous Turkish actors, we achieved millions of organic reach. Throughout the project, we created content highlighting local culture, accommodation, gastronomy and tourism experiences.",
                 "images": [
                   "/meta_morocco.jpg"
                 ]
@@ -666,7 +746,7 @@
         "jordan": {
           "title": "Jordan",
           "slug": "urdun",
-          "description": "Jordan's treasures from the ancient beauty of Petra to the desert landscapes of Wadi Rum.",
+          "description": "In this comprehensive Celebrity PR campaign in Jordan, we showcased the destination's rich cultural heritage, modern lifestyle, and our partner brands to the world. Through collaboration with famous Turkish actors, we achieved millions of organic reach. Throughout the project, we created content highlighting local culture, accommodation, gastronomy and tourism experiences.",
           "subProjects": [
             {
               "title": "Jordan",
@@ -677,25 +757,33 @@
                   "name": "Gökçe Akyıldız",
                   "role": "Actor",
                   "image": "/gokce_akyıldız.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/akyldzgkce/?hl=tr"
+                  }
                 },
                 {
                   "name": "Gizem Güneş",
                   "role": "Actor",
                   "image": "/gizem_gunes.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/gizem.gunes/"
+                  }
                 },
                 {
                   "name": "Mehmet Aykaç",
                   "role": "Actor",
                   "image": "/mehmet aykac.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/mehmetaykac/"
+                  }
                 },
                 {
                   "name": "Emin Günenç",
                   "role": "Actor",
                   "image": "/emin_gunenc.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/emingunenc/?hl=tr"
+                  }
                 }
               ],
               "gallery": [
@@ -705,8 +793,8 @@
                 "/projects/jordan/4.jpg"
               ],
               "report": {
-                "title": "Jordan History & Nature Journey",
-                "description": "In this project featuring the ancient beauty of Petra and the mesmerizing desert landscapes of Wadi Rum, we highlighted Jordan's historical and natural wealth. The campaign with 11 influencers reached 22M+. We showcased the destination's diversity through the Dead Sea, Petra and desert camps.",
+                "title": "Jordan - History & Nature Journey",
+                "description": "In this comprehensive Celebrity PR campaign in Jordan, we showcased the destination's rich cultural heritage, modern lifestyle, and our partner brands to the world. Through collaboration with famous Turkish actors, we achieved millions of organic reach. Throughout the project, we created content highlighting local culture, accommodation, gastronomy and tourism experiences.",
                 "images": [
                   "/meta_ürdün.jpg"
                 ]
@@ -731,7 +819,7 @@
         "montenegro": {
           "title": "Montenegro",
           "slug": "karadag",
-          "description": "The magnificent bays and mountain views of Montenegro, the hidden paradise of the Adriatic.",
+          "description": "In this comprehensive Celebrity PR campaign in Montenegro, we showcased the destination's rich cultural heritage, modern lifestyle, and our partner brands to the world. Through collaboration with famous Turkish actors, we achieved millions of organic reach. Throughout the project, we created content highlighting local culture, accommodation, gastronomy and tourism experiences.",
           "subProjects": [
             {
               "title": "Montenegro",
@@ -742,31 +830,41 @@
                   "name": "Ali Yağcı",
                   "role": "Actor",
                   "image": "/ali_yagci.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/aliyagciii/"
+                  }
                 },
                 {
                   "name": "Mehmet Aykaç",
                   "role": "Actor",
                   "image": "/mehmet aykac.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/mehmetaykac/"
+                  }
                 },
                 {
                   "name": "Gökçe Akyıldız",
                   "role": "Actor",
                   "image": "/gokce_akyıldız.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/akyldzgkce/?hl=tr"
+                  }
                 },
                 {
                   "name": "Dilara Aksüyek",
                   "role": "Actor",
                   "image": "/dilara_aksüyek.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/dilaraaksuyek_/?hl=tr"
+                  }
                 },
                 {
                   "name": "Emin Günenç",
                   "role": "Actor",
                   "image": "/emin_gunenc.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/emingunenc/?hl=tr"
+                  }
                 }
               ],
               "press": [
@@ -783,8 +881,8 @@
                 "/projects/montenegro/3.jpg"
               ],
               "report": {
-                "title": "Montenegro Adriatic Coast Discovery",
-                "description": "In this project showcasing the magnificent bays, mountain views and historic towns of Montenegro, the hidden paradise of the Adriatic, we shared the destination's unique beauties. Our work with 9 influencers reached 16M+. We discovered Montenegro through the views of Kotor, Budva and Durmitor.",
+                "title": "Montenegro - Adriatic Coast Discovery",
+                "description": "In this comprehensive Celebrity PR campaign in Montenegro, we showcased the destination's rich cultural heritage, modern lifestyle, and our partner brands to the world. Through collaboration with famous Turkish actors, we achieved millions of organic reach. Throughout the project, we created content highlighting local culture, accommodation, gastronomy and tourism experiences.",
                 "images": [
                   "/meta_montenegro.jpg"
                 ]
@@ -1048,9 +1146,7 @@
         { "name": "Hyatt Regency", "image": "/hyatt-regency-1.jpg" },
         { "name": "Jordan Tourism Board", "image": "/jordan-tourism-board-1.jpg" },
         { "name": "Royal Jordanian", "image": "/royal-jordanian-logo-1.jpg" },
-        { "name": "Novu Lab", "image": "/novu-lab-logo.jpg" },
         { "name": "Rixos Premium Seagate", "image": "/rixos-logo.jpg" },
-        { "name": "Prontotour", "image": "/prontotour.jpg" },
         { "name": "Rixos Premium Magawish", "image": "/rixos-logo-1.jpg" },
         { "name": "Rixos Golf Villas & Suites Sharm El Sheikh", "image": "/rixos-logo-2.jpg" },
         { "name": "Rixos Sharm El Sheikh", "image": "/rixos-logo-3.jpg" },
@@ -1118,7 +1214,7 @@
         "description": "Join PR offers strategic communication, influencer relations, global marketing and event experience management."
       },
       "hero": {
-        "title": "Let's Create Bold Stories Together",
+        "title": "\"We Create Influence That Lasts\"",
         "subtitle": "From brand positioning to global destination PR, we take your story to the world.",
         "description": "We design stories built on insight, culture and measurable impact with destinations, lifestyle and luxury brands."
       },

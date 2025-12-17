@@ -1,10 +1,12 @@
 'use client';
 
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 import { useLanguage } from '@/context/LanguageContext';
 
 const SESSION_KEY = 'joinpr_hasLoaded';
+const BASE_PATH = process.env.NODE_ENV === 'production' ? '/join-pr' : '';
 
 export function LoadingOverlay() {
   const { translations } = useLanguage();
@@ -37,17 +39,22 @@ export function LoadingOverlay() {
   }
 
   return (
-    <div className="fixed inset-0 z-[100] flex flex-col items-center justify-center gap-6 bg-zinc-950 transition-opacity duration-500">
-      <div className="flex items-center gap-4">
-        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-500 via-sky-500 to-blue-600 shadow-2xl shadow-teal-500/40">
-          <span className="text-2xl font-semibold text-white">J</span>
+    <div className="fixed inset-0 z-[100] flex flex-col items-center justify-center gap-8 bg-zinc-950 transition-opacity duration-500">
+      <div className="flex flex-col items-center gap-6">
+        <div className="relative h-32 w-32 md:h-40 md:w-40 flex-shrink-0">
+          <Image
+            src={`${BASE_PATH}/join_pr_logo_offical2.png`}
+            alt="Join PR Logo"
+            fill
+            className="object-contain"
+            unoptimized
+          />
         </div>
-        <div>
-          <p className="text-sm uppercase tracking-[0.4em] text-teal-200">{translations.common.brandName}</p>
-          <p className="text-lg font-semibold text-white">{translations.common.tagline}</p>
-        </div>
+        <p className="text-xl md:text-2xl font-semibold text-white text-center tracking-wide">
+          {translations.common.footer.title}
+        </p>
       </div>
-      <div className="w-72 max-w-full">
+      <div className="absolute bottom-20 w-72 max-w-full">
         <div className="h-2 w-full overflow-hidden rounded-full bg-white/10">
           <div
             className="h-full rounded-full bg-gradient-to-r from-teal-400 via-sky-500 to-blue-600 transition-all duration-150"

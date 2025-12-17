@@ -18,7 +18,7 @@
       "label": "Dil"
     },
     "footer": {
-      "title": "Birlikte cesur hikayeler yaratalım.",
+      "title": "\"We Create Influence That Lasts\"",
       "addressLabel": "Adres",
       "address": "Dikilitaş Mah, Hakkı Yekten Caddesi Selenium Plaza No:10/N Kat:6, 34351 Beşiktaş/İstanbul",
       "emailLabel": "E-posta",
@@ -155,7 +155,7 @@
         "bahrain": {
           "title": "Bahrain",
           "slug": "bahrain",
-          "description": "Bahreyn'in zengin kültürel mirasını ve modern yaşamını dünyaya tanıtan etkileyici bir medya projesi.",
+          "description": "Bahreyn'de gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
           "subProjects": [
             {
               "title": "Bahrain",
@@ -167,7 +167,7 @@
                   "role": "Oyuncu",
                   "image": "/gokce_akyıldız.jpeg",
                   "social": {
-                    "instagram": "https://instagram.com/gokceakyildiz"
+                    "instagram": "https://www.instagram.com/akyldzgkce/?hl=tr"
                   }
                 },
                 {
@@ -175,7 +175,7 @@
                   "role": "Oyuncu",
                   "image": "/elif_dogan.jpg",
                   "social": {
-                    "instagram": "https://instagram.com/elifdogan"
+                    "instagram": "https://www.instagram.com/mselifdogan/"
                   }
                 },
                 {
@@ -183,7 +183,7 @@
                   "role": "Oyuncu",
                   "image": "/mehmet aykac.jpg",
                   "social": {
-                    "instagram": "https://instagram.com/mehmetaykac"
+                    "instagram": "https://www.instagram.com/mehmetaykac/"
                   }
                 },
                 {
@@ -191,7 +191,7 @@
                   "role": "Oyuncu",
                   "image": "/emin_gunenc.jpg",
                   "social": {
-                    "instagram": "https://instagram.com/emingunenc"
+                    "instagram": "https://www.instagram.com/emingunenc/?hl=tr"
                   }
                 }
               ],
@@ -203,7 +203,7 @@
               ],
               "report": {
                 "title": "Bahrain Destinasyon PR Kampanyası",
-                "description": "Bahreyn Turizm Otoritesi ile gerçekleştirdiğimiz bu kapsamlı PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını dünyaya tanıttık. 15 influencer ile yapılan iş birliği sonucunda 25M+ organik erişim elde ettik. Proje süresince yerel kültür, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
+                "description": "Bahreyn'de gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
                 "images": [
                   "/meta_bahrain.jpg"
                 ]
@@ -222,7 +222,7 @@
         "sharm": {
           "title": "Sharm El Sheikh",
           "slug": "sharm-el-sheikh",
-          "description": "Mısır'ın incisi Sharm El Sheikh'in turkuaz suları ve renkli mercan resifleriyle unutulmaz anlar.",
+          "description": "Mısır'da gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
           "subProjects": [
             {
               "title": "Sharm El Sheikh - Proje 1",
@@ -233,31 +233,41 @@
                   "name": "Nesrin Cavadzade",
                   "role": "Oyuncu",
                   "image": "/nesrin_cavatzade.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/nesrin.cavadzade/?hl=tr"
+                  }
                 },
                 {
                   "name": "Burcu Özberk",
                   "role": "Oyuncu",
                   "image": "/burcu_ozberk.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/burcuozberk/?hl=tr"
+                  }
                 },
                 {
                   "name": "Müjde Uzman",
                   "role": "Oyuncu",
                   "image": "/mujde_uzman.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/mujdeuzman/?hl=tr"
+                  }
                 },
                 {
                   "name": "Erdem Kaynarca",
                   "role": "Oyuncu",
                   "image": "/erdem_kaynarca.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/erdemkaynarca/"
+                  }
                 },
                 {
                   "name": "Barış Baktaş",
                   "role": "Oyuncu",
                   "image": "/barıs_baktas.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/barisbaktas/?hl=tr"
+                  }
                 }
               ],
               "gallery": [
@@ -266,8 +276,8 @@
                 "/projects/sharm/3.jpg"
               ],
               "report": {
-                "title": "Sharm El Sheikh Sualtı Deneyimi - Proje 1",
-                "description": "Mısır'ın turistik incisi Sharm El Sheikh'te gerçekleştirdiğimiz projede, Kızıldeniz'in eşsiz sualtı güzelliklerini ve lüks tatil olanaklarını öne çıkardık. 10 içerik üreticisi ile yapılan çalışma sonucunda 18M+ erişim sağlandı.",
+                "title": "Mısır - Sharm El Sheikh Sualtı Deneyimi - Proje 1",
+                "description": "Mısır'da gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
                 "images": [
                   "/meta_sharm.jpg"
                 ]
@@ -290,49 +300,65 @@
                   "name": "İpek Yazıcı",
                   "role": "Oyuncu",
                   "image": "/ipek_yazici_.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/ipekkyazici/?hl=tr"
+                  }
                 },
                 {
                   "name": "Ufuk Beydemir",
                   "role": "Oyuncu",
                   "image": "/ufuk_beydemir.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/beydemirufuk/"
+                  }
                 },
                 {
                   "name": "Salih Bademci",
                   "role": "Oyuncu",
                   "image": "/salih_bademci.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/bademcisalih/?hl=tr"
+                  }
                 },
                 {
                   "name": "Alican Okumuş",
                   "role": "Oyuncu",
                   "image": "/alican_okumus.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/alicanokumus/"
+                  }
                 },
                 {
                   "name": "İlayda Ildır",
                   "role": "Oyuncu",
                   "image": "/ilayda_ildir.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/ilaydaildir/"
+                  }
                 },
                 {
                   "name": "Ayça Ayşin Turan",
                   "role": "Oyuncu",
                   "image": "/ayca_Asyin_turan.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/aycaaysinturan/?hl=tr"
+                  }
                 },
                 {
                   "name": "Cansu Tosun",
                   "role": "Oyuncu",
                   "image": "/cansu_tosun.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/cansutosun/"
+                  }
                 },
                 {
                   "name": "Erkan Kolçak Köstendil",
                   "role": "Oyuncu",
                   "image": "/erkan_kolcak_kostendil.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/erkankeka/?hl=tr"
+                  }
                 }
               ],
               "gallery": [
@@ -341,8 +367,8 @@
                 "/projects/sharm/3.jpg"
               ],
               "report": {
-                "title": "Sharm El Sheikh Lüks Tatil Deneyimi - Proje 2",
-                "description": "Sharm El Sheikh'in 5 yıldızlı otelleri ve premium plajlarında gerçekleştirdiğimiz lüks tatil kampanyası ile destinasyonun konfor ve eğlence olanaklarını tanıttık. 8 influencer ile 12M+ erişim sağlandı.",
+                "title": "Mısır - Sharm El Sheikh Lüks Tatil Deneyimi - Proje 2",
+                "description": "Mısır'da gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
                 "images": [
                   "/meta_sharm.jpg"
                 ]
@@ -365,37 +391,49 @@
                   "name": "Gizem Karaca",
                   "role": "Oyuncu",
                   "image": "/gizem_karaca.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/gizemkaraca/?hl=tr"
+                  }
                 },
                 {
                   "name": "Cemre Baysel",
                   "role": "Oyuncu",
                   "image": "/cemre_baysel.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/cemrebaysel/?hl=tr"
+                  }
                 },
                 {
                   "name": "Gülper Özdemir",
                   "role": "Oyuncu",
                   "image": "/gulper_ozdemir.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/gulperr/?hl=tr"
+                  }
                 },
                 {
                   "name": "Gökhan Alkan",
                   "role": "Oyuncu",
                   "image": "/gokhan_alkan.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/gokhan_alkan/?hl=tr"
+                  }
                 },
                 {
                   "name": "Serkay Tütüncü",
                   "role": "Oyuncu",
                   "image": "/serkay_turuncu.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/serkaytutuncu/?hl=tr"
+                  }
                 },
                 {
                   "name": "Mehmet Aykaç",
                   "role": "Oyuncu",
                   "image": "/mehmet aykac.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/mehmetaykac/"
+                  }
                 }
               ],
               "gallery": [
@@ -404,8 +442,8 @@
                 "/projects/sharm/3.jpg"
               ],
               "report": {
-                "title": "Sharm El Sheikh Wellness ve Spa - Proje 3",
-                "description": "Destinasyonun wellness turizmi potansiyelini öne çıkaran bu projede, spa, yoga ve meditasyon deneyimlerini konu aldık. 7 wellness influencer ile 10M+ erişim elde ettik.",
+                "title": "Mısır - Sharm El Sheikh Wellness ve Spa - Proje 3",
+                "description": "Mısır'da gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
                 "images": [
                   "/meta_sharm.jpg"
                 ]
@@ -428,37 +466,49 @@
                   "name": "Feyza Sevil Güngör",
                   "role": "Oyuncu",
                   "image": "/feyza_gungor.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/feyzasevilgungor/"
+                  }
                 },
                 {
                   "name": "Nilsu Yılmaz",
                   "role": "Oyuncu",
                   "image": "/Nilsu_yilmaz.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/nilsuyillmaz/?hl=tr"
+                  }
                 },
                 {
                   "name": "Lilya İrem",
                   "role": "Oyuncu",
                   "image": "/lilya_irem.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/lilya_irem_fcx/"
+                  }
                 },
                 {
                   "name": "Feyza Güngör",
                   "role": "Oyuncu",
                   "image": "/feyza_gungor.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/feyzasevilgungor/"
+                  }
                 },
                 {
                   "name": "Berk Ali Çatal",
                   "role": "Oyuncu",
                   "image": "/berk_ali_catgal.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/berkalicatal/?hl=tr"
+                  }
                 },
                 {
                   "name": "Hilmi Cem İntepe",
                   "role": "Oyuncu",
                   "image": "/hilmicem_intepe.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/hilmicemintepeofficial/"
+                  }
                 }
               ],
               "gallery": [
@@ -467,8 +517,8 @@
                 "/projects/sharm/3.jpg"
               ],
               "report": {
-                "title": "Sharm El Sheikh Su Sporları - Proje 4",
-                "description": "Kitesurf, jet ski ve parasailing gibi adrenalin dolu aktiviteleri içeren kampanyamızda, Sharm El Sheikh'in su sporları cennetini tanıttık. 9 macera influencer ile 14M+ erişim.",
+                "title": "Mısır - Sharm El Sheikh Su Sporları - Proje 4",
+                "description": "Mısır'da gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
                 "images": [
                   "/meta_sharm.jpg"
                 ]
@@ -484,31 +534,41 @@
                   "name": "İpek Kayapınar",
                   "role": "Oyuncu",
                   "image": "/ipek_kayapinar.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/ipekkarapinar/"
+                  }
                 },
                 {
                   "name": "Ezgi Şenler",
                   "role": "Oyuncu",
                   "image": "/ezgin_senler.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/ezgisenler/"
+                  }
             },
             {
                   "name": "Damlacan",
                   "role": "Oyuncu",
                   "image": "/damlacan.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/damlacan/"
+                  }
                 },
                 {
                   "name": "Tolga Mendi",
                   "role": "Oyuncu",
                   "image": "/tolga_mendi.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/tolgamendi/"
+                  }
                 },
                 {
                   "name": "Mert Altınışık",
                   "role": "Oyuncu",
                   "image": "/mert_altinisik.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/mertaltinisik_/"
+                  }
                 }
               ],
               "gallery": [
@@ -517,8 +577,8 @@
                 "/projects/sharm/3.jpg"
               ],
               "report": {
-                "title": "Sharm El Sheikh Gastronomi Keşfi - Proje 5",
-                "description": "Mısır mutfağı ve uluslararası restoranları kapsayan gastronomi turuyla, Sharm El Sheikh'in yemek kültürünü öne çıkardık. 6 food blogger ile 11M+ erişim sağlandı.",
+                "title": "Mısır - Sharm El Sheikh Gastronomi Keşfi - Proje 5",
+                "description": "Mısır'da gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
                 "images": [
                   "/meta_sharm.jpg"
                 ]
@@ -537,7 +597,7 @@
         "hurghada": {
           "title": "Hurghada",
           "slug": "hurghada",
-          "description": "Kızıldeniz'in eşsiz güzelliğini ve su sporları cennetini keşfeden bir macera.",
+          "description": "Mısır'da gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
           "subProjects": [
             {
               "title": "Hurghada - Proje 1",
@@ -548,31 +608,41 @@
                   "name": "Gülper Özdemir",
                   "role": "Oyuncu",
                   "image": "/gulper_ozdemir.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/gulperr/?hl=tr"
+                  }
                 },
                 {
                   "name": "Zehra Yılmaz",
                   "role": "Oyuncu",
                   "image": "/zehra_yilmaz.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/zehraylmz/?hl=tr"
+                  }
                 },
                 {
                   "name": "Ali Yağcı",
                   "role": "Oyuncu",
                   "image": "/ali_yagci.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/aliyagciii/"
+                  }
                 },
                 {
                   "name": "Erdem Kaynarca",
                   "role": "Oyuncu",
                   "image": "/erdem_kaynarca.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/erdemkaynarca/"
+                  }
                 },
                 {
                   "name": "Oğuzhan Karbi",
                   "role": "Oyuncu",
                   "image": "/oguzhan_karbi.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/oguzhankarbi/"
+                  }
                 }
               ],
               "gallery": [
@@ -582,8 +652,8 @@
                 "/projects/hurghada/4.jpg"
               ],
               "report": {
-                "title": "Hurghada Macera ve Su Sporları - Proje 1",
-                "description": "Hurghada'nın dinamik su sporları ve macera turizmi potansiyelini öne çıkaran kampanyamızda, adrenalin dolu aktiviteler ve lüks tatil deneyimini birleştirdik. 12 influencer ile yapılan iş birliği 20M+ kişiye ulaştı.",
+                "title": "Mısır - Hurghada Macera ve Su Sporları - Proje 1",
+                "description": "Mısır'da gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
                 "images": [
                   "/meta_hurghada.jpg"
                 ]
@@ -602,7 +672,7 @@
         "morocco": {
           "title": "Fas",
           "slug": "fas",
-          "description": "Fas'ın büyülü şehirleri, çölü ve zengin mutfağını deneyimleyen kültürel bir yolculuk.",
+          "description": "Fas'ta gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
           "subProjects": [
             {
               "title": "Fas",
@@ -613,31 +683,41 @@
                   "name": "Seray Kaya",
                   "role": "Oyuncu",
                   "image": "/seray_kaya.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/seraykaya/"
+                  }
                 },
                 {
                   "name": "İlayda Ildır",
                   "role": "Oyuncu",
                   "image": "/ilayda_ildir.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/ilaydaildir/"
+                  }
                 },
                 {
                   "name": "Sera Kutlubey",
                   "role": "Oyuncu",
                   "image": "/sera_kutlubey_.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/skutlubey/"
+                  }
                 },
                 {
                   "name": "Alican Okumuş",
                   "role": "Oyuncu",
                   "image": "/alican_okumus.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/alicanokumus/"
+                  }
                 },
                 {
                   "name": "Ümit Katarcılar",
                   "role": "Oyuncu",
                   "image": "/ümit_kantarcilar_.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/umitkantarcilar/"
+                  }
                 }
               ],
               "gallery": [
@@ -646,8 +726,8 @@
                 "/projects/morocco/3.jpg"
               ],
               "report": {
-                "title": "Fas Kültür ve Gastronomi Keşfi",
-                "description": "Fas'ın büyülü şehirleri, zengin mutfak kültürü ve çöl manzaralarını kapsayan bu projede, destinasyonun otantik güzelliklerini dünyaya sunduk. 8 influencer ile gerçekleştirilen kampanya 15M+ erişim sağladı. Marakeş, Fes ve Sahara Çölü deneyimleriyle Fas'ın turistik potansiyelini öne çıkardık.",
+                "title": "Fas - Kültür ve Gastronomi Keşfi",
+                "description": "Fas'ta gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
                 "images": [
                   "/meta_morocco.jpg"
                 ]
@@ -666,7 +746,7 @@
         "jordan": {
           "title": "Ürdün",
           "slug": "urdun",
-          "description": "Petra'nın antik güzelliğinden Wadi Rum'un çöl manzaralarına kadar Ürdün'ün hazineleri.",
+          "description": "Ürdün'de gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
           "subProjects": [
             {
               "title": "Ürdün",
@@ -677,25 +757,33 @@
                   "name": "Gökçe Akyıldız",
                   "role": "Oyuncu",
                   "image": "/gokce_akyıldız.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/akyldzgkce/?hl=tr"
+                  }
                 },
                 {
                   "name": "Gizem Güneş",
                   "role": "Oyuncu",
                   "image": "/gizem_gunes.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/gizem.gunes/"
+                  }
                 },
                 {
                   "name": "Mehmet Aykaç",
                   "role": "Oyuncu",
                   "image": "/mehmet aykac.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/mehmetaykac/"
+                  }
                 },
                 {
                   "name": "Emin Günenç",
                   "role": "Oyuncu",
                   "image": "/emin_gunenc.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/emingunenc/?hl=tr"
+                  }
                 }
               ],
               "gallery": [
@@ -705,8 +793,8 @@
                 "/projects/jordan/4.jpg"
               ],
               "report": {
-                "title": "Ürdün Tarih ve Doğa Yolculuğu",
-                "description": "Petra'nın antik güzelliği ve Wadi Rum'un büyüleyici çöl manzaralarını konu alan bu projede, Ürdün'ün tarihi ve doğal zenginliklerini öne çıkardık. 11 influencer ile gerçekleştirilen kampanya 22M+ erişim elde etti. Ölü Deniz, Petra ve çöl kampları ile destinasyonun çeşitliliğini gösterdik.",
+                "title": "Ürdün - Tarih ve Doğa Yolculuğu",
+                "description": "Ürdün'de gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
                 "images": [
                   "/meta_ürdün.jpg"
                 ]
@@ -731,7 +819,7 @@
         "montenegro": {
           "title": "Karadağ",
           "slug": "karadag",
-          "description": "Adriyatik'in saklı cenneti Karadağ'ın muhteşem koyları ve dağ manzaraları.",
+          "description": "Karadağ'da gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
           "subProjects": [
             {
               "title": "Karadağ",
@@ -742,31 +830,41 @@
                   "name": "Ali Yağcı",
                   "role": "Oyuncu",
                   "image": "/ali_yagci.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/aliyagciii/"
+                  }
                 },
                 {
                   "name": "Mehmet Aykaç",
                   "role": "Oyuncu",
                   "image": "/mehmet aykac.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/mehmetaykac/"
+                  }
                 },
                 {
                   "name": "Gökçe Akyıldız",
                   "role": "Oyuncu",
                   "image": "/gokce_akyıldız.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/akyldzgkce/?hl=tr"
+                  }
                 },
                 {
                   "name": "Dilara Aksüyek",
                   "role": "Oyuncu",
                   "image": "/dilara_aksüyek.jpeg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/dilaraaksuyek_/?hl=tr"
+                  }
                 },
                 {
                   "name": "Emin Günenç",
                   "role": "Oyuncu",
                   "image": "/emin_gunenc.jpg",
-                  "social": {}
+                  "social": {
+                    "instagram": "https://www.instagram.com/emingunenc/?hl=tr"
+                  }
                 }
               ],
               "press": [
@@ -783,8 +881,8 @@
                 "/projects/montenegro/3.jpg"
               ],
               "report": {
-                "title": "Karadağ Adriyatik Kıyıları Keşfi",
-                "description": "Adriyatik'in saklı cenneti Karadağ'ın muhteşem koyları, dağ manzaraları ve tarihi kasabalarını tanıtan bu projede, destinasyonun eşsiz güzelliklerini paylaştık. 9 influencer ile yapılan çalışma 16M+ erişim sağladı. Kotor, Budva ve Durmitor manzaralarıyla Karadağ'ı keşfettik.",
+                "title": "Karadağ - Adriyatik Kıyıları Keşfi",
+                "description": "Karadağ'da gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
                 "images": [
                   "/meta_montenegro.jpg"
                 ]
@@ -1048,9 +1146,7 @@
         { "name": "Hyatt Regency", "image": "/hyatt-regency-1.jpg" },
         { "name": "Jordan Tourism Board", "image": "/jordan-tourism-board-1.jpg" },
         { "name": "Royal Jordanian", "image": "/royal-jordanian-logo-1.jpg" },
-        { "name": "Novu Lab", "image": "/novu-lab-logo.jpg" },
         { "name": "Rixos Premium Seagate", "image": "/rixos-logo.jpg" },
-        { "name": "Prontotour", "image": "/prontotour.jpg" },
         { "name": "Rixos Premium Magawish", "image": "/rixos-logo-1.jpg" },
         { "name": "Rixos Golf Villas & Suites Sharm El Sheikh", "image": "/rixos-logo-2.jpg" },
         { "name": "Rixos Sharm El Sheikh", "image": "/rixos-logo-3.jpg" },
@@ -1118,7 +1214,7 @@
         "description": "Join PR; stratejik iletişim, influencer ilişkileri, küresel pazarlama ve etkinlik deneyimi yönetimi sunar."
       },
       "hero": {
-        "title": "Birlikte Cesur Hikayeler Yaratalım",
+        "title": "\"We Create Influence That Lasts\"",
         "subtitle": "Marka konumlandırmadan global destinasyon PR'ına kadar hikayenizi dünyaya taşıyoruz.",
         "description": "Destinasyonlar, yaşam tarzı ve lüks markalarla içgörü, kültür ve ölçümlenebilir etki üzerine kurulu hikayeler tasarlıyoruz."
       },

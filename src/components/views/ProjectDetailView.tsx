@@ -101,18 +101,13 @@ export function ProjectDetailView({ projectSlug, subProjectIndex = 0 }: ProjectD
           </Link>
         </div>
         <div className="space-y-6">
-          <div className="flex items-center gap-3">
-            <span className="inline-flex items-center gap-2 rounded-full bg-teal-500/10 border border-teal-500/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-teal-400">
-              Proje
-            </span>
-            {hasMultipleProjects && (
+          {hasMultipleProjects && (
+            <div className="flex items-center gap-3">
               <span className="text-sm text-zinc-500">
                 {activeSubProjectIndex + 1} / {subProjects.length}
               </span>
-            )}
-          </div>
-          <h1 className="text-4xl font-bold text-white md:text-6xl">{projectData.title}</h1>
-          <p className="max-w-3xl text-lg text-zinc-300 md:text-xl">{projectData.description}</p>
+            </div>
+          )}
         </div>
 
         {/* Video Player with Navigation */}
@@ -285,79 +280,8 @@ export function ProjectDetailView({ projectSlug, subProjectIndex = 0 }: ProjectD
 
       {/* Project Report */}
       {currentProject.report && (
-        <section className="grid gap-8 rounded-3xl border border-white/10 bg-zinc-950/70 p-8 shadow-xl md:grid-cols-[0.9fr_1.1fr] md:p-10">
-          {/* Carousel - Left Side */}
-          <div className="relative flex items-center justify-center">
-            <div className="absolute inset-0 -z-10 rounded-[32px] bg-gradient-to-r from-teal-500/20 via-sky-500/20 to-blue-600/20 blur-3xl" />
-            
-            {/* Main Image */}
-            <div className="relative w-full">
-              <button
-                onClick={() => setIsReportModalOpen(true)}
-                className="relative w-full overflow-hidden rounded-3xl border border-white/5 transition-all hover:border-teal-500/50 hover:scale-[1.02] cursor-pointer"
-              >
-              <div className="relative aspect-[4/3] w-full bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
-                  {reportImages.length > 0 ? (
-                    <Image
-                      key={`${currentProject.title}-${activeReportIndex}`}
-                      src={`${BASE_PATH}${reportImages[activeReportIndex]}`}
-                      alt={`${currentProject.title || projectData.title} rapor görseli`}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      priority={false}
-                    />
-                  ) : (
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center space-y-4">
-                    <span className="text-8xl">📊</span>
-                    <p className="text-zinc-400">Rapor görselleri yakında</p>
-                  </div>
-                </div>
-                  )}
-              </div>
-              </button>
-
-              {/* Navigation Arrows */}
-              {currentProject.report.images && currentProject.report.images.length > 1 && (
-                <>
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setActiveReportIndex((prev) => (prev === 0 ? currentProject.report.images.length - 1 : prev - 1));
-                    }}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition-all hover:bg-black/70 hover:scale-110 z-10"
-                    aria-label={translations.common.project.previousImage}
-                  >
-                    <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
-                  </button>
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setActiveReportIndex((prev) => (prev === currentProject.report.images.length - 1 ? 0 : prev + 1));
-                    }}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition-all hover:bg-black/70 hover:scale-110 z-10"
-                    aria-label={translations.common.project.nextImage}
-                  >
-                    <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </button>
-                </>
-              )}
-
-              {/* Image Counter */}
-              {currentProject.report.images && currentProject.report.images.length > 1 && (
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-black/60 px-3 py-1 text-xs text-white backdrop-blur-sm z-10">
-                  {activeReportIndex + 1} / {currentProject.report.images.length}
-                </div>
-              )}
-            </div>
-          </div>
-
-          {/* Content - Right Side */}
+        <section className="rounded-3xl border border-white/10 bg-zinc-950/70 p-8 shadow-xl md:p-10">
+          {/* Content */}
           <div className="flex flex-col justify-center space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full bg-teal-500/10 border border-teal-500/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-teal-400 w-fit">
               {translations.common.project.projectReport}

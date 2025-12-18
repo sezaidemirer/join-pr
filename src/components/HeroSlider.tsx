@@ -60,9 +60,11 @@ export function HeroSlider() {
               />
 
               <div className="flex flex-1 flex-col justify-start gap-4 pt-2 sm:gap-6 sm:pt-6 lg:justify-center lg:pt-0 lg:gap-8">
-                <span className="text-sm font-medium uppercase tracking-[0.4em] text-teal-300">
-                  {translations.homepage.hero.intro}
-                </span>
+                {translations.homepage.hero.intro && (
+                  <span className="text-sm font-medium uppercase tracking-[0.4em] text-teal-300">
+                    {translations.homepage.hero.intro}
+                  </span>
+                )}
                 <h1 className="max-w-3xl text-4xl font-semibold leading-tight text-white md:text-5xl lg:text-6xl">
                   {slide.title}
                 </h1>

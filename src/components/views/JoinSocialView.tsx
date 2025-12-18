@@ -21,7 +21,6 @@ export function JoinSocialView() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(20,184,166,0.25),_transparent_60%)]" />
         <div className="relative flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
           <div className="flex-1 space-y-4">
-            <span className="text-xs font-semibold uppercase tracking-[0.38em] text-teal-100">Join Social</span>
             <h1 className="text-[32px] font-semibold leading-tight text-white sm:text-[36px] md:text-[42px] lg:text-[48px]">
               {page.hero.title}
             </h1>

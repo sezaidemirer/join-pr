@@ -225,10 +225,12 @@ export function HomeView() {
               <div className="absolute inset-0 -z-10 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               <h3 className="mt-2 text-2xl font-semibold text-white">{value.title}</h3>
               <p className="mt-3 text-sm text-zinc-400">{value.description}</p>
-              <div className="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-teal-200">
-                {value.cta}
-                <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
-              </div>
+              {value.cta && (
+                <div className="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-teal-200">
+                  {value.cta}
+                  <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
+                </div>
+              )}
             </Link>
           ))}
         </div>
@@ -239,7 +241,9 @@ export function HomeView() {
         <div className="space-y-10 sm:space-y-12">
           <div className="flex flex-col gap-4">
             <h2 className="text-3xl font-semibold text-white md:text-4xl">{projects.title}</h2>
-            <p className="max-w-2xl text-base text-zinc-400 md:text-lg">{projects.description}</p>
+            {projects.description && (
+              <p className="max-w-2xl text-base text-zinc-400 md:text-lg">{projects.description}</p>
+            )}
           </div>
 
           <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
@@ -408,7 +412,9 @@ export function HomeView() {
       <section className="relative space-y-10 py-12 lg:left-1/2 lg:w-screen lg:-translate-x-1/2">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 sm:px-6">
           <h2 className="text-3xl font-semibold text-white md:text-4xl">{cases.title}</h2>
-          <p className="max-w-2xl text-base text-zinc-400 md:text-lg">{cases.description}</p>
+          {cases.description && (
+            <p className="max-w-2xl text-base text-zinc-400 md:text-lg">{cases.description}</p>
+          )}
           <Link
             href="/kategori/haberler"
             className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-teal-200 transition-colors hover:text-white"
@@ -476,9 +482,10 @@ export function HomeView() {
 
       <section className="mx-auto mt-0 flex w-full max-w-6xl flex-col gap-8 rounded-3xl border border-white/10 bg-zinc-950/70 px-6 py-12 text-center shadow-xl shadow-black/30 sm:mt-16 sm:px-8">
         <div className="space-y-3">
-          <span className="text-xs font-semibold uppercase tracking-[0.4em] text-teal-300">{translations.common.brandName}</span>
           <h2 className="text-3xl font-semibold text-white md:text-4xl">{clients.title}</h2>
-          <p className="mx-auto max-w-3xl text-sm text-zinc-400 md:text-base">{clients.description}</p>
+          {clients.description && (
+            <p className="mx-auto max-w-3xl text-sm text-zinc-400 md:text-base">{clients.description}</p>
+          )}
         </div>
         <div className="grid gap-6 grid-cols-2 sm:grid-cols-3 xl:grid-cols-4">
           {(showAllLogos ? clientLogos : clientLogos.slice(0, 8)).map((logo) => {

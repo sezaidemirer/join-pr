@@ -71,7 +71,7 @@
       "description": "Discover the Join PR ecosystem: communication, creative production, social media, performance marketing, AI solutions and Turkey's leading travel content platform."
     },
     "hero": {
-      "intro": "Our Services",
+      "intro": "",
       "slides": {
         "joinPr": {
           "title": "Join x PR",
@@ -118,38 +118,38 @@
         "joinPr": {
           "title": "Join x PR",
           "description": "Strategic communication, influencer relations and global destination PR.",
-          "cta": "Explore PR"
+          "cta": ""
         },
         "joinCreative": {
           "title": "Join x Creative",
           "description": "Digital content, commercial film production and bold creative concepts.",
-          "cta": "Explore Creative"
+          "cta": ""
         },
         "joinSocial": {
           "title": "Join x Social",
           "description": "Social media strategy, continuous content and community management.",
-          "cta": "Explore Social"
+          "cta": ""
         },
         "joinAds": {
           "title": "Join x Ads",
           "description": "Performance marketing and cross-platform campaign optimization.",
-          "cta": "Explore Ads"
+          "cta": ""
         },
         "joinLabAi": {
           "title": "Join x AI Lab",
           "description": "Web, AI and automation products for future-ready brands.",
-          "cta": "Explore AI Lab"
+          "cta": ""
         },
         "joinEscapes": {
           "title": "Join x Escapes",
           "description": "Travel platform curating destinations, stories and experiences.",
-          "cta": "Explore Escapes"
+          "cta": ""
         }
       }
     },
     "projects": {
       "title": "Our Projects",
-      "description": "Discover our influencer and media projects realized worldwide.",
+      "description": "",
       "cta": "View All Projects",
       "items": {
         "bahrain": {
@@ -1003,7 +1003,7 @@
     },
     "cases": {
       "title": "In the Press",
-      "description": "We work to increase brand value by highlighting our clients' success stories in the press. We provide reliable, effective, innovative communication solutions.",
+      "description": "",
       "cards": [
         {
           "title": "Africa Tourism Forum to Take Place at Sharm El Sheikh International Congress Center on May 20-21, 2024",
@@ -1136,7 +1136,7 @@
     },
     "clients": {
       "title": "Brands We Grow With",
-      "description": "Global destinations, lifestyle icons, ambitious ventures and established brands work with Join for integrated communication.",
+      "description": "",
       "showMore": "Show More",
       "showLess": "Show Less",
       "viewAll": "View All",

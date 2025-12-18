@@ -18,7 +18,6 @@ export function JoinEscapesView() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(14,165,233,0.2),_transparent_60%)]" />
         <div className="relative flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
           <div className="flex-1 space-y-4">
-          <span className="text-xs font-semibold uppercase tracking-[0.38em] text-sky-200">Join Escapes</span>
             <h1 className="text-[20px] font-semibold leading-tight text-white sm:text-[22px] md:text-[26px] lg:text-[30px]">
               {page.hero.title}
             </h1>

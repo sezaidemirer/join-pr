@@ -45,7 +45,6 @@ export function JoinCreativeView() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(6,182,212,0.35),_transparent_65%)]" />
         <div className="relative flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
           <div className="flex-1 space-y-4">
-            <span className="text-xs font-semibold uppercase tracking-[0.38em] text-fuchsia-200">Join Creative</span>
             <h1 className="text-[24px] font-semibold leading-tight text-white sm:text-[28px] md:text-[32px] lg:text-[36px]">
               {page.hero.title}
             </h1>

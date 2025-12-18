@@ -71,7 +71,7 @@
       "description": "Join PR ekosistemini keşfedin: iletişim, kreatif prodüksiyon, sosyal medya, performans pazarlaması, AI çözümleri ve Türkiye’nin lider seyahat içerik platformu."
     },
     "hero": {
-      "intro": "Hizmetlerimiz",
+      "intro": "",
       "slides": {
         "joinPr": {
           "title": "Join x PR",
@@ -118,38 +118,38 @@
         "joinPr": {
           "title": "Join x PR",
           "description": "Stratejik iletişim, influencer ilişkileri ve küresel destinasyon PR'ı.",
-          "cta": "PR'ı keşfet"
+          "cta": ""
         },
         "joinCreative": {
           "title": "Join x Creative",
           "description": "Dijital içerik, reklam filmi prodüksiyonu ve cesur kreatif konseptler.",
-          "cta": "Creative'i keşfet"
+          "cta": ""
         },
         "joinSocial": {
           "title": "Join x Social",
           "description": "Sosyal medya stratejisi, sürekli içerik ve topluluk yönetimi.",
-          "cta": "Social'ı keşfet"
+          "cta": ""
         },
         "joinAds": {
           "title": "Join x Ads",
           "description": "Performans pazarlaması ve çapraz platform kampanya optimizasyonu.",
-          "cta": "Ads'i keşfet"
+          "cta": ""
         },
         "joinLabAi": {
           "title": "Join x AI Lab",
           "description": "Geleceğe hazır markalar için web, AI ve otomasyon ürünleri.",
-          "cta": "AI Lab'i keşfet"
+          "cta": ""
         },
         "joinEscapes": {
           "title": "Join x Escapes",
           "description": "Destinasyonları, hikayeleri ve deneyimleri derleyen seyahat platformu.",
-          "cta": "Escapes'i keşfet"
+          "cta": ""
         }
       }
     },
     "projects": {
       "title": "Projelerimiz",
-      "description": "Dünya çapında gerçekleştirdiğimiz influencer ve medya projelerini keşfedin.",
+      "description": "",
       "cta": "Tüm Projeleri Gör",
       "items": {
         "bahrain": {
@@ -1003,7 +1003,7 @@
     },
     "cases": {
       "title": "Basında Biz",
-      "description": "Müşterilerimizin başarı hikayelerini basında ön plana çıkararak marka değerlerini artırmak için çalışıyoruz. Güvenilir, etkili, yenilikçi iletişim çözümleri sunuyoruz.",
+      "description": "",
       "cards": [
         {
           "title": "Afrika Turizm Forumu 20-21 Mayıs 2024'de Sharm El Sheikh Uluslararası Kongre Merkezi'nde Gerçekleşecek",
@@ -1136,7 +1136,7 @@
     },
     "clients": {
       "title": "Birlikte büyüdüğümüz markalar",
-      "description": "Küresel destinasyonlar, yaşam tarzı ikonları, iddialı girişimler ve köklü markalar Join ile entegre iletişim için çalışıyor.",
+      "description": "",
       "showMore": "Devamını gör",
       "showLess": "Daha az göster",
       "viewAll": "Hepsini gör",
@@ -1219,7 +1219,7 @@
         "description": "Destinasyonlar, yaşam tarzı ve lüks markalarla içgörü, kültür ve ölçümlenebilir etki üzerine kurulu hikayeler tasarlıyoruz."
       },
       "media": {
-        "title": "Deneyimi Stratejiye Dönüştürür!",
+        "title": "Deneyimi Stratejiye Dönüştürür",
         "description": "Join PR ekosisteminin markalar için nasıl ölçülebilir etki yarattığını anlatan kısa videoyu keşfedin.\n\nTurizmde başarı, doğru kurgulanmış bir hikâyeden geçer. Join PR, markaların hedef kitlesiyle duygusal bağ kurmasını sağlayan iletişim stratejilerini oluşturur.",
         "videoId": "yKVqZNb5p-s"
       },

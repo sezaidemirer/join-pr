@@ -18,7 +18,6 @@ export function JoinAdsView() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.15),_transparent_70%)]" />
         <div className="relative flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
           <div className="flex-1 space-y-4">
-            <span className="text-xs font-semibold uppercase tracking-[0.38em] text-blue-100">Join Ads</span>
             <h1 className="text-[24px] font-semibold leading-tight text-white sm:text-[28px] md:text-[32px] lg:text-[36px]">
               {page.hero.title.split('&')[0]}
               <br />& {page.hero.title.split('&')[1]}

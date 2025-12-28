@@ -415,24 +415,26 @@ export default function NewsDetailPage() {
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-zinc-200">
             {locale === 'tr' ? 'Yayınlanan platformlar' : 'Published Platforms'}
           </p>
-          <div className="flex flex-wrap gap-3">
+          <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-6">
             {externalLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 rounded-xl border border-white/15 bg-white/5 px-3 py-2 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/10"
+                className="group flex aspect-square flex-col items-center justify-center gap-2 rounded-xl border border-zinc-200 bg-white p-3 text-sm font-semibold text-zinc-900 transition hover:border-zinc-300 hover:shadow-md"
               >
-                <Image
-                  src={`${BASE_PATH}${link.image}`}
-                  alt={link.label}
-                  width={120}
-                  height={36}
-                  className="h-9 w-auto object-contain"
-                  unoptimized
-                />
-                <span>{link.label}</span>
+                <div className="flex flex-1 items-center justify-center">
+                  <Image
+                    src={`${BASE_PATH}${link.image}`}
+                    alt={link.label}
+                    width={120}
+                    height={120}
+                    className="max-h-10 w-auto max-w-full object-contain"
+                    unoptimized
+                  />
+                </div>
+                <span className="text-center text-xs leading-tight">{locale === 'tr' ? 'Haberi İncele' : 'Read News'}</span>
               </a>
             ))}
           </div>

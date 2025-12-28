@@ -17,12 +17,12 @@ const BACKGROUND_MAP: Record<string, string> = {
 };
 
 const MOBILE_BACKGROUND_MAP: Record<string, string> = {
-  joinPr: `${BASE_PATH}/mobile_banner_pr.jpg`,
-  joinCreative: `${BASE_PATH}/mobile_banner_creative.jpg`,
-  joinSocial: `${BASE_PATH}/mobile_banner_social.jpg`,
-  joinAds: `${BASE_PATH}/mobile_banner_ads.jpg`,
-  joinLabAi: `${BASE_PATH}/mobile_banner_ai.jpg`,
-  joinEscapes: `${BASE_PATH}/mobile_banner_escapes.jpg`,
+  joinPr: `${BASE_PATH}/mobile_banner_pr2.jpg`,
+  joinCreative: `${BASE_PATH}/mobile_banner_creative2.jpg`,
+  joinSocial: `${BASE_PATH}/mobile_banner_social2.jpg`,
+  joinAds: `${BASE_PATH}/mobile_banner_ads2.jpg`,
+  joinLabAi: `${BASE_PATH}/mobile_banner_ai2.jpg`,
+  joinEscapes: `${BASE_PATH}/mobile_banner_escapes2.jpg`,
 };
 
 const DEFAULT_HERO_BG = 'https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=1600&q=80';
@@ -38,6 +38,11 @@ export function HeroSlider() {
   const slides = useMemo(() => Object.entries(slidesObject), [slidesObject]);
 
   const [activeIndex, setActiveIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  // Swipe için minimum kaydırma mesafesi
+  const minSwipeDistance = 50;
 
   useEffect(() => {
     const timer = window.setInterval(() => {
@@ -50,9 +55,37 @@ export function HeroSlider() {
     setActiveIndex(index);
   };
 
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      goToSlide((activeIndex + 1) % slides.length);
+    }
+    if (isRightSwipe) {
+      goToSlide((activeIndex - 1 + slides.length) % slides.length);
+    }
+  };
+
   return (
     <section className="relative mt-6 overflow-hidden bg-zinc-950 shadow-2xl shadow-black/40 lg:mt-8" data-hero>
-      <div className="relative min-h-[500px] sm:min-h-[520px] md:min-h-[560px] lg:h-[620px]">
+      <div 
+        className="relative min-h-[500px] sm:min-h-[520px] md:min-h-[560px] lg:h-[620px]"
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+      >
         {slides.map(([key, slide], index) => {
           const isActive = index === activeIndex;
           return (
@@ -110,8 +143,32 @@ export function HeroSlider() {
                 </div>
               </div>
 
-              {/* Navigasyon kontrolleri - alt kısımda */}
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between pb-3 sm:pb-4 text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.3em] text-zinc-400 lg:pb-0 z-10">
+              {/* Mobil navigasyon okları - fotoğrafın üzerinde sağ ve sol */}
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  goToSlide((activeIndex - 1 + slides.length) % slides.length);
+                }}
+                className="absolute left-2 top-1/2 -translate-y-1/2 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-white transition-all hover:bg-white/30 hover:scale-110 active:scale-95 lg:hidden text-2xl font-bold"
+                aria-label="Previous slide"
+              >
+                ‹
+              </button>
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  goToSlide((activeIndex + 1) % slides.length);
+                }}
+                className="absolute right-2 top-1/2 -translate-y-1/2 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-white transition-all hover:bg-white/30 hover:scale-110 active:scale-95 lg:hidden text-2xl font-bold"
+                aria-label="Next slide"
+              >
+                ›
+              </button>
+
+              {/* Desktop navigasyon kontrolleri - alt kısımda */}
+              <div className="hidden lg:flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between pb-3 sm:pb-4 text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.3em] text-zinc-400 lg:pb-0 z-10">
                 <div className="flex items-center gap-1.5 sm:gap-2">
                   <button
                     type="button"

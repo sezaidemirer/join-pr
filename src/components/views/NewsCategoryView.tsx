@@ -24,21 +24,28 @@ const slugify = (text: string) =>
 export function NewsCategoryView() {
   const { translations } = useLanguage();
   const cases = translations.homepage.cases;
-  const caseItems = cases.cards as Array<{ title: string; category: string; description: string; image?: string }>;
   
   // TR dosyasından haberleri al (slug oluşturmak için)
-  const trCases = tr.homepage.cases.cards as Array<{ title: string; category: string; description: string; image?: string }>;
+  const trCases = (tr.homepage?.cases?.cards || []) as Array<{ title: string; category: string; description: string; image?: string }>;
+  
+  // Önce translations'dan al, yoksa TR dosyasından al
+  const caseItems = (cases?.cards || trCases) as Array<{ title: string; category: string; description: string; image?: string }>;
+  
+  const displayItems = caseItems;
 
   return (
     <div className="flex flex-col gap-16 lg:gap-20">
       <section className="relative space-y-10 py-12">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 sm:px-6">
-          <h1 className="text-4xl font-semibold text-white md:text-5xl">{cases.title}</h1>
-          <p className="max-w-3xl text-base text-zinc-400 md:text-lg">{cases.description}</p>
+          <h1 className="text-4xl font-semibold text-white md:text-5xl">{cases?.title || 'Basında Biz'}</h1>
+          {cases?.description && (
+            <p className="max-w-3xl text-base text-zinc-400 md:text-lg">{cases.description}</p>
+          )}
         </div>
 
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-4 sm:px-6 md:grid-cols-2 lg:grid-cols-3">
-          {caseItems.map((card, index) => {
+          {displayItems.length > 0 ? (
+            displayItems.map((card, index) => {
             // Her zaman TR başlığından slug oluştur (aynı index'teki TR haberini kullan)
             const trCard = trCases[index];
             const slug = trCard ? slugify(trCard.title) : slugify(card.title);
@@ -74,7 +81,12 @@ export function NewsCategoryView() {
                 </div>
               </Link>
             );
-          })}
+            })
+          ) : (
+            <div className="col-span-full text-center py-12">
+              <p className="text-zinc-400">İçerik bulunamadı.</p>
+            </div>
+          )}
         </div>
       </section>
     </div>

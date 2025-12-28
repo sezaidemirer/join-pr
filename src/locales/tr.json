@@ -75,25 +75,25 @@
       "slides": {
         "joinPr": {
           "title": "Join x PR",
-          "subtitle": "Stratejik iletişim ve destinasyon PR’ı ile küresel algıyı şekillendiriyoruz.",
+          "subtitle": "Markaların hikâyelerini deneyime, deneyimleri kalıcı bir etkiye dönüştüren yeni nesil bir iletişim ajansıdır.",
           "cta": "Join PR’ı keşfet",
           "link": "/join-pr"
         },
         "joinCreative": {
           "title": "Join x Creative",
-          "subtitle": "Markaları yükselten filmler, fotoğraf ve sinematik hikayeler.",
+          "subtitle": "Markaların dijital çağın hızına uygun üretim gücünü ileri teknolojilerle birleştiren yaratıcı üretim alanımızdır.",
           "cta": "Join Creative’i keşfet",
           "link": "/join-creative"
         },
         "joinSocial": {
           "title": "Join x Social",
-          "subtitle": "Sosyal strateji, içerik ve topluluk yönetimi ile sohbetleri ateşliyoruz.",
+          "subtitle": "Markaların tüm sosyal medya kanallarını uçtan uca yöneten ve bu süreci yapay zekâ destekli bir stratejiyle güçlendiren yeni nesil iletişim alanımızdır.",
           "cta": "Join Social’ı incele",
           "link": "/join-social"
         },
         "joinAds": {
           "title": "Join x Ads",
-          "subtitle": "Google, Meta ve yeni platformlarda performans odaklı medya stratejileri.",
+          "subtitle": "Markaların dijitalde büyüme hızını katlayan, performans pazarlaması ve reklam teknolojilerini en üst seviyede kullanan yeni nesil reklam yönetim alanımızdır.",
           "cta": "Join Ads ile büyü",
           "link": "/join-ads"
         },
@@ -105,7 +105,7 @@
         },
         "joinEscapes": {
           "title": "Join x Escapes",
-          "subtitle": "Türkiye’nin en çok okunan yeni nesil seyahat içerik platformu.",
+          "subtitle": "Keşfetmeyi seven ve deneyim odaklı seyahat kültürüne ilham arayan herkes için tasarlanmış bir sosyal içerik ve keşif platformudur.",
           "cta": "Join Escapes’i ziyaret et",
           "link": "/join-escapes"
         }
@@ -525,7 +525,7 @@
               },
               "press": []
             },
-                {
+            {
               "title": "Sharm El Sheikh - Proje 5",
               "videoUrl": "https://www.youtube.com/embed/6qv5e5n5mCg",
               "videoId": "6qv5e5n5mCg",
@@ -545,8 +545,8 @@
                   "social": {
                     "instagram": "https://www.instagram.com/ezgisenler/"
                   }
-            },
-            {
+                },
+                {
                   "name": "Damlacan",
                   "role": "Oyuncu",
                   "image": "/damlacan.jpg",
@@ -1141,21 +1141,66 @@
       "showLess": "Daha az göster",
       "viewAll": "Hepsini gör",
       "logos": [
-        { "name": "Swissotel Sharm El Sheikh", "image": "/swissotel-logo.jpg" },
-        { "name": "Marriott Dead Sea Resort", "image": "/marriott-dead-sea.jpg" },
-        { "name": "Hyatt Regency", "image": "/hyatt-regency-1.jpg" },
-        { "name": "Jordan Tourism Board", "image": "/jordan-tourism-board-1.jpg" },
-        { "name": "Royal Jordanian", "image": "/royal-jordanian-logo-1.jpg" },
-        { "name": "Rixos Premium Seagate", "image": "/rixos-logo.jpg" },
-        { "name": "Rixos Premium Magawish", "image": "/rixos-logo-1.jpg" },
-        { "name": "Rixos Golf Villas & Suites Sharm El Sheikh", "image": "/rixos-logo-2.jpg" },
-        { "name": "Rixos Sharm El Sheikh", "image": "/rixos-logo-3.jpg" },
-        { "name": "Rixos Premium Alamein", "image": "/rixos-logo-4.jpg" },
-        { "name": "Rixos Radamis Sharm El Sheikh", "image": "/rixos-logo-5.jpg" },
-        { "name": "Rixos Alamein", "image": "/rixos-logo-4.jpg" },
-        { "name": "Club Privé by Rixos Sharm El Sheikh", "image": "/club-prive-logo2.jpg" },
-        { "name": "Vida Beach Resort Marassi Al Bahrain", "image": "/vida-beach-resort.jpg" },
-        { "name": "Nikki Beach", "image": "/nikki-beach-logo-1.jpg" }
+        {
+          "name": "Swissotel Sharm El Sheikh",
+          "image": "/swissotel-logo.jpg"
+        },
+        {
+          "name": "Marriott Dead Sea Resort",
+          "image": "/marriott-dead-sea.jpg"
+        },
+        {
+          "name": "Hyatt Regency",
+          "image": "/hyatt-regency-1.jpg"
+        },
+        {
+          "name": "Jordan Tourism Board",
+          "image": "/jordan-tourism-board-1.jpg"
+        },
+        {
+          "name": "Royal Jordanian",
+          "image": "/royal-jordanian-logo-1.jpg"
+        },
+        {
+          "name": "Rixos Premium Seagate",
+          "image": "/rixos-logo.jpg"
+        },
+        {
+          "name": "Rixos Premium Magawish",
+          "image": "/rixos-logo-1.jpg"
+        },
+        {
+          "name": "Rixos Golf Villas & Suites Sharm El Sheikh",
+          "image": "/rixos-logo-2.jpg"
+        },
+        {
+          "name": "Rixos Sharm El Sheikh",
+          "image": "/rixos-logo-3.jpg"
+        },
+        {
+          "name": "Rixos Premium Alamein",
+          "image": "/rixos-logo-4.jpg"
+        },
+        {
+          "name": "Rixos Radamis Sharm El Sheikh",
+          "image": "/rixos-logo-5.jpg"
+        },
+        {
+          "name": "Rixos Alamein",
+          "image": "/rixos-logo-4.jpg"
+        },
+        {
+          "name": "Club Privé by Rixos Sharm El Sheikh",
+          "image": "/club-prive-logo2.jpg"
+        },
+        {
+          "name": "Vida Beach Resort Marassi Al Bahrain",
+          "image": "/vida-beach-resort.jpg"
+        },
+        {
+          "name": "Nikki Beach",
+          "image": "/nikki-beach-logo-1.jpg"
+        }
       ]
     },
     "blog": {
@@ -1330,27 +1375,72 @@
       "portfolio": {
         "title": "Foto Galeri",
         "items": [
-          { "title": "Rixos Premium Qetaifan Island North", "image": "/creative_page_galery1.jpg" },
-          { "title": "Four Seasons Hotel Bahrain Bay", "image": "/creative_page_galery2.jpg" },
-          { "title": "Rixos Radamis Sharm el Sheikh", "image": "/creative_page_galery3.jpg" },
-          { "title": "Rixos The Palm Dubai", "image": "/creative_page_galery4.jpg" },
-          { "title": "AJet Havayolları", "image": "/creative_page_galery5.jpg" },
-          { "title": "Jennifer Lopez Up All Night 2025 Egypt", "image": "/creative_page_galery6.jpg" }
+          {
+            "title": "Rixos Premium Qetaifan Island North",
+            "image": "/creative_page_galery1.jpg"
+          },
+          {
+            "title": "Four Seasons Hotel Bahrain Bay",
+            "image": "/creative_page_galery2.jpg"
+          },
+          {
+            "title": "Rixos Radamis Sharm el Sheikh",
+            "image": "/creative_page_galery3.jpg"
+          },
+          {
+            "title": "Rixos The Palm Dubai",
+            "image": "/creative_page_galery4.jpg"
+          },
+          {
+            "title": "AJet Havayolları",
+            "image": "/creative_page_galery5.jpg"
+          },
+          {
+            "title": "Jennifer Lopez Up All Night 2025 Egypt",
+            "image": "/creative_page_galery6.jpg"
+          }
         ]
       },
       "shorts": {
         "title": "Shorts Videolar",
         "description": "Dijital dünyanın benimsediği dikey formatı merkezimize alıyor, markalar için ekrana en uygun biçimde tasarlanmış etkili dikey video içerikleri üretiyoruz. Üretimden kreatife, kurgudan yayına kadar tüm süreçlerde dikey dünyanın dinamiklerine hâkim, yenilikçi çözümler sunuyoruz.",
         "items": [
-          { "videoId": "4ev7EgpMA80", "title": "Video 1" },
-          { "videoId": "Ndl6uBv5-R0", "title": "Video 2" },
-          { "videoId": "WAy4EBBaAu0", "title": "Video 3" },
-          { "videoId": "YSK4kWuAslQ", "title": "Video 4" },
-          { "videoId": "hPuHEpYYyTU", "title": "Video 5" },
-          { "videoId": "Mc1he2_Yebk", "title": "Video 6" },
-          { "videoId": "bXMsKFtzq6Q", "title": "Video 7" },
-          { "videoId": "Hnx4FnPuduA", "title": "Video 8" },
-          { "videoId": "N0NBaj0o-qc", "title": "Video 9" }
+          {
+            "videoId": "4ev7EgpMA80",
+            "title": "Video 1"
+          },
+          {
+            "videoId": "Ndl6uBv5-R0",
+            "title": "Video 2"
+          },
+          {
+            "videoId": "WAy4EBBaAu0",
+            "title": "Video 3"
+          },
+          {
+            "videoId": "YSK4kWuAslQ",
+            "title": "Video 4"
+          },
+          {
+            "videoId": "hPuHEpYYyTU",
+            "title": "Video 5"
+          },
+          {
+            "videoId": "Mc1he2_Yebk",
+            "title": "Video 6"
+          },
+          {
+            "videoId": "bXMsKFtzq6Q",
+            "title": "Video 7"
+          },
+          {
+            "videoId": "Hnx4FnPuduA",
+            "title": "Video 8"
+          },
+          {
+            "videoId": "N0NBaj0o-qc",
+            "title": "Video 9"
+          }
         ]
       },
       "videoPortfolio": {
@@ -1359,19 +1449,58 @@
         "showMore": "Devamını Gör",
         "showLess": "Daha Az Göster",
         "items": [
-          { "videoId": "yKVqZNb5p-s", "title": "Video 1" },
-          { "videoId": "BjvRTrv_35w", "title": "Video 2" },
-          { "videoId": "pJy_mcZRxDY", "title": "Video 3" },
-          { "videoId": "6qv5e5n5mCg", "title": "Video 4" },
-          { "videoId": "FLNg5aQb9rk", "title": "Video 5" },
-          { "videoId": "Gi6HNtO6ofY", "title": "Video 6" },
-          { "videoId": "0lST4vj-Ja8", "title": "Video 7" },
-          { "videoId": "Ec2gB_FgtSk", "title": "Video 8" },
-          { "videoId": "4cquC9a4B_E", "title": "Video 9" },
-          { "videoId": "IvKE_WSd4Ec", "title": "Video 10" },
-          { "videoId": "v6WBSvXz8cQ", "title": "Video 11" },
-          { "videoId": "A_8z2fGlgKY", "title": "Video 12" },
-          { "videoId": "jA57OToKvAg", "title": "Video 13" }
+          {
+            "videoId": "yKVqZNb5p-s",
+            "title": "Video 1"
+          },
+          {
+            "videoId": "BjvRTrv_35w",
+            "title": "Video 2"
+          },
+          {
+            "videoId": "pJy_mcZRxDY",
+            "title": "Video 3"
+          },
+          {
+            "videoId": "6qv5e5n5mCg",
+            "title": "Video 4"
+          },
+          {
+            "videoId": "FLNg5aQb9rk",
+            "title": "Video 5"
+          },
+          {
+            "videoId": "Gi6HNtO6ofY",
+            "title": "Video 6"
+          },
+          {
+            "videoId": "0lST4vj-Ja8",
+            "title": "Video 7"
+          },
+          {
+            "videoId": "Ec2gB_FgtSk",
+            "title": "Video 8"
+          },
+          {
+            "videoId": "4cquC9a4B_E",
+            "title": "Video 9"
+          },
+          {
+            "videoId": "IvKE_WSd4Ec",
+            "title": "Video 10"
+          },
+          {
+            "videoId": "v6WBSvXz8cQ",
+            "title": "Video 11"
+          },
+          {
+            "videoId": "A_8z2fGlgKY",
+            "title": "Video 12"
+          },
+          {
+            "videoId": "jA57OToKvAg",
+            "title": "Video 13"
+          }
         ]
       },
       "about": {
@@ -1379,7 +1508,7 @@
         "description": "Join Creative, markaların hikâyesini güçlü bir yaratıcı omurga üzerine inşa eden, dijital çağın hızına uygun üretim gücünü ileri teknolojilerle birleştiren yaratıcı üretim alanımızdır. Strateji, estetik ve teknoloji üçlüsünü aynı noktada buluşturarak markaların ihtiyaç duyduğu bütünsel içerik üretimi ve prodüksiyon süreçlerini tek bir yaratıcı çatı altında toplarız. Dijital içerik üretimi, reklam ve kampanya filmleri, görsel prodüksiyon ve içerik geliştirme, planlama alanlarında; markanın hedef kitlesine doğrudan temas eden, yüksek algı değeri yaratan ve platformlara özel kurgulanmış içerikler sunarız.\n\nYeni dönemde yaratıcı üretimin merkezine yapay zekâyı konumlandıran Join Creative, AI tabanlı görsel ve video prodüksiyon çözümleriyle markalara hız, verimlilik ve sınırsız yaratıcılık sunar. İleri seviye görsel çalışma tekniklerinden hikâye odaklı video kurgularına kadar tüm süreçlerde, markaların iletişim gücünü artıran yenilikçi bir yaklaşım benimseriz. Bu yapı sayesinde hem kampanyaların üretim hızını maksimize eder hem de markalar için özgün, dikkat çekici ve ölçeklenebilir içerik dünyaları yaratırız."
       },
       "cta": {
-        "title": "Bir sonraki kreatif prodüksiyon deneyimini Join\u00A0x\u00A0Creative ile yaşa.",
+        "title": "Bir sonraki kreatif prodüksiyon deneyimini Join x Creative ile yaşa.",
         "description": "Projeni anlat, sana özel bir prodüksiyon planı hazırlayalım.",
         "button": "Kreatif teklif iste"
       }

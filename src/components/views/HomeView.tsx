@@ -226,10 +226,10 @@ export function HomeView() {
               <h3 className="mt-2 text-2xl font-semibold text-white">{value.title}</h3>
               <p className="mt-3 text-sm text-zinc-400">{value.description}</p>
               {value.cta && (
-                <div className="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-teal-200">
-                  {value.cta}
-                  <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
-                </div>
+              <div className="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-teal-200">
+                {value.cta}
+                <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
+              </div>
               )}
             </Link>
           ))}
@@ -242,7 +242,7 @@ export function HomeView() {
           <div className="flex flex-col gap-4">
             <h2 className="text-3xl font-semibold text-white md:text-4xl">{projects.title}</h2>
             {projects.description && (
-              <p className="max-w-2xl text-base text-zinc-400 md:text-lg">{projects.description}</p>
+            <p className="max-w-2xl text-base text-zinc-400 md:text-lg">{projects.description}</p>
             )}
           </div>
 
@@ -413,7 +413,7 @@ export function HomeView() {
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 sm:px-6">
           <h2 className="text-3xl font-semibold text-white md:text-4xl">{cases.title}</h2>
           {cases.description && (
-            <p className="max-w-2xl text-base text-zinc-400 md:text-lg">{cases.description}</p>
+          <p className="max-w-2xl text-base text-zinc-400 md:text-lg">{cases.description}</p>
           )}
           <Link
             href="/kategori/haberler"
@@ -484,7 +484,7 @@ export function HomeView() {
         <div className="space-y-3">
           <h2 className="text-3xl font-semibold text-white md:text-4xl">{clients.title}</h2>
           {clients.description && (
-            <p className="mx-auto max-w-3xl text-sm text-zinc-400 md:text-base">{clients.description}</p>
+          <p className="mx-auto max-w-3xl text-sm text-zinc-400 md:text-base">{clients.description}</p>
           )}
         </div>
         <div className="grid gap-6 grid-cols-2 sm:grid-cols-3 xl:grid-cols-4">

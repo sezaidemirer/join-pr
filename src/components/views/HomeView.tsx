@@ -31,7 +31,6 @@ export function HomeView() {
   const ecosystemDescription =
     typeof ecosystem.description === 'string' ? ecosystem.description.trim() : '';
   const caseItems = cases.cards as Array<{ title: string; category: string; description: string; image?: string }>;
-  const marqueeItems = [...caseItems, ...caseItems];
   const clients = translations.homepage.clients;
   const clientLogos = clients.logos as Array<{ name: string; image: string }>;
   const promoSlides = useMemo(
@@ -54,11 +53,9 @@ export function HomeView() {
   // Marquee drag/swipe state
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
-  const [currentTranslate, setCurrentTranslate] = useState(0);
-  const [prevTranslate, setPrevTranslate] = useState(0);
-  const marqueeRef = useRef<HTMLDivElement>(null);
-  const [isPaused, setIsPaused] = useState(false);
-  const animationId = useRef<number | null>(null);
+  const [prevScrollPosition, setPrevScrollPosition] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isHovered, setIsHovered] = useState(false);
   const [showAllLogos, setShowAllLogos] = useState(false);
 
   useEffect(() => {
@@ -89,90 +86,73 @@ export function HomeView() {
       .replace(/[^a-z0-9]+/g, '-')
       .replace(/^-+|-+$/g, '');
 
-  // Marquee drag handlers
-  const setPositionFromEvent = (clientX: number) => {
-    const currentPosition = clientX - startX;
-    setCurrentTranslate(prevTranslate + currentPosition);
-  };
-
-  const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!marqueeRef.current) return;
-    setIsDragging(true);
-    setIsPaused(true);
-    setStartX(e.clientX);
-    setPrevTranslate(currentTranslate);
-    if (animationId.current) {
-      cancelAnimationFrame(animationId.current);
-    }
-  };
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!isDragging || !marqueeRef.current) return;
-    e.preventDefault();
-    setPositionFromEvent(e.clientX);
-  };
-
-  const handleMouseUp = () => {
-    if (!isDragging) return;
-    setIsDragging(false);
-    setStartX(0);
-    setPrevTranslate(currentTranslate);
-    // Kullanıcı bıraktıktan 2 saniye sonra animasyona devam et
-    setTimeout(() => {
-      setIsPaused(false);
-      setCurrentTranslate(0);
-      setPrevTranslate(0);
-      if (marqueeRef.current) {
-        marqueeRef.current.style.transform = '';
+  // Auto-scroll effect
+  useEffect(() => {
+    if (!containerRef.current || isHovered || isDragging) return;
+    
+    const container = containerRef.current;
+    const scrollSpeed = 1; // pixels per frame
+    let animationFrameId: number;
+    let lastTimestamp = 0;
+    
+    const animate = (timestamp: number) => {
+      if (!lastTimestamp) lastTimestamp = timestamp;
+      const deltaTime = timestamp - lastTimestamp;
+      
+      if (deltaTime >= 16) { // ~60fps
+        if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
+          // Başa dön
+          container.scrollLeft = 0;
+        } else {
+          container.scrollLeft += scrollSpeed;
+        }
+        lastTimestamp = timestamp;
       }
-    }, 2000);
-  };
-
-  const handleMouseLeave = () => {
-    if (!isDragging) return;
-    setIsDragging(false);
-    setStartX(0);
-    setPrevTranslate(currentTranslate);
-    setTimeout(() => {
-      setIsPaused(false);
-      setCurrentTranslate(0);
-      setPrevTranslate(0);
-      if (marqueeRef.current) {
-        marqueeRef.current.style.transform = '';
+      
+      if (!isHovered && !isDragging) {
+        animationFrameId = requestAnimationFrame(animate);
       }
-    }, 2000);
+    };
+    
+    animationFrameId = requestAnimationFrame(animate);
+    
+    return () => {
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
+    };
+  }, [isHovered, isDragging]);
+
+  // Scroll handlers
+  const scrollLeft = () => {
+    if (!containerRef.current) return;
+    const scrollAmount = 400;
+    containerRef.current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
   };
 
-  // Touch handlers
+  const scrollRight = () => {
+    if (!containerRef.current) return;
+    const scrollAmount = 400;
+    containerRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  };
+
+  // Touch handlers for mobile
   const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
-    if (!marqueeRef.current) return;
+    if (!containerRef.current) return;
     setIsDragging(true);
-    setIsPaused(true);
     setStartX(e.touches[0].clientX);
-    setPrevTranslate(currentTranslate);
-    if (animationId.current) {
-      cancelAnimationFrame(animationId.current);
-    }
+    setPrevScrollPosition(containerRef.current.scrollLeft);
   };
 
   const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
-    if (!isDragging || !marqueeRef.current) return;
-    setPositionFromEvent(e.touches[0].clientX);
+    if (!isDragging || !containerRef.current) return;
+    const currentX = e.touches[0].clientX;
+    const diff = startX - currentX;
+    containerRef.current.scrollLeft = prevScrollPosition + diff;
   };
 
   const handleTouchEnd = () => {
-    if (!isDragging) return;
     setIsDragging(false);
-    setStartX(0);
-    setPrevTranslate(currentTranslate);
-    setTimeout(() => {
-      setIsPaused(false);
-      setCurrentTranslate(0);
-      setPrevTranslate(0);
-      if (marqueeRef.current) {
-        marqueeRef.current.style.transform = '';
-      }
-    }, 2000);
   };
 
   return (
@@ -423,26 +403,41 @@ export function HomeView() {
             <span aria-hidden>↗</span>
           </Link>
         </div>
-        <div className="relative overflow-hidden">
+        <div 
+          className="relative overflow-hidden"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          {/* Web için navigasyon okları */}
+          <button
+            onClick={scrollLeft}
+            className={`absolute left-4 top-1/2 z-20 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-white transition-all hover:bg-white/30 hover:scale-110 active:scale-95 lg:flex hidden ${isHovered ? 'opacity-100' : 'opacity-0'}`}
+            aria-label="Previous"
+          >
+            ‹
+          </button>
+          <button
+            onClick={scrollRight}
+            className={`absolute right-4 top-1/2 z-20 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-white transition-all hover:bg-white/30 hover:scale-110 active:scale-95 lg:flex hidden ${isHovered ? 'opacity-100' : 'opacity-0'}`}
+            aria-label="Next"
+          >
+            ›
+          </button>
+          
           <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-zinc-950 via-zinc-950/70 to-transparent z-10" />
           <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-zinc-950 via-zinc-950/70 to-transparent z-10" />
           <div
-            ref={marqueeRef}
-            className={`marquee flex min-w-max gap-6 cursor-grab active:cursor-grabbing select-none ${isPaused ? '' : 'animate-marquee'}`}
-            onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
-            onMouseUp={handleMouseUp}
-            onMouseLeave={handleMouseLeave}
+            ref={containerRef}
+            className="flex gap-6 overflow-x-auto scrollbar-hide"
+            style={{
+              scrollBehavior: 'smooth',
+              WebkitOverflowScrolling: 'touch',
+            }}
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
-            style={{
-              transition: isDragging ? 'none' : 'transform 0.3s ease-out',
-              animationPlayState: isPaused ? 'paused' : 'running',
-              ...(isPaused && currentTranslate !== 0 ? { transform: `translateX(${currentTranslate}px)` } : {}),
-            }}
           >
-            {marqueeItems.map((card, index) => {
+            {caseItems.map((card, index) => {
               const slug = slugify(card.title);
               // "Türk Oyuncular Mısır'ın en ünlü tatil merkezinde buluştu" haberi için direkt external link
               const isSpecialNews = slug === 'turk-oyuncular-misirin-en-unlu-tatil-merkezinde-bulustu';

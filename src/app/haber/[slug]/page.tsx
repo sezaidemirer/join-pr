@@ -28,12 +28,12 @@ export default function NewsDetailPage() {
   const router = useRouter();
   const { translations, locale } = useLanguage();
 
-  const cases = translations.homepage.cases;
-  const caseItems = cases.cards as Array<{ title: string; category: string; description: string; image?: string }>;
-
   // Hem TR hem EN dosyalarından haberleri al
-  const trCases = tr.homepage.cases.cards as Array<{ title: string; category: string; description: string; image?: string }>;
-  const enCases = en.homepage.cases.cards as Array<{ title: string; category: string; description: string; image?: string }>;
+  const trCases = (tr.homepage?.cases?.cards || []) as Array<{ title: string; category: string; description: string; image?: string }>;
+  const enCases = (en.homepage?.cases?.cards || []) as Array<{ title: string; category: string; description: string; image?: string }>;
+  
+  const cases = translations.homepage.cases;
+  const caseItems = (cases?.cards || trCases) as Array<{ title: string; category: string; description: string; image?: string }>;
 
   // Slug eşleşmesi: Her zaman TR başlığından slug oluşturup eşleştir
   const trMatch = trCases.find((item) => slugify(item.title) === params.slug);
@@ -44,10 +44,18 @@ export default function NewsDetailPage() {
     // TR'deki index'i bul
     const trIndex = trCases.indexOf(trMatch);
     // Mevcut dildeki aynı index'teki haberi al
-    if (trIndex !== -1 && caseItems[trIndex]) {
-      current = caseItems[trIndex];
+    if (trIndex !== -1) {
+      // Önce mevcut dildeki (translations) haberi kullan
+      if (caseItems[trIndex]) {
+        current = caseItems[trIndex];
+      } else if (locale === 'en' && enCases[trIndex]) {
+        // EN dilinde ve translations'da yoksa, EN dosyasından direkt al
+        current = enCases[trIndex];
+      } else {
+        // Fallback: TR haberini göster
+        current = trMatch;
+      }
     } else {
-      // Fallback: TR haberini göster
       current = trMatch;
     }
   }

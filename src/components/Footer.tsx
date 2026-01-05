@@ -49,7 +49,7 @@ export function Footer() {
 
           <div>
             <h3 className="text-lg font-semibold text-white">{footer.socialTitle}</h3>
-            <ul className="mt-4 space-y-3 text-sm text-zinc-400">
+            <ul className="mt-4 grid grid-cols-1 gap-3 text-sm text-zinc-400 lg:grid-cols-2">
               {SOCIAL_LINKS.map(({ name, href, icon: Icon }) => (
                 <li key={name}>
                   <a

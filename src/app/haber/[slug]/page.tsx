@@ -180,15 +180,6 @@ export default function NewsDetailPage() {
       }
     );
   }
-  if (
-    currentSlug === 'prontotour-da-erken-rezervasyon-donemi-basladi-2025-icin-hedef-60-bin-turist'
-  ) {
-    externalLinks.push({
-      href: 'https://www.klassmagazin.com/prontotourda-erken-rezervasyon-donemi-basladi-2025-icin-hedef-60-bin-turist',
-      image: '/klass-magazin-logo.png',
-      label: 'KLASS Magazin',
-    });
-  }
   if (currentSlug === 'hadise-sarm-el-seyh-te-4-bin-kisiye-konser-verdi') {
     externalLinks.push(
       {
@@ -217,11 +208,6 @@ export default function NewsDetailPage() {
     currentSlug === 'rixos-radamis-sharm-el-sheikh-enrique-iglesias-in-muhtesem-performansina-ev-sahipligi-yapti'
   ) {
     externalLinks.push(
-      {
-        href: 'https://www.klassmagazin.com/rixos-radamis-sharm-el-sheikh-enrique-iglesiasin-muhtesem-performansina-ev-sahipligi-yapti',
-        image: '/klass-magazin-logo.png',
-        label: 'KLASS Magazin',
-      },
       {
         href: 'https://www.dha.com.tr/kultur-sanat/enrique-iglesias-sharm-el-sheikhte-sahne-aldi-2634199',
         image: '/demiroren-haber-ajansi.jpg',

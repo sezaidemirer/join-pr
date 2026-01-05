@@ -11,6 +11,20 @@ import tr from '@/locales/tr.json';
 
 const BASE_PATH = process.env.NODE_ENV === 'production' ? '/join-pr' : '';
 
+const slugify = (text: string) =>
+  text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/ı/g, 'i')
+    .replace(/ğ/g, 'g')
+    .replace(/ü/g, 'u')
+    .replace(/ş/g, 's')
+    .replace(/ö/g, 'o')
+    .replace(/ç/g, 'c')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+
 const UNIT_ROUTES: Record<string, string> = {
   joinPr: '/join-pr',
   joinCreative: '/join-creative',

@@ -7,6 +7,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 
 import { HeroSlider } from '@/components/HeroSlider';
 import { useLanguage } from '@/context/LanguageContext';
+import tr from '@/locales/tr.json';
 
 const BASE_PATH = process.env.NODE_ENV === 'production' ? '/join-pr' : '';
 
@@ -31,6 +32,9 @@ export function HomeView() {
   const ecosystemDescription =
     typeof ecosystem.description === 'string' ? ecosystem.description.trim() : '';
   const caseItems = cases.cards as Array<{ title: string; category: string; description: string; image?: string }>;
+  
+  // TR dosyasından haberleri al (slug oluşturmak için)
+  const trCases = (tr.homepage?.cases?.cards || []) as Array<{ title: string; category: string; description: string; image?: string }>;
   const clients = translations.homepage.clients;
   const clientLogos = clients.logos as Array<{ name: string; image: string }>;
   const promoSlides = useMemo(
@@ -438,7 +442,9 @@ export function HomeView() {
             onTouchEnd={handleTouchEnd}
           >
             {caseItems.map((card, index) => {
-              const slug = slugify(card.title);
+              // Her zaman TR başlığından slug oluştur (aynı index'teki TR haberini kullan)
+              const trCard = trCases[index];
+              const slug = trCard ? slugify(trCard.title) : slugify(card.title);
               // "Türk Oyuncular Mısır'ın en ünlü tatil merkezinde buluştu" haberi için direkt external link
               const isSpecialNews = slug === 'turk-oyuncular-misirin-en-unlu-tatil-merkezinde-bulustu';
               const href = isSpecialNews 

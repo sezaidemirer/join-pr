@@ -40,10 +40,24 @@ export function JoinEscapesView() {
         </div>
       </section>
 
-      <section className="space-y-6 rounded-3xl border border-white/10 bg-zinc-950/70 p-8 shadow-xl shadow-black/30 md:p-12">
-        <h2 className="text-3xl font-semibold text-white md:text-4xl">{page.about.title}</h2>
-        <div className="space-y-4 text-base text-zinc-300 md:text-lg leading-relaxed whitespace-pre-line">
-          {page.about.description}
+      <section className="grid gap-8 rounded-3xl border border-white/10 bg-zinc-950/70 p-8 shadow-xl shadow-black/30 md:grid-cols-[1fr_320px] md:p-12">
+        <div className="space-y-6">
+          <h2 className="text-3xl font-semibold text-white md:text-4xl">{page.about.title}</h2>
+          <div className="space-y-4 text-base text-zinc-300 md:text-lg leading-relaxed whitespace-pre-line">
+            {page.about.description}
+          </div>
+        </div>
+        <div className="relative w-full max-w-[280px] mx-auto md:mx-0 md:max-w-none md:w-[280px] flex-shrink-0">
+          <div className="relative w-full pt-[177.78%] overflow-hidden rounded-2xl border border-white/10 bg-black/40 shadow-[0_25px_45px_rgba(0,0,0,0.45)]">
+            <iframe
+              className="absolute inset-0 h-full w-full"
+              src="https://www.youtube.com/embed/4ev7EgpMA80"
+              title="Join Escapes YouTube Shorts"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
 

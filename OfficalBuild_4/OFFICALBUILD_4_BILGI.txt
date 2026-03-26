@@ -1,0 +1,48 @@
+OfficalBuild_4 - Join PR Site Tam Yedek
+========================================
+
+Tarih: 16 Şubat 2026
+
+İçerik:
+- Next.js static export (out/) çıktısı
+- .htaccess (HTTPS, /join-pr/ yönlendirme, 404)
+- sendmail.php (İletişim formu + müşteriye "Talebiniz Alındı" onay maili)
+- newsletter.php (Bülten aboneliği + kullanıcıya "Bültene Hoş Geldiniz" maili)
+- mail-config.example.php (SMTP örnek yapılandırma)
+
+Yapılan Değişiklikler (Build 4):
+--------------------------------
+1. BÜLTEN ABONELİĞİ (newsletter.php)
+   - Footer'daki bülten formu çalışır hale getirildi
+   - sezai@joinpr.com.tr'ye abonelik bildirimi
+   - Kullanıcıya TR/EN "Bültene Hoş Geldiniz" hoş geldin maili
+
+2. İLETİŞİM FORMU (sendmail.php)
+   - Müşteriye otomatik onay maili: "Merhaba [İsim], Talebinizi aldık. Ekibimiz en kısa sürede sizinle iletişime geçecektir. Saygılarımızla, Join PR Destek Ekibi"
+
+3. TURİZM TALEP FORMU
+   - Aynı sendmail.php ile çalışır
+   - Müşteriye aynı onay maili gönderilir
+
+4. SİTEMAP GÜNCELLEMESİ
+   - Tüm haber sayfaları (haber/[slug])
+   - Tüm blog sayfaları ([slug])
+   - Tüm proje sayfaları (projects/[slug])
+   - /thankyou sayfası
+   - Tam sitemap.xml oluşturuldu
+
+5. HABER İÇERİK GÜNCELLEMELERİ
+   - Lara Fabian: EN versiyonu (AP News, Augusta Chronicle, National Law Review)
+   - Hint düğünü: EN versiyonu (The Tribune, DailyHunt, ANI News, Flipboard, The Week, PTI News, OB News, LatestLY)
+   - Yeni logolar: ani_logo.png, ap-news.svg, agusta.svg, national_law.webp vb.
+
+Deploy:
+-------
+- Tüm içerik sunucuda /join-pr/ klasörüne yüklenir
+- Root .htaccess dosyası public_html'e konur
+- Formlar: /join-pr/sendmail.php, /join-pr/newsletter.php adreslerine POST eder
+- PHP destekli hosting gerekir (mail gönderimi için)
+
+Not: monthly-intel API (Supabase) static export ile uyumlu değildir. 
+Yeniden build için: src/app/api/monthly-intel klasörünü geçici olarak dışarı taşıyın, 
+build tamamlandıktan sonra geri koyun.

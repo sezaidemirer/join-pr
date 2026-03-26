@@ -1,0 +1,255 @@
+╔═══════════════════════════════════════════════════════════════╗
+║                                                               ║
+║     🎉 URL YÖNLENDİRME SORUNU ÇÖZÜLDÜ - BETA 5.0!           ║
+║                                                               ║
+╚═══════════════════════════════════════════════════════════════╝
+
+📅 Tarih: 8 Ocak 2026, 01:33
+🐛 Sorun: joinpr.com.tr → Görseller gelmiyor
+✅ Çözüm: .htaccess ile root'tan /join-pr/'a yönlendirme
+
+═══════════════════════════════════════════════════════════════
+🐛 GERÇEK SORUN NEYDİ?
+═══════════════════════════════════════════════════════════════
+
+Kullanıcı test etti ve buldu:
+✅ https://joinpr.com.tr/join-pr/ → Görseller GELİYOR!
+❌ https://joinpr.com.tr → Görseller GELMİYOR!
+
+Sonuç:
+→ Site ZATEN /join-pr/ alt dizininde çalışıyormuş!
+→ Beta 1.0 ve Beta 2.0 DOĞRUYMUŞ!
+→ Beta 3.0 ve Beta 4.0 YANLIŞMIŞ!
+
+═══════════════════════════════════════════════════════════════
+✅ ÇÖZÜM
+═══════════════════════════════════════════════════════════════
+
+1. Site /join-pr/ alt dizininde kalacak
+2. .htaccess ile root'tan /join-pr/'a yönlendirme
+3. Her iki URL de çalışacak
+
+Dosya Yapısı:
+public_html/
+├── .htaccess          ← Root yönlendirme dosyası
+└── join-pr/           ← Site dosyaları
+    ├── index.html
+    ├── _next/
+    ├── blog/
+    └── ...
+
+.htaccess Yönlendirmesi:
+→ https://joinpr.com.tr → https://joinpr.com.tr/join-pr/
+→ https://joinpr.com.tr/join-pr/ → Değişmez
+
+═══════════════════════════════════════════════════════════════
+📦 HANGİ PAKETİ KULLANMALISINIZ?
+═══════════════════════════════════════════════════════════════
+
+❌ Beta1.0.zip
+   → Doğru yapı AMA .htaccess yok
+
+❌ Beta2.zip
+   → Doğru yapı AMA .htaccess yok
+
+❌ Beta3.zip
+   → Yanlış yapı (basePath kaldırılmış)
+
+❌ Beta4.zip
+   → Yanlış yapı (BASE_PATH kaldırılmış)
+
+✅ Beta5.zip ⭐⭐⭐ FİNAL
+   → Doğru yapı (/join-pr/ alt dizini)
+   → .htaccess ile root yönlendirme
+   → Her iki URL de çalışır
+   → KULLANIN!
+
+═══════════════════════════════════════════════════════════════
+🚀 GODADDY'YE YÜKLEME
+═══════════════════════════════════════════════════════════════
+
+1️⃣  ESKİ DOSYALARI SİLİN
+    → public_html'deki TÜM dosyaları silin
+    → Beta1.0, Beta2, Beta3, Beta4 varsa hepsini silin!
+
+2️⃣  Beta5.zip YÜKLE
+    → Upload → Beta5.zip seçin
+
+3️⃣  ÇIKART
+    → Beta5.zip → SAĞ TIKLA → Extract → /public_html
+
+4️⃣  TAŞI
+    → Beta5 klasörüne GİR
+    → .htaccess ve join-pr/ klasörünü SEÇ
+    → MOVE → /public_html
+
+5️⃣  TEMİZLE
+    → Boş Beta5 klasörü SİL
+    → Beta5.zip SİL
+
+6️⃣  SONUÇ YAPISI:
+    public_html/
+    ├── .htaccess
+    └── join-pr/
+        ├── index.html
+        ├── _next/
+        └── ...
+
+7️⃣  .htaccess KONTROL
+    → File Manager → Settings → Show Hidden Files ✓
+    → .htaccess dosyasının olduğunu kontrol edin
+
+8️⃣  TEST
+    → https://joinpr.com.tr → /join-pr/'a yönlenmeli
+    → https://joinpr.com.tr/join-pr/ → Doğrudan açılmalı
+    → Her ikisi de görselleri yüklemeli ✅
+
+═══════════════════════════════════════════════════════════════
+✅ DOĞRU DOSYA YAPISI
+═══════════════════════════════════════════════════════════════
+
+public_html/
+├── .htaccess              ✅ (Root yönlendirme)
+└── join-pr/               ✅ (Site dosyaları)
+    ├── .htaccess          ✅ (Alt dizin htaccess)
+    ├── index.html         ✅
+    ├── _next/             ✅
+    │   └── static/
+    │       ├── css/       ✅
+    │       ├── chunks/    ✅
+    │       └── media/     ✅
+    ├── blog/
+    ├── haber/
+    ├── join-pr/
+    └── ... (200+ görsel)
+
+═══════════════════════════════════════════════════════════════
+🔍 TEST LİSTESİ
+═══════════════════════════════════════════════════════════════
+
+Kurulum sonrası kontrol edin:
+
+☐ https://joinpr.com.tr → /join-pr/'a yönleniyor mu?
+☐ https://joinpr.com.tr/join-pr/ → Açılıyor mu?
+☐ Logo görünüyor mu?
+☐ Banner görselleri yükleniyor mu?
+☐ Slider çalışıyor mu?
+☐ Tüm görseller yükleniyor mu?
+☐ CSS düzgün görünüyor mu?
+☐ Menü çalışıyor mu?
+☐ Alt sayfalar açılıyor mu?
+☐ F12 → Console → Hata var mı?
+☐ F12 → Network → 404 var mı?
+
+═══════════════════════════════════════════════════════════════
+⚠️  ÇOK ÖNEMLİ!
+═══════════════════════════════════════════════════════════════
+
+1. DOSYA YAPISI TAM OLARAK ŞÖYLEDİR:
+   public_html/
+   ├── .htaccess
+   └── join-pr/
+
+2. .htaccess MUTLAKA public_html içinde olmalı
+   → Show Hidden Files aktif edin
+   → Dosyayı görebilirsiniz
+
+3. join-pr/ klasörü MUTLAKA public_html içinde olmalı
+   → public_html/join-pr/ ✅
+   → public_html/Beta5/join-pr/ ❌
+
+4. TARAYICI ÖNBELLEĞİNİ TEMİZLEYİN
+   → Ctrl+F5 (Hard Refresh)
+
+═══════════════════════════════════════════════════════════════
+📊 BETA 5.0 TEKNİK BİLGİLER
+═══════════════════════════════════════════════════════════════
+
+Platform: Next.js 14.2.5
+Build Tarihi: 8 Ocak 2026, 01:33
+Build Tipi: Static Export
+
+Yapı:
+✓ basePath: '/join-pr' (production)
+✓ BASE_PATH: '/join-pr' (production)
+✓ .htaccess: Root yönlendirme
+✓ Dosyalar: /join-pr/ alt dizini
+
+URL Yapısı:
+✓ https://joinpr.com.tr → https://joinpr.com.tr/join-pr/
+✓ https://joinpr.com.tr/join-pr/ → Doğrudan çalışır
+
+Dosya Sayısı: 420+
+Klasör Sayısı: 129
+Toplam Boyut: 88 MB (açık)
+ZIP Boyutu: 82 MB
+
+═══════════════════════════════════════════════════════════════
+📝 VERSİYON GEÇMİŞİ
+═══════════════════════════════════════════════════════════════
+
+Beta 1.0 (8 Ocak, 00:48):
+→ basePath: '/join-pr'
+→ Doğru yapı AMA .htaccess yok
+→ /join-pr/ URL'inde çalışır
+
+Beta 2.0 (8 Ocak, 01:10):
+→ basePath: '/join-pr'
+→ Optimize edilmiş
+→ Doğru yapı AMA .htaccess yok
+
+Beta 3.0 (8 Ocak, 01:20):
+→ basePath kaldırıldı
+→ YANLIŞMIŞ!
+→ Görseller /join-pr/ olmadan aranıyor
+
+Beta 4.0 (8 Ocak, 01:26):
+→ BASE_PATH kaldırıldı
+→ YANLIŞMIŞ!
+→ Görseller hala sorunlu
+
+Beta 5.0 (8 Ocak, 01:33): ⭐⭐⭐ FİNAL
+→ basePath: '/join-pr' (geri alındı)
+→ BASE_PATH: '/join-pr' (geri alındı)
+→ .htaccess ile root yönlendirme
+→ DOĞRU ÇÖZÜM!
+→ Her iki URL de çalışır
+
+═══════════════════════════════════════════════════════════════
+🆘 SORUN YAŞARSANIZ
+═══════════════════════════════════════════════════════════════
+
+1. Dosya yapısını kontrol edin:
+   public_html/
+   ├── .htaccess
+   └── join-pr/
+
+2. .htaccess dosyasını kontrol edin:
+   → Show Hidden Files aktif mi?
+   → Dosya public_html içinde mi?
+
+3. Tarayıcı önbelleğini temizleyin:
+   → Ctrl+F5
+
+4. F12 → Console → Hata mesajlarına bakın
+
+5. GoDaddy desteğe başvurun
+
+═══════════════════════════════════════════════════════════════
+🎉 SONUÇ
+═══════════════════════════════════════════════════════════════
+
+Beta 5.0 ile her şey TAM ÇALIŞIR!
+
+✅ https://joinpr.com.tr → Çalışır (yönlenir)
+✅ https://joinpr.com.tr/join-pr/ → Çalışır
+✅ Logo yüklenir
+✅ Banner görselleri yüklenir
+✅ Tüm görseller görünür
+✅ CSS düzgün çalışır
+✅ 404 hatası olmaz
+
+İyi şanslar! 🚀
+
+═══════════════════════════════════════════════════════════════
+

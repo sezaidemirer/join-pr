@@ -1,0 +1,675 @@
+{
+  "pages": {
+    "/admin-dashboard/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/app/admin-dashboard/page-ff8080062c32539c.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/css/44df8c8407a24771.css",
+      "static/css/bfbbd11901e43344.css",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/1504-1934e780761dc6f9.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/layout-483d85a5136ddb14.js"
+    ],
+    "/error": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/app/error-7e9c490e8bc5a494.js"
+    ],
+    "/not-found": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/app/not-found-18a5a8c6c5ddf750.js"
+    ],
+    "/global-error": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/app/global-error-93a7b997255c47f6.js"
+    ],
+    "/_not-found/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/app/_not-found/page-74f993f7fc668eba.js"
+    ],
+    "/admin-login/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/app/admin-login/page-a1eb50b7815e7f7f.js"
+    ],
+    "/admin/proje/kutuphane/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/app/admin/proje/kutuphane/page-62ff4eaf46860f4d.js"
+    ],
+    "/admin/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/app/admin/page-9e25952ab1e5193e.js"
+    ],
+    "/admin/proje-olustur/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/app/admin/proje-olustur/page-36fa0a0f810e7494.js"
+    ],
+    "/admin/haber/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/app/admin/haber/page-1d67ea98a1b731c2.js"
+    ],
+    "/admin/proje/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/app/admin/proje/page-54b943bd9928aef0.js"
+    ],
+    "/admin/teklifler/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/app/admin/teklifler/page-b3851e62621eed50.js"
+    ],
+    "/admin/proje/yeni-proje/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/251-e7428eb7952e3532.js",
+      "static/chunks/7327-41d183e252677f37.js",
+      "static/chunks/app/admin/proje/yeni-proje/page-bdffb54516bb51a8.js"
+    ],
+    "/bana/medya-yansima-raporu/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/251-e7428eb7952e3532.js",
+      "static/chunks/7327-41d183e252677f37.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/2698-fd3f919dc2f39ff8.js",
+      "static/chunks/app/bana/medya-yansima-raporu/page-ed3640524a6e175d.js"
+    ],
+    "/haber/turk-oyuncular-m-s-r-n-en-unlu-tatil-merkezinde-bulustu/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/app/haber/turk-oyuncular-m-s-r-n-en-unlu-tatil-merkezinde-bulustu/page-28f56570cd4b3789.js"
+    ],
+    "/hakkimizda/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/hakkimizda/page-df22b69d08a511fa.js"
+    ],
+    "/en/about-us/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/en/about-us/page-3575ba37ca9f8db3.js"
+    ],
+    "/hizmetlerimiz/celebrity-marketing/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/hizmetlerimiz/celebrity-marketing/page-0c07f96c33e05da1.js"
+    ],
+    "/hizmetlerimiz/digital-pr/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/hizmetlerimiz/digital-pr/page-c8773ad881bf774e.js"
+    ],
+    "/hizmetlerimiz/influencer-celebrity-marketing/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/hizmetlerimiz/influencer-celebrity-marketing/page-be039ec622ac1b1d.js"
+    ],
+    "/hizmetlerimiz/kurumsal-iletisim/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/hizmetlerimiz/kurumsal-iletisim/page-26aa496f5022591c.js"
+    ],
+    "/hizmetlerimiz/influencer-marketing/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/hizmetlerimiz/influencer-marketing/page-b7591abdad947087.js"
+    ],
+    "/hizmetlerimiz/etkinlik-ve-proje-yonetimi/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/hizmetlerimiz/etkinlik-ve-proje-yonetimi/page-3dcb3eea990e50a7.js"
+    ],
+    "/hizmetlerimiz/pazarlama-iletisimi/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/hizmetlerimiz/pazarlama-iletisimi/page-29c64d42458fa1f1.js"
+    ],
+    "/hizmetlerimiz/marka-iletisimi/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/hizmetlerimiz/marka-iletisimi/page-4f08e63e503b5ac7.js"
+    ],
+    "/hizmetlerimiz/medya-iliskileri-yonetimi/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/hizmetlerimiz/medya-iliskileri-yonetimi/page-eff46fcdc2b634e4.js"
+    ],
+    "/hizmetlerimiz/sponsorluk-iletisimi/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/hizmetlerimiz/sponsorluk-iletisimi/page-04bbc858ad6d7256.js"
+    ],
+    "/iletisim/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/iletisim/page-99932d918d0e024e.js"
+    ],
+    "/hizmetlerimiz/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/hizmetlerimiz/page-0c453a50aecb4514.js"
+    ],
+    "/join-ads/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/join-ads/page-f49d30ee004959b0.js"
+    ],
+    "/join-creative/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/join-creative/page-228558cae14230bd.js"
+    ],
+    "/join-escapes/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/join-escapes/page-715122592101218f.js"
+    ],
+    "/join-lab-ai/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/join-lab-ai/page-fb6ba18b228b4040.js"
+    ],
+    "/join-social/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/join-social/page-e13253ffa298a2e4.js"
+    ],
+    "/join-pr/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/join-pr/page-b0d6d8d49ae6a9f6.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/page-94835328d56f8092.js"
+    ],
+    "/kategori/blog/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/kategori/blog/page-9998684cd5278b35.js"
+    ],
+    "/kategori/haberler/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/kategori/haberler/page-6ec4f051659d6597.js"
+    ],
+    "/reklam/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/app/reklam/page-7356e67daba5c5bf.js"
+    ],
+    "/sitemap/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/app/sitemap/page-4769e43e70ce3422.js"
+    ],
+    "/acik-riza-metni/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/app/acik-riza-metni/page-c60dc838f2bbdc10.js"
+    ],
+    "/kvkk-aydinlatma-metni/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/app/kvkk-aydinlatma-metni/page-01454fde169f5229.js"
+    ],
+    "/reklam/ai-lab-web-otomasyon/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/reklam/ai-lab-web-otomasyon/page-e85222bc158eebad.js"
+    ],
+    "/reklam/sosyal-medya-yonetimi/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/reklam/sosyal-medya-yonetimi/page-a33294da2d90cff4.js"
+    ],
+    "/reklam/kreatif-produksiyon/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/reklam/kreatif-produksiyon/page-cbc5b4c0a3eb9a18.js"
+    ],
+    "/projects/[slug]/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/app/projects/[slug]/page-08566bf76a7aa883.js"
+    ],
+    "/reklam/pr-gorunurluk/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/reklam/pr-gorunurluk/page-2ba42235df95a5f4.js"
+    ],
+    "/reklam/turizm-reklam-ajansi-performans-yonetimi/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/77-a8ebd22f114631cf.js",
+      "static/chunks/app/reklam/turizm-reklam-ajansi-performans-yonetimi/page-a4759262adcb5959.js"
+    ],
+    "/thankyou/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/app/thankyou/page-6ff00d5d7dfaa18c.js"
+    ],
+    "/royal-saray-resort-bahrain/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/app/royal-saray-resort-bahrain/page-9db21fadbc643dd9.js"
+    ],
+    "/vitrin-clinic-storyboard/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/app/vitrin-clinic-storyboard/page-08bf541bbe45acb0.js"
+    ],
+    "/proje/[brand]/[date]/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/app/proje/[brand]/[date]/page-258af82f58c985a9.js"
+    ],
+    "/projects/[slug]/[subproject]/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/projects/[slug]/[subproject]/page-9b7ff99770ba9b04.js"
+    ],
+    "/is-birliklerimiz/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/is-birliklerimiz/page-8a0639e77af6fc9d.js"
+    ],
+    "/is-birliklerimiz/layout": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/app/is-birliklerimiz/layout-f5286323c1a9d480.js"
+    ],
+    "/is-birliklerimiz/marriott-dead-sea/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/is-birliklerimiz/marriott-dead-sea/page-7cd5ea2aa553491b.js"
+    ],
+    "/is-birliklerimiz/prontotour/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/is-birliklerimiz/prontotour/page-ec2fc29304c428ca.js"
+    ],
+    "/is-birliklerimiz/swissotel-sharm-el-sheikh/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/is-birliklerimiz/swissotel-sharm-el-sheikh/page-798c83482c7b9407.js"
+    ],
+    "/medya-yansima-raporu/[brand]/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/app/medya-yansima-raporu/[brand]/page-8e4a8e3001be6840.js"
+    ],
+    "/medya-yansima-raporu/layout": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/app/medya-yansima-raporu/layout-5deb3c1187fd91e7.js"
+    ],
+    "/medya-yansima-raporu/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/app/medya-yansima-raporu/page-8ae8bcfde50746d7.js"
+    ],
+    "/medya-yansima-raporu/[brand]/[project]/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/app/medya-yansima-raporu/[brand]/[project]/page-b5a0062554d34148.js"
+    ],
+    "/is-ortaklarimiz/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/is-ortaklarimiz/page-dfdc9468ae37e1f9.js"
+    ],
+    "/is-ortaklarimiz/layout": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/app/is-ortaklarimiz/layout-d4a8e462fa98fbf8.js"
+    ],
+    "/haber/[slug]/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/haber/[slug]/page-44d3c4356e7d0e36.js"
+    ],
+    "/haber/[slug]/layout": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/app/haber/[slug]/layout-863f2ae0d53c5292.js"
+    ],
+    "/haber/[slug]/loading": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/app/haber/[slug]/loading-1b6a800983aac54a.js"
+    ],
+    "/is-birliklerimiz/ajet/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/is-birliklerimiz/ajet/page-9d76822dc86085ff.js"
+    ],
+    "/is-birliklerimiz/ajet/layout": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/app/is-birliklerimiz/ajet/layout-991abd3b95b03cd7.js"
+    ],
+    "/blog/[slug]/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/blog/[slug]/page-9656c538b6752098.js"
+    ],
+    "/blog/[slug]/layout": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/app/blog/[slug]/layout-c0b0ad200f0eb715.js"
+    ],
+    "/[slug]/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/251-e7428eb7952e3532.js",
+      "static/chunks/7327-41d183e252677f37.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/2698-fd3f919dc2f39ff8.js",
+      "static/chunks/77-a8ebd22f114631cf.js",
+      "static/chunks/app/[slug]/page-e0206e1bd58b7f18.js"
+    ],
+    "/[slug]/layout": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/app/[slug]/layout-2ad4283285882251.js"
+    ],
+    "/[slug]/loading": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/app/[slug]/loading-a2bc8bb44a2feb88.js"
+    ],
+    "/is-birliklerimiz/rixos-egypt/page": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/231-d03cde840713e8d2.js",
+      "static/chunks/6127-652768dabf212892.js",
+      "static/chunks/app/is-birliklerimiz/rixos-egypt/page-65ef8dddf10a0c0d.js"
+    ],
+    "/is-birliklerimiz/rixos-egypt/layout": [
+      "static/chunks/webpack-2a0592bc3ad4c17d.js",
+      "static/chunks/fd9d1056-e1ef09d99e564dd3.js",
+      "static/chunks/7023-165e4be5f1cbc090.js",
+      "static/chunks/main-app-21cc2795509e83f6.js",
+      "static/chunks/app/is-birliklerimiz/rixos-egypt/layout-c0bad12b7bde5924.js"
+    ]
+  }
+}

@@ -10,6 +10,7 @@
       "joinAds": "Join Ads",
       "joinLabAi": "Join AI Lab",
       "joinEscapes": "Join Escapes",
+      "services": "Hizmetlerimiz",
       "contact": "İletişim"
     },
     "language": {
@@ -28,7 +29,9 @@
       "newsletterDescription": "Join ekosisteminden seçilmiş içgörüler, projeler ve fırsatlar e-postanıza gelsin.",
       "newsletterPlaceholder": "E-posta adresinizi girin",
       "newsletterCta": "Abone ol",
-      "rights": "© {{year}} Join PR Group. Tüm hakları saklıdır.",
+      "newsletterSuccess": "Bültene başarıyla abone oldunuz. Hoş geldiniz!",
+      "newsletterError": "Bir hata oluştu. Lütfen daha sonra tekrar deneyin.",
+      "rights": "© {{year}} Join PR. Tüm hakları saklıdır.",
       "socialTitle": "Bizi takip edin"
     },
     "cta": {
@@ -67,45 +70,45 @@
   },
   "homepage": {
     "seo": {
-      "title": "Join PR Group | İletişim, Yaratıcılık, Sosyal Medya, Reklam, AI ve Seyahat",
+      "title": "Join PR | İletişim, Yaratıcılık, Sosyal Medya, Reklam, AI ve Seyahat",
       "description": "Join PR ekosistemini keşfedin: iletişim, kreatif prodüksiyon, sosyal medya, performans pazarlaması, AI çözümleri ve Türkiye’nin lider seyahat içerik platformu."
     },
     "hero": {
       "intro": "",
       "slides": {
         "joinPr": {
-          "title": "Join x PR",
-          "subtitle": "Markaların hikâyelerini deneyime, deneyimleri kalıcı bir etkiye dönüştüren yeni nesil bir iletişim ajansıdır.",
+          "title": "Join PR",
+          "subtitle": "Markaların hikâyelerini deneyime, deneyimleri kalıcı bir etkiye\ndönüştüren yeni nesil bir iletişim ajansıdır.",
           "cta": "Join PR’ı keşfet",
           "link": "/join-pr"
         },
         "joinCreative": {
-          "title": "Join x Creative",
-          "subtitle": "Markaların dijital çağın hızına uygun üretim gücünü ileri teknolojilerle birleştiren yaratıcı üretim alanımızdır.",
+          "title": "Join Creative",
+          "subtitle": "Markaların dijital çağın hızına uygun üretim gücünü ileri\nteknolojilerle birleştiren yaratıcı üretim alanımızdır.",
           "cta": "Join Creative’i keşfet",
           "link": "/join-creative"
         },
         "joinSocial": {
-          "title": "Join x Social",
-          "subtitle": "Markaların tüm sosyal medya kanallarını uçtan uca yöneten ve bu süreci yapay zekâ destekli bir stratejiyle güçlendiren yeni nesil iletişim alanımızdır.",
+          "title": "Join Social",
+          "subtitle": "Markaların tüm sosyal medya kanallarını uçtan uca yöneten ve\nbu süreci yapay zekâ destekli bir stratejiyle güçlendiren yeni nesil\niletişim alanımızdır.",
           "cta": "Join Social’ı incele",
           "link": "/join-social"
         },
         "joinAds": {
-          "title": "Join x Ads",
-          "subtitle": "Markaların dijitalde büyüme hızını katlayan, performans pazarlaması ve reklam teknolojilerini en üst seviyede kullanan yeni nesil reklam yönetim alanımızdır.",
+          "title": "Join Ads",
+          "subtitle": "Markaların dijitalde büyüme hızını katlayan, performans\npazarlaması ve reklam teknolojilerini en üst seviyede kullanan\nyeni nesil reklam yönetim alanımızdır.",
           "cta": "Join Ads ile büyü",
           "link": "/join-ads"
         },
         "joinLabAi": {
-          "title": "Join x AI Lab",
+          "title": "Join AI Lab",
           "subtitle": "Büyüme odaklı web deneyimleri, otomasyonlar ve AI ajanları.",
           "cta": "Join AI Lab ile geliştir",
           "link": "/join-lab-ai"
         },
         "joinEscapes": {
-          "title": "Join x Escapes",
-          "subtitle": "Keşfetmeyi seven ve deneyim odaklı seyahat kültürüne ilham arayan herkes için tasarlanmış bir sosyal içerik ve keşif platformudur.",
+          "title": "Join Escapes",
+          "subtitle": "Keşfetmeyi seven ve deneyim odaklı seyahat kültürüne ilham\narayan herkes için tasarlanmış bir sosyal içerik ve keşif\nplatformudur.",
           "cta": "Join Escapes’i ziyaret et",
           "link": "/join-escapes"
         }
@@ -116,32 +119,32 @@
       "description": "",
       "cards": {
         "joinPr": {
-          "title": "Join x PR",
+          "title": "Join PR",
           "description": "Stratejik iletişim, influencer ilişkileri ve küresel destinasyon PR'ı.",
           "cta": ""
         },
         "joinCreative": {
-          "title": "Join x Creative",
+          "title": "Join Creative",
           "description": "Dijital içerik, reklam filmi prodüksiyonu ve cesur kreatif konseptler.",
           "cta": ""
         },
         "joinSocial": {
-          "title": "Join x Social",
+          "title": "Join Social",
           "description": "Sosyal medya stratejisi, sürekli içerik ve topluluk yönetimi.",
           "cta": ""
         },
         "joinAds": {
-          "title": "Join x Ads",
+          "title": "Join Ads",
           "description": "Performans pazarlaması ve çapraz platform kampanya optimizasyonu.",
           "cta": ""
         },
         "joinLabAi": {
-          "title": "Join x AI Lab",
+          "title": "Join AI Lab",
           "description": "Geleceğe hazır markalar için web, AI ve otomasyon ürünleri.",
           "cta": ""
         },
         "joinEscapes": {
-          "title": "Join x Escapes",
+          "title": "Join Escapes",
           "description": "Destinasyonları, hikayeleri ve deneyimleri derleyen seyahat platformu.",
           "cta": ""
         }
@@ -153,19 +156,19 @@
       "cta": "Tüm Projeleri Gör",
       "items": {
         "bahrain": {
-          "title": "Bahrain",
+          "title": "Bahreyn’i Çok Katmanlı Bir İletişim Etkisiyle Öne Çıkardık",
           "slug": "bahrain",
-          "description": "Bahreyn'de gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
+          "description": "Bahreyn’in kültürel zenginliğini ve modern yaşam ritmini odağına alan bu projede, Vida Beach Resort Al Marassi Bahrain deneyimini güçlü bir iletişim kurgusuna dönüştürdük. Otelin deniz kıyısındaki resort atmosferi, deneyim odaklı gastronomi alanları ve Marassi Galleria bağlantısı, içerik kurgusuna güçlü bir yaşam tarzı çerçevesi kazandırdı. Türk ünlü isimlerle gerçekleştirilen içerik üretimleri milyonları aşan organik erişim sağlarken, elde edilen dijital medya yansımalarıyla destinasyonun görünürlüğünü sosyal medyanın ötesine taşıdık.",
           "subProjects": [
             {
-              "title": "Bahrain",
+              "title": "Bahreyn’i Çok Katmanlı Bir İletişim Etkisiyle Öne Çıkardık",
               "videoUrl": "https://www.youtube.com/embed/v6WBSvXz8cQ",
               "videoId": "v6WBSvXz8cQ",
               "participants": [
                 {
                   "name": "Gökçe Akyıldız",
                   "role": "Oyuncu",
-                  "image": "/gokce_akyıldız.jpeg",
+                  "image": "/gokce_akyildiz.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/akyldzgkce/?hl=tr"
                   }
@@ -173,7 +176,7 @@
                 {
                   "name": "Elif Doğan",
                   "role": "Oyuncu",
-                  "image": "/elif_dogan.jpg",
+                  "image": "/elif_dogan.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/mselifdogan/"
                   }
@@ -181,7 +184,7 @@
                 {
                   "name": "Mehmet Aykaç",
                   "role": "Oyuncu",
-                  "image": "/mehmet aykac.jpg",
+                  "image": "/mehmet aykac.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/mehmetaykac/"
                   }
@@ -189,23 +192,23 @@
                 {
                   "name": "Emin Günenç",
                   "role": "Oyuncu",
-                  "image": "/emin_gunenc.jpg",
+                  "image": "/emin_gunenc.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/emingunenc/?hl=tr"
                   }
                 }
               ],
               "gallery": [
-                "/projects/bahrain/1.jpg",
-                "/projects/bahrain/2.jpg",
-                "/projects/bahrain/3.jpg",
-                "/projects/bahrain/4.jpg"
+                "/projects/bahrain/1.webp",
+                "/projects/bahrain/2.webp",
+                "/projects/bahrain/3.webp",
+                "/projects/bahrain/4.webp"
               ],
               "report": {
-                "title": "Bahrain Destinasyon PR Kampanyası",
-                "description": "Bahreyn'de gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
+                "title": "Bahreyn’i Çok Katmanlı Bir İletişim Etkisiyle Öne Çıkardık",
+                "description": "Bahreyn’in kültürel zenginliğini ve modern yaşam ritmini odağına alan bu projede, Vida Beach Resort Al Marassi Bahrain deneyimini güçlü bir iletişim kurgusuna dönüştürdük. Otelin deniz kıyısındaki resort atmosferi, deneyim odaklı gastronomi alanları ve Marassi Galleria bağlantısı, içerik kurgusuna güçlü bir yaşam tarzı çerçevesi kazandırdı. Türk ünlü isimlerle gerçekleştirilen içerik üretimleri milyonları aşan organik erişim sağlarken, elde edilen dijital medya yansımalarıyla destinasyonun görünürlüğünü sosyal medyanın ötesine taşıdık.",
                 "images": [
-                  "/meta_bahrain.jpg"
+                  "/meta_bahrain.webp"
                 ]
               },
               "press": [
@@ -220,19 +223,19 @@
           ]
         },
         "sharm": {
-          "title": "Sharm El Sheikh",
+          "title": "Sharm El Sheikh Destinasyon Tanıtım Projesi",
           "slug": "sharm-el-sheikh",
-          "description": "Mısır'da gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
+          "description": "Rixos Radamis Sharm El Sheikh’te gerçekleştirilen Jennifer Lopez konseri için hayata geçirdiğimiz bu projede, uluslararası ölçekte ses getiren bir sahne deneyimini güçlü bir destinasyon iletişimine dönüştürdük. Projede yalnızca konser anını değil, etkinliğin yarattığı yüksek ilgiyi de stratejik biçimde yönettik. Sosyal medya görünürlüğünü güçlü medya yansımalarıyla destekleyerek, Rixos Radamis’i yalnızca bir konaklama markası olarak değil, uluslararası ölçekte dikkat çeken deneyimlerin adresi olarak konumlandırdık.",
           "subProjects": [
             {
-              "title": "Sharm El Sheikh - Proje 1",
+              "title": "Jennifer Lopez Konseriyle Rixos Radamis’i Küresel Ölçekte Öne Taşıdık",
               "videoUrl": "https://www.youtube.com/embed/yKVqZNb5p-s",
               "videoId": "yKVqZNb5p-s",
               "participants": [
                 {
                   "name": "Nesrin Cavadzade",
                   "role": "Oyuncu",
-                  "image": "/nesrin_cavatzade.jpeg",
+                  "image": "/nesrin_cavatzade.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/nesrin.cavadzade/?hl=tr"
                   }
@@ -240,7 +243,7 @@
                 {
                   "name": "Burcu Özberk",
                   "role": "Oyuncu",
-                  "image": "/burcu_ozberk.jpeg",
+                  "image": "/burcu_ozberk.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/burcuozberk/?hl=tr"
                   }
@@ -248,7 +251,7 @@
                 {
                   "name": "Müjde Uzman",
                   "role": "Oyuncu",
-                  "image": "/mujde_uzman.jpeg",
+                  "image": "/mujde_uzman.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/mujdeuzman/?hl=tr"
                   }
@@ -256,7 +259,7 @@
                 {
                   "name": "Erdem Kaynarca",
                   "role": "Oyuncu",
-                  "image": "/erdem_kaynarca.jpeg",
+                  "image": "/erdem_kaynarca.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/erdemkaynarca/"
                   }
@@ -264,22 +267,22 @@
                 {
                   "name": "Barış Baktaş",
                   "role": "Oyuncu",
-                  "image": "/barıs_baktas.jpg",
+                  "image": "/baris_baktas.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/barisbaktas/?hl=tr"
                   }
                 }
               ],
               "gallery": [
-                "/projects/sharm/1.jpg",
-                "/projects/sharm/2.jpg",
-                "/projects/sharm/3.jpg"
+                "/projects/sharm/1.webp",
+                "/projects/sharm/2.webp",
+                "/projects/sharm/3.webp"
               ],
               "report": {
-                "title": "Mısır - Sharm El Sheikh Sualtı Deneyimi - Proje 1",
-                "description": "Mısır'da gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
+                "title": "Jennifer Lopez Konseriyle Rixos Radamis’i Küresel Ölçekte Öne Taşıdık",
+                "description": "Rixos Radamis Sharm El Sheikh’te gerçekleştirilen Jennifer Lopez konseri için hayata geçirdiğimiz bu projede, uluslararası ölçekte ses getiren bir sahne deneyimini güçlü bir destinasyon iletişimine dönüştürdük. Projede yalnızca konser anını değil, etkinliğin yarattığı yüksek ilgiyi de stratejik biçimde yönettik. Sosyal medya görünürlüğünü güçlü medya yansımalarıyla destekleyerek, Rixos Radamis’i yalnızca bir konaklama markası olarak değil, uluslararası ölçekte dikkat çeken deneyimlerin adresi olarak konumlandırdık.",
                 "images": [
-                  "/meta_sharm.jpg"
+                  "/meta_sharm.webp"
                 ]
               },
               "press": [
@@ -292,14 +295,14 @@
               ]
             },
             {
-              "title": "Sharm El Sheikh - Proje 2",
+              "title": "Sharm El Sheikh’in Destinasyon Gücünü Rixos Vizyonuyla Büyüttük",
               "videoUrl": "https://www.youtube.com/embed/IvKE_WSd4Ec",
               "videoId": "IvKE_WSd4Ec",
               "participants": [
                 {
                   "name": "İpek Yazıcı",
                   "role": "Oyuncu",
-                  "image": "/ipek_yazici_.jpg",
+                  "image": "/ipek_yazici_.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/ipekkyazici/?hl=tr"
                   }
@@ -307,7 +310,7 @@
                 {
                   "name": "Ufuk Beydemir",
                   "role": "Oyuncu",
-                  "image": "/ufuk_beydemir.jpg",
+                  "image": "/ufuk_beydemir.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/beydemirufuk/"
                   }
@@ -315,7 +318,7 @@
                 {
                   "name": "Salih Bademci",
                   "role": "Oyuncu",
-                  "image": "/salih_bademci.jpg",
+                  "image": "/salih_bademci.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/bademcisalih/?hl=tr"
                   }
@@ -323,7 +326,7 @@
                 {
                   "name": "Alican Okumuş",
                   "role": "Oyuncu",
-                  "image": "/alican_okumus.jpg",
+                  "image": "/alican_okumus.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/alicanokumus/"
                   }
@@ -331,7 +334,7 @@
                 {
                   "name": "İlayda Ildır",
                   "role": "Oyuncu",
-                  "image": "/ilayda_ildir.jpg",
+                  "image": "/ilayda_ildir.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/ilaydaildir/"
                   }
@@ -339,7 +342,7 @@
                 {
                   "name": "Ayça Ayşin Turan",
                   "role": "Oyuncu",
-                  "image": "/ayca_Asyin_turan.jpg",
+                  "image": "/ayca_Asyin_turan.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/aycaaysinturan/?hl=tr"
                   }
@@ -347,7 +350,7 @@
                 {
                   "name": "Cansu Tosun",
                   "role": "Oyuncu",
-                  "image": "/cansu_tosun.jpeg",
+                  "image": "/cansu_tosun.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/cansutosun/"
                   }
@@ -355,42 +358,42 @@
                 {
                   "name": "Erkan Kolçak Köstendil",
                   "role": "Oyuncu",
-                  "image": "/erkan_kolcak_kostendil.jpeg",
+                  "image": "/erkan_kolcak_kostendil.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/erkankeka/?hl=tr"
                   }
                 }
               ],
               "gallery": [
-                "/projects/sharm/1.jpg",
-                "/projects/sharm/2.jpg",
-                "/projects/sharm/3.jpg"
+                "/projects/sharm/1.webp",
+                "/projects/sharm/2.webp",
+                "/projects/sharm/3.webp"
               ],
               "report": {
-                "title": "Mısır - Sharm El Sheikh Lüks Tatil Deneyimi - Proje 2",
-                "description": "Mısır'da gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
+                "title": "Sharm El Sheikh’in Destinasyon Gücünü Rixos Vizyonuyla Büyüttük",
+                "description": "Türkiye’de ve uluslararası alanda bilinen Türk oyuncularla hayata geçirdiğimiz projelerde, Sharm El Sheikh’in eşsiz sahil deneyimini, resort yaşamını ve cazibe merkezlerini güçlü bir anlatıyla öne çıkardık. Rixos’un bölgeye kattığı turizm vizyonunu, ajans olarak geliştirdiğimiz sürdürülebilir iletişim kurgularıyla daha geniş ve kalıcı bir görünürlüğe taşıdık; sosyal medyada güçlü etkileşim yaratırken, medya haber yansımalarıyla destinasyonun görünürlüğünü çok katmanlı biçimde destekledik.",
                 "images": [
-                  "/meta_sharm.jpg"
+                  "/meta_sharm.webp"
                 ]
               },
               "press": [
                 {
-                  "title": "Türk Oyuncular Mısır’ın en ünlü tatil merkezinde buluştu",
+                  "title": "Mısır’da Çöl Safarisi",
                   "category": "Deneyim Tasarımı",
-                  "description": "Türk oyuncular Mısır’ın en ünlü tatil merkezinde buluştu.",
-                  "image": "/turk-oyuncular-misirin-en-unlu-tatil-merkezinde-bulustu.jpg"
+                  "description": "Türk oyuncular Mısır’da bulunan Şarm El Şeyh kentinde çöl safarisi deneyimi yaşadı.",
+                  "image": "/misirda-col-safarisi-1.webp"
                 }
               ]
             },
             {
-              "title": "Sharm El Sheikh - Proje 3",
+              "title": "Rixos’un Bölgedeki Etkisini Güçlü İletişim Projeleriyle Büyüttük",
               "videoUrl": "https://www.youtube.com/embed/BjvRTrv_35w",
               "videoId": "BjvRTrv_35w",
               "participants": [
                 {
                   "name": "Gizem Karaca",
                   "role": "Oyuncu",
-                  "image": "/gizem_karaca.jpeg",
+                  "image": "/gizem_karaca.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/gizemkaraca/?hl=tr"
                   }
@@ -398,7 +401,7 @@
                 {
                   "name": "Cemre Baysel",
                   "role": "Oyuncu",
-                  "image": "/cemre_baysel.jpg",
+                  "image": "/cemre_baysel.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/cemrebaysel/?hl=tr"
                   }
@@ -406,7 +409,7 @@
                 {
                   "name": "Gülper Özdemir",
                   "role": "Oyuncu",
-                  "image": "/gulper_ozdemir.jpeg",
+                  "image": "/gulper_ozdemir.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/gulperr/?hl=tr"
                   }
@@ -414,7 +417,7 @@
                 {
                   "name": "Gökhan Alkan",
                   "role": "Oyuncu",
-                  "image": "/gokhan_alkan.jpeg",
+                  "image": "/gokhan_alkan.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/gokhan_alkan/?hl=tr"
                   }
@@ -422,7 +425,7 @@
                 {
                   "name": "Serkay Tütüncü",
                   "role": "Oyuncu",
-                  "image": "/serkay_turuncu.jpeg",
+                  "image": "/serkay_turuncu.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/serkaytutuncu/?hl=tr"
                   }
@@ -430,42 +433,42 @@
                 {
                   "name": "Mehmet Aykaç",
                   "role": "Oyuncu",
-                  "image": "/mehmet aykac.jpg",
+                  "image": "/mehmet aykac.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/mehmetaykac/"
                   }
                 }
               ],
               "gallery": [
-                "/projects/sharm/1.jpg",
-                "/projects/sharm/2.jpg",
-                "/projects/sharm/3.jpg"
+                "/projects/sharm/1.webp",
+                "/projects/sharm/2.webp",
+                "/projects/sharm/3.webp"
               ],
               "report": {
-                "title": "Mısır - Sharm El Sheikh Wellness ve Spa - Proje 3",
-                "description": "Mısır'da gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
+                "title": "Rixos’un Bölgedeki Etkisini Güçlü İletişim Projeleriyle Büyüttük",
+                "description": "Rixos markamız için hayata geçirdiğimiz projelerde, Türkiye’de ve global ölçekte tanınan Türk oyuncuların katılımıyla güçlü bir görünürlük oluşturduk. Sosyal medyada yüksek etkileşim yaratan bu iletişim kurgusunu medya haber yansımalarıyla destekleyerek, markanın bölgedeki değerini ve farkındalığını daha da güçlendirdik.",
                 "images": [
-                  "/meta_sharm.jpg"
+                  "/meta_sharm.webp"
                 ]
               },
               "press": [
                 {
-                  "title": "Türk Oyuncular Kızıldeniz’de Tatil Keyfi Yaptı",
+                  "title": "Türk Oyuncular Mısır’da",
                   "category": "Deneyim Tasarımı",
-                  "description": "Türk oyuncular Kızıldeniz kıyısında tatil keyfi yaptı.",
-                  "image": "/turk-oyuncular-kizildenizde-tatil-keyfi-yapti-kpk.jpg"
+                  "description": "Mısır’ın tarihi, turistik ve kültürel yapısına ve Kızıldeniz’e hayran kalan Türk oyuncular, herkesi bu deneyimi yaşamaya davet etti.",
+                  "image": "/turk-oyuncular-misirda.webp"
                 }
               ]
             },
             {
-              "title": "Sharm El Sheikh - Proje 4",
+              "title": "Rixos için dikkat çeken değil, iz bırakan projeler tasarladık",
               "videoUrl": "https://www.youtube.com/embed/A_8z2fGlgKY",
               "videoId": "A_8z2fGlgKY",
               "participants": [
                 {
                   "name": "Feyza Sevil Güngör",
                   "role": "Oyuncu",
-                  "image": "/feyza_gungor.jpeg",
+                  "image": "/feyza_gungor.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/feyzasevilgungor/"
                   }
@@ -473,7 +476,7 @@
                 {
                   "name": "Nilsu Yılmaz",
                   "role": "Oyuncu",
-                  "image": "/Nilsu_yilmaz.jpeg",
+                  "image": "/Nilsu_yilmaz.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/nilsuyillmaz/?hl=tr"
                   }
@@ -481,7 +484,7 @@
                 {
                   "name": "Lilya İrem",
                   "role": "Oyuncu",
-                  "image": "/lilya_irem.jpeg",
+                  "image": "/lilya_irem.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/lilya_irem_fcx/"
                   }
@@ -489,7 +492,7 @@
                 {
                   "name": "Feyza Güngör",
                   "role": "Oyuncu",
-                  "image": "/feyza_gungor.jpeg",
+                  "image": "/feyza_gungor.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/feyzasevilgungor/"
                   }
@@ -497,7 +500,7 @@
                 {
                   "name": "Berk Ali Çatal",
                   "role": "Oyuncu",
-                  "image": "/berk_ali_catgal.jpeg",
+                  "image": "/berk_ali_catgal.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/berkalicatal/?hl=tr"
                   }
@@ -505,35 +508,35 @@
                 {
                   "name": "Hilmi Cem İntepe",
                   "role": "Oyuncu",
-                  "image": "/hilmicem_intepe.jpeg",
+                  "image": "/hilmicem_intepe.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/hilmicemintepeofficial/"
                   }
                 }
               ],
               "gallery": [
-                "/projects/sharm/1.jpg",
-                "/projects/sharm/2.jpg",
-                "/projects/sharm/3.jpg"
+                "/projects/sharm/1.webp",
+                "/projects/sharm/2.webp",
+                "/projects/sharm/3.webp"
               ],
               "report": {
-                "title": "Mısır - Sharm El Sheikh Su Sporları - Proje 4",
-                "description": "Mısır'da gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
+                "title": "Rixos için dikkat çeken değil, iz bırakan projeler tasarladık",
+                "description": "Rixos markamız için hayata geçirdiğimiz iletişim projelerinde, konaklama deneyimini destinasyonun dışına taşan bir keşif alanına dönüştürdük. Prontotour iş birliğiyle kurgulanan yerel geziler ve dış etkinlikler sayesinde, Sharm El Sheikh yalnızca resort deneyimiyle değil; bölgenin atmosferi, hareketi ve deneyim çeşitliliğiyle de markanın iletişim gücünü destekleyen bir sahneye dönüştü.",
                 "images": [
-                  "/meta_sharm.jpg"
+                  "/meta_sharm.webp"
                 ]
               },
               "press": []
             },
             {
-              "title": "Sharm El Sheikh - Proje 5",
+              "title": "Rixos’un Bölgedeki Marka Gücünü Stratejik İletişimle Derinleştirdik",
               "videoUrl": "https://www.youtube.com/embed/6qv5e5n5mCg",
               "videoId": "6qv5e5n5mCg",
               "participants": [
                 {
                   "name": "İpek Kayapınar",
                   "role": "Oyuncu",
-                  "image": "/ipek_kayapinar.jpg",
+                  "image": "/ipek_kayapinar.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/ipekkarapinar/"
                   }
@@ -541,7 +544,7 @@
                 {
                   "name": "Ezgi Şenler",
                   "role": "Oyuncu",
-                  "image": "/ezgin_senler.jpeg",
+                  "image": "/ezgin_senler.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/ezgisenler/"
                   }
@@ -549,7 +552,7 @@
                 {
                   "name": "Damlacan",
                   "role": "Oyuncu",
-                  "image": "/damlacan.jpg",
+                  "image": "/damlacan.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/damlacan/"
                   }
@@ -557,7 +560,7 @@
                 {
                   "name": "Tolga Mendi",
                   "role": "Oyuncu",
-                  "image": "/tolga_mendi.jpeg",
+                  "image": "/tolga_mendi.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/tolgamendi/"
                   }
@@ -565,49 +568,49 @@
                 {
                   "name": "Mert Altınışık",
                   "role": "Oyuncu",
-                  "image": "/mert_altinisik.jpg",
+                  "image": "/mert_altinisik.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/mertaltinisik_/"
                   }
                 }
               ],
               "gallery": [
-                "/projects/sharm/1.jpg",
-                "/projects/sharm/2.jpg",
-                "/projects/sharm/3.jpg"
+                "/projects/sharm/1.webp",
+                "/projects/sharm/2.webp",
+                "/projects/sharm/3.webp"
               ],
               "report": {
-                "title": "Mısır - Sharm El Sheikh Gastronomi Keşfi - Proje 5",
-                "description": "Mısır'da gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
+                "title": "Rixos’un Bölgedeki Marka Gücünü Stratejik İletişimle Derinleştirdik",
+                "description": "Rixos markamız için hayata geçirdiğimiz projelerde, Türkiye’de ve global ölçekte tanınan Türk oyuncuların katılımıyla markanın deneyim dünyasını daha görünür hale getirdik. Sosyal medyada güçlü etkileşim yaratan bu iletişim kurgusunu medya haber yansımalarıyla destekleyerek, Rixos’un bölgedeki algısını, değerini ve marka etkisini daha da ileri taşıdık.",
                 "images": [
-                  "/meta_sharm.jpg"
+                  "/meta_sharm.webp"
                 ]
               },
               "press": [
                 {
-                  "title": "Mısır’da Çöl Safarisi",
+                  "title": "Türk Oyuncular Mısır’ın en ünlü tatil merkezinde buluştu",
                   "category": "Deneyim Tasarımı",
-                  "description": "Türk oyuncular Ayça Ayşin Turan, Salih Bademci, İmer Özgün, Erkan Kolçak Köstendil, Cansu Tosun, İlayda Ildır, İpek Filiz Yazıcı ve Alican Okumuş, Mısır’da bulunan Şarm El Şeyh kentini ziyaret etti.",
-                  "image": "/misirda-col-safarisi-1.webp"
+                  "description": "Türkiye’nin önde gelen başarılı oyuncuları, ‘Mısır’ın İncisi’ Sina Yarımadası’nda bulunan Şarm El Şeyh’te dört gün süren bir etkinliğe katıldı.",
+                  "image": "/turk-oyuncular-misirin-en-unlu-tatil-merkezinde-bulustu.webp"
                 }
               ]
             }
           ]
         },
         "hurghada": {
-          "title": "Hurghada",
+          "title": "Hurghada Destinasyon Tanıtım Projesi",
           "slug": "hurghada",
-          "description": "Mısır'da gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
+          "description": "Hurghada’nın beyaz kumlu sahilleri ve Kızıldeniz’e uzanan etkileyici kıyı hattını Rixos Premium Magawish için kurguladığımız iletişim projelerine güçlü bir sahne sundu. Markanın deneyim odaklı dünyasını tanınan isimlerle buluşturan bu çalışmalar, sosyal medya etkileşimi ve medya görünürlüğüyle desteklenerek Rixos Premium Magawish’e daha seçkin ve güçlü bir iletişim etkisi kazandırdı.",
           "subProjects": [
             {
-              "title": "Hurghada - Proje 1",
+              "title": "Hurghada’nın Beyaz Kumlu Kıyılarında Rixos Etkisini Büyüttük",
               "videoUrl": "https://www.youtube.com/embed/Ec2gB_FgtSk",
               "videoId": "Ec2gB_FgtSk",
               "participants": [
                 {
                   "name": "Gülper Özdemir",
                   "role": "Oyuncu",
-                  "image": "/gulper_ozdemir.jpeg",
+                  "image": "/gulper_ozdemir.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/gulperr/?hl=tr"
                   }
@@ -615,7 +618,7 @@
                 {
                   "name": "Zehra Yılmaz",
                   "role": "Oyuncu",
-                  "image": "/zehra_yilmaz.jpg",
+                  "image": "/zehra_yilmaz.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/zehraylmz/?hl=tr"
                   }
@@ -623,7 +626,7 @@
                 {
                   "name": "Ali Yağcı",
                   "role": "Oyuncu",
-                  "image": "/ali_yagci.jpeg",
+                  "image": "/ali_yagci.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/aliyagciii/"
                   }
@@ -631,7 +634,7 @@
                 {
                   "name": "Erdem Kaynarca",
                   "role": "Oyuncu",
-                  "image": "/erdem_kaynarca.jpeg",
+                  "image": "/erdem_kaynarca.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/erdemkaynarca/"
                   }
@@ -639,23 +642,23 @@
                 {
                   "name": "Oğuzhan Karbi",
                   "role": "Oyuncu",
-                  "image": "/oguzhan_karbi.jpg",
+                  "image": "/oguzhan_karbi.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/oguzhankarbi/"
                   }
                 }
               ],
               "gallery": [
-                "/projects/hurghada/1.jpg",
-                "/projects/hurghada/2.jpg",
-                "/projects/hurghada/3.jpg",
-                "/projects/hurghada/4.jpg"
+                "/projects/hurghada/1.webp",
+                "/projects/hurghada/2.webp",
+                "/projects/hurghada/3.webp",
+                "/projects/hurghada/4.webp"
               ],
               "report": {
-                "title": "Mısır - Hurghada Macera ve Su Sporları - Proje 1",
-                "description": "Mısır'da gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
+                "title": "Hurghada’nın Beyaz Kumlu Kıyılarında Rixos Etkisini Büyüttük",
+                "description": "Hurghada’nın beyaz kumlu sahilleri ve Kızıldeniz’e uzanan etkileyici kıyı hattını Rixos Premium Magawish için kurguladığımız iletişim projelerine güçlü bir sahne sundu. Markanın deneyim odaklı dünyasını tanınan isimlerle buluşturan bu çalışmalar, sosyal medya etkileşimi ve medya görünürlüğüyle desteklenerek Rixos Premium Magawish’e daha seçkin ve güçlü bir iletişim etkisi kazandırdı.",
                 "images": [
-                  "/meta_hurghada.jpg"
+                  "/meta_hurghada.webp"
                 ]
               },
               "press": [
@@ -663,26 +666,26 @@
                   "title": "Türk Oyuncular Mısır'ın en ünlü tatil merkezinde buluştu",
                   "category": "Deneyim Tasarımı",
                   "description": "Türk oyuncular Mısır'ın en ünlü tatil merkezinde buluştu.",
-                  "image": "/turk-oyuncular-misirin-en-unlu-tatil-merkezinde-bulustu.jpg"
+                  "image": "/turk-oyuncular-misirin-en-unlu-tatil-merkezinde-bulustu.webp"
                 }
               ]
             }
           ]
         },
         "morocco": {
-          "title": "Fas",
+          "title": "Marakeş’te İki Güçlü Markayı Etkili Bir Deneyim Projesinde Buluşturduk",
           "slug": "fas",
-          "description": "Fas'ta gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
+          "description": "Fas’ın “Kızıl Şehri” olarak anılan, kökleri 11. yüzyıla uzanan Marakeş; tarih, kültür ve yaşam ritmini aynı sahnede buluşturan en güçlü destinasyonlardan biri olarak öne çıkıyor. Prontotour’un 30. yılına özel hayata geçirilen bu projede, şehrin karakterini güçlü bir deneyim anlatısına dönüştürdük. Projenin merkezinde, Atlas Dağları’nın eteklerinde konumlanan, doğayla iç içe atmosferi ve seçkin resort yapısıyla öne çıkan Fairmont Royal Palm Marrakech yer aldı. Her iki markayı aynı çerçevede buluşturan bu proje, sosyal medya görünürlüğü ve medya yansımalarıyla desteklenerek çok katmanlı bir iletişim etkisine dönüştü.",
           "subProjects": [
             {
-              "title": "Fas",
+              "title": "Marakeş’te İki Güçlü Markayı Etkili Bir Deneyim Projesinde Buluşturduk",
               "videoUrl": "https://www.youtube.com/embed/FLNg5aQb9rk",
               "videoId": "FLNg5aQb9rk",
               "participants": [
                 {
                   "name": "Seray Kaya",
                   "role": "Oyuncu",
-                  "image": "/seray_kaya.jpg",
+                  "image": "/seray_kaya.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/seraykaya/"
                   }
@@ -690,7 +693,7 @@
                 {
                   "name": "İlayda Ildır",
                   "role": "Oyuncu",
-                  "image": "/ilayda_ildir.jpg",
+                  "image": "/ilayda_ildir.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/ilaydaildir/"
                   }
@@ -698,7 +701,7 @@
                 {
                   "name": "Sera Kutlubey",
                   "role": "Oyuncu",
-                  "image": "/sera_kutlubey_.jpeg",
+                  "image": "/sera_kutlubey_.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/skutlubey/"
                   }
@@ -706,7 +709,7 @@
                 {
                   "name": "Alican Okumuş",
                   "role": "Oyuncu",
-                  "image": "/alican_okumus.jpg",
+                  "image": "/alican_okumus.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/alicanokumus/"
                   }
@@ -714,22 +717,22 @@
                 {
                   "name": "Ümit Katarcılar",
                   "role": "Oyuncu",
-                  "image": "/ümit_kantarcilar_.jpeg",
+                  "image": "/ümit_kantarcilar_.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/umitkantarcilar/"
                   }
                 }
               ],
               "gallery": [
-                "/projects/morocco/1.jpg",
-                "/projects/morocco/2.jpg",
-                "/projects/morocco/3.jpg"
+                "/projects/morocco/1.webp",
+                "/projects/morocco/2.webp",
+                "/projects/morocco/3.webp"
               ],
               "report": {
-                "title": "Fas - Kültür ve Gastronomi Keşfi",
-                "description": "Fas'ta gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
+                "title": "Marakeş’te İki Güçlü Markayı Etkili Bir Deneyim Projesinde Buluşturduk",
+                "description": "Fas’ın “Kızıl Şehri” olarak anılan, kökleri 11. yüzyıla uzanan Marakeş; tarih, kültür ve yaşam ritmini aynı sahnede buluşturan en güçlü destinasyonlardan biri olarak öne çıkıyor. Prontotour’un 30. yılına özel hayata geçirilen bu projede, şehrin karakterini güçlü bir deneyim anlatısına dönüştürdük. Projenin merkezinde, Atlas Dağları’nın eteklerinde konumlanan, doğayla iç içe atmosferi ve seçkin resort yapısıyla öne çıkan Fairmont Royal Palm Marrakech yer aldı. Her iki markayı aynı çerçevede buluşturan bu proje, sosyal medya görünürlüğü ve medya yansımalarıyla desteklenerek çok katmanlı bir iletişim etkisine dönüştü.",
                 "images": [
-                  "/meta_morocco.jpg"
+                  "/meta_morocco.webp"
                 ]
               },
               "press": [
@@ -737,26 +740,26 @@
                   "title": "Prontotour 30.yaşını Marakeş'te kutladı.",
                   "category": "Stratejik PR & Deneyim",
                   "description": "Seyahat sektöründe trendler belirleyen tur operatörü Prontotour 30. yıl kutlamalarına Fas'ta başladı. Ünlü oyuncular Marakeş'i keşfetme fırsatı buldu.",
-                  "image": "/prontotour-marakeste.jpeg"
+                  "image": "/prontotour-marakeste.webp"
                 }
               ]
             }
           ]
         },
         "jordan": {
-          "title": "Ürdün",
+          "title": "Ürdün’ün Öne Çıkan Rotalarını Tek Bir Güçlü Hikâyede Buluşturduk",
           "slug": "urdun",
-          "description": "Ürdün'de gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
+          "description": "Royal Jordanian Hava Yolları, Ürdün Turizm Tanıtma Ofisi ve Marriott Grubu iş birliğinde hayata geçirilen bu projede; Amman’ın şehir kültürü, Dead Sea’nin doğal ayrıcalığı ve Petra’nın tarihsel mirası tek bir güçlü deneyim kurgusunda bir araya geldi. Sosyal medya görünürlüğü ve medya yansımalarıyla desteklenen çalışma, markalara yüksek görünürlük ve güçlü bir destinasyon değeri kazandırdı.",
           "subProjects": [
             {
-              "title": "Ürdün",
+              "title": "Ürdün’ün Öne Çıkan Rotalarını Tek Bir Güçlü Hikâyede Buluşturduk",
               "videoUrl": "https://www.youtube.com/embed/pJy_mcZRxDY",
               "videoId": "pJy_mcZRxDY",
               "participants": [
                 {
                   "name": "Gökçe Akyıldız",
                   "role": "Oyuncu",
-                  "image": "/gokce_akyıldız.jpeg",
+                  "image": "/gokce_akyildiz.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/akyldzgkce/?hl=tr"
                   }
@@ -764,7 +767,7 @@
                 {
                   "name": "Gizem Güneş",
                   "role": "Oyuncu",
-                  "image": "/gizem_gunes.jpg",
+                  "image": "/gizem_gunes.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/gizem.gunes/"
                   }
@@ -772,7 +775,7 @@
                 {
                   "name": "Mehmet Aykaç",
                   "role": "Oyuncu",
-                  "image": "/mehmet aykac.jpg",
+                  "image": "/mehmet aykac.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/mehmetaykac/"
                   }
@@ -780,23 +783,23 @@
                 {
                   "name": "Emin Günenç",
                   "role": "Oyuncu",
-                  "image": "/emin_gunenc.jpg",
+                  "image": "/emin_gunenc.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/emingunenc/?hl=tr"
                   }
                 }
               ],
               "gallery": [
-                "/projects/jordan/1.jpg",
-                "/projects/jordan/2.jpg",
-                "/projects/jordan/3.jpg",
-                "/projects/jordan/4.jpg"
+                "/projects/jordan/1.webp",
+                "/projects/jordan/2.webp",
+                "/projects/jordan/3.webp",
+                "/projects/jordan/4.webp"
               ],
               "report": {
-                "title": "Ürdün - Tarih ve Doğa Yolculuğu",
-                "description": "Ürdün'de gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
+                "title": "Ürdün’ün Öne Çıkan Rotalarını Tek Bir Güçlü Hikâyede Buluşturduk",
+                "description": "Royal Jordanian Hava Yolları, Ürdün Turizm Tanıtma Ofisi ve Marriott Grubu iş birliğinde hayata geçirilen bu projede; Amman’ın şehir kültürü, Dead Sea’nin doğal ayrıcalığı ve Petra’nın tarihsel mirası tek bir güçlü deneyim kurgusunda bir araya geldi. Sosyal medya görünürlüğü ve medya yansımalarıyla desteklenen çalışma, markalara yüksek görünürlük ve güçlü bir destinasyon değeri kazandırdı.",
                 "images": [
-                  "/meta_ürdün.jpg"
+                  "/meta_ürdün.webp"
                 ]
               },
               "press": [
@@ -817,19 +820,19 @@
           ]
         },
         "montenegro": {
-          "title": "Karadağ",
+          "title": "Karadağ Destinasyon Tanıtım Projesi",
           "slug": "karadag",
           "description": "Karadağ'da gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
           "subProjects": [
             {
-              "title": "Karadağ",
+              "title": "Karadağ Destinasyon Tanıtım Projesi",
               "videoUrl": "https://www.youtube.com/embed/E7dhalAN0zo",
               "videoId": "E7dhalAN0zo",
               "participants": [
                 {
                   "name": "Ali Yağcı",
                   "role": "Oyuncu",
-                  "image": "/ali_yagci.jpeg",
+                  "image": "/ali_yagci.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/aliyagciii/"
                   }
@@ -837,7 +840,7 @@
                 {
                   "name": "Mehmet Aykaç",
                   "role": "Oyuncu",
-                  "image": "/mehmet aykac.jpg",
+                  "image": "/mehmet aykac.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/mehmetaykac/"
                   }
@@ -845,7 +848,7 @@
                 {
                   "name": "Gökçe Akyıldız",
                   "role": "Oyuncu",
-                  "image": "/gokce_akyıldız.jpeg",
+                  "image": "/gokce_akyildiz.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/akyldzgkce/?hl=tr"
                   }
@@ -853,7 +856,7 @@
                 {
                   "name": "Dilara Aksüyek",
                   "role": "Oyuncu",
-                  "image": "/dilara_aksüyek.jpeg",
+                  "image": "/dilara_aksüyek.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/dilaraaksuyek_/?hl=tr"
                   }
@@ -861,7 +864,7 @@
                 {
                   "name": "Emin Günenç",
                   "role": "Oyuncu",
-                  "image": "/emin_gunenc.jpg",
+                  "image": "/emin_gunenc.webp",
                   "social": {
                     "instagram": "https://www.instagram.com/emingunenc/?hl=tr"
                   }
@@ -876,15 +879,15 @@
                 }
               ],
               "gallery": [
-                "/projects/montenegro/1.jpg",
-                "/projects/montenegro/2.jpg",
-                "/projects/montenegro/3.jpg"
+                "/projects/montenegro/1.webp",
+                "/projects/montenegro/2.webp",
+                "/projects/montenegro/3.webp"
               ],
               "report": {
-                "title": "Karadağ - Adriyatik Kıyıları Keşfi",
+                "title": "Karadağ Destinasyon Tanıtım Projesi",
                 "description": "Karadağ'da gerçekleştirdiğimiz bu kapsamlı Celebrity PR kampanyasında, destinasyonun zengin kültürel mirasını ve modern yaşam tarzını ve iş birlikçi markalarımızı dünyaya tanıttık. Ünlü Türk oyuncular ile yapılan iş birliği sonucunda Milyonları aşan organik erişim elde ettik. Proje süresince yerel kültür, konaklama, gastronomi ve turizm deneyimlerini öne çıkaran içerikler ürettik.",
                 "images": [
-                  "/meta_montenegro.jpg"
+                  "/meta_montenegro.webp"
                 ]
               }
             }
@@ -1006,10 +1009,34 @@
       "description": "",
       "cards": [
         {
+          "title": "Lara Fabian Sevgililer Günü'nde Rixos Radamis Sharm El Sheikh'te sahne alıyor!",
+          "category": "Konser & Etkinlik",
+          "description": "Rixos Mısır, dünya yıldızlarını ağırlayan eğlence vizyonunu Sevgililer Günü'nde Lara Fabian konseriyle sürdürüyor. Uluslararası eğlence ve konser etkinlikleriyle öne çıkan Rixos Mısır, Sevgililer Günü'nde müzik dünyasının en güçlü seslerinden Lara Fabian'ı ağırlamaya hazırlanıyor. 14 Şubat'ta Rixos Radamis Sharm El Sheikh'te gerçekleşecek konser, Rixos'un global ölçekte konumlanan eğlence yaklaşımının yeni bir halkası olacak.",
+          "image": "/lara-fabian-rixos-radamis.png"
+        },
+        {
+          "title": "Dünya yıldızları Rixos Mısır'da buluştu: 2026'ya görkemli başlangıç",
+          "category": "Konser & Etkinlik",
+          "description": "Rixos Mısır, 2026'ya Sharm El Sheikh ve Hurghada'da düzenlediği, bir haftaya yayılan yılbaşı programlarıyla girdi. Konserler, DJ performansları ve özel etkinliklerden oluşan bu dönem, Mısır'ın kış sezonunda da güçlü bir turizm destinasyonu olduğunu bir kez daha ortaya koydu. Yılbaşı haftası boyunca Rixos Mısır otellerinde farklı müzik türlerine ve beklentilere hitap eden programlar hayata geçirilirken, konaklama ve eğlence deneyimi entegre bir takvim içinde sunuldu.",
+          "image": "/rixos_sharm_haber.png"
+        },
+        {
+          "title": "Rixos Mısır'dan destinasyon yönetimi geliştirilmesinde yeni hamle! Sharm El Sheikh, global Hint düğünlerinin yeni adresi oldu!",
+          "category": "Destinasyon & Etkinlik",
+          "description": "Rixos Mısır, destinasyon yönetimine yönelik vizyoner yaklaşımıyla Sharm El Sheikh'i uluslararası düğün ve mega etkinlik turizminin yeni küresel merkezlerinden biri haline getiriyor.",
+          "image": "/hint-dugunu-rixos-misir.webp"
+        },
+        {
+          "title": "Ennismore, Kahire'de şehir projesini Rixos ile hayata geçiriyor",
+          "category": "Turizm & Otelcilik",
+          "description": "Lifestyle otelcilik gruplarından Ennismore, Mısır'ın başkenti Kahire'deki ilk şehir merkezli projesini Rixos markasıyla hayata geçirdiğini duyurdu. World Trade Center Cairo iş birliğiyle geliştirilen Rixos ve Rixos Living World Trade Center Cairo, 2027'den itibaren etaplar halinde açılacak. Kahire'nin merkezi iş bölgesinde yeni bir ticaret, konaklama ve yaşam odağı oluşturulması amaçlanıyor.",
+          "image": "/ennismore.webp"
+        },
+        {
           "title": "Afrika Turizm Forumu 20-21 Mayıs 2024'de Sharm El Sheikh Uluslararası Kongre Merkezi'nde Gerçekleşecek",
           "category": "Turizm & Kongre",
           "description": "Turizm sektörü için katma değer üretmek, yeni pazarlar keşfetmek ve geliştirmek üzere Antalya Turizm Fuarı yaratıcısı GMT Fuarcılık tarafından tasarlanan Afrika Turizm Forumu, 20-21 Mayıs 2024 tarihleri arasında Sharm El Sheikh Uluslararası Kongre Merkezi'nde gerçekleşecek.",
-          "image": "/afrika_turizm_forumu_2024_joinpr.jpg"
+          "image": "/afrika_turizm_forumu_2024_joinpr.webp"
         },
         {
           "title": "Rixos Radamis Sharm El Sheikh, Enrique Iglesias'ın Muhteşem Performansına Ev Sahipliği Yaptı!",
@@ -1021,25 +1048,25 @@
           "title": "Hadise, Şarm El Şeyh'te 4 Bin Kişiye Konser Verdi",
           "category": "Konser & Etkinlik",
           "description": "Ünlü sanatçı Hadise, Kurban Bayramı'nda Mısır'ın gözde tatil merkezi Şarm El Şeyh'te bulunan Rixos Radamis otelinde bayramın 2. günü sevenleriyle buluştu. Dünyanın dört bir yanından konser için gelen hayranlarına unutulmaz bir gece yaşattı.",
-          "image": "/hadise_sharm_konser.jpg"
+          "image": "/hadise_sharm_konser.webp"
         },
         {
           "title": "Prontotour'da Erken Rezervasyon Dönemi Başladı: 2025 İçin Hedef 60 Bin Turist!",
           "category": "Turizm & Pazarlama",
           "description": "Turizmin lider tur operatörü Prontotour, \"Sakın geç kalma erken gel!\" mottosuyla 2025 erken rezervasyon kampanyasını başlattı. Kampanyanın ilk dönemi yüzde 50 indirim fırsatı sunuyor. Erken rezervasyondan faydalanan gezginler taksitli ödeme avantajlarından ve Prontotour'un yurt dışı turlarda uyguladığı P Taksit seçeneklerinden yararlanabilecek.",
-          "image": "/Prontotour_sezai_demirer_join_pr_erken_rezervasyon.png"
+          "image": "/Prontotour_sezai_demirer_join_pr_erken_rezervasyon.webp"
         },
         {
           "title": "Rixos Radamis Kongre Merkezi Açıldı",
           "category": "Turizm & Kongre",
           "description": "Türkiye'ye yakın uçuş mesafesi, vizesiz seyahat avantajı ve dört mevsim ılıman iklimiyle Türk misafirlerin son yıllarda yoğun ilgi gösterdiği Şarm El Şeyh, Rixos'un açtığı kongre merkezi sayesinde artık yalnızca tatil değil, aynı zamanda iş dünyasının yeni buluşma merkezi olacak.",
-          "image": "/Rixos_radamis_kongre_merkezi_join_pr.jpg"
+          "image": "/Rixos_radamis_kongre_merkezi_join_pr.webp"
         },
         {
           "title": "Dr. Yücel Sarıaltın: \"Yüz ve boyun bölgesinde sanat eseri yaratmak için çalışıyoruz\"",
           "category": "Sağlık & Estetik",
           "description": "Teknolojinin yardımıyla gerçekleştirilen estetik operasyonlarla genç görünmek gün geçtikçe daha kolay bir hal alırken, son dönemin trendi yüz ve boyun germe işlemleri oldu.",
-          "image": "/dr_yücel_sarialtın.jpg"
+          "image": "/dr_yucel_sarialtin.webp"
         },
         {
           "title": "Rixos Radamis Sharm El Sheikh 4 Ay Boyunca Michelin Yıldızlı Şefleri Ağırlayacak",
@@ -1069,31 +1096,31 @@
           "title": "Prontotour 30. yaşını Marakeş’te kutladı.",
           "category": "Stratejik PR & Deneyim",
           "description": "Seyahat sektöründe trendler belirleyen tur operatörü Prontotour 30. yıl kutlamalarına Fas’ta başladı. Ünlü oyuncular Marakeş’i keşfetme fırsatı buldu.",
-          "image": "/prontotour-marakeste.jpeg"
+          "image": "/prontotour-marakeste.webp"
         },
         {
           "title": "Prontotour Erken Rezervasyonun İlk Dönemini %70 Artışla Tamamladı",
           "category": "Pazarlama & Satış",
           "description": "Erken rezervasyonun ilk dönemini yüzde 70 artışla tamamlayan ve ikinci dönemi başlatan Prontotour, yurt içinde yüzde 50, yurt dışında yüzde 40 indirim fırsatları sunuyor.",
-          "image": "/prontotour-erken-rezervasyonun-ilk-donemini-70-artisla-tamamladi.jpg"
+          "image": "/prontotour-erken-rezervasyonun-ilk-donemini-70-artisla-tamamladi.webp"
         },
         {
           "title": "Leaders CXO 14. Buluşma Toplantısı",
           "category": "Özel Davet",
           "description": "Leaderscxo Kurucu Başkanı Cenk Dağcı ve Join Pr kurucusu Ali Saçlı ev sahipliğinde sınırlı sayıda katılımcı ve özel davet ile gerçekleştirilen 2022 yılının ilk buluşmasının konukları; Prof. Dr. İlber Ortaylı, Prof. Dr. Uğur Batı...",
-          "image": "/leaders-cxo-14-bulusma-toplantisi.jpg"
+          "image": "/leaders-cxo-14-bulusma-toplantisi.webp"
         },
         {
           "title": "Prontotour, Ünlü Oyuncu ve Influencer’lara Yönelik Bir Dünya Turu Programı Başlatıyor",
           "category": "Küresel Tur Programı",
           "description": "Tur şirketi Prontotour, Türkiye’den ünlü oyuncu ve influencer’lara yönelik bir yıl sürecek bir dünya turu programı hazırladığını duyurdu.",
-          "image": "/prontotour-unlu-oyuncu-ve-influencerlara-yonelik-bir-dunya-turu-programi-baslatiyor.jpg"
+          "image": "/prontotour-unlu-oyuncu-ve-influencerlara-yonelik-bir-dunya-turu-programi-baslatiyor.webp"
         },
         {
           "title": "Türk Oyuncular Kızıldeniz’de Tatil Keyfi Yaptı",
           "category": "Deneyimsel Kampanya",
           "description": "Türk dizi ve film oyuncuları Kızıldeniz kıyısında tatil kenti Hurghada’da tatil keyfi yaptı. Baran Bölükbaşı, Pelin Uluksar, Gizem Güneş, Damlasu İkizoğlu, Ahmet Kayakesen, Oral Özer ve Berna Koraltürk Mısır’ın Hurghada kentini ziyaret etti.",
-          "image": "/turk-oyuncular-kizildenizde-tatil-keyfi-yapti-kpk.jpg"
+          "image": "/turk-oyuncular-kizildenizde-tatil-keyfi-yapti-kpk.webp"
         },
         {
           "title": "Mısır’da Çöl Safarisi",
@@ -1105,7 +1132,7 @@
           "title": "Türk Oyuncular Mısır’ın en ünlü tatil merkezinde buluştu",
           "category": "Destinasyon Etkinliği",
           "description": "Türkiye’nin önde gelen başarılı oyuncuları, ‘Mısır’ın İncisi’ Sina Yarımadası’nda bulunan Şarm El Şeyh’te dört gün süren bir etkinliğe katıldı. Şarm El Şeyh’in tarihi, kültürel yapısı ve Kızıldenizi’ne hayran kaldıklarını belirtti.",
-          "image": "/turk-oyuncular-misirin-en-unlu-tatil-merkezinde-bulustu.jpg"
+          "image": "/turk-oyuncular-misirin-en-unlu-tatil-merkezinde-bulustu.webp"
         },
         {
           "title": "Türk Oyuncular Ürdün’e Hayran Kaldı",
@@ -1129,77 +1156,82 @@
           "title": "Prontotour’un 2024 Erken Rezervasyon Dönemi Başladı",
           "category": "Kampanya Lansmanı",
           "description": "Yazseverler, 2024 için tatil planlarını şimdiden yapmaya başladı. Türkiye’nin önde gelen tur operatörü markalarından Prontotour ise tatilciler için yurt dışı, yurt içi ve gemi turlarında ‘Uçak bileti fiyatına tur!’",
-          "image": "/prontotourun-erken-rezervasyon-donemi-basladi-1-1.jpg"
+          "image": "/prontotourun-erken-rezervasyon-donemi-basladi-1-1.webp"
         }
       ],
       "cta": "Tüm Haberleri Görüntüle"
     },
     "clients": {
-      "title": "Birlikte büyüdüğümüz markalar",
-      "description": "",
+      "title": "Markalarımız",
+      "referansTitle": "Referanslarımız",
+      "description": "Join PR olarak konaklama, havacılık, turizm ve yaşam tarzı markalarıyla gerçekleştirdiğimiz başarılı projeler ve iş birlikleri.",
       "showMore": "Devamını gör",
       "showLess": "Daha az göster",
       "viewAll": "Hepsini gör",
       "logos": [
         {
-          "name": "Swissotel Sharm El Sheikh",
-          "image": "/swissotel-logo.jpg"
+          "name": "Rixos Golf Villas & Suites Sharm El Sheikh",
+          "image": "/Join Pr Marka Logoları/rixos_sharm_el_sheikh.png"
         },
         {
-          "name": "Marriott Dead Sea Resort",
-          "image": "/marriott-dead-sea.jpg"
+          "name": "Ajet",
+          "image": "/AJet_logo.svg.png"
         },
         {
-          "name": "Hyatt Regency",
-          "image": "/hyatt-regency-1.jpg"
+          "name": "Prontotour",
+          "image": "/Join Pr Marka Logoları/prontotour_logos.png"
         },
         {
           "name": "Jordan Tourism Board",
-          "image": "/jordan-tourism-board-1.jpg"
+          "image": "/jordan-tourism-board-1.webp"
         },
         {
           "name": "Royal Jordanian",
-          "image": "/royal-jordanian-logo-1.jpg"
+          "image": "/royal-jordanian-logo-1.webp"
+        },
+        {
+          "name": "Marriott Dead Sea Resort",
+          "image": "/marriott-dead-sea.webp"
+        },
+        {
+          "name": "Hyatt Regency",
+          "image": "/hyatt-regency-1.webp"
+        },
+        {
+          "name": "Swissotel Sharm El Sheikh",
+          "image": "/swissotel-logo.webp"
         },
         {
           "name": "Rixos Premium Seagate",
-          "image": "/rixos-logo.jpg"
+          "image": "/rixos-logo.webp"
         },
         {
           "name": "Rixos Premium Magawish",
-          "image": "/rixos-logo-1.jpg"
-        },
-        {
-          "name": "Rixos Golf Villas & Suites Sharm El Sheikh",
-          "image": "/rixos-logo-2.jpg"
-        },
-        {
-          "name": "Rixos Sharm El Sheikh",
-          "image": "/rixos-logo-3.jpg"
+          "image": "/rixos-logo-1.webp"
         },
         {
           "name": "Rixos Premium Alamein",
-          "image": "/rixos-logo-4.jpg"
+          "image": "/rixos-logo-4.webp"
         },
         {
           "name": "Rixos Radamis Sharm El Sheikh",
-          "image": "/rixos-logo-5.jpg"
+          "image": "/rixos-logo-5.webp"
         },
         {
           "name": "Rixos Alamein",
-          "image": "/rixos-logo-4.jpg"
+          "image": "/rixos-logo-4.webp"
         },
         {
           "name": "Club Privé by Rixos Sharm El Sheikh",
-          "image": "/club-prive-logo2.jpg"
+          "image": "/club-prive-logo2.webp"
         },
         {
           "name": "Vida Beach Resort Marassi Al Bahrain",
-          "image": "/vida-beach-resort.jpg"
+          "image": "/vida-beach-resort.webp"
         },
         {
           "name": "Nikki Beach",
-          "image": "/nikki-beach-logo-1.jpg"
+          "image": "/nikki-beach-logo-1.webp"
         }
       ]
     },
@@ -1209,18 +1241,41 @@
       "cta": "Tüm Blog Yazılarını Gör",
       "cards": [
         {
-          "title": "Avrupa'nın Tarihi Şehirlerinde Destinasyon PR Stratejileri",
-          "category": "Destinasyon PR",
-          "description": "Avrupa'nın zengin kültürel mirasına sahip tarihi şehirlerinde, destinasyon PR stratejilerinin nasıl şekillendiğini ve bu şehirlerin turizm potansiyelini nasıl artırdığını keşfedin.",
-          "image": "/ucak-bileti-fiyatina-avrupa-turlari.jpg",
-          "link": "/ucak-bileti-fiyatina-avrupa-turlari"
+          "title": "Turizm, Seyahat ve Sigorta Acentaları İçin Yapay Zekâ Destekli Web Altyapıları ve Akıllı Sistemler",
+          "category": "Yazılım ve Teknoloji",
+          "description": "Yapay zekâ destekli web altyapıları, acentelerin operasyonel yükünü azaltırken; satış, müşteri deneyimi ve verimlilik tarafında ciddi avantajlar sağlar.",
+          "fullContent": "Turizm, Seyahat ve Sigorta Acentaları İçin Yapay Zekâ Destekli Web Altyapıları ve Akıllı Sistem Kurulumu\n\nTurizm, seyahat ve sigorta sektörleri; yoğun veri, yüksek rekabet ve hızlı karar alma gerektiren alanlardır.\nBu sektörlerde başarı artık yalnızca satış kabiliyetiyle değil, doğru altyapı, güçlü sistemler ve akıllı otomasyonlarla mümkün hale gelmiştir.\n\nYapay zekâ destekli web altyapıları, acentelerin operasyonel yükünü azaltırken; satış, müşteri deneyimi ve verimlilik tarafında ciddi avantajlar sağlar.\n\nNeden Güçlü Bir Web Altyapısı Artık Zorunlu?\n\nBugünün kullanıcıları:\n\nHızlı bilgi ister\n\nNet fiyat görmek ister\n\nGüven duymak ister\n\nKolay işlem yapmak ister\n\nTurizm, seyahat ve sigorta acentaları için web sitesi artık bir vitrin değil;\nsatış, iletişim ve operasyon merkezidir.\n\nZayıf altyapı:\n\nMüşteri kaybına\n\nOperasyonel karmaşaya\n\nZaman ve bütçe israfına\nneden olur.\n\nYapay Zekâ Destekli Sistem Kurulumu Nedir?\n\nYapay zekâ destekli sistem kurulumu;\nweb altyapısının yalnızca tasarım ve yazılımdan ibaret olmadığı, öğrenen ve gelişen bir yapı olarak kurgulanmasıdır.\n\nBu yaklaşım:\n\nKullanıcı davranışlarını analiz eder\n\nTekrarlayan işleri otomatikleştirir\n\nSatış ve teklif süreçlerini hızlandırır\n\nKarar alma süreçlerini veriyle destekler\n\nAmaç, acenteyi dijitalde daha akıllı ve ölçeklenebilir hale getirmektir.\n\nTurizm ve Seyahat Acentaları İçin Yapay Zekâ Destekli Sistemler\nAkıllı Web Siteleri ve Rezervasyon Altyapıları\n\nTurizm ve seyahat sitelerinde:\n\nTur, paket ve destinasyon yönetimi\n\nDinamik fiyat ve kampanya alanları\n\nOnline rezervasyon ve talep formları\n\nÇok dilli ve çok para birimli yapı\n\nyapay zekâ destekli analizlerle sürekli optimize edilir.\n\nKullanıcı hangi turla ilgileniyor, nerede vazgeçiyor, neyi karşılaştırıyor gibi veriler sistem tarafından öğrenilir.\n\nDijital Rehberler ve Otomatik Bilgilendirme Sistemleri\n\nYapay zekâ:\n\nKullanıcı sorularını analiz edebilir\n\nTur ve destinasyon bazlı öneriler sunabilir\n\nSeyahat öncesi ve sonrası bilgilendirme yapabilir\n\nBu yapı, müşteri temsilcisi yükünü azaltırken kullanıcı memnuniyetini artırır.\n\nSatış ve Talep Yönetimi Otomasyonu\n\nTeklif isteyen kullanıcılar:\n\nOtomatik olarak sınıflandırılır\n\nİlgi alanlarına göre yönlendirilir\n\nSatış ekiplerine önceliklendirilmiş şekilde aktarılır\n\nBu sayede potansiyel müşteri kaçırma oranı düşer.\n\nSigorta Acentaları İçin Yapay Zekâ Destekli Dijital Altyapılar\nAkıllı Teklif ve Poliçe Yönetimi\n\nSigorta sitelerinde yapay zekâ:\n\nKullanıcı ihtiyaçlarını analiz eder\n\nUygun ürünleri öne çıkarır\n\nTeklif süreçlerini hızlandırır\n\nZiyaretçi, karmaşık poliçe dili yerine anlaşılır ve yönlendirici bir deneyim yaşar.\n\nMüşteri Takibi ve Yenileme Hatırlatmaları\n\nYapay zekâ destekli sistemler:\n\nPoliçe bitiş tarihlerini takip eder\n\nYenileme süreçlerini otomatikleştirir\n\nMüşteriye zamanında bildirim gönderir\n\nBu yapı, acenteler için sürdürülebilir gelir anlamına gelir.\n\nDijital Güven ve Veri Yönetimi\n\nSigorta sektöründe güven kritiktir.\nYapay zekâ destekli altyapılar:\n\nVeri güvenliğini destekler\n\nKullanıcı davranışlarını izler\n\nOlası riskleri önceden tespit eder\n\nOrtak Nokta: Entegre ve Ölçeklenebilir Sistemler\n\nTurizm, seyahat ve sigorta acentalarının ortak ihtiyacı şudur:\nbirbirinden kopuk araçlar değil, entegre çalışan tek bir sistem.\n\nBu sistem:\n\nWeb sitesi\n\nCRM\n\nRezervasyon / teklif modülleri\n\nPazarlama ve reklam altyapıları\n\nRaporlama ve analiz panelleri\n\nile birlikte çalışmalıdır.\n\nYapay Zekâ Destekli Altyapıların Sağladığı Avantajlar\n\nOperasyonel yükün azalması\n\nDaha hızlı satış süreçleri\n\nDaha iyi müşteri deneyimi\n\nVeriye dayalı karar alma\n\nDaha düşük maliyet\n\nÖlçeklenebilir büyüme\n\nBu yapı, acenteleri yalnızca bugüne değil; geleceğe hazırlar.\n\nJoin PR Yaklaşımıyla Dijital Sistem Kurulumu\n\nJoin PR, web altyapısı ve sistem kurulumunu yalnızca teknik bir iş olarak görmez.\nBizim için bu süreç:\n\nİş modelini anlamakla başlar\n\nSektöre özel ihtiyaçları analiz etmekle devam eder\n\nYapay zekâ destekli modüllerle güçlendirilir\n\nUzun vadeli büyümeyi destekleyecek şekilde kurgulanır\n\nAmaç; markaların dijitalde yalnızca var olması değil,\nakıllı, verimli ve sürdürülebilir şekilde çalışmasıdır.\n\nSonuç\n\nTurizm, seyahat ve sigorta acentaları için güçlü bir web altyapısı artık bir seçenek değil, gerekliliktir.\nYapay zekâ destekli sistemler ise bu altyapıyı daha akıllı, daha hızlı ve daha kârlı hale getirir.\n\nDoğru kurulan dijital sistemler;\nacentelerin iş yükünü azaltır, müşteri deneyimini geliştirir ve büyümeyi hızlandırır.",
+          "image": "/join_pr_yazilim_yapay_zeka_web_altyapi.webp",
+          "link": "/turizm-seyahat-ve-sigorta-acentalari-icin-yapay-zeka-destekli-web-altyapilari-ve-akilli-sistemler"
         },
         {
-          "title": "Estetik ve Wellness Sektöründe Marka İletişimi",
-          "category": "Marka İletişimi",
-          "description": "Estetik ve wellness sektöründe güven oluşturmanın ve marka değerini artırmanın yollarını, müşteri deneyimini ön planda tutan iletişim stratejilerini inceleyin.",
-          "image": "/genclik-mucizesi-yuz-ve-boyun-germe-ameliyatlari.jpg",
-          "link": "/genclik-mucizesi-yuz-ve-boyun-germe-ameliyatlarini-kesfedin"
+          "title": "Google ve Meta Reklamları: Yapay Zekâ Destekli Akıllı Reklam Optimizasyonu",
+          "category": "Dijital Reklam Yönetimi",
+          "description": "",
+          "fullContent": "Dijital reklamcılık, manuel optimizasyon dönemini geride bıraktı. Bugün Google ve Meta reklamları; yapay zekâ, makine öğrenimi ve büyük veri destekli algoritmalar sayesinde kendi kendini optimize eden, öğrenen ve ölçeklenen bir yapıya dönüştü. Bu dönüşüm, markalar için yalnızca daha fazla görünürlük değil; daha düşük maliyet, daha yüksek dönüşüm ve sürdürülebilir büyüme anlamına geliyor.\n\nYapay Zekâ Destekli Reklamcılık Nedir?\n\nYapay zekâ destekli reklam optimizasyonu; kampanyaların hedefleme, bütçe dağılımı, teklif stratejileri, kreatif varyasyonlar ve zamanlama gibi tüm kritik noktalarının algoritmalar tarafından gerçek zamanlı olarak yönetilmesidir. Sistem; kullanıcı davranışlarını, lokasyon verilerini, cihaz bilgilerini ve geçmiş performansı analiz ederek en doğru kişiye, en doğru anda, en doğru mesajı ulaştırmayı hedefler.\n\nGoogle Ads'te Yapay Zekânın Rolü\n\nGoogle Ads altyapısı, arama niyeti odaklı çalıştığı için yapay zekâdan en yoğun faydalanan platformlardan biridir. Akıllı teklif stratejileri sayesinde sistem; tıklama, dönüşüm ve satış verilerini analiz ederek bütçeyi otomatik olarak en verimli alanlara yönlendirir.\n\nÖne çıkan AI destekli Google Ads çözümleri:\n\nAkıllı tekliflendirme (ROAS, CPA odaklı optimizasyon)\n\nOtomatik anahtar kelime eşleşmeleri\n\nDinamik reklam metinleri\n\nLokasyon bazlı arama niyeti analizi\n\nBu yapı, özellikle şehir, bölge ve ülke bazlı hedefleme yapılan kampanyalarda ciddi performans artışı sağlar.\n\nMeta (Facebook & Instagram) Reklamlarında AI Optimizasyonu\n\nMeta reklamları, kullanıcı davranışı ve ilgi alanı analizinde son derece güçlü bir yapay zekâ altyapısına sahiptir. Platform; kullanıcıların etkileşim geçmişini, içerik tüketimini ve sosyal davranışlarını analiz ederek mikro hedefleme yapar.\n\nMeta tarafında yapay zekânın sunduğu avantajlar:\n\nBenzer hedef kitle (Lookalike) optimizasyonu\n\nOtomatik kreatif varyasyonlar\n\nReels, Story ve Feed için format bazlı öğrenme\n\nGerçek zamanlı performans tahmini\n\nBu sayede reklamlar yalnızca gösterilmez; etkileşim ve satışa dönüşecek kullanıcıya ulaştırılır.\n\nGEO (Lokasyon) Uyumlu Reklam Optimizasyonu Neden Kritik?\n\nYapay zekâ destekli reklamcılıkta lokasyon verisi, stratejinin merkezindedir. Kullanıcının bulunduğu şehir, ülke, hatta saat dilimi; reklam mesajının içeriğini ve zamanlamasını doğrudan etkiler.\n\nGEO uyumlu AI reklam optimizasyonu şunları sağlar:\n\nBölgesel teklif stratejileri\n\nYerel dil ve kültüre uygun kreatifler\n\nLokasyona özel kampanya bütçeleri\n\nFiziksel mağaza veya hizmet noktalarına yönlendirme\n\nBu yapı özellikle turizm, e-ticaret, sağlık, gayrimenkul ve yerel hizmet sektörlerinde yüksek geri dönüş sağlar.\n\nYapay Zekâ ile Düşük Maliyet, Yüksek Performans\n\nGeleneksel reklam yönetiminde bütçeler deneme-yanılma ile harcanırken, yapay zekâ destekli sistemler öğrenerek harcar. Düşük performanslı reklamlar otomatik olarak elenir, yüksek dönüşüm sağlayan varyasyonlar ölçeklenir.\n\nSonuç:\n\nDaha düşük edinme maliyeti (CPA)\n\nDaha yüksek reklam harcaması getirisi (ROAS)\n\nDaha az manuel müdahale\n\nDaha hızlı ölçeklenebilir kampanyalar\n\nAI Uyumlu SEO ve Reklam Entegrasyonu\n\nYeni nesil dijital pazarlamada SEO ve reklam birbirinden ayrı değil; entegre çalışan iki ana güçtür. Yapay zekâ, reklam verilerini SEO stratejilerine; SEO verilerini de reklamlara besler. Böylece markalar hem organik hem de ücretli kanallarda tutarlı bir görünürlük elde eder.\n\nAI uyumlu sistemler:\n\nArama niyetine göre içerik ve reklam üretir\n\nKullanıcı sorularına cevap veren landing page'ler oluşturur\n\nAI tabanlı arama motorlarında (SGE) öne çıkmayı destekler\n\nGelecek: Otonom Reklam Sistemleri\n\nYapay zekâ destekli reklamcılık, insan müdahalesinin minimuma indiği otonom sistemlere doğru evriliyor. Yakın gelecekte reklam stratejileri; hedef, bütçe ve marka dili tanımlandıktan sonra tamamen AI tarafından yönetilecek.\n\nBu dönüşüme bugün adapte olan markalar; yarının dijital rekabetinde açık ara önde olacak.",
+          "image": "/join_pr_google_meta_reklam_yapay_zeka.webp",
+          "link": "/google-ve-meta-reklamlari-yapay-zeka-destekli-akilli-reklam-optimizasyonu"
+        },
+        {
+          "title": "Influencer Pazarlama Nedir? Markalar İçin Güven Odaklı Büyüme Modeli",
+          "category": "Influencer Marketing",
+          "description": "Influencer pazarlama; belirli bir topluluk üzerinde etki gücü bulunan içerik üreticileri aracılığıyla markanın mesajını güven temelli bir anlatıyla aktarmayı hedefleyen iletişim modelidir.",
+          "image": "/join_pr_influencer_pazarlama_influencer_marketing.webp",
+          "link": "/influencer-pazarlama-nedir-markalar-icin-guven-odakli-buyume-modeli"
+        },
+        {
+          "title": "Yapay Zekâ ile Sosyal Medya Yönetimi: Markalar İçin Yeni Nesil İletişim Modeli",
+          "category": "Dijital İletişim",
+          "description": "Yapay zekâ destekli sosyal medya yönetimi, içerik üretiminden planlamaya, analizden optimizasyona kadar tüm sürecin veri odaklı ve akıllı sistemlerle desteklenmesidir.",
+          "image": "/join_pr_sosyal_medya_yonetimi_ajans.webp",
+          "link": "/yapay-zeka-ile-sosyal-medya-yonetimi-markalar-icin-yeni-nesil-iletisim-modeli"
+        },
+        {
+          "title": "360 Ajans Nedir? Markalar İçin Bütüncül İletişim ve Büyüme Modeli",
+          "category": "Kurumsal İletişim",
+          "description": "360 ajans modeli, markaların tüm iletişim ve pazarlama faaliyetlerini tek bir stratejik çatı altında toplayan bütüncül bir yaklaşım sunar.",
+          "image": "/join_pr_istanbul_360_ajans_kurumsal_ajans.webp",
+          "link": "/360-ajans-nedir-markalar-icin-butunsel-iletisim-ve-buyume-modeli"
         }
       ]
     },
@@ -1255,17 +1310,17 @@
   "pages": {
     "joinPr": {
       "seo": {
-        "title": "Join PR | Stratejik İletişim ve Destinasyon PR’ı",
-        "description": "Join PR; stratejik iletişim, influencer ilişkileri, küresel pazarlama ve etkinlik deneyimi yönetimi sunar."
+        "title": "Join PR | Stratejik İletişim ve Destinasyon PR'ı",
+        "description": "Join PR, konaklama, havacılık ve turizm sektörlerinde stratejik iletişim, influencer marketing, celebrity iş birlikleri, kurumsal iletişim, marka iletişimi, dijital PR ve destinasyon PR hizmetleri sunan yeni nesil iletişim ajansıdır. Global ölçekte marka konumlandırması, medya ilişkileri ve ölçümlenebilir iletişim çözümleri."
       },
       "hero": {
         "title": "\"We Create Influence That Lasts\"",
-        "subtitle": "Marka konumlandırmadan global destinasyon PR'ına kadar hikayenizi dünyaya taşıyoruz.",
-        "description": "Destinasyonlar, yaşam tarzı ve lüks markalarla içgörü, kültür ve ölçümlenebilir etki üzerine kurulu hikayeler tasarlıyoruz."
+        "subtitle": "Markalar için görünürlüğün ötesinde, kalıcı değer ve itibara dönüşen bir etki inşa ediyoruz.",
+        "description": "Stratejik düşünceyi güçlü anlatılar ve kültürel içgörüyle birleştirerek, markalara uzun vadeli algı gücü kazandırıyoruz."
       },
       "media": {
-        "title": "Deneyimi Stratejiye Dönüştürür",
-        "description": "Join PR ekosisteminin markalar için nasıl ölçülebilir etki yarattığını anlatan kısa videoyu keşfedin.\n\nTurizmde başarı, doğru kurgulanmış bir hikâyeden geçer. Join PR, markaların hedef kitlesiyle duygusal bağ kurmasını sağlayan iletişim stratejilerini oluşturur.",
+        "title": "Deneyimi Stratejiye Dönüştürürüz",
+        "description": "Markalar için yalnızca görünürlük değil; ölçülebilir, stratejik ve sürdürülebilir iletişim etkisi yaratırız.\n\nBaşarılı markalar, doğru içgörüyle kurgulanmış hikâyelerin doğru kanallarda ve doğru zamanda anlatılmasıyla büyür.\n\nBiz, markaların hedef kitleleriyle anlamlı bağlar kurmasını, entegre iletişim stratejileri ve deneyim odaklı projelerle güçlendiririz.",
         "videoId": "al-D_BC5cYc"
       },
       "services": [
@@ -1316,13 +1371,9 @@
         "description": "Markaların dijital dünyadaki görünürlüğünü, itibarını ve etkileşim gücünü artıran stratejik dijital PR çözümleri sunarız. Online medya, sosyal platformlar, içerik üretimi, influencer iş birlikleri ve dijital yayınlar üzerinden markaların hedef kitlesiyle güçlü bağlar kurmasını sağlar; dijitalde konuşulan, paylaşılan ve etki yaratan bir iletişim modeli oluştururuz."
       },
       "influencer": {
-        "title": "Influencer ve celebrity iletişimi",
-        "description": "Seçilmiş yetenek ağlarıyla markaların hedef kitleleriyle aynı dili konuşmasını sağlayan kreatif kampanyalar tasarlıyoruz.",
-        "items": [
-          "Influencer seçimi, sözleşme & proje yönetimi ve Meta Partner Raporlama",
-          "İçerik senaryosu, hashtag, etiket & görünürlük planlaması",
-          "Celebrity iletişimi"
-        ]
+        "title": "Influencer ve Celebrity iletişimi",
+        "description": "Join PR, markaların hedef kitleleriyle aynı dili konuşmasını sağlayan, yaratıcı olduğu kadar veriye dayalı iletişim kampanyaları tasarlar. Türkiye ve global pazarlarda erişim sağladığımız 4,5 milyon içerik üreticisinden oluşan veri havuzu, ajansımıza ait özgün yazılım altyapısı sayesinde kampanya kurgularının ölçeklenebilir ve stratejik biçimde oluşturulmasına imkân tanır. Bu yapı, markaların tekil iş birliklerinin ötesine geçerek aynı anda binlerce içerik üreticisiyle entegre iletişim kurmasını sağlar. Meta, TikTok ve YouTube API entegrasyonlarıyla yürütülen süreçlerde; içerik planlamasından görünürlük stratejilerine, sözleşme ve operasyon yönetiminden raporlamaya kadar tüm aşamalar tahminlere değil, gerçek zamanlı ve doğrulanabilir verilere dayanır.",
+        "items": []
       },
       "cta": {
         "title": "Hikayeni güçlendirmeye hazır mısın?",
@@ -1333,7 +1384,7 @@
     "joinCreative": {
       "seo": {
         "title": "Join Creative | Film, Fotoğraf ve İçerik Stüdyosu",
-        "description": "Join Creative; dijital içerik, reklam filmi, fotoğraf ve marka hikayeleri üretir."
+        "description": "Join Creative, markalar için dijital içerik üretimi, reklam filmleri, komersiyel fotoğrafçılık, AI görsel ve video prodüksiyonu, marka hikayeleri ve kreatif prodüksiyon hizmetleri sunar. Konseptten final kurguya kadar sinematik etki yaratan içerikler."
       },
       "hero": {
         "title": "Sinematik etki yaratan kreatif prodüksiyon.",
@@ -1342,7 +1393,7 @@
       },
       "media": {
         "title": "Join Creative Showreel",
-        "description": "Join Creative prodüksiyon ekibinin destinasyonlar, havayolu markaları ve yaşam tarzı hikayeleri için ürettiği kreatif çalışmalar.",
+        "description": "Join Creative prodüksiyon ekibi, destinasyonlardan havayolu markalarına, yaşam tarzı anlatılarından deneyim odaklı içeriklere uzanan geniş bir yelpazede; markaların hikâyesini görsel güce dönüştüren kreatif projelere imza atar.",
         "videoId": "FLNg5aQb9rk"
       },
       "services": [
@@ -1375,28 +1426,28 @@
         "title": "Foto Galeri",
         "items": [
           {
-            "title": "Rixos Premium Qetaifan Island North",
-            "image": "/creative_page_galery1.jpg"
-          },
-          {
-            "title": "Four Seasons Hotel Bahrain Bay",
-            "image": "/creative_page_galery2.jpg"
-          },
-          {
             "title": "Rixos Radamis Sharm el Sheikh",
-            "image": "/creative_page_galery3.jpg"
+            "image": "/rixos_radamis_join_pr_sharm.webp"
           },
           {
-            "title": "Rixos The Palm Dubai",
-            "image": "/creative_page_galery4.jpg"
+            "title": "Fethiye | Göcek",
+            "image": "/fethiye_gocek_join_pr.webp"
+          },
+          {
+            "title": "Rixos Premium Alamain Hotel",
+            "image": "/rixos_alamain_hotel_egypt_join_pr.webp"
+          },
+          {
+            "title": "B3ANTLP | Fashion",
+            "image": "/b3antlp_fashion.webp"
           },
           {
             "title": "AJet Havayolları",
-            "image": "/creative_page_galery5.jpg"
+            "image": "/ajet_istanbul.webp"
           },
           {
             "title": "Jennifer Lopez Up All Night 2025 Egypt",
-            "image": "/creative_page_galery6.jpg"
+            "image": "/creative_page_galery6.webp"
           }
         ]
       },
@@ -1429,7 +1480,7 @@
             "title": "Video 6"
           },
           {
-            "videoId": "bXMsKFtzq6Q",
+            "videoId": "c4GHm-Fe3bw",
             "title": "Video 7"
           },
           {
@@ -1507,7 +1558,7 @@
         "description": "Join Creative, markaların hikâyesini güçlü bir yaratıcı omurga üzerine inşa eden, dijital çağın hızına uygun üretim gücünü ileri teknolojilerle birleştiren yaratıcı üretim alanımızdır. Strateji, estetik ve teknoloji üçlüsünü aynı noktada buluşturarak markaların ihtiyaç duyduğu bütünsel içerik üretimi ve prodüksiyon süreçlerini tek bir yaratıcı çatı altında toplarız. Dijital içerik üretimi, reklam ve kampanya filmleri, görsel prodüksiyon ve içerik geliştirme, planlama alanlarında; markanın hedef kitlesine doğrudan temas eden, yüksek algı değeri yaratan ve platformlara özel kurgulanmış içerikler sunarız.\n\nYeni dönemde yaratıcı üretimin merkezine yapay zekâyı konumlandıran Join Creative, AI tabanlı görsel ve video prodüksiyon çözümleriyle markalara hız, verimlilik ve sınırsız yaratıcılık sunar. İleri seviye görsel çalışma tekniklerinden hikâye odaklı video kurgularına kadar tüm süreçlerde, markaların iletişim gücünü artıran yenilikçi bir yaklaşım benimseriz. Bu yapı sayesinde hem kampanyaların üretim hızını maksimize eder hem de markalar için özgün, dikkat çekici ve ölçeklenebilir içerik dünyaları yaratırız."
       },
       "cta": {
-        "title": "Bir sonraki kreatif prodüksiyon deneyimini Join x Creative ile yaşa.",
+        "title": "Bir sonraki kreatif prodüksiyon deneyimini Join Creative ile yaşa.",
         "description": "Projeni anlat, sana özel bir prodüksiyon planı hazırlayalım.",
         "button": "Kreatif teklif iste"
       }
@@ -1515,7 +1566,7 @@
     "joinSocial": {
       "seo": {
         "title": "Join Social | Sosyal Medya Stratejisi ve Topluluk Yönetimi",
-        "description": "Join Social; sosyal strateji, içerik takvimi, topluluk yönetimi ve optimizasyon sunar."
+        "description": "Join Social, markalar için AI destekli sosyal medya yönetimi, içerik planlama, topluluk yönetimi, trend analizi, performans raporlama ve optimizasyon hizmetleri sunar. Güvenli dashboard ile tüm platformları tek merkezden yönetin."
       },
       "hero": {
         "title": "Sosyal Medya Yönetimi ve Strateji",
@@ -1579,13 +1630,13 @@
           "Gönderi performansları, trend içerikler, rakip analizi ve büyüme tahminleri",
           "Tutarlı görsel ve metinsel iletişim dili"
         ],
-        "image": "/social_page_media.png"
+        "image": "/social_page_media.webp"
       }
     },
     "joinAds": {
       "seo": {
         "title": "Join Ads | Performans Pazarlaması ve Dijital Reklam",
-        "description": "Join Ads; medya planlama, kampanya optimizasyonu ve performans ölçümü sunar."
+        "description": "Join Ads, Google Ads, Meta Ads (Instagram & Facebook), SEO, medya planlama, kampanya optimizasyonu ve performans ölçümü hizmetleri sunar. ROAS odaklı performans pazarlaması ile dijital büyümeyi hızlandırın."
       },
       "hero": {
         "title": "Dijital Reklam Yönetimi & Performans Pazarlaması",
@@ -1633,7 +1684,7 @@
         ]
       },
       "cta": {
-        "title": "Bir sonraki kampanyanı Join x Ads ile planla.",
+        "title": "Bir sonraki kampanyanı Join Ads ile planla.",
         "description": "Dijital reklam stratejinizi güçlendirelim, büyüme hedeflerinize ulaşmanız için ölçülebilir sonuçlar yaratalım.",
         "button": "Hemen Teklif Al"
       }
@@ -1641,7 +1692,7 @@
     "joinLabAi": {
       "seo": {
         "title": "Join AI Lab | Web Geliştirme ve AI Çözümleri",
-        "description": "Join AI Lab; kurumsal web siteleri, e-ticaret otomasyonları, AI ajanları ve veri entegrasyonları geliştirir."
+        "description": "Join AI Lab, kurumsal web siteleri, e-ticaret otomasyonları, mobil uygulamalar, AI ajanları, chatbot'lar, UI/UX tasarım ve veri entegrasyonları geliştirir. Yapay zeka destekli dijital ürünler ve otomasyon çözümleri."
       },
       "hero": {
         "title": "Tasarım, kod ve yapay zeka",
@@ -1651,6 +1702,27 @@
       "about": {
         "title": "Join AI Lab – Yapay Zeka Destekli Web, Mobil ve Otomasyon Çözümleri",
         "description": "Join AI Lab, markaların dijital dönüşümünü hızlandırmak için yapay zekâ, modern yazılım teknolojileri ve otomasyon platformlarını bir araya getiren yenilikçi bir teknoloji iştirakidir. Web geliştirme, UI/UX tasarım, mobil uygulama geliştirme, AI ajanları, chatbot'lar, veri entegrasyonları ve iş akışı otomasyonlarında uçtan uca çözümler sunuyoruz.\n\nKurumsal şirketlerden e-ticaret markalarına, seyahat acentelerinden sigorta sektörüne kadar geniş bir yelpazede; yüksek performanslı web siteleri, kullanıcı dostu mobil deneyimler ve LLM tabanlı otomasyon sistemleri tasarlıyor, geliştiriyor ve sürekli iyileştiriyoruz.\n\nModern teknoloji stack'i, LLM/API entegrasyonları, n8n otomasyonları, veri ürünleri, CRM entegrasyonları, AI destekli içerik yönetimi, güvenli altyapı ve ölçeklenebilir sistem tasarımı gibi bütünsel çözümlerle işletmelerin iş süreçlerini hızlandırıyor ve dijital operasyonlarını geleceğe hazırlıyoruz."
+      },
+      "portfolio": {
+        "title": "AI destekli Web Siteleri ve Acenta yazılımları",
+        "cards": [
+          {
+            "title": "E Ticaret Altyapıları",
+            "alt": "E-ticaret"
+          },
+          {
+            "title": "Sigorta Acenta Yazılımları",
+            "alt": "Sigorta Acentası"
+          },
+          {
+            "title": "Kurumsal Web Siteler",
+            "alt": "Kurumsal Website"
+          },
+          {
+            "title": "Seyahat Acentası Altyapıları",
+            "alt": "Seyahat Acentası"
+          }
+        ]
       },
       "services": [
         {
@@ -1707,8 +1779,8 @@
     },
     "joinEscapes": {
       "seo": {
-        "title": "Join Escapes | Türkiye’nin En Çok Okunan Seyahat İçerik Platformu",
-        "description": "Join Escapes; seyahat rehberleri, destinasyon hikayeleri, seçilmiş deneyimler ve influencer seyahatleri sunar."
+        "title": "Join Escapes | Türkiye'nin En Çok Okunan Seyahat İçerik Platformu",
+        "description": "Join Escapes, Türkiye'nin en çok okunan yeni nesil seyahat içerik platformudur. Destinasyon rehberleri, seyahat hikayeleri, editoryal içerikler, influencer seyahatleri ve deneyim odaklı yolculuk anlatıları."
       },
       "hero": {
         "title": "Türkiye'nin en çok okunan yeni nesil seyahat içerik platformu.",
@@ -1726,19 +1798,19 @@
             {
               "title": "Laucala Island, Fiji – Ünlülerin Tropik Cenneti",
               "description": "Fiji'nin en özel adalarından Laucala Island, Red Bull'un kurucusuna ait ultra lüks bir tatil destinasyonu...",
-              "image": "/öne çıkan 1.webp",
+              "image": "/one_cikan_1.webp",
               "link": "https://www.joinescapes.com/sanat-ve-cemiyet/destinasyon/celebrity/laucala-island-fiji-unlulerin-tropik-cenneti"
             },
             {
               "title": "Havana, Küba Kültür Turu – Karayiplerin Renkli Kalbi",
               "description": "Kolonyal mimarisi, renkli sokakları ve salsa ritimleriyle Havana, 2025'te Karayiplerin en cazip şehirlerinden biri. İşte detaylı Havana gezi rehberi...",
-              "image": "/öne_çıkan_2.webp",
+              "image": "/one_cikan_2.webp",
               "link": "https://www.joinescapes.com/sehir-molalari/kultur-ve-miras/sehirmolalari/havana-kuba-kultur-turu-karayiplerin-renkli-kalbi-"
             },
             {
               "title": "Türkiye'den Ucuza Uçulabilecek Yurt Dışı Rotalar: Yeni Maceralara Ekonomik Kaçışlar",
               "description": "Uçak biletlerinin ateş pahası olduğu dönemlerde bile yurt dışı hayallerinden vazgeçmek zorunda değilsin...",
-              "image": "/öne_çıkan_3.png",
+              "image": "/one_cikan_3.webp",
               "link": "https://www.joinescapes.com/seyahat-rehberi/turkiyeden-ucuza-uculabilecek-yurt-disi-rotalar-yeni-maceralara-ekonomik-kacislar"
             }
           ]
@@ -1762,12 +1834,101 @@
         "description": "Rehber koleksiyonlarını, editoryal hikayeleri ve iş birliği fırsatlarını incele.",
         "button": "Join Escapes’i ziyaret et"
       }
+    },
+    "services": {
+      "seo": {
+        "title": "Hizmetlerimiz | Join PR",
+        "description": "Join PR'un sunduğu tüm hizmetleri keşfedin: Stratejik iletişim (Join PR), kreatif prodüksiyon (Join Creative), sosyal medya yönetimi (Join Social), performans pazarlaması (Join Ads) ve AI çözümleri (Join Lab AI)."
+      },
+      "hero": {
+        "title": "Hizmetlerimiz",
+        "description": "Join PR'un yeni nesil iletişim, yaratıcılık, sosyal medya, reklam ve AI çözümleri."
+      },
+      "services": [
+        {
+          "title": "Join PR",
+          "slug": "join-pr",
+          "description": "Stratejik iletişim, influencer ilişkileri ve küresel destinasyon PR'ı.",
+          "image": "/pr_page_banner_.webp"
+        },
+        {
+          "title": "Join Creative",
+          "slug": "join-creative",
+          "description": "Dijital içerik, reklam filmi prodüksiyonu ve cesur kreatif konseptler.",
+          "image": "/creative_banner.webp"
+        },
+        {
+          "title": "Join Social",
+          "slug": "join-social",
+          "description": "Sosyal medya stratejisi, sürekli içerik ve topluluk yönetimi.",
+          "image": "/social_page_banner.webp"
+        },
+        {
+          "title": "Join Ads",
+          "slug": "join-ads",
+          "description": "Performans pazarlaması ve çapraz platform kampanya optimizasyonu.",
+          "image": "/ads_page_banner.webp"
+        },
+        {
+          "title": "Join AI Lab",
+          "slug": "join-lab-ai",
+          "description": "Geleceğe hazır markalar için web, AI ve otomasyon ürünleri.",
+          "image": "/ai_web_banner.webp"
+        }
+      ]
+    },
+    "about": {
+      "seo": {
+        "title": "Hakkımızda | Join PR",
+        "description": "Join PR, konaklama, havacılık, turizm ve yaşam markalarına odaklanan yeni nesil iletişim ajansıdır. Strateji, yaratıcılık ve veriye dayalı 360° iletişim modeliyle markaların hikâyelerini deneyime, deneyimleri kalıcı etkiye dönüştürüyoruz."
+      },
+      "hero": {
+        "title": "Biz kimiz?",
+        "subtitle": "Join PR, iletişimi yalnızca yönetmekle kalmayan; markaların hikâyelerini deneyime, deneyimleri kalıcı bir etkiye dönüştüren yeni nesil bir iletişim ajansıdır."
+      },
+      "content": {
+        "paragraph1": "Konaklama, havacılık, turizm tanıtma ofisleri ve yaşam markalarına odaklanan yapısıyla sektörel uzmanlığını global deneyimle buluşturur. Strateji, yaratıcılık ve veriye dayalı 360° iletişim modeliyle markaların sadece görünürlüğünü değil, algısını yönetir.",
+        "paragraph2": "Her markaya bir \"müşteri\" değil, bir iş ortağı gibi yaklaşır; hedeflerini kendi hedefi olarak sahiplenir. Amacımız yalnızca iletişim kurmak değil — markaları global ölçekte hatırlanan, tercih edilen ve iz bırakan bir güce dönüştürmektir."
+      }
+    },
+    "medyaYansimaRaporu": {
+      "seo": {
+        "title": "Medya Yansıma Raporu | Join PR",
+        "description": "Join PR medya yansıma ve basın takip raporları. PR performansı, basın kapsamı ve medya görünürlüğü özeti."
+      },
+      "hero": {
+        "title": "Medya Yansıma Raporu",
+        "subtitle": "Basın ve medyadaki yansımalarımızın özeti."
+      }
+    },
+    "isbirliklerimiz": {
+      "seo": {
+        "title": "İşbirliklerimiz | Join PR",
+        "description": "Join PR olarak konaklama, havacılık, turizm ve yaşam tarzı markalarıyla gerçekleştirdiğimiz başarılı projeler ve iş birlikleri."
+      },
+      "ajet": {
+        "seo": {
+          "title": "AJet İş Birliği | Influencer Kampanyası Raporu | Join PR",
+          "description": "AJet ile influencer iş birliği kampanyası sonuçları: 65 katılımcı, 20M+ görüntülenme, $1.3M EMV. AAA destinasyonlar kampanyası performans raporu."
+        }
+      },
+      "rixosEgypt": {
+        "seo": {
+          "title": "Rixos Egypt İş Birliği | Influencer Kampanyası | Join PR",
+          "description": "Rixos Egypt Hotels ile influencer iş birliği kampanyası: katılımcı sayısı, etkileşim ve EMV performans sonuçları. Join PR iş birlikleri raporu."
+        }
+      },
+      "hero": {
+        "title": "İşbirliklerimiz",
+        "subtitle": "Birlikte büyüdüğümüz markalar"
+      },
+      "intro": "Join PR olarak konaklama, havacılık, turizm ve yaşam tarzı markalarıyla gerçekleştirdiğimiz başarılı projeler ve iş birlikleri."
     }
   },
   "contact": {
     "seo": {
-      "title": "Join PR Group ile iletişime geç",
-      "description": "Join PR Group ile iletişim, kreatif, sosyal medya, reklam, AI veya seyahat projeleri için bağlantı kurun."
+      "title": "İletişim | Join PR",
+      "description": "Join PR ile iletişime geçin. PR, kreatif prodüksiyon, sosyal medya, dijital reklam, AI çözümleri veya seyahat projeleri için bizimle iletişime geçin. 24 saat içinde dönüş yapıyoruz."
     },
     "hero": {
       "title": "Birlikte fark yaratalım.",
@@ -1793,6 +1954,7 @@
       "Join Lab AI",
       "Join Escapes",
       "Diğer"
-    ]
+    ],
+    "location": "Konumumuz"
   }
 }

@@ -5,25 +5,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
+import { HeroPreload } from '@/components/HeroPreload';
 import { HeroSlider } from '@/components/HeroSlider';
 import { useLanguage } from '@/context/LanguageContext';
+import { mergeAdminAndStaticNewsCards } from '@/lib/merge-news-cards';
+import { hrefForNewsCard } from '@/lib/news-href';
+import { getNewsApiUrl, resolveNewsImageSrc } from '@/lib/news-api';
 import tr from '@/locales/tr.json';
 
-const BASE_PATH = process.env.NODE_ENV === 'production' ? '/join-pr' : '';
-
-const slugify = (text: string) =>
-  text
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/ı/g, 'i')
-    .replace(/ğ/g, 'g')
-    .replace(/ü/g, 'u')
-    .replace(/ş/g, 's')
-    .replace(/ö/g, 'o')
-    .replace(/ç/g, 'c')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '');
+const BASE_PATH = ''; // Root dizin - joinpr.com.tr
 
 const UNIT_ROUTES: Record<string, string> = {
   joinPr: '/join-pr',
@@ -35,7 +25,7 @@ const UNIT_ROUTES: Record<string, string> = {
 };
 
 export function HomeView() {
-  const { translations } = useLanguage();
+  const { translations, locale } = useLanguage();
 
   const ecosystem = translations.homepage.ecosystem;
   const projects = translations.homepage.projects;
@@ -50,7 +40,11 @@ export function HomeView() {
   // TR dosyasından haberleri al (slug oluşturmak için)
   const trCases = (tr.homepage?.cases?.cards || []) as Array<{ title: string; category: string; description: string; image?: string }>;
   const clients = translations.homepage.clients;
-  const clientLogos = clients.logos as Array<{ name: string; image: string }>;
+  // Ana sayfada sadece "Markalarımız" için Prontotour logosunu kaldır (diğer sayfaları etkileme).
+  const visibleClientLogos = (clients.logos as Array<{ name: string; image: string }>).filter((logo) => {
+    const name = (logo.name || '').toLowerCase();
+    return !name.includes('prontotour') && !name.includes('pronto tour');
+  });
   const promoSlides = useMemo(
     () =>
       (promo.slides as Array<{
@@ -67,11 +61,39 @@ export function HomeView() {
     [promo],
   );
   const [activePromoIndex, setActivePromoIndex] = useState(0);
-  
+  const [adminNewsCards, setAdminNewsCards] = useState<
+    Array<{ title: string; slug: string; description: string; image?: string | null }>
+  >([]);
+
+  useEffect(() => {
+    let alive = true;
+    (async () => {
+      try {
+        const res = await fetch(getNewsApiUrl(''));
+        const data = await res.json();
+        if (!res.ok) return;
+        const mapped = ((data.items || []) as any[]).map((item) => ({
+          title: locale === 'en' ? (item.title_en || item.title) : item.title,
+          slug: item.slug,
+          description: locale === 'en' ? (item.description_en || item.description) : item.description,
+          image: item.image,
+        }));
+        if (alive) setAdminNewsCards(mapped);
+      } catch {
+        /* yalnizca json haberleri */
+      }
+    })();
+    return () => {
+      alive = false;
+    };
+  }, [locale]);
+
+  const mergedHomeNews = useMemo(
+    () => mergeAdminAndStaticNewsCards(adminNewsCards, caseItems, trCases),
+    [adminNewsCards, caseItems, trCases]
+  );
+
   // Marquee drag/swipe state
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [prevScrollPosition, setPrevScrollPosition] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
   const [showAllLogos, setShowAllLogos] = useState(false);
@@ -90,56 +112,68 @@ export function HomeView() {
     setActivePromoIndex(0);
   }, [promoSlides.length]);
 
-  const slugify = (text: string) =>
-    text
-      .toLowerCase()
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .replace(/ı/g, 'i')
-      .replace(/ğ/g, 'g')
-      .replace(/ü/g, 'u')
-      .replace(/ş/g, 's')
-      .replace(/ö/g, 'o')
-      .replace(/ç/g, 'c')
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-+|-+$/g, '');
-
-  // Auto-scroll effect
+  // Auto-scroll effect (her yerde çalışır - Safari uyumlu)
   useEffect(() => {
-    if (!containerRef.current || isHovered || isDragging) return;
+    if (!containerRef.current || isHovered) return;
     
-    const container = containerRef.current;
     const scrollSpeed = 1; // pixels per frame
-    let animationFrameId: number;
+    let animationFrameId: number | undefined;
     let lastTimestamp = 0;
+    let isRunning = true;
     
     const animate = (timestamp: number) => {
+      const container = containerRef.current;
+      if (!isRunning || !container || isHovered) {
+        animationFrameId = undefined;
+        return;
+      }
+      
       if (!lastTimestamp) lastTimestamp = timestamp;
       const deltaTime = timestamp - lastTimestamp;
       
       if (deltaTime >= 16) { // ~60fps
-        if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
-          // Başa dön
-          container.scrollLeft = 0;
-        } else {
-          container.scrollLeft += scrollSpeed;
+        const maxScroll = container.scrollWidth - container.clientWidth;
+        
+        // Container hazır değilse bekle
+        if (maxScroll > 0) {
+          if (container.scrollLeft >= maxScroll - 1) {
+            // Başa dön
+            container.scrollLeft = 0;
+          } else {
+            // Sola doğru ak
+            container.scrollLeft += scrollSpeed;
+          }
+          lastTimestamp = timestamp;
         }
-        lastTimestamp = timestamp;
       }
       
-      if (!isHovered && !isDragging) {
+      if (!isHovered && isRunning) {
         animationFrameId = requestAnimationFrame(animate);
       }
     };
     
-    animationFrameId = requestAnimationFrame(animate);
+    // Container'ın hazır olmasını bekle
+    const checkAndStart = () => {
+      const container = containerRef.current;
+      if (container && container.scrollWidth > container.clientWidth && !animationFrameId) {
+        animationFrameId = requestAnimationFrame(animate);
+      }
+    };
+    
+    // Hemen kontrol et
+    checkAndStart();
+    
+    // Kısa bir gecikme ile tekrar dene (container henüz hazır olmayabilir)
+    const timeoutId = setTimeout(checkAndStart, 200);
     
     return () => {
+      isRunning = false;
+      clearTimeout(timeoutId);
       if (animationFrameId) {
         cancelAnimationFrame(animationFrameId);
       }
     };
-  }, [isHovered, isDragging]);
+  }, [isHovered]);
 
   // Scroll handlers
   const scrollLeft = () => {
@@ -154,51 +188,37 @@ export function HomeView() {
     containerRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
   };
 
-  // Touch handlers for mobile
-  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
-    if (!containerRef.current) return;
-    setIsDragging(true);
-    setStartX(e.touches[0].clientX);
-    setPrevScrollPosition(containerRef.current.scrollLeft);
-  };
-
-  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
-    if (!isDragging || !containerRef.current) return;
-    const currentX = e.touches[0].clientX;
-    const diff = startX - currentX;
-    containerRef.current.scrollLeft = prevScrollPosition + diff;
-  };
-
-  const handleTouchEnd = () => {
-    setIsDragging(false);
-  };
+  // Touch handlers removed - using native scroll on mobile
 
   return (
     <div className="flex flex-col gap-16 lg:gap-20">
-      <div className="relative lg:left-1/2 lg:w-screen lg:-translate-x-1/2">
+      <HeroPreload />
+      <div className="relative w-full">
         <HeroSlider />
       </div>
 
-      <section className="relative rounded-3xl border border-white/5 bg-white px-4 py-10 text-slate-900 shadow-xl shadow-black/30 sm:px-6 sm:py-12 lg:left-1/2 lg:w-screen lg:-translate-x-1/2 lg:px-16">
-        <div className="grid gap-8 lg:grid-cols-2 lg:gap-10">
-          <div className="space-y-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-lg shadow-slate-200/60 sm:p-8">
+      <section className="relative rounded-3xl border border-white/5 bg-white px-4 py-10 text-slate-900 shadow-xl shadow-black/30 sm:px-6 sm:py-12 lg:px-16">
+        <div className="space-y-8">
+          <div className="space-y-3">
             <span className="text-xs font-semibold uppercase tracking-[0.4em] text-teal-500">{about.title}</span>
-            <div className="space-y-4">
-              <h2 className="text-[1.9rem] font-semibold leading-tight text-slate-900 md:text-[2.6rem]">{about.subtitle}</h2>
-              <p className="text-base text-slate-600 md:text-lg">{about.description}</p>
-            </div>
+            <h2 className="max-w-4xl text-xl font-semibold leading-tight text-slate-900 sm:text-2xl md:text-3xl">{about.subtitle}</h2>
           </div>
-          <div className="flex items-center justify-center">
-            <div className="w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-900/5 shadow-lg shadow-slate-200/60">
-              <div className="relative w-full pt-[56.25%]">
-                <iframe
-                  className="absolute inset-0 h-full w-full rounded-2xl"
-                  src="https://www.youtube.com/embed/yKVqZNb5p-s"
-                  title="Jennifer Lopez - Join PR video"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  loading="lazy"
-                />
+          <div className="grid gap-8 lg:grid-cols-2 lg:gap-10">
+            <div className="flex items-center">
+              <p className="text-sm leading-relaxed text-slate-600 sm:text-base">{about.description}</p>
+            </div>
+            <div className="flex items-center justify-center">
+              <div className="w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-900/5 shadow-lg shadow-slate-200/60">
+                <div className="relative w-full pt-[56.25%]">
+                  <iframe
+                    className="absolute inset-0 h-full w-full rounded-2xl"
+                    src="https://www.youtube.com/embed/yKVqZNb5p-s"
+                    title="Jennifer Lopez - Join PR video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -244,8 +264,10 @@ export function HomeView() {
             )}
           </div>
 
-          <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
-          {Object.entries(projects.items).map(([key, value]: [string, any]) => {
+          <div className="grid gap-5 sm:gap-6 md:grid-cols-3 lg:grid-cols-3">
+          {Object.entries(projects.items)
+            .filter(([key]) => key !== 'montenegro')
+            .map(([key, value]: [string, any]) => {
             // İlk alt projeyi al (varsa), yoksa ana projeyi kullan
             const firstSubProject = value.subProjects?.[0] || value;
             const totalParticipants = value.subProjects
@@ -273,25 +295,25 @@ export function HomeView() {
                     </div>
                   )}
                 </div>
-                <div className="p-3 space-y-2">
-                  <h3 className="text-base font-semibold text-white line-clamp-1">{value.title}</h3>
-                  <p className="text-xs text-zinc-400 line-clamp-2">{value.description}</p>
+                <div className="p-4 md:p-5 space-y-3">
+                  <h3 className="text-lg md:text-xl font-semibold text-white line-clamp-1">{value.title}</h3>
+                  <p className="text-sm md:text-base text-zinc-400 line-clamp-2">{value.description}</p>
                   <div className="flex items-center gap-2 pt-1">
                     <div className="flex -space-x-1">
                       {firstSubProject.participants?.slice(0, 2).map((participant: any, idx: number) => (
                         <div
                           key={idx}
-                          className="h-6 w-6 rounded-full border-2 border-zinc-950 bg-gradient-to-br from-teal-400 to-blue-500 flex items-center justify-center text-[10px] font-semibold text-white"
+                          className="h-7 w-7 md:h-8 md:w-8 rounded-full border-2 border-zinc-950 bg-gradient-to-br from-teal-400 to-blue-500 flex items-center justify-center text-xs md:text-sm font-semibold text-white"
                         >
                           {participant.name.charAt(0)}
                         </div>
                       ))}
                     </div>
-                    <span className="text-[10px] text-zinc-500">
+                    <span className="text-xs md:text-sm text-zinc-500">
                       {totalParticipants} {translations.common.project.participants}
                     </span>
                   </div>
-                  <div className="mt-2 inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-[0.25em] text-teal-200">
+                  <div className="mt-2 inline-flex items-center gap-1 text-xs md:text-sm font-semibold uppercase tracking-[0.25em] text-teal-200">
                     {translations.common.cta.viewDetails}
                     <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
                   </div>
@@ -303,8 +325,51 @@ export function HomeView() {
         </div>
       </section>
 
+      {/* İş Birliklerimiz banner */}
+      <section className="relative overflow-hidden rounded-3xl border border-white/10 px-6 py-[60px] shadow-2xl shadow-black/35 sm:px-8 sm:py-[68px]">
+        {/* Background layers */}
+        <div
+          className="absolute inset-0 z-0 bg-cover bg-center"
+          style={{ backgroundImage: 'url(/isbirliklerimiz_banner.webp)' }}
+          aria-hidden="true"
+        />
+        <div
+          className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.12),_transparent_55%)]"
+          aria-hidden="true"
+        />
+
+        {/* Content */}
+        <div className="relative z-10 mx-auto w-full max-w-6xl">
+          <div className="max-w-3xl space-y-3">
+            <h3 className="text-2xl font-semibold text-white md:text-3xl">
+              {locale === 'en' ? 'Our Collaborations' : 'İş Birliklerimiz'}
+            </h3>
+            <p className="text-sm text-zinc-300 md:text-base">
+              {locale === 'en' ? (
+                'Explore our partnerships and collaborations across hospitality, travel, aviation, and lifestyle.'
+              ) : (
+                <>
+                  Konaklama, turizm, havacılık ve lifestyle alanlarında
+                  <br />
+                  geçekleştirdiğimiz marka iş birliklerimizi keşfedin.
+                </>
+              )}
+            </p>
+          </div>
+
+          <div className="mt-6">
+            <Link
+              href="/is-birliklerimiz"
+              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-teal-500 via-sky-500 to-blue-600 px-7 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-white shadow-lg shadow-sky-500/25 transition-all hover:-translate-y-0.5 hover:shadow-sky-500/40"
+            >
+              {locale === 'en' ? 'View' : 'Görüntüle'}
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {promoSlides.length > 0 && (
-        <section className="relative overflow-hidden bg-white px-4 py-12 text-slate-900 shadow-2xl shadow-black/40 sm:px-6 lg:left-1/2 lg:w-screen lg:-translate-x-1/2 lg:px-16 lg:py-14">
+        <section className="relative overflow-hidden rounded-3xl bg-white px-4 py-12 text-slate-900 shadow-2xl shadow-black/40 sm:px-6 lg:px-16 lg:py-14">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(14,165,233,0.12),_transparent_55%)]" />
           <div className="relative mx-auto max-w-6xl">
             <div className="relative min-h-[620px] sm:min-h-[560px] lg:min-h-[600px]">
@@ -318,9 +383,6 @@ export function HomeView() {
                     }`}
                   >
                     <div className="relative z-10 max-w-2xl space-y-6">
-                      <span className="inline-flex items-center gap-2 rounded-full bg-slate-900/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">
-                        {slide.badge}
-                      </span>
                       <h2 className="text-4xl font-semibold text-slate-900 md:text-5xl">{slide.title}</h2>
                       <p className="text-base text-slate-600 md:text-lg">{slide.description}</p>
                       <ul className="grid gap-3 text-sm text-slate-600 md:text-base">
@@ -338,14 +400,14 @@ export function HomeView() {
                       </ul>
                   <div className="flex flex-col gap-4">
                     <Link
-                      href="/contact"
+                      href="/iletisim"
                       className="inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-white shadow-lg shadow-slate-900/40 transition-transform hover:-translate-y-1"
                     >
                       {slide.primaryCta}
                     </Link>
                     <div className="flex items-center gap-3">
                       <Link
-                        href="/contact"
+                        href="/iletisim"
                         className="inline-flex flex-1 items-center justify-center rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-slate-700 shadow-lg shadow-slate-200/40 transition-transform hover:-translate-y-1 hover:border-slate-400"
                       >
                         {slide.secondaryCta}
@@ -407,7 +469,7 @@ export function HomeView() {
         </section>
       )}
 
-      <section className="relative space-y-10 py-12 lg:left-1/2 lg:w-screen lg:-translate-x-1/2">
+      <section className="relative space-y-10 py-12">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 sm:px-6">
           <h2 className="text-3xl font-semibold text-white md:text-4xl">{cases.title}</h2>
           {cases.description && (
@@ -451,43 +513,47 @@ export function HomeView() {
               scrollBehavior: 'smooth',
               WebkitOverflowScrolling: 'touch',
             }}
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}
           >
-            {caseItems.map((card, index) => {
-              // Her zaman TR başlığından slug oluştur (aynı index'teki TR haberini kullan)
-              const trCard = trCases[index];
-              const slug = trCard ? slugify(trCard.title) : slugify(card.title);
-              // "Türk Oyuncular Mısır'ın en ünlü tatil merkezinde buluştu" haberi için direkt external link
-              const isSpecialNews = slug === 'turk-oyuncular-misirin-en-unlu-tatil-merkezinde-bulustu';
-              const href = isSpecialNews 
-                ? 'https://www.iha.com.tr/haber-turk-oyuncular-misirin-en-unlu-tatil-merkezinde-bulustu-1141810'
-                : `/haber/${slug}`;
-              
+            {mergedHomeNews.map((card, index) => {
+              const slug = card.__source === 'admin' ? card.slug : card.__slug;
+              const isSpecialNews =
+                card.__source === 'static' &&
+                slug === 'turk-oyuncular-misirin-en-unlu-tatil-merkezinde-bulustu';
+              const href = hrefForNewsCard(
+                card.__source === 'admin' ? 'admin' : 'static',
+                slug,
+                isSpecialNews
+                  ? {
+                      externalSpecialUrl:
+                        'https://www.iha.com.tr/haber-turk-oyuncular-misirin-en-unlu-tatil-merkezinde-bulustu-1141810',
+                    }
+                  : undefined
+              );
+              const imgSrc = resolveNewsImageSrc(card.image, BASE_PATH);
+
               return (
                 <Link
-                key={`${card.title}-${index}`}
+                  key={`${card.__source}-${slug}-${index}`}
                   href={href}
                   {...(isSpecialNews ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                className="group flex w-[320px] flex-shrink-0 flex-col justify-between rounded-3xl border border-white/10 bg-zinc-950/70 p-6 shadow-lg shadow-black/40 transition-transform duration-300 hover:-translate-y-1 hover:border-teal-500/40"
-              >
-                <div className="space-y-4">
-                  {card.image && (
-                    <div className="overflow-hidden rounded-2xl">
-                      <Image
-                        src={`${BASE_PATH}${card.image}`}
-                        alt={card.title}
-                        width={320}
-                        height={180}
-                        unoptimized
-                        className="h-36 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                    </div>
-                  )}
-                  <h3 className="text-xl font-semibold text-white">{card.title}</h3>
-                  <p className="text-sm text-zinc-400">{card.description}</p>
-                </div>
+                  className="group flex w-[320px] flex-shrink-0 flex-col justify-between rounded-3xl border border-white/10 bg-zinc-950/70 p-6 shadow-lg shadow-black/40 transition-transform duration-300 hover:-translate-y-1 hover:border-teal-500/40"
+                >
+                  <div className="space-y-4">
+                    {imgSrc ? (
+                      <div className="overflow-hidden rounded-2xl">
+                        <Image
+                          src={imgSrc}
+                          alt={card.title}
+                          width={320}
+                          height={180}
+                          unoptimized
+                          className="h-36 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      </div>
+                    ) : null}
+                    <h3 className="text-xl font-semibold text-white">{card.title}</h3>
+                    <p className="text-sm text-zinc-400">{card.description}</p>
+                  </div>
                 </Link>
               );
             })}
@@ -496,16 +562,23 @@ export function HomeView() {
       </section>
 
       <section className="mx-auto mt-0 flex w-full max-w-6xl flex-col gap-8 rounded-3xl border border-white/10 bg-zinc-950/70 px-6 py-12 text-center shadow-xl shadow-black/30 sm:mt-16 sm:px-8">
-        <div className="space-y-3">
+        <div>
           <h2 className="text-3xl font-semibold text-white md:text-4xl">{clients.title}</h2>
-          {clients.description && (
-          <p className="mx-auto max-w-3xl text-sm text-zinc-400 md:text-base">{clients.description}</p>
-          )}
         </div>
         <div className="grid gap-6 grid-cols-2 sm:grid-cols-3 xl:grid-cols-4">
-          {(showAllLogos ? clientLogos : clientLogos.slice(0, 8)).map((logo) => {
+          {(showAllLogos ? visibleClientLogos : visibleClientLogos.slice(0, 8)).map((logo) => {
             const isDarkLogo =
               logo.name.toLowerCase().includes('club privé') || logo.name.toLowerCase().includes('club prive');
+            const isRixosSharmElSheikh =
+              logo.image?.toLowerCase().includes('rixos_sharm_el_sheikh') ?? false;
+            const isProntotour = logo.name.toLowerCase().includes('prontotour') || logo.name.toLowerCase().includes('pronto tour');
+            const imgSize = isRixosSharmElSheikh
+              ? 'h-28 w-28 sm:h-32 sm:w-32'
+              : isProntotour
+                ? 'h-28 w-28 sm:h-32 sm:w-32'
+                : isDarkLogo
+                  ? 'h-24 w-24 sm:h-28 sm:w-28'
+                  : 'h-20 w-20 sm:h-24 sm:w-24';
             return (
             <div
               key={logo.name}
@@ -516,9 +589,7 @@ export function HomeView() {
               <img
                 src={`${BASE_PATH}${logo.image}`}
                 alt={logo.name}
-                  className={`object-contain transition-all duration-300 group-hover:scale-105 ${
-                    isDarkLogo ? 'h-24 w-24 sm:h-28 sm:w-28' : 'h-20 w-20 sm:h-24 sm:w-24'
-                  }`}
+                className={`object-contain transition-all duration-300 group-hover:scale-105 ${imgSize} ${isRixosSharmElSheikh ? 'scale-150' : ''} ${isProntotour ? 'scale-[1.35]' : ''}`}
                 loading="lazy"
               />
               <span className="pointer-events-none absolute inset-0 rounded-full border border-white/5 opacity-0 transition-opacity group-hover:opacity-100" />
@@ -527,7 +598,7 @@ export function HomeView() {
           })}
         </div>
         <div className="flex justify-center gap-4">
-          {clientLogos.length > 8 && (
+          {visibleClientLogos.length > 8 && (
             <button
               onClick={() => setShowAllLogos(!showAllLogos)}
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-teal-500 to-blue-600 px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-white shadow-lg shadow-teal-500/30 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-teal-500/50"
@@ -536,7 +607,7 @@ export function HomeView() {
             </button>
           )}
           <Link
-            href="/isortaklarimiz"
+            href="/is-ortaklarimiz"
             className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-white transition-all hover:border-white/40 hover:bg-white/5"
           >
             {clients.viewAll}

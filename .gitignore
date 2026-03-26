@@ -13,6 +13,9 @@
 /.next/
 /out/
 
+# cPanel statik build script ara klasoru (yarım kalan build kalintilari)
+/.cpanel-build-stash/
+
 # production
 /build
 
@@ -26,7 +29,11 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
+.env
 .env*.local
+
+# PHP mail config (contains password)
+public/mail-config.php
 
 # vercel
 .vercel

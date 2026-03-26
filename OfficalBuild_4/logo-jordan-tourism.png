@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84751344-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-84751344-2');
+        gtag('config', 'AW-957019942');
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'analytics_storage': 'denied'
+        });
+    </script>
+    <!-- Event snippet for JTB - new branding conversion page -->
+	<script type="text/javascript">
+		var _ttq = _ttq || [];
+		_ttq.push(['_setAccount', '30000698']);      // Mandatory parameter, fixed
+		_ttq.push(['_setDataSource', 'av']);      // Mandatory parameter, fixed
+		_ttq.push(['_setProduct', '16']);      // Mandatory parameter, fixed
+		_ttq.push(['_setLevel', '1']);      // Mandatory parameter, fixed
+		_ttq.push(['_setLanguage', 'en']);      // Mandatory parameter, dynamic, current language (2 characters, ISO 639-1) e.g. _ttq.push(['_setLanguage', 'en'])
+		_ttq.push(['_track']);
+		(function(){
+		var ttr = document.createElement('script'); ttr.type = 'text/javascript';
+		ttr.src = ('https:' == document.location.protocol ? 'https://' : 'http://')
+		+ 'ads.travelaudience.com/js/ta.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ttr, s);
+		})();
+	</script>
+	<script type="text/javascript">
+		var _ttq = _ttq || [];
+		_ttq.push(['_setAccount', '30000698']);      // Mandatory parameter, fixed
+		_ttq.push(['_setDataSource', 'av']);      // Mandatory parameter, fixed
+		_ttq.push(['_setProduct', '16']);      // Mandatory parameter, fixed
+		_ttq.push(['_setLevel', '2']);      // Mandatory parameter, fixed
+		_ttq.push(['_setLanguage', 'en']);      // Mandatory parameter, dynamic, current language (2 characters, ISO 639-1) e.g. _ttq.push(['_setLanguage', 'en'])
+		_ttq.push(['_track']);
+		(function(){
+		var ttr = document.createElement('script'); ttr.type = 'text/javascript';
+		ttr.src = ('https:' == document.location.protocol ? 'https://' : 'http://')
+		+ 'ads.travelaudience.com/js/ta.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ttr, s);
+		})();
+	</script>
+    <script>gtag('event', 'conversion', { 'send_to': 'AW-957019942/ySkHCMjtl4gDEKbuq8gD' });</script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <meta charset="utf-8">
+    <title>Visit Jordan: The Official Tourism Website</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
+    
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0" />
+    
+    <script type="text/javascript" src="/Scripts/client/html5.js"></script>
+    <!-- ALL CSS -->
+    <link rel="stylesheet" type="text/css" href="/content/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/content/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/content/css/aos.css">
+    <link rel="stylesheet" type="text/css" href="/content/css/flexslider.css">
+    <link rel="stylesheet" type="text/css" href="/content/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/content/css/site.css">
+    <link rel="stylesheet" type="text/css" href="/content/css/media.css">
+    <link rel="stylesheet" type="text/css" href="/content/css/media3.css">
+    
+    <!-- ALL SCRIPT -->
+    <script type="text/javascript" src="/Scripts/client/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="/Scripts/client/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="/Scripts/client/owl.carousel.js"></script>
+    <script src="/Scripts/client/waypoints.min.js"></script>
+    <script type="text/javascript" src="/Scripts/client/all-style.js"></script>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1070596636839216');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=1070596636839216&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+<body>
+    <!-- START HEADER PART -->
+<header>
+    <div class="container">
+        <div class="topheader">
+            <div class="d-md-flex justify-content-between">
+                <div class="msgcol">
+                    <p>The official site of the Jordan Tourism Board</p>
+                </div>
+                <form class="d-lg-flex">
+                    <div class="fieldscol">
+                        <div class="d-lg-flex justify-content-center align-items-center">
+                            <div class="fieldcol fieldcol1">
+                                <label>Our Websites</label>
+                                <button class="btn custfield dropdown-toggle " type="button" id="dropopt1" data-toggle="dropdown" aria-expanded="false">visitjordan.com</button>
+                                <ul class="dropdown-menu" aria-labelledby="dropopt1">
+                                    <li><a class="dropdown-item" href="https://edutravel.visitjordan.com/en" target="_blank">Educational Travel</a></li>
+                                    <li><a class="dropdown-item" href="https://businessevents.visitjordan.com/en" target="_blank">Jordan Convention Bureau</a></li>
+                                    <li><a class="dropdown-item" href="https://calendar.jo/" target="_blank">Calendar.jo</a></li>
+                                    <li><a class="dropdown-item" href="https://holylandjordan.com/en" target="_blank">Jordan Holy Land</a></li>
+                                    <li><a class="dropdown-item" href="https://museums.visitjordan.com/en" target="_blank">Jordan Museums</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr class="full-width-hr" />
+    <div class="container">
+        <a href="/">
+            <div class="logo float-left">
+                <object data="/Content/images/logo.svg" id="logo-svg"> </object>
+            </div>
+        </a>
+        <div id="mobilemenu"></div>
+        <nav class="custnav float-left">
+            <ul class="menus">
+                <li class="ddl">
+                    <a href="/page/2/General-Information">GENERAL INFORMATION</a>
+                    <span class="msubmenu"></span>
+                    <div class="submenus submenus1">
+                        <div class="col-md-3 col-sm-6 col-xs-12 menubox">
+                            <div class="col-xs-12 topimg">
+                                <h3 class="menutitle"><a href="/page/3/Jordan-at-a-Glance">Jordan at a Glance</a></h3>
+                                <div class="imgpart">
+                                    <a href="/page/3/Jordan-at-a-Glance"><img src="/content/images/menu-img1.jpg" alt="" /></a>
+                                </div>
+
+                            </div>
+                            <div class="col-xs-12 mlinks">
+                                <ul>
+                                    <li><a href="/page/10/Current-Government">Current Government</a></li>
+                                    <li><a href="/page/12/Jordans-History">Jordan's History</a></li>
+                                    <li><a href="/page/8/The-Royal-Family">The Royal Family</a></li>
+                                    <li><a href="/page/36/About-the-Jordan-Tourism-Board">About the Jordan Tourism Board</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12 menubox">
+                            <div class="col-xs-12 topimg">
+                                <h3 class="menutitle"><a href="/page/5/gettingaround">Getting Around</a></h3>
+                                <div class="imgpart">
+                                    <a href="/page/5/Getting-Around"><img src="/content/images/menu-img2.jpg" alt="" /></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 mlinks">
+                                <ul>
+                                    <li><a href="/page/19/Getting-Around">Ground Transport</a></li>
+                                    <li><a href="/page/20/railroad">Railroad</a></li>
+                                    <li><a href="/page/27/Air-Transport">Air Transport</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12 menubox">
+                            <div class="col-xs-12 topimg">
+                                <h3 class="menutitle"><a href="/page/16/Just-The-Facts">Just the Facts</a></h3>
+                                <div class="imgpart">
+                                    <a href="/page/16/Just-The-Facts"><img src="/content/images/menu-img3.jpg" alt="" /></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 mlinks">
+                                <ul>
+                                    <li><a href="/page/17/Entrance-Fees">Entrance Fees</a></li>
+                                    <li><a href="https://moi.gov.jo/EN/Pages/Restricted_and_Non_Restricted_Countries_Nationalities" target="_blank">Visas & Points of Entry</a></li>
+                                    <li><a href="/page/21/Border-Crossing">Border Crossing</a></li>
+                                    <li><a href="/page/23/Airports">Airports</a></li>
+                                    <li><a href="/page/22/Ports">Ports</a></li>
+                                    <li><a href="/page/18/Embassies">Embassies</a></li>
+                                    <li><a href="/page/37/Hospitals">Hospitals</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12 menubox">
+                            <div class="col-xs-12 topimg">
+                                <h3 class="menutitle"><a href="/page/9/Values-Tradition">Values & Tradition</a></h3>
+                                <div class="imgpart">
+                                    <a href="/page/9/Values-Tradition"><img src="/content/images/menu-img4.jpg" alt="" /></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 mlinks">
+                                <ul>
+                                    <li><a href="/page/11/Local-Customs">Local Customs</a></li>
+                                    <li><a href="/page/13/Feasting-in-Jordan">Feasting in Jordan</a></li>
+                                    <li><a href="/page/14/Religion">Religion</a></li>
+                                    <li><a href="/page/15/Ramadan">Ramadan</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="/Discover">Discover</a></li>
+                <li class="ddl">
+                    <a href="/What-to-do">EXPERIENCES</a>
+                    <span class="msubmenu"></span>
+                    <div class="submenus experiencesmenu">
+                        <div class="col-md-4 col-sm-6 col-xs-12 expbox">
+                            <a href="/whattodo/eco-adventures" class="innerbox">
+                                <img src="/content/images/exp-img1.jpg" alt="" />
+                                
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 expbox">
+                            <a href="/whattodo/Religion-Faith" class="innerbox">
+                                <img src="/content/images/exp-img2.jpg" alt="" />
+                                
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 expbox">
+                            <a href="/whattodo/Leisure-Wellness" class="innerbox">
+                                <img src="/content/images/exp-img3.jpg" alt="" />
+                                
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 expbox">
+                            <a href="/whattodo/History-Culture" class="innerbox">
+                                <img src="/content/images/exp-img4.jpg" alt="" />
+                                
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 expbox">
+                            <a href="/whattodo/Meaningful-Trips" class="innerbox">
+                                <img src="/content/images/exp-img5.jpg" alt="" />
+                                
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 expbox">
+                            <a href="/whattodo/Conferences-Events" class="innerbox">
+                                <img src="/content/images/exp-img6.jpg" alt="" />
+                                
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="ddl">
+                    <a href="/Where-to-go" ">ATTRACTIONS</a>
+                    <span class="msubmenu"></span>
+                    <div class="submenus submenus1 discovermenu">
+                        <div class="col-md-3 col-sm-6 col-xs-12 menubox">
+                            <div class="col-xs-12 topimg">
+                                <h3 class="menutitle"><a href="/Wheretogo/Amman">Amman</a></h3>
+                                <div class="imgpart">
+                                    <a href="/Wheretogo/Amman"><img src="/Content/images/attractions/amman.jpg" alt="" /></a>
+                                </div>
+
+                            </div>
+                            <div class="col-xs-12 clinks">
+                                <ul>
+                                    <li><a href="/Wheretogo/Zarqa"><img src="/Content/images/attractions/Zarqa.jpg">Zarqa</a></li>
+                                    <li><a href="/Wheretogo/Madaba"><img src="/Content/images/attractions/madaba.jpg">Madaba</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12 menubox">
+                            <div class="col-xs-12 topimg">
+                                <h3 class="menutitle"><a href="/Wheretogo/Petra">Petra</a></h3>
+                                <div class="imgpart">
+                                    <a href="/Wheretogo/Petra"><img src="/Content/images/attractions/Petra.jpg" alt="" /></a>
+                                </div>
+
+                            </div>
+                            <div class="col-xs-12 clinks">
+                                <ul>
+                                    <li><a href="/Wheretogo/Kerak"><img src="/Content/images/attractions/Karak.jpg">Karak</a></li>
+                                    <li><a href="/Wheretogo/Jerash"><img src="/Content/images/attractions/Jerash.jpg">Jerash</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12 menubox">
+                            <div class="col-xs-12 topimg">
+                                <h3 class="menutitle"><a href="/Wheretogo/The-Dead-Sea">Dead Sea</a></h3>
+                                <div class="imgpart">
+                                    <a href="/Wheretogo/The-Dead-Sea"><img src="/Content/images/attractions/dead-sea.jpg" alt="" /></a>
+                                </div>
+
+                            </div>
+                            <div class="col-xs-12 clinks">
+                                <ul>
+                                    <li><a href="/Wheretogo/Ajloun"><img src="/Content/images/attractions/Ajlun.jpg">Ajloun</a></li>
+                                    <li><a href="/Wheretogo/Umm-Qais"><img src="/Content/images/attractions/Umm-Qais.jpg">Umm Qais</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12 menubox">
+                            <div class="col-xs-12 topimg">
+                                <h3 class="menutitle"><a href="/Wheretogo/Wadi-Rum">Wadi Rum</a></h3>
+                                <div class="imgpart">
+                                    <a href="/Wheretogo/Wadi-Rum"><img src="/Content/images/attractions/Wadi-Rum.jpg" alt="" /></a>
+                                </div>
+
+                            </div>
+                            <div class="col-xs-12 clinks">
+                                <ul>
+                                    <li><a href="/Wheretogo/Aqaba"><img src="/Content/images/attractions/Aqaba.jpg">Aqaba</a></li>
+                                    <li><a href="/Where-to-go" class="dis-all">Discover All Cities</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </li>
+                <li class="ddl">
+                    <a href="#">HOTELS & TOURS</a>
+                    <span class="msubmenu"></span>
+                    <div class="submenus submenus2 visitormenu">
+                        <div class="col-md-4 col-sm-6 col-xs-12 menubox">
+                            <div class="col-xs-12 topimg">
+                                <h3 class="menutitle"><a href="/page/34/Hotels">Hotels</a></h3>
+                                <div class="imgpart">
+                                    <a href="/page/34/Hotels"><img src="/content/images/hotel-img.jpg" alt="" /></a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 menubox">
+                            <div class="col-xs-12 topimg">
+                                <h3 class="menutitle"><a href="/page/26/Tour-Operators">Tour Operators</a></h3>
+                                <div class="imgpart">
+                                    <a href="/page/26/Tour-Operators"><img src="/content/images/tour-operators-img.jpg" alt="" /></a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 menubox">
+                            <div class="col-xs-12 topimg">
+                                <h3 class="menutitle"><a href="/page/13/Feasting-in-Jordan">Food In Jordan</a></h3>
+                                <div class="imgpart">
+                                    <a href="/page/13/Feasting-in-Jordan"><img src="/content/images/food-img.jpg" alt="" /></a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </li>
+                <li class="ddl">
+                    <a href="/mediaCenter">MEDIA CENTER</a>
+                    <span class="msubmenu"></span>
+                    <div class="submenus submenus2 visitormenu">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 col-xs-12 menubox">
+                                <div class="col-xs-12 topimg">
+                                    <h3 class="menutitle"><a href="/MediaCenter/News">News</a></h3>
+                                    <div class="imgpart">
+                                        <a href="/MediaCenter/News"><img src="/content/images/news-img.jpg" alt="" /></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12 menubox">
+                                <div class="col-xs-12 topimg">
+                                    <h3 class="menutitle"><a href="/MediaCenter/Articles">Articles</a></h3>
+                                    <div class="imgpart">
+                                        <a href="/MediaCenter/Articles"><img src="/content/images/articles-img.jpg" alt="" /></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12 menubox">
+                                <div class="col-xs-12 topimg">
+                                    <h3 class="menutitle"><a href="/page/25/Contact-Us">Contact Us</a></h3>
+                                    <div class="imgpart">
+                                        <a href="/page/25/Contact-Us"><img src="/content/images/contact-img.jpg" alt="" /></a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12 menubox">
+                                <div class="col-xs-12 topimg">
+                                    <h3 class="menutitle"><a href="http://media.visitjordan.com/">Gallery</a></h3>
+                                    <div class="imgpart">
+                                        <a href="http://media.visitjordan.com/"><img src="/content/images/gallery-img.jpg" alt="" /></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="/Blog">BLOG</a></li>
+            </ul>
+        </nav>
+        <div class="dropdown language float-right">
+                <button class="lanbtn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="https://international.visitjordan.com">International</a>
+                <a class="dropdown-item" href="https://www.myjordanjourney.com/" target="_blank">English - North America</a>
+                
+                <a class="dropdown-item" href="https://ar.visitjordan.com">عربي</a>
+                <a class="dropdown-item" href="https://de.visitjordan.com">Deutsch</a>
+                <a class="dropdown-item" href="https://fr.visitjordan.com">Français</a>
+                <a class="dropdown-item" href="https://sp.visitjordan.com">Español</a>
+                <a class="dropdown-item" href="https://it.visitjordan.com">Italiano</a>
+                <a class="dropdown-item" href="https://jp.visitjordan.com">日本語</a>
+                <a class="dropdown-item" href="http://ru.visitjordan.com">Русский</a>
+
+                <!--<a class="dropdown-item" href="https://www.visitajordania.com/" target="_blank">Mexico</a>-->
+                
+            </div>
+        </div>
+        <div class="dropdown websites float-right" id="websitesBtn">
+           
+            <button class="webbtn dropdown-toggle" type="button" id="dropdownMenuButtonWebsites" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+            
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonWebsites">
+                <a class="dropdown-item" href="https://edutravel.visitjordan.com/en" target="_blank">Educational Travel</a>
+                <a class="dropdown-item" href="https://businessevents.visitjordan.com/en" target="_blank">Jordan Convention Bureau</a>
+                <a class="dropdown-item" href="https://calendar.jo/" target="_blank">Calendar.jo</a>
+                <a class="dropdown-item" href="https://holylandjordan.com/en" target="_blank">Jordan Holy Land</a>
+                <a class="dropdown-item" href="https://museums.visitjordan.com/en" target="_blank">Jordan Museums</a>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- END HEADER PART -->
+    
+
+
+
+
+
+
+<section class="mainbanner">
+    <div class="container">
+        <div class="biglogo text-center animated zoomIn"><img src="/Content/images/big-Logo.png" alt="" /></div>
+        <div class="texts text-center animated fadeIn">
+            <h3>kingdom of time</h3>
+        </div>
+    </div>
+</section>
+<section class="explore">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-4 ctitle">
+                <h3>explore</h3>
+                <p>
+                    Jordan is a country of hikers and historians, scientists and artists, foodies and yoga-fiends. Whatever your tribe, you’ll find a kindred spirit here.
+                </p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 expbox">
+                <div class="innerbox">
+                    <div class="imgbox"><img src="/Content/images/ex-img1.jpg" alt="" /></div>
+                    <div class="texts bgcolor1 text-center">
+                        <div class="details">
+                            <span>
+                                Jordan museums
+                            </span>
+                            <h4>
+                                every moment, a treasure.
+                            </h4>
+                            <p>
+                                Explore a wide range of museums throughout the kingdom presenting the history and cultural heritage of Jordan.
+                            </p>
+                            <a href="https://museums.visitjordan.com/" class="expnow" target="_blank">EXPLORE NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 expbox">
+                <div class="innerbox">
+                    <div class="imgbox"><img src="/Content/images/ex-img2.jpg" alt="" /></div>
+                    <div class="texts bgcolor2 text-center">
+                        <div class="details">
+                            <span>
+                                Jordan pass
+                            </span>
+                            <h4>
+                                carved by millennia. braved by you.
+                            </h4>
+                            <p>
+                                The Jordan pass is the ultimate sightseeing package that has been especially tailor-made for visitors to the country.
+                            </p>
+                            <a href="https://jordanpass.jo/" class="expnow" target="_blank">EXPLORE NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 expbox">
+                <div class="innerbox">
+                    <div class="imgbox"><img src="/Content/images/ex-img3.jpg" alt="" /></div>
+                    <div class="texts bgcolor3 text-center">
+                        <div class="details">
+                            <span>
+                                Jordan Trail
+                            </span>
+                            <h4>
+                                hike history. touch time.
+                            </h4>
+                            <p>
+                                a long-distance hiking trail in Jordan connecting the length of Jordan from Um Qais in the north to Aqaba in the south.
+                            </p>
+                            <a href="https://jordantrail.org/" class="expnow" target="_blank">EXPLORE NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 expbox">
+                <div class="innerbox">
+                    <div class="imgbox"><img src="/Content/images/ex-img4.jpg" alt="" /></div>
+                    <div class="texts bgcolor4 text-center">
+                        <div class="details">
+                            <span>
+                                Journey through 1916
+                            </span>
+                            <h4>
+                                find your tribe.
+                            </h4>
+                            <p>
+                                A great collection of working steam locomotives, formerly used as part of a pilgrimage route and an intrinsic part of the Great Arab Revolt.
+                            </p>
+                            <a href="https://jhrc.jo/" class="expnow" target="_blank">EXPLORE NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 expbox">
+                <div class="innerbox">
+                    <div class="imgbox"><img src="/Content/images/ex-img5.jpg" alt="" /></div>
+                    <div class="texts bgcolor5 text-center">
+                        <div class="details">
+                            <span>
+                                Downtown Amman
+                            </span>
+                            <h4>
+                                in the footsteps of myths and men.
+                            </h4>
+                            <p>
+                                One of the most lively and authentic parts of Amman consisting of fascinating historical sites of the Roman Theatre and Citadel.
+                            </p>
+                            <a href="/Wheretogo/Amman?tabId=138&experienceId=3#at" class="expnow">EXPLORE NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 expbox">
+                <div class="innerbox">
+                    <div class="imgbox"><img src="/Content/images/ex-img6.jpg" alt="" /></div>
+                    <div class="texts bgcolor6 text-center">
+                        <div class="details">
+                            <span>
+                                Dead Sea
+                            </span>
+                            <h4>
+                                life at your own pace.
+                            </h4>
+                            <p>
+                                The lowest point on earth and a natural wonder, is a warm, soothing, super salty water surrounded be desert beaches, mineral spas and oases.
+                            </p>
+                            <a href="/Wheretogo/The-Dead-Sea" class="expnow">EXPLORE NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 text-center mt-5">
+                <a href="/Discover" class="bbtn">Discover more</a>
+            </div>
+            <!--<div class="col-12 text-center ctitle museumsbanner">
+                <a href="https://museums.visitjordan.com/" target="_blank">
+                    <img src="~/Content/images/jtb-museums-banner.png">
+                </a>
+            </div>-->
+            <div class="col-12 text-center ctitle unbanner">
+                <a href="https://international.visitjordan.com/Unesco" target="_blank">
+                    <img src="/Content/images/UNESCO-banner.png" id="UNweb">
+                    <img src="/Content/images/UNESCO-banner-mobile.png" id="UNmob">
+                </a>
+</div>
+            
+        </div>
+    </div>
+</section>
+<section class="toursect commonslider">
+    <div id="tourslider" class="owl-carousel">
+	<div class="item">
+            <div class="imgpart">
+                <img src="/Content/images/brighttrip.jpg" alt="" />
+            </div>
+            <div class="slidetexts">
+                <div class="innerpart">
+                    <h5>Local Recommendations</h5>
+                    <h4>Your tour to Jordan via Bright Trip</h4>
+                    <p>
+                        Everything you need to know to take your trip to the next level. In this free guide, you will learn how to travel Jordan with confidence and discover the best places to visit.
+                    </p>
+                    <a href="https://www.brighttrip.com/guides/jordan" class="bbtn" target="_blank">Discover more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="imgpart">
+                <img src="/Content/images/bethany-img.jpg" alt="" />
+            </div>
+            <div class="slidetexts">
+                <div class="innerpart">
+                    <h5>Local Recommendations</h5>
+                    <h4>Experiencing Bethany Beyond the Jordan</h4>
+                    <p>
+                        Bethany Beyond the Jordan, a peaceful holy site, is a rare exception. A meditative place that is perfect for contemplation, exploration, and learning, this place is a hidden gem in the Holy Land. Read on to learn what it’s like to visit it today!
+                    </p>
+                    <a href="/Blog/12" class="bbtn">Discover more</a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="imgpart">
+                <img src="/Content/images/dead-sea-img.jpg" alt="" />
+            </div>
+            <div class="slidetexts">
+                <div class="innerpart">
+                    <h5>Local Recommendations</h5>
+                    <h4>
+                        The Dead Sea Serenity & Sunshine
+                    </h4>
+                    <p>
+                        Time to unwind! If you’re looking to get pampered in a way unlike any other, then the Dead Sea is the spot for you. With a wide array of extravagant hotels and resorts, choosing to get your dose of relaxation here comes with its benefits.
+                    </p>
+                    <a href="/Blog/15" class="bbtn">Discover more</a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="imgpart">
+                <img src="/Content/images/aqaba-img2.jpg" alt="" />
+            </div>
+            <div class="slidetexts">
+                <div class="innerpart">
+                    <h5>Local Recommendations</h5>
+                    <h4>72 Hours in Aqaba</h4>
+                    <p>
+                        When you think of Jordan, desert landscapes and age-old cities likely come to mind. Lesser known is this country’s southernmost resort town, where the red-brown mountains are cut off by a startlingly blue sea.
+                    </p>
+                    <a href="/Blog/11" class="bbtn">Discover more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="counter"></div>
+</section>
+<section class="essentials">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center ctitle">
+                <h3>essentials</h3>
+                <p>
+                    plan your trip now to experience the vibrancy of contrasts that is Jordan
+
+                </p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 text-center essentbox esbox1">
+                <a href="https://jordanpass.jo/" class="essentinner" target="_blank">
+                    <div class="eicons eicon1"></div>
+                    <p>The Jordan Pass</p>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 text-center essentbox esbox2">
+                <a href="https://www.messenger.com/t/VisitJordanBot" class="essentinner" target="_blank">
+                    <div class="eicons eicon2"></div>
+                    <p>Virtual Travel Assistant</p>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 text-center essentbox esbox3">
+                <a href="/page/33/Brochures" class="essentinner">
+                    <div class="eicons eicon3"></div>
+                    <p>Brochures</p>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 text-center essentbox esbox4">
+                <a href="/page/5/Getting-Around" class="essentinner">
+                    <div class="eicons eicon4"></div>
+                    <p>Getting Around</p>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center ctitle unbanner">
+                <a href="https://international.visitjordan.com/page/40/told-stories" target="_blank">
+                    <img src="/Content/images/told-stories-banner2.png" id="UNweb">
+                    <img src="/Content/images/told-stories-banner-mobile.png" id="UNmob">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="socialwall">
+    <div class="container">
+
+        <div class="col-12 text-center ctitle">
+            <h3>social wall</h3>
+            <p>See what other travelers are doing in Jordan right now and if you use #VisitJordan <br /> on your social media posts you might see yourself up here too!</p>
+        </div>
+        <script id="cr-init__0307d435870a36a6" src="https://starling.crowdriff.com/js/crowdriff.js" async></script>
+        <!--<div class="col-12 text-center ctitle rjbanner">
+            <a href="https://rj.com/" target="_blank">
+                <img src="~/Content/images/rj-banner.png">
+            </a>
+        </div>-->
+
+    </div>
+</section>
+
+<section class="essentials2">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-12 col-md-6 col-lg-4 text-center essentbox2">
+                <a href="https://calendar.jo/" class="essentinner2" target="_blank">
+                    <div class="eicons eicon2"></div>
+                    <p>Calendar.jo</p>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 text-center essentbox2">
+                <a href="https://museums.visitjordan.com/" class="essentinner2" target="_blank">
+                    <div class="eicons eicon3"></div>
+                    <p>Jordan museums</p>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 text-center essentbox2" >
+                <a href="https://www.rj.com/" class="essentinner2" target="_blank">
+                    <div class="eicons eicon4"></div>
+                    <p>Royal Jordanian</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+	<div id="root"></div><script type="text/javascript" src="https://bot.labibabot.com/static/js/bundle_new.js" id="labibaWebChat" cdn="https://bot.labibabot.com" storyId="b61a5429-d260-42d5-af36-f5585734a1a6" baseURL="https://bot.labibabot.com"  ></script>
+    <section class="bannersect">
+    <div class="banner">
+        <img src="/Content/images/banner1.jpg" class="img-fluid" alt="" />
+    </div>
+    <div class="banner">
+        <img src="/Content/images/banner2.jpg" class="img-fluid" alt="" />
+    </div>
+</section>
+<!-- START FOOTER PART -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-sm-4 col-xl-2 fcol fcol1">
+                <h4>Why Jordan</h4>
+                <ul>
+                    <li><a href="/page/3/Jordan-at-a-Glance">Jordan at a Glance</a></li>
+                    <li><a href="/page/5/Getting-Around">Getting Around</a></li>
+                    <li><a href="/page/16/Just-The-Facts">Just the Facts</a></li>
+                    <li><a href="/page/9/Values-Tradition">Values & Tradition</a></li>
+                    <li><a href="https://moi.gov.jo/EN/Pages/Visa_E_Applications" target="_blank">E-Visa</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-sm-4 col-xl-2 fcol fcol2">
+                <h4>ATTRACTIONS</h4>
+                <ul>
+                    <li><a href="/Wheretogo/Wadi-Rum">Wadi Rum </a></li>
+                    <li><a href="/Wheretogo/The-Dead-Sea">Dead Sea</a></li>
+                    <li><a href="/Wheretogo/Petra">Petra</a></li>
+                    <li><a href="/Wheretogo/Amman">Amman</a></li>
+                    <li><a href="/Wheretogo/Jerash">Jerash</a></li>
+                    <li><a href="/Where-to-go">+ More</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-sm-4 col-xl-2 fcol fcol3">
+                <h4>Experiences</h4>
+                <ul>
+                    <li><a href="/whattodo/Meaningful-Trips"> Meaningful Trips </a></li>
+                    <li><a href="/whattodo/History-Culture">History & Culture</a></li>
+                    <li><a href="/whattodo/Eco-Adventure">Eco & Adventure</a></li>
+                    <li><a href="/whattodo/Leisure-Wellness">Leisure & Wellness</a></li>
+                    <li><a href="/whattodo/Religion-Faith">Religion & Faith</a></li>
+                    <li><a href="/whattodo/Conferences-Events">Conferences & Events</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-sm-4 col-xl-2 fcol fcol4">
+                <h4>Hotels & Tours</h4>
+                <ul>
+                    <li><a href="/page/26/Tour-Operators">Tour Operators</a></li>
+                    <li><a href="/Wheretogo/Petra#at">Petra Hotels</a></li>
+                    <li><a href="/Wheretogo/The-Dead-Sea#at">Dead Sea Hotels</a></li>
+                    <li><a href="/Wheretogo/Aqaba#at">Aqaba Hotels</a></li>
+                    <li><a href="/Wheretogo/Irbid#at">Irbid Hotels</a></li>
+                    <li><a href="/page/13/Feasting-in-Jordan">  Food in Jordan</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-sm-4 col-xl-2 fcol fcol5">
+                <h4>Media Center</h4>
+                <ul>
+                    <li><a href="/MediaCenter/News">News</a></li>
+                    <li><a href="/MediaCenter/Articles">Articles</a></li>
+                    <li><a href="/page/25/contactus">Contact Us</a></li>
+                    <li><a href="http://media.visitjordan.com/" target="_blank">Gallery</a></li>
+                </ul>
+            </div>
+           
+            <div class="col-12 copyright">
+                <div class="copyinner">
+                    <p class="float-left">The official site of the Jordan Tourism Board © 2025. All rights reserved.</p>
+                    <div class="socials float-right">
+                        <a href="https://www.facebook.com/VisitJordan" class="fb"></a>
+                        <a href="https://twitter.com/VisitJordan" class="tw"></a>
+                        <a href="https://www.youtube.com/user/visitjordan" class="yt"></a>
+                        <a href="https://www.instagram.com/visitjordan/?hl=en" class="inst"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- END FOOTER PART -->
+
+    <div class="cookie-consent-banner" id="cookie_consent_banner" style="display:none;">
+        <div class="cookie-consent-banner-inner">
+            <div class="cookie-consent-banner-copy">
+                <div class="cookie-consent-banner-header">Cookies and Data Protection</div>
+                <div class="cookie-consent-banner-description">
+                    We value your privacy and want to ensure you have the best experience on our site. To enhance your visit, we use cookies and similar technologies. By clicking "Accept," you agree to our use of these technologies.
+                </div>
+            </div>
+
+            <div class="cookie-consent-banner__actions">
+                <button onclick="consentGrantedAdStorage()" class="cookie-consent-button btn">
+                    Accept
+                </button>
+
+                <button onclick="declineCookies()" class="cookie-consent-button-secondary btn">
+                    Reject
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            debugger;
+            const cookieValue = document.cookie.split("; ").find((row) => row.startsWith("cookieConsent="))?.split("=")[1];
+            if (typeof cookieValue == "undefined") {
+                document.getElementById("cookie_consent_banner").style.display = "initial";
+            }
+        });
+
+        function consentGrantedAdStorage() {
+            debugger;
+            gtag('consent', 'update', {
+                'ad_storage': 'granted',
+                'ad_user_data': 'granted',
+                'ad_personalization': 'granted',
+                'analytics_storage': 'granted'
+            });
+            document.getElementById("cookie_consent_banner").style.display = "none";
+            // Set a cookie to remember the consent
+            document.cookie =
+                "cookieConsent=true; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+        }
+
+        function declineCookies() {
+            gtag('consent', 'update', {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied'
+            });
+            document.getElementById("cookie_consent_banner").style.display = "none";
+            // Set a cookie to remember the decline
+            document.cookie =
+                "cookieConsent=false; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+        }
+    </script>
+    <script type="text/javascript" src="/Scripts/client/aos.js"></script>
+    <script type="text/javascript">var switchTo5x = false;</script>
+    
+    
+
+
+    <script>
+        AOS.init({
+            easing: 'ease-in-out-sine'
+        });
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+			const popupShown = sessionStorage.getItem('popupShown');
+			if (!popupShown) {
+				$.fancybox.open($('#fancy_content'));
+				sessionStorage.setItem('popupShown', 'true');
+
+			}
+			
+            //if (!$.cookie('HomeVisited')) {
+            //    $.cookie("HomeVisited", "1");
+            //    $.fancybox.open($('#fancy_content'));
+            //}
+        });
+    </script>
+
+
+
+</body>
+</html>

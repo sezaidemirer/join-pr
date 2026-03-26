@@ -1,0 +1,13 @@
+# joinpr.com.tr statik site: build'de olmayan /haber/{slug} adresleri icin
+# ayni URL korunarak /haber/detay/ kabugu sunulur (Apache mod_rewrite gerekir).
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # detay klasorunu tekrar yazdirma
+  RewriteRule ^haber/(?!detay(?:$|/))([^/]+)/?$ /haber/detay/index.html [L]
+</IfModule>

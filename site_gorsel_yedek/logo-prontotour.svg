@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="prv2 no-js height-full" lang="tr-TR" data-project="prontotour">
+<head><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" /><link href="/Content/css/css-PR.css" media="screen, print" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="https://www.prontotour.com/Content/ico/prontoTour/favicon.ico"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.prontotour.com/Content/ico/prontoTour/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://www.prontotour.com/Content/ico/prontoTour/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://www.prontotour.com/Content/ico/prontoTour/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="https://www.prontotour.com/Content/ico/prontoTour/apple-touch-icon-57-precomposed.png"/>
+
+    <link href="https://plus.google.com/+prontotur" rel="publisher" /><meta name="application-name" content="PRONTO TOUR" /><meta name="msapplication-TileColor" content="#004488" /><meta name="msapplication-TileImage" content="/ico/windows8.png" />
+        
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NGXBZT2');</script>
+    
+
+    <script src="https://www.prontotour.com/Content/js/compat/modernizr.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://www.prontotour.com/Content/js/compat/html5shiv.js"></script>
+    <script src="https://www.prontotour.com/Content/js/compat/respond.min.js"></script>
+    <script src="https://www.prontotour.com/Content/js/compat/rem.min.js"></script>
+    <![endif]-->
+    <title>
+	SAYFA BULUNAMADI - ProntoTour
+</title><meta name="description" content="Prontotour büyüdükçe Dünya küçülüyor! Prontotour&#39;un minimum fiyatlı maksimum eğlenceli yurtiçi ve yurtdışı turları sizi bekliyor!" /><meta http-equiv="refresh" content="10; URL=http://www.prontotour.com" /></head>
+<body class="height-full radial">
+    
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGXBZT2" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+    </noscript>
+    
+    <form name="form1" method="post" action="./logo.svg?404%3bhttps%3a%2f%2fwww.prontotour.com%3a443%2fthemes%2fprontotour%2fassets%2fimages%2flogo.svg" id="form1" class="height-full">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="8PteHYjJxy/4xzEwrN2wT8aJMdmF9TOUf/fjfLx3Dfx0pQmGhd/Ii76m+/CvtS2j5GCfextJMkGnKx8pmwKrG9EQnlGf6RX3kAs/0mW7VRCy4cPpAGgin1tCmpvd1PTv" />
+</div>
+
+    <main class="container theme-dark bg-none txt-xs-center fnz-xs height-full">
+        <a href="/" class="tbl-xs txt-inherit">
+            <div class="tbl-xs-cell">
+                <p class="cnt-xs-3"><img src="https://www.prontotour.com/Content/img/logo.png" alt="PRONTOTOUR | 444 91 92"></p>
+                <p class="h2">SİTEMİZDE BÖYLE BİR SAYFA<br>BULUNAMADI</p>
+                <p>Anasayfaya dönmek için <strong class="txt-white">tıklayın</strong></p>
+            </div>
+        </a>
+    </main>
+    
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D13A0A9D" />
+</div></form>
+</body>
+</html>

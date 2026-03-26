@@ -1,0 +1,18 @@
+# Join PR Site - Site /join-pr/ klasöründeyse ROOT .htaccess
+# Bu dosya site root'una (public_html) koyulur
+
+RewriteEngine On
+
+# HTTPS zorunlu
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Root'tan /join-pr/ altına yönlendirme
+# (Static dosyalar /join-pr/ içinde)
+RewriteCond %{REQUEST_URI} !^/join-pr/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /join-pr/$1 [L]
+
+# 404 - Next.js export /404/index.html kullanır
+ErrorDocument 404 /join-pr/404/

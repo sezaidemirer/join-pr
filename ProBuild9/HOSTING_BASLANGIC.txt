@@ -1,0 +1,39 @@
+Join PR Site — ProBuild9 (üretim paketi)
+========================================
+Oluşturma: Next.js 14.2.5 `npm run build` çıktısı + tam kaynak.
+
+SUNUCUDA NODE.JS İLE ÇALIŞTIRMA (önerilen)
+------------------------------------------
+Bu site API route’ları ve dinamik sayfalar içerir; statik HTML export yerine Node ile çalıştırılmalıdır.
+
+1) ProBuild9 klasörünü sunucuya yükleyin (FTP/SFTP/rsync).
+2) Sunucuda Node 18+ kurulu olsun.
+3) Klasörde:
+   npm ci --omit=dev
+4) Ortam değişkenleri: kökteki .env.example dosyasını referans alarak sunucuda .env oluşturun (asla repoya .env koymayın).
+5) Başlatma:
+   npm run start
+   Varsayılan port: 3000. Reverse proxy (Nginx/Apache) ile 443’ten buraya yönlendirin.
+
+PM2 örneği:
+   npm ci --omit=dev
+   npx pm2 start npm --name "joinpr" -- start
+
+YENİDEN DERLEME (sunucuda)
+--------------------------
+Kaynak (src) bu pakette olduğu için sunucuda:
+   npm ci
+   npm run build
+   npm run start
+
+İÇERİK ÖZETİ
+------------
+- src/           Uygulama kaynağı
+- public/        Statik dosyalar
+- .next/         Üretim build çıktısı (önceden derlenmiş)
+- package.json   Bağımlılıklar
+- next.config.mjs, middleware.ts, tsconfig.json
+
+Not: node_modules bu pakette yok; sunucuda `npm ci --omit=dev` ile oluşturulur.
+
+Apache .htaccess örnekleri: .htaccess_joinpr ve .htaccess_root (bu pakette).

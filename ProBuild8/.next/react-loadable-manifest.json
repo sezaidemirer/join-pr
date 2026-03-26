@@ -1,0 +1,11 @@
+{
+  "app/medya-yansima-raporu/[brand]/[project]/MedyaYansimaRaporuProjectClient.tsx -> @/components/views/MedyaYansimaRaporuView": {
+    "id": 2698,
+    "files": [
+      "static/chunks/8173-5c3953b147db30c5.js",
+      "static/chunks/9235-f266920c1b5fcb89.js",
+      "static/chunks/6127-76f9123a7119a697.js",
+      "static/chunks/2698-8d25af46d52379d0.js"
+    ]
+  }
+}

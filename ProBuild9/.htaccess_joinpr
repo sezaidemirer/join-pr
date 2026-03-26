@@ -1,0 +1,10 @@
+# Bu dosyayı /join-pr/ klasörünün içine .htaccess olarak koyun
+# (Static build çıktısı bu klasörde)
+
+RewriteEngine On
+DirectoryIndex index.html
+
+# Mevcut dosya/klasör varsa dokunma
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]

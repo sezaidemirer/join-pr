@@ -1,11 +1,15 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === 'production';
+const staticExport = process.env.STATIC_EXPORT === '1';
 
 const nextConfig = {
-  output: isProd ? 'export' : undefined, // Sadece production'da static export
-  basePath: isProd ? '/join-pr' : '', // Development'ta basePath yok
+  ...(staticExport ? { output: 'export' } : {}),
+  basePath: '', // Root dizin - joinpr.com.tr için
   images: {
-    unoptimized: true,
+    unoptimized: staticExport,
+    remotePatterns: [
+      { protocol: 'https', hostname: 'images.unsplash.com', pathname: '/**' },
+      { protocol: 'https', hostname: '*.supabase.co', pathname: '/**' },
+    ],
   },
   trailingSlash: true,
   webpack: (config) => {

@@ -1,0 +1,23 @@
+# Vercel CLI yuklemesi ~100 MB sinirina takilmasin diye
+
+# Sunucuda yeniden uretilir / gereksiz
+node_modules
+.next
+out
+
+# Yerel yedekler ve gecici klasorler
+.cpanel-build-stash
+.venv
+.git
+ProBuild7
+ProBuild8
+ProBuild9
+OfficalBuild_4
+site_gorsel_yedek
+
+# public tek basina ~340 MB; asagidakiler ~245 MB. Bunlar olmadan deploy sinirin altina iner.
+# UYARI: Vercel buildinde /ajet-content ve /rixos-content URL'leri olmaz; Ajet/Rixos is birligi
+# sayfalarindaki bu klasordeki gorseller kirilir. Kalici cozum: bu dosyalari CDN'e tasimak veya sikistirmak.
+# Bu iki satiri # yaparsan tekrar 100 MB hatasi alirsin (CLI ile).
+public/ajet-content
+public/rixos-content

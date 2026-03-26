@@ -12,6 +12,7 @@ export default function AdminPanelLayout({ children }: { children: React.ReactNo
     pathname.startsWith('/admin/proje-olustur') ||
     pathname.startsWith('/admin/teklifler');
   const haberActive = pathname.startsWith('/admin/haber');
+  const medyaRaporuActive = pathname.startsWith('/admin/medya-yansima-raporlari');
   const hubOnly = pathname === '/admin';
 
   async function logout() {
@@ -55,6 +56,18 @@ export default function AdminPanelLayout({ children }: { children: React.ReactNo
                 }`}
               >
                 Haber
+              </Link>
+              <Link
+                href="/admin/medya-yansima-raporlari"
+                className={`rounded-md px-3 py-1.5 text-sm font-medium transition ${
+                  medyaRaporuActive
+                    ? 'bg-violet-600 text-white'
+                    : hubOnly
+                      ? 'text-zinc-300 hover:bg-zinc-800/80 hover:text-white'
+                      : 'text-zinc-400 hover:bg-zinc-800/80 hover:text-zinc-200'
+                }`}
+              >
+                Medya Yansima Raporlari
               </Link>
             </nav>
           </div>

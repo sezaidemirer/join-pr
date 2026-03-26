@@ -1,0 +1,304 @@
+import { unstable_noStore as noStore } from 'next/cache';
+import { createClient } from '@supabase/supabase-js';
+
+import { normalizeSlugPart } from '@/lib/slug';
+
+export type MediaReportBrandRecord = {
+  id: string;
+  name: string;
+  slug: string;
+  logo_url: string | null;
+  is_published: boolean;
+  created_at: string;
+  updated_at: string;
+};
+
+export type MediaReportSubBrandRecord = {
+  id: string;
+  brand_id: string;
+  name: string;
+  slug: string;
+  logo_url: string | null;
+  pdf_url: string;
+  is_published: boolean;
+  created_at: string;
+  updated_at: string;
+};
+
+export type MediaReportProject = {
+  id: string;
+  slug: string;
+  name: string;
+  logoUrl: string | null;
+  pdfUrl: string;
+  updatedAt: string;
+};
+
+export type MediaReportBrand = {
+  id: string;
+  slug: string;
+  name: string;
+  logoUrl: string | null;
+  projects: MediaReportProject[];
+};
+
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL ?? '';
+const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY ?? '';
+const BRANDS_TABLE = 'media_report_brands';
+const SUB_BRANDS_TABLE = 'media_report_sub_brands';
+
+function getAdminClient() {
+  if (!supabaseUrl || !serviceRoleKey) return null;
+  return createClient(supabaseUrl, serviceRoleKey, {
+    auth: { persistSession: false, autoRefreshToken: false },
+  });
+}
+
+function assertAdminClient() {
+  const supabase = getAdminClient();
+  if (supabase) return supabase;
+
+  const missing: string[] = [];
+  if (!supabaseUrl) missing.push('NEXT_PUBLIC_SUPABASE_URL');
+  if (!serviceRoleKey) missing.push('SUPABASE_SERVICE_ROLE_KEY');
+  throw new Error(`Supabase admin client unavailable. Missing env: ${missing.join(', ')}`);
+}
+
+export async function listMediaReportBrandsForAdmin() {
+  const supabase = assertAdminClient();
+  const { data, error } = await supabase
+    .from(BRANDS_TABLE)
+    .select('*')
+    .order('name', { ascending: true })
+    .limit(1000);
+  if (error) throw error;
+  return (data ?? []) as MediaReportBrandRecord[];
+}
+
+export async function createMediaReportBrand(input: {
+  name: string;
+  logoUrl?: string;
+  isPublished?: boolean;
+}) {
+  const supabase = assertAdminClient();
+  const name = input.name.trim();
+  if (!name) throw new Error('Marka adi zorunludur.');
+  const payload = {
+    name,
+    slug: normalizeSlugPart(name),
+    logo_url: (input.logoUrl || '').trim() || null,
+    is_published: input.isPublished !== false,
+  };
+  const { data, error } = await supabase.from(BRANDS_TABLE).insert(payload).select('*').single();
+  if (error) throw error;
+  return data as MediaReportBrandRecord;
+}
+
+export async function updateMediaReportBrand(
+  id: string,
+  input: {
+    name: string;
+    logoUrl?: string;
+    isPublished?: boolean;
+  }
+) {
+  const supabase = assertAdminClient();
+  const name = input.name.trim();
+  if (!name) throw new Error('Marka adi zorunludur.');
+  const payload = {
+    name,
+    slug: normalizeSlugPart(name),
+    logo_url: (input.logoUrl || '').trim() || null,
+    is_published: input.isPublished !== false,
+  };
+  const { data, error } = await supabase.from(BRANDS_TABLE).update(payload).eq('id', id).select('*').single();
+  if (error) throw error;
+  return data as MediaReportBrandRecord;
+}
+
+export async function deleteMediaReportBrand(id: string) {
+  const supabase = assertAdminClient();
+  const { error } = await supabase.from(BRANDS_TABLE).delete().eq('id', id);
+  if (error) throw error;
+}
+
+export async function listMediaReportSubBrandsForAdmin(brandId: string) {
+  const supabase = assertAdminClient();
+  const { data, error } = await supabase
+    .from(SUB_BRANDS_TABLE)
+    .select('*')
+    .eq('brand_id', brandId)
+    .order('name', { ascending: true })
+    .limit(1000);
+  if (error) throw error;
+  return (data ?? []) as MediaReportSubBrandRecord[];
+}
+
+export async function createMediaReportSubBrand(input: {
+  brandId: string;
+  name: string;
+  logoUrl?: string;
+  pdfUrl: string;
+  isPublished?: boolean;
+}) {
+  const supabase = assertAdminClient();
+  const brandId = input.brandId.trim();
+  const name = input.name.trim();
+  const pdfUrl = input.pdfUrl.trim();
+  if (!brandId || !name || !pdfUrl) {
+    throw new Error('brandId, name ve pdfUrl zorunludur.');
+  }
+
+  const payload = {
+    brand_id: brandId,
+    name,
+    slug: normalizeSlugPart(name),
+    logo_url: (input.logoUrl || '').trim() || null,
+    pdf_url: pdfUrl,
+    is_published: input.isPublished !== false,
+  };
+  const { data, error } = await supabase.from(SUB_BRANDS_TABLE).insert(payload).select('*').single();
+  if (error) throw error;
+  return data as MediaReportSubBrandRecord;
+}
+
+export async function updateMediaReportSubBrand(
+  id: string,
+  input: {
+    name: string;
+    logoUrl?: string;
+    pdfUrl: string;
+    isPublished?: boolean;
+  }
+) {
+  const supabase = assertAdminClient();
+  const name = input.name.trim();
+  const pdfUrl = input.pdfUrl.trim();
+  if (!name || !pdfUrl) {
+    throw new Error('name ve pdfUrl zorunludur.');
+  }
+
+  const payload = {
+    name,
+    slug: normalizeSlugPart(name),
+    logo_url: (input.logoUrl || '').trim() || null,
+    pdf_url: pdfUrl,
+    is_published: input.isPublished !== false,
+  };
+  const { data, error } = await supabase
+    .from(SUB_BRANDS_TABLE)
+    .update(payload)
+    .eq('id', id)
+    .select('*')
+    .single();
+  if (error) throw error;
+  return data as MediaReportSubBrandRecord;
+}
+
+export async function deleteMediaReportSubBrand(id: string) {
+  const supabase = assertAdminClient();
+  const { error } = await supabase.from(SUB_BRANDS_TABLE).delete().eq('id', id);
+  if (error) throw error;
+}
+
+export async function listPublishedMediaReportTree() {
+  noStore();
+  const supabase = assertAdminClient();
+  const { data, error } = await supabase
+    .from(BRANDS_TABLE)
+    .select(
+      `
+      id,
+      name,
+      slug,
+      logo_url,
+      is_published,
+      subBrands:${SUB_BRANDS_TABLE}(
+        id,
+        name,
+        slug,
+        logo_url,
+        pdf_url,
+        is_published,
+        updated_at
+      )
+    `
+    )
+    .eq('is_published', true)
+    .order('name', { ascending: true })
+    .limit(1000);
+  if (error) throw error;
+  const rows = (data ?? []) as Array<
+    MediaReportBrandRecord & {
+      subBrands?: Array<{
+        id: string;
+        name: string;
+        slug: string;
+        logo_url: string | null;
+        pdf_url: string;
+        is_published: boolean;
+        updated_at: string;
+      }>;
+    }
+  >;
+  return rows.map((brand) => ({
+    id: brand.id,
+    slug: normalizeSlugPart(brand.slug || brand.name),
+    name: brand.name,
+    logoUrl: brand.logo_url || null,
+    projects: (brand.subBrands || [])
+      .filter((x) => x.is_published && x.pdf_url)
+      .map((x) => ({
+        id: x.id,
+        slug: normalizeSlugPart(x.slug || x.name),
+        name: x.name,
+        logoUrl: x.logo_url || null,
+        pdfUrl: x.pdf_url,
+        updatedAt: x.updated_at,
+      }))
+      .sort((a, b) => a.name.localeCompare(b.name, 'tr')),
+  }));
+}
+
+export async function getPublishedMediaReportBySlugs(brandSlug: string, subBrandSlug: string) {
+  noStore();
+  const supabase = assertAdminClient();
+  const normalizedBrand = normalizeSlugPart(brandSlug);
+  const normalizedSubBrand = normalizeSlugPart(subBrandSlug);
+
+  const { data: brandData, error: brandError } = await supabase
+    .from(BRANDS_TABLE)
+    .select('*')
+    .eq('is_published', true)
+    .eq('slug', normalizedBrand)
+    .limit(1)
+    .maybeSingle();
+  if (brandError) throw brandError;
+  const brand = (brandData ?? null) as MediaReportBrandRecord | null;
+  if (!brand) return null;
+
+  const { data, error } = await supabase
+    .from(SUB_BRANDS_TABLE)
+    .select('*')
+    .eq('brand_id', brand.id)
+    .eq('is_published', true)
+    .eq('slug', normalizedSubBrand)
+    .order('updated_at', { ascending: false })
+    .limit(1)
+    .maybeSingle();
+  if (error) throw error;
+  const subBrand = (data ?? null) as MediaReportSubBrandRecord | null;
+  if (!subBrand) return null;
+  return {
+    brand_id: brand.id,
+    brand_name: brand.name,
+    brand_slug: brand.slug,
+    brand_logo_url: brand.logo_url,
+    sub_brand_id: subBrand.id,
+    sub_brand_name: subBrand.name,
+    sub_brand_slug: subBrand.slug,
+    sub_brand_logo_url: subBrand.logo_url,
+    pdf_url: subBrand.pdf_url,
+    updated_at: subBrand.updated_at,
+  };
+}

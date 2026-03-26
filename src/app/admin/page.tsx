@@ -11,7 +11,7 @@ export default function AdminHomePage() {
           </p>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-3">
           <Link
             href="/admin/proje"
             className="rounded-xl border border-zinc-800 bg-zinc-900/60 p-5 transition hover:border-sky-500 hover:bg-zinc-900"
@@ -25,6 +25,13 @@ export default function AdminHomePage() {
           >
             <p className="text-lg font-semibold">Haber</p>
             <p className="mt-2 text-sm text-zinc-400">Haber listesi ve icerik formu</p>
+          </Link>
+          <Link
+            href="/admin/medya-yansima-raporlari"
+            className="rounded-xl border border-zinc-800 bg-zinc-900/60 p-5 transition hover:border-violet-500 hover:bg-zinc-900"
+          >
+            <p className="text-lg font-semibold">Medya Yansima Raporlari</p>
+            <p className="mt-2 text-sm text-zinc-400">Marka / alt marka ve PDF rapor sayfalari</p>
           </Link>
         </div>
       </div>

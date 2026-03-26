@@ -1,16 +1,22 @@
 'use client';
 
-import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
+import { MediaReportHtmlTemplate } from '@/components/media/MediaReportHtmlTemplate';
 import { MedyaRaporuBanner } from '@/components/MedyaRaporuBanner';
-import { getBrandBySlug, getProjectBySlug } from '@/data/medya-raporu-brands';
-
-const MedyaYansimaRaporuView = dynamic(
-  () => import('@/components/views/MedyaYansimaRaporuView').then((m) => m.MedyaYansimaRaporuView),
-  { ssr: false, loading: () => <div className="py-12 text-center text-zinc-400">Yükleniyor...</div> }
-);
+type ReportItem = {
+  brand_id: string;
+  brand_name: string;
+  brand_slug: string;
+  brand_logo_url?: string | null;
+  sub_brand_id: string;
+  sub_brand_name: string;
+  sub_brand_slug: string;
+  sub_brand_logo_url?: string | null;
+  pdf_url: string;
+  updated_at?: string;
+};
 
 export function MedyaYansimaRaporuProjectClient({
   brandSlug,
@@ -19,13 +25,34 @@ export function MedyaYansimaRaporuProjectClient({
   brandSlug: string;
   projectSlug: string;
 }) {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+  const [item, setItem] = useState<ReportItem | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
 
-  const brand = getBrandBySlug(brandSlug);
-  const project = getProjectBySlug(brandSlug, projectSlug);
+  useEffect(() => {
+    let active = true;
+    async function run() {
+      setLoading(true);
+      setError('');
+      try {
+        const url = `/api/media-reports/item?brand=${encodeURIComponent(brandSlug)}&project=${encodeURIComponent(projectSlug)}`;
+        const res = await fetch(url, { cache: 'no-store' });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || 'Rapor alinamadi');
+        if (active) setItem((data.item as ReportItem | null) ?? null);
+      } catch (err: any) {
+        if (active) setError(err.message ?? 'Rapor alinamadi');
+      } finally {
+        if (active) setLoading(false);
+      }
+    }
+    run();
+    return () => {
+      active = false;
+    };
+  }, [brandSlug, projectSlug]);
 
-  if (!brand || !project) {
+  if (!loading && !item) {
     return (
       <div className="mx-auto flex min-h-screen max-w-5xl flex-col items-center justify-center gap-6 px-6 py-16">
         <h1 className="text-2xl font-semibold text-white">Rapor bulunamadı</h1>
@@ -39,39 +66,36 @@ export function MedyaYansimaRaporuProjectClient({
     );
   }
 
-  if (!project.hasReport) {
-    return (
-      <div className="mx-auto flex min-h-screen max-w-5xl flex-col gap-10 px-6 pb-16 pt-12 sm:px-8 lg:px-10">
-        <MedyaRaporuBanner
-          brandName={brand.name}
-          projectName={project.name}
-          brandSlug={brand.slug}
-        />
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-8 text-center">
-          <p className="text-zinc-400">Bu rapor henüz mevcut değil.</p>
-          <Link
-            href={`/medya-yansima-raporu/${brand.slug}`}
-            className="mt-4 inline-block text-sm text-teal-400 hover:underline"
-          >
-            ← {brand.name} sayfasına dön
-          </Link>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="mx-auto flex min-h-screen max-w-5xl flex-col gap-10 px-6 pb-16 pt-12 sm:px-8 lg:px-10">
       <MedyaRaporuBanner
-        brandName={brand.name}
-        projectName={project.name}
-        brandSlug={brand.slug}
+        brandName={item?.brand_name || 'Yukleniyor...'}
+        projectName={item?.sub_brand_name}
+        brandSlug={item?.brand_slug}
       />
-      {mounted ? (
-        <MedyaYansimaRaporuView />
-      ) : (
-        <div className="py-12 text-center text-zinc-400">Yükleniyor...</div>
-      )}
+      {loading ? <div className="py-12 text-center text-zinc-400">Yukleniyor...</div> : null}
+      {error ? <div className="py-12 text-center text-rose-300">{error}</div> : null}
+      {item?.pdf_url ? (
+        <MediaReportHtmlTemplate
+          title={item.sub_brand_name}
+          pdfUrl={item.pdf_url}
+          logoUrl={item.sub_brand_logo_url}
+          updatedAt={item.updated_at}
+        />
+      ) : null}
+      {!loading && !item?.pdf_url && !error ? (
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center text-zinc-400">
+          Bu rapor icin PDF bulunamadi.
+        </div>
+      ) : null}
+      {item ? (
+        <Link
+          href={`/medya-yansima-raporu/${item.brand_slug}`}
+          className="text-sm text-teal-400 hover:underline"
+        >
+          ← {item.brand_name} sayfasina don
+        </Link>
+      ) : null}
     </div>
   );
 }

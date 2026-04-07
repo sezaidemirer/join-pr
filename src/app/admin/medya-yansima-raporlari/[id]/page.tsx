@@ -8,9 +8,14 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { BrandLogoGalleryPickCell } from '@/components/admin/BrandLogoGalleryPickCell';
 import { fileNameFromUrl } from '@/lib/filename-from-url';
 import { BRAND_LOGO_BUCKET } from '@/lib/brand-logo-storage';
+import { isBlockedMediaReportLogo } from '@/lib/media-report-logo-blocklist';
 
 const LOGO_UPLOAD_OK_LINE = 'Logo yükleme tamamlandı.';
 const LOGO_GALLERY_OK_LINE = 'Logo galeriden seçildi.';
+
+function shouldHideFromLogoGallery(value: string): boolean {
+  return isBlockedMediaReportLogo(value);
+}
 
 type Brand = {
   id: string;
@@ -38,6 +43,10 @@ type ReportEntry = {
   report_date: string | null;
   created_at: string;
 };
+
+type DeleteConfirmState =
+  | { kind: 'subBrandRow'; id: string }
+  | { kind: 'reportEntry'; subBrandId: string; entryId: string };
 
 const defaultForm = {
   name: '',
@@ -70,6 +79,8 @@ export default function AdminMediaReportBrandDetailPage({ params }: { params: { 
   const [uploadingEntryPdf, setUploadingEntryPdf] = useState(false);
   const [entryMessage, setEntryMessage] = useState<Record<string, string>>({});
   const [savingEntry, setSavingEntry] = useState(false);
+  const [deleteConfirm, setDeleteConfirm] = useState<DeleteConfirmState | null>(null);
+  const [deleteBusy, setDeleteBusy] = useState(false);
 
   const [logoArchiveFiles, setLogoArchiveFiles] = useState<Array<{ path: string; label: string }>>([]);
   const [logoArchiveDb, setLogoArchiveDb] = useState<Array<{ url: string; label: string }>>([]);
@@ -80,7 +91,7 @@ export default function AdminMediaReportBrandDetailPage({ params }: { params: { 
   const modeSubBrand = brand?.uses_sub_brands !== false;
 
   const loadBrand = useCallback(async () => {
-    const res = await fetch('/api/admin/media-reports', { credentials: 'include' });
+    const res = await fetch('/api/admin/media-reports/', { credentials: 'include' });
     const data = await res.json();
     if (res.status === 401) {
       router.push('/admin-login');
@@ -92,7 +103,7 @@ export default function AdminMediaReportBrandDetailPage({ params }: { params: { 
   }, [brandId, router]);
 
   const loadSubBrands = useCallback(async () => {
-    const res = await fetch(`/api/admin/media-reports/${brandId}/sub-brands`, { credentials: 'include' });
+    const res = await fetch(`/api/admin/media-reports/${brandId}/sub-brands/`, { credentials: 'include' });
     const data = await res.json();
     if (res.status === 401) {
       router.push('/admin-login');
@@ -113,8 +124,8 @@ export default function AdminMediaReportBrandDetailPage({ params }: { params: { 
     setMessage('');
     try {
       const endpoint = editId
-        ? `/api/admin/media-reports/sub-brands/${editId}`
-        : `/api/admin/media-reports/${brandId}/sub-brands`;
+        ? `/api/admin/media-reports/sub-brands/${editId}/`
+        : `/api/admin/media-reports/${brandId}/sub-brands/`;
       const method = editId ? 'PUT' : 'POST';
       const logoUrlForApi = modeSubBrand
         ? (form.logoUrl || '').trim()
@@ -174,14 +185,8 @@ export default function AdminMediaReportBrandDetailPage({ params }: { params: { 
     );
   }
 
-  async function removeItem(id: string) {
-    if (
-      !window.confirm(
-        modeSubBrand ? 'Bu alt markayi silmek istiyor musunuz?' : 'Bu raporu silmek istiyor musunuz?'
-      )
-    )
-      return;
-    const res = await fetch(`/api/admin/media-reports/sub-brands/${id}`, {
+  async function executeRemoveItem(id: string) {
+    const res = await fetch(`/api/admin/media-reports/sub-brands/${id}/`, {
       method: 'DELETE',
       credentials: 'include',
     });
@@ -200,7 +205,7 @@ export default function AdminMediaReportBrandDetailPage({ params }: { params: { 
 
   async function loadEntriesForSubBrand(subBrandId: string) {
     try {
-      const res = await fetch(`/api/admin/media-reports/sub-brands/${subBrandId}/reports`, {
+      const res = await fetch(`/api/admin/media-reports/sub-brands/${subBrandId}/reports/`, {
         credentials: 'include',
       });
       const data = await res.json();
@@ -263,7 +268,7 @@ export default function AdminMediaReportBrandDetailPage({ params }: { params: { 
     if (!entryForm.pdfUrl.trim()) { setEntryMessage((prev) => ({ ...prev, [subBrandId]: 'Önce PDF yükleyin.' })); return; }
     setSavingEntry(true);
     try {
-      const res = await fetch(`/api/admin/media-reports/sub-brands/${subBrandId}/reports`, {
+      const res = await fetch(`/api/admin/media-reports/sub-brands/${subBrandId}/reports/`, {
         method: 'POST',
         credentials: 'include',
         headers: { 'content-type': 'application/json' },
@@ -283,10 +288,9 @@ export default function AdminMediaReportBrandDetailPage({ params }: { params: { 
     }
   }
 
-  async function deleteEntry(subBrandId: string, entryId: string) {
-    if (!window.confirm('Bu raporu silmek istiyor musunuz?')) return;
+  async function executeDeleteEntry(subBrandId: string, entryId: string) {
     try {
-      const res = await fetch(`/api/admin/media-reports/sub-brands/${subBrandId}/reports?entryId=${entryId}`, {
+      const res = await fetch(`/api/admin/media-reports/sub-brands/${subBrandId}/reports/?entryId=${entryId}`, {
         method: 'DELETE',
         credentials: 'include',
       });
@@ -299,6 +303,30 @@ export default function AdminMediaReportBrandDetailPage({ params }: { params: { 
       setEntryMessage((prev) => ({ ...prev, [subBrandId]: e.message ?? 'Hata' }));
     }
   }
+
+  async function confirmPendingDelete() {
+    if (!deleteConfirm) return;
+    setDeleteBusy(true);
+    try {
+      if (deleteConfirm.kind === 'subBrandRow') {
+        await executeRemoveItem(deleteConfirm.id);
+      } else {
+        await executeDeleteEntry(deleteConfirm.subBrandId, deleteConfirm.entryId);
+      }
+    } finally {
+      setDeleteBusy(false);
+      setDeleteConfirm(null);
+    }
+  }
+
+  useEffect(() => {
+    if (!deleteConfirm) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && !deleteBusy) setDeleteConfirm(null);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [deleteConfirm, deleteBusy]);
 
   async function uploadLogo(file: File | null) {
     if (!file) return;
@@ -396,8 +424,8 @@ export default function AdminMediaReportBrandDetailPage({ params }: { params: { 
   const loadLogoGalleryData = useCallback(async () => {
     try {
       const [archiveRes, markaRes] = await Promise.all([
-        fetch('/api/admin/media-reports/logo-archive', { credentials: 'include' }),
-        fetch('/api/admin/marka-logolari-list', { credentials: 'include' }),
+        fetch('/api/admin/media-reports/logo-archive/', { credentials: 'include' }),
+        fetch('/api/admin/marka-logolari-list/', { credentials: 'include' }),
       ]);
       if (markaRes.ok) {
         const markaData = await markaRes.json();
@@ -406,7 +434,9 @@ export default function AdminMediaReportBrandDetailPage({ params }: { params: { 
           mf.map((e: { path?: string; label?: string }) => ({
             path: String(e.path || ''),
             label: String(e.label || e.path || ''),
-          })).filter((e: { path: string }) => Boolean(e.path))
+          }))
+            .filter((e: { path: string; label: string }) => Boolean(e.path))
+            .filter((e: { path: string; label: string }) => !shouldHideFromLogoGallery(`${e.label} ${e.path}`))
         );
       } else {
         setMarkaLogolariFiles([]);
@@ -423,13 +453,17 @@ export default function AdminMediaReportBrandDetailPage({ params }: { params: { 
         manifest.map((e: { path?: string; label?: string }) => ({
           path: String(e.path || ''),
           label: String(e.label || e.path || ''),
-        })).filter((e: { path: string }) => Boolean(e.path))
+        }))
+          .filter((e: { path: string; label: string }) => Boolean(e.path))
+          .filter((e: { path: string; label: string }) => !shouldHideFromLogoGallery(`${e.label} ${e.path}`))
       );
       setLogoArchiveDb(
         used.map((e: { url?: string; label?: string }) => ({
           url: String(e.url || ''),
           label: String(e.label || e.url || ''),
-        })).filter((e: { url: string }) => Boolean(e.url))
+        }))
+          .filter((e: { url: string; label: string }) => Boolean(e.url))
+          .filter((e: { url: string; label: string }) => !shouldHideFromLogoGallery(`${e.label} ${e.url}`))
       );
     } catch {
       /* galeri yuklenemezse kismi liste */
@@ -471,6 +505,51 @@ export default function AdminMediaReportBrandDetailPage({ params }: { params: { 
             >
               Tamam
             </button>
+          </div>
+        </div>
+      ) : null}
+
+      {deleteConfirm ? (
+        <div
+          role="alertdialog"
+          aria-modal="true"
+          aria-labelledby="delete-confirm-title"
+          aria-describedby="delete-confirm-desc"
+          className="fixed inset-0 z-[130] flex items-center justify-center bg-black/65 p-4"
+          onClick={() => !deleteBusy && setDeleteConfirm(null)}
+        >
+          <div
+            className="w-full max-w-md rounded-2xl border border-zinc-600 bg-zinc-900 px-6 py-6 shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2 id="delete-confirm-title" className="text-lg font-semibold text-zinc-100">
+              Silme onayı
+            </h2>
+            <p id="delete-confirm-desc" className="mt-3 text-sm leading-relaxed text-zinc-300">
+              {deleteConfirm.kind === 'reportEntry'
+                ? 'Bu raporu silmek istiyor musunuz?'
+                : modeSubBrand
+                  ? 'Bu alt markayı silmek istiyor musunuz?'
+                  : 'Bu raporu silmek istiyor musunuz?'}
+            </p>
+            <div className="mt-6 flex flex-col-reverse gap-2 sm:flex-row sm:justify-end">
+              <button
+                type="button"
+                disabled={deleteBusy}
+                onClick={() => setDeleteConfirm(null)}
+                className="rounded-md border border-zinc-600 px-4 py-2.5 text-sm font-medium text-zinc-200 hover:bg-zinc-800 disabled:opacity-50"
+              >
+                İptal
+              </button>
+              <button
+                type="button"
+                disabled={deleteBusy}
+                onClick={() => void confirmPendingDelete()}
+                className="rounded-md bg-rose-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-rose-500 disabled:opacity-50"
+              >
+                {deleteBusy ? 'Siliniyor…' : 'Sil'}
+              </button>
+            </div>
           </div>
         </div>
       ) : null}
@@ -524,7 +603,9 @@ export default function AdminMediaReportBrandDetailPage({ params }: { params: { 
                     Supabase — brand-logo / uploads
                   </h3>
                   <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-                    {markaLogolariFiles.map((logo) => (
+                    {markaLogolariFiles
+                      .filter((logo) => !shouldHideFromLogoGallery(`${logo.label} ${logo.path}`))
+                      .map((logo) => (
                       <BrandLogoGalleryPickCell
                         key={logo.path}
                         src={logo.path}
@@ -542,7 +623,9 @@ export default function AdminMediaReportBrandDetailPage({ params }: { params: { 
                     Site arşivi (sub-brand-logos-archive)
                   </h3>
                   <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-                    {logoArchiveFiles.map((logo) => (
+                    {logoArchiveFiles
+                      .filter((logo) => !shouldHideFromLogoGallery(`${logo.label} ${logo.path}`))
+                      .map((logo) => (
                       <BrandLogoGalleryPickCell
                         key={logo.path}
                         src={logo.path.startsWith('http') ? logo.path : encodeURI(logo.path)}
@@ -560,7 +643,9 @@ export default function AdminMediaReportBrandDetailPage({ params }: { params: { 
                     Daha önce kayıtlarda kullanılan logolar
                   </h3>
                   <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-                    {logoArchiveDb.map((row) => (
+                    {logoArchiveDb
+                      .filter((row) => !shouldHideFromLogoGallery(`${row.label} ${row.url}`))
+                      .map((row) => (
                       <BrandLogoGalleryPickCell
                         key={row.url}
                         src={row.url.startsWith('http') ? row.url : encodeURI(row.url)}
@@ -679,12 +764,14 @@ export default function AdminMediaReportBrandDetailPage({ params }: { params: { 
                   </p>
                 ) : null}
                 {form.logoUrl ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={form.logoUrl.startsWith('http') ? form.logoUrl : encodeURI(form.logoUrl)}
-                    alt="Alt marka logosu"
-                    className="h-14 w-auto rounded bg-white p-2"
-                  />
+                  <div className="mt-2 flex h-24 w-24 items-center justify-center overflow-hidden rounded-lg bg-white p-1.5">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={form.logoUrl.startsWith('http') ? form.logoUrl : encodeURI(form.logoUrl)}
+                      alt="Alt marka logosu"
+                      className="max-h-full max-w-full origin-center scale-[2.02] object-contain"
+                    />
+                  </div>
                 ) : null}
                 {logoFileUploadDoneLine ? (
                   <p className="text-xs font-medium text-teal-400">{LOGO_UPLOAD_OK_LINE}</p>
@@ -764,12 +851,14 @@ export default function AdminMediaReportBrandDetailPage({ params }: { params: { 
                       <span className="text-zinc-200">{fileNameFromUrl(item.pdf_url) || '—'}</span>
                     </p>
                     {listLogoUrl ? (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img
-                        src={listLogoUrl.startsWith('http') ? listLogoUrl : encodeURI(listLogoUrl)}
-                        alt={item.name}
-                        className="mt-2 h-12 w-auto rounded bg-white p-1.5"
-                      />
+                      <div className="mt-2 h-12 w-full max-w-[7.5rem] overflow-hidden rounded-lg bg-white p-1 sm:h-14 sm:max-w-[8.5rem]">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={listLogoUrl.startsWith('http') ? listLogoUrl : encodeURI(listLogoUrl)}
+                          alt={item.name}
+                          className="h-full w-full origin-center scale-[2.405] object-contain object-center"
+                        />
+                      </div>
                     ) : null}
                     <div className="mt-3 flex flex-wrap gap-2">
                       <button type="button" onClick={() => fillForEdit(item)} className="rounded border border-zinc-700 px-2 py-1 text-xs hover:bg-zinc-800">
@@ -786,7 +875,7 @@ export default function AdminMediaReportBrandDetailPage({ params }: { params: { 
                       ) : null}
                       <button
                         type="button"
-                        onClick={() => void removeItem(item.id)}
+                        onClick={() => setDeleteConfirm({ kind: 'subBrandRow', id: item.id })}
                         className="rounded border border-rose-700 px-2 py-1 text-xs text-rose-300 hover:bg-rose-950/60"
                       >
                         Sil
@@ -851,7 +940,7 @@ export default function AdminMediaReportBrandDetailPage({ params }: { params: { 
                                 </div>
                                 <button
                                   type="button"
-                                  onClick={() => void deleteEntry(item.id, entry.id)}
+                                  onClick={() => setDeleteConfirm({ kind: 'reportEntry', subBrandId: item.id, entryId: entry.id })}
                                   className="shrink-0 rounded border border-rose-800 px-2 py-0.5 text-xs text-rose-400 hover:bg-rose-950/60"
                                 >
                                   Sil
@@ -890,7 +979,8 @@ export default function AdminMediaReportBrandDetailPage({ params }: { params: { 
                   </span>
                   <p>
                     <strong className="font-extrabold text-zinc-200">Sol panel</strong> yeni alt marka kaydı;{' '}
-                    <strong className="font-extrabold text-zinc-200">sağ panel</strong> kayıtlı alt markalar.
+                    <strong className="font-extrabold text-zinc-200">sağ panel</strong> kayıtlı alt markaların bulunduğu
+                    alan.
                   </p>
                 </li>
                 <li className="flex gap-2.5">
@@ -898,9 +988,10 @@ export default function AdminMediaReportBrandDetailPage({ params }: { params: { 
                     •
                   </span>
                   <p>
-                    Alt marka adı, logo ve o otel / proje için hazırlanan{' '}
-                    <strong className="font-extrabold text-zinc-200">medya yansıma PDF</strong>’i yüklenir. PDF bitince{' '}
-                    <span className="font-extrabold text-zinc-200">&quot;Kaydet&quot;</span> ile sağ panele eklenir.
+                    <strong className="font-extrabold text-zinc-200">Sol panelden</strong> alt marka adı ve logosu eklenir;{' '}
+                    <span className="font-extrabold text-zinc-200">&quot;Kaydet&quot;</span> düğmesine basılır. Alt marka sağ
+                    alanda oluşur. <span className="font-extrabold text-zinc-200">Düzenle</span> düğmesi, oluşturulan alt markanın
+                    logosunu veya adını güncellemek için kullanılır.
                   </p>
                 </li>
               </>
@@ -928,16 +1019,32 @@ export default function AdminMediaReportBrandDetailPage({ params }: { params: { 
                 </li>
               </>
             )}
-            <li className="flex gap-2.5">
-              <span className="mt-0.5 shrink-0 text-teal-400" aria-hidden>
-                •
-              </span>
-              <p>
-                PDF yüklemesi sonrası ortada bildirim çıkar;{' '}
-                <span className="font-extrabold text-zinc-200">&quot;Tamam&quot;</span> deyip{' '}
-                <span className="font-extrabold text-zinc-200">&quot;Kaydet&quot;</span> ile kaydı tamamlayın.
-              </p>
-            </li>
+            {modeSubBrand ? (
+              <li className="flex gap-2.5">
+                <span className="mt-0.5 shrink-0 text-teal-400" aria-hidden>
+                  •
+                </span>
+                <p>
+                  Oluşturulan alt marka bünyesine rapor eklemek için sağ panelde yer alan ilgili alt markanın{' '}
+                  <span className="font-extrabold text-zinc-200">Raporlar</span> düğmesine basın. Açılan pencerede rapor
+                  başlığı ve tarih bilgilerini giriniz. Ardından <span className="font-extrabold text-zinc-200">&quot;PDF Seç&quot;</span>{' '}
+                  düğmesine basarak PDF&apos;i ekledikten sonra{' '}
+                  <span className="font-extrabold text-zinc-200">&quot;Rapor Ekle&quot;</span> düğmesine basın. Eklenen rapor
+                  aşağıda listelenecektir.
+                </p>
+              </li>
+            ) : (
+              <li className="flex gap-2.5">
+                <span className="mt-0.5 shrink-0 text-teal-400" aria-hidden>
+                  •
+                </span>
+                <p>
+                  PDF yüklemesi sonrası ortada bildirim çıkar;{' '}
+                  <span className="font-extrabold text-zinc-200">&quot;Tamam&quot;</span> deyip{' '}
+                  <span className="font-extrabold text-zinc-200">&quot;Kaydet&quot;</span> ile kaydı tamamlayın.
+                </p>
+              </li>
+            )}
           </ul>
         </section>
       </div>

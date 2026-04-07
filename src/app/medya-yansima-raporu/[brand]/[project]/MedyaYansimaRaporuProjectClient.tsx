@@ -117,6 +117,7 @@ export function MedyaYansimaRaporuProjectClient({
         projectName={subBrandName}
         brandSlug={brandSlugResolved}
         logoUrl={logoUrl}
+        subBrandReportList
       />
 
       {loading ? <div className="py-12 text-center text-zinc-400">Yukleniyor...</div> : null}
@@ -130,19 +131,25 @@ export function MedyaYansimaRaporuProjectClient({
             <span className="ml-2 text-sm font-normal text-zinc-400">({entries.length} rapor)</span>
           </h2>
           <div className="grid gap-3 sm:grid-cols-2">
-            {entries.map((entry) => (
+            {entries.map((entry) => {
+              const isRixosLogo = `${entry.sub_brand_name} ${entry.sub_brand_logo_url || ''}`.toLowerCase().includes('rixos');
+              return (
               <Link
                 key={entry.id}
                 href={`/medya-yansima-raporu/${effectiveBrandSlug}/${effectiveProjectSlug}/${entry.slug || entry.id}`}
                 className="group flex flex-col gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 transition-colors hover:border-teal-500/30 hover:bg-white/10"
               >
                 {entry.sub_brand_logo_url ? (
-                  <div className="flex h-16 items-center justify-center self-start rounded-xl bg-white px-4 py-2">
+                  <div className="flex h-[4.5rem] w-[7.5rem] items-center justify-center self-start overflow-hidden rounded-xl bg-white px-2.5 py-1.5 sm:h-24 sm:w-40 sm:px-3 sm:py-2">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={entry.sub_brand_logo_url}
                       alt={entry.sub_brand_name}
-                      className="max-h-10 w-auto max-w-[8rem] object-contain"
+                      className={
+                        isRixosLogo
+                          ? 'max-h-full max-w-full scale-[2.2385] object-contain'
+                          : 'max-h-full max-w-full scale-[1.452] object-contain'
+                      }
                     />
                   </div>
                 ) : null}
@@ -162,7 +169,8 @@ export function MedyaYansimaRaporuProjectClient({
                   <span className="mt-1 text-xs text-teal-400">Raporu görüntüle →</span>
                 </div>
               </Link>
-            ))}
+              );
+            })}
           </div>
         </section>
       ) : null}

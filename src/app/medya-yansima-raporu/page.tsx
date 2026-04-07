@@ -53,12 +53,20 @@ export default function MedyaYansimaRaporuLandingPage() {
           <Link
             key={brand.slug}
             href={`/medya-yansima-raporu/${brand.slug}`}
-            className="group flex flex-col rounded-2xl border border-white/10 bg-white/5 p-6 transition-colors hover:border-teal-500/30 hover:bg-white/10"
+            className="group flex min-w-0 flex-col rounded-2xl border border-white/10 bg-white/5 p-6 transition-colors hover:border-teal-500/30 hover:bg-white/10"
           >
             {brand.logoUrl ? (
-              <div className="mb-4 flex min-h-[7rem] items-center justify-center rounded-xl bg-white p-4 sm:min-h-[8rem] sm:p-5">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={brand.logoUrl} alt={brand.name} className="max-h-[5.75rem] w-auto object-contain sm:max-h-[6.5rem]" />
+              <div className="mb-4 w-full min-w-0 overflow-hidden rounded-xl bg-white">
+                <div className="relative w-full pb-[50%]">
+                  <div className="absolute inset-0 box-border overflow-hidden p-2.5 sm:p-3.5">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={brand.logoUrl}
+                      alt={brand.name}
+                      className="h-full w-full origin-center scale-[4] object-contain object-center"
+                    />
+                  </div>
+                </div>
               </div>
             ) : null}
             <span className="text-lg font-semibold text-white group-hover:text-teal-300">

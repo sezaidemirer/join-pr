@@ -43,7 +43,7 @@ export default function AdminMediaReportsPage() {
   const logoFileInputRef = useRef<HTMLInputElement>(null);
 
   const loadItems = useCallback(async () => {
-    const res = await fetch('/api/admin/media-reports', { credentials: 'include' });
+    const res = await fetch('/api/admin/media-reports/', { credentials: 'include' });
     const data = await res.json();
     if (res.status === 401) {
       router.push('/admin-login');
@@ -112,7 +112,7 @@ export default function AdminMediaReportsPage() {
   async function removeItem(id: string) {
     if (!window.confirm('Bu markayi silmek istiyor musunuz? Bagli tum alt marka / rapor kayitlari da silinir.')) return;
     setMessage('');
-    const res = await fetch(`/api/admin/media-reports/${id}`, {
+    const res = await fetch(`/api/admin/media-reports/${id}/`, {
       method: 'DELETE',
       credentials: 'include',
     });
@@ -355,8 +355,14 @@ export default function AdminMediaReportsPage() {
                       {publicPath}
                     </a>
                     {item.logo_url ? (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img src={item.logo_url} alt={item.name} className="mt-2 h-12 w-auto rounded bg-white p-1.5" />
+                      <div className="mt-2 h-12 w-full max-w-[7.5rem] overflow-hidden rounded-lg bg-white p-1 sm:h-14 sm:max-w-[8.5rem]">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={item.logo_url.startsWith('http') ? item.logo_url : encodeURI(item.logo_url)}
+                          alt={item.name}
+                          className="h-full w-full origin-center scale-[2.405] object-contain object-center"
+                        />
+                      </div>
                     ) : null}
                     <div className="mt-3 flex flex-wrap gap-2">
                       <Link

@@ -246,7 +246,6 @@ export function MediaReportHtmlTemplate({ title, pdfUrl, updatedAt }: MediaRepor
   return (
     <div className="space-y-12">
       <section className="space-y-6">
-        <p className="text-xs font-semibold uppercase tracking-[0.35em] text-teal-200">Ana Sayfa</p>
         <h2 className="text-4xl font-semibold text-white md:text-5xl">Medya Yansıma Raporu</h2>
         <p className="text-lg leading-relaxed text-zinc-300 md:text-xl">Basın ve medyadaki yansımalarımızın özeti.</p>
         <div className="min-w-0 w-full rounded-2xl border border-white/10 bg-white/5 p-6">
@@ -338,12 +337,12 @@ export function MediaReportHtmlTemplate({ title, pdfUrl, updatedAt }: MediaRepor
 
       <section className="space-y-6">
         <h3 className="text-2xl font-semibold text-white md:text-3xl">Online yansımalar</h3>
-        <p className="text-zinc-400">
-          {onlineRows.length
-            ? 'PDF içindeki "Online Yansımalar" tablosundan alınmıştır.'
-            : 'Bu liste basın bülteninin yayınlandığı web sitelerini içerir.'}
-          {data.sourceMode === 'annotations' && !onlineRows.length ? ' (PDF link anotasyonlarından alındı)' : ''}
-        </p>
+        {!onlineRows.length ? (
+          <p className="text-zinc-400">
+            Bu liste basın bülteninin yayınlandığı web sitelerini içerir.
+            {data.sourceMode === 'annotations' ? ' (PDF link anotasyonlarından alındı)' : ''}
+          </p>
+        ) : null}
         <div className="rounded-xl border border-white/10 bg-white/5 p-4">
           {onlineRows.length ? (
             <div className="overflow-x-auto">

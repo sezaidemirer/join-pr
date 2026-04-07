@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 import { hasAdminCookieInRequest } from '@/lib/admin-auth';
 import { listBrandLogoUploadsPublic } from '@/lib/brand-logo-bucket-list';
+import { isBlockedMediaReportLogo } from '@/lib/media-report-logo-blocklist';
 
 /** Galeri: yalnızca Supabase `brand-logo` → `uploads/` altındaki görseller. */
 export type MarkaLogoListItem = {
@@ -20,7 +21,8 @@ export async function GET(req: NextRequest) {
     files = remote.map((r) => ({
       path: r.url,
       label: r.label,
-    }));
+    }))
+      .filter((r) => !isBlockedMediaReportLogo(`${r.label} ${r.path}`));
   } catch {
     files = [];
   }

@@ -159,15 +159,15 @@ export async function createMediaReportSubBrand(input: {
   brandId: string;
   name: string;
   logoUrl?: string;
-  pdfUrl: string;
+  pdfUrl?: string;
   isPublished?: boolean;
 }) {
   const supabase = assertAdminClient();
   const brandId = input.brandId.trim();
   const name = input.name.trim();
-  const pdfUrl = input.pdfUrl.trim();
-  if (!brandId || !name || !pdfUrl) {
-    throw new Error('brandId, name ve pdfUrl zorunludur.');
+  const pdfUrl = (input.pdfUrl || '').trim();
+  if (!brandId || !name) {
+    throw new Error('brandId ve name zorunludur.');
   }
 
   const payload = {
@@ -175,7 +175,7 @@ export async function createMediaReportSubBrand(input: {
     name,
     slug: normalizeSlugPart(name),
     logo_url: (input.logoUrl || '').trim() || null,
-    pdf_url: pdfUrl,
+    pdf_url: pdfUrl || null,
     is_published: input.isPublished !== false,
   };
   const { data, error } = await supabase.from(SUB_BRANDS_TABLE).insert(payload).select('*').single();
@@ -188,22 +188,22 @@ export async function updateMediaReportSubBrand(
   input: {
     name: string;
     logoUrl?: string;
-    pdfUrl: string;
+    pdfUrl?: string;
     isPublished?: boolean;
   }
 ) {
   const supabase = assertAdminClient();
   const name = input.name.trim();
-  const pdfUrl = input.pdfUrl.trim();
-  if (!name || !pdfUrl) {
-    throw new Error('name ve pdfUrl zorunludur.');
+  const pdfUrl = (input.pdfUrl || '').trim();
+  if (!name) {
+    throw new Error('name zorunludur.');
   }
 
   const payload = {
     name,
     slug: normalizeSlugPart(name),
     logo_url: (input.logoUrl || '').trim() || null,
-    pdf_url: pdfUrl,
+    pdf_url: pdfUrl || null,
     is_published: input.isPublished !== false,
   };
   const { data, error } = await supabase

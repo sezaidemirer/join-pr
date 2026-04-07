@@ -33,7 +33,7 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
       name: String(body?.name ?? ''),
       logoUrl: String(body?.logoUrl ?? ''),
       pdfUrl: String(body?.pdfUrl ?? ''),
-      isPublished: body?.isPublished !== false,
+      isPublished: true,
     });
     return NextResponse.json({ subBrand }, { status: 201 });
   } catch (error: any) {

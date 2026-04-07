@@ -3,6 +3,7 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
 import Image from 'next/image';
 import { ReferanslarSection } from '@/components/ReferanslarSection';
+import { FormConsentEmbed } from '@/components/FormConsentEmbed';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
@@ -518,12 +519,10 @@ export function KreatifProduksiyonLandingView() {
           <div
             className="mt-12 overflow-hidden rounded-2xl border border-white/10 bg-zinc-950/80 p-4 md:p-6"
           >
-            <iframe
-              aria-label="Join-Form-Landing"
-              frameBorder="0"
-              style={{ height: 500, width: '99%', border: 'none' }}
+            <FormConsentEmbed
+              ariaLabel="Join-Form-Landing"
               src="https://forms.joinpr.com.tr/joinus1/form/JoinFormLanding/formperma/I50RnMGr5e2CLfOswetbEV7jdQ_N9gkidjRZUcvnfl0"
-              title="Join CRM Form"
+              iframeHeight={500}
             />
           </div>
         </div>

@@ -110,7 +110,7 @@
           "title": "Join Escapes",
           "subtitle": "Keşfetmeyi seven ve deneyim odaklı seyahat kültürüne ilham\narayan herkes için tasarlanmış bir sosyal içerik ve keşif\nplatformudur.",
           "cta": "Join Escapes’i ziyaret et",
-          "link": "/join-escapes"
+          "link": "https://joinescapes.com/"
         }
       }
     },
@@ -808,12 +808,6 @@
                   "category": "Deneyim Tasarımı",
                   "description": "Türk oyuncular Petra ve Wadi Rum deneyimlerinden büyülenerek Ürdün’ün kültürel mirasını paylaştı.",
                   "image": "/turk-dizi-oyunculari-urdun-de.webp"
-                },
-                {
-                  "title": "Ürdün Destinasyon Tanıtımı",
-                  "category": "Turizm",
-                  "description": "Ürdün’ün tarihi ve doğal zenginlikleri dijital kampanya ile yeni kitlelere tanıtıldı.",
-                  "image": "/urdun-destinasyon-tanitimi.webp"
                 }
               ]
             }
@@ -1141,18 +1135,6 @@
           "image": "/turk-dizi-oyunculari-urdun-de.webp"
         },
         {
-          "title": "Türk Oyuncular Karadağ’a Çıkarma Yaptı",
-          "category": "Marka Deneyimi",
-          "description": "Join PR organizasyonu ile Regent Porto Montenegro Hotel, Air Montenegro Havayolları, Tivat Turizm Tanıtma Ofisi ve Porto Montenegro ev sahipliğinde gerçekleşen davete ünlü oyuncular Ali Yağcı, Mehmet Aykaç, Gökçe Akyıldız, Dilara Aksüyek, Emin Günenç ve Join PR kurucusu Ali Saçlı katıldı.",
-          "image": "/turk-oyuncular-karadag-039-a-cikarma-yapti-1.webp"
-        },
-        {
-          "title": "Ürdün Destinasyon Tanıtımı",
-          "category": "Hedef Pazar Programı",
-          "description": "Ünlü dizi oyuncuları Gökçe Akyıldız, Mehmet Aykaç, Gizem Güneş ve Emin Günenç Ürdün’de ağırlandı. Ülkenin turistik ve kültürel yapısına hayran kalan Türk oyuncular, rol aldıkları dizi ve sinema projelerinin Ürdün’de beğeni görmesi ve davet edilmelerinden duydukları memnuniyeti dile getirdi.",
-          "image": "/urdun-destinasyon-tanitimi.webp"
-        },
-        {
           "title": "Prontotour’un 2024 Erken Rezervasyon Dönemi Başladı",
           "category": "Kampanya Lansmanı",
           "description": "Yazseverler, 2024 için tatil planlarını şimdiden yapmaya başladı. Türkiye’nin önde gelen tur operatörü markalarından Prontotour ise tatilciler için yurt dışı, yurt içi ve gemi turlarında ‘Uçak bileti fiyatına tur!’",
@@ -1171,67 +1153,67 @@
       "logos": [
         {
           "name": "Rixos Golf Villas & Suites Sharm El Sheikh",
-          "image": "/Join Pr Marka Logoları/rixos_sharm_el_sheikh.png"
+          "image": "/marka-logolari/rixos_sharm_el_sheikh.png"
         },
         {
           "name": "Ajet",
-          "image": "/AJet_logo.svg.png"
+          "image": "/marka-logolari/AJet_logo.svg.png"
         },
         {
           "name": "Prontotour",
-          "image": "/Join Pr Marka Logoları/prontotour_logos.png"
+          "image": "/marka-logolari/prontotour_logos.png"
         },
         {
           "name": "Jordan Tourism Board",
-          "image": "/jordan-tourism-board-1.webp"
+          "image": "/marka-logolari/jordan-tourism-board-1.webp"
         },
         {
           "name": "Royal Jordanian",
-          "image": "/royal-jordanian-logo-1.webp"
+          "image": "/marka-logolari/royal-jordanian-logo-1.webp"
         },
         {
           "name": "Marriott Dead Sea Resort",
-          "image": "/marriott-dead-sea.webp"
+          "image": "/marka-logolari/marriott-dead-sea.webp"
         },
         {
           "name": "Hyatt Regency",
-          "image": "/hyatt-regency-1.webp"
+          "image": "/marka-logolari/hyatt-regency-1.webp"
         },
         {
           "name": "Swissotel Sharm El Sheikh",
-          "image": "/swissotel-logo.webp"
+          "image": "/marka-logolari/swissotel-logo.webp"
         },
         {
           "name": "Rixos Premium Seagate",
-          "image": "/rixos-logo.webp"
+          "image": "/marka-logolari/rixos-logo.webp"
         },
         {
           "name": "Rixos Premium Magawish",
-          "image": "/rixos-logo-1.webp"
+          "image": "/marka-logolari/rixos-logo-1.webp"
         },
         {
           "name": "Rixos Premium Alamein",
-          "image": "/rixos-logo-4.webp"
+          "image": "/marka-logolari/rixos-logo-4.webp"
         },
         {
           "name": "Rixos Radamis Sharm El Sheikh",
-          "image": "/rixos-logo-5.webp"
+          "image": "/marka-logolari/rixos-logo-5.webp"
         },
         {
           "name": "Rixos Alamein",
-          "image": "/rixos-logo-4.webp"
+          "image": "/marka-logolari/rixos-logo-4.webp"
         },
         {
           "name": "Club Privé by Rixos Sharm El Sheikh",
-          "image": "/club-prive-logo2.webp"
+          "image": "/marka-logolari/club-prive-logo2.webp"
         },
         {
           "name": "Vida Beach Resort Marassi Al Bahrain",
-          "image": "/vida-beach-resort.webp"
+          "image": "/marka-logolari/vida-beach-resort.webp"
         },
         {
           "name": "Nikki Beach",
-          "image": "/nikki-beach-logo-1.webp"
+          "image": "/marka-logolari/nikki-beach-logo-1.webp"
         }
       ]
     },
@@ -1799,19 +1781,19 @@
               "title": "Laucala Island, Fiji – Ünlülerin Tropik Cenneti",
               "description": "Fiji'nin en özel adalarından Laucala Island, Red Bull'un kurucusuna ait ultra lüks bir tatil destinasyonu...",
               "image": "/one_cikan_1.webp",
-              "link": "https://www.joinescapes.com/sanat-ve-cemiyet/destinasyon/celebrity/laucala-island-fiji-unlulerin-tropik-cenneti"
+              "link": "https://joinescapes.com/sanat-ve-cemiyet"
             },
             {
               "title": "Havana, Küba Kültür Turu – Karayiplerin Renkli Kalbi",
               "description": "Kolonyal mimarisi, renkli sokakları ve salsa ritimleriyle Havana, 2025'te Karayiplerin en cazip şehirlerinden biri. İşte detaylı Havana gezi rehberi...",
               "image": "/one_cikan_2.webp",
-              "link": "https://www.joinescapes.com/sehir-molalari/kultur-ve-miras/sehirmolalari/havana-kuba-kultur-turu-karayiplerin-renkli-kalbi-"
+              "link": "https://joinescapes.com/sehir-molalari"
             },
             {
               "title": "Türkiye'den Ucuza Uçulabilecek Yurt Dışı Rotalar: Yeni Maceralara Ekonomik Kaçışlar",
               "description": "Uçak biletlerinin ateş pahası olduğu dönemlerde bile yurt dışı hayallerinden vazgeçmek zorunda değilsin...",
               "image": "/one_cikan_3.webp",
-              "link": "https://www.joinescapes.com/seyahat-rehberi/turkiyeden-ucuza-uculabilecek-yurt-disi-rotalar-yeni-maceralara-ekonomik-kacislar"
+              "link": "https://joinescapes.com/ucuz-ucus-rotalari"
             }
           ]
         },
@@ -1908,14 +1890,14 @@
       },
       "ajet": {
         "seo": {
-          "title": "AJet İş Birliği | Influencer Kampanyası Raporu | Join PR",
-          "description": "AJet ile influencer iş birliği kampanyası sonuçları: 65 katılımcı, 20M+ görüntülenme, $1.3M EMV. AAA destinasyonlar kampanyası performans raporu."
+          "title": "AJet İş Birliği | Katılımcılı Kampanya Raporu | Join PR",
+          "description": "AJet ile katılımcı odaklı iş birliği kampanyası sonuçları: 65 katılımcı, 20M+ görüntülenme, $1.3M EMV. AAA destinasyonlar kampanyası performans raporu."
         }
       },
       "rixosEgypt": {
         "seo": {
-          "title": "Rixos Egypt İş Birliği | Influencer Kampanyası | Join PR",
-          "description": "Rixos Egypt Hotels ile influencer iş birliği kampanyası: katılımcı sayısı, etkileşim ve EMV performans sonuçları. Join PR iş birlikleri raporu."
+          "title": "Rixos Egypt İş Birliği | Katılımcılı Kampanya | Join PR",
+          "description": "Rixos Egypt Hotels ile katılımcı odaklı iş birliği kampanyası: katılımcı sayısı, etkileşim ve EMV performans sonuçları. Join PR iş birlikleri raporu."
         }
       },
       "hero": {

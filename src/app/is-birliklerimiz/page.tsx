@@ -49,97 +49,105 @@ export default function IsBirliklerimizPage() {
 
       <div className="mx-auto max-w-6xl px-6 pb-16 pt-0">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 rounded-3xl border border-white/10 bg-zinc-950/70 px-6 py-12 text-center shadow-xl shadow-black/30 sm:px-8">
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
             <Link href="/is-birliklerimiz/rixos-egypt" className="block">
-              <div className="aspect-[4/5] w-full max-w-xs overflow-hidden rounded-xl border border-white/10 bg-white transition-all hover:border-sky-400/50 hover:shadow-lg">
+              <div className="aspect-[4/6] w-full overflow-hidden rounded-xl border border-white/10 bg-white transition-all hover:border-sky-400/50 hover:shadow-lg md:aspect-[4/5]">
                 <div className="flex h-full flex-col">
                   <div className="flex flex-1 items-center justify-center p-4">
                     <img
-                      src="/Join Pr Marka Logoları/rixos_egypt_hotels.png"
+                      src="/marka-logolari/rixos_egypt_hotels.png"
                       alt="Rixos Egypt Hotels"
                       className="h-auto w-full max-w-[547px] object-contain"
                     />
                   </div>
-                  <div className="border-t border-zinc-200 px-4 py-3 text-center text-sm text-zinc-600">
-                    Katılımcı, Etkileşim
+                  <div className="border-t border-zinc-200 px-3 py-2 text-center text-[13px] leading-5 text-zinc-600 md:px-4 md:py-3 md:text-sm">
+                    <p>Katılımcı: 63</p>
+                    <p>Etkileşim: 9.95M</p>
                   </div>
                 </div>
               </div>
             </Link>
             <Link href="/is-birliklerimiz/ajet" className="block">
-              <div className="aspect-[4/5] w-full max-w-xs overflow-hidden rounded-xl border border-white/10 bg-white transition-all hover:border-sky-400/50 hover:shadow-lg">
+              <div className="aspect-[4/6] w-full overflow-hidden rounded-xl border border-white/10 bg-white transition-all hover:border-sky-400/50 hover:shadow-lg md:aspect-[4/5]">
                 <div className="flex h-full flex-col">
                   <div className="flex flex-1 items-center justify-center p-4">
                     <img
-                      src="/Join Pr Marka Logoları/ajet_logo.png"
+                      src="/marka-logolari/ajet_logo.png"
                       alt="AJet"
                       className="h-auto w-full max-w-[360px] object-contain"
                     />
                   </div>
-                  <div className="border-t border-zinc-200 px-4 py-3 text-center text-sm text-zinc-600">
-                    Katılımcı, Etkileşim
+                  <div className="border-t border-zinc-200 px-3 py-2 text-center text-[13px] leading-5 text-zinc-600 md:px-4 md:py-3 md:text-sm">
+                    <p>Katılımcı: 65</p>
+                    <p>Etkileşim: 216.91K</p>
                   </div>
                 </div>
               </div>
             </Link>
             <Link href="/is-birliklerimiz/prontotour" className="block">
-              <div className="aspect-[4/5] w-full max-w-xs overflow-hidden rounded-xl border border-white/10 bg-white transition-all hover:border-sky-400/50 hover:shadow-lg">
+              <div className="aspect-[4/6] w-full overflow-hidden rounded-xl border border-white/10 bg-white transition-all hover:border-sky-400/50 hover:shadow-lg md:aspect-[4/5]">
                 <div className="flex h-full flex-col">
                   <div className="flex flex-1 items-center justify-center p-4">
                     <img
-                      src="/Join Pr Marka Logoları/prontotour_logos.png"
+                      src="/marka-logolari/prontotour_logos.png"
                       alt="Prontotour"
                       className="h-auto w-full max-w-[360px] object-contain"
                     />
                   </div>
-                  <div className="border-t border-zinc-200 px-4 py-3 text-center text-sm text-zinc-600">
-                    Katılımcı, Etkileşim
+                  <div className="border-t border-zinc-200 px-3 py-2 text-center text-[13px] leading-5 text-zinc-600 md:px-4 md:py-3 md:text-sm">
+                    <p>Katılımcı: 69</p>
+                    <p>Etkileşim: 5.59M</p>
                   </div>
                 </div>
               </div>
             </Link>
             <Link href="/is-birliklerimiz/swissotel-sharm-el-sheikh" className="block">
-              <div className="aspect-[4/5] w-full max-w-xs overflow-hidden rounded-xl border border-white/10 bg-white transition-all hover:border-sky-400/50 hover:shadow-lg">
+              <div className="aspect-[4/6] w-full overflow-hidden rounded-xl border border-white/10 bg-white transition-all hover:border-sky-400/50 hover:shadow-lg md:aspect-[4/5]">
                 <div className="flex h-full flex-col">
                   <div className="flex flex-1 items-center justify-center p-4">
                     <img
-                      src="/Join Pr Marka Logoları/swissotel_sharm.png"
+                      src="/marka-logolari/swissotel_sharm.png"
                       alt="Swissotel Sharm"
                       className="h-auto w-full max-w-[360px] object-contain"
                     />
                   </div>
-                  <div className="border-t border-zinc-200 px-4 py-3 text-center text-sm text-zinc-600">
-                    Katılımcı, Etkileşim
+                  <div className="border-t border-zinc-200 px-3 py-2 text-center text-[13px] leading-5 text-zinc-600 md:px-4 md:py-3 md:text-sm">
+                    <p>Katılımcı: 8</p>
+                    <p>Etkileşim: 249.11K</p>
                   </div>
                 </div>
               </div>
             </Link>
-            <div className="aspect-[4/5] w-full max-w-xs overflow-hidden rounded-xl border border-white/10 bg-white">
-              <div className="flex h-full flex-col">
-                <div className="flex flex-1 items-center justify-center p-4">
-                  <img
-                    src="/Join Pr Marka Logoları/vida_hotel.png"
-                    alt="Vida Beach Resort Marassi Al Bahrain"
-                    className="h-auto w-full max-w-[360px] object-contain"
-                  />
-                </div>
-                <div className="border-t border-zinc-200 px-4 py-3 text-center text-sm text-zinc-600">
-                  Katılımcı, Etkileşim
-                </div>
-              </div>
-            </div>
-            <Link href="/is-birliklerimiz/marriott-dead-sea" className="block">
-              <div className="aspect-[4/5] w-full max-w-xs overflow-hidden rounded-xl border border-white/10 bg-white transition-all hover:border-sky-400/50 hover:shadow-lg">
+            <Link href="/is-birliklerimiz/villa-resorts-maldives" className="block">
+              <div className="aspect-[4/6] w-full overflow-hidden rounded-xl border border-white/10 bg-white transition-all hover:border-sky-400/50 hover:shadow-lg md:aspect-[4/5]">
                 <div className="flex h-full flex-col">
                   <div className="flex flex-1 items-center justify-center p-4">
                     <img
-                      src="/Join Pr Marka Logoları/marriot_deat_sea.png"
+                      src="/marka-logolari/villa-resorts-maldives.png"
+                      alt="Villa Resorts Maldives"
+                      className="h-auto w-full max-w-[360px] object-contain"
+                    />
+                  </div>
+                  <div className="border-t border-zinc-200 px-3 py-2 text-center text-[13px] leading-5 text-zinc-600 md:px-4 md:py-3 md:text-sm">
+                    <p>Katılımcı: 3</p>
+                    <p>Etkileşim: 291.71K</p>
+                  </div>
+                </div>
+              </div>
+            </Link>
+            <Link href="/is-birliklerimiz/marriott-dead-sea" className="block">
+              <div className="aspect-[4/6] w-full overflow-hidden rounded-xl border border-white/10 bg-white transition-all hover:border-sky-400/50 hover:shadow-lg md:aspect-[4/5]">
+                <div className="flex h-full flex-col">
+                  <div className="flex flex-1 items-center justify-center p-4">
+                    <img
+                      src="/marka-logolari/marriot_deat_sea.png"
                       alt="Marriott Resort Dead Sea"
                       className="h-auto w-full max-w-[518px] object-contain"
                     />
                   </div>
-                  <div className="border-t border-zinc-200 px-4 py-3 text-center text-sm text-zinc-600">
-                    Katılımcı, Etkileşim
+                  <div className="border-t border-zinc-200 px-3 py-2 text-center text-[13px] leading-5 text-zinc-600 md:px-4 md:py-3 md:text-sm">
+                    <p>Katılımcı: 3</p>
+                    <p>Etkileşim: 1.13M</p>
                   </div>
                 </div>
               </div>

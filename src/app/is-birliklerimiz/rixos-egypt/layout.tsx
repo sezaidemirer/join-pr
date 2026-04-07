@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const translations = locale === 'tr' ? tr : en;
   const page = (translations as { pages?: { isbirliklerimiz?: { rixosEgypt?: { seo?: { title: string; description: string } } } } }).pages?.isbirliklerimiz?.rixosEgypt;
   const title = page?.seo?.title ?? 'Rixos Egypt İş Birliği | Join PR';
-  const description = page?.seo?.description ?? 'Rixos Egypt Hotels ile influencer kampanyası. Join PR iş birlikleri raporu.';
+  const description = page?.seo?.description ?? 'Rixos Egypt Hotels ile katılımcı odaklı dijital kampanya. Join PR iş birlikleri raporu.';
   const ogLocale = locale === 'tr' ? 'tr_TR' : 'en_US';
   const altLocale = locale === 'tr' ? 'en_US' : 'tr_TR';
 
@@ -22,8 +22,8 @@ export async function generateMetadata(): Promise<Metadata> {
     keywords: [
       'Rixos Egypt',
       'Rixos Egypt Hotels',
-      'konaklama influencer',
-      'influencer marketing',
+      'konaklama katılımcı kampanyası',
+      'dijital pazarlama',
       'Join PR',
       'iş birlikleri',
       'turizm kampanyası',

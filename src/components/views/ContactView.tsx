@@ -1,6 +1,7 @@
 'use client';
 
 import { useLanguage } from '@/context/LanguageContext';
+import { FormConsentEmbed } from '@/components/FormConsentEmbed';
 
 export function ContactView() {
   const { translations } = useLanguage();
@@ -19,12 +20,10 @@ export function ContactView() {
 
       <section className="grid gap-10 md:grid-cols-[1.2fr_0.8fr]">
         <div className="rounded-3xl border border-white/10 bg-zinc-950/70 p-3 shadow-lg shadow-black/30 md:p-5">
-          <iframe
-            aria-label="Join-Form-1"
-            frameBorder="0"
-            style={{ height: '500px', width: '99%', border: 'none' }}
+          <FormConsentEmbed
+            ariaLabel="Join-Form-1"
             src="https://forms.joinpr.com.tr/joinus1/form/JoinForm1/formperma/T-5iAqeB4-qlYjbBH77U8zQG3QVHhRjry8UTgSanN34"
-            title="Join CRM Form"
+            iframeHeight={500}
           />
         </div>
         <aside className="flex flex-col gap-6 rounded-3xl border border-white/10 bg-zinc-950/70 p-8">

@@ -37,6 +37,15 @@ function VideoWithFirstFrame({ src, className }: { src: string; className?: stri
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const isVimeo = /(?:https?:\/\/)?(?:www\.)?(?:vimeo\.com\/\d+|player\.vimeo\.com\/video\/\d+)/i.test(src);
+  const baseVimeoSrc = isVimeo
+    ? /player\.vimeo\.com\/video\/\d+/i.test(src)
+      ? src
+      : src.replace(/(?:https?:\/\/)?(?:www\.)?vimeo\.com\/(\d+).*/i, 'https://player.vimeo.com/video/$1')
+    : '';
+  const vimeoEmbedSrc = baseVimeoSrc
+    ? `${baseVimeoSrc}${baseVimeoSrc.includes('?') ? '&' : '?'}badge=0&title=0&byline=0&portrait=0&dnt=1`
+    : '';
 
   useEffect(() => {
     const video = videoRef.current;
@@ -184,23 +193,35 @@ function VideoWithFirstFrame({ src, className }: { src: string; className?: stri
       className={isFullscreen ? 'flex min-h-screen min-w-full items-center justify-center bg-black' : 'relative h-full w-full bg-black'}
     >
       <div className={isFullscreen ? 'relative h-full max-h-[100vh] w-auto max-w-full shrink-0 aspect-[9/16]' : 'relative h-full w-full'}>
-        <video
-          ref={videoRef}
-          src={src}
-          playsInline
-          preload="none"
-          muted={muted}
-          onClick={togglePlay}
-          onLoadedMetadata={(e) => setDuration(e.currentTarget.duration)}
-          className={`h-full w-full object-cover ${className ?? ''}`}
-        />
-        <canvas
-          ref={canvasRef}
-          className="pointer-events-none absolute inset-0 h-full w-full object-cover"
-          style={{ display: posterReady && !playing ? 'block' : 'none' }}
-          aria-hidden
-        />
-        {controlsBar}
+        {isVimeo ? (
+          <iframe
+            src={vimeoEmbedSrc}
+            className={`h-full w-full ${className ?? ''}`}
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            allowFullScreen
+            title="Vimeo video"
+          />
+        ) : (
+          <>
+            <video
+              ref={videoRef}
+              src={src}
+              playsInline
+              preload="none"
+              muted={muted}
+              onClick={togglePlay}
+              onLoadedMetadata={(e) => setDuration(e.currentTarget.duration)}
+              className={`h-full w-full object-cover ${className ?? ''}`}
+            />
+            <canvas
+              ref={canvasRef}
+              className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+              style={{ display: posterReady && !playing ? 'block' : 'none' }}
+              aria-hidden
+            />
+            {controlsBar}
+          </>
+        )}
       </div>
     </div>
   );
@@ -323,12 +344,12 @@ const SWISS_CREATORS = [
 ];
 
 const SWISS_FEATURED_CONTENT: { src?: string; label: string }[] = [
-  { src: '/rixos-content/diego_fusina.mp4', label: 'Diego Fusina' },
-  { src: '/rixos-content/gizem_gunes.mp4', label: 'Gizem Güneş' },
-  { label: 'Rojda Demirer' },
-  { label: 'Emre Bulut' },
-  { label: 'Baran Bölükbaşı' },
-  { label: 'Çağla Boz' },
+  { src: 'https://player.vimeo.com/video/1178980390?badge=0&autopause=0&player_id=0&app_id=58479', label: 'Diego Fusina' },
+  { src: 'https://player.vimeo.com/video/1178980439?badge=0&autopause=0&player_id=0&app_id=58479', label: 'Gizem Güneş' },
+  { src: 'https://player.vimeo.com/video/1178980353?badge=0&autopause=0&player_id=0&app_id=58479', label: 'Gizem Güneş' },
+  { src: 'https://player.vimeo.com/video/1178980419?badge=0&autopause=0&player_id=0&app_id=58479', label: 'Diego Fusina' },
+  { src: 'https://player.vimeo.com/video/1178980336?badge=0&autopause=0&player_id=0&app_id=58479', label: 'Batuhan Ekşi' },
+  { src: 'https://player.vimeo.com/video/1178980312?badge=0&autopause=0&player_id=0&app_id=58479', label: 'Çağla Boz' },
 ];
 
 type ParticipatingInfluencer = { name: string; imagePath?: string };
@@ -352,7 +373,7 @@ export default function SwissotelSharmElSheikhPage() {
       <div className="mx-auto max-w-6xl px-6 py-12 pb-20">
         <div className="mb-8 flex flex-col items-center gap-4 text-center">
           <div className="flex h-32 w-32 items-center justify-center overflow-hidden rounded-full border-2 border-white/20 bg-white p-4">
-            <img src="/Join Pr Marka Logoları/swissotel_sharm.png" alt="Swissôtel Sharm El Sheikh" className="h-full w-full object-contain" />
+            <img src="/marka-logolari/swissotel_sharm.png" alt="Swissôtel Sharm El Sheikh" className="h-full w-full object-contain" />
           </div>
           <h1 className="text-2xl font-semibold text-white md:text-3xl">Swissôtel Sharm El Sheikh İş Birliği Raporu</h1>
         </div>
@@ -363,7 +384,7 @@ export default function SwissotelSharmElSheikhPage() {
             <p className="mt-1 text-3xl font-bold text-white">{SWISS_KPIS.posts}</p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-zinc-900/60 px-6 py-5">
-            <p className="text-xs font-medium uppercase tracking-wider text-zinc-400">Katılımcı Influencer</p>
+            <p className="text-xs font-medium uppercase tracking-wider text-zinc-400">Katılımcılar</p>
             <p className="mt-1 text-3xl font-bold text-white">{SWISS_KPIS.influencers}</p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-zinc-900/60 px-6 py-5">
@@ -382,8 +403,7 @@ export default function SwissotelSharmElSheikhPage() {
               <h3 className="mb-4 text-lg font-semibold text-white">Kampanya Detayları</h3>
               <p className="whitespace-pre-line rounded-xl border border-white/10 bg-zinc-900/40 p-6 text-zinc-300">
                 Swissôtel Sharm El Sheikh için hayata geçirdiğimiz iletişim çalışmalarında, deneyim odaklı seyahat içerikleriyle markanın özgün atmosferini güçlü bir destinasyon hikâyesine dönüştürdük.{'\n\n'}
-                Swissôtel Sharm El Sheikh&apos;in sunduğu resort deneyimini; estetik, konfor ve destinasyon duygusunu öne çıkaran bir iletişim kurgusuyla görünür hale getirdik. Üretilen içeriklerde yalnızca otelin fiziksel özellikleri değil, misafire hissettirdiği atmosfer, deneyimin ritmi ve Sharm El Sheikh&apos;in güçlü tatil enerjisi de ön plana taşındı.{'\n\n'}
-                Rapor demografisinde kitle ağırlığı Türkiye başta olmak üzere Suudi Arabistan, Irak ve Fas gibi pazarlardan güçlü pay göstermiştir.
+                Swissôtel Sharm El Sheikh&apos;in sunduğu resort deneyimini; estetik, konfor ve destinasyon duygusunu öne çıkaran bir iletişim kurgusuyla görünür hale getirdik. Üretilen içeriklerde yalnızca otelin fiziksel özellikleri değil, misafire hissettirdiği atmosfer, deneyimin ritmi ve Sharm El Sheikh&apos;in güçlü tatil enerjisi de ön plana taşıdık.
               </p>
             </div>
 
@@ -395,7 +415,7 @@ export default function SwissotelSharmElSheikhPage() {
                   <p className="mt-1 text-xl font-bold text-white">{SWISS_PERFORMANCE.posts}</p>
                 </div>
                 <div className="rounded-xl border border-white/10 bg-zinc-900/40 p-4">
-                  <p className="text-xs text-zinc-400">Creators</p>
+                  <p className="text-xs text-zinc-400">Katılımcılar</p>
                   <p className="mt-1 text-xl font-bold text-white">{SWISS_PERFORMANCE.creators}</p>
                 </div>
                 <div className="rounded-xl border border-white/10 bg-zinc-900/40 p-4">
@@ -442,7 +462,7 @@ export default function SwissotelSharmElSheikhPage() {
             </div>
 
             <div>
-              <h3 className="mb-4 text-lg font-semibold text-white">En Çok Görüntülenme Alan İçerik Üreticileri</h3>
+              <h3 className="mb-4 text-lg font-semibold text-white">En Çok Görüntülenme Alan Katılımcılar</h3>
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {SWISS_CREATORS.map((c) => (
                   <div key={c.handle} className="rounded-xl border border-white/10 bg-zinc-900/40 p-5">
@@ -482,7 +502,7 @@ export default function SwissotelSharmElSheikhPage() {
             </div>
 
             <div className="mt-12 border-t border-white/10 pt-10">
-              <h3 className="mb-6 text-lg font-semibold text-white">Kampanyaya Katılan Tüm Influencer&apos;lar</h3>
+              <h3 className="mb-6 text-lg font-semibold text-white">Kampanyaya Katılan Tüm Katılımcılar</h3>
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6 sm:gap-6">
                 {SWISS_ALL_INFLUENCERS.map((person) => (
                   <div key={person.name} className="flex flex-col items-center gap-2">

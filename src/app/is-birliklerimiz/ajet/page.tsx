@@ -45,6 +45,15 @@ function VideoWithFirstFrame({ src, className }: { src: string; className?: stri
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const isVimeo = /(?:https?:\/\/)?(?:www\.)?(?:vimeo\.com\/\d+|player\.vimeo\.com\/video\/\d+)/i.test(src);
+  const baseVimeoSrc = isVimeo
+    ? /player\.vimeo\.com\/video\/\d+/i.test(src)
+      ? src
+      : src.replace(/(?:https?:\/\/)?(?:www\.)?vimeo\.com\/(\d+).*/i, 'https://player.vimeo.com/video/$1')
+    : '';
+  const vimeoEmbedSrc = baseVimeoSrc
+    ? `${baseVimeoSrc}${baseVimeoSrc.includes('?') ? '&' : '?'}badge=0&title=0&byline=0&portrait=0&dnt=1`
+    : '';
 
   useEffect(() => {
     const video = videoRef.current;
@@ -218,23 +227,35 @@ function VideoWithFirstFrame({ src, className }: { src: string; className?: stri
             : 'relative h-full w-full'
         }
       >
-        <video
-          ref={videoRef}
-          src={src}
-          playsInline
-          preload="none"
-          muted={muted}
-          onClick={togglePlay}
-          onLoadedMetadata={(e) => setDuration(e.currentTarget.duration)}
-          className={`h-full w-full object-cover ${className ?? ''}`}
-        />
-        <canvas
-          ref={canvasRef}
-          className="pointer-events-none absolute inset-0 h-full w-full object-cover"
-          style={{ display: posterReady && !playing ? 'block' : 'none' }}
-          aria-hidden
-        />
-        {controlsBar}
+        {isVimeo ? (
+          <iframe
+            src={vimeoEmbedSrc}
+            className={`h-full w-full ${className ?? ''}`}
+            allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
+            allowFullScreen
+            title="Vimeo video"
+          />
+        ) : (
+          <>
+            <video
+              ref={videoRef}
+              src={src}
+              playsInline
+              preload="none"
+              muted={muted}
+              onClick={togglePlay}
+              onLoadedMetadata={(e) => setDuration(e.currentTarget.duration)}
+              className={`h-full w-full object-cover ${className ?? ''}`}
+            />
+            <canvas
+              ref={canvasRef}
+              className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+              style={{ display: posterReady && !playing ? 'block' : 'none' }}
+              aria-hidden
+            />
+            {controlsBar}
+          </>
+        )}
       </div>
     </div>
   );
@@ -299,8 +320,8 @@ type AjetChallengePdfData = {
 };
 
 const AJET_CHALLENGE_PDF_DATA: AjetChallengePdfData = {
-  description: `Havayolu deneyimi yalnızca bir ulaşım süreci değil, aynı zamanda keşif, ilham ve yeni hikâyelerin başlangıç noktasıdır. Bu bakış açısıyla kurgulanan kampanya kapsamında, AJet'in uçuş ağında yer alan dikkat çekici şehirler ve destinasyonlar, dijital dünyanın en güçlü anlatıcıları olan influencer'lar aracılığıyla geniş kitlelere ulaştırılmıştır.
-"AAA dedirten destinasyonlar" temasıyla şekillenen kampanya; seyahat tutkusunu tetikleyen, keşif duygusunu harekete geçiren ve her biri kendine özgü hikâyeler barındıran şehirleri odağına almıştır. Influencer'ların özgün içerik üretim gücü sayesinde destinasyonlar yalnızca bir rota olarak değil, deneyimlenebilir bir yaşam alanı olarak anlatılmış; şehirlerin atmosferi, kültürü, gastronomisi ve yerel dokusu dijital hikâyeler aracılığıyla görünür kılınmıştır.`,
+  description: `Havayolu deneyimi yalnızca bir ulaşım süreci değil, aynı zamanda keşif, ilham ve yeni hikâyelerin başlangıç noktasıdır. Bu bakış açısıyla kurgulanan kampanya kapsamında, AJet'in uçuş ağında yer alan dikkat çekici şehirler ve destinasyonlar, dijital dünyanın en güçlü anlatıcıları olan katılımcılar aracılığıyla geniş kitlelere ulaştırılmıştır.
+"AAA dedirten destinasyonlar" temasıyla şekillenen kampanya; seyahat tutkusunu tetikleyen, keşif duygusunu harekete geçiren ve her biri kendine özgü hikâyeler barındıran şehirleri odağına almıştır. Katılımcıların özgün içerik üretim gücü sayesinde destinasyonlar yalnızca bir rota olarak değil, deneyimlenebilir bir yaşam alanı olarak anlatılmış; şehirlerin atmosferi, kültürü, gastronomisi ve yerel dokusu dijital hikâyeler aracılığıyla görünür kılınmıştır.`,
   performance: {
     posts: 414,
     creators: 65,
@@ -322,7 +343,7 @@ const AJET_CHALLENGE_PDF_DATA: AjetChallengePdfData = {
     { name: 'Şeyma Büşra Gözdamga', handle: 'seymayolda', imageSlug: 'seyma-busra-gozdamga', imageExt: 'webp', posts: 6, views: '530.27K', engagements: '14.04K', engagementRate: '0.6%', reach: '271.68K', emv: '$39.1K', followers: '391.6K', shares: '843', likes: '13.79K', comments: 241, featuredContent: { type: 'image', url: '/ajet-content/seyma-1.webp' } },
     { name: 'Onurcan Çam', handle: 'onurcancamm', imageSlug: 'onurcan-cam', imageExt: 'webp', posts: 6, views: '709.31K', engagements: '11.12K', engagementRate: '0.38%', reach: '253.95K', emv: '$36.2K', followers: '486.5K', shares: '9.96K', likes: '10.88K', comments: 245, featuredContent: { type: 'image', url: '/ajet-content/onurcan-1.webp' } },
     { name: 'Gizem Yüksel', handle: 'orasiseninburasibenim', imageSlug: 'gizem-yuksel', imageExt: 'webp', posts: 8, views: '239.06K', engagements: '4.41K', engagementRate: '0.41%', reach: '148.64K', emv: '$21.8K', followers: '134.27K', shares: '160', likes: '3.61K', comments: 211, featuredContent: { type: 'image', url: '/ajet-content/gizem-1.webp' } },
-    { name: 'Arda Türkmen', handle: 'ardaturkmen', imageSlug: 'arda_turkmen', imageExt: 'webp', posts: 1, views: '20.16K', engagements: '0', engagementRate: '0%', reach: '15K', emv: '$6.3K', followers: '–', shares: '0', likes: '0', comments: 0, featuredContent: { type: 'video', url: '/ajet-content/arda_turkmen.mp4' } },
+    { name: 'Arda Türkmen', handle: 'ardaturkmen', imageSlug: 'arda_turkmen', imageExt: 'webp', posts: 1, views: '20.16K', engagements: '0', engagementRate: '0%', reach: '15K', emv: '$6.3K', followers: '–', shares: '0', likes: '0', comments: 0, featuredContent: { type: 'video', url: 'https://player.vimeo.com/video/1178953638?badge=0&autopause=0&player_id=0&app_id=58479' } },
   ],
   topContent: [
     { views: '465.97K', engagements: '5.59K', handle: 'anilaltann' },
@@ -462,11 +483,11 @@ const CAMPAIGNS: CampaignData[] = [
     date: 'Eylül - Ekim 2025',
     kpis: { campaigns: 3, influencers: 6, engagement: '2.4M', value: '₺1.2M' },
     influencers: [
-      { name: 'Anıl Altan', role: 'İçerik Üreticisi' },
-      { name: 'Dilara Özkan', role: 'İçerik Üreticisi' },
-      { name: 'Şeyma Büşra Gözdamga', role: 'İçerik Üreticisi' },
-      { name: 'Onurcan Çam', role: 'İçerik Üreticisi' },
-      { name: 'Gizem Yüksel', role: 'İçerik Üreticisi' },
+      { name: 'Anıl Altan', role: 'Katılımcı' },
+      { name: 'Dilara Özkan', role: 'Katılımcı' },
+      { name: 'Şeyma Büşra Gözdamga', role: 'Katılımcı' },
+      { name: 'Onurcan Çam', role: 'Katılımcı' },
+      { name: 'Gizem Yüksel', role: 'Katılımcı' },
     ],
     engagementData: [
       { month: 'Oca', value: 42 },
@@ -574,7 +595,7 @@ export default function AjetPage() {
         <div className="mb-8 flex flex-col items-center gap-4 text-center">
           <div className="flex h-32 w-32 items-center justify-center overflow-hidden rounded-full border-2 border-white/20 bg-white p-4">
             <img
-              src="/Join Pr Marka Logoları/ajet_logo.png"
+              src="/marka-logolari/ajet_logo.png"
               alt="AJet"
               className="h-full w-full object-contain"
             />
@@ -589,7 +610,7 @@ export default function AjetPage() {
             <p className="mt-1 text-3xl font-bold text-white">{TOTAL_KPIS.campaigns}</p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-zinc-900/60 px-6 py-5">
-            <p className="text-xs font-medium uppercase tracking-wider text-zinc-400">Katılımcı Influencer</p>
+            <p className="text-xs font-medium uppercase tracking-wider text-zinc-400">Katılımcılar</p>
             <p className="mt-1 text-3xl font-bold text-white">{TOTAL_KPIS.influencers}</p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-zinc-900/60 px-6 py-5">
@@ -623,7 +644,7 @@ export default function AjetPage() {
                     <p className="text-xl font-bold text-white">{selectedCampaign.pdfData.performance.posts}</p>
                   </div>
                   <div className="rounded-xl border border-white/10 bg-zinc-900/40 p-4">
-                    <p className="text-xs text-zinc-400">Creators</p>
+                    <p className="text-xs text-zinc-400">Katılımcılar</p>
                     <p className="text-xl font-bold text-white">{selectedCampaign.pdfData.performance.creators}</p>
                   </div>
                   <div className="rounded-xl border border-white/10 bg-zinc-900/40 p-4">
@@ -653,9 +674,9 @@ export default function AjetPage() {
                 </div>
               </div>
 
-              {/* En Çok Görüntülenme Alan İçerik Üreticileri (Top 5) */}
+              {/* En çok görüntülenme alan katılımcılar */}
               <div>
-                <h3 className="mb-4 text-lg font-semibold text-white">En Çok Görüntülenme Alan İçerik Üreticileri</h3>
+                <h3 className="mb-4 text-lg font-semibold text-white">En Çok Görüntülenme Alan Katılımcılar</h3>
                 <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                   {selectedCampaign.pdfData.creators.slice(0, 6).map((c) => (
                     <div key={c.handle} className="rounded-xl border border-white/10 bg-zinc-900/40 p-5">
@@ -688,12 +709,12 @@ export default function AjetPage() {
                 <h3 className="mb-4 text-lg font-semibold text-white">Öne Çıkan İçerikler</h3>
                 <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
                   {[
-                    { src: '/ajet-content/anil_altan.mp4', label: 'Anıl Altan' },
-                    { src: '/ajet-content/dilara.mp4', label: 'Dilara Özkan' },
-                    { src: '/ajet-content/gizem.mp4', label: 'Gizem Yüksel' },
-                    { src: '/ajet-content/onurcan.mp4', label: 'Onurcan Çam' },
-                    { src: '/ajet-content/seyma.mp4', label: 'Şeyma Büşra Gözdamga' },
-                    { src: '/ajet-content/arda_turkmen.mp4', label: 'Arda Türkmen' },
+                    { src: 'https://player.vimeo.com/video/1178945644?badge=0&autopause=0&player_id=0&app_id=58479', label: 'Anıl Altan' },
+                    { src: 'https://player.vimeo.com/video/1178950703?badge=0&autopause=0&player_id=0&app_id=58479', label: 'Dilara Özkan' },
+                    { src: 'https://player.vimeo.com/video/1178955906?badge=0&autopause=0&player_id=0&app_id=58479', label: 'Gizem Yüksel' },
+                    { src: 'https://player.vimeo.com/video/1178958369?badge=0&autopause=0&player_id=0&app_id=58479', label: 'Onurcan Çam' },
+                    { src: 'https://player.vimeo.com/video/1178957436?badge=0&autopause=0&player_id=0&app_id=58479', label: 'Şeyma Büşra Gözdamga' },
+                    { src: 'https://player.vimeo.com/video/1178953638?badge=0&autopause=0&player_id=0&app_id=58479', label: 'Arda Türkmen' },
                   ].map(({ src, label }) => (
                     <div key={src} className="flex flex-col items-center gap-2">
                       <div className="w-full max-w-[200px] overflow-hidden rounded-xl border border-white/10 bg-zinc-800">
@@ -709,7 +730,7 @@ export default function AjetPage() {
 
               {/* Kampanyaya Katılan Tüm Influencer'lar - appendix: 3 sütun grid liste */}
               <div className="mt-12 border-t border-white/10 pt-10">
-                <h3 className="mb-6 text-lg font-semibold text-white">Kampanyaya Katılan Tüm Influencer&apos;lar</h3>
+                <h3 className="mb-6 text-lg font-semibold text-white">Kampanyaya Katılan Tüm Katılımcılar</h3>
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
                   {AJET_CHALLENGE_ALL_INFLUENCERS.map((person) => (
                     <div key={person.name} className="flex flex-col items-center gap-2">
@@ -732,7 +753,7 @@ export default function AjetPage() {
             </div>
           ) : (
             <>
-              <h3 className="mb-6 text-lg font-semibold text-white">Kampanyaya Katılan Influencerlar</h3>
+              <h3 className="mb-6 text-lg font-semibold text-white">Kampanyaya Katılan Katılımcılar</h3>
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {selectedCampaign.influencers.map((inf) => (
                   <div
@@ -752,10 +773,10 @@ export default function AjetPage() {
             </>
           )}
 
-          {/* Kampanyaya Katılan Tüm Influencer'lar - appendix (pdfData yoksa): 3 sütun grid */}
+          {/* Kampanyaya katılan tüm katılımcılar (pdfData yoksa): 3 sütun grid */}
           {!selectedCampaign.pdfData && selectedCampaign.influencers.length > 0 && (
             <div className="mt-12 border-t border-white/10 pt-10">
-              <h3 className="mb-6 text-lg font-semibold text-white">Kampanyaya Katılan Tüm Influencer&apos;lar</h3>
+              <h3 className="mb-6 text-lg font-semibold text-white">Kampanyaya Katılan Tüm Katılımcılar</h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
                 {selectedCampaign.influencers.map((inf) => (
                   <div key={inf.name} className="flex flex-col items-center gap-2">

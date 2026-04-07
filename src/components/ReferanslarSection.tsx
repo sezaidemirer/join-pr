@@ -27,12 +27,12 @@ export function ReferanslarSection() {
   if (clientLogos.length === 0) return null;
 
   return (
-    <section className="border-b border-white/10 bg-zinc-900/50 px-6 py-20 md:py-28">
-      <div className="mx-auto flex max-w-6xl flex-col gap-8 rounded-3xl border border-white/10 bg-zinc-950/70 px-6 py-12 text-center shadow-xl shadow-black/30 sm:px-8">
+    <section className="border-b border-white/10 bg-zinc-950 px-6 py-20 md:py-28">
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 rounded-3xl border border-zinc-200 bg-white px-6 py-12 text-center shadow-sm sm:px-8">
         <div className="space-y-3">
-          <h2 className="text-3xl font-semibold text-white md:text-4xl">{title}</h2>
+          <h2 className="text-3xl font-semibold text-zinc-900 md:text-4xl">{title}</h2>
           {description && (
-            <p className="mx-auto max-w-3xl text-sm text-zinc-400 md:text-base">{description}</p>
+            <p className="mx-auto max-w-3xl text-sm text-zinc-600 md:text-base">{description}</p>
           )}
         </div>
         <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 xl:grid-cols-4">
@@ -55,7 +55,7 @@ export function ReferanslarSection() {
             return (
               <div
                 key={logo.name}
-                className={`group relative flex h-28 w-28 items-center justify-center justify-self-center overflow-hidden rounded-full border-2 border-sky-400/80 text-xs font-semibold uppercase tracking-[0.3em] shadow-[0_0_25px_rgba(56,189,248,0.45)] transition-all hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(56,189,248,0.7)] sm:h-32 sm:w-32 sm:text-sm ${
+                className={`group relative flex h-28 w-28 items-center justify-center justify-self-center overflow-hidden rounded-full border-2 border-sky-700/90 text-xs font-semibold uppercase tracking-[0.3em] shadow-[0_0_20px_rgba(3,105,161,0.35)] transition-all hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(3,105,161,0.55)] sm:h-32 sm:w-32 sm:text-sm ${
                   isDarkLogo ? 'bg-black text-white' : 'bg-white text-zinc-600'
                 }`}
               >
@@ -83,7 +83,7 @@ export function ReferanslarSection() {
           )}
           <Link
             href="/is-ortaklarimiz"
-            className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-white transition-all hover:border-white/40 hover:bg-white/5"
+            className="inline-flex items-center gap-2 rounded-full border border-zinc-300 px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-zinc-800 transition-all hover:border-zinc-400 hover:bg-zinc-50"
           >
             {clients?.viewAll ?? 'Hepsini gör'}
           </Link>

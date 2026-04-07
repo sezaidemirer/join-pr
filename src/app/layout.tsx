@@ -1,5 +1,5 @@
-import type { Metadata } from 'next';
-import { Plus_Jakarta_Sans } from 'next/font/google';
+import type { Metadata, Viewport } from 'next';
+import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
 
 import { LayoutSwitcher } from '@/components/LayoutSwitcher';
 import { LanguageProvider } from '@/context/LanguageContext';
@@ -10,6 +10,14 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-plus-jakarta',
+});
+
+/** Basın bülteni başlığı vb. (fi ligatür / kerning sorunları için ayrı kullanılır) */
+const inter = Inter({
+  subsets: ['latin', 'latin-ext'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-inter',
+  display: 'swap',
 });
 
 const siteTitle = 'Join PR';
@@ -58,9 +66,14 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="tr" className={`${plusJakartaSans.variable}`}>
+    <html lang="tr" className={`${plusJakartaSans.variable} ${inter.variable}`}>
       <body className="bg-zinc-950 font-sans text-white antialiased">
         <LanguageProvider>
           <LayoutSwitcher>{children}</LayoutSwitcher>

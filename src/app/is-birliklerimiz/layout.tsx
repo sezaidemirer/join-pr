@@ -27,7 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
       'Join PR partners',
       'PR agency clients',
       'brand partnerships',
-      'influencer kampanyası',
+      'katılımcı kampanyası',
       'konaklama',
       'havacılık',
       'turizm',

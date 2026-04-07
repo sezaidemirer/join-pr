@@ -232,6 +232,7 @@ export default async function OfferPublicPage({ params }: PageParams) {
   const videos = expandVideoItems((offer.video_gallery ?? []) as GalleryVideo[]);
   const horizontalVideos = videos.filter((x) => (x.orientation || 'horizontal') === 'horizontal');
   const verticalVideos = videos.filter((x) => x.orientation === 'vertical');
+  const sampleItems = (offer.sample_contents ?? []).map((x) => String(x).trim()).filter(Boolean);
 
   return (
     <main className="min-h-screen bg-zinc-950 px-6 py-12 text-zinc-100">
@@ -242,7 +243,9 @@ export default async function OfferPublicPage({ params }: PageParams) {
 
         <header className="space-y-3 rounded-2xl border border-zinc-800 bg-zinc-900/50 p-6">
           <p className="text-xs uppercase tracking-[0.2em] text-zinc-400">
-            Join PR - Projeniz Icin Dusunulen Ornek Icerikler
+            {sampleItems.length > 0
+              ? 'Join PR - Projeniz Icin Dusunulen Ornek Icerikler'
+              : 'Join PR - Proje Sunumu'}
           </p>
           <h1 className="text-3xl font-semibold">{offer.project_title}</h1>
           <p className="text-zinc-300">
@@ -251,17 +254,16 @@ export default async function OfferPublicPage({ params }: PageParams) {
           {offer.summary ? <p className="text-zinc-200">{offer.summary}</p> : null}
         </header>
 
-        <section className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
-          <h2 className="mb-4 text-xl font-semibold">Ornek Icerikler</h2>
-          <ul className="list-disc space-y-2 pl-5 text-zinc-200">
-            {(offer.sample_contents ?? []).map((item, idx) => (
-              <li key={`${idx}-${item.slice(0, 20)}`}>{item}</li>
-            ))}
-            {(offer.sample_contents ?? []).length === 0 ? (
-              <li className="text-zinc-500">Henuz icerik eklenmedi.</li>
-            ) : null}
-          </ul>
-        </section>
+        {sampleItems.length > 0 ? (
+          <section className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
+            <h2 className="mb-4 text-xl font-semibold">Ornek Icerikler</h2>
+            <ul className="list-disc space-y-2 pl-5 text-zinc-200">
+              {sampleItems.map((item, idx) => (
+                <li key={`${idx}-${item.slice(0, 20)}`}>{item}</li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
 
         <section className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
           <h2 className="mb-4 text-xl font-semibold">Foto Galeri</h2>

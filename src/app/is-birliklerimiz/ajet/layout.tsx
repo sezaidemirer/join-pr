@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const translations = locale === 'tr' ? tr : en;
   const page = (translations as { pages?: { isbirliklerimiz?: { ajet?: { seo?: { title: string; description: string } } } } }).pages?.isbirliklerimiz?.ajet;
   const title = page?.seo?.title ?? 'AJet İş Birliği | Join PR';
-  const description = page?.seo?.description ?? 'AJet ile influencer kampanyası performans raporu. Join PR iş birlikleri.';
+  const description = page?.seo?.description ?? 'AJet ile katılımcı odaklı kampanya performans raporu. Join PR iş birlikleri.';
   const ogLocale = locale === 'tr' ? 'tr_TR' : 'en_US';
   const altLocale = locale === 'tr' ? 'en_US' : 'tr_TR';
 
@@ -21,9 +21,9 @@ export async function generateMetadata(): Promise<Metadata> {
     description,
     keywords: [
       'AJet',
-      'AJet influencer',
+      'AJet katılımcı kampanyası',
       'havacılık kampanyası',
-      'influencer marketing',
+      'dijital pazarlama',
       'Join PR',
       'iş birlikleri',
       'EMV',

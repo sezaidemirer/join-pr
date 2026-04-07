@@ -42,7 +42,6 @@ export async function POST(req: NextRequest) {
       photoGallery,
       videoGallery,
       notes,
-      noindex,
     } = body ?? {};
 
     if (!brandName || !offerDate || !projectTitle) {
@@ -63,7 +62,7 @@ export async function POST(req: NextRequest) {
       photoGallery: Array.isArray(photoGallery) ? photoGallery : [],
       videoGallery: Array.isArray(videoGallery) ? videoGallery : [],
       notes,
-      noindex: noindex !== false,
+      noindex: false,
     });
 
     const projePath = `/proje/${offer.brand_slug}/${offer.date_slug}`;

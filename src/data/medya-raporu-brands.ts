@@ -2,6 +2,8 @@
  * Medya yansıma raporu – marka ve rapor sayfaları için veri
  */
 
+import { MARKA_LOGOLARI_PUBLIC_PREFIX } from '@/lib/marka-logolari-public';
+
 export type BrandSlug = 'rixos' | 'swissotel' | 'prontotour' | 'ajet' | 'marriott';
 
 export interface BrandProject {
@@ -16,13 +18,12 @@ export interface BrandProject {
 export interface Brand {
   slug: BrandSlug;
   name: string;
-  /** Logo dosya yolu (public içinden; Join Pr Marka Logoları klasöründeki logolar kullanılıyor) */
+  /** Logo dosya yolu (`public/marka-logolari` — müşteri markası, mecra logosu değil) */
   logo?: string;
   projects: BrandProject[];
 }
 
-/** Join Pr Marka Logoları klasör yolu (public altında) */
-const MARKA_LOGOLARI = '/Join Pr Marka Logoları';
+const MARKA_LOGOLARI = MARKA_LOGOLARI_PUBLIC_PREFIX;
 
 export const MEDYA_RAPORU_BRANDS: Brand[] = [
   {

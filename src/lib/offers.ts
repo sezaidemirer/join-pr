@@ -3,14 +3,10 @@ import { createClient } from '@supabase/supabase-js';
 
 import { normalizeSlugPart, toDateSlug } from '@/lib/slug';
 import { buildPublicProjectUrl } from '@/lib/project-url';
+import { PROJECT_TYPE_PREFIX, type ProjectType } from '@/lib/project-type-from-slug';
 
-export type ProjectType = 'production' | 'sponsorship' | 'press';
-
-const PROJECT_TYPE_PREFIX: Record<ProjectType, string> = {
-  production: 'produksiyon-projesi',
-  sponsorship: 'sponsorluk-projesi',
-  press: 'basin-iletisim-projesi',
-};
+export type { ProjectType } from '@/lib/project-type-from-slug';
+export { inferProjectTypeFromBrandSlug } from '@/lib/project-type-from-slug';
 
 export type OfferRecord = {
   id: string;
@@ -71,13 +67,6 @@ function normalizeNotesForDb(notes: unknown): string | null {
       return null;
     }
   }
-  return null;
-}
-
-export function inferProjectTypeFromBrandSlug(brandSlug: string): ProjectType | null {
-  if (brandSlug.startsWith(`${PROJECT_TYPE_PREFIX.production}-`)) return 'production';
-  if (brandSlug.startsWith(`${PROJECT_TYPE_PREFIX.sponsorship}-`)) return 'sponsorship';
-  if (brandSlug.startsWith(`${PROJECT_TYPE_PREFIX.press}-`)) return 'press';
   return null;
 }
 
@@ -149,7 +138,7 @@ export async function createOffer(input: {
     photo_gallery: input.photoGallery ?? [],
     video_gallery: input.videoGallery ?? [],
     notes: normalizeNotesForDb(input.notes),
-    noindex: input.noindex ?? true,
+    noindex: input.noindex === true,
   };
 
   const { data, error } = await supabase
@@ -210,7 +199,7 @@ export async function updateOffer(
     photo_gallery: input.photoGallery ?? [],
     video_gallery: input.videoGallery ?? [],
     notes: normalizeNotesForDb(input.notes),
-    noindex: input.noindex ?? true,
+    noindex: input.noindex === true,
   };
 
   const { data, error } = await supabase
@@ -237,6 +226,37 @@ export async function updateOffer(
   }
 
   return data as OfferRecord;
+}
+
+export async function deleteOffer(id: string) {
+  const supabase = assertAdminClient();
+
+  const { data: row, error: fetchErr } = await supabase
+    .from('crm_offer_pages')
+    .select('id, crm_quote_id, brand_slug, date_slug')
+    .eq('id', id)
+    .maybeSingle();
+
+  if (fetchErr) throw fetchErr;
+  if (!row) throw new Error('Proje bulunamadi.');
+
+  const { error: delErr } = await supabase.from('crm_offer_pages').delete().eq('id', id);
+  if (delErr) throw delErr;
+
+  if (row.crm_quote_id != null && String(row.crm_quote_id).length > 0) {
+    const { error: quoteErr } = await supabase
+      .from('crm_quotes')
+      .update({ dashboard_url: null })
+      .eq('id', row.crm_quote_id);
+    if (quoteErr) {
+      console.error('deleteOffer: crm_quotes.dashboard_url temizlenemedi', quoteErr);
+    }
+  }
+
+  return {
+    brand_slug: row.brand_slug as string,
+    date_slug: row.date_slug as string,
+  };
 }
 
 export async function getOfferByPath(brandSlug: string, dateSlug: string) {

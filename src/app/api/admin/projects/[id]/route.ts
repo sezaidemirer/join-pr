@@ -1,7 +1,7 @@
 import { revalidatePath } from 'next/cache';
 import { NextRequest, NextResponse } from 'next/server';
 
-import { updateOffer } from '@/lib/offers';
+import { deleteOffer, updateOffer } from '@/lib/offers';
 import { hasAdminCookieInRequest } from '@/lib/admin-auth';
 
 function isAuthorized(req: NextRequest) {
@@ -29,7 +29,6 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
       photoGallery,
       videoGallery,
       notes,
-      noindex,
     } = body ?? {};
 
     if (!brandName || !offerDate || !projectTitle) {
@@ -50,7 +49,7 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
       photoGallery: Array.isArray(photoGallery) ? photoGallery : [],
       videoGallery: Array.isArray(videoGallery) ? videoGallery : [],
       notes,
-      noindex: noindex !== false,
+      noindex: false,
     });
 
     const projePath = `/proje/${offer.brand_slug}/${offer.date_slug}`;
@@ -58,6 +57,22 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
     revalidatePath(`${projePath}/`);
 
     return NextResponse.json({ offer });
+  } catch (error: any) {
+    return NextResponse.json({ error: error.message ?? 'Unexpected error' }, { status: 500 });
+  }
+}
+
+export async function DELETE(req: NextRequest, { params }: { params: { id: string } }) {
+  if (!isAuthorized(req)) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+
+  try {
+    const { brand_slug: brandSlug, date_slug: dateSlug } = await deleteOffer(params.id);
+    const projePath = `/proje/${brandSlug}/${dateSlug}`;
+    revalidatePath(projePath);
+    revalidatePath(`${projePath}/`);
+    return NextResponse.json({ success: true });
   } catch (error: any) {
     return NextResponse.json({ error: error.message ?? 'Unexpected error' }, { status: 500 });
   }

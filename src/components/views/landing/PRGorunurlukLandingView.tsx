@@ -4,10 +4,12 @@ import {
   ChangeEvent,
   FormEvent,
   useEffect,
+  useRef,
   useState,
 } from 'react';
 import Image from 'next/image';
 import { ReferanslarSection } from '@/components/ReferanslarSection';
+import { FormConsentEmbed } from '@/components/FormConsentEmbed';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
@@ -47,9 +49,43 @@ const SEKTOREL_SLIDES = [
   { src: '/reklam_pr_gorunurluk/premium_product.webp', alt: 'Premium tüketim' },
   { src: '/reklam_pr_gorunurluk/beauty_wellness.webp', alt: 'Beauty / Wellness' },
   { src: '/reklam_pr_gorunurluk/fly.webp', alt: 'Havacılık' },
-  { src: '/reklam_pr_gorunurluk/kurumsal.webp', alt: 'Kurumsal markalar' },
   { src: '/reklam_pr_gorunurluk/luxury.webp', alt: 'Lüks otel' },
   { src: '/reklam_pr_gorunurluk/lifestyle.webp', alt: 'Lifestyle' },
+];
+
+const HERO_VIMEO_SLIDES = [
+  { src: 'https://player.vimeo.com/video/1178977111?h=aa2a010373', label: 'Video 2' },
+  { src: 'https://player.vimeo.com/video/1178978221?h=3113924713', label: 'Video 3' },
+  { src: 'https://player.vimeo.com/video/1178965341?h=300176222e', label: 'Video 2' },
+  { src: 'https://player.vimeo.com/video/1178988925?h=015a087f4d', label: 'Video 4' },
+  { src: 'https://player.vimeo.com/video/1178986645?h=40914c0539', label: 'Video 5' },
+  { src: 'https://player.vimeo.com/video/1178990184?h=94b24a315c', label: 'Video 6' },
+  { src: 'https://player.vimeo.com/video/1178945644?h=c52d587b62', label: 'Video 7' },
+  { src: 'https://player.vimeo.com/video/1178953638?h=6be6c37736', label: 'Video 8' },
+];
+
+const RIXOS_VIMEO_SLIDES = [
+  { src: 'https://player.vimeo.com/video/1178950703?h=da2b7a11bf', label: 'Dilara Özkan' },
+  { src: 'https://player.vimeo.com/video/1178963266?badge=0&autopause=0&player_id=0&app_id=58479', label: 'Valentina Raso' },
+  { src: 'https://player.vimeo.com/video/1178967733?badge=0&autopause=0&player_id=0&app_id=58479', label: 'Diego Fusina' },
+  { src: 'https://player.vimeo.com/video/1178959730?badge=0&autopause=0&player_id=0&app_id=58479', label: 'Pelin Akil Altan' },
+  { src: 'https://player.vimeo.com/video/1178957436?h=2be209e53e', label: 'Şeyma Büşra Gözdamga' },
+  { src: 'https://player.vimeo.com/video/1178965088?badge=0&autopause=0&player_id=0&app_id=58479', label: 'Gizem Güneş' },
+];
+
+const PRESS_REPORT_SLIDES = [
+  {
+    src: '/basin_yansima_1.png',
+    alt: 'Basın yansıma raporu 1',
+  },
+  {
+    src: '/Basin_yansima_2.png',
+    alt: 'Basın yansıma raporu 2',
+  },
+  {
+    src: '/basin_yansima_3.png',
+    alt: 'Basın yansıma raporu 3',
+  },
 ];
 
 export function PRGorunurlukLandingView() {
@@ -59,6 +95,12 @@ export function PRGorunurlukLandingView() {
   const [feedback, setFeedback] = useState<string | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [sektorelSlide, setSektorelSlide] = useState(0);
+  const [heroSlide, setHeroSlide] = useState(0);
+  const [rixosSlide, setRixosSlide] = useState(0);
+  const [pressReportSlide, setPressReportSlide] = useState(0);
+  const heroTouchStartX = useRef<number | null>(null);
+  const rixosTouchStartX = useRef<number | null>(null);
+  const pressTouchStartX = useRef<number | null>(null);
 
   useEffect(() => {
     const t = setInterval(() => {
@@ -66,6 +108,75 @@ export function PRGorunurlukLandingView() {
     }, 4500);
     return () => clearInterval(t);
   }, [SEKTOREL_SLIDES.length]);
+
+  const goPrevRixosSlide = () => {
+    setRixosSlide((i) => (i - 1 + RIXOS_VIMEO_SLIDES.length) % RIXOS_VIMEO_SLIDES.length);
+  };
+
+  const goNextRixosSlide = () => {
+    setRixosSlide((i) => (i + 1) % RIXOS_VIMEO_SLIDES.length);
+  };
+
+  const onRixosTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    rixosTouchStartX.current = e.touches[0]?.clientX ?? null;
+  };
+
+  const onRixosTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (rixosTouchStartX.current === null) return;
+    const endX = e.changedTouches[0]?.clientX ?? null;
+    if (endX === null) return;
+    const deltaX = endX - rixosTouchStartX.current;
+    if (Math.abs(deltaX) < 40) return;
+    if (deltaX > 0) goPrevRixosSlide();
+    else goNextRixosSlide();
+    rixosTouchStartX.current = null;
+  };
+
+  const goPrevPressReportSlide = () => {
+    setPressReportSlide((i) => (i - 1 + PRESS_REPORT_SLIDES.length) % PRESS_REPORT_SLIDES.length);
+  };
+
+  const goNextPressReportSlide = () => {
+    setPressReportSlide((i) => (i + 1) % PRESS_REPORT_SLIDES.length);
+  };
+
+  const onPressTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    pressTouchStartX.current = e.touches[0]?.clientX ?? null;
+  };
+
+  const onPressTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (pressTouchStartX.current === null) return;
+    const endX = e.changedTouches[0]?.clientX ?? null;
+    if (endX === null) return;
+    const deltaX = endX - pressTouchStartX.current;
+    if (Math.abs(deltaX) < 40) return;
+    if (deltaX > 0) goPrevPressReportSlide();
+    else goNextPressReportSlide();
+    pressTouchStartX.current = null;
+  };
+
+  const goPrevHeroSlide = () => {
+    setHeroSlide((i) => (i - 1 + HERO_VIMEO_SLIDES.length) % HERO_VIMEO_SLIDES.length);
+  };
+
+  const goNextHeroSlide = () => {
+    setHeroSlide((i) => (i + 1) % HERO_VIMEO_SLIDES.length);
+  };
+
+  const onHeroTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    heroTouchStartX.current = e.touches[0]?.clientX ?? null;
+  };
+
+  const onHeroTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (heroTouchStartX.current === null) return;
+    const endX = e.changedTouches[0]?.clientX ?? null;
+    if (endX === null) return;
+    const deltaX = endX - heroTouchStartX.current;
+    if (Math.abs(deltaX) < 40) return;
+    if (deltaX > 0) goPrevHeroSlide();
+    else goNextHeroSlide();
+    heroTouchStartX.current = null;
+  };
 
   const onChange = (field: keyof FormState) => (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm((prev) => ({ ...prev, [field]: e.target.value }));
@@ -105,10 +216,10 @@ export function PRGorunurlukLandingView() {
         <div className="relative mx-auto grid max-w-6xl gap-10 lg:grid-cols-2 lg:gap-16 lg:items-center">
           <div className="space-y-8">
             <h1 className="text-4xl font-semibold leading-tight text-white md:text-5xl lg:text-[2.75rem]">
-              Görünürlük tesadüf değil, strateji işidir.
+              Influencer ve Celebrity Marketing ile markanızı dünyaya tanıtın
             </h1>
             <p className="max-w-xl text-lg leading-relaxed text-white">
-              Influencer, celebrity ve medya etkisini tek kampanyada birleştirin. Markanızı sadece görünür değil, konuşulur hale getirin.
+              Hedef kitlenize ses getiren iş birlikleriyle ulaşın, markanızın bilinirliğini artırın ve satışa dönüşebilecek güçlü bir etki yaratın.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -117,29 +228,49 @@ export function PRGorunurlukLandingView() {
               >
                 Teklif Al
               </Link>
-              <Link
-                href="#form"
-                className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white transition-colors hover:border-white/40 hover:bg-white/10"
-              >
-                Strateji Görüşmesi Planla
-              </Link>
-            </div>
-            <div className="flex flex-wrap gap-6 pt-4 text-sm text-white">
-              <span className="flex items-center gap-2">Doğru isim · Doğru mecra</span>
-              <span className="flex items-center gap-2">Ölçülebilir kampanya</span>
-              <span className="flex items-center gap-2">PR + Influencer + Celebrity</span>
             </div>
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/50">
-            <Image
-              src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80"
-              alt="Stratejik iletişim"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              unoptimized
+          <div
+            className="relative mx-auto aspect-[9/16] w-[63%] overflow-hidden rounded-2xl border border-white/10 bg-black"
+            onTouchStart={onHeroTouchStart}
+            onTouchEnd={onHeroTouchEnd}
+          >
+            <iframe
+              src={`${HERO_VIMEO_SLIDES[heroSlide].src}${HERO_VIMEO_SLIDES[heroSlide].src.includes('?') ? '&' : '?'}title=0&byline=0&portrait=0&dnt=1`}
+              className="h-full w-full"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+              allowFullScreen
+              title={HERO_VIMEO_SLIDES[heroSlide].label}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/60 to-transparent" />
+            <button
+              type="button"
+              onClick={goPrevHeroSlide}
+              className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-black/50 px-3 py-2 text-white"
+              aria-label="Önceki video"
+            >
+              ‹
+            </button>
+            <button
+              type="button"
+              onClick={goNextHeroSlide}
+              className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-black/50 px-3 py-2 text-white"
+              aria-label="Sonraki video"
+            >
+              ›
+            </button>
+            <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-2">
+              {HERO_VIMEO_SLIDES.map((item, i) => (
+                <button
+                  key={item.src}
+                  type="button"
+                  onClick={() => setHeroSlide(i)}
+                  aria-label={`${item.label} videosuna git`}
+                  className={`h-2 rounded-full transition-all ${
+                    i === heroSlide ? 'w-6 bg-teal-400' : 'w-2 bg-white/60 hover:bg-white/80'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -152,9 +283,6 @@ export function PRGorunurlukLandingView() {
           <h2 className="text-center text-3xl font-semibold text-white md:text-4xl">
             Join Pr | Deneyimi Stratejiye Dönüştürür
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-white">
-            Stratejimizi ve sürecimizi kısa videolarla keşfedin.
-          </p>
           <div className="mt-10 aspect-video overflow-hidden rounded-2xl border border-white/10 bg-zinc-900 shadow-xl">
             {EXPLAINER_VIDEO_ID ? (
               <iframe
@@ -183,44 +311,17 @@ export function PRGorunurlukLandingView() {
           <h2 className="text-center text-3xl font-semibold text-white md:text-4xl">
             Markaların yaşadığı gerçek problemler
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-white">
-            Görünürlük ve etki arayan markaların sıkça yaptığı hatalar.
-          </p>
-          <div className="mt-10 overflow-hidden rounded-2xl border border-white/10">
-            <div className="relative aspect-[21/9] w-full min-h-[180px] bg-zinc-900">
-              <Image
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80"
-                alt="Ekip toplantısı ve strateji"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1200px) 100vw, 1200px"
-                unoptimized
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-zinc-950/20 to-transparent" />
-              <p className="absolute bottom-4 left-4 right-4 text-center text-sm font-medium text-white/90 md:text-base">Doğru strateji olmadan görünürlük hedefe ulaşmaz.</p>
-            </div>
-          </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { title: 'Yanlış influencer seçimi', desc: 'Yüksek erişim, doğru etki anlamına gelmez. Marka ile uyumsuz seçimler, kampanyayı görünür kılsa bile istenen algıyı oluşturmayabilir.', img: '/gorunurluk-influencer-kutu-1.png' },
-              { title: 'Görünür ama fark edilmez', desc: 'İçerikler yayındadır; ancak dönüşüm, itibar ve ölçülebilir etki üretmeyen iletişim markaya gerçek bir değer kazandırmaz.', img: '/gorunurluk-kutu-2.png' },
-              { title: 'Plansız PR çalışmaları', desc: 'Basın bültenleri ve medya ilişkileri stratejik bir planla ilerlemediğinde, iletişim süreklilik kazanmaz ve marka değeri oluşturmakta yetersiz kalır.', img: '/gorunurluk-kutu-3.png' },
-              { title: 'Ölçümsüz kampanyalar', desc: 'Etkisinin ne kadar olduğu bilinmeyen kampanyalar, markaya net bir yön göstermez. Raporlama ve analiz eksik olduğunda başarı da sağlıklı biçimde değerlendirilemez.', img: '/gorunurluk-kutu-4.png' },
-              { title: 'Premium algıya zarar', desc: 'Tutarsız mesajlar ve dağınık iletişim, markanın değer algısını aşağı çeker. Premium bir konumlanma, ancak tutarlı bir dil ve güçlü bir iletişim yapısıyla korunabilir.', img: '/gorunurluk-kutu-5.png' },
-              { title: 'Tek kanal odaklılık', desc: 'Sadece tek bir kanala yaslanan iletişim, markanın etkisini sınırlar. Entegre görünürlük olmadan güçlü sonuç üretmek zordur.', img: '/gorunurluk-kutu-6.png' },
-            ].map((item, i) => (
+              'Yanlış influencer seçimi',
+              'Ölçümsüz kampanyalar',
+              'Tek kanal odaklılık',
+            ].map((title, i) => (
               <div
                 key={i}
-                className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition-colors hover:border-teal-500/20 hover:bg-white/[0.07]"
+                className="rounded-2xl border border-white/10 bg-white/5 p-8 text-center transition-colors hover:border-teal-500/20 hover:bg-white/[0.07]"
               >
-                <div className="relative aspect-square w-full">
-                  <Image src={item.img} alt="" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" unoptimized />
-                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-transparent to-transparent" />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-white">{item.desc}</p>
-                </div>
+                <h3 className="text-lg font-semibold text-white">{title}</h3>
               </div>
             ))}
           </div>
@@ -228,77 +329,145 @@ export function PRGorunurlukLandingView() {
       </section>
 
       {/* 3. SOLUTION */}
-      <section className="border-b border-white/10 bg-gradient-to-b from-teal-950/20 to-zinc-950 px-6 py-16 md:py-20">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="text-center text-3xl font-semibold text-white md:text-4xl">
-            Join PR yaklaşımı
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-white">
-            Görünürlük, etki ve marka değerini tek stratejide birleştiren hizmetler.
-          </p>
-          <div className="mt-10 overflow-hidden rounded-2xl border border-white/10">
-            <div className="relative aspect-[21/9] w-full min-h-[180px] bg-zinc-900">
-              <Image
-                src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&q=80"
-                alt="Join PR strateji ve ekip"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1200px) 100vw, 1200px"
-                unoptimized
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent" />
-              <p className="absolute bottom-4 left-4 right-4 text-center text-sm font-medium text-white/90 md:text-base">PR, influencer ve celebrity tek çatıda.</p>
+      <section className="mx-6 overflow-hidden rounded-3xl border border-zinc-200 bg-white px-6 py-10 md:py-12">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2 lg:gap-14">
+          <div>
+            <h2 className="text-3xl font-semibold leading-tight text-zinc-900 md:text-4xl">
+              Join Pr Yaklaşımı
+            </h2>
+            <p className="mt-4 text-lg leading-relaxed text-zinc-700 md:text-xl">
+              Global celebrity ve geniş influencer ağımızı; doğru eşleşme, stratejik planlama, proje yönetimi ve raporlama süreçleriyle markalar için etkili kampanyalara dönüştürüyoruz.
+            </p>
+            <Link
+              href="https://joinpr.com.tr/is-birliklerimiz/"
+              className="mt-6 inline-flex items-center justify-center rounded-full bg-zinc-900 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-zinc-800"
+            >
+              İş Birlikleri ve Meta raporları için tıklayınız
+            </Link>
+            <div className="mt-5 space-y-2 text-sm font-medium text-zinc-700 md:text-base">
+              <Link
+                href="https://joinpr.com.tr/hizmetlerimiz/kurumsal-iletisim/"
+                className="block rounded-lg border border-zinc-300 px-3 py-2 transition-colors hover:bg-zinc-50"
+              >
+                Kurumsal İletişiim
+              </Link>
+              <Link
+                href="https://joinpr.com.tr/hizmetlerimiz/marka-iletisimi/"
+                className="block rounded-lg border border-zinc-300 px-3 py-2 transition-colors hover:bg-zinc-50"
+              >
+                Marka İletişimi
+              </Link>
+              <Link
+                href="https://joinpr.com.tr/hizmetlerimiz/medya-iliskileri-yonetimi/"
+                className="block rounded-lg border border-zinc-300 px-3 py-2 transition-colors hover:bg-zinc-50"
+              >
+                Medya İlişkileri Yönetimi
+              </Link>
+              <Link
+                href="https://joinpr.com.tr/hizmetlerimiz/medya-iliskileri-yonetimi/"
+                className="block rounded-lg border border-zinc-300 px-3 py-2 transition-colors hover:bg-zinc-50"
+              >
+                Etkinlik Ve Proje Yönetimi
+              </Link>
             </div>
           </div>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              { title: 'Influencer Marketing', desc: 'Doğru isim, doğru kitle, doğru mesaj. Sadece paylaşım değil, stratejik eşleşme.', img: '/reklam_pr_gorunurluk/influencer.webp' },
-              { title: 'Celebrity Marketing', desc: 'Prestij ve güven odaklı celebrity iş birlikleri. Marka uyumu ve ölçülebilir etki.', img: '/reklam_pr_gorunurluk/celebrity.webp' },
-              { title: 'Dijital PR', desc: 'Online görünürlük ve itibar yönetimi. Medya ve dijital kanallar birlikte.', img: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&q=80' },
-              { title: 'Medya İlişkileri', desc: 'Basın, yayın ve dijital medya ile sürdürülebilir ilişki. Doğru an, doğru mecralar.', img: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=400&q=80' },
-              { title: 'Etkinlik ve Proje Yönetimi', desc: 'Lansman, etkinlik ve özel projelerde iletişim ve görünürlük yönetimi.', img: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&q=80' },
-              { title: 'Sponsorluk İletişimi', desc: 'Sponsorluk yatırımının marka değerine dönüşmesi. Mesaj ve kapsam stratejisi.', img: '/reklam_pr_gorunurluk/sponsored.webp' },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="overflow-hidden rounded-2xl border border-teal-500/20 bg-teal-500/5 transition-colors hover:border-teal-500/30 hover:bg-teal-500/10"
+          <div className="flex justify-center bg-transparent p-2">
+            <div
+              className="relative aspect-[9/16] w-[64%] overflow-hidden rounded-xl"
+              onTouchStart={onRixosTouchStart}
+              onTouchEnd={onRixosTouchEnd}
+            >
+              <iframe
+                src={`${RIXOS_VIMEO_SLIDES[rixosSlide].src}&title=0&byline=0&portrait=0&dnt=1`}
+                className="h-full w-full"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                allowFullScreen
+                title={RIXOS_VIMEO_SLIDES[rixosSlide].label}
+              />
+              <button
+                type="button"
+                onClick={goPrevRixosSlide}
+                className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-black/50 px-3 py-2 text-white"
+                aria-label="Önceki video"
               >
-                <div className="relative aspect-square w-full">
-                  <Image src={item.img} alt="" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" unoptimized />
-                  <div className="absolute inset-0 bg-gradient-to-t from-teal-950/80 via-transparent to-transparent" />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-white">{item.desc}</p>
-                </div>
+                ‹
+              </button>
+              <button
+                type="button"
+                onClick={goNextRixosSlide}
+                className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-black/50 px-3 py-2 text-white"
+                aria-label="Sonraki video"
+              >
+                ›
+              </button>
+              <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-2">
+                {RIXOS_VIMEO_SLIDES.map((item, i) => (
+                  <button
+                    key={item.label}
+                    type="button"
+                    onClick={() => setRixosSlide(i)}
+                    aria-label={`${item.label} videosuna git`}
+                    className={`h-2 rounded-full transition-all ${
+                      i === rixosSlide ? 'w-6 bg-teal-400' : 'w-2 bg-white/60 hover:bg-white/80'
+                    }`}
+                  />
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 4. WHY IT WORKS */}
-      <section className="border-b border-white/10 px-6 py-16 md:py-20">
+      {/* BASIN YANSIMA RAPORU */}
+      <section className="border-b border-white/10 bg-zinc-950 px-6 py-14 md:py-16">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-center text-3xl font-semibold text-white md:text-4xl">
-            Join Pr Etkisi
+            Örnek Basın Yansıma Raporu
           </h2>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              'Mesajı, doğru isim, doğru mecra ve doğru zamanla buluşturur.',
-              'Premium marka uyumu: Markayı, premium kimliğine uygun isimler ve içeriklerle konumlandırır.',
-              'Tek kanal değil çok katmanlı iletişim: Markayı, tek kanalla değil çok katmanlı bir iletişim yapısıyla büyütür.',
-              'Ölçülebilir kampanya kurgusu: Kampanyayı, ölçülebilir hedefler ve net çıktılarla yapılandırır.',
-              'PR + influencer + celebrity entegrasyonu: PR, influencer ve celebrity iletişimini tek stratejide birleştirir.',
-              'İtibar ve görünürlük birlikte yönetilir: İtibarı ve görünürlüğü aynı stratejik çizgide birlikte yönetir.',
-            ].map((text, i) => (
-              <div key={i} className="flex items-start gap-4 rounded-xl border border-white/10 bg-white/5 px-5 py-4">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-teal-500/20 text-teal-300">
-                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                </span>
-                <p className="text-sm font-medium text-white">{text}</p>
-              </div>
-            ))}
+          <div
+            className="relative mx-auto mt-10 max-w-5xl overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/40"
+            onTouchStart={onPressTouchStart}
+            onTouchEnd={onPressTouchEnd}
+          >
+            <div className="relative aspect-[16/9] w-full">
+              <Image
+                src={PRESS_REPORT_SLIDES[pressReportSlide].src}
+                alt={PRESS_REPORT_SLIDES[pressReportSlide].alt}
+                fill
+                className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 900px"
+                unoptimized
+              />
+            </div>
+            <button
+              type="button"
+              onClick={goPrevPressReportSlide}
+              className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-black/50 px-3 py-2 text-white"
+              aria-label="Önceki görsel"
+            >
+              ‹
+            </button>
+            <button
+              type="button"
+              onClick={goNextPressReportSlide}
+              className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-black/50 px-3 py-2 text-white"
+              aria-label="Sonraki görsel"
+            >
+              ›
+            </button>
+            <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-2">
+              {PRESS_REPORT_SLIDES.map((item, i) => (
+                <button
+                  key={item.src}
+                  type="button"
+                  onClick={() => setPressReportSlide(i)}
+                  aria-label={`Görsel ${i + 1}`}
+                  className={`h-2 rounded-full transition-all ${
+                    i === pressReportSlide ? 'w-6 bg-teal-400' : 'w-2 bg-white/60 hover:bg-white/80'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -309,9 +478,6 @@ export function PRGorunurlukLandingView() {
           <h2 className="text-center text-3xl font-semibold text-white md:text-4xl">
             Sektörel odak
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-white">
-            Özellikle bu sektörlerde güçlü bir iletişim ortağıyız.
-          </p>
           <div className="mt-10 overflow-hidden rounded-2xl border border-white/10">
             <div className="relative aspect-[21/9] w-full min-h-[180px] bg-zinc-900">
               {SEKTOREL_SLIDES.map((slide, i) => (
@@ -349,92 +515,13 @@ export function PRGorunurlukLandingView() {
             </div>
           </div>
           <div className="mt-12 flex flex-wrap justify-center gap-4">
-            {['Turizm', 'Otelcilik', 'Havacılık', 'Lifestyle', 'Beauty / Wellness', 'Premium tüketim markaları', 'Kurumsal markalar'].map((s, i) => (
+            {['Turizm', 'Otelcilik', 'Havacılık', 'Lifestyle', 'Beauty / Wellness', 'Premium tüketim markaları'].map((s, i) => (
               <span
                 key={i}
                 className="rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-medium text-white transition-colors hover:border-teal-500/30 hover:bg-teal-500/10"
               >
                 {s}
               </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 6. CASE / SOCIAL PROOF */}
-      <section className="border-b border-white/10 bg-gradient-to-b from-zinc-900/50 to-zinc-950 px-6 py-16 md:py-20">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="text-center text-3xl font-semibold text-white md:text-4xl">
-            Başarı hikayeleri
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-white">
-            Marka görünürlüğü ve kampanya etkisi.
-          </p>
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
-            {[
-              { sector: 'Turizm & Otel', title: 'Lüks otel lansmanı', reach: '2.4M', engagement: '%4.2', note: 'Influencer + basın entegrasyonu', img: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?w=500&q=80' },
-              { sector: 'Lifestyle', title: 'Premium marka kampanyası', reach: '1.8M', engagement: '%5.1', note: 'Celebrity iş birliği ve dijital PR', img: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=500&q=80' },
-              { sector: 'Havacılık', title: 'Rota tanıtım projesi', reach: '3.1M', engagement: '%3.8', note: 'Medya + etkinlik yönetimi', img: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=500&q=80' },
-            ].map((c, i) => (
-              <div key={i} className="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-                <div className="relative aspect-square w-full">
-                  <Image src={c.img} alt="" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" unoptimized />
-                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-transparent to-transparent" />
-                  <span className="absolute left-4 top-4 rounded-full bg-teal-500/90 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white">{c.sector}</span>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-white">{c.title}</h3>
-                  <p className="mt-2 text-sm text-white">{c.note}</p>
-                  <div className="mt-6 flex gap-6 border-t border-white/10 pt-4">
-                    <div>
-                      <p className="text-2xl font-bold text-white">{c.reach}</p>
-                      <p className="text-xs text-white">Erişim</p>
-                    </div>
-                    <div>
-                      <p className="text-2xl font-bold text-teal-300">{c.engagement}</p>
-                      <p className="text-xs text-white">Etkileşim</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 7. FAQ */}
-      <section className="border-b border-white/10 px-6 py-16 md:py-20">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="text-center text-3xl font-semibold text-white md:text-4xl">
-            Sıkça sorulan sorular
-          </h2>
-          <div className="mt-12 space-y-4">
-            {[
-              { q: 'Hangi markalar için uygun?', a: 'Turizm, otel, havacılık, lifestyle, beauty, wellness ve premium tüketim markaları ile kurumsal firmalar. Görünürlük ve itibar hedefleyen her marka için uygundur.' },
-              { q: 'Sadece influencer kampanyası mı yapılıyor?', a: 'Hayır. Influencer, celebrity, dijital PR, medya ilişkileri ve etkinlik yönetimini tek stratejide birleştiriyoruz.' },
-              { q: 'Celebrity çalışmaları nasıl planlanıyor?', a: 'Marka uyumu ve hedef kitle örtüşmesine göre isim belirlenir. Sözleşme, kullanım hakları ve ölçümleme baştan netleştirilir.' },
-              { q: 'PR ve dijital görünürlük birlikte kurgulanabiliyor mu?', a: 'Evet. Basın, online yayınlar ve sosyal kanallar tek kampanya çatısında yönetilir; mesaj ve ton tutarlı kalır.' },
-              { q: 'Kampanya süresi nasıl belirleniyor?', a: 'Hedefe ve sektöre göre değişir. Kısa dönem lansmanlardan uzun dönem itibar projelerine kadar esnek süreçler sunuyoruz.' },
-              { q: 'Raporlama yapılıyor mu?', a: 'Evet. Erişim, etkileşim, medya kapsamı ve marka etkisi düzenli raporlanır; sonuçlar ölçülebilir şekilde paylaşılır.' },
-            ].map((faq, i) => (
-              <div
-                key={i}
-                className="rounded-xl border border-white/10 bg-white/5 overflow-hidden"
-              >
-                <button
-                  type="button"
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="flex w-full items-center justify-between px-6 py-4 text-left"
-                >
-                  <span className="font-medium text-white">{faq.q}</span>
-                  <span className="text-teal-400">{openFaq === i ? '−' : '+'}</span>
-                </button>
-                {openFaq === i && (
-                  <div className="border-t border-white/10 px-6 py-4 text-sm text-white">
-                    {faq.a}
-                  </div>
-                )}
-              </div>
             ))}
           </div>
         </div>
@@ -457,12 +544,6 @@ export function PRGorunurlukLandingView() {
             >
               Teklif Al
             </Link>
-            <Link
-              href="#form"
-              className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white transition-colors hover:bg-white/10"
-            >
-              Strateji Görüşmesi Planla
-            </Link>
           </div>
         </div>
       </section>
@@ -477,12 +558,10 @@ export function PRGorunurlukLandingView() {
             Teklif veya strateji görüşmesi için bilgilerinizi bırakın.
           </p>
           <div className="mt-10 overflow-hidden rounded-2xl border border-white/10 bg-zinc-950/80 p-4 md:p-6">
-            <iframe
-              aria-label="Join-Form-Landing"
-              frameBorder="0"
-              style={{ height: 500, width: '99%', border: 'none' }}
+            <FormConsentEmbed
+              ariaLabel="Join-Form-Landing"
               src="https://forms.joinpr.com.tr/joinus1/form/JoinFormLanding/formperma/I50RnMGr5e2CLfOswetbEV7jdQ_N9gkidjRZUcvnfl0"
-              title="Join CRM Form"
+              iframeHeight={500}
             />
           </div>
         </div>

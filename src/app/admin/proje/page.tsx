@@ -7,7 +7,7 @@ export default function AdminProjeHomePage() {
   const [showTypes, setShowTypes] = useState(false);
 
   return (
-    <main className="min-h-screen bg-zinc-950 px-6 py-10 text-zinc-100">
+    <main className="min-h-screen bg-zinc-950 px-4 py-6 text-zinc-100 sm:px-6 sm:py-10">
       <div className="mx-auto max-w-5xl space-y-6">
         <Link
           href="/admin"
@@ -20,7 +20,7 @@ export default function AdminProjeHomePage() {
           Asagidaki kutulardan proje kutuphanesi veya yeni proje olusturma ekranina gecebilirsiniz.
         </p>
 
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <Link
             href="/admin/proje/kutuphane"
             className="rounded-xl border border-zinc-800 bg-zinc-900/60 p-5 transition hover:border-sky-500 hover:bg-zinc-900"

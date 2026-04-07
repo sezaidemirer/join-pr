@@ -28,8 +28,6 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
       image,
       platformLinks,
       platformLinksEn,
-      isPublished,
-      noindex,
       publishedAt,
     } = body ?? {};
     if (!title || !description) {
@@ -46,8 +44,8 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
       image,
       platformLinks,
       platformLinksEn,
-      isPublished,
-      noindex,
+      isPublished: true,
+      noindex: false,
       publishedAt,
     });
     revalidatePath('/kategori/haberler');

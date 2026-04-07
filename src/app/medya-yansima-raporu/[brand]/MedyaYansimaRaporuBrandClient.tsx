@@ -1,9 +1,11 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 import { MedyaRaporuBanner } from '@/components/MedyaRaporuBanner';
+import { getMediaReportsApiUrl } from '@/lib/media-reports-api';
 
 type PublicProject = {
   slug: string;
@@ -18,7 +20,10 @@ type PublicBrand = {
   projects: PublicProject[];
 };
 
-export function MedyaYansimaRaporuBrandClient({ brandSlug }: { brandSlug: string }) {
+export function MedyaYansimaRaporuBrandClient({ brandSlug }: { brandSlug?: string }) {
+  const pathname = usePathname();
+  const pathBrandSlug = (pathname || '').split('/').filter(Boolean)[1] || '';
+  const effectiveBrandSlug = pathBrandSlug || brandSlug || '';
   const [brand, setBrand] = useState<PublicBrand | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -29,11 +34,15 @@ export function MedyaYansimaRaporuBrandClient({ brandSlug }: { brandSlug: string
       setLoading(true);
       setError('');
       try {
-        const res = await fetch('/api/media-reports/tree', { cache: 'no-store' });
+        const res = await fetch(getMediaReportsApiUrl('/api/media-reports/tree/'), {
+          method: 'GET',
+          mode: 'cors',
+          cache: 'no-store',
+        });
         const data = await res.json();
         if (!res.ok) throw new Error(data.error || 'Raporlar alinamadi');
         const brands = Array.isArray(data.brands) ? (data.brands as PublicBrand[]) : [];
-        const found = brands.find((x) => x.slug === brandSlug) || null;
+        const found = brands.find((x) => x.slug === effectiveBrandSlug) || null;
         if (active) setBrand(found);
       } catch (err: any) {
         if (active) setError(err.message ?? 'Raporlar alinamadi');
@@ -45,7 +54,7 @@ export function MedyaYansimaRaporuBrandClient({ brandSlug }: { brandSlug: string
     return () => {
       active = false;
     };
-  }, [brandSlug]);
+  }, [effectiveBrandSlug]);
 
   if (!loading && !brand) {
     return (
@@ -77,9 +86,9 @@ export function MedyaYansimaRaporuBrandClient({ brandSlug }: { brandSlug: string
               className="group flex flex-col rounded-2xl border border-white/10 bg-white/5 p-6 transition-colors hover:border-teal-500/30 hover:bg-white/10"
             >
               {project.logoUrl ? (
-                <div className="mb-4 flex min-h-[6rem] items-center justify-center rounded-xl bg-white p-4">
+                <div className="mb-4 flex min-h-[7rem] items-center justify-center rounded-xl bg-white p-4 sm:min-h-[8rem] sm:p-5">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={project.logoUrl} alt={project.name} className="max-h-[4.5rem] w-auto object-contain" />
+                  <img src={project.logoUrl} alt={project.name} className="max-h-[5.75rem] w-auto object-contain sm:max-h-[6.5rem]" />
                 </div>
               ) : null}
               <span className="text-lg font-semibold text-white group-hover:text-teal-300">

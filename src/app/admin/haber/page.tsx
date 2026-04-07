@@ -1,10 +1,12 @@
 'use client';
 
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { useEffect, useRef, useState } from 'react';
+
+import { HaberPlatformLogoGalleryModal } from '@/components/admin/HaberPlatformLogoGalleryModal';
 import { hrefForNewsCard } from '@/lib/news-href';
 import { resolveNewsImageSrc } from '@/lib/news-api';
-import { useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
 
 type PlatformLink = { href: string; image: string; label: string };
 type NewsItem = {
@@ -32,14 +34,12 @@ const defaultForm = {
   titleEn: '',
   slug: '',
   category: 'Haber',
-  categoryEn: '',
+  categoryEn: 'Haber',
   description: '',
   descriptionEn: '',
   image: '',
   platformLinks: [{ label: '', image: '', href: '' }] as PlatformInput[],
   platformLinksEn: [{ label: '', image: '', href: '' }] as PlatformInput[],
-  isPublished: true,
-  noindex: false,
 };
 
 function normalizePlatformInputs(links: PlatformInput[]): PlatformLink[] {
@@ -58,6 +58,9 @@ export default function AdminNewsPage() {
   const [loading, setLoading] = useState(false);
   const [uploading, setUploading] = useState(false);
   const [message, setMessage] = useState('');
+  const [platformLogoGalleryOpen, setPlatformLogoGalleryOpen] = useState(false);
+  const [platformGalleryPick, setPlatformGalleryPick] = useState<{ lang: 'tr' | 'en'; index: number } | null>(null);
+  const platformLogoFileInputRef = useRef<HTMLInputElement>(null);
 
   async function loadNews() {
     setLoading(true);
@@ -85,7 +88,7 @@ export default function AdminNewsPage() {
       titleEn: item.title_en || '',
       slug: item.slug || '',
       category: item.category || 'Haber',
-      categoryEn: item.category_en || '',
+      categoryEn: item.category_en || 'Haber',
       description: item.description || '',
       descriptionEn: item.description_en || '',
       image: item.image || '',
@@ -97,8 +100,6 @@ export default function AdminNewsPage() {
         (item.platform_links_en || []).length > 0
           ? (item.platform_links_en || []).map((x) => ({ label: x.label || '', image: x.image || '', href: x.href || '' }))
           : [{ label: '', image: '', href: '' }],
-      isPublished: item.is_published !== false,
-      noindex: item.noindex === true,
     });
     setMessage('Duzenleme modu aktif.');
   }
@@ -111,6 +112,7 @@ export default function AdminNewsPage() {
   async function uploadSingleImage(file: File) {
     const fd = new FormData();
     fd.append('files', file);
+    fd.append('storageBucket', 'haber-platform-logos');
     const res = await fetch('/api/admin/upload-image', {
       method: 'POST',
       body: fd,
@@ -182,7 +184,31 @@ export default function AdminNewsPage() {
       setMessage(error.message ?? 'Platform gorseli yuklenemedi.');
     } finally {
       setUploading(false);
+      setPlatformGalleryPick(null);
+      if (platformLogoFileInputRef.current) platformLogoFileInputRef.current.value = '';
     }
+  }
+
+  function openPlatformLogoGallery(lang: 'tr' | 'en', index: number) {
+    setPlatformGalleryPick({ lang, index });
+    setPlatformLogoGalleryOpen(true);
+  }
+
+  function closePlatformLogoGallery() {
+    setPlatformLogoGalleryOpen(false);
+    setPlatformGalleryPick(null);
+  }
+
+  function applyPlatformLogoFromGallery(url: string) {
+    const t = platformGalleryPick;
+    if (!t) return;
+    updatePlatformRow(t.lang, t.index, 'image', url);
+    setMessage(`Platform logosu secildi (${t.lang.toUpperCase()} #${t.index + 1}).`);
+  }
+
+  function requestPlatformLogoFromDisk() {
+    setPlatformLogoGalleryOpen(false);
+    requestAnimationFrame(() => platformLogoFileInputRef.current?.click());
   }
 
   async function submit(e: React.FormEvent) {
@@ -201,8 +227,7 @@ export default function AdminNewsPage() {
         image: form.image,
         platformLinks: normalizePlatformInputs(form.platformLinks),
         platformLinksEn: normalizePlatformInputs(form.platformLinksEn),
-        isPublished: form.isPublished,
-        noindex: form.noindex,
+        noindex: false,
       };
       const endpoint = editId ? `/api/admin/news/${editId}` : '/api/admin/news';
       const method = editId ? 'PUT' : 'POST';
@@ -259,10 +284,30 @@ export default function AdminNewsPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-zinc-950 px-6 py-10 text-zinc-100">
+    <main className="min-h-screen bg-zinc-950 px-4 py-6 text-zinc-100 sm:px-6 sm:py-10">
+      <HaberPlatformLogoGalleryModal
+        open={platformLogoGalleryOpen}
+        onClose={closePlatformLogoGallery}
+        onSelect={applyPlatformLogoFromGallery}
+        onRequestUploadFromDisk={requestPlatformLogoFromDisk}
+      />
+      <input
+        ref={platformLogoFileInputRef}
+        type="file"
+        accept="image/*,.heic,.heif,.avif,.tif,.tiff,.webp,.jpg,.jpeg,.png"
+        className="sr-only"
+        tabIndex={-1}
+        aria-hidden
+        onChange={(e) => {
+          const file = e.target.files?.[0];
+          const t = platformGalleryPick;
+          if (file && t) void handlePlatformImageUpload(t.lang, t.index, file);
+          e.currentTarget.value = '';
+        }}
+      />
       <div className="mx-auto max-w-6xl space-y-6">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex min-w-0 flex-wrap items-center gap-2">
             <button
               type="button"
               onClick={() => router.back()}
@@ -270,22 +315,19 @@ export default function AdminNewsPage() {
             >
               Geri Gel
             </button>
-            <h1 className="text-2xl font-semibold">Haber Yonetimi</h1>
+            <h1 className="text-xl font-semibold sm:text-2xl">Haber Yonetimi</h1>
           </div>
           <Link
             href="/kategori/haberler"
             target="_blank"
-            className="rounded border border-zinc-700 px-3 py-1 text-xs hover:bg-zinc-800"
+            className="inline-flex justify-center rounded border border-zinc-700 px-3 py-1.5 text-center text-xs hover:bg-zinc-800 sm:shrink-0"
           >
             Kategori Sayfasi
           </Link>
         </div>
 
-        <form onSubmit={submit} className="space-y-4 rounded-xl border border-zinc-800 bg-zinc-900/40 p-5">
-          <p className="text-sm text-zinc-300">
-            Bu formdaki alanlar, `haber/[slug]` sayfasindaki baslik, aciklama, kapak gorseli ve platform kutularini birebir besler.
-          </p>
-          <div className="grid gap-4 md:grid-cols-2">
+        <form onSubmit={submit} className="space-y-4 rounded-xl border border-zinc-800 bg-zinc-900/40 p-4 sm:p-5">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             <label className="space-y-1">
               <span className="text-xs text-zinc-400">Baslik *</span>
               <input
@@ -327,7 +369,7 @@ export default function AdminNewsPage() {
                 className="w-full rounded border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm"
                 value={form.categoryEn}
                 onChange={(e) => setForm((prev) => ({ ...prev, categoryEn: e.target.value }))}
-                placeholder="News"
+                placeholder="Haber"
               />
             </label>
           </div>
@@ -376,14 +418,14 @@ export default function AdminNewsPage() {
 
           <div className="space-y-3">
             <span className="text-xs text-zinc-400">Yayinlanan platformlar (TR / EN)</span>
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               <div className="space-y-3 rounded-lg border border-zinc-800 bg-zinc-950/30 p-3">
-                <div className="flex items-center justify-between">
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                   <span className="text-xs font-semibold text-zinc-300">TR platformlar</span>
                   <button
                     type="button"
                     onClick={() => addPlatformRow('tr')}
-                    className="rounded border border-zinc-700 px-3 py-1 text-xs hover:bg-zinc-800"
+                    className="w-full rounded border border-zinc-700 px-3 py-1.5 text-xs hover:bg-zinc-800 sm:w-auto"
                   >
                     TR Platform Ekle
                   </button>
@@ -418,16 +460,14 @@ export default function AdminNewsPage() {
                       />
                     </label>
                     <div className="flex flex-wrap items-center gap-2">
-                      <input
-                        type="file"
-                        accept="image/*,.heic,.heif,.avif,.tif,.tiff,.webp,.jpg,.jpeg,.png"
-                        onChange={(e) => {
-                          const file = e.target.files?.[0];
-                          if (file) void handlePlatformImageUpload('tr', index, file);
-                          e.currentTarget.value = '';
-                        }}
-                        className="block w-full max-w-md text-xs text-zinc-300 file:mr-3 file:rounded file:border-0 file:bg-zinc-800 file:px-3 file:py-2 file:text-xs file:text-zinc-100 hover:file:bg-zinc-700"
-                      />
+                      <button
+                        type="button"
+                        onClick={() => openPlatformLogoGallery('tr', index)}
+                        disabled={uploading}
+                        className="rounded border border-zinc-600 bg-zinc-800 px-3 py-2 text-xs text-zinc-100 hover:bg-zinc-700 disabled:opacity-50"
+                      >
+                        Logo sec (galeri)
+                      </button>
                       {platform.image ? (
                         <img
                           src={resolveNewsImageSrc(platform.image)}
@@ -448,12 +488,12 @@ export default function AdminNewsPage() {
               </div>
 
               <div className="space-y-3 rounded-lg border border-zinc-800 bg-zinc-950/30 p-3">
-                <div className="flex items-center justify-between">
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                   <span className="text-xs font-semibold text-zinc-300">EN platformlar</span>
                   <button
                     type="button"
                     onClick={() => addPlatformRow('en')}
-                    className="rounded border border-zinc-700 px-3 py-1 text-xs hover:bg-zinc-800"
+                    className="w-full rounded border border-zinc-700 px-3 py-1.5 text-xs hover:bg-zinc-800 sm:w-auto"
                   >
                     EN Platform Ekle
                   </button>
@@ -488,16 +528,14 @@ export default function AdminNewsPage() {
                       />
                     </label>
                     <div className="flex flex-wrap items-center gap-2">
-                      <input
-                        type="file"
-                        accept="image/*,.heic,.heif,.avif,.tif,.tiff,.webp,.jpg,.jpeg,.png"
-                        onChange={(e) => {
-                          const file = e.target.files?.[0];
-                          if (file) void handlePlatformImageUpload('en', index, file);
-                          e.currentTarget.value = '';
-                        }}
-                        className="block w-full max-w-md text-xs text-zinc-300 file:mr-3 file:rounded file:border-0 file:bg-zinc-800 file:px-3 file:py-2 file:text-xs file:text-zinc-100 hover:file:bg-zinc-700"
-                      />
+                      <button
+                        type="button"
+                        onClick={() => openPlatformLogoGallery('en', index)}
+                        disabled={uploading}
+                        className="rounded border border-zinc-600 bg-zinc-800 px-3 py-2 text-xs text-zinc-100 hover:bg-zinc-700 disabled:opacity-50"
+                      >
+                        Logo sec (galeri)
+                      </button>
                       {platform.image ? (
                         <img
                           src={resolveNewsImageSrc(platform.image)}
@@ -519,30 +557,11 @@ export default function AdminNewsPage() {
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-4">
-            <label className="flex items-center gap-2 text-sm">
-              <input
-                type="checkbox"
-                checked={form.isPublished}
-                onChange={(e) => setForm((prev) => ({ ...prev, isPublished: e.target.checked }))}
-              />
-              Yayinla
-            </label>
-            <label className="flex items-center gap-2 text-sm">
-              <input
-                type="checkbox"
-                checked={form.noindex}
-                onChange={(e) => setForm((prev) => ({ ...prev, noindex: e.target.checked }))}
-              />
-              Noindex
-            </label>
-          </div>
-
-          <div className="flex items-center gap-2">
+          <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center">
             <button
               type="submit"
               disabled={loading || uploading}
-              className="rounded bg-emerald-600 px-4 py-2 text-sm font-medium hover:bg-emerald-500 disabled:opacity-60"
+              className="w-full rounded bg-emerald-600 px-4 py-2.5 text-sm font-medium hover:bg-emerald-500 disabled:opacity-60 sm:w-auto sm:py-2"
             >
               {editId ? 'Haberi Guncelle' : 'Haberi Olustur'}
             </button>
@@ -550,7 +569,7 @@ export default function AdminNewsPage() {
               <button
                 type="button"
                 onClick={resetForm}
-                className="rounded border border-zinc-700 px-4 py-2 text-sm hover:bg-zinc-800"
+                className="w-full rounded border border-zinc-700 px-4 py-2.5 text-sm hover:bg-zinc-800 sm:w-auto sm:py-2"
               >
                 Duzenlemeyi Iptal Et
               </button>
@@ -563,7 +582,7 @@ export default function AdminNewsPage() {
 
         <div className="space-y-3">
           {items.map((item) => (
-            <div key={item.id} className="relative rounded-lg border border-zinc-800 bg-zinc-900/40 p-4">
+            <div key={item.id} className="relative rounded-lg border border-zinc-800 bg-zinc-900/40 p-4 pr-14 sm:pr-4">
               <button
                 type="button"
                 onClick={() => deleteItem(item.id)}
@@ -572,13 +591,11 @@ export default function AdminNewsPage() {
                 Sil
               </button>
               <div className="flex flex-wrap items-center gap-2 text-xs">
-                <span className="rounded bg-zinc-800 px-2 py-1">{item.is_published ? 'Yayinda' : 'Taslak'}</span>
-                <span className="rounded bg-zinc-800 px-2 py-1">{item.noindex ? 'Noindex' : 'Index'}</span>
                 <span className="text-zinc-500">Slug: {item.slug}</span>
               </div>
               <p className="mt-2 font-medium">{item.title}</p>
               <p className="text-sm text-zinc-400">{item.description}</p>
-              <div className="mt-3 flex items-center gap-2">
+              <div className="mt-3 flex flex-wrap items-center gap-2">
                 <button
                   type="button"
                   onClick={() => fillForEdit(item)}

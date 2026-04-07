@@ -16,10 +16,12 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
   }
   try {
     const body = await req.json();
+    const rawUses = body?.usesSubBrands;
     const brand = await updateMediaReportBrand(params.id, {
       name: String(body?.name ?? ''),
       logoUrl: String(body?.logoUrl ?? ''),
-      isPublished: body?.isPublished !== false,
+      isPublished: true,
+      usesSubBrands: typeof rawUses === 'boolean' ? rawUses : undefined,
     });
     return NextResponse.json({ brand });
   } catch (error: any) {

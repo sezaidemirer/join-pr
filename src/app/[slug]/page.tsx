@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useParams, useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
 import { TurizmLandingView } from '@/components/views/TurizmLandingView';
 import { ClinicLandingView } from '@/components/views/ClinicLandingView';
@@ -64,11 +65,14 @@ export default function BlogDetailPage() {
 
   const currentSlug = slug || '';
 
-  // Eski URL → yeni URL (turizm landing artık /reklam/ altında)
-  if (currentSlug === 'turizm-reklam-ajansi-performans-yonetimi') {
-    router.replace('/reklam/turizm-reklam-ajansi-performans-yonetimi/');
-    return null;
-  }
+  // Eski URL -> yeni URL (render sirasinda router.replace SSR'da hata verir)
+  const shouldRedirectTurizm = currentSlug === 'turizm-reklam-ajansi-performans-yonetimi';
+  useEffect(() => {
+    if (shouldRedirectTurizm) {
+      router.replace('/reklam/turizm-reklam-ajansi-performans-yonetimi/');
+    }
+  }, [router, shouldRedirectTurizm]);
+  if (shouldRedirectTurizm) return null;
 
   // Turizm landing page – özel slug (artık /reklam/ altında, yukarıda redirect var)
   // Klinik landing page – özel slug

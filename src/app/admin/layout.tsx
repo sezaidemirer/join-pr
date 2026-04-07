@@ -24,18 +24,21 @@ export default function AdminPanelLayout({ children }: { children: React.ReactNo
   return (
     <>
       <header className="sticky top-0 z-50 border-b border-zinc-800 bg-zinc-950/95 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-3">
-          <div className="flex flex-wrap items-center gap-3 sm:gap-4">
-            <Link href="/admin" className="text-sm font-semibold tracking-tight text-zinc-100 hover:text-white">
+        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-3 py-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-3 sm:px-4">
+          <div className="flex min-w-0 flex-col gap-2 sm:flex-row sm:items-center sm:gap-3 md:gap-4">
+            <Link
+              href="/admin"
+              className="shrink-0 text-sm font-semibold tracking-tight text-zinc-100 hover:text-white"
+            >
               Panel
             </Link>
             <nav
-              className="flex rounded-lg border border-zinc-800 bg-zinc-900/60 p-0.5"
+              className="-mx-1 flex max-w-full flex-nowrap gap-0.5 overflow-x-auto overscroll-x-contain rounded-lg border border-zinc-800 bg-zinc-900/60 p-0.5 pb-1 [-ms-overflow-style:none] [scrollbar-width:none] sm:mx-0 sm:flex-wrap sm:overflow-visible sm:pb-0.5 [&::-webkit-scrollbar]:hidden"
               aria-label="Panel bolumleri"
             >
               <Link
                 href="/admin/proje"
-                className={`rounded-md px-3 py-1.5 text-sm font-medium transition ${
+                className={`shrink-0 whitespace-nowrap rounded-md px-2.5 py-1.5 text-xs font-medium transition sm:px-3 sm:text-sm ${
                   projeActive
                     ? 'bg-sky-600 text-white'
                     : hubOnly
@@ -47,7 +50,7 @@ export default function AdminPanelLayout({ children }: { children: React.ReactNo
               </Link>
               <Link
                 href="/admin/haber"
-                className={`rounded-md px-3 py-1.5 text-sm font-medium transition ${
+                className={`shrink-0 whitespace-nowrap rounded-md px-2.5 py-1.5 text-xs font-medium transition sm:px-3 sm:text-sm ${
                   haberActive
                     ? 'bg-emerald-600 text-white'
                     : hubOnly
@@ -59,7 +62,7 @@ export default function AdminPanelLayout({ children }: { children: React.ReactNo
               </Link>
               <Link
                 href="/admin/medya-yansima-raporlari"
-                className={`rounded-md px-3 py-1.5 text-sm font-medium transition ${
+                className={`shrink-0 whitespace-nowrap rounded-md px-2.5 py-1.5 text-xs font-medium transition sm:px-3 sm:text-sm ${
                   medyaRaporuActive
                     ? 'bg-violet-600 text-white'
                     : hubOnly
@@ -67,14 +70,15 @@ export default function AdminPanelLayout({ children }: { children: React.ReactNo
                       : 'text-zinc-400 hover:bg-zinc-800/80 hover:text-zinc-200'
                 }`}
               >
-                Medya Yansima Raporlari
+                <span className="sm:hidden">Medya raporu</span>
+                <span className="hidden sm:inline">Medya Yansima Raporlari</span>
               </Link>
             </nav>
           </div>
           <button
             type="button"
             onClick={() => void logout()}
-            className="rounded-md border border-zinc-700 bg-zinc-900 px-3 py-1.5 text-sm text-zinc-200 hover:bg-zinc-800"
+            className="shrink-0 rounded-md border border-zinc-700 bg-zinc-900 px-3 py-1.5 text-sm text-zinc-200 hover:bg-zinc-800 sm:self-center"
           >
             Cikis
           </button>

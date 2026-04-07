@@ -4,7 +4,9 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useEffect, useMemo, useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
-import type { ProjectType } from '@/lib/offers';
+import { GalleryPreviewImage } from '@/components/admin/GalleryPreviewImage';
+import { ensureWebDisplayableImageFile } from '@/lib/ensure-web-displayable-image';
+import { inferProjectTypeFromBrandSlug, type ProjectType } from '@/lib/project-type-from-slug';
 import { buildPublicProjectUrl } from '@/lib/project-url';
 import { fourVideoSlotsFromPayload, parseSponsorshipNotes } from '@/lib/sponsorship-notes';
 
@@ -40,13 +42,6 @@ const PROJECT_TYPE_LABEL: Record<ProjectType, string> = {
   press: 'Basin Iletisim Projesi',
 };
 
-function inferProjectTypeFromBrandSlug(brandSlug: string): ProjectType | null {
-  if (brandSlug.startsWith('produksiyon-projesi-')) return 'production';
-  if (brandSlug.startsWith('sponsorluk-projesi-')) return 'sponsorship';
-  if (brandSlug.startsWith('basin-iletisim-projesi-')) return 'press';
-  return null;
-}
-
 const defaultForm = {
   brandName: '',
   offerDate: '',
@@ -57,7 +52,6 @@ const defaultForm = {
   horizontalVideos: Array.from({ length: 4 }, () => ({ url: '', title: '' })),
   verticalVideos: Array.from({ length: 4 }, () => ({ url: '', title: '' })),
   notes: '',
-  noindex: true,
 };
 
 function parsePhotoGallery(text: string): GalleryPhoto[] {
@@ -191,7 +185,6 @@ export default function YeniProjePage() {
         horizontalVideos: horizontalInputs,
         verticalVideos: verticalInputs,
         notes: found.notes || '',
-        noindex: found.noindex !== false,
       });
       setQuoteId(String(found.crm_quote_id ?? found.quote_id ?? ''));
       const inferred = inferProjectTypeFromBrandSlug(found.brand_slug);
@@ -319,7 +312,7 @@ export default function YeniProjePage() {
                 photoUrls: sponsorshipPhotoUrls.slice(0, 4),
               })
             : form.notes,
-        noindex: form.noindex,
+        noindex: false,
       };
       const endpoint = editId ? `/api/admin/projects/${editId}` : '/api/admin/projects';
       const method = editId ? 'PUT' : 'POST';
@@ -446,7 +439,9 @@ export default function YeniProjePage() {
       // Dosya basina ayri istek: Vercel/proxy tek POST govde limiti; picker'da 4 dosya tek seferde secilebilir.
       for (let i = 0; i < files.length; i += 1) {
         const formData = new FormData();
-        formData.append('files', files[i]);
+        const ready = await ensureWebDisplayableImageFile(files[i]);
+        formData.append('files', ready);
+        formData.append('storageBucket', 'project-gallery');
         const res = await fetch('/api/admin/upload-image', {
           method: 'POST',
           credentials: 'include',
@@ -476,8 +471,12 @@ export default function YeniProjePage() {
     setUploading(true);
     setMessage('');
     try {
+      const normalized = await Promise.all(
+        Array.from(fileList).map((file) => ensureWebDisplayableImageFile(file))
+      );
       const formData = new FormData();
-      Array.from(fileList).forEach((file) => formData.append('files', file));
+      normalized.forEach((file) => formData.append('files', file));
+      formData.append('storageBucket', 'project-gallery');
 
       const res = await fetch('/api/admin/upload-image', {
         method: 'POST',
@@ -518,6 +517,19 @@ export default function YeniProjePage() {
     });
   }
 
+  const photoGalleryPreview = useMemo(() => parsePhotoGallery(form.photoGalleryText), [form.photoGalleryText]);
+
+  function removePhotoFromGalleryLine(urlToRemove: string) {
+    const target = urlToRemove.trim();
+    setForm((s) => {
+      const lines = s.photoGalleryText.split('\n').filter((line) => {
+        const u = line.split('|')[0]?.trim() || '';
+        return u !== target;
+      });
+      return { ...s, photoGalleryText: lines.join('\n').trim() };
+    });
+  }
+
   async function copySavedLink() {
     if (!savedPublicUrl) return;
     try {
@@ -529,21 +541,23 @@ export default function YeniProjePage() {
   }
 
   return (
-    <main className="min-h-screen bg-zinc-950 px-6 py-10 text-zinc-100">
+    <main className="min-h-screen bg-zinc-950 px-4 py-6 text-zinc-100 sm:px-6 sm:py-10">
       <div className="mx-auto max-w-5xl space-y-6">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex min-w-0 flex-wrap items-center gap-2">
             <Link
               href="/admin/proje"
               className="rounded border border-zinc-700 px-3 py-1 text-xs hover:bg-zinc-800"
             >
               Geri Gel
             </Link>
-            <h1 className="text-2xl font-semibold">{editId ? 'Projeyi Duzenle' : 'Yeni Proje'}</h1>
+            <h1 className="text-xl font-semibold sm:text-2xl">
+              {editId ? 'Projeyi Duzenle' : 'Yeni Proje'}
+            </h1>
           </div>
           <Link
             href="/admin/proje/kutuphane"
-            className="rounded border border-zinc-700 px-4 py-2 text-sm hover:bg-zinc-800"
+            className="inline-flex justify-center rounded border border-zinc-700 px-4 py-2 text-center text-sm hover:bg-zinc-800 sm:shrink-0"
           >
             Projeler
           </Link>
@@ -557,7 +571,7 @@ export default function YeniProjePage() {
           ) : null}
         </div>
 
-        <div className="grid gap-3 rounded-xl border border-zinc-800 bg-zinc-900/60 p-4 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-3 rounded-xl border border-zinc-800 bg-zinc-900/60 p-4 md:grid-cols-2">
           <div className="md:col-span-2">
             <label className="mb-1 block text-xs text-zinc-500">
               CRM teklif{' '}
@@ -659,10 +673,6 @@ export default function YeniProjePage() {
 
               <div className="md:col-span-2 rounded-md border border-zinc-800 bg-zinc-950/50 p-3">
                 <label className="mb-2 block text-sm text-zinc-300">Foto yukle (max 4, Supabase)</label>
-                <p className="mb-2 text-xs text-zinc-500">
-                  Ayni anda 4 fotoya kadar sec: Mac&apos;te Cmd, Windows&apos;ta Ctrl ile birden fazla dosyaya tikla; hepsi sirayla
-                  yuklenir. JPEG, PNG, HEIC/HEIF (iPhone), WebP, GIF, TIFF, AVIF vb.; dosya basina en fazla 50 MB.
-                </p>
                 <input
                   type="file"
                   accept="image/*,image/heic,image/heif,.heic,.heif"
@@ -673,16 +683,20 @@ export default function YeniProjePage() {
                 />
                 <p className="mt-2 text-xs text-zinc-500">Yuklenen foto sayisi: {sponsorshipPhotoUrls.length}/4</p>
                 {sponsorshipPhotoUrls.length > 0 ? (
-                  <div className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+                  <div className="mt-3 grid grid-cols-4 gap-1.5 sm:gap-2">
                     {sponsorshipPhotoUrls.map((src) => (
-                      <div key={src} className="relative overflow-hidden rounded-md border border-zinc-800">
-                        <div className="aspect-[4/5] w-full bg-zinc-950">
-                          <img src={src} alt="Onizleme" className="h-full w-full object-cover" />
+                      <div key={src} className="relative overflow-hidden rounded border border-zinc-800">
+                        <div className="aspect-square w-full bg-zinc-950">
+                          <GalleryPreviewImage
+                            src={src}
+                            alt="Onizleme"
+                            className="h-full w-full object-cover"
+                          />
                         </div>
                         <button
                           type="button"
                           onClick={() => setSponsorshipPhotoUrls((prev) => prev.filter((u) => u !== src))}
-                          className="absolute right-1 top-1 rounded bg-rose-700 px-2 py-0.5 text-[11px] font-medium text-white hover:bg-rose-600"
+                          className="absolute right-0.5 top-0.5 rounded bg-rose-700 px-1 py-0.5 text-[10px] font-medium text-white hover:bg-rose-600"
                         >
                           Kaldir
                         </button>
@@ -694,18 +708,6 @@ export default function YeniProjePage() {
             </>
           ) : (
             <>
-          <textarea
-            className="md:col-span-2 min-h-24 rounded-md border border-zinc-700 bg-zinc-950 px-3 py-2"
-            placeholder="Ornek icerikler (her satir bir madde)"
-            value={form.sampleContentsText}
-            onChange={(e) => setForm((s) => ({ ...s, sampleContentsText: e.target.value }))}
-          />
-          <textarea
-            className="md:col-span-2 min-h-24 rounded-md border border-zinc-700 bg-zinc-950 px-3 py-2"
-            placeholder="Foto galeri (satir basi: url|aciklama)"
-            value={form.photoGalleryText}
-            onChange={(e) => setForm((s) => ({ ...s, photoGalleryText: e.target.value }))}
-          />
           <div className="md:col-span-2 rounded-md border border-zinc-800 bg-zinc-950/50 p-3">
             <label className="mb-2 block text-sm text-zinc-300">PC&apos;den foto yukle</label>
             <input
@@ -716,15 +718,34 @@ export default function YeniProjePage() {
               className="block w-full text-sm text-zinc-300 file:mr-3 file:rounded file:border-0 file:bg-sky-700 file:px-3 file:py-2 file:text-white hover:file:bg-sky-600"
               disabled={uploading}
             />
-            <p className="mt-2 text-xs text-zinc-500">
-              Yuklenen dosyalar otomatik olarak foto galeri listesine eklenir.
-            </p>
+            {photoGalleryPreview.length > 0 ? (
+              <div className="mt-3 grid grid-cols-4 gap-1.5 sm:gap-2">
+                {photoGalleryPreview.map(({ url }, i) => (
+                  <div key={`${url}-${i}`} className="relative overflow-hidden rounded border border-zinc-800">
+                    <div className="aspect-square w-full bg-zinc-950">
+                      <GalleryPreviewImage
+                        src={url}
+                        alt="Onizleme"
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => removePhotoFromGalleryLine(url)}
+                      className="absolute right-0.5 top-0.5 rounded bg-rose-700 px-1 py-0.5 text-[10px] font-medium text-white hover:bg-rose-600"
+                    >
+                      Kaldir
+                    </button>
+                  </div>
+                ))}
+              </div>
+            ) : null}
           </div>
           <div className="md:col-span-2 rounded-md border border-zinc-800 bg-zinc-950/50 p-3">
             <p className="mb-3 text-sm text-zinc-300">Yatay videolar (maks 4, sadece YouTube)</p>
             <div className="space-y-2">
               {form.horizontalVideos.map((item: VideoInput, i: number) => (
-                <div key={`h-${i}`} className="grid gap-2 md:grid-cols-4">
+                <div key={`h-${i}`} className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-4">
                   <input
                     className="md:col-span-3 rounded-md border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm"
                     placeholder={`Yatay video ${i + 1} URL`}
@@ -746,7 +767,7 @@ export default function YeniProjePage() {
             <p className="mb-3 text-sm text-zinc-300">Dikey videolar (maks 4, sadece YouTube)</p>
             <div className="space-y-2">
               {form.verticalVideos.map((item: VideoInput, i: number) => (
-                <div key={`v-${i}`} className="grid gap-2 md:grid-cols-4">
+                <div key={`v-${i}`} className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-4">
                   <input
                     className="md:col-span-3 rounded-md border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm"
                     placeholder={`Dikey video ${i + 1} URL`}
@@ -771,18 +792,9 @@ export default function YeniProjePage() {
           />
             </>
           )}
-          <label className="flex items-center gap-2 text-sm">
-            <input
-              type="checkbox"
-              checked={form.noindex}
-              onChange={(e) => setForm((s) => ({ ...s, noindex: e.target.checked }))}
-            />
-            Google indexleme kapali (noindex)
-          </label>
-
           <button
             type="button"
-            className="rounded-md bg-emerald-600 px-4 py-2 text-sm font-medium hover:bg-emerald-500"
+            className="w-full rounded-md bg-emerald-600 px-4 py-2.5 text-sm font-medium hover:bg-emerald-500 sm:w-auto sm:py-2"
             onClick={submit}
             disabled={loading || uploading}
           >
@@ -792,13 +804,21 @@ export default function YeniProjePage() {
 
         {message ? <p className="text-sm text-amber-300">{message}</p> : null}
         {savedPublicUrl ? (
-          <div className="pt-1">
+          <div className="flex flex-wrap items-center justify-between gap-3 pt-1">
+            <a
+              href={savedPublicUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-lg bg-sky-600 px-5 py-2 text-sm font-semibold text-white transition hover:bg-sky-500"
+            >
+              Projeye Git
+            </a>
             <button
               type="button"
               onClick={copySavedLink}
               className="rounded-lg bg-sky-600 px-5 py-2 text-sm font-semibold text-white transition hover:bg-sky-500"
             >
-              Linki Kopyala
+              Proje Linki Kopyala
             </button>
           </div>
         ) : null}

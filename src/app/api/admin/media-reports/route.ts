@@ -31,7 +31,8 @@ export async function POST(req: NextRequest) {
     const brand = await createMediaReportBrand({
       name: String(body?.name ?? ''),
       logoUrl: String(body?.logoUrl ?? ''),
-      isPublished: body?.isPublished !== false,
+      isPublished: true,
+      usesSubBrands: body?.usesSubBrands !== false,
     });
     return NextResponse.json({ brand }, { status: 201 });
   } catch (error: any) {

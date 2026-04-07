@@ -177,13 +177,25 @@ export function HeroSlider() {
                 </h1>
                 <p className="whitespace-pre-line text-base sm:text-lg md:text-xl leading-relaxed text-zinc-200 lg:text-xl">{slide.subtitle}</p>
                 <div className="flex flex-wrap items-center gap-3 sm:gap-4 pb-2 sm:pb-3 lg:pb-0">
-                  <Link
-                    href={slide.link}
-                    className="group inline-flex items-center gap-1.5 sm:gap-2 rounded-full bg-white/10 px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm font-semibold uppercase tracking-wider text-white transition-all hover:bg-white/20"
-                  >
-                    {slide.cta}
-                    <ArrowIcon className="h-3 w-3 sm:h-4 sm:w-4 transition-transform group-hover:translate-x-1" />
-                  </Link>
+                  {slide.link.startsWith('http') ? (
+                    <a
+                      href={slide.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline-flex items-center gap-1.5 sm:gap-2 rounded-full bg-white/10 px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm font-semibold uppercase tracking-wider text-white transition-all hover:bg-white/20"
+                    >
+                      {slide.cta}
+                      <ArrowIcon className="h-3 w-3 sm:h-4 sm:w-4 transition-transform group-hover:translate-x-1" />
+                    </a>
+                  ) : (
+                    <Link
+                      href={slide.link}
+                      className="group inline-flex items-center gap-1.5 sm:gap-2 rounded-full bg-white/10 px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm font-semibold uppercase tracking-wider text-white transition-all hover:bg-white/20"
+                    >
+                      {slide.cta}
+                      <ArrowIcon className="h-3 w-3 sm:h-4 sm:w-4 transition-transform group-hover:translate-x-1" />
+                    </Link>
+                  )}
                 </div>
               </div>
 

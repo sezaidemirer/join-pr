@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import { ChangeEvent, FormEvent, useState } from 'react';
 import { ReferanslarSection } from '@/components/ReferanslarSection';
 import { MonthlyIntelDashboard } from '../MonthlyIntelDashboard';
+import { FormConsentEmbed } from '@/components/FormConsentEmbed';
 
 const BASE_PATH = '';
 
@@ -141,7 +142,7 @@ export function TurizmLandingView() {
             href="#form"
             className="mt-8 inline-flex items-center justify-center rounded-full bg-gradient-to-r from-sky-500 via-blue-500 to-sky-600 px-8 py-4 text-sm font-semibold uppercase tracking-wider text-white shadow-lg shadow-sky-500/30 transition-all hover:-translate-y-0.5 hover:shadow-sky-400/40"
           >
-            Rakip Analizimi Hemen Göster
+            Rakip Analizi Yap
           </Link>
         </div>
       </section>
@@ -251,80 +252,6 @@ export function TurizmLandingView() {
             &quot;Öne çıkmanın yolu daha fazla harcamak değil, rekabette doğru yerde durmaktır.&quot;
           </p>
         </div>
-      </section>
-
-      {/* Solution - Join PR System */}
-      <section className="mt-16 space-y-10">
-        <h2 className="text-center text-2xl font-bold text-white md:text-3xl">
-          Join PR Sistemi
-        </h2>
-        <p className="text-center text-lg text-zinc-400">Reklam Yönetimi Değil, Pazar Hakimiyeti</p>
-        <div className="grid gap-8 md:grid-cols-3">
-          {SOLUTION_ITEMS.map((item, i) => (
-            <div
-              key={i}
-              className="rounded-2xl border border-sky-500/20 bg-gradient-to-b from-sky-950/30 to-zinc-950/70 p-6"
-            >
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-sky-500/20 text-lg font-bold text-sky-300">
-                {i + 1}
-              </div>
-              <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-              {item.keywords && (
-                <div className="mt-4 space-y-2">
-                  {item.mainDesc && <p className="text-sm text-zinc-300">{item.mainDesc}</p>}
-                  {item.keywords.map((kw, j) => (
-                    <p key={j} className="text-sm text-sky-200/90">
-                      • &quot;{kw}&quot;
-                    </p>
-                  ))}
-                  {item.closing && <p className="mt-3 text-sm font-medium text-sky-200">👉 {item.closing}</p>}
-                </div>
-              )}
-              {item.points && (
-                <div className="mt-4 space-y-2">
-                  {item.mainDesc && <p className="text-sm text-zinc-300">{item.mainDesc}</p>}
-                  <ul className="space-y-2">
-                    {item.points.map((pt, j) => (
-                      <li key={j} className="flex items-center gap-2 text-sm text-zinc-300">
-                        <span className="h-1.5 w-1.5 rounded-full bg-sky-400" />
-                        {pt}
-                      </li>
-                    ))}
-                  </ul>
-                  {item.closing && <p className="mt-3 text-sm font-medium text-sky-200">👉 {item.closing}</p>}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* KPI */}
-      <section className="mt-16 rounded-3xl border border-sky-500/20 bg-gradient-to-br from-sky-950/20 to-zinc-950/80 p-8 md:p-12">
-        <h2 className="mb-8 text-center text-xl font-bold text-white md:text-2xl">
-          Turizmde Gerçek Büyümeyi Ölçtüğümüz Metrikler
-        </h2>
-        <div className="flex flex-wrap justify-center gap-3">
-          {KPIS.map((kpi, i) => (
-            <span
-              key={i}
-              className="rounded-full border border-sky-500/30 bg-sky-500/10 px-5 py-2.5 text-sm font-medium text-sky-200"
-            >
-              {kpi}
-            </span>
-          ))}
-        </div>
-      </section>
-
-      {/* Strategic Message */}
-      <section className="mt-16 rounded-3xl border border-white/10 bg-zinc-950/70 p-8 md:p-12">
-        <p className="text-center text-lg leading-relaxed text-zinc-200 md:text-xl">
-          Turizmde büyüme, rastgele reklam harcayarak değil;
-          <br className="hidden sm:block" /> doğru sezonda, doğru destinasyonda, doğru rekabet konumlandırmasıyla sağlanır.
-        </p>
-        <p className="mt-4 text-center text-base font-semibold text-sky-300">
-          Join PR, turizm markalarına büyüme altyapısı sunar.
-        </p>
       </section>
 
       {/* Nasıl Çalışır - Rehber + Dashboardlar */}
@@ -462,12 +389,10 @@ export function TurizmLandingView() {
           className="space-y-4 rounded-2xl border border-white/15 bg-black/40 p-6"
         >
           <h3 className="text-lg font-semibold text-white">Analiz Talep Formu</h3>
-          <iframe
-            aria-label="Join-Form-Landing"
-            frameBorder="0"
-            style={{ height: 500, width: '99%', border: 'none' }}
+          <FormConsentEmbed
+            ariaLabel="Join-Form-Landing"
             src="https://forms.joinpr.com.tr/joinus1/form/JoinFormLanding/formperma/I50RnMGr5e2CLfOswetbEV7jdQ_N9gkidjRZUcvnfl0"
-            title="Join CRM Form"
+            iframeHeight={500}
           />
         </div>
       </section>

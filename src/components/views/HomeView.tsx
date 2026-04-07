@@ -21,7 +21,7 @@ const UNIT_ROUTES: Record<string, string> = {
   joinSocial: '/join-social',
   joinAds: '/join-ads',
   joinLabAi: '/join-lab-ai',
-  joinEscapes: '/join-escapes',
+  joinEscapes: 'https://joinescapes.com/',
 };
 
 export function HomeView() {
@@ -234,23 +234,43 @@ export function HomeView() {
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {Object.entries(ecosystem.cards).map(([key, value]) => (
-            <Link
-              key={key}
-              href={UNIT_ROUTES[key] ?? '#'}
-              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-zinc-950/70 p-8 shadow-xl transition-transform hover:-translate-y-1 hover:border-sky-500/40 hover:shadow-glow-sky"
-            >
-              <div className="absolute inset-0 -z-10 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-              <h3 className="mt-2 text-2xl font-semibold text-white">{value.title}</h3>
-              <p className="mt-3 text-sm text-zinc-400">{value.description}</p>
-              {value.cta && (
-              <div className="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-teal-200">
-                {value.cta}
-                <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
-              </div>
-              )}
-            </Link>
-          ))}
+          {Object.entries(ecosystem.cards).map(([key, value]) => {
+            const href = UNIT_ROUTES[key] ?? '#';
+            const isExternal = href.startsWith('http');
+            const cardClass =
+              'group relative overflow-hidden rounded-3xl border border-white/10 bg-zinc-950/70 p-8 shadow-xl transition-transform hover:-translate-y-1 hover:border-sky-500/40 hover:shadow-glow-sky';
+            const inner = (
+              <>
+                <div className="absolute inset-0 -z-10 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                <h3 className="mt-2 text-2xl font-semibold text-white">{value.title}</h3>
+                <p className="mt-3 text-sm text-zinc-400">{value.description}</p>
+                {value.cta && (
+                  <div className="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-teal-200">
+                    {value.cta}
+                    <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
+                  </div>
+                )}
+              </>
+            );
+            if (isExternal) {
+              return (
+                <a
+                  key={key}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={cardClass}
+                >
+                  {inner}
+                </a>
+              );
+            }
+            return (
+              <Link key={key} href={href} className={cardClass}>
+                {inner}
+              </Link>
+            );
+          })}
         </div>
       </section>
 
@@ -326,10 +346,15 @@ export function HomeView() {
       </section>
 
       {/* İş Birliklerimiz banner */}
-      <section className="relative overflow-hidden rounded-3xl border border-white/10 px-6 py-[60px] shadow-2xl shadow-black/35 sm:px-8 sm:py-[68px]">
+      <section className="relative overflow-hidden rounded-3xl border border-white/10 px-6 py-10 shadow-2xl shadow-black/35 sm:px-8 sm:py-[68px] md:py-[68px] min-h-[430px] md:min-h-0">
         {/* Background layers */}
         <div
-          className="absolute inset-0 z-0 bg-cover bg-center"
+          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat md:hidden"
+          style={{ backgroundImage: 'url(/join_pr_is_birliklerimiz.jpg)' }}
+          aria-hidden="true"
+        />
+        <div
+          className="absolute inset-0 z-0 hidden bg-cover bg-center md:block"
           style={{ backgroundImage: 'url(/isbirliklerimiz_banner.webp)' }}
           aria-hidden="true"
         />
@@ -340,7 +365,7 @@ export function HomeView() {
 
         {/* Content */}
         <div className="relative z-10 mx-auto w-full max-w-6xl">
-          <div className="max-w-3xl space-y-3">
+          <div className="max-w-3xl space-y-3 md:pt-0 pt-1">
             <h3 className="text-2xl font-semibold text-white md:text-3xl">
               {locale === 'en' ? 'Our Collaborations' : 'İş Birliklerimiz'}
             </h3>

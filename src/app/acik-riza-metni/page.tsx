@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import AcikRizaMetniContent from './AcikRizaMetniContent';
 
 export const metadata: Metadata = {
   title: 'Açık Rıza Metni',
@@ -13,17 +14,7 @@ export default function AcikRizaMetniPage() {
           <p className="text-xs uppercase tracking-[0.2em] text-sky-400">Join PR</p>
           <h1 className="text-2xl font-semibold">Açık Rıza Metni</h1>
         </header>
-
-        <section className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
-          <p className="leading-7 text-zinc-200">
-            Seyahat organizasyonu kapsamında tarafımdan paylaşılan kimlik veya pasaport bilgilerimin, iletişim
-            bilgilerimin ve uçuş bilgilerimin uçak bileti rezervasyonunun yapılması, seyahat organizasyonunun
-            planlanması ve ilgili hizmet sağlayıcılar ile rezervasyon işlemlerinin gerçekleştirilebilmesi
-            amacıyla JOİN US İLETİŞİM REKLAM ORGANİZASYON VE TURİZM LİMİTED ŞİRKETİ tarafından işlenmesine ve
-            gerekli durumlarda ilgili hizmet sağlayıcılar ile paylaşılmasına açık rıza verdiğimi kabul
-            ederim.
-          </p>
-        </section>
+        <AcikRizaMetniContent />
       </div>
     </main>
   );

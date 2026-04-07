@@ -26,7 +26,6 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
       photoGallery,
       videoGallery,
       notes,
-      noindex,
     } = body ?? {};
 
     if (!brandName || !offerDate || !projectTitle) {
@@ -45,7 +44,7 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
       photoGallery: Array.isArray(photoGallery) ? photoGallery : [],
       videoGallery: Array.isArray(videoGallery) ? videoGallery : [],
       notes,
-      noindex: noindex !== false,
+      noindex: false,
     });
 
     return NextResponse.json({ offer });

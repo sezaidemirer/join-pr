@@ -346,16 +346,33 @@ export function HaberDetayClient({ rawSlug }: { rawSlug: string }) {
     });
   }
   if (!adminNews && (currentSlug === 'turk-oyuncular-urdun-e-hayran-kaldi' || currentSlug === 'turk-oyuncular-urdun-e-hayran-kald')) {
-    externalLinks.push({
-      href: 'https://joinpr.com.tr/turk-oyuncular-urdune-hayran-kaldi/',
-      image: '/sondakika.webp',
-      label: 'SonDakika.com',
-    });
+    externalLinks.push(
+      {
+        href: 'https://www.sozcu.com.tr/turk-dizi-oyunculari-urdunde-wp7628820',
+        image: '/Sozculogo248x90.png',
+        label: 'Sözcü',
+      },
+      {
+        href: 'https://www.sabah.com.tr/magazin/turk-oyuncular-urdunde-6409508',
+        image: '/sabah.webp',
+        label: 'Sabah',
+      },
+      {
+        href: 'https://www.haberler.com/turk-dizi-oyunculari-urdun-de-15713248-haberi/',
+        image: '/haberler.com_.webp',
+        label: 'Haberler.com',
+      },
+      {
+        href: 'https://www.dha.com.tr/kultur-sanat/turk-dizi-oyunculari-urdunde-2224858',
+        image: '/demiroren-haber-ajansi.webp',
+        label: 'DHA',
+      }
+    );
   }
   if (!adminNews && currentSlug === 'turk-oyunculardan-bahreyn-cikarmasi') {
     externalLinks.push({
       href: 'https://www.aksam.com.tr/magazin/turk-oyunculardan-bahreyn-cikarmasi-etkinlikte-buyuk-ilgi/haber-1318272',
-      image: '/aksam-logo.webp',
+      image: '/aksam-logo.svg',
       label: 'Akşam',
     });
   }
@@ -372,14 +389,19 @@ export function HaberDetayClient({ rawSlug }: { rawSlug: string }) {
         label: 'Milliyet',
       },
       {
-        href: 'https://www.albawaba.com/business/pr/turkish-celebrities-ventured-desert-safari-tour-sharm-el-sheikh-1514510',
-        image: '/al-bawaba.webp',
-        label: 'Albawaba',
+        href: 'https://www.dha.com.tr/kultur-sanat/turk-oyuncular-misirda-2166126',
+        image: '/demiroren-haber-ajansi.webp',
+        label: 'DHA',
       },
       {
-        href: 'https://menafn.com/1105953774/Turkish-Celebrities-Ventured-in-a-Desert-Safari-Tour-at-Sharm-El-Sheikh',
-        image: '/menafn.webp',
-        label: 'MENAFN',
+        href: 'https://www.ntv.com.tr/galeri/n-life/magazin/cemre-baysel-gokhan-alkan-gizem-karaca-serkay-tutuncu-mehmet-aykac-ve-gulper-ozdemir-misirda,xVNEWEWkM0iOFF-4t6VxFA/1',
+        image: '/NTV_logo.png',
+        label: 'NTV',
+      },
+      {
+        href: 'https://www.aksam.com.tr/magazin/aytac-sasmaz-ayriligini-unutmaya-calisiyor-cemre-baysel-misirda/haber-1321983',
+        image: '/aksam-logo.svg',
+        label: 'Akşam',
       }
     );
   }
@@ -397,19 +419,29 @@ export function HaberDetayClient({ rawSlug }: { rawSlug: string }) {
   if (!adminNews && currentSlug === 'jennifer-lopez-sharm-el-sheikh-te') {
     externalLinks.push(
       {
-        href: 'https://www.sabah.com.tr/yasam/rixos-misirdan-tarihi-gece-jennifer-lopezden-rixos-misafirlerine-ozel-konser-7399527#:~:text=%C4%B0konik%20y%C4%B1ld%C4%B1z%20Jennifer%20Lopez%2C%202025,ya%C5%9Fanmam%C4%B1%C5%9F%20bir%20k%C3%BClt%C3%BCrel%20zirveye%20d%C3%B6n%C3%BC%C5%9Ft%C3%BC.',
-        image: '/sabah.webp',
-        label: 'Sabah',
-      },
-      {
         href: 'https://www.dha.com.tr/kultur-sanat/jennifer-lopez-dunya-turnesi-kapsaminda-sharm-el-sheikhte-sahne-aldi-2692963',
         image: '/demiroren-haber-ajansi.webp',
         label: 'DHA',
       },
       {
-        href: 'https://www.cumhuriyet.com.tr/is-dunyasi/jennifer-lopez-2025-dunya-turnesine-rixos-radamis-sharm-el-sheikhte-2333698',
+        href: 'https://www.cumhuriyet.com.tr/is-dunyasi/rixos-misir-dan-tarihi-gece-jennifer-lopez-den-rixos-misafirlerine-ozel-konser-2423860',
         image: '/cunhuriyet.webp',
         label: 'Cumhuriyet',
+      },
+      {
+        href: 'https://www.dunya.com/kultur-sanat/rixos-misirdan-tarihi-gece-jennifer-lopezden-rixos-misafirlerine-ozel-konser-haberi-788165',
+        image: '/dunya.com.png',
+        label: 'Dünya.com',
+      },
+      {
+        href: 'https://haberglobal.com/magazin/jennifer-lopez-dunya-turnesi-kapsaminda-sharm-el-sheikhte-sahne-aldi-469494',
+        image: '/haber_globa.png',
+        label: 'Haber Global',
+      },
+      {
+        href: 'https://www.haberler.com/magazin/jennifer-lopez-rixos-radamis-te-unutulmaz-bir-konser-verdii-18913811-haberi/',
+        image: '/haberler.com_.webp',
+        label: 'Haberler.com',
       }
     );
   }
@@ -417,21 +449,60 @@ export function HaberDetayClient({ rawSlug }: { rawSlug: string }) {
     !adminNews &&
     currentSlug === 'rixos-radamis-sharm-el-sheikh-4-ay-boyunca-michelin-yildizli-sefleri-agirlayacak'
   ) {
-    externalLinks.push({
-      href: 'https://www.cumhuriyet.com.tr/is-dunyasi/michelin-yildizli-sefler-ozgun-lezzetlerini-rixos-radamis-sharm-el-2238400',
-      image: '/cunhuriyet.webp',
-      label: 'Cumhuriyet',
-    });
+    externalLinks.push(
+      {
+        href: 'https://www.cumhuriyet.com.tr/is-dunyasi/michelin-yildizli-sefler-ozgun-lezzetlerini-rixos-radamis-sharm-el-2238400',
+        image: '/cunhuriyet.webp',
+        label: 'Cumhuriyet',
+      },
+      {
+        href: 'https://www.hurriyet.com.tr/yerel-haberler/istanbul/misirdaki-unlu-otel-4-ay-boyunca-michelin-yil-42505727?ust=1774947060000000&hl=tr',
+        image: '/hurriyet.webp',
+        label: 'Hürriyet',
+      },
+      {
+        href: 'https://www.milliyet.com.tr/yerel-haberler/istanbul/misirdaki-unlu-otel-4-ay-boyunca-michelin-yil-7172555',
+        image: '/milliyet.webp',
+        label: 'Milliyet',
+      },
+      {
+        href: 'https://www.cnnturk.com/yerel-haberler/istanbul/misirdaki-unlu-otel-4-ay-boyunca-michelin-yildizli-seflerini-agirlayacak-2141561',
+        image: '/cnn-turk-logo-1.webp',
+        label: 'CNN Türk',
+      },
+      {
+        href: 'https://www.yenicaggazetesi.com/michelin-yildizli-sefler-ozgun-lezzetlerini-rixos-radamis-sharm-el-sheikhde-sunacak-831663h.htm',
+        image: '/yenicag.webp',
+        label: 'Yeniçağ',
+      },
+      {
+        href: 'https://www.gazetevatan.com/yerel-haberler/istanbul/misirdaki-unlu-otel-4-ay-boyunca-michelin-yil-2163631',
+        image: '/gazete-vatan.webp',
+        label: 'Gazete Vatan',
+      }
+    );
   }
   if (
     !adminNews &&
     currentSlug === 'dr-yucel-sarialtin-yuz-ve-boyun-bolgesinde-sanat-eseri-yaratmak-icin-calisiyoruz'
   ) {
-    externalLinks.push({
-      href: 'https://www.dha.com.tr/saglik-yasam/yuz-ve-boyun-germe-islemleri-genc-gorunumu-mumkun-kiliyor-2314311',
-      image: '/demiroren-haber-ajansi.webp',
-      label: 'DHA',
-    });
+    externalLinks.push(
+      {
+        href: 'https://www.dha.com.tr/saglik-yasam/yuz-ve-boyun-germe-islemleri-genc-gorunumu-mumkun-kiliyor-2314311',
+        image: '/demiroren-haber-ajansi.webp',
+        label: 'DHA',
+      },
+      {
+        href: 'https://www.cumhuriyet.com.tr/yasam/uzmani-acikladi-estetik-sonrasinda-iyilesme-sureci-cilt-bakim-2179659',
+        image: '/cunhuriyet.webp',
+        label: 'Cumhuriyet',
+      },
+      {
+        href: 'https://www.karar.com/hayat-haberleri/op-dr-estetik-cerrah-yucel-sarialtin-2-yillik-ar-ge-asamasinin-ardindan-1839643',
+        image: '/karar-logo-1.webp',
+        label: 'KARAR',
+      }
+    );
   }
   if (!adminNews && currentSlug === 'rixos-radamis-kongre-merkezi-acildi') {
     externalLinks.push(
@@ -468,6 +539,16 @@ export function HaberDetayClient({ rawSlug }: { rawSlug: string }) {
         href: 'https://www.odatv.com/magazin/hadise-2025te-ilk-konserini-misir-sharm-el-seyhde-verecek-2024te-kac-konser-verdi-120074853',
         image: '/oda_tv_logo kopya.webp',
         label: 'Oda TV',
+      },
+      {
+        href: 'https://www.yenicaggazetesi.com/rixos-premium-seagatete-hadise-ruzgari-esti-875944h.htm',
+        image: '/yenicag.webp',
+        label: 'Yeniçağ',
+      },
+      {
+        href: 'https://www.cumhuriyet.com.tr/is-dunyasi/rixos-premium-seagatete-hadise-ruzgari-esti-2286995',
+        image: '/cunhuriyet.webp',
+        label: 'Cumhuriyet',
       }
     );
   }
@@ -485,6 +566,16 @@ export function HaberDetayClient({ rawSlug }: { rawSlug: string }) {
         href: 'https://www.turizmdays.com/news/rixos-radamis-sharm-el-sheikhte-enrique-iglesias-firtinasi-esti-28349',
         image: '/turizmdays_logo kopya.webp',
         label: 'Turizm Days',
+      },
+      {
+        href: 'https://www.cumhuriyet.com.tr/is-dunyasi/rixos-radamis-sharm-el-sheikhte-enrique-iglesias-firtinasi-esti-2336285',
+        image: '/cunhuriyet.webp',
+        label: 'Cumhuriyet',
+      },
+      {
+        href: 'https://www.turizmaktuel.com/haber/rixos-radamis-sharm-el-sheikh-te-enrique-iglesias-firtinasi-esti',
+        image: '/turizm_aktuel.svg',
+        label: 'Turizm Aktüel',
       }
     );
   }
@@ -521,11 +612,33 @@ export function HaberDetayClient({ rawSlug }: { rawSlug: string }) {
       currentSlug === 'm-s-r-da-col-safarisi' ||
       currentSlug === 'misir-da-col-safarisi')
   ) {
-    externalLinks.push({
-      href: 'https://www.dha.com.tr/kultur-sanat/turk-oyuncular-misirda-col-safarisi-yapti-2229247',
-      image: '/demiroren-haber-ajansi.webp',
-      label: 'DHA',
-    });
+    externalLinks.push(
+      {
+        href: 'https://www.dha.com.tr/kultur-sanat/turk-oyuncular-misirda-col-safarisi-yapti-2229247',
+        image: '/demiroren-haber-ajansi.webp',
+        label: 'DHA',
+      },
+      {
+        href: 'https://www.sabah.com.tr/kultur-sanat/2023/04/02/turk-oyuncularin-sarm-el-seyhte-safari-keyfi',
+        image: '/sabah.webp',
+        label: 'Sabah',
+      },
+      {
+        href: 'https://www.turizmguncel.com/haber/turk-unluler-misiritanitti',
+        image: '/turizm_guncel.png',
+        label: 'Turizm Güncel',
+      },
+      {
+        href: 'https://www.haberler.com/turk-oyuncular-misir-da-col-safarisi-yapti-15733501-haberi/',
+        image: '/haberler.com_.webp',
+        label: 'Haberler.com',
+      },
+      {
+        href: 'https://www.gazetevatan.com/magazin/unluler-col-safarisinde-tam-bir-yildizlar-gecidi-2089623',
+        image: '/gazete-vatan.webp',
+        label: 'Gazete Vatan',
+      }
+    );
   }
   if (
     !adminNews &&
@@ -540,7 +653,7 @@ export function HaberDetayClient({ rawSlug }: { rawSlug: string }) {
   }
   if (
     !adminNews &&
-    (currentSlug === 'prontotour-un-2024-erken-rezervasyon-donemi-baslad' ||
+    (currentSlug === 'prontotour-un-2024-erken-rezervasyon-donemi-basladi' ||
       currentSlug === 'prontotour-un-2024-erken-rezervasyon-donemi-baslad')
   ) {
     externalLinks.push(
@@ -550,23 +663,69 @@ export function HaberDetayClient({ rawSlug }: { rawSlug: string }) {
         label: 'DHA',
       },
       {
-        href: 'https://www.tourismtoday.net/kategoriler/acenta-haberleri/prontotour-2024-erken-rezervasyon-donemini-unlu-oyuncularla-acti/',
-        image: '/tourism-today.webp',
-        label: 'TOURISM TODAY',
-      },
-      {
         href: 'https://www.karar.com/hayat-haberleri/prontotourun-2024-erken-rezervasyon-donemi-unlu-oyuncular-ile-basladi-1795756',
         image: '/karar-logo-1.webp',
         label: 'KARAR',
+      },
+      {
+        href: 'https://www.turizmajansi.com/haber/prontotour-un-2024-erken-rezervasyon-donemi-unlu-oyuncularla-basladi-h64351',
+        image: '/turizm_ajansi_logo.png',
+        label: 'Turizm Ajansı',
       }
     );
   }
   if (!adminNews && currentSlug === 'prontotour-unlu-oyuncu-ve-influencer-lara-yonelik-bir-dunya-turu-programi-baslatiyor') {
-    externalLinks.push({
-      href: 'https://www.sondakika.com/turizm/haber-prontotour-unlu-oyuncu-ve-influencer-lara-yonelik-bir-dunya-turu-programi-baslatiyor-16376787/',
-      image: '/sondakika.webp',
-      label: 'SonDakika.com',
-    });
+    externalLinks.push(
+      {
+        href: 'https://www.sondakika.com/turizm/haber-prontotour-unlu-oyuncu-ve-influencer-lara-yonelik-bir-dunya-turu-programi-baslatiyor-16376787/',
+        image: '/sondakika.webp',
+        label: 'SonDakika.com',
+      },
+      {
+        href: 'https://www.karar.com/hayat-haberleri/tur-sirketi-kendi-gezgin-unlulerini-secti-1791266',
+        image: '/karar-logo-1.webp',
+        label: 'KARAR',
+      },
+      {
+        href: 'https://www.dha.com.tr/gundem/unlu-oyuncular-ve-influencerlar-dunya-turuna-cikiyor-2319324',
+        image: '/demiroren-haber-ajansi.webp',
+        label: 'DHA',
+      },
+      {
+        href: 'https://www.turizmajansi.com/haber/unlu-oyuncular-ve-influencer-lar-dunya-turuna-cikiyor-h63245',
+        image: '/turizm_ajansi_logo.png',
+        label: 'Turizm Ajansı',
+      }
+    );
+  }
+  if (!adminNews && currentSlug === 'prontotour-da-erken-rezervasyon-donemi-basladi-2025-icin-hedef-60-bin-turist') {
+    externalLinks.push(
+      {
+        href: 'https://www.turizmaktuel.com/haber/prontotour-erken-rezervasyonu-yuzde-50-indirimle-baslatti#:~:text=2024%2012%3A43-,Prontotour%2C%20%E2%80%9CSak%C4%B1n%20ge%C3%A7%20kalma%20erken%20gel!%E2%80%9D',
+        image: '/turizm_aktuel.svg',
+        label: 'Turizm Aktüel',
+      },
+      {
+        href: 'https://www.turizmajansi.com/haber/prontotour-erken-rezervasyonu-yuzde-50-indirimle-baslatti-h67114',
+        image: '/turizm_ajansi_logo.png',
+        label: 'Turizm Ajansı',
+      },
+      {
+        href: 'https://www.gazetepencere.com/gezilecek-yerler/prontotour-erken-rezervasyonu-yuzde-50-indirimle-baslatti-634397h',
+        image: '/gazete_pencere kopya.webp',
+        label: 'Gazete Pencere',
+      },
+      {
+        href: 'https://www.gazeteduvar.com.tr/prontotourdan-erken-rezervasyonda-yuzde-50-indirim-haber-1726422',
+        image: '/gazete_duvar.png',
+        label: 'Gazete Duvar',
+      },
+      {
+        href: 'https://www.dha.com.tr/ekonomi/prontotour-erken-rezervasyonu-yuzde-50-indirimle-baslattigini-duyurdu-2517207',
+        image: '/demiroren-haber-ajansi.webp',
+        label: 'DHA',
+      }
+    );
   }
   if (!adminNews && currentSlug === 'leaders-cxo-14-bulusma-toplantisi') {
     externalLinks.push({
@@ -709,7 +868,7 @@ export function HaberDetayClient({ rawSlug }: { rawSlug: string }) {
                   <img
                     src={resolveNewsImageSrc(link.image, BASE_PATH)}
                     alt={link.label}
-                    className={`w-auto max-w-full object-contain ${['Haberler.com', 'SonDakika.com', 'DHA', 'Turizm Aktüel', 'Turizm Ajansı', 'Dünya.com', 'Cumhuriyet', 'Tourism Today', 'Yeniçağ', 'KARAR', 'Gazete Birlik', 'Onedio', 'AP News', 'Augusta Chronicle', 'National Law Review', 'The Tribune', 'DailyHunt', 'ANI News', 'Flipboard', 'The Week', 'PTI News', 'OB News', 'LatestLY'].includes(link.label) ? 'max-h-20' : 'max-h-10'}`}
+                    className={`w-auto max-w-full object-contain ${['Haberler.com', 'SonDakika.com', 'DHA', 'Turizm Aktüel', 'Turizm Ajansı', 'Dünya.com', 'Cumhuriyet', 'Tourism Today', 'Yeniçağ', 'KARAR', 'Gazete Birlik', 'Onedio', 'AP News', 'Augusta Chronicle', 'National Law Review', 'The Tribune', 'DailyHunt', 'ANI News', 'Flipboard', 'The Week', 'PTI News', 'OB News', 'LatestLY'].includes(link.label) ? 'max-h-20' : 'max-h-10'} ${link.label === 'Gazete Duvar' ? 'max-h-24 scale-110' : ''} ${currentSlug === 'turk-oyuncular-misir-da' && (link.label === 'Hürriyet' || link.label === 'Milliyet') ? 'scale-150' : ''} ${currentSlug === 'prontotour-un-2024-erken-rezervasyon-donemi-basladi' && link.label === 'TOURISM TODAY' ? 'max-h-none h-12 scale-[5] origin-center' : ''}`}
                   />
                 </div>
                 <span className="text-center text-xs leading-tight">

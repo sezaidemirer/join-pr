@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 import { MedyaRaporuBanner } from '@/components/MedyaRaporuBanner';
+import { getMediaReportsApiUrl } from '@/lib/media-reports-api';
 
 type PublicBrand = {
   slug: string;
@@ -23,7 +24,11 @@ export default function MedyaYansimaRaporuLandingPage() {
       setLoading(true);
       setError('');
       try {
-        const res = await fetch('/api/media-reports/tree', { cache: 'no-store' });
+        const res = await fetch(getMediaReportsApiUrl('/api/media-reports/tree/'), {
+          method: 'GET',
+          mode: 'cors',
+          cache: 'no-store',
+        });
         const data = await res.json();
         if (!res.ok) throw new Error(data.error || 'Raporlar alinamadi');
         if (active) setBrands(Array.isArray(data.brands) ? data.brands : []);
@@ -51,9 +56,9 @@ export default function MedyaYansimaRaporuLandingPage() {
             className="group flex flex-col rounded-2xl border border-white/10 bg-white/5 p-6 transition-colors hover:border-teal-500/30 hover:bg-white/10"
           >
             {brand.logoUrl ? (
-              <div className="mb-4 flex min-h-[6rem] items-center justify-center rounded-xl bg-white p-4">
+              <div className="mb-4 flex min-h-[7rem] items-center justify-center rounded-xl bg-white p-4 sm:min-h-[8rem] sm:p-5">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={brand.logoUrl} alt={brand.name} className="max-h-[4.5rem] w-auto object-contain" />
+                <img src={brand.logoUrl} alt={brand.name} className="max-h-[5.75rem] w-auto object-contain sm:max-h-[6.5rem]" />
               </div>
             ) : null}
             <span className="text-lg font-semibold text-white group-hover:text-teal-300">

@@ -50,8 +50,8 @@ export default function AdminLoginPage() {
   }
 
   return (
-    <main className="min-h-screen bg-zinc-950 px-6 py-20 text-zinc-100">
-      <div className="mx-auto w-full max-w-md rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6">
+    <main className="min-h-screen bg-zinc-950 px-4 py-12 text-zinc-100 sm:px-6 sm:py-20">
+      <div className="mx-auto w-full max-w-md rounded-2xl border border-zinc-800 bg-zinc-900/60 p-4 sm:p-6">
         <button
           type="button"
           onClick={() => router.back()}

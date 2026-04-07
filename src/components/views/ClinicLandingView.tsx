@@ -1,6 +1,7 @@
 'use client';
 
 import { ReferanslarSection } from '@/components/ReferanslarSection';
+import { FormConsentEmbed } from '@/components/FormConsentEmbed';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -392,12 +393,10 @@ export function ClinicLandingView() {
 
         <div id="form" className="space-y-4 rounded-2xl border border-white/15 bg-black/40 p-6">
           <h3 className="text-lg font-semibold text-white">Analiz Talep Formu</h3>
-          <iframe
-            aria-label="Join-Form-Landing"
-            frameBorder="0"
-            style={{ height: 500, width: '99%', border: 'none' }}
+          <FormConsentEmbed
+            ariaLabel="Join-Form-Landing"
             src="https://forms.joinpr.com.tr/joinus1/form/JoinFormLanding/formperma/I50RnMGr5e2CLfOswetbEV7jdQ_N9gkidjRZUcvnfl0"
-            title="Join CRM Form"
+            iframeHeight={500}
           />
         </div>
       </section>

@@ -1,3 +1,6 @@
+import { HABER_SEEDED_LOGO_FILES } from '@/data/haber-platform-logos';
+import { haberPlatformLogoPublicUrl } from '@/lib/haber-logo-storage';
+
 /**
  * Statik hostingte `/api/news` olmadigi icin, canli haberler baska origin'den cekilebilir.
  * Ornek: NEXT_PUBLIC_NEWS_API_ORIGIN=https://proje.joinpr.com.tr
@@ -75,6 +78,10 @@ export function resolveNewsImageSrc(path: string | null | undefined, basePath = 
   if (!p) return '';
   if (/^https?:\/\//i.test(p)) return p;
   const rel = p.startsWith('/') ? p : `/${p}`;
+  const fileKey = rel.replace(/^\//, '').split('?')[0];
+  if (HABER_SEEDED_LOGO_FILES.has(fileKey)) {
+    return haberPlatformLogoPublicUrl(fileKey);
+  }
   const origin = publicAssetOrigin();
   if (origin) return `${origin}${rel}`;
   const bp = basePath.replace(/\/$/, '');
@@ -87,6 +94,10 @@ export function absolutizePublicAssetPath(path: string | null | undefined): stri
   if (!p) return '';
   if (/^https?:\/\//i.test(p)) return p;
   const rel = p.startsWith('/') ? p : `/${p}`;
+  const fileKey = rel.replace(/^\//, '').split('?')[0];
+  if (HABER_SEEDED_LOGO_FILES.has(fileKey)) {
+    return haberPlatformLogoPublicUrl(fileKey);
+  }
   const origin = publicAssetOrigin();
   if (origin) return `${origin}${rel}`;
   return rel;

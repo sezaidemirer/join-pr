@@ -37,6 +37,15 @@ function VideoWithFirstFrame({ src, className }: { src: string; className?: stri
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const isVimeo = /(?:https?:\/\/)?(?:www\.)?(?:vimeo\.com\/\d+|player\.vimeo\.com\/video\/\d+)/i.test(src);
+  const baseVimeoSrc = isVimeo
+    ? /player\.vimeo\.com\/video\/\d+/i.test(src)
+      ? src
+      : src.replace(/(?:https?:\/\/)?(?:www\.)?vimeo\.com\/(\d+).*/i, 'https://player.vimeo.com/video/$1')
+    : '';
+  const vimeoEmbedSrc = baseVimeoSrc
+    ? `${baseVimeoSrc}${baseVimeoSrc.includes('?') ? '&' : '?'}badge=0&title=0&byline=0&portrait=0&dnt=1`
+    : '';
 
   useEffect(() => {
     const video = videoRef.current;
@@ -184,35 +193,56 @@ function VideoWithFirstFrame({ src, className }: { src: string; className?: stri
       className={isFullscreen ? 'flex min-h-screen min-w-full items-center justify-center bg-black' : 'relative h-full w-full bg-black'}
     >
       <div className={isFullscreen ? 'relative h-full max-h-[100vh] w-auto max-w-full shrink-0 aspect-[9/16]' : 'relative h-full w-full'}>
-        <video
-          ref={videoRef}
-          src={src}
-          playsInline
-          preload="none"
-          muted={muted}
-          onClick={togglePlay}
-          onLoadedMetadata={(e) => setDuration(e.currentTarget.duration)}
-          className={`h-full w-full object-cover ${className ?? ''}`}
-        />
-        <canvas
-          ref={canvasRef}
-          className="pointer-events-none absolute inset-0 h-full w-full object-cover"
-          style={{ display: posterReady && !playing ? 'block' : 'none' }}
-          aria-hidden
-        />
-        {controlsBar}
+        {isVimeo ? (
+          <iframe
+            src={vimeoEmbedSrc}
+            className={`h-full w-full ${className ?? ''}`}
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            allowFullScreen
+            title="Vimeo video"
+          />
+        ) : (
+          <>
+            <video
+              ref={videoRef}
+              src={src}
+              playsInline
+              preload="metadata"
+              muted={muted}
+              onClick={togglePlay}
+              onLoadedMetadata={(e) => setDuration(e.currentTarget.duration)}
+              className={`h-full w-full object-cover ${className ?? ''}`}
+            />
+            <canvas
+              ref={canvasRef}
+              className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+              style={{ display: posterReady && !playing ? 'block' : 'none' }}
+              aria-hidden
+            />
+            {controlsBar}
+          </>
+        )}
       </div>
     </div>
   );
 }
 
 function FeaturedContentCell({ src, label }: { src?: string; label: string }) {
+  const safeSrc = src
+    ? src.startsWith('/')
+      ? src
+          .split('/')
+          .map((part, index) => (index === 0 ? part : encodeURIComponent(part)))
+          .join('/')
+      : src
+    : undefined;
+
   return (
-    <div className="flex flex-col items-center gap-2">
+    <div className="flex flex-col items-center">
       <div className="w-full max-w-[200px] overflow-hidden rounded-xl border border-white/10 bg-zinc-800">
         <div className="aspect-[9/16] w-full">
-          {src ? (
-            <VideoWithFirstFrame src={src} />
+          {safeSrc ? (
+            <VideoWithFirstFrame src={safeSrc} />
           ) : (
             <div className="flex h-full w-full flex-col items-center justify-center gap-2 bg-zinc-900/80 px-3 text-center">
               <span className="text-xs text-zinc-500">Video</span>
@@ -221,7 +251,7 @@ function FeaturedContentCell({ src, label }: { src?: string; label: string }) {
           )}
         </div>
       </div>
-      <p className="text-center text-sm font-medium text-white">{label}</p>
+      <p className="mt-2 text-center text-sm font-medium text-white">{label}</p>
     </div>
   );
 }
@@ -244,19 +274,24 @@ const PRONTO_FACE = {
   yagizCanKonyali: `${PRONTO}/yagiz_can_konyali.jpg`,
   firatAlbayram: `${PRONTO}/firat_albayram.jpg`,
   melisGur: `${PRONTO}/melis_gur.jpg`,
+  nazCaglaIrmak: `${PRONTO}/naz_cagla_irmak.jpg`,
+  selinSekerci: `${PRONTO}/selin_sekerci.jpg`,
+  ilkerYasar: `${PRONTO}/ilker_yasar.jpg`,
+  evrimErtekinErgun: `${PRONTO}/evrim_ertekin_ergu\u0308n.jpg`,
+  gozdeKaya: `${PRONTO}/go\u0308zde_kaya.jpg`,
 } as const;
 
-// Prontotour.pdf – Influencer & Celebrity Marketing performans özeti
+// Prontotour.pdf – katılımcı ve ünlü isim pazarlama performans özeti
 const PRONTOTOUR_KPIS = {
   posts: 661,
-  influencers: 70,
+  influencers: 69,
   engagement: '5.59M',
   value: '$6.8M',
 };
 
 const PRONTOTOUR_PERFORMANCE = {
   posts: 661,
-  creators: 70,
+  creators: 69,
   views: '58.23M',
   engagements: '5.59M',
   engagementRate: '2.32%',
@@ -274,77 +309,74 @@ const PRONTOTOUR_CREATORS = [
     name: 'Gizem Güneş',
     handle: 'gizemgunes',
     image: '/rixos-infleuncers/gizem_gunes.webp',
-    posts: '—',
-    views: '1.3M',
-    engagementRate: '1.27%',
-    reach: '—',
-    emv: '—',
+    posts: '44',
+    views: '10.67M',
+    engagementRate: '1.23%',
+    reach: '8.63M',
+    emv: '$1.2M',
     comments: '43.4K',
   },
   {
     name: 'Gökberk Demirci',
     handle: 'gokberkdemirci',
     image: '/rixos-infleuncers/gokberk_demirci.webp',
-    posts: '—',
-    views: '1.3M',
-    engagementRate: '1.41%',
-    reach: '—',
-    emv: '—',
+    posts: '8',
+    views: '6.77M',
+    engagementRate: '10.31%',
+    reach: '3M',
+    emv: '$278.5K',
     comments: '25.96K',
   },
   {
     name: 'Gökhan Alkan',
     handle: 'gokhanalkan',
     image: '/rixos-infleuncers/gokhan_alkan.webp',
-    posts: '—',
-    views: '1.2M',
-    engagementRate: '0.67%',
-    reach: '—',
-    emv: '—',
+    posts: '41',
+    views: '4.85M',
+    engagementRate: '3.86%',
+    reach: '2.93M',
+    emv: '$675.1K',
     comments: '14.48K',
   },
   {
     name: 'Barış Baktaş',
     handle: 'barisbaktas',
     image: '/rixos-infleuncers/baris_baktas.webp',
-    posts: '—',
-    views: '1.2M',
-    engagementRate: '8.75%',
-    reach: '—',
-    emv: '—',
+    posts: '9',
+    views: '3.36M',
+    engagementRate: '13.1%',
+    reach: '2.51M',
+    emv: '$464.2K',
     comments: '30.66K',
   },
   {
     name: 'Çağla Şimşek',
     handle: 'caglasimsek',
     image: '/rixos-infleuncers/cagla_simsek.webp',
-    posts: '—',
-    views: '1.1M',
-    engagementRate: '1.21%',
-    reach: '—',
-    emv: '—',
+    posts: '7',
+    views: '3.19M',
+    engagementRate: '3.29%',
+    reach: '2.25M',
+    emv: '$213.7K',
     comments: '38.97K',
   },
   {
     name: 'Gökçe Akyıldız',
     handle: 'gokceakyildiz',
     image: '/rixos-infleuncers/gokce_akyildiz.webp',
-    posts: '—',
-    views: '1.1M',
-    engagementRate: '3.42%',
-    reach: '—',
-    emv: '—',
+    posts: '2',
+    views: '2.32M',
+    engagementRate: '3.83%',
+    reach: '1.73M',
+    emv: '$187.8K',
     comments: '60K',
   },
 ];
 
 const PRONTOTOUR_FEATURED_CONTENT: { src?: string; label: string }[] = [
-  { src: '/rixos-content/gizem_gunes.mp4', label: 'Gizem Güneş' },
-  { src: '/rixos-content/gokberk_demirci.mp4', label: 'Gökberk Demirci' },
-  { src: '/rixos-content/pelin_akil.mp4', label: 'Pelin Akil Altan' },
-  { label: 'Gökhan Alkan' },
-  { label: 'Barış Baktaş' },
-  { label: 'Çağla Şimşek' },
+  { src: 'https://player.vimeo.com/video/1178990184?badge=0&autopause=0&player_id=0&app_id=58479', label: 'Prontotour' },
+  { src: 'https://player.vimeo.com/video/1178988925?badge=0&autopause=0&player_id=0&app_id=58479', label: 'Gökberk Demirci' },
+  { src: 'https://player.vimeo.com/video/1178986645?badge=0&autopause=0&player_id=0&app_id=58479', label: 'Didem Balçın' },
 ];
 
 type ParticipatingInfluencer = { name: string; imagePath?: string };
@@ -358,41 +390,67 @@ const PRONTOTOUR_ALL_INFLUENCERS: ParticipatingInfluencer[] = [
   { name: 'Gökçe Akyıldız', imagePath: '/rixos-infleuncers/gokce_akyildiz.webp' },
   { name: 'Gökberk Yıldırım', imagePath: '/rixos-infleuncers/gokberk_yildirim.webp' },
   { name: 'Yıldız Çağrı Atiksoy', imagePath: '/rixos-infleuncers/yildiz_cagri_atiksoy.webp' },
-  { name: 'Murat Aygen', imagePath: PRONTO_FACE.muratAygen },
-  { name: 'Emre Kıvılcım', imagePath: PRONTO_FACE.emreKivilcim },
-  { name: 'Serhat Özcan', imagePath: PRONTO_FACE.serhatOzcan },
-  { name: 'Şükriye Dilan Bulut' },
-  { name: 'Aslıhan Karalar', imagePath: PRONTO_FACE.aslihanKaralar },
-  { name: 'Tuva Ünal', imagePath: PRONTO_FACE.tuvaUnal },
-  { name: 'Melih Özkök' },
-  { name: 'Bilal Yiğit Koçak', imagePath: PRONTO_FACE.bilalYigitKocak },
-  { name: 'Feride Hilal Akın', imagePath: PRONTO_FACE.ferideHilalAkin },
-  { name: 'Arya Çuğra' },
-  { name: 'Feyyaz Yiğit', imagePath: PRONTO_FACE.feyyazYigit },
-  { name: 'Barış Yıldız', imagePath: PRONTO_FACE.barisYildiz },
-  { name: 'Sercan Badur', imagePath: PRONTO_FACE.sercanBadur },
-  { name: 'Yasmine', imagePath: PRONTO_FACE.yasmine },
-  { name: 'Uğur Doğu' },
-  { name: 'Mehmet Turgut' },
-  { name: 'Melis Gür', imagePath: PRONTO_FACE.melisGur },
-  { name: 'Yeliz Yeşilmen', imagePath: PRONTO_FACE.yelizYesilmen },
-  { name: 'Emir Sakçı' },
-  { name: 'Serkan Bozkurt' },
-  { name: 'Yağız Can Konyalı', imagePath: PRONTO_FACE.yagizCanKonyali },
-  { name: 'Fırat Albayram', imagePath: PRONTO_FACE.firatAlbayram },
-  { name: 'Yasser Karaarslan' },
-  { name: 'Elçin Aliyev' },
-  { name: 'Haluk Söker' },
-  { name: 'Batuhan Girgin' },
+  { name: 'Naz Çağla Irmak', imagePath: PRONTO_FACE.nazCaglaIrmak },
+  { name: 'Nurdan Gürel', imagePath: '/ajet-influencers/nurdan_gurel.webp' },
+  { name: 'Berk Ali Çatal', imagePath: '/rixos-infleuncers/berk_ali_catal.webp' },
+  { name: 'Lilya İrem Salman', imagePath: '/rixos-infleuncers/lilya_irem.webp' },
+  { name: 'Baran Bölükbaşı', imagePath: '/rixos-infleuncers/baran_bolukbasi.webp' },
+  { name: 'İlayda Ildır', imagePath: '/rixos-infleuncers/ilayda_ildir.webp' },
+  { name: 'Didem Balçın', imagePath: '/rixos-infleuncers/didem_balcin_aydin.webp' },
+  { name: 'Nilsu Yılmaz', imagePath: '/rixos-infleuncers/Nilsu_yilmaz.webp' },
+  { name: 'Rojda Demirer', imagePath: '/rixos-infleuncers/rojda_demirer.webp' },
+  { name: 'Emre Bulut', imagePath: '/rixos-infleuncers/emre_bulut.webp' },
+  { name: 'Melisadogu', imagePath: '/rixos-infleuncers/melisa_dogu.webp' },
+  { name: 'Gülhan Şen', imagePath: '/pronto-influencer/gülhan_şen.jpg' },
   { name: 'Erdem Kaynarca', imagePath: '/rixos-infleuncers/erdem_kaynarca.webp' },
+  { name: 'Cemre Arda', imagePath: '/rixos-infleuncers/cemre_arda.webp' },
+  { name: 'Burcu Kara', imagePath: '/rixos-infleuncers/burcu_kara.webp' },
+  { name: 'Burak Çelik', imagePath: '/rixos-infleuncers/burak_celik.webp' },
+  { name: 'Nesrin Cavadzade', imagePath: '/rixos-infleuncers/nesrin_cavadzade.webp' },
+  { name: 'Gizem Yüksel', imagePath: '/ajet-influencers/gizem-yuksel.webp' },
+  { name: 'Damla Can', imagePath: '/ajet-influencers/damla_can.webp' },
+  { name: 'Müjde Uzman', imagePath: '/rixos-infleuncers/mujde_uzman.webp' },
+  { name: 'Sitare Akbaş', imagePath: '/rixos-infleuncers/sitare_akbas.webp' },
+  { name: 'Selin Şekerci', imagePath: PRONTO_FACE.selinSekerci },
+  { name: 'Ceren Benderlioğlu', imagePath: '/rixos-infleuncers/ceren_benderlioglu.webp' },
+  { name: 'Sera Kutlubey', imagePath: '/rixos-infleuncers/sera_kutlubey.webp' },
+  { name: 'Berk Oktay', imagePath: '/rixos-infleuncers/berk_oktay.webp' },
+  { name: 'Belgin Şimşek', imagePath: '/rixos-infleuncers/belgin_simsek.webp' },
+  { name: 'Ezgi Şenler', imagePath: '/rixos-infleuncers/ezgi_senler.webp' },
+  { name: 'Çiğdem Batur', imagePath: '/rixos-infleuncers/cigdem_batur.webp' },
+  { name: 'Doğukan Polat', imagePath: '/rixos-infleuncers/dogukan_polat.webp' },
+  { name: 'Serra Pirinç', imagePath: '/rixos-infleuncers/serra_pirinc.webp' },
+  { name: 'Alican Okumuş', imagePath: '/rixos-infleuncers/alican_okumus.webp' },
+  { name: 'Zeynep Akdeniz', imagePath: '/ajet-influencers/zeynep_akdeniz.webp' },
+  { name: 'Mehmet Yılmaz Ak', imagePath: '/rixos-infleuncers/mehmet_yilmaz_ak.webp' },
+  { name: 'Şeyma Büşra Gözdeniz', imagePath: '/ajet-influencers/seyma-busra-gozdamga.webp' },
+  { name: 'İlker Yaşar', imagePath: PRONTO_FACE.ilkerYasar },
+  { name: 'Çağla Boz', imagePath: '/rixos-infleuncers/cagla_boz.webp' },
+  { name: 'Sevil Mert Uzun', imagePath: '/ajet-influencers/sevil_mert_uzun.webp' },
   { name: 'Pelin Akil Altan', imagePath: '/rixos-infleuncers/pelin_akil.webp' },
-  { name: 'Sertaç Doğanay' },
-  { name: 'Serhan Eröz' },
-  { name: 'Dodo Denger' },
+  { name: 'Taha Baran Özbek', imagePath: '/rixos-infleuncers/taha_baran.webp' },
+  { name: 'Evrim Doğan', imagePath: '/rixos-infleuncers/evrim_dogan.webp' },
+  { name: 'Tuğba Melis Türk', imagePath: '/rixos-infleuncers/tugba_melis.webp' },
+  { name: 'Batuhan Ekşi', imagePath: '/rixos-infleuncers/batuhan_eksi.webp' },
+  { name: 'Deniz Sarıkaş', imagePath: '/rixos-infleuncers/deniz_sarikas.webp' },
+  { name: 'Evrim Ertekin Ergün', imagePath: PRONTO_FACE.evrimErtekinErgun },
+  { name: 'Mert Turak', imagePath: '/rixos-infleuncers/mert_turak.webp' },
+  { name: 'Burak Serdar Şanal', imagePath: '/rixos-infleuncers/burak_serdar_sanal.webp' },
+  { name: 'Ahmet Kayakesen', imagePath: '/rixos-infleuncers/ahmet_kayakesen.webp' },
+  { name: 'Ali Gözüşirin', imagePath: '/rixos-infleuncers/ali_gozusirin.webp' },
+  { name: 'Hasan Denizyaran', imagePath: '/rixos-infleuncers/hasan_denizyaran.webp' },
+  { name: 'Damla Göregen', imagePath: '/ajet-influencers/damla_goregen.webp' },
   { name: 'Hande Ataizi', imagePath: '/rixos-infleuncers/hande_ataizi.webp' },
+  { name: 'Feyza Sevil Güngör', imagePath: '/rixos-infleuncers/feyza_gungor.webp' },
+  { name: 'Arzu Çetinkaya', imagePath: '/ajet-influencers/arzu_cetin_kaya.webp' },
+  { name: 'Seda Pamukcu Öztürk', imagePath: '/ajet-influencers/seda_pamukcu_ozturk.webp' },
   { name: 'Doğan Bayraktar', imagePath: '/rixos-infleuncers/dogan_bayraktar.webp' },
-  { name: 'Gülden Güngör' },
-  { name: 'Hüseyin Pehlivan' },
+  { name: 'Merve Nur Uğuz', imagePath: '/ajet-influencers/merve_nur_uguz.webp' },
+  { name: 'Yüsra Geyik', imagePath: '/rixos-infleuncers/yusra_geyik.webp' },
+  { name: 'Sabuha Öztürk', imagePath: '/ajet-influencers/sabuha_ozturk.webp' },
+  { name: 'Gökçen Ay', imagePath: '/ajet-influencers/gokcen_ay.webp' },
+  { name: 'Gözde Kaya', imagePath: PRONTO_FACE.gozdeKaya },
+  { name: 'Sinem Parkan', imagePath: '/ajet-influencers/sinem_parkan.webp' },
 ];
 
 export default function ProntotourPage() {
@@ -403,11 +461,11 @@ export default function ProntotourPage() {
       <div className="mx-auto max-w-6xl px-6 py-12 pb-20">
         <div className="mb-8 flex flex-col items-center gap-4 text-center">
           <div className="flex h-32 w-32 items-center justify-center overflow-hidden rounded-full border-2 border-white/20 bg-white p-4">
-            <img src="/Join Pr Marka Logoları/prontotour_logos.png" alt="Prontotour" className="h-full w-full object-contain" />
+            <img src="/marka-logolari/prontotour_logos.png" alt="Prontotour" className="h-full w-full object-contain" />
           </div>
           <h1 className="text-2xl font-semibold text-white md:text-3xl">Prontotour İş Birliği Raporu</h1>
           <p className="max-w-2xl text-sm text-zinc-400 md:text-base">
-            Prontotour | Influencer &amp; Celebrity Marketing — Seyahati anlatmak yetmez; yaşatmak gerekir. Ünlü isimler ve içerik üreticileriyle destinasyon ve tur paketlerini geniş kitlelere taşıdık.
+            Prontotour | Katılımcı ve ünlü isim odaklı pazarlama — Seyahati anlatmak yetmez; yaşatmak gerekir. Ünlü isimler ve katılımcılarla destinasyon ve tur paketlerini geniş kitlelere taşıdık.
           </p>
         </div>
 
@@ -417,7 +475,7 @@ export default function ProntotourPage() {
             <p className="mt-1 text-3xl font-bold text-white">{PRONTOTOUR_KPIS.posts}</p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-zinc-900/60 px-6 py-5">
-            <p className="text-xs font-medium uppercase tracking-wider text-zinc-400">Katılımcı Influencer</p>
+            <p className="text-xs font-medium uppercase tracking-wider text-zinc-400">Katılımcılar</p>
             <p className="mt-1 text-3xl font-bold text-white">{PRONTOTOUR_KPIS.influencers}</p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-zinc-900/60 px-6 py-5">
@@ -435,8 +493,8 @@ export default function ProntotourPage() {
             <div>
               <h3 className="mb-4 text-lg font-semibold text-white">Kampanya Detayları</h3>
               <p className="whitespace-pre-line rounded-xl border border-white/10 bg-zinc-900/40 p-6 text-zinc-300">
-                Prontotour için influencer ve ünlü isimlerle yürütülen kampanyada, tatil ve tur deneyimlerini özgün içeriklerle anlattık. Çok sayıda içerik üreticisi ve celebrity ile üretilen paylaşımlar; görüntülenme, erişim ve etkileşimde güçlü sonuçlar üretti.{'\n\n'}
-                Kampanya raporu (Prontotour.pdf) kapsamında toplam 661 paylaşım, 70 içerik üreticisi ve on milyonlarca görüntülenmeyle markanın dijital görünürlüğü ve talep yaratma gücü desteklendi.
+                Prontotur için hayata geçirdiğimiz iletişim çalışmalarında, katılımcı iş birlikleri, oyuncu ve celebrity katılımları ile desteklenen deneyim odaklı seyahat içerikleri güçlü bir destinasyon hikayesine dönüştürdük. Seyahat deneyimleri yalnızca anlatılmadı; gerçek anlar, güçlü yüzler ve ilham veren rotalarla dijital dünyada geniş bir keşif atmosferi yaratıldı.{'\n\n'}
+                “Seyahati Anlatma, Yaşat.” yaklaşımıyla şekillenen bu içerik ekosistemi; Prontotur&apos;u yalnızca bir tur operatörü markası değil, yeni rotalar keşfetmek isteyen kitleler için ilham veren bir seyahat platformu olarak konumlandırdık.
               </p>
             </div>
 
@@ -448,7 +506,7 @@ export default function ProntotourPage() {
                   <p className="mt-1 text-xl font-bold text-white">{PRONTOTOUR_PERFORMANCE.posts}</p>
                 </div>
                 <div className="rounded-xl border border-white/10 bg-zinc-900/40 p-4">
-                  <p className="text-xs text-zinc-400">Creators</p>
+                  <p className="text-xs text-zinc-400">Katılımcılar</p>
                   <p className="mt-1 text-xl font-bold text-white">{PRONTOTOUR_PERFORMANCE.creators}</p>
                 </div>
                 <div className="rounded-xl border border-white/10 bg-zinc-900/40 p-4">
@@ -495,7 +553,7 @@ export default function ProntotourPage() {
             </div>
 
             <div>
-              <h3 className="mb-4 text-lg font-semibold text-white">En Çok Görüntülenme Alan İçerik Üreticileri</h3>
+              <h3 className="mb-4 text-lg font-semibold text-white">En Çok Görüntülenme Alan Katılımcılar</h3>
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {PRONTOTOUR_CREATORS.map((c) => (
                   <div key={c.handle} className="rounded-xl border border-white/10 bg-zinc-900/40 p-5">
@@ -528,14 +586,14 @@ export default function ProntotourPage() {
             <div className="mt-10">
               <h3 className="mb-4 text-lg font-semibold text-white">Öne Çıkan İçerikler</h3>
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-                {PRONTOTOUR_FEATURED_CONTENT.map(({ src, label }) => (
-                  <FeaturedContentCell key={label} src={src} label={label} />
+                {PRONTOTOUR_FEATURED_CONTENT.map(({ src, label }, index) => (
+                  <FeaturedContentCell key={`${label}-${src ?? 'video'}-${index}`} src={src} label={label} />
                 ))}
               </div>
             </div>
 
             <div className="mt-12 border-t border-white/10 pt-10">
-              <h3 className="mb-6 text-lg font-semibold text-white">Kampanyaya Katılan Tüm Influencer&apos;lar</h3>
+              <h3 className="mb-6 text-lg font-semibold text-white">Kampanyaya Katılan Tüm Katılımcılar</h3>
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6 sm:gap-6">
                 {PRONTOTOUR_ALL_INFLUENCERS.map((person) => (
                   <div key={person.name} className="flex flex-col items-center gap-2">

@@ -27,62 +27,29 @@ function CreatorAvatar({ name, imagePath, size = 48 }: { name: string; imagePath
   return <PlaceholderAvatar size={size} />;
 }
 
-function VideoWithFirstFrame({ src, className }: { src: string; className?: string }) {
+function VideoWithFirstFrame({
+  src,
+  className,
+}: {
+  src: string;
+  className?: string;
+}) {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const [posterReady, setPosterReady] = useState(false);
   const [playing, setPlaying] = useState(false);
   const [muted, setMuted] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    const canvas = canvasRef.current;
-    if (!video || !canvas) return;
-
-    const captureFrame = () => {
-      try {
-        const ctx = canvas.getContext('2d');
-        if (!ctx || video.readyState < 2) return;
-        canvas.width = video.videoWidth;
-        canvas.height = video.videoHeight;
-        ctx.drawImage(video, 0, 0);
-        setPosterReady(true);
-      } catch {
-        setPosterReady(false);
-      }
-    };
-
-    const onSeeked = () => captureFrame();
-    const onPlay = () => setPlaying(true);
-    const onPause = () => setPlaying(false);
-    const onTimeUpdate = () => setCurrentTime(video.currentTime);
-    const onDurationChange = () => setDuration(video.duration || 0);
-    const onLoaded = () => {
-      video.currentTime = 0.5;
-    };
-
-    video.addEventListener('seeked', onSeeked);
-    video.addEventListener('play', onPlay);
-    video.addEventListener('pause', onPause);
-    video.addEventListener('timeupdate', onTimeUpdate);
-    video.addEventListener('durationchange', onDurationChange);
-    video.addEventListener('loadeddata', onLoaded);
-    video.preload = 'metadata';
-    if (video.readyState >= 2) video.currentTime = 0.5;
-
-    return () => {
-      video.removeEventListener('seeked', onSeeked);
-      video.removeEventListener('play', onPlay);
-      video.removeEventListener('pause', onPause);
-      video.removeEventListener('timeupdate', onTimeUpdate);
-      video.removeEventListener('durationchange', onDurationChange);
-      video.removeEventListener('loadeddata', onLoaded);
-    };
-  }, [src]);
+  const isVimeo = /(?:https?:\/\/)?(?:www\.)?(?:vimeo\.com\/\d+|player\.vimeo\.com\/video\/\d+)/i.test(src);
+  const baseVimeoSrc = isVimeo
+    ? /player\.vimeo\.com\/video\/\d+/i.test(src)
+      ? src
+      : src.replace(/(?:https?:\/\/)?(?:www\.)?vimeo\.com\/(\d+).*/i, 'https://player.vimeo.com/video/$1')
+    : '';
+  const vimeoEmbedSrc = baseVimeoSrc
+    ? `${baseVimeoSrc}${baseVimeoSrc.includes('?') ? '&' : '?'}badge=0&title=0&byline=0&portrait=0&dnt=1`
+    : '';
 
   useEffect(() => {
     const onFullscreenChange = () => setIsFullscreen(!!document.fullscreenElement);
@@ -184,35 +151,53 @@ function VideoWithFirstFrame({ src, className }: { src: string; className?: stri
       className={isFullscreen ? 'flex min-h-screen min-w-full items-center justify-center bg-black' : 'relative h-full w-full bg-black'}
     >
       <div className={isFullscreen ? 'relative h-full max-h-[100vh] w-auto max-w-full shrink-0 aspect-[9/16]' : 'relative h-full w-full'}>
-        <video
-          ref={videoRef}
-          src={src}
-          playsInline
-          preload="none"
-          muted={muted}
-          onClick={togglePlay}
-          onLoadedMetadata={(e) => setDuration(e.currentTarget.duration)}
-          className={`h-full w-full object-cover ${className ?? ''}`}
-        />
-        <canvas
-          ref={canvasRef}
-          className="pointer-events-none absolute inset-0 h-full w-full object-cover"
-          style={{ display: posterReady && !playing ? 'block' : 'none' }}
-          aria-hidden
-        />
-        {controlsBar}
+        {isVimeo ? (
+          <iframe
+            src={vimeoEmbedSrc}
+            className={`h-full w-full ${className ?? ''}`}
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            allowFullScreen
+            title="Vimeo video"
+          />
+        ) : (
+          <>
+            <video
+              ref={videoRef}
+              src={src}
+              playsInline
+              preload="metadata"
+              muted={muted}
+              onPlay={() => setPlaying(true)}
+              onPause={() => setPlaying(false)}
+              onTimeUpdate={(e) => setCurrentTime(e.currentTarget.currentTime)}
+              onClick={togglePlay}
+              onLoadedMetadata={(e) => setDuration(e.currentTarget.duration)}
+              className={`h-full w-full object-cover ${className ?? ''}`}
+            />
+            {controlsBar}
+          </>
+        )}
       </div>
     </div>
   );
 }
 
 function FeaturedContentCell({ src, label }: { src?: string; label: string }) {
+  const safeSrc = src
+    ? src.startsWith('/')
+      ? src
+          .split('/')
+          .map((part, index) => (index === 0 ? part : encodeURIComponent(part)))
+          .join('/')
+      : src
+    : undefined;
+
   return (
     <div className="flex flex-col items-center gap-2">
       <div className="w-full max-w-[200px] overflow-hidden rounded-xl border border-white/10 bg-zinc-800">
         <div className="aspect-[9/16] w-full">
-          {src ? (
-            <VideoWithFirstFrame src={src} />
+          {safeSrc ? (
+            <VideoWithFirstFrame src={safeSrc} />
           ) : (
             <div className="flex h-full w-full flex-col items-center justify-center gap-2 bg-zinc-900/80 px-3 text-center">
               <span className="text-xs text-zinc-500">Video</span>
@@ -287,9 +272,10 @@ const MARRIOTT_CREATORS = [
 ];
 
 const MARRIOTT_FEATURED_CONTENT: { src?: string; label: string }[] = [
-  { src: '/rixos-content/gizem_gunes.mp4', label: 'Gizem Güneş' },
-  { label: 'Gökçe Akyıldız' },
-  { label: 'Emin Günenç' },
+  { src: 'https://player.vimeo.com/video/1178977111?badge=0&autopause=0&player_id=0&app_id=58479', label: 'Gökçe Akyıldız' },
+  { src: 'https://player.vimeo.com/video/1178969514?badge=0&autopause=0&player_id=0&app_id=58479', label: 'Gizem Güneş' },
+  { src: 'https://player.vimeo.com/video/1178978221?badge=0&autopause=0&player_id=0&app_id=58479', label: 'Emin Günenç' },
+  { src: 'https://player.vimeo.com/video/1178977634?badge=0&autopause=0&player_id=0&app_id=58479', label: 'Gökçe Akyıldız' },
 ];
 
 type ParticipatingInfluencer = { name: string; imagePath?: string };
@@ -308,7 +294,7 @@ export default function MarriottDeadSeaPage() {
       <div className="mx-auto max-w-6xl px-6 py-12 pb-20">
         <div className="mb-8 flex flex-col items-center gap-4 text-center">
           <div className="flex h-32 w-32 items-center justify-center overflow-hidden rounded-full border-2 border-white/20 bg-white p-4">
-            <img src="/Join Pr Marka Logoları/marriot_deat_sea.png" alt="Marriott Resort Dead Sea" className="h-full w-full object-contain" />
+            <img src="/marka-logolari/marriot_deat_sea.png" alt="Marriott Resort Dead Sea" className="h-full w-full object-contain" />
           </div>
           <h1 className="text-2xl font-semibold text-white md:text-3xl">Marriott Resort Dead Sea — Ürdün Destinasyon Tanıtımı</h1>
           <p className="max-w-2xl text-sm text-zinc-400 md:text-base">
@@ -322,7 +308,7 @@ export default function MarriottDeadSeaPage() {
             <p className="mt-1 text-3xl font-bold text-white">{MARRIOTT_KPIS.posts}</p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-zinc-900/60 px-6 py-5">
-            <p className="text-xs font-medium uppercase tracking-wider text-zinc-400">Katılımcı Influencer</p>
+            <p className="text-xs font-medium uppercase tracking-wider text-zinc-400">Katılımcılar</p>
             <p className="mt-1 text-3xl font-bold text-white">{MARRIOTT_KPIS.influencers}</p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-zinc-900/60 px-6 py-5">
@@ -341,8 +327,7 @@ export default function MarriottDeadSeaPage() {
               <h3 className="mb-4 text-lg font-semibold text-white">Kampanya Detayları</h3>
               <p className="whitespace-pre-line rounded-xl border border-white/10 bg-zinc-900/40 p-6 text-zinc-300">
                 Jordan Tourism Board, Royal Jordanian Hava Yolları ve Marriott iş birliği ile şekillenen bu iletişim çalışmasında; seyahat deneyimini yalnızca bir rota anlatısı olarak değil, keşif, his ve ilham odaklı bütüncül bir deneyim olarak ele aldık.{'\n\n'}
-                Üretilen içeriklerde Ürdün&apos;ün çok katmanlı yapısını; başkent ritminden kadim mirasa, eşsiz doğal deneyimlerden konforlu konaklama ve seyahat deneyimine uzanan güçlü bir bütünlük içinde yansıttık. Böylece Amman, Dead Sea ve Petra hattında kurgulanan bu iletişim diliyle, Ürdün&apos;ü Türkiye&apos;de seyahat tutkunlarına ilham olacak bir destinasyon değil; atmosferi hissedilen, merak uyandıran ve deneyimlenmek istenen güçlü bir seyahat rotası olarak öne çıkardık.{'\n\n'}
-                Rapor demografisinde kitle; Türkiye, Suudi Arabistan, Irak ve Fas başta olmak üzere güçlü ülke dağılımı göstermiştir.
+                Üretilen içeriklerde Ürdün&apos;ün çok katmanlı yapısını; başkent ritminden kadim mirasa, eşsiz doğal deneyimlerden konforlu konaklama ve seyahat deneyimine uzanan güçlü bir bütünlük içinde yansıttık. Böylece Amman, Dead Sea ve Petra hattında kurgulanan bu iletişim diliyle, Ürdün&apos;ü Türkiye&apos;de seyahat tutkunlarına ilham olacak bir destinasyon değil; atmosferi hissedilen, merak uyandıran ve deneyimlenmek istenen güçlü bir seyahat rotası olarak öne çıkardık.
               </p>
             </div>
 
@@ -354,7 +339,7 @@ export default function MarriottDeadSeaPage() {
                   <p className="mt-1 text-xl font-bold text-white">{MARRIOTT_PERFORMANCE.posts}</p>
                 </div>
                 <div className="rounded-xl border border-white/10 bg-zinc-900/40 p-4">
-                  <p className="text-xs text-zinc-400">Creators</p>
+                  <p className="text-xs text-zinc-400">Katılımcılar</p>
                   <p className="mt-1 text-xl font-bold text-white">{MARRIOTT_PERFORMANCE.creators}</p>
                 </div>
                 <div className="rounded-xl border border-white/10 bg-zinc-900/40 p-4">
@@ -401,7 +386,7 @@ export default function MarriottDeadSeaPage() {
             </div>
 
             <div>
-              <h3 className="mb-4 text-lg font-semibold text-white">En Çok Görüntülenme Alan İçerik Üreticileri</h3>
+              <h3 className="mb-4 text-lg font-semibold text-white">En Çok Görüntülenme Alan Katılımcılar</h3>
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {MARRIOTT_CREATORS.map((c) => (
                   <div key={c.handle} className="rounded-xl border border-white/10 bg-zinc-900/40 p-5">
@@ -434,14 +419,14 @@ export default function MarriottDeadSeaPage() {
             <div className="mt-10">
               <h3 className="mb-4 text-lg font-semibold text-white">Öne Çıkan İçerikler</h3>
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-                {MARRIOTT_FEATURED_CONTENT.map(({ src, label }) => (
-                  <FeaturedContentCell key={label} src={src} label={label} />
+                {MARRIOTT_FEATURED_CONTENT.map(({ src, label }, index) => (
+                  <FeaturedContentCell key={`${label}-${src ?? 'video'}-${index}`} src={src} label={label} />
                 ))}
               </div>
             </div>
 
             <div className="mt-12 border-t border-white/10 pt-10">
-              <h3 className="mb-6 text-lg font-semibold text-white">Kampanyaya Katılan Tüm Influencer&apos;lar</h3>
+              <h3 className="mb-6 text-lg font-semibold text-white">Kampanyaya Katılan Tüm Katılımcılar</h3>
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6 sm:gap-6">
                 {MARRIOTT_ALL_INFLUENCERS.map((person) => (
                   <div key={person.name} className="flex flex-col items-center gap-2">

@@ -64,7 +64,7 @@ export function JoinEscapesView() {
       <section className="space-y-8">
         <h2 className="text-3xl font-semibold text-white md:text-4xl">{page.sections.destinations.title}</h2>
         <div className="grid gap-6 md:grid-cols-3">
-          {page.sections.destinations.items.map((item: any) => {
+          {page.sections.destinations.items.map((item: any, index: number) => {
             const CardContent = (
               <>
                 <div className="mb-6 h-40 rounded-2xl overflow-hidden">
@@ -86,27 +86,39 @@ export function JoinEscapesView() {
               </>
             );
 
+            const cardClass =
+              'group block cursor-pointer overflow-hidden rounded-3xl border border-white/10 bg-zinc-900/70 p-6 shadow-lg shadow-black/30 transition-all hover:-translate-y-1 hover:border-sky-500/25';
+
             if (item.link) {
+              const href = String(item.link).trim();
+              const isExternal = /^https?:\/\//i.test(href);
+              if (isExternal) {
+                return (
+                  <a
+                    key={`join-escapes-dest-${index}`}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={cardClass}
+                  >
+                    {CardContent}
+                  </a>
+                );
+              }
               return (
-                <Link
-                  key={item.title}
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group block overflow-hidden rounded-3xl border border-white/10 bg-zinc-900/70 p-6 shadow-lg shadow-black/30 transition-transform hover:-translate-y-1"
-                >
+                <Link key={`join-escapes-dest-${index}`} href={href} className={cardClass}>
                   {CardContent}
                 </Link>
               );
             }
 
             return (
-            <div
-              key={item.title}
-              className="group overflow-hidden rounded-3xl border border-white/10 bg-zinc-900/70 p-6 shadow-lg shadow-black/30 transition-transform hover:-translate-y-1"
-            >
+              <div
+                key={`join-escapes-dest-${index}`}
+                className="group overflow-hidden rounded-3xl border border-white/10 bg-zinc-900/70 p-6 shadow-lg shadow-black/30 transition-transform hover:-translate-y-1"
+              >
                 {CardContent}
-            </div>
+              </div>
             );
           })}
         </div>
@@ -119,15 +131,27 @@ export function JoinEscapesView() {
             {page.sections.editorial.items.map((item) => {
               const getLink = (title: string) => {
                 if (title === 'Yeni Nesil Seyahat Trendleri') {
-                  return 'https://joinescapes.com/destinasyonlar';
+                  return 'https://joinescapes.com/seyahat-onerileri';
                 }
                 if (title === 'Keşfedilmemiş Destinasyonlar') {
-                  return 'https://joinescapes.com/sanat-ve-cemiyet';
+                  return 'https://joinescapes.com/destinasyonlar';
                 }
                 if (title === 'Influencer Seyahat Günlükleri') {
                   return 'https://joinescapes.com/yazarlar';
                 }
                 if (title === 'Seçkin Oteller') {
+                  return 'https://joinescapes.com/oteller';
+                }
+                if (title === 'Next Generation Travel Trends') {
+                  return 'https://joinescapes.com/seyahat-onerileri';
+                }
+                if (title === 'Undiscovered Destinations') {
+                  return 'https://joinescapes.com/destinasyonlar';
+                }
+                if (title === 'Influencer Travel Diaries') {
+                  return 'https://joinescapes.com/yazarlar';
+                }
+                if (title === 'Select Hotels') {
                   return 'https://joinescapes.com/oteller';
                 }
                 return null;
@@ -145,14 +169,14 @@ export function JoinEscapesView() {
               if (isClickable && link) {
                 return (
                   <li key={item} className="flex items-start gap-3">
-                    <Link
+                    <a
                       href={link}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-start gap-3"
                     >
                       {content}
-                    </Link>
+                    </a>
                   </li>
                 );
               }
@@ -178,7 +202,7 @@ export function JoinEscapesView() {
         </div>
       </section>
 
-      <CTASection title={page.cta.title} description={page.cta.description} buttonLabel={page.cta.button} href="https://join-escapes.com" />
+      <CTASection title={page.cta.title} description={page.cta.description} buttonLabel={page.cta.button} href="https://joinescapes.com/" />
     </div>
   );
 }

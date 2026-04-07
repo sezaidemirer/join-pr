@@ -49,6 +49,15 @@ function VideoWithFirstFrame({ src, className }: { src: string; className?: stri
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const isVimeo = /(?:https?:\/\/)?(?:www\.)?(?:vimeo\.com\/\d+|player\.vimeo\.com\/video\/\d+)/i.test(src);
+  const baseVimeoSrc = isVimeo
+    ? /player\.vimeo\.com\/video\/\d+/i.test(src)
+      ? src
+      : src.replace(/(?:https?:\/\/)?(?:www\.)?vimeo\.com\/(\d+).*/i, 'https://player.vimeo.com/video/$1')
+    : '';
+  const vimeoEmbedSrc = baseVimeoSrc
+    ? `${baseVimeoSrc}${baseVimeoSrc.includes('?') ? '&' : '?'}badge=0&title=0&byline=0&portrait=0&dnt=1`
+    : '';
 
   useEffect(() => {
     const video = videoRef.current;
@@ -222,23 +231,35 @@ function VideoWithFirstFrame({ src, className }: { src: string; className?: stri
             : 'relative h-full w-full'
         }
       >
-        <video
-          ref={videoRef}
-          src={src}
-          playsInline
-          preload="none"
-          muted={muted}
-          onClick={togglePlay}
-          onLoadedMetadata={(e) => setDuration(e.currentTarget.duration)}
-          className={`h-full w-full object-cover ${className ?? ''}`}
-        />
-        <canvas
-          ref={canvasRef}
-          className="pointer-events-none absolute inset-0 h-full w-full object-cover"
-          style={{ display: posterReady && !playing ? 'block' : 'none' }}
-          aria-hidden
-        />
-        {controlsBar}
+        {isVimeo ? (
+          <iframe
+            src={vimeoEmbedSrc}
+            className={`h-full w-full ${className ?? ''}`}
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            allowFullScreen
+            title="Vimeo video"
+          />
+        ) : (
+          <>
+            <video
+              ref={videoRef}
+              src={src}
+              playsInline
+              preload="none"
+              muted={muted}
+              onClick={togglePlay}
+              onLoadedMetadata={(e) => setDuration(e.currentTarget.duration)}
+              className={`h-full w-full object-cover ${className ?? ''}`}
+            />
+            <canvas
+              ref={canvasRef}
+              className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+              style={{ display: posterReady && !playing ? 'block' : 'none' }}
+              aria-hidden
+            />
+            {controlsBar}
+          </>
+        )}
       </div>
     </div>
   );
@@ -274,12 +295,12 @@ const RIXOS_CREATORS = [
 ];
 
 const RIXOS_FEATURED_CONTENT = [
-  { src: '/rixos-content/fabio_devivo.mp4', label: 'Fabio De Vivo' },
-  { src: '/rixos-content/valentin_araso.mp4', label: 'Valentina Raso' },
-  { src: '/rixos-content/diego_fusina.mp4', label: 'Diego Fusina' },
-  { src: '/rixos-content/pelin_akil.mp4', label: 'Pelin Akil Altan' },
-  { src: '/rixos-content/gokberk_demirci.mp4', label: 'Gökberk Demirci' },
-  { src: '/rixos-content/gizem_gunes.mp4', label: 'Gizem Güneş' },
+  { src: 'https://player.vimeo.com/video/1178965341?badge=0&autopause=0&player_id=0&app_id=58479', label: 'Fabio De Vivo' },
+  { src: 'https://player.vimeo.com/video/1178963266?badge=0&autopause=0&player_id=0&app_id=58479', label: 'Valentina Raso' },
+  { src: 'https://player.vimeo.com/video/1178967733?badge=0&autopause=0&player_id=0&app_id=58479', label: 'Diego Fusina' },
+  { src: 'https://player.vimeo.com/video/1178959730?badge=0&autopause=0&player_id=0&app_id=58479', label: 'Pelin Akil Altan' },
+  { src: 'https://player.vimeo.com/video/1178963548?badge=0&autopause=0&player_id=0&app_id=58479', label: 'Gökberk Demirci' },
+  { src: 'https://player.vimeo.com/video/1178965088?badge=0&autopause=0&player_id=0&app_id=58479', label: 'Gizem Güneş' },
 ];
 
 // Kampanyaya Katılan Tüm Influencer&apos;lar – "Rixos Mısır Genel (Oyuncular).pdf" listesi; görseller sonra eklenebilir (imagePath opsiyonel)
@@ -365,7 +386,7 @@ export default function RixosEgyptPage() {
         <div className="mb-8 flex flex-col items-center gap-4 text-center">
           <div className="flex h-32 w-32 items-center justify-center overflow-hidden rounded-full border-2 border-white/20 bg-white p-4">
             <img
-              src="/Join Pr Marka Logoları/rixos_premium_seagate.png"
+              src="/marka-logolari/rixos_premium_seagate.png"
               alt="Rixos Egypt"
               className="h-full w-full object-contain"
             />
@@ -380,7 +401,7 @@ export default function RixosEgyptPage() {
             <p className="mt-1 text-3xl font-bold text-white">{RIXOS_KPIS.campaigns}</p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-zinc-900/60 px-6 py-5">
-            <p className="text-xs font-medium uppercase tracking-wider text-zinc-400">Katılımcı Influencer</p>
+            <p className="text-xs font-medium uppercase tracking-wider text-zinc-400">Katılımcılar</p>
             <p className="mt-1 text-3xl font-bold text-white">{RIXOS_KPIS.influencers}</p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-zinc-900/60 px-6 py-5">
@@ -414,7 +435,7 @@ export default function RixosEgyptPage() {
                   <p className="mt-1 text-xl font-bold text-white">{RIXOS_PERFORMANCE.posts}</p>
                 </div>
                 <div className="rounded-xl border border-white/10 bg-zinc-900/40 p-4">
-                  <p className="text-xs text-zinc-400">Creators</p>
+                  <p className="text-xs text-zinc-400">Katılımcılar</p>
                   <p className="mt-1 text-xl font-bold text-white">{RIXOS_PERFORMANCE.creators}</p>
                 </div>
                 <div className="rounded-xl border border-white/10 bg-zinc-900/40 p-4">
@@ -444,9 +465,9 @@ export default function RixosEgyptPage() {
               </div>
             </div>
 
-            {/* En Çok Görüntülenme Alan İçerik Üreticileri - 3 creator */}
+            {/* En Çok görüntülenme alan katılımcılar */}
             <div>
-              <h3 className="mb-4 text-lg font-semibold text-white">En Çok Görüntülenme Alan İçerik Üreticileri</h3>
+              <h3 className="mb-4 text-lg font-semibold text-white">En Çok Görüntülenme Alan Katılımcılar</h3>
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {RIXOS_CREATORS.map((c) => (
                   <div key={c.handle} className="rounded-xl border border-white/10 bg-zinc-900/40 p-5">
@@ -491,9 +512,9 @@ export default function RixosEgyptPage() {
               </div>
             </div>
 
-            {/* Kampanyaya Katılan Tüm Influencer&apos;lar – AJet ile aynı yapı */}
+            {/* Kampanyaya katılan tüm katılımcılar — AJet ile aynı yapı */}
             <div className="mt-12 border-t border-white/10 pt-10">
-              <h3 className="mb-6 text-lg font-semibold text-white">Kampanyaya Katılan Tüm Influencer&apos;lar</h3>
+              <h3 className="mb-6 text-lg font-semibold text-white">Kampanyaya Katılan Tüm Katılımcılar</h3>
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6 sm:gap-6">
                 {RIXOS_ALL_INFLUENCERS.map((person) => (
                   <div key={person.name} className="flex flex-col items-center gap-2">

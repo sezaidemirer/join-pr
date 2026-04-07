@@ -1,6 +1,8 @@
 import { unstable_noStore as noStore } from 'next/cache';
 import { createClient } from '@supabase/supabase-js';
 
+import { HABER_SEEDED_LOGO_FILES } from '@/data/haber-platform-logos';
+import { urlLooksLikeHaberPlatformStorage } from '@/lib/haber-logo-storage';
 import { absolutizePublicAssetPath } from '@/lib/news-api';
 import { normalizeSlugPart } from '@/lib/slug';
 
@@ -71,6 +73,53 @@ function assertAdminClient() {
 }
 
 const FALLBACK_PLATFORM_LINK_IMAGE = '/join_pr_logo_offical2.png';
+
+function isHaberPlatformGalleryImageUrl(url: string): boolean {
+  const u = url.trim();
+  if (!u) return false;
+  if (u.includes('join_pr_logo_offical2.png')) return false;
+  if (urlLooksLikeHaberPlatformStorage(u)) return true;
+  try {
+    const pathOnly = /^https?:\/\//i.test(u) ? new URL(u).pathname : u.split('?')[0];
+    const key = decodeURIComponent(pathOnly.replace(/^\//, ''));
+    return HABER_SEEDED_LOGO_FILES.has(key);
+  } catch {
+    return false;
+  }
+}
+
+function collectPlatformLinksFromRow(row: {
+  platform_links?: unknown;
+  platform_links_en?: unknown;
+}): NewsPlatformLink[] {
+  const out: NewsPlatformLink[] = [];
+  const a = parsePlatformLinksFromDb(row.platform_links);
+  const b = parsePlatformLinksFromDb(row.platform_links_en);
+  if (a?.length) out.push(...a);
+  if (b?.length) out.push(...b);
+  return out;
+}
+
+/** Haber admin galerisi: yalnızca haber mecra / bucket veya seed listedeki görseller. */
+export async function listDistinctNewsHaberPlatformLogosForAdmin(): Promise<Array<{ url: string; label: string }>> {
+  const supabase = assertAdminClient();
+  const { data, error } = await supabase
+    .from('join_posts')
+    .select('platform_links, platform_links_en')
+    .order('updated_at', { ascending: false })
+    .limit(1000);
+  if (error) throw error;
+
+  const map = new Map<string, string>();
+  for (const row of data || []) {
+    for (const link of collectPlatformLinksFromRow(row as { platform_links?: unknown; platform_links_en?: unknown })) {
+      const image = (link.image || '').trim();
+      if (!image || !isHaberPlatformGalleryImageUrl(image)) continue;
+      if (!map.has(image)) map.set(image, (link.label || '').trim() || image.split('/').pop() || image);
+    }
+  }
+  return Array.from(map.entries()).map(([url, label]) => ({ url, label }));
+}
 
 /** DB: href/url, label/title/name, image/img; gorsel yoksa tek link gosterimi icin fallback. */
 function parsePlatformLinksFromDb(input: unknown): NewsPlatformLink[] | null {

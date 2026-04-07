@@ -13,6 +13,7 @@ import {
   onlineCoverage,
   socialCoverage,
 } from '@/data/lara-fabian-coverage';
+import { cleanPressReleaseTitle } from '@/lib/clean-press-release-title';
 import { supabase } from '@/lib/supabase';
 
 const STORAGE_KEY = 'medya_raporu_auth';
@@ -420,12 +421,15 @@ export function MedyaYansimaRaporuView() {
             </form>
           </div>
         )}
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+        <div className="min-w-0 w-full rounded-2xl border border-white/10 bg-white/5 p-6">
           <p className="text-sm font-medium uppercase tracking-wider text-teal-400">
             Basın bülteni
           </p>
-          <h2 className="mt-2 text-2xl font-semibold text-white md:text-3xl">
-            {reportMeta.title}
+          <h2
+            lang="tr"
+            className="font-inter mt-2 max-w-full text-xl font-semibold leading-snug text-white hyphens-none break-normal text-pretty ligatures-none md:text-2xl"
+          >
+            {cleanPressReleaseTitle(reportMeta.title)}
           </h2>
           <p className="mt-3 text-zinc-400">
             Dağıtım tarihi: {reportMeta.date} · Hedef ülke: {reportMeta.targetCountry} · Dil: {reportMeta.language}

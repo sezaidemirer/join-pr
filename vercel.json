@@ -1,0 +1,18 @@
+{
+  "functions": {
+    "src/app/api/media-reports/extract/route.ts": {
+      "maxDuration": 60
+    },
+    "src/app/api/media-reports/item/route.ts": {
+      "maxDuration": 30
+    }
+  },
+  "redirects": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "proje.joinpr.com.tr" }],
+      "destination": "/admin-login/",
+      "permanent": false
+    }
+  ]
+}

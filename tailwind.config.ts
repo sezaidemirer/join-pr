@@ -17,6 +17,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-plus-jakarta)', 'system-ui', 'sans-serif'],
+        inter: ['var(--font-inter)', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
         'glow-teal': '0 25px 50px -12px rgba(20, 184, 166, 0.35)',

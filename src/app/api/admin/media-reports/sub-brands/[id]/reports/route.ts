@@ -7,6 +7,8 @@ import {
   listEntriesForSubBrand,
 } from '@/lib/media-reports';
 
+export function generateStaticParams() { return []; }
+
 function isAuthorized(req: NextRequest) {
   if (hasAdminCookieInRequest(req)) return true;
   const expected = process.env.ADMIN_PANEL_KEY;

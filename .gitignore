@@ -11,6 +11,7 @@
 
 # next.js
 /.next/
+/.next-static-export/
 /out/
 
 # cPanel statik build script ara klasoru (yarım kalan build kalintilari)

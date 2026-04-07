@@ -134,21 +134,33 @@ export function MedyaYansimaRaporuProjectClient({
               <Link
                 key={entry.id}
                 href={`/medya-yansima-raporu/${effectiveBrandSlug}/${effectiveProjectSlug}/${entry.slug || entry.id}`}
-                className="group flex flex-col gap-1 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 transition-colors hover:border-teal-500/30 hover:bg-white/10"
+                className="group flex flex-col gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 transition-colors hover:border-teal-500/30 hover:bg-white/10"
               >
-                <span className="text-base font-semibold text-white group-hover:text-teal-300">
-                  {entry.title}
-                </span>
-                {entry.report_date ? (
-                  <span className="text-sm text-zinc-400">
-                    {new Date(entry.report_date).toLocaleDateString('tr-TR', {
-                      day: 'numeric',
-                      month: 'long',
-                      year: 'numeric',
-                    })}
-                  </span>
+                {entry.sub_brand_logo_url ? (
+                  <div className="flex h-16 items-center justify-center self-start rounded-xl bg-white px-4 py-2">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={entry.sub_brand_logo_url}
+                      alt={entry.sub_brand_name}
+                      className="max-h-10 w-auto max-w-[8rem] object-contain"
+                    />
+                  </div>
                 ) : null}
-                <span className="mt-1 text-xs text-teal-400">Raporu görüntüle →</span>
+                <div className="flex flex-col gap-1">
+                  <span className="text-base font-semibold text-white group-hover:text-teal-300">
+                    {entry.title}
+                  </span>
+                  {entry.report_date ? (
+                    <span className="text-sm text-zinc-400">
+                      {new Date(entry.report_date).toLocaleDateString('tr-TR', {
+                        day: 'numeric',
+                        month: 'long',
+                        year: 'numeric',
+                      })}
+                    </span>
+                  ) : null}
+                  <span className="mt-1 text-xs text-teal-400">Raporu görüntüle →</span>
+                </div>
               </Link>
             ))}
           </div>

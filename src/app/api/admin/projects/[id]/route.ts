@@ -4,6 +4,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { deleteOffer, updateOffer } from '@/lib/offers';
 import { hasAdminCookieInRequest } from '@/lib/admin-auth';
 
+export function generateStaticParams() { return []; }
+
 function isAuthorized(req: NextRequest) {
   if (hasAdminCookieInRequest(req)) return true;
   const expected = process.env.ADMIN_PANEL_KEY;

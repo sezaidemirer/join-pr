@@ -299,7 +299,7 @@ export async function listPublishedMediaReportTree() {
     name: brand.name,
     logoUrl: brand.logo_url || null,
     projects: (brand.subBrands || [])
-      .filter((x) => x.is_published && x.pdf_url)
+      .filter((x) => x.is_published)
       .map((x) => ({
         id: x.id,
         slug: normalizeSlugPart(x.slug || x.name),

@@ -200,7 +200,7 @@ export function PRGorunurlukLandingView() {
         return;
       }
       setForm(INITIAL_STATE);
-      setTimeout(() => router.push('/thankyou'), 500);
+      setTimeout(() => router.push('/tesekkurler'), 500);
     } catch {
       setFeedback('Bir hata oluştu. Lütfen tekrar deneyin.');
     } finally {
@@ -238,6 +238,7 @@ export function PRGorunurlukLandingView() {
             <iframe
               src={`${HERO_VIMEO_SLIDES[heroSlide].src}${HERO_VIMEO_SLIDES[heroSlide].src.includes('?') ? '&' : '?'}title=0&byline=0&portrait=0&dnt=1`}
               className="h-full w-full"
+              loading="eager"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
               allowFullScreen
               title={HERO_VIMEO_SLIDES[heroSlide].label}
@@ -380,6 +381,7 @@ export function PRGorunurlukLandingView() {
               <iframe
                 src={`${RIXOS_VIMEO_SLIDES[rixosSlide].src}&title=0&byline=0&portrait=0&dnt=1`}
                 className="h-full w-full"
+                loading="lazy"
                 allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
                 allowFullScreen
                 title={RIXOS_VIMEO_SLIDES[rixosSlide].label}
@@ -560,8 +562,9 @@ export function PRGorunurlukLandingView() {
           <div className="mt-10 overflow-hidden rounded-2xl border border-white/10 bg-zinc-950/80 p-4 md:p-6">
             <FormConsentEmbed
               ariaLabel="Join-Form-Landing"
-              src="https://forms.joinpr.com.tr/joinus1/form/JoinFormLanding/formperma/I50RnMGr5e2CLfOswetbEV7jdQ_N9gkidjRZUcvnfl0"
+              src="https://forms.joinpr.com.tr/JoinPR/form/JoinFormLanding/formperma/I50RnMGr5e2CLfOswetbEV7jdQ_N9gkidjRZUcvnfl0"
               iframeHeight={500}
+              trackGoogleAdsConversion
             />
           </div>
         </div>

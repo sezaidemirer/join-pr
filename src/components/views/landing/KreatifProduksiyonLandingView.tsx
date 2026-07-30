@@ -95,7 +95,7 @@ export function KreatifProduksiyonLandingView() {
         return;
       }
       setForm(INITIAL_STATE);
-      setTimeout(() => router.push('/thankyou'), 500);
+      setTimeout(() => router.push('/tesekkurler'), 500);
     } catch {
       setFeedback('Bir hata oluştu. Lütfen tekrar deneyin.');
     } finally {
@@ -521,8 +521,9 @@ export function KreatifProduksiyonLandingView() {
           >
             <FormConsentEmbed
               ariaLabel="Join-Form-Landing"
-              src="https://forms.joinpr.com.tr/joinus1/form/JoinFormLanding/formperma/I50RnMGr5e2CLfOswetbEV7jdQ_N9gkidjRZUcvnfl0"
+              src="https://forms.joinpr.com.tr/JoinPR/form/JoinFormLanding/formperma/I50RnMGr5e2CLfOswetbEV7jdQ_N9gkidjRZUcvnfl0"
               iframeHeight={500}
+              trackGoogleAdsConversion
             />
           </div>
         </div>

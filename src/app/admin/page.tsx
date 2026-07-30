@@ -33,6 +33,22 @@ export default function AdminHomePage() {
             <p className="text-lg font-semibold">Medya Yansima Raporlari</p>
             <p className="mt-2 text-sm text-zinc-400">Marka / alt marka ve PDF rapor sayfalari</p>
           </Link>
+          <Link
+            href="/admin/blog"
+            className="rounded-xl border border-zinc-800 bg-zinc-900/60 p-5 transition hover:border-amber-500 hover:bg-zinc-900"
+          >
+            <p className="text-lg font-semibold">Blog</p>
+            <p className="mt-2 text-sm text-zinc-400">Blog yazi listesi ve icerik formu</p>
+          </Link>
+          <a
+            href="https://utm.joinpr.com.tr"
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-xl border border-zinc-800 bg-zinc-900/60 p-5 transition hover:border-zinc-500 hover:bg-zinc-900"
+          >
+            <p className="text-lg font-semibold">Join UTM</p>
+            <p className="mt-2 text-sm text-zinc-400">UTM link olusturma aracina git</p>
+          </a>
         </div>
       </div>
     </main>

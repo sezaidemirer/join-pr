@@ -12,6 +12,7 @@ export default function AdminPanelLayout({ children }: { children: React.ReactNo
     pathname.startsWith('/admin/proje-olustur') ||
     pathname.startsWith('/admin/teklifler');
   const haberActive = pathname.startsWith('/admin/haber');
+  const blogActive = pathname.startsWith('/admin/blog');
   const medyaRaporuActive = pathname.startsWith('/admin/medya-yansima-raporlari');
   const hubOnly = pathname === '/admin';
 
@@ -73,6 +74,26 @@ export default function AdminPanelLayout({ children }: { children: React.ReactNo
                 <span className="sm:hidden">Medya raporu</span>
                 <span className="hidden sm:inline">Medya Yansima Raporlari</span>
               </Link>
+              <Link
+                href="/admin/blog"
+                className={`shrink-0 whitespace-nowrap rounded-md px-2.5 py-1.5 text-xs font-medium transition sm:px-3 sm:text-sm ${
+                  blogActive
+                    ? 'bg-amber-600 text-white'
+                    : hubOnly
+                      ? 'text-zinc-300 hover:bg-zinc-800/80 hover:text-white'
+                      : 'text-zinc-400 hover:bg-zinc-800/80 hover:text-zinc-200'
+                }`}
+              >
+                Blog
+              </Link>
+              <a
+                href="https://utm.joinpr.com.tr"
+                target="_blank"
+                rel="noreferrer"
+                className="shrink-0 whitespace-nowrap rounded-md px-2.5 py-1.5 text-xs font-medium text-zinc-400 transition hover:bg-zinc-800/80 hover:text-zinc-200 sm:px-3 sm:text-sm"
+              >
+                Join UTM
+              </a>
             </nav>
           </div>
           <button

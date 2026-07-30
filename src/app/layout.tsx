@@ -23,6 +23,8 @@ const inter = Inter({
 const siteTitle = 'Join PR';
 const siteDescription =
   'Join PR brings together strategic communication, creative production, social media, performance marketing, AI solutions and travel storytelling under one ecosystem.';
+const ZOHO_TRACKING_WIDGET_SRC =
+  'https://salesiq.zohopublic.eu/widget?wc=siq360320a71fb42e19d3cd141b106f06cc71787a93649725a4667ce3f3247f41e6';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://joinpr.com.tr'),
@@ -78,6 +80,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <LanguageProvider>
           <LayoutSwitcher>{children}</LayoutSwitcher>
         </LanguageProvider>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: 'window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}',
+          }}
+        />
+        <script id="zsiqscript-tracking" src={ZOHO_TRACKING_WIDGET_SRC} defer />
       </body>
     </html>
   );

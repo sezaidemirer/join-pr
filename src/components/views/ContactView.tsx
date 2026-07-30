@@ -22,7 +22,7 @@ export function ContactView() {
         <div className="rounded-3xl border border-white/10 bg-zinc-950/70 p-3 shadow-lg shadow-black/30 md:p-5">
           <FormConsentEmbed
             ariaLabel="Join-Form-1"
-            src="https://forms.joinpr.com.tr/joinus1/form/JoinForm1/formperma/T-5iAqeB4-qlYjbBH77U8zQG3QVHhRjry8UTgSanN34"
+            src="https://forms.joinpr.com.tr/JoinPR/form/JoinForm1/formperma/T-5iAqeB4-qlYjbBH77U8zQG3QVHhRjry8UTgSanN34"
             iframeHeight={500}
           />
         </div>

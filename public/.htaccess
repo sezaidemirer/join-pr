@@ -1,35 +1,33 @@
-# joinpr.com.tr statik site: build'de olmayan /haber/{slug} adresleri icin
-# ayni URL korunarak /haber/detay/ kabugu sunulur (Apache mod_rewrite gerekir).
-#
-# HTML icin agresif no-cache (tarayici/CDN eski shell tutmasin). mod_headers yoksa blok atlanir.
-<IfModule mod_headers.c>
-  <FilesMatch "\.(html|htm)$">
-    Header set Cache-Control "no-cache, no-store, must-revalidate, max-age=0"
-    Header set Pragma "no-cache"
-    Header unset ETag
-  </FilesMatch>
-  <Files "build-stamp.json">
-    Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
-  </Files>
+# Join PR Site - Next.js static export, public_html KÖK dizininde
+# Bu dosya build sirasinda public/ -> out/ icine otomatik kopyalanir.
+
+RewriteEngine On
+DirectoryIndex index.html
+
+# HTTPS zorunlu
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Mevcut dosya/klasor varsa dokunma (Next.js export klasor + index.html uretir)
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# 404 - Next.js export /404.html kullanir
+ErrorDocument 404 /404.html
+
+# _next/static hash'li dosyalar degismez; uzun sureli cache guvenli
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
 </IfModule>
 
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteBase /
-
-  RewriteCond %{REQUEST_FILENAME} -f [OR]
-  RewriteCond %{REQUEST_FILENAME} -d
-  RewriteRule ^ - [L]
-
-  # Medya yansima raporu dinamik slug fallback
-  # /brand/project/entry — rapor detay sayfasi (entry slug veya uuid)
-  # rapor-detay/ kalici shell sayfasi; MedyaYansimaRaporuEntryClient gercek URL'yi usePathname ile okur.
-  RewriteRule ^medya-yansima-raporu/[^/]+/[^/]+/[^/]+/?$ /medya-yansima-raporu/rapor-detay/index.html [L]
-  # /brand/project — alt marka rapor listesi
-  RewriteRule ^medya-yansima-raporu/[^/]+/[^/]+/?$ /medya-yansima-raporu/rixos/rixos-radamis/index.html [L]
-  # /brand — marka sayfasi
-  RewriteRule ^medya-yansima-raporu/[^/]+/?$ /medya-yansima-raporu/rixos/index.html [L]
-
-  # detay klasorunu tekrar yazdirma
-  RewriteRule ^haber/(?!detay(?:$|/))([^/]+)/?$ /haber/detay/index.html [L]
+<IfModule mod_headers.c>
+  <FilesMatch "^.+\.(css|js|webp)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
 </IfModule>

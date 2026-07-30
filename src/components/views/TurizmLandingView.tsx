@@ -118,7 +118,7 @@ export function TurizmLandingView() {
         return;
       }
       setForm(INITIAL_FORM);
-      setTimeout(() => router.push('/thankyou'), 400);
+      setTimeout(() => router.push('/tesekkurler'), 400);
     } catch {
       setFeedback('Bir hata oluştu. Lütfen tekrar deneyin.');
     } finally {
@@ -391,8 +391,9 @@ export function TurizmLandingView() {
           <h3 className="text-lg font-semibold text-white">Analiz Talep Formu</h3>
           <FormConsentEmbed
             ariaLabel="Join-Form-Landing"
-            src="https://forms.joinpr.com.tr/joinus1/form/JoinFormLanding/formperma/I50RnMGr5e2CLfOswetbEV7jdQ_N9gkidjRZUcvnfl0"
+            src="https://forms.joinpr.com.tr/JoinPR/form/JoinFormLanding/formperma/I50RnMGr5e2CLfOswetbEV7jdQ_N9gkidjRZUcvnfl0"
             iframeHeight={500}
+            trackGoogleAdsConversion
           />
         </div>
       </section>

@@ -137,7 +137,7 @@ export function JoinEscapesView() {
                   return 'https://joinescapes.com/destinasyonlar';
                 }
                 if (title === 'Influencer Seyahat Günlükleri') {
-                  return 'https://joinescapes.com/yazarlar';
+                  return 'https://joinescapes.com/seyahat-onerileri';
                 }
                 if (title === 'Seçkin Oteller') {
                   return 'https://joinescapes.com/oteller';
@@ -149,7 +149,7 @@ export function JoinEscapesView() {
                   return 'https://joinescapes.com/destinasyonlar';
                 }
                 if (title === 'Influencer Travel Diaries') {
-                  return 'https://joinescapes.com/yazarlar';
+                  return 'https://joinescapes.com/seyahat-onerileri';
                 }
                 if (title === 'Select Hotels') {
                   return 'https://joinescapes.com/oteller';

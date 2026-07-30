@@ -5,8 +5,8 @@ import { useEffect } from 'react';
 import { Footer } from '@/components/Footer';
 import { GoogleAnalytics } from '@/components/GoogleAnalytics';
 import { Header } from '@/components/Header';
+import { MetaPixel } from '@/components/MetaPixel';
 import { StructuredData } from '@/components/StructuredData';
-import { WhatsAppFloatingButton } from '@/components/WhatsAppFloatingButton';
 import { useLanguage } from '@/context/LanguageContext';
 
 export function AppShell({ children }: { children: React.ReactNode }) {
@@ -19,6 +19,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   return (
     <>
       <GoogleAnalytics />
+      <MetaPixel />
       <StructuredData />
       <div className="relative min-h-screen overflow-x-hidden bg-zinc-950 text-white">
         <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(15,118,110,0.22),_transparent_55%)]" />
@@ -29,7 +30,6 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         <div className="-mt-20 sm:mt-0">
           <Footer />
         </div>
-        <WhatsAppFloatingButton />
       </div>
     </>
   );

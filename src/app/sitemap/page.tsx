@@ -34,8 +34,29 @@ export default function SitemapPage() {
     { path: '/iletisim', title: { tr: 'İletişim', en: 'Contact' }, icon: '📧' },
     { path: '/is-ortaklarimiz', title: { tr: 'İş Ortaklarımız', en: 'Partners' }, icon: '🤝' },
     { path: '/is-birliklerimiz', title: { tr: 'İşbirliklerimiz', en: 'Our Collaborations' }, icon: '🤝' },
+    { path: '/reklam', title: { tr: 'Reklam', en: 'Advertising' }, icon: '📣' },
+    { path: '/en/about-us', title: { tr: 'About Us (EN)', en: 'About Us' }, icon: '👥' },
     { path: '/kategori/blog', title: { tr: 'Blog', en: 'Blog' }, icon: '📝' },
     { path: '/kategori/haberler', title: { tr: 'Haberler', en: 'News' }, icon: '📰' },
+  ];
+
+  const adRoutes = [
+    { path: '/reklam/turizm-reklam-ajansi-performans-yonetimi', title: { tr: 'Turizm Reklam Ajansı Performans Yönetimi', en: 'Tourism Ad Agency Performance Management' } },
+    { path: '/reklam/pr-gorunurluk', title: { tr: 'PR & Görünürlük', en: 'PR & Visibility' } },
+    { path: '/reklam/kreatif-produksiyon', title: { tr: 'Kreatif Prodüksiyon', en: 'Creative Production' } },
+    { path: '/reklam/sosyal-medya-yonetimi', title: { tr: 'Sosyal Medya Yönetimi', en: 'Social Media Management' } },
+    { path: '/reklam/ai-lab-web-otomasyon', title: { tr: 'AI Lab & Web Otomasyon', en: 'AI Lab & Web Automation' } },
+    { path: '/clinic-reklam-ajansi-performans-yonetimi', title: { tr: 'Clinic Reklam Ajansı Performans Yönetimi', en: 'Clinic Ad Agency Performance Management' } },
+  ];
+
+  const collaborationRoutes = [
+    { path: '/is-birliklerimiz/rixos-egypt', title: { tr: 'Rixos Egypt', en: 'Rixos Egypt' } },
+    { path: '/is-birliklerimiz/ajet', title: { tr: 'AJet', en: 'AJet' } },
+    { path: '/is-birliklerimiz/marriott-dead-sea', title: { tr: 'Marriott Dead Sea', en: 'Marriott Dead Sea' } },
+    { path: '/is-birliklerimiz/prontotour', title: { tr: 'Prontotour', en: 'Prontotour' } },
+    { path: '/is-birliklerimiz/swissotel-sharm-el-sheikh', title: { tr: 'Swissotel Sharm El Sheikh', en: 'Swissotel Sharm El Sheikh' } },
+    { path: '/is-birliklerimiz/villa-resorts-maldives', title: { tr: 'Villa Resorts Maldives', en: 'Villa Resorts Maldives' } },
+    { path: '/royal-saray-resort-bahrain', title: { tr: 'Royal Saray Resort Bahrain', en: 'Royal Saray Resort Bahrain' } },
   ];
 
   const servicePages = [
@@ -135,6 +156,91 @@ export default function SitemapPage() {
             </div>
             <div className="grid gap-3 md:grid-cols-2">
               {servicePages.map((page) => (
+                <Link
+                  key={page.path}
+                  href={page.path}
+                  className="group rounded-lg border border-white/5 bg-zinc-900/50 p-4 transition-all hover:border-sky-500/30 hover:bg-sky-500/10 hover:shadow-lg hover:shadow-sky-500/10"
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex-1">
+                      <div className="font-medium text-white group-hover:text-sky-300">
+                        {page.title.tr}
+                      </div>
+                      <div className="mt-1 text-xs text-zinc-400">
+                        {baseUrl}{page.path}
+                      </div>
+                    </div>
+                    <svg
+                      className="h-5 w-5 text-zinc-500 transition-transform group-hover:translate-x-1 group-hover:text-sky-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Reklam Sayfaları */}
+          <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-zinc-900/80 to-zinc-950/80 p-8 shadow-xl shadow-black/30 backdrop-blur-sm md:col-span-2 lg:col-span-1">
+            <div className="mb-6 flex items-center gap-3">
+              <div className="rounded-lg bg-gradient-to-br from-teal-500/20 to-sky-500/20 p-2">
+                <span className="text-2xl">📣</span>
+              </div>
+              <h2 className="text-2xl font-bold text-white">Reklam</h2>
+            </div>
+            <ul className="space-y-3">
+              {adRoutes.map((page) => (
+                <li key={page.path}>
+                  <Link
+                    href={page.path}
+                    className="group flex items-center justify-between rounded-lg border border-white/5 bg-zinc-900/50 p-3 transition-all hover:border-sky-500/30 hover:bg-sky-500/10 hover:shadow-lg hover:shadow-sky-500/10"
+                  >
+                    <div className="flex-1">
+                      <div className="font-medium text-white group-hover:text-sky-300">
+                        {page.title.tr}
+                      </div>
+                      <div className="text-xs text-zinc-400">
+                        {baseUrl}{page.path}
+                      </div>
+                    </div>
+                    <svg
+                      className="h-5 w-5 text-zinc-500 transition-transform group-hover:translate-x-1 group-hover:text-sky-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* İşbirliklerimiz Detay Sayfaları */}
+          <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-zinc-900/80 to-zinc-950/80 p-8 shadow-xl shadow-black/30 backdrop-blur-sm md:col-span-2 lg:col-span-2">
+            <div className="mb-6 flex items-center gap-3">
+              <div className="rounded-lg bg-gradient-to-br from-teal-500/20 to-sky-500/20 p-2">
+                <span className="text-2xl">🤝</span>
+              </div>
+              <h2 className="text-2xl font-bold text-white">İşbirliklerimiz</h2>
+            </div>
+            <div className="grid gap-3 md:grid-cols-2">
+              {collaborationRoutes.map((page) => (
                 <Link
                   key={page.path}
                   href={page.path}

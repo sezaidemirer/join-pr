@@ -478,8 +478,9 @@ export function SosyalMedyaYonetimiLandingView() {
           <div className="mt-8 overflow-hidden rounded-2xl border border-white/10 bg-zinc-950/80 p-4 md:p-6">
             <FormConsentEmbed
               ariaLabel="Join-Form-Landing"
-              src="https://forms.joinpr.com.tr/joinus1/form/JoinFormLanding/formperma/I50RnMGr5e2CLfOswetbEV7jdQ_N9gkidjRZUcvnfl0"
+              src="https://forms.joinpr.com.tr/JoinPR/form/JoinFormLanding/formperma/I50RnMGr5e2CLfOswetbEV7jdQ_N9gkidjRZUcvnfl0"
               iframeHeight={500}
+              trackGoogleAdsConversion
             />
           </div>
         </div>

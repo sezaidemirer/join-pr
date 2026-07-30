@@ -2,28 +2,49 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
+import { getBlogApiUrl, resolveBlogImageSrc } from '@/lib/blog-api';
 
-const BASE_PATH = ''; // Root dizin - joinpr.com.tr
+type BlogCard = {
+  title: string;
+  category: string;
+  description: string;
+  image?: string | null;
+  slug: string;
+};
 
 export function BlogCategoryView() {
-  const { translations } = useLanguage();
+  const { translations, locale } = useLanguage();
   const blog = translations.homepage.blog;
-  const blogItems = blog.cards as Array<{ title: string; category: string; description: string; image?: string; link?: string }>;
+  const [items, setItems] = useState<BlogCard[]>([]);
+  const [loaded, setLoaded] = useState(false);
 
-  const slugify = (text: string) =>
-    text
-      .toLowerCase()
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .replace(/ı/g, 'i')
-      .replace(/ğ/g, 'g')
-      .replace(/ü/g, 'u')
-      .replace(/ş/g, 's')
-      .replace(/ö/g, 'o')
-      .replace(/ç/g, 'c')
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-+|-+$/g, '');
+  useEffect(() => {
+    let alive = true;
+    (async () => {
+      try {
+        const res = await fetch(getBlogApiUrl(''));
+        const data = await res.json();
+        if (!res.ok) return;
+        const mapped = ((data.items || []) as any[]).map((item) => ({
+          title: locale === 'en' ? item.title_en || item.title : item.title,
+          category: (locale === 'en' ? item.category_en || item.category : item.category) || '',
+          description: locale === 'en' ? item.description_en || item.description : item.description,
+          image: item.image,
+          slug: item.slug,
+        }));
+        if (alive) setItems(mapped);
+      } catch {
+        /* Sessiz: bos liste gosterilir */
+      } finally {
+        if (alive) setLoaded(true);
+      }
+    })();
+    return () => {
+      alive = false;
+    };
+  }, [locale]);
 
   return (
     <div className="flex flex-col gap-16 lg:gap-20">
@@ -34,19 +55,20 @@ export function BlogCategoryView() {
         </div>
 
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-4 sm:px-6 md:grid-cols-2">
-          {blogItems.map((card, index) => {
-            const href = card.link || '#';
-            
+          {items.map((card, index) => {
+            const href = `/blog/${card.slug}`;
+            const imgSrc = resolveBlogImageSrc(card.image);
+
             return (
               <Link
-                key={`${card.title}-${index}`}
+                key={`${card.slug}-${index}`}
                 href={href}
                 className="group flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-zinc-950/70 shadow-lg shadow-black/40 transition-all duration-300 hover:-translate-y-1 hover:border-teal-500/40 hover:shadow-glow-teal"
               >
-                {card.image && (
+                {imgSrc && (
                   <div className="relative h-48 w-full overflow-hidden bg-zinc-900">
                     <Image
-                      src={`${BASE_PATH}${card.image}`}
+                      src={imgSrc}
                       alt={card.title}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -55,7 +77,9 @@ export function BlogCategoryView() {
                   </div>
                 )}
                 <div className="flex flex-1 flex-col gap-4 p-6">
-                  <span className="text-xs font-semibold uppercase tracking-[0.3em] text-teal-200">{card.category}</span>
+                  {card.category && (
+                    <span className="text-xs font-semibold uppercase tracking-[0.3em] text-teal-200">{card.category}</span>
+                  )}
                   <h3 className="text-xl font-semibold text-white line-clamp-2 group-hover:text-teal-100 transition-colors">
                     {card.title}
                   </h3>
@@ -64,11 +88,13 @@ export function BlogCategoryView() {
               </Link>
             );
           })}
+          {loaded && items.length === 0 && (
+            <div className="col-span-full py-12 text-center">
+              <p className="text-zinc-400">Henuz blog yazisi yok.</p>
+            </div>
+          )}
         </div>
       </section>
     </div>
   );
 }
-
-
-
